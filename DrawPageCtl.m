@@ -22,6 +22,33 @@
     
 }
 
+
+- (void)ainimationStart{
+    
+    // 1.创建动画对象
+    CABasicAnimation *anim = [CABasicAnimation animation];
+    
+    // 2.设置动画对象
+    // keyPath决定了执行怎样的动画, 调整哪个属性来执行动画
+    anim.keyPath = @"transform";
+    //    anim.fromValue = [NSValue valueWithCGPoint:CGPointMake(0, 0)];
+    anim.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI, 0,1, 0)];
+    anim.duration = 1;
+    anim.delegate  = self;
+    anim.removedOnCompletion = YES;
+    anim.fillMode = kCAFillModeBoth;
+    
+    // 3.添加动画
+    [self.circleLayer addAnimation:anim forKey:nil];
+    
+}
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
+ 
+    
+}
+
+
 - (void)drawRect:(CGRect)rect
 {
     CGContextRef ctx = UIGraphicsGetCurrentContext();
@@ -30,7 +57,7 @@
     CGFloat height = rect.size.height;
     CGFloat ratio  = 10;
     CGContextSetGrayFillColor(ctx, 0.2, 0.6);
-    CGContextAddArc(ctx, ratio,height/2,ratio, M_PI/2, -M_PI/2, 1);
+    CGContextAddArc(ctx, ratio+3,height/2,ratio, M_PI/2, -M_PI/2, 1);
     CGContextAddArc(ctx, width-ratio, rect.size.height/2, ratio, -M_PI/2, M_PI/2, 0);
     
     CGContextFillPath(ctx);
@@ -86,10 +113,15 @@
         
         
         CAShapeLayer *circleLayer = [CAShapeLayer layer];
-//        circleLayer.path = circlePath.CGPath;
         circleLayer.strokeColor = [[UIColor lightGrayColor] CGColor];
         circleLayer.fillColor = [[UIColor blackColor] CGColor];
         circleLayer.opacity = 0.5;
+        circleLayer.bounds = CGRectMake(0, 0, 16, 16);
+        circleLayer.position = CGPointMake(12, 8);
+//        circleLayer.transform = CATransform3DMakeTranslation(-2, 0, 0);
+//        circleLayer.anchorPoint = CGPointMake(0.01, 0.01);
+        
+//        circleLayer.anchorPoint  = CGPointMake(0.3, 0.4);
         //    backgroundLayer.lineWidth = 5;
         [self.layer addSublayer:circleLayer];
         self.circleLayer = circleLayer;
@@ -100,10 +132,11 @@
  }
 
 
+
 - (void)layoutSubviews{
     [super layoutSubviews];
     
-    CGFloat radius = 7;
+    CGFloat radius = 8;
     CGPoint arcCenter = CGPointMake(radius, self.frame.size.height/2);
     
     

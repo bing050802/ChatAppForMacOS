@@ -11,4 +11,5 @@
 @interface DrawPageCtl : UIView
 
 @property (nonatomic,assign) NSInteger pagesNum;
+- (void)ainimationStart;
 @end

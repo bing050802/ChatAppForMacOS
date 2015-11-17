@@ -9,7 +9,9 @@
 #import "ViewController.h"
 #import "DrawPageCtl.h"
 @interface ViewController ()
+
 @property (nonatomic,weak)CALayer *layer;
+@property (nonatomic,weak)DrawPageCtl *pagectl;
 @end
 
 @implementation ViewController
@@ -19,17 +21,20 @@
     [super viewDidLoad];
     
      DrawPageCtl *lable = [[DrawPageCtl alloc] init];
-    lable.backgroundColor = [UIColor orangeColor];
+//    lable.backgroundColor = [UIColor orangeColor];
      lable.frame = CGRectMake(100, 100, 150, 40);
     //总页数
     lable.pagesNum = 10;
     [self.view addSubview:lable];
-
-
+    self.pagectl = lable;
+     
 
 }
 
-
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    [self.pagectl ainimationStart];
+}
 
 
 
