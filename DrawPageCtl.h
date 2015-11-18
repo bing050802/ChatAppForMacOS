@@ -10,6 +10,12 @@
 
 @interface DrawPageCtl : UIView
 
+//总页数
 @property (nonatomic,assign) NSInteger pagesNum;
-- (void)ainimationStart;
+//当前页数
+@property (nonatomic,assign) NSInteger currentPageNum;
+
+
+//左边翻转小球的颜色
+@property (nonatomic,strong) UIColor  *leftCircleColor;
 @end

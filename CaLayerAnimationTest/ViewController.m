@@ -20,20 +20,23 @@
     
     [super viewDidLoad];
     
-     DrawPageCtl *lable = [[DrawPageCtl alloc] init];
-//    lable.backgroundColor = [UIColor orangeColor];
-     lable.frame = CGRectMake(100, 100, 150, 40);
+    DrawPageCtl *pagectl = [[DrawPageCtl alloc] init];
+    pagectl.leftCircleColor = [UIColor orangeColor];
+    pagectl.frame = CGRectMake(100, 100,200, 40);
     //总页数
-    lable.pagesNum = 10;
-    [self.view addSubview:lable];
-    self.pagectl = lable;
-     
-
+    pagectl.pagesNum = 10;
+    pagectl.currentPageNum = 5;
+    [self.view addSubview:pagectl];
+    self.pagectl = pagectl;
+    
+    
 }
 
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     
-    [self.pagectl ainimationStart];
+    static NSInteger i  = 0;
+    self.pagectl.currentPageNum = i++;
+    
 }
 
 
