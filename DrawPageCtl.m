@@ -91,6 +91,8 @@
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
     [self.circlebtn setTitle:[NSString stringWithFormat:@"%zd",_currentPageNum] forState:UIControlStateNormal];
 }
+
+
 - (void)drawRect:(CGRect)rect
 {
     CGContextRef ctx = UIGraphicsGetCurrentContext();
@@ -145,6 +147,27 @@
     CGRect textrectR = CGRectMake(drawtextX, drawtextY, drawtextW, drawtextH);
     NSString *drawtextR = [NSString stringWithFormat:@"of %zd",self.pagesNum];
     [drawtextR drawInRect:textrectR withAttributes:dic];
+    
+    
+    
+    
+    CAGradientLayer *gradlayer =  [CAGradientLayer layer];
+    gradlayer.frame =CGRectMake(drawtextX, drawtextY, 30, drawtextH);
+    gradlayer.opacity = 0.5;
+    gradlayer.colors =@[(id)[UIColor clearColor],(id)[UIColor redColor].CGColor,(id)[UIColor blackColor].CGColor,(id)[UIColor clearColor].CGColor];
+    gradlayer.locations = @[@(0.01),@(0.1),@(0.9),@(0.99)];
+    
+    [self.layer addSublayer:gradlayer];
+    
+    CABasicAnimation *basicAnimation = [CABasicAnimation animation];
+    basicAnimation.keyPath = @"transform.translation.x";
+    basicAnimation.fromValue = @(50);
+    basicAnimation.toValue = @(100);
+    basicAnimation.duration = 1.5;
+    basicAnimation.repeatCount = MAXFLOAT;
+    basicAnimation.removedOnCompletion = NO;
+    basicAnimation.fillMode = kCAFillModeForwards;
+    [gradlayer addAnimation:basicAnimation forKey:nil];
     
 }
 

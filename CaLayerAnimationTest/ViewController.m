@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "DrawPageCtl.h"
+#import "BezierLineDraw.h"
 @interface ViewController ()
 
 @property (nonatomic,weak)CALayer *layer;
@@ -20,18 +21,29 @@
     
     [super viewDidLoad];
     
-    DrawPageCtl *pagectl = [[DrawPageCtl alloc] init];
-    pagectl.leftCircleColor = [UIColor orangeColor];
-    pagectl.frame = CGRectMake(100, 100,200, 40);
-    //总页数
-    pagectl.pagesNum = 10;
-    pagectl.currentPageNum = 5;
-    [self.view addSubview:pagectl];
-    self.pagectl = pagectl;
-    
+    [self ainimatedPagectl];
+
     
 }
 
+
+
+
+- (void)shapelayertest{
+    
+    //   BezierLineDraw *view = [[BezierLineDraw alloc] initWithFrame:self.view.bounds];
+    //    view.backgroundColor  = [UIColor clearColor];
+    //    [self.view addSubview:view];
+    CGMutablePathRef  pathM =  CGPathCreateMutable();
+    CGPathMoveToPoint(pathM, NULL, 100, 200);
+    CGPathAddQuadCurveToPoint(pathM, NULL, 100, 210, 160, 200);
+    
+    CAShapeLayer *layer = [CAShapeLayer layer];
+    layer.position = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height/2);
+    layer.bounds = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    layer.path = pathM;
+    [self.view.layer addSublayer:layer];
+}
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     
     static NSInteger i  = 0;
@@ -40,6 +52,16 @@
 }
 
 
+- (void)ainimatedPagectl{
+    DrawPageCtl *pagectl = [[DrawPageCtl alloc] init];
+    pagectl.leftCircleColor = [UIColor orangeColor];
+    pagectl.frame = CGRectMake(100, 100,200, 40);
+    //总页数
+    pagectl.pagesNum = 10;
+    pagectl.currentPageNum = 5;
+    [self.view addSubview:pagectl];
+    self.pagectl = pagectl;
+}
 
 - (void)emitterTest{
     

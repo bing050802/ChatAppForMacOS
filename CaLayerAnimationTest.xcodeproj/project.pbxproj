@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16CB2F7B1BFC5C2600DB9A80 /* BezierLineDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = 16CB2F7A1BFC5C2600DB9A80 /* BezierLineDraw.m */; };
 		16D082A71BF9A9DD00799261 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D082A61BF9A9DD00799261 /* main.m */; };
 		16D082AA1BF9A9DD00799261 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D082A91BF9A9DD00799261 /* AppDelegate.m */; };
 		16D082AD1BF9A9DD00799261 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D082AC1BF9A9DD00799261 /* ViewController.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16CB2F791BFC5C2600DB9A80 /* BezierLineDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierLineDraw.h; sourceTree = "<group>"; };
+		16CB2F7A1BFC5C2600DB9A80 /* BezierLineDraw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierLineDraw.m; sourceTree = "<group>"; };
 		16D082A11BF9A9DD00799261 /* CaLayerAnimationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaLayerAnimationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16D082A51BF9A9DD00799261 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16D082A61BF9A9DD00799261 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,6 +69,8 @@
 		16D082981BF9A9DD00799261 = {
 			isa = PBXGroup;
 			children = (
+				16CB2F791BFC5C2600DB9A80 /* BezierLineDraw.h */,
+				16CB2F7A1BFC5C2600DB9A80 /* BezierLineDraw.m */,
 				16D082CC1BF9E2EE00799261 /* DrawPageCtl.h */,
 				16D082CD1BF9E2EE00799261 /* DrawPageCtl.m */,
 				16D082A31BF9A9DD00799261 /* CaLayerAnimationTest */,
@@ -224,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16CB2F7B1BFC5C2600DB9A80 /* BezierLineDraw.m in Sources */,
 				16D082CE1BF9E2EE00799261 /* DrawPageCtl.m in Sources */,
 				16D082AD1BF9A9DD00799261 /* ViewController.m in Sources */,
 				16D082AA1BF9A9DD00799261 /* AppDelegate.m in Sources */,
