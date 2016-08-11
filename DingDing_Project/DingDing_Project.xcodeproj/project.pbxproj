@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8AAFF5FA1D5C622700E908EC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAFF5F91D5C622700E908EC /* QuartzCore.framework */; };
+		8AAFF5FC1D5C623800E908EC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAFF5FB1D5C623800E908EC /* Cocoa.framework */; };
+		8AAFF5FE1D5C624500E908EC /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAFF5FD1D5C624500E908EC /* ApplicationServices.framework */; };
+		8AAFF6031D5C65EF00E908EC /* MVShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAFF6001D5C65EF00E908EC /* MVShadow.m */; };
+		8AAFF6041D5C65EF00E908EC /* MVGraphicsFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAFF6021D5C65EF00E908EC /* MVGraphicsFunctions.m */; };
+		8AAFF60A1D5C75B600E908EC /* HXSearchField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAFF6091D5C75B600E908EC /* HXSearchField.m */; };
+		8AE26D341D598A4800855257 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D2F1D598A4800855257 /* AppDelegate.m */; };
+		8AE26D351D598A4800855257 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AE26D301D598A4800855257 /* Assets.xcassets */; };
+		8AE26D371D598A4800855257 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D331D598A4800855257 /* main.m */; };
+		8AE26D3C1D598C4D00855257 /* HXMainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D3B1D598C4D00855257 /* HXMainWindow.m */; };
+		8AE26D3F1D598C7900855257 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AE26D3D1D598C7900855257 /* Main.storyboard */; };
+		8AE26D421D598CD300855257 /* HXTopBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D411D598CD300855257 /* HXTopBarView.m */; };
+		8AE26D461D59B47300855257 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D451D59B47300855257 /* ViewController.m */; };
+		8AE26D521D59B4F000855257 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D4A1D59B4F000855257 /* ALView+PureLayout.m */; };
+		8AE26D531D59B4F000855257 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D4C1D59B4F000855257 /* NSArray+PureLayout.m */; };
+		8AE26D541D59B4F000855257 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D4E1D59B4F000855257 /* NSLayoutConstraint+PureLayout.m */; };
+		8AE26D5C1D59B73C00855257 /* NSView+BackGroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D5B1D59B73C00855257 /* NSView+BackGroundColor.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8AAFF5F91D5C622700E908EC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8AAFF5FB1D5C623800E908EC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		8AAFF5FD1D5C624500E908EC /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
+		8AAFF5FF1D5C65EF00E908EC /* MVShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVShadow.h; sourceTree = "<group>"; };
+		8AAFF6001D5C65EF00E908EC /* MVShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVShadow.m; sourceTree = "<group>"; };
+		8AAFF6011D5C65EF00E908EC /* MVGraphicsFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVGraphicsFunctions.h; sourceTree = "<group>"; };
+		8AAFF6021D5C65EF00E908EC /* MVGraphicsFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVGraphicsFunctions.m; sourceTree = "<group>"; };
+		8AAFF6081D5C75B600E908EC /* HXSearchField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXSearchField.h; sourceTree = "<group>"; };
+		8AAFF6091D5C75B600E908EC /* HXSearchField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXSearchField.m; sourceTree = "<group>"; };
+		8AE26D161D5989C500855257 /* DingDing_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DingDing_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AE26D271D5989C500855257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		8AE26D2E1D598A4800855257 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8AE26D2F1D598A4800855257 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8AE26D301D598A4800855257 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8AE26D331D598A4800855257 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8AE26D3A1D598C4D00855257 /* HXMainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMainWindow.h; sourceTree = "<group>"; };
+		8AE26D3B1D598C4D00855257 /* HXMainWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMainWindow.m; sourceTree = "<group>"; };
+		8AE26D3E1D598C7900855257 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8AE26D401D598CD300855257 /* HXTopBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTopBarView.h; sourceTree = "<group>"; };
+		8AE26D411D598CD300855257 /* HXTopBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTopBarView.m; sourceTree = "<group>"; };
+		8AE26D441D59B47300855257 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8AE26D451D59B47300855257 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8AE26D491D59B4F000855257 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
+		8AE26D4A1D59B4F000855257 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALView+PureLayout.m"; sourceTree = "<group>"; };
+		8AE26D4B1D59B4F000855257 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		8AE26D4C1D59B4F000855257 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		8AE26D4D1D59B4F000855257 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		8AE26D4E1D59B4F000855257 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		8AE26D4F1D59B4F000855257 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
+		8AE26D501D59B4F000855257 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
+		8AE26D511D59B4F000855257 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
+		8AE26D561D59B68700855257 /* HXPrefixHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXPrefixHeader.h; sourceTree = "<group>"; };
+		8AE26D5A1D59B73C00855257 /* NSView+BackGroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+BackGroundColor.h"; sourceTree = "<group>"; };
+		8AE26D5B1D59B73C00855257 /* NSView+BackGroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+BackGroundColor.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8AE26D131D5989C500855257 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AAFF5FE1D5C624500E908EC /* ApplicationServices.framework in Frameworks */,
+				8AAFF5FC1D5C623800E908EC /* Cocoa.framework in Frameworks */,
+				8AAFF5FA1D5C622700E908EC /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8AE26D0D1D5989C500855257 = {
+			isa = PBXGroup;
+			children = (
+				8AAFF5FD1D5C624500E908EC /* ApplicationServices.framework */,
+				8AAFF5FB1D5C623800E908EC /* Cocoa.framework */,
+				8AAFF5F91D5C622700E908EC /* QuartzCore.framework */,
+				8AE26D181D5989C500855257 /* DingDing_Project */,
+				8AE26D171D5989C500855257 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8AE26D171D5989C500855257 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8AE26D161D5989C500855257 /* DingDing_Project.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8AE26D181D5989C500855257 /* DingDing_Project */ = {
+			isa = PBXGroup;
+			children = (
+				8AE26D381D598B5C00855257 /* TopWindowBar */,
+				8AE26D391D598C2900855257 /* MainWindow */,
+				8AE26D431D59B47300855257 /* MainViewCtroller */,
+				8AE26D2D1D598A4800855257 /* Other */,
+				8AE26D1C1D5989C500855257 /* Supporting Files */,
+			);
+			path = DingDing_Project;
+			sourceTree = "<group>";
+		};
+		8AE26D1C1D5989C500855257 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AE26D471D59B4F000855257 /* ThirdPartyLibs */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8AE26D2D1D598A4800855257 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				8AE26D271D5989C500855257 /* Info.plist */,
+				8AE26D2E1D598A4800855257 /* AppDelegate.h */,
+				8AE26D2F1D598A4800855257 /* AppDelegate.m */,
+				8AE26D301D598A4800855257 /* Assets.xcassets */,
+				8AE26D331D598A4800855257 /* main.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		8AE26D381D598B5C00855257 /* TopWindowBar */ = {
+			isa = PBXGroup;
+			children = (
+				8AAFF5FF1D5C65EF00E908EC /* MVShadow.h */,
+				8AAFF6001D5C65EF00E908EC /* MVShadow.m */,
+				8AAFF6011D5C65EF00E908EC /* MVGraphicsFunctions.h */,
+				8AAFF6021D5C65EF00E908EC /* MVGraphicsFunctions.m */,
+				8AAFF6081D5C75B600E908EC /* HXSearchField.h */,
+				8AAFF6091D5C75B600E908EC /* HXSearchField.m */,
+				8AE26D401D598CD300855257 /* HXTopBarView.h */,
+				8AE26D411D598CD300855257 /* HXTopBarView.m */,
+			);
+			path = TopWindowBar;
+			sourceTree = "<group>";
+		};
+		8AE26D391D598C2900855257 /* MainWindow */ = {
+			isa = PBXGroup;
+			children = (
+				8AE26D3D1D598C7900855257 /* Main.storyboard */,
+				8AE26D3A1D598C4D00855257 /* HXMainWindow.h */,
+				8AE26D3B1D598C4D00855257 /* HXMainWindow.m */,
+			);
+			path = MainWindow;
+			sourceTree = "<group>";
+		};
+		8AE26D431D59B47300855257 /* MainViewCtroller */ = {
+			isa = PBXGroup;
+			children = (
+				8AE26D441D59B47300855257 /* ViewController.h */,
+				8AE26D451D59B47300855257 /* ViewController.m */,
+			);
+			path = MainViewCtroller;
+			sourceTree = "<group>";
+		};
+		8AE26D471D59B4F000855257 /* ThirdPartyLibs */ = {
+			isa = PBXGroup;
+			children = (
+				8AE26D551D59B62700855257 /* Categories */,
+				8AE26D481D59B4F000855257 /* PureLayout */,
+			);
+			path = ThirdPartyLibs;
+			sourceTree = "<group>";
+		};
+		8AE26D481D59B4F000855257 /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				8AE26D491D59B4F000855257 /* ALView+PureLayout.h */,
+				8AE26D4A1D59B4F000855257 /* ALView+PureLayout.m */,
+				8AE26D4B1D59B4F000855257 /* NSArray+PureLayout.h */,
+				8AE26D4C1D59B4F000855257 /* NSArray+PureLayout.m */,
+				8AE26D4D1D59B4F000855257 /* NSLayoutConstraint+PureLayout.h */,
+				8AE26D4E1D59B4F000855257 /* NSLayoutConstraint+PureLayout.m */,
+				8AE26D4F1D59B4F000855257 /* PureLayout+Internal.h */,
+				8AE26D501D59B4F000855257 /* PureLayout.h */,
+				8AE26D511D59B4F000855257 /* PureLayoutDefines.h */,
+			);
+			path = PureLayout;
+			sourceTree = "<group>";
+		};
+		8AE26D551D59B62700855257 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				8AE26D5A1D59B73C00855257 /* NSView+BackGroundColor.h */,
+				8AE26D5B1D59B73C00855257 /* NSView+BackGroundColor.m */,
+				8AE26D561D59B68700855257 /* HXPrefixHeader.h */,
+			);
+			name = Categories;
+			path = DingDing_Project/Categories;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8AE26D151D5989C500855257 /* DingDing_Project */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AE26D2A1D5989C500855257 /* Build configuration list for PBXNativeTarget "DingDing_Project" */;
+			buildPhases = (
+				8AE26D121D5989C500855257 /* Sources */,
+				8AE26D131D5989C500855257 /* Frameworks */,
+				8AE26D141D5989C500855257 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DingDing_Project;
+			productName = DingDing_Project;
+			productReference = 8AE26D161D5989C500855257 /* DingDing_Project.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8AE26D0E1D5989C500855257 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HX;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = HXQ;
+				TargetAttributes = {
+					8AE26D151D5989C500855257 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 8AE26D111D5989C500855257 /* Build configuration list for PBXProject "DingDing_Project" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8AE26D0D1D5989C500855257;
+			productRefGroup = 8AE26D171D5989C500855257 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8AE26D151D5989C500855257 /* DingDing_Project */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8AE26D141D5989C500855257 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AE26D3F1D598C7900855257 /* Main.storyboard in Resources */,
+				8AE26D351D598A4800855257 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8AE26D121D5989C500855257 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AE26D461D59B47300855257 /* ViewController.m in Sources */,
+				8AE26D521D59B4F000855257 /* ALView+PureLayout.m in Sources */,
+				8AAFF6041D5C65EF00E908EC /* MVGraphicsFunctions.m in Sources */,
+				8AE26D371D598A4800855257 /* main.m in Sources */,
+				8AE26D541D59B4F000855257 /* NSLayoutConstraint+PureLayout.m in Sources */,
+				8AAFF6031D5C65EF00E908EC /* MVShadow.m in Sources */,
+				8AE26D531D59B4F000855257 /* NSArray+PureLayout.m in Sources */,
+				8AE26D3C1D598C4D00855257 /* HXMainWindow.m in Sources */,
+				8AE26D421D598CD300855257 /* HXTopBarView.m in Sources */,
+				8AAFF60A1D5C75B600E908EC /* HXSearchField.m in Sources */,
+				8AE26D341D598A4800855257 /* AppDelegate.m in Sources */,
+				8AE26D5C1D59B73C00855257 /* NSView+BackGroundColor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8AE26D3D1D598C7900855257 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AE26D3E1D598C7900855257 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8AE26D281D5989C500855257 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8AE26D291D5989C500855257 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8AE26D2B1D5989C500855257 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = DingDing_Project/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_CFLAGS = "-DNS_BUILD_32_LIKE_64";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.babeltime.DingDing-Project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8AE26D2C1D5989C500855257 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = DingDing_Project/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_CFLAGS = "-DNS_BUILD_32_LIKE_64";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.babeltime.DingDing-Project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8AE26D111D5989C500855257 /* Build configuration list for PBXProject "DingDing_Project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AE26D281D5989C500855257 /* Debug */,
+				8AE26D291D5989C500855257 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AE26D2A1D5989C500855257 /* Build configuration list for PBXNativeTarget "DingDing_Project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AE26D2B1D5989C500855257 /* Debug */,
+				8AE26D2C1D5989C500855257 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8AE26D0E1D5989C500855257 /* Project object */;
+}
