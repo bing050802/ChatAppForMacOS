@@ -10,13 +10,10 @@
 
 @interface HXSearchField : NSView
 
-@property (nonatomic, strong) NSTextField *textfield;
 
 @property (nonatomic, copy) NSString *placeHolderString;
 
 - (void)resignFocus;
 
-
-@property (nonatomic, assign) BOOL isFocused;
 
 @end

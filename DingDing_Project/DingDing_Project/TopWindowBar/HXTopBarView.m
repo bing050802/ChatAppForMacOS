@@ -33,25 +33,49 @@
 - (void)viewWillMoveToWindow:(nullable NSWindow *)newWindow {
     [super viewWillMoveToWindow:newWindow];
     
-
     
-    HXSearchField *searchField = [[HXSearchField alloc] initWithFrame:NSMakeRect(100, 20, 200, 30)];
-    searchField.placeHolderString = @"我爱他妈";
+//
+//    NSViewNotSizable			=  0,
+//    NSViewMinXMargin			=  1,
+//    NSViewWidthSizable			=  2,
+//    NSViewMaxXMargin			=  4,
+//    NSViewMinYMargin			=  8,
+//    NSViewHeightSizable			= 16,
+//    NSViewMaxYMargin			= 32
+    
+    HXSearchField *searchField = [[HXSearchField alloc] initWithFrame:NSMakeRect(newWindow.frame.size.width * 2 - 200 * 2, 0, 180, 33)];
+//    searchField.autoresizingMask =  NSViewMinYMargin | NSViewWidthSizable ;
+    searchField.placeHolderString = @"联系人,群组,聊天记录";
     [self addSubview:searchField];
     self.searchField = searchField;
+    
+
+    [self.searchField autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:15];
+    [self.searchField autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:100];
+    [self.searchField autoSetDimension:ALDimensionHeight toSize:33];
+    [self.searchField autoSetDimension:ALDimensionWidth toSize:180];
+    
+//        NSLog(@"%@",NSStringFromRect());
+    
+//         NSLog(@"%@",);
+}
+
+
+- (void)viewDidMoveToWindow {
+    [super viewDidMoveToWindow];
+    
+    //
+
     
     
 }
 
+
+
 - (void)mouseDown:(NSEvent *)theEvent {
 
-    NSLog(@"%@",self.searchField.textfield.subviews);
-    
     [self.searchField resignFocus];
-    
-    NSLog(@"%@",self.searchField.textfield.subviews);
 
-    
 }
 
 
