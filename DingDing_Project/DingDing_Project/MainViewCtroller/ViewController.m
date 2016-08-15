@@ -7,12 +7,19 @@
 //
 
 #import "ViewController.h"
+#import "HXPrefixHeader.h"
+@interface ViewController ()
+
+@property (weak) IBOutlet NSView *cView;
+
+
+@end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    [_cView backGroundColor:[NSColor redColor]];
     // Do any additional setup after loading the view.
 }
 

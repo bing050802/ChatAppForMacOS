@@ -27,8 +27,6 @@
 
 @property (nonatomic, assign) BOOL searchingState;
 
-
-
 @property (nonatomic, assign) CGRect originFrame;
 
 
@@ -39,8 +37,7 @@
 
 - (HXTextField *)textfield {
     if (!_textfield) {
-        
-        _textfield = [[HXTextField alloc] initWithFrame:CGRectMake(8, 5.5, selfWidth - 20, 20)];
+        _textfield = [[HXTextField alloc] init];
         _textfield.refusesFirstResponder = YES;
         // 去除系统默认的边框
         _textfield.bordered = NO;
@@ -62,7 +59,7 @@
 
 - (NSText *)placeHolderLabel {
     if (!_placeHolderLabel) {
-        _placeHolderLabel = [[NSText alloc] initWithFrame:CGRectMake(8, 5.5, selfWidth - 20, 20)];
+        _placeHolderLabel = [[NSText alloc] init];
         _placeHolderLabel.alphaValue = 0.6;
         _placeHolderLabel.editable = NO;
         _placeHolderLabel.selectable = NO;
@@ -78,7 +75,6 @@
     self = [super initWithFrame:frameRect];
     if(self) {
         [self commonInit];
-        self.originFrame = frameRect;
     }
     return self;
 }
@@ -92,14 +88,22 @@
 
     [self addSubview:self.textfield];
     
-}
+    [self.placeHolderLabel autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:7.0];
+    [self.placeHolderLabel autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:20];
+    [self.placeHolderLabel autoSetDimension:ALDimensionHeight toSize:20];
+    [self.placeHolderLabel autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:8];
+    
+    [self.textfield autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:7.0];
+    [self.textfield autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:20];
+    [self.textfield autoSetDimension:ALDimensionHeight toSize:20];
+    [self.textfield autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:8];
 
+}
 
 - (void)setPlaceHolderString:(NSString *)placeHolderString {
     _placeHolderString = placeHolderString;
     self.placeHolderLabel.string = placeHolderString;
 }
-
 
 
 - (void)controlTextDidChange:(NSNotification *)obj {
@@ -114,11 +118,11 @@
 
 - (void)textFieldBecomeFirstResponder {
     
+    self.originFrame = self.frame;
     _searchingState = YES;
     
     [self focusedStyleSetting];
     [self animationWithState:YES];
-    
 }
 
 
@@ -154,29 +158,19 @@
     
     [self.layer removeAllAnimations];
     
-    CABasicAnimation *animate = [CABasicAnimation animation];
-    animate.duration = 0.2;
-    animate.keyPath = @"bounds.size.width";
-    animate.toValue = isSearching ? @(selfWidth + 30) : @(selfWidth - 30);
-    [self.layer addAnimation:animate forKey:nil];
+    [[NSAnimationContext currentContext] setDuration:0.4];
+    [NSAnimationContext beginGrouping];
+    if (isSearching) {
+        [self.animator setFrameSize:NSMakeSize(NSWidth(self.originFrame) + 50, selfHeight)];
+        [self.animator setFrameOrigin:NSMakePoint(NSMinX(self.originFrame) - 50, selfY)];
+    } else {
+        [self.animator setFrameSize:NSMakeSize(NSWidth(self.originFrame), selfHeight)];
+        [self.animator setFrameOrigin:NSMakePoint(NSMinX(self.originFrame), selfY)];
+    }
+    [NSAnimationContext endGrouping];
     
-    CABasicAnimation *animate1 = [CABasicAnimation animation];
-    animate1.delegate = self;
-    animate1.duration = 0.2;
-    animate1.keyPath = @"transform.translation.x";
-    animate1.toValue = isSearching ? @(-30): @(30);
-    [self.layer addAnimation:animate1 forKey:nil];
 }
 
-- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
-    
-    if (_searchingState) {
-        self.frame = CGRectMake(self.originFrame.origin.x - 30, selfY , self.originFrame.size.width + 30, selfHeight);
-    } else {
-        self.frame = CGRectMake(self.originFrame.origin.x , selfY , self.originFrame.size.width, selfHeight);
-    }
-    
-}
 
 -(void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
