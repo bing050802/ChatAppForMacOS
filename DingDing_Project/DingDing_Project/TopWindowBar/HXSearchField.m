@@ -10,6 +10,8 @@
 #import "HXPrefixHeader.h"
 #import <Quartz/Quartz.h>
 #import "HXTextField.h"
+#import "MLPopupWindowManager.h"
+
 
 #define selfWidth   self.frame.size.width
 #define selfHeight  self.frame.size.height
@@ -34,11 +36,11 @@
 
 @property (nonatomic, strong) HXTextField *textfield;
 
+@property (nonatomic, strong) HXSearchButton *searchButton;
+
 @property (nonatomic, assign) BOOL searchingState;
 
 @property (nonatomic, assign) CGRect originFrame;
-
-@property (nonatomic, strong) HXSearchButton *searchButton;
 
 @end
 
@@ -192,6 +194,14 @@
     animationContext.duration = 0.4;
     animationContext.completionHandler = ^{
         [self addSubview:self.searchButton];
+        
+        
+        
+        MLPopupWindowManager *popMager = [MLPopupWindowManager popupManager];
+        NSView *view = [[NSView alloc] initWithFrame:NSMakeRect(0, 0, 200, 300)];
+        [view backGroundColor:[NSColor yellowColor]];
+        [popMager showPopupForControl:self.textfield withContent:view];
+        
     };
     
     [NSAnimationContext beginGrouping];

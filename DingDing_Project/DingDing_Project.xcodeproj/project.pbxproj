@@ -11,6 +11,8 @@
 		8AAD927B1D631BC4007E4A8F /* search_btn_mousein.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAD92791D631BC4007E4A8F /* search_btn_mousein.png */; };
 		8AAD92821D632D1D007E4A8F /* MVGraphicsFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD927F1D632D1D007E4A8F /* MVGraphicsFunctions.m */; };
 		8AAD92831D632D1D007E4A8F /* MVShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD92811D632D1D007E4A8F /* MVShadow.m */; };
+		8AAD92891D633588007E4A8F /* MLPopupWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD92861D633588007E4A8F /* MLPopupWindow.m */; };
+		8AAD928A1D633588007E4A8F /* MLPopupWindowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD92881D633588007E4A8F /* MLPopupWindowManager.m */; };
 		8AADD0081D5DADB300BDD619 /* HXTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AADD0071D5DADB300BDD619 /* HXTextField.m */; };
 		8AAFF5FA1D5C622700E908EC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAFF5F91D5C622700E908EC /* QuartzCore.framework */; };
 		8AAFF5FC1D5C623800E908EC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAFF5FB1D5C623800E908EC /* Cocoa.framework */; };
@@ -36,6 +38,10 @@
 		8AAD927F1D632D1D007E4A8F /* MVGraphicsFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVGraphicsFunctions.m; sourceTree = "<group>"; };
 		8AAD92801D632D1D007E4A8F /* MVShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVShadow.h; sourceTree = "<group>"; };
 		8AAD92811D632D1D007E4A8F /* MVShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVShadow.m; sourceTree = "<group>"; };
+		8AAD92851D633588007E4A8F /* MLPopupWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPopupWindow.h; sourceTree = "<group>"; };
+		8AAD92861D633588007E4A8F /* MLPopupWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPopupWindow.m; sourceTree = "<group>"; };
+		8AAD92871D633588007E4A8F /* MLPopupWindowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPopupWindowManager.h; sourceTree = "<group>"; };
+		8AAD92881D633588007E4A8F /* MLPopupWindowManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPopupWindowManager.m; sourceTree = "<group>"; };
 		8AADD0061D5DADB300BDD619 /* HXTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTextField.h; sourceTree = "<group>"; };
 		8AADD0071D5DADB300BDD619 /* HXTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTextField.m; sourceTree = "<group>"; };
 		8AAFF5F91D5C622700E908EC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -104,6 +110,17 @@
 			path = HelperClass;
 			sourceTree = "<group>";
 		};
+		8AAD92841D633588007E4A8F /* PopverView */ = {
+			isa = PBXGroup;
+			children = (
+				8AAD92851D633588007E4A8F /* MLPopupWindow.h */,
+				8AAD92861D633588007E4A8F /* MLPopupWindow.m */,
+				8AAD92871D633588007E4A8F /* MLPopupWindowManager.h */,
+				8AAD92881D633588007E4A8F /* MLPopupWindowManager.m */,
+			);
+			path = PopverView;
+			sourceTree = "<group>";
+		};
 		8AE26D0D1D5989C500855257 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +176,7 @@
 		8AE26D381D598B5C00855257 /* TopWindowBar */ = {
 			isa = PBXGroup;
 			children = (
+				8AAD92841D633588007E4A8F /* PopverView */,
 				8AE26D401D598CD300855257 /* HXTopBarView.h */,
 				8AE26D411D598CD300855257 /* HXTopBarView.m */,
 				8AAFF6081D5C75B600E908EC /* HXSearchField.h */,
@@ -298,7 +316,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AE26D461D59B47300855257 /* ViewController.m in Sources */,
+				8AAD92891D633588007E4A8F /* MLPopupWindow.m in Sources */,
 				8AADD0081D5DADB300BDD619 /* HXTextField.m in Sources */,
+				8AAD928A1D633588007E4A8F /* MLPopupWindowManager.m in Sources */,
 				8AE26D521D59B4F000855257 /* ALView+PureLayout.m in Sources */,
 				8AAD92831D632D1D007E4A8F /* MVShadow.m in Sources */,
 				8AE26D371D598A4800855257 /* main.m in Sources */,
