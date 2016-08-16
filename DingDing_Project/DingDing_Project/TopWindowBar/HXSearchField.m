@@ -8,7 +8,6 @@
 
 #import "HXSearchField.h"
 #import "HXPrefixHeader.h"
-#import "MVGraphicsFunctions.h"
 #import <Quartz/Quartz.h>
 #import "HXTextField.h"
 
@@ -22,16 +21,12 @@
 @interface HXSearchButton :NSView
 
 @property (nonatomic, strong) NOHighlightBtn *btn;
-
 @property (nonatomic, strong) NSTrackingArea *trackingArea;
-//
-//@property (nonatomic, strong) HXTextField *textfield;
-//
-//@property (nonatomic, assign) BOOL searchingState;
-//
-//@property (nonatomic, assign) CGRect originFrame;
 
 @end
+
+
+
 
 @interface HXSearchField () <HXTextFieldDelegate>
 
@@ -44,7 +39,6 @@
 @property (nonatomic, assign) CGRect originFrame;
 
 @property (nonatomic, strong) HXSearchButton *searchButton;
-
 
 @end
 
@@ -226,13 +220,14 @@
 
 
 
-@interface  NOHighlightBtn : NSButton
+
+
+
+@interface NOHighlightBtn : NSButton
 
 @end
 
-
 @implementation NOHighlightBtn
-
 
 // 为了去除 系统按钮自带的点击高亮效果，拦截mouseDown事件，把事件传给外部
 - (void)mouseDown:(NSEvent *)theEvent {
@@ -270,10 +265,12 @@
 
 //    [self backGroundColor:[NSColor orangeColor]];
     
+    // 左边的 分割竖线
     NSView *v_line = [[NSView alloc] initWithFrame: NSMakeRect(0,7,1, 18)];
     [v_line backGroundColor:[NSColor lightGrayColor]];
     [self addSubview:v_line];
     
+    // 搜索按钮
     NOHighlightBtn *btn = [[NOHighlightBtn alloc] initWithFrame: NSMakeRect(10,0, 20, 30)];
     btn.target = self;
     btn.action = @selector(searchBtnClick:);
@@ -282,10 +279,10 @@
     [self addSubview:btn];
     self.btn = btn;
     
+    // 为搜索按钮区域 增加鼠标进入，离开时候的事件响应
     [self addTrackingArea:self.trackingArea];
 
 }
-
 
 
 - (void)searchBtnClick:(NOHighlightBtn *)btn {

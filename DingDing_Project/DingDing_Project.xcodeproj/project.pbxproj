@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		8AAD927A1D631BC4007E4A8F /* search_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAD92781D631BC4007E4A8F /* search_btn.png */; };
 		8AAD927B1D631BC4007E4A8F /* search_btn_mousein.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAD92791D631BC4007E4A8F /* search_btn_mousein.png */; };
+		8AAD92821D632D1D007E4A8F /* MVGraphicsFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD927F1D632D1D007E4A8F /* MVGraphicsFunctions.m */; };
+		8AAD92831D632D1D007E4A8F /* MVShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD92811D632D1D007E4A8F /* MVShadow.m */; };
 		8AADD0081D5DADB300BDD619 /* HXTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AADD0071D5DADB300BDD619 /* HXTextField.m */; };
-		8AADD00B1D5DADDD00BDD619 /* MVShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AADD00A1D5DADDD00BDD619 /* MVShadow.m */; };
 		8AAFF5FA1D5C622700E908EC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAFF5F91D5C622700E908EC /* QuartzCore.framework */; };
 		8AAFF5FC1D5C623800E908EC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAFF5FB1D5C623800E908EC /* Cocoa.framework */; };
 		8AAFF5FE1D5C624500E908EC /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAFF5FD1D5C624500E908EC /* ApplicationServices.framework */; };
-		8AAFF6041D5C65EF00E908EC /* MVGraphicsFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAFF6021D5C65EF00E908EC /* MVGraphicsFunctions.m */; };
 		8AAFF60A1D5C75B600E908EC /* HXSearchField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAFF6091D5C75B600E908EC /* HXSearchField.m */; };
 		8AE26D341D598A4800855257 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D2F1D598A4800855257 /* AppDelegate.m */; };
 		8AE26D351D598A4800855257 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AE26D301D598A4800855257 /* Assets.xcassets */; };
@@ -32,15 +32,15 @@
 /* Begin PBXFileReference section */
 		8AAD92781D631BC4007E4A8F /* search_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_btn.png; sourceTree = "<group>"; };
 		8AAD92791D631BC4007E4A8F /* search_btn_mousein.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_btn_mousein.png; sourceTree = "<group>"; };
+		8AAD927E1D632D1D007E4A8F /* MVGraphicsFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVGraphicsFunctions.h; sourceTree = "<group>"; };
+		8AAD927F1D632D1D007E4A8F /* MVGraphicsFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVGraphicsFunctions.m; sourceTree = "<group>"; };
+		8AAD92801D632D1D007E4A8F /* MVShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVShadow.h; sourceTree = "<group>"; };
+		8AAD92811D632D1D007E4A8F /* MVShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVShadow.m; sourceTree = "<group>"; };
 		8AADD0061D5DADB300BDD619 /* HXTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTextField.h; sourceTree = "<group>"; };
 		8AADD0071D5DADB300BDD619 /* HXTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTextField.m; sourceTree = "<group>"; };
-		8AADD0091D5DADDD00BDD619 /* MVShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVShadow.h; sourceTree = "<group>"; };
-		8AADD00A1D5DADDD00BDD619 /* MVShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVShadow.m; sourceTree = "<group>"; };
 		8AAFF5F91D5C622700E908EC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8AAFF5FB1D5C623800E908EC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		8AAFF5FD1D5C624500E908EC /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
-		8AAFF6011D5C65EF00E908EC /* MVGraphicsFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVGraphicsFunctions.h; sourceTree = "<group>"; };
-		8AAFF6021D5C65EF00E908EC /* MVGraphicsFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVGraphicsFunctions.m; sourceTree = "<group>"; };
 		8AAFF6081D5C75B600E908EC /* HXSearchField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXSearchField.h; sourceTree = "<group>"; };
 		8AAFF6091D5C75B600E908EC /* HXSearchField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXSearchField.m; sourceTree = "<group>"; };
 		8AE26D161D5989C500855257 /* DingDing_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DingDing_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +91,17 @@
 				8AAD92791D631BC4007E4A8F /* search_btn_mousein.png */,
 			);
 			path = ImageResource;
+			sourceTree = "<group>";
+		};
+		8AAD927D1D632D1D007E4A8F /* HelperClass */ = {
+			isa = PBXGroup;
+			children = (
+				8AAD927E1D632D1D007E4A8F /* MVGraphicsFunctions.h */,
+				8AAD927F1D632D1D007E4A8F /* MVGraphicsFunctions.m */,
+				8AAD92801D632D1D007E4A8F /* MVShadow.h */,
+				8AAD92811D632D1D007E4A8F /* MVShadow.m */,
+			);
+			path = HelperClass;
 			sourceTree = "<group>";
 		};
 		8AE26D0D1D5989C500855257 = {
@@ -148,14 +159,10 @@
 		8AE26D381D598B5C00855257 /* TopWindowBar */ = {
 			isa = PBXGroup;
 			children = (
-				8AADD0091D5DADDD00BDD619 /* MVShadow.h */,
-				8AADD00A1D5DADDD00BDD619 /* MVShadow.m */,
-				8AAFF6011D5C65EF00E908EC /* MVGraphicsFunctions.h */,
-				8AAFF6021D5C65EF00E908EC /* MVGraphicsFunctions.m */,
-				8AAFF6081D5C75B600E908EC /* HXSearchField.h */,
-				8AAFF6091D5C75B600E908EC /* HXSearchField.m */,
 				8AE26D401D598CD300855257 /* HXTopBarView.h */,
 				8AE26D411D598CD300855257 /* HXTopBarView.m */,
+				8AAFF6081D5C75B600E908EC /* HXSearchField.h */,
+				8AAFF6091D5C75B600E908EC /* HXSearchField.m */,
 				8AADD0061D5DADB300BDD619 /* HXTextField.h */,
 				8AADD0071D5DADB300BDD619 /* HXTextField.m */,
 			);
@@ -209,6 +216,7 @@
 		8AE26D551D59B62700855257 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				8AAD927D1D632D1D007E4A8F /* HelperClass */,
 				8AE26D5A1D59B73C00855257 /* NSView+BackGroundColor.h */,
 				8AE26D5B1D59B73C00855257 /* NSView+BackGroundColor.m */,
 				8AE26D561D59B68700855257 /* HXPrefixHeader.h */,
@@ -292,14 +300,14 @@
 				8AE26D461D59B47300855257 /* ViewController.m in Sources */,
 				8AADD0081D5DADB300BDD619 /* HXTextField.m in Sources */,
 				8AE26D521D59B4F000855257 /* ALView+PureLayout.m in Sources */,
-				8AADD00B1D5DADDD00BDD619 /* MVShadow.m in Sources */,
-				8AAFF6041D5C65EF00E908EC /* MVGraphicsFunctions.m in Sources */,
+				8AAD92831D632D1D007E4A8F /* MVShadow.m in Sources */,
 				8AE26D371D598A4800855257 /* main.m in Sources */,
 				8AE26D541D59B4F000855257 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				8AE26D531D59B4F000855257 /* NSArray+PureLayout.m in Sources */,
 				8AE26D3C1D598C4D00855257 /* HXMainWindow.m in Sources */,
 				8AE26D421D598CD300855257 /* HXTopBarView.m in Sources */,
 				8AAFF60A1D5C75B600E908EC /* HXSearchField.m in Sources */,
+				8AAD92821D632D1D007E4A8F /* MVGraphicsFunctions.m in Sources */,
 				8AE26D341D598A4800855257 /* AppDelegate.m in Sources */,
 				8AE26D5C1D59B73C00855257 /* NSView+BackGroundColor.m in Sources */,
 			);

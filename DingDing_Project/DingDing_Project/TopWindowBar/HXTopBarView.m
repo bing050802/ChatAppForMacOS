@@ -14,7 +14,6 @@
 #import "HXSearchField.h"
 
 
-
 @interface HXTopBarView ()
 
 @property (nonatomic, strong) HXSearchField *searchField;
@@ -40,20 +39,13 @@
     [self.searchField autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:55];
     [self.searchField autoSetDimension:ALDimensionHeight toSize:32];
     [self.searchField autoSetDimension:ALDimensionWidth toSize:205];
-    
-    //    NSLog(@"%@",searchField.constraints);
-    //    NSLog(@"%@",self.constraints);
-//    NSLog(@"%@",NSStringFromRect(NSRectFromCGRect(CGRectMake(0,0,100,100))));
+
 }
 
 
 
-
-
 - (void)mouseDown:(NSEvent *)theEvent {
-
     [self.searchField resignFocus];
-
 }
 
 
