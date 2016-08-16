@@ -26,7 +26,6 @@
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
     
-    // Drawing code here.
 }
 
 
@@ -38,15 +37,13 @@
     [self addSubview:searchField];
     self.searchField = searchField;
     [self.searchField autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:15];
-    [self.searchField autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:100];
-    [self.searchField autoSetDimension:ALDimensionHeight toSize:33];
-    [self.searchField autoSetDimension:ALDimensionWidth toSize:180];
+    [self.searchField autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:55];
+    [self.searchField autoSetDimension:ALDimensionHeight toSize:32];
+    [self.searchField autoSetDimension:ALDimensionWidth toSize:205];
     
-//    NSLog(@"%@",searchField.constraints);
-//    NSLog(@"%@",self.constraints);
-//    
-
-    
+    //    NSLog(@"%@",searchField.constraints);
+    //    NSLog(@"%@",self.constraints);
+//    NSLog(@"%@",NSStringFromRect(NSRectFromCGRect(CGRectMake(0,0,100,100))));
 }
 
 
@@ -60,14 +57,13 @@
 }
 
 
-- (void)mouseDragged:(NSEvent *)theEvent
-{
+- (void)mouseDragged:(NSEvent *)theEvent {
+    
     NSWindow *window = self.window;
     if (window.isMovableByWindowBackground || (window.styleMask & NSFullScreenWindowMask) == NSFullScreenWindowMask) {
         [super mouseDragged:theEvent];
         return;
     }
-    
     NSPoint where = [window convertRectToScreen:NSMakeRect(theEvent.locationInWindow.x, theEvent.locationInWindow.y, 0, 0)].origin;
     NSPoint origin = window.frame.origin;
     CGFloat deltaX = 0.0;

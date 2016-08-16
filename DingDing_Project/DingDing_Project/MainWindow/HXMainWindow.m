@@ -49,6 +49,9 @@
     [self.topBar autoSetDimension:ALDimensionHeight toSize:60];
     
 }
+- (void)mouseEntered:(NSEvent *)theEvent {
+    //    self.btn.image =[NSImage imageNamed:@"search_btn_mousein.png"];
+}
 
 
 

@@ -12,14 +12,28 @@
 #import <Quartz/Quartz.h>
 #import "HXTextField.h"
 
-#define selfWidth   self.bounds.size.width
-#define selfHeight  self.bounds.size.height
+#define selfWidth   self.frame.size.width
+#define selfHeight  self.frame.size.height
 #define selfX       self.frame.origin.x
 #define selfY       self.frame.origin.y
 
+@class NOHighlightBtn;
+
+@interface HXSearchButton :NSView
+
+@property (nonatomic, strong) NOHighlightBtn *btn;
+
+@property (nonatomic, strong) NSTrackingArea *trackingArea;
+//
+//@property (nonatomic, strong) HXTextField *textfield;
+//
+//@property (nonatomic, assign) BOOL searchingState;
+//
+//@property (nonatomic, assign) CGRect originFrame;
+
+@end
 
 @interface HXSearchField () <HXTextFieldDelegate>
-
 
 @property (nonatomic, strong) NSText *placeHolderLabel;
 
@@ -28,6 +42,8 @@
 @property (nonatomic, assign) BOOL searchingState;
 
 @property (nonatomic, assign) CGRect originFrame;
+
+@property (nonatomic, strong) HXSearchButton *searchButton;
 
 
 @end
@@ -71,6 +87,15 @@
     return _placeHolderLabel;
 }
 
+- (HXSearchButton *)searchButton {
+    if (!_searchButton) {
+        _searchButton = [[HXSearchButton alloc] init];
+        _searchButton.frame = NSMakeRect(NSWidth(self.originFrame) + 5, 0, 32, 32);
+    }
+    return _searchButton;
+}
+
+
 - (instancetype) initWithFrame:(NSRect)frameRect {
     self = [super initWithFrame:frameRect];
     if(self) {
@@ -78,6 +103,14 @@
     }
     return self;
 }
+
+
+- (void)mouseDown:(NSEvent *)theEvent
+{
+    
+}
+
+
 
 - (void)commonInit {
     
@@ -88,15 +121,15 @@
 
     [self addSubview:self.textfield];
     
+    [self.textfield autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:7.0];
+    [self.textfield autoSetDimension:ALDimensionHeight toSize:18];
+    [self.textfield autoSetDimension:ALDimensionWidth toSize:210];
+    [self.textfield autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:8];
+    
     [self.placeHolderLabel autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:7.0];
     [self.placeHolderLabel autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:20];
     [self.placeHolderLabel autoSetDimension:ALDimensionHeight toSize:20];
     [self.placeHolderLabel autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:8];
-    
-    [self.textfield autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:7.0];
-    [self.textfield autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:20];
-    [self.textfield autoSetDimension:ALDimensionHeight toSize:20];
-    [self.textfield autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:8];
 
 }
 
@@ -147,10 +180,13 @@
 }
 
 - (void)resignedStyleSetting {
+    [self.searchButton removeFromSuperview];
     [self backGroundColor:HXColor(0, 103, 210)];
     self.placeHolderLabel.textColor = [NSColor whiteColor];
     self.placeHolderLabel.alphaValue = 0.6;
     self.placeHolderLabel.string = self.placeHolderString;
+    self.textfield.stringValue = @"";
+
 }
 
 
@@ -158,14 +194,17 @@
     
     [self.layer removeAllAnimations];
     
-    [[NSAnimationContext currentContext] setDuration:0.4];
+    NSAnimationContext *animationContext = [NSAnimationContext currentContext];
+    animationContext.duration = 0.4;
+    animationContext.completionHandler = ^{
+        [self addSubview:self.searchButton];
+    };
+    
     [NSAnimationContext beginGrouping];
     if (isSearching) {
-        [self.animator setFrameSize:NSMakeSize(NSWidth(self.originFrame) + 50, selfHeight)];
-        [self.animator setFrameOrigin:NSMakePoint(NSMinX(self.originFrame) - 50, selfY)];
+        self.animator.frame = NSMakeRect(NSMinX(self.originFrame) - 50, selfY, NSWidth(self.originFrame) + 50, selfHeight);
     } else {
-        [self.animator setFrameSize:NSMakeSize(NSWidth(self.originFrame), selfHeight)];
-        [self.animator setFrameOrigin:NSMakePoint(NSMinX(self.originFrame), selfY)];
+        self.animator.frame = self.originFrame;
     }
     [NSAnimationContext endGrouping];
     
@@ -179,9 +218,91 @@
 }
 
 
-- (void)dealloc
-{
+- (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end
+
+
+
+@interface  NOHighlightBtn : NSButton
+
+@end
+
+
+@implementation NOHighlightBtn
+
+
+// 为了去除 系统按钮自带的点击高亮效果，拦截mouseDown事件，把事件传给外部
+- (void)mouseDown:(NSEvent *)theEvent {
+    [self sendAction:self.action to:self.target];
+    
+}
+
+
+@end
+
+
+
+
+
+@implementation HXSearchButton
+
+- (instancetype) initWithFrame:(NSRect)frameRect {
+    self = [super initWithFrame:frameRect];
+    if(self) {
+        [self commonInit];
+    }
+    return self;
+}
+
+- (NSTrackingArea *)trackingArea {
+    if(!_trackingArea) {
+        _trackingArea = [[NSTrackingArea alloc] initWithRect:self.btn.frame
+                                                     options: (NSTrackingMouseEnteredAndExited | NSTrackingActiveInActiveApp)
+                                                       owner:self userInfo:nil];
+    }
+    return _trackingArea;
+}
+
+- (void)commonInit {
+
+//    [self backGroundColor:[NSColor orangeColor]];
+    
+    NSView *v_line = [[NSView alloc] initWithFrame: NSMakeRect(0,7,1, 18)];
+    [v_line backGroundColor:[NSColor lightGrayColor]];
+    [self addSubview:v_line];
+    
+    NOHighlightBtn *btn = [[NOHighlightBtn alloc] initWithFrame: NSMakeRect(10,0, 20, 30)];
+    btn.target = self;
+    btn.action = @selector(searchBtnClick:);
+    btn.bordered = NO;
+    btn.image = [NSImage imageNamed:@"search_btn.png"];
+    [self addSubview:btn];
+    self.btn = btn;
+    
+    [self addTrackingArea:self.trackingArea];
+
+}
+
+
+
+- (void)searchBtnClick:(NOHighlightBtn *)btn {
+    
+}
+
+
+- (void)mouseEntered:(NSEvent *)theEvent {
+    self.btn.image =[NSImage imageNamed:@"search_btn_mousein.png"];
+}
+
+- (void)mouseExited:(NSEvent *)theEvent {
+    self.btn.image = [NSImage imageNamed:@"search_btn.png"];
+}
+
+@end
+
+
+
+

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8AAD927A1D631BC4007E4A8F /* search_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAD92781D631BC4007E4A8F /* search_btn.png */; };
+		8AAD927B1D631BC4007E4A8F /* search_btn_mousein.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAD92791D631BC4007E4A8F /* search_btn_mousein.png */; };
 		8AADD0081D5DADB300BDD619 /* HXTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AADD0071D5DADB300BDD619 /* HXTextField.m */; };
 		8AADD00B1D5DADDD00BDD619 /* MVShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AADD00A1D5DADDD00BDD619 /* MVShadow.m */; };
 		8AAFF5FA1D5C622700E908EC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAFF5F91D5C622700E908EC /* QuartzCore.framework */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8AAD92781D631BC4007E4A8F /* search_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_btn.png; sourceTree = "<group>"; };
+		8AAD92791D631BC4007E4A8F /* search_btn_mousein.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_btn_mousein.png; sourceTree = "<group>"; };
 		8AADD0061D5DADB300BDD619 /* HXTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTextField.h; sourceTree = "<group>"; };
 		8AADD0071D5DADB300BDD619 /* HXTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTextField.m; sourceTree = "<group>"; };
 		8AADD0091D5DADDD00BDD619 /* MVShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVShadow.h; sourceTree = "<group>"; };
@@ -80,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8AAD92771D631BC4007E4A8F /* ImageResource */ = {
+			isa = PBXGroup;
+			children = (
+				8AAD92781D631BC4007E4A8F /* search_btn.png */,
+				8AAD92791D631BC4007E4A8F /* search_btn_mousein.png */,
+			);
+			path = ImageResource;
+			sourceTree = "<group>";
+		};
 		8AE26D0D1D5989C500855257 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +127,7 @@
 		8AE26D1C1D5989C500855257 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8AAD92771D631BC4007E4A8F /* ImageResource */,
 				8AE26D471D59B4F000855257 /* ThirdPartyLibs */,
 			);
 			name = "Supporting Files";
@@ -262,7 +276,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AE26D3F1D598C7900855257 /* Main.storyboard in Resources */,
+				8AAD927B1D631BC4007E4A8F /* search_btn_mousein.png in Resources */,
 				8AE26D351D598A4800855257 /* Assets.xcassets in Resources */,
+				8AAD927A1D631BC4007E4A8F /* search_btn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

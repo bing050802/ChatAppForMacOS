@@ -670,9 +670,23 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="319"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <progressIndicator wantsLayer="YES" maxValue="100" indeterminate="YES" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="08l-iU-JKl">
+                                <rect key="frame" x="224" y="193" width="100" height="20"/>
+                            </progressIndicator>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="08l-iU-JKl" secondAttribute="bottom" constant="194" id="0eN-Ei-Sjv"/>
+                            <constraint firstAttribute="trailing" secondItem="08l-iU-JKl" secondAttribute="trailing" constant="156" id="1FR-d3-gwm"/>
+                            <constraint firstItem="08l-iU-JKl" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="224" id="A1V-dO-aAb"/>
+                            <constraint firstItem="08l-iU-JKl" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="107" id="X9f-n9-b9F"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="right" destination="1FR-d3-gwm" id="NLE-uj-59F"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
