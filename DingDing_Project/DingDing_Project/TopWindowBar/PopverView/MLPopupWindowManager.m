@@ -8,6 +8,7 @@
 
 #import "MLPopupWindowManager.h"
 #import "MLPopupWindow.h"
+#import "HXPrefixHeader.h"
 
 @interface MLPopupWindowManager() {
 	CGFloat originalHeight;
@@ -30,9 +31,9 @@ MLPopupWindowManager* _popupManager;
 	self.control = control;
 	originalHeight = content.bounds.size.height;
 	self.popupWindow.contentView = content;
-	[self layoutPopupWindow];
 	[control.window addChildWindow:self.popupWindow ordered:NSWindowAbove];
-	
+    [self layoutPopupWindow];
+
 	[[NSNotificationCenter defaultCenter] addObserver:self
 		selector:@selector(windowDidResize:)
 		name:NSWindowDidResizeNotification
@@ -89,9 +90,14 @@ MLPopupWindowManager* _popupManager;
 			screenFrame = [[self.popupWindow screen] visibleFrame];
 		} else {
 			screenFrame = [[NSScreen mainScreen] visibleFrame];
+
 		}
-		
-		NSRect screenRect = [self.control.window convertRectToScreen:self.control.frame];
+//		[self.control convert ]
+//		NSRect screenRect = [self.control.window convertRectToScreen:self.control.frame];
+        
+        
+//        NSLog(@"screenRect---%@",NSStringFromRect(screenRect));
+
 //		NSRect frame = NSZeroRect;
 //		NSRect contentRect = self.control.bounds;
 //		frame.size.width = contentRect.size.width;
@@ -113,11 +119,16 @@ MLPopupWindowManager* _popupManager;
 //		if(x2 > screenFrame.size.width) {
 //			frame.origin.x -= (x2 - screenFrame.size.width);
 //		}
+//        
+//        CGFloat x1 = screenRect.origin.x;
+//        CGFloat y1 = screenRect.origin.y;
+//		[self.popupWindow setFrame:NSMakeRect(x1, y1, 300, 400) display:NO];
         
         
         
-		[self.popupWindow setFrame:NSMakeRect(NSMinX(screenRect), NSMaxY(screenRect) + 20, 300, 400) display:NO];
 	};
+    
+    
 }
 
 
@@ -128,6 +139,10 @@ MLPopupWindowManager* _popupManager;
 
 - (void)windowDidResize:(NSNotification *)note
 {
+//    NSWindow *window = note.object;
+//    NSLog(@"windowDidResize---%@",window);
+    
+    
 	[self layoutPopupWindow];
 }
 

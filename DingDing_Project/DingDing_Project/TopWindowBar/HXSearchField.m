@@ -116,6 +116,12 @@
     self.layer.backgroundColor = HXColor(0, 103, 210).CGColor;
 
     [self addSubview:self.textfield];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(windowDidResize:)
+                                                 name:NSWindowDidResizeNotification
+                                               object:nil
+     ];
+
     
     [self.textfield autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:7.0];
     [self.textfield autoSetDimension:ALDimensionHeight toSize:18];
@@ -214,10 +220,16 @@
     
 }
 
+- (void)windowDidResize:(NSNotification *)note {
+    if (_searchingState) {
+        [self resignFocus];
+    }
+}
+
 
 -(void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
-    
+
     
 }
 
