@@ -71,6 +71,8 @@ MLPopupWindowManager* _popupManager;
 		[self.popupWindow setExcludedFromWindowsMenu:YES];
 		[self.popupWindow setHasShadow:YES];
 //		[self.popupWindow setTitleVisibility:NSWindowTitleHidden];
+        
+//             NSPopover
 	}
 	return self;
 }
@@ -124,7 +126,7 @@ MLPopupWindowManager* _popupManager;
 //        CGFloat y1 = screenRect.origin.y;
 //		[self.popupWindow setFrame:NSMakeRect(x1, y1, 300, 400) display:NO];
         
-        
+ 
         
 	};
     

@@ -11,7 +11,6 @@
 @implementation HXTextField
 
 - (BOOL)becomeFirstResponder {
-    
     if([self.hx_delagate respondsToSelector:@selector(textFieldBecomeFirstResponder)]) {
         [self.hx_delagate textFieldBecomeFirstResponder];
     }

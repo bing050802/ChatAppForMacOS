@@ -20,6 +20,16 @@
 
 @implementation HXMainWindow
 
+- (instancetype)initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)aStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)flag
+{
+    self = [super initWithContentRect:contentRect styleMask:aStyle backing:bufferingType defer:flag];
+    
+    if (self) {
+        self.minSize = NSMakeSize(1048, 679);
+    }
+    return self;
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     
@@ -29,6 +39,13 @@
     self.titleVisibility = NSWindowTitleHidden;
     
     [self setupTitlebar];
+    
+    
+    
+    
+
+    
+    
     
 }
 

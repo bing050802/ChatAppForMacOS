@@ -21,13 +21,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [_cView backGroundColor:[NSColor redColor]];
+    [self.cView backGroundColor:[NSColor redColor]];
     // Do any additional setup after loading the view.
+    
+//    self.view.window.minSize = NSMakeSize(1048, 679);
+
+
 }
 
 
 - (void)mouseDown:(NSEvent *)theEvent {
     
+//    NSAnimationContext *animationContext = [NSAnimationContext currentContext];
+//    animationContext.duration = 2.4;
+//    animationContext.allowsImplicitAnimation = YES;
+//    [NSAnimationContext beginGrouping];
+//    
+//    self.right.constant  = 0;
+////    [self.cView displayIfNeeded];
+//    
+//    [NSAnimationContext endGrouping];
     
 }
 

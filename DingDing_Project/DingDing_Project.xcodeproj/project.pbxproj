@@ -14,6 +14,9 @@
 		8AAD92891D633588007E4A8F /* MLPopupWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD92861D633588007E4A8F /* MLPopupWindow.m */; };
 		8AAD928A1D633588007E4A8F /* MLPopupWindowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD92881D633588007E4A8F /* MLPopupWindowManager.m */; };
 		8AADD0081D5DADB300BDD619 /* HXTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AADD0071D5DADB300BDD619 /* HXTextField.m */; };
+		8AAED6F31D64099900C1CDCB /* HXWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAED6F21D64099900C1CDCB /* HXWindowController.m */; };
+		8AAED6F61D64375100C1CDCB /* clear_btn_mousein.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAED6F41D64375100C1CDCB /* clear_btn_mousein.png */; };
+		8AAED6F71D64375100C1CDCB /* clear_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAED6F51D64375100C1CDCB /* clear_btn.png */; };
 		8AAFF5FA1D5C622700E908EC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAFF5F91D5C622700E908EC /* QuartzCore.framework */; };
 		8AAFF5FC1D5C623800E908EC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAFF5FB1D5C623800E908EC /* Cocoa.framework */; };
 		8AAFF5FE1D5C624500E908EC /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAFF5FD1D5C624500E908EC /* ApplicationServices.framework */; };
@@ -44,6 +47,10 @@
 		8AAD92881D633588007E4A8F /* MLPopupWindowManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPopupWindowManager.m; sourceTree = "<group>"; };
 		8AADD0061D5DADB300BDD619 /* HXTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTextField.h; sourceTree = "<group>"; };
 		8AADD0071D5DADB300BDD619 /* HXTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTextField.m; sourceTree = "<group>"; };
+		8AAED6F11D64099900C1CDCB /* HXWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXWindowController.h; sourceTree = "<group>"; };
+		8AAED6F21D64099900C1CDCB /* HXWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXWindowController.m; sourceTree = "<group>"; };
+		8AAED6F41D64375100C1CDCB /* clear_btn_mousein.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear_btn_mousein.png; sourceTree = "<group>"; };
+		8AAED6F51D64375100C1CDCB /* clear_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear_btn.png; sourceTree = "<group>"; };
 		8AAFF5F91D5C622700E908EC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8AAFF5FB1D5C623800E908EC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		8AAFF5FD1D5C624500E908EC /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
@@ -93,6 +100,8 @@
 		8AAD92771D631BC4007E4A8F /* ImageResource */ = {
 			isa = PBXGroup;
 			children = (
+				8AAED6F41D64375100C1CDCB /* clear_btn_mousein.png */,
+				8AAED6F51D64375100C1CDCB /* clear_btn.png */,
 				8AAD92781D631BC4007E4A8F /* search_btn.png */,
 				8AAD92791D631BC4007E4A8F /* search_btn_mousein.png */,
 			);
@@ -202,6 +211,8 @@
 			children = (
 				8AE26D441D59B47300855257 /* ViewController.h */,
 				8AE26D451D59B47300855257 /* ViewController.m */,
+				8AAED6F11D64099900C1CDCB /* HXWindowController.h */,
+				8AAED6F21D64099900C1CDCB /* HXWindowController.m */,
 			);
 			path = MainViewCtroller;
 			sourceTree = "<group>";
@@ -303,7 +314,9 @@
 			files = (
 				8AE26D3F1D598C7900855257 /* Main.storyboard in Resources */,
 				8AAD927B1D631BC4007E4A8F /* search_btn_mousein.png in Resources */,
+				8AAED6F71D64375100C1CDCB /* clear_btn.png in Resources */,
 				8AE26D351D598A4800855257 /* Assets.xcassets in Resources */,
+				8AAED6F61D64375100C1CDCB /* clear_btn_mousein.png in Resources */,
 				8AAD927A1D631BC4007E4A8F /* search_btn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +339,7 @@
 				8AE26D531D59B4F000855257 /* NSArray+PureLayout.m in Sources */,
 				8AE26D3C1D598C4D00855257 /* HXMainWindow.m in Sources */,
 				8AE26D421D598CD300855257 /* HXTopBarView.m in Sources */,
+				8AAED6F31D64099900C1CDCB /* HXWindowController.m in Sources */,
 				8AAFF60A1D5C75B600E908EC /* HXSearchField.m in Sources */,
 				8AAD92821D632D1D007E4A8F /* MVGraphicsFunctions.m in Sources */,
 				8AE26D341D598A4800855257 /* AppDelegate.m in Sources */,
@@ -436,7 +450,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = DingDing_Project/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CFLAGS = "-DNS_BUILD_32_LIKE_64";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.babeltime.DingDing-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -451,7 +465,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = DingDing_Project/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CFLAGS = "-DNS_BUILD_32_LIKE_64";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.babeltime.DingDing-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";

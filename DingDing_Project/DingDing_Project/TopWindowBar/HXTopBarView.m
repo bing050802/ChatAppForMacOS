@@ -35,10 +35,12 @@
     searchField.placeHolderString = @"联系人,群组,聊天记录";
     [self addSubview:searchField];
     self.searchField = searchField;
+    
+
     [self.searchField autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:15];
-    [self.searchField autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:55];
+     self.searchField.rightConstrinat = [self.searchField autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:55];
     [self.searchField autoSetDimension:ALDimensionHeight toSize:32];
-    [self.searchField autoSetDimension:ALDimensionWidth toSize:205];
+     self.searchField.widthConstrinat = [self.searchField autoSetDimension:ALDimensionWidth toSize:210];
 
 }
 
