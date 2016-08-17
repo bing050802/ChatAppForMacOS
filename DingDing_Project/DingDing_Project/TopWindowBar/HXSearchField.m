@@ -12,11 +12,6 @@
 #import "HXTextField.h"
 #import "MLPopupWindowManager.h"
 
-#define selfWidth   self.frame.size.width
-#define selfHeight  self.frame.size.height
-#define selfX       self.frame.origin.x
-#define selfY       self.frame.origin.y
-
 
 @interface HXSearchField () <HXTextFieldDelegate,NSAnimationDelegate>
 
@@ -182,28 +177,33 @@
 - (void)animationWithState:(BOOL)isSearching {
     
     NSAnimationContext *animationContext = [NSAnimationContext currentContext];
-//    animationContext.allowsImplicitAnimation = YES;
+    //animationContext.allowsImplicitAnimation = YES;
     animationContext.duration = 0.4;
     animationContext.completionHandler = ^{
         [self addSubview:self.searchToolBar];
+        if (!isSearching) {
+            self.animator.widthConstrinat.constant = 210;
+        }
     };
     [NSAnimationContext beginGrouping];
     if (isSearching) {
         self.animator.frame = NSMakeRect(NSMinX(self.originFrame) - 50, selfY, NSWidth(self.originFrame) + 50, selfHeight);
-//        self.animator.widthConstrinat.constant = 270;
+        //self.animator.widthConstrinat.constant = 270;
     } else {
         self.animator.frame = self.originFrame;
-//        self.animator.widthConstrinat.constant = 210;
+        //self.animator.widthConstrinat.constant = 210;
     }
     [NSAnimationContext endGrouping];
 }
-
 
 #pragma -mark  NSWindowDidResizeNotification 窗口拉伸通知 回调事件
 - (void)windowDidResize:(NSNotification *)note {
     NSWindow *window = note.object;
     if (_searchingState) {
+//        NSLog(@"%f",window.minSize.width);
+//        window.frame.size.width > window.minSize.width
         self.frame = NSMakeRect(window.frame.size.width - 270 - 55, selfY, 270, selfHeight);
+        self.animator.widthConstrinat.constant = 270;
     }
 }
 

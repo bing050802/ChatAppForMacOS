@@ -25,6 +25,10 @@
 // https://github.com/michaelvillar/chat mac 即时通讯app
 
 
+#define selfWidth   self.frame.size.width
+#define selfHeight  self.frame.size.height
+#define selfX       self.frame.origin.x
+#define selfY       self.frame.origin.y
 
 // RGB颜色
 #define HXColor(r, g, b) [NSColor colorWithCalibratedRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
