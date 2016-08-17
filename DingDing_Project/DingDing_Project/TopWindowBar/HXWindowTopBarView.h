@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface HXTopBarView : NSView
+@interface HXWindowTopBarView : NSView
 
 @end

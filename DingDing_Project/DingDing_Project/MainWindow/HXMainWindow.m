@@ -7,11 +7,11 @@
 //
 
 #import "HXMainWindow.h"
-#import "HXTopBarView.h"
+#import "HXWindowTopBarView.h"
 #import "HXPrefixHeader.h"
 @interface HXMainWindow ()
 
-@property (nonatomic, strong) HXTopBarView *topBar;
+@property (nonatomic, strong) HXWindowTopBarView *topBar;
 
 
 @end
@@ -40,18 +40,11 @@
     
     [self setupTitlebar];
     
-    
-    
-    
-
-    
-    
-    
 }
 
-- (HXTopBarView *)topBar {
+- (HXWindowTopBarView *)topBar {
     if(!_topBar) {
-        _topBar = [[HXTopBarView alloc] init];
+        _topBar = [[HXWindowTopBarView alloc] init];
         [_topBar backGroundColor:HXColor(0, 114, 237)];
     }
     return _topBar;

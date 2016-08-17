@@ -16,7 +16,6 @@
 
 @end
 
-
 @interface HXTextField : NSTextField
 
 @property (nonatomic,weak) id <HXTextFieldDelegate> hx_delagate;

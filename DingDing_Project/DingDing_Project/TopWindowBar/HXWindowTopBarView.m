@@ -6,7 +6,7 @@
 //  Copyright © 2016年 HXQ. All rights reserved.
 //
 
-#import "HXTopBarView.h"
+#import "HXWindowTopBarView.h"
 
 #import "HXPrefixHeader.h"
 #import <objc/runtime.h>
@@ -14,18 +14,14 @@
 #import "HXSearchField.h"
 
 
-@interface HXTopBarView ()
+@interface HXWindowTopBarView ()
 
 @property (nonatomic, strong) HXSearchField *searchField;
 
 @end
 
-@implementation HXTopBarView
+@implementation HXWindowTopBarView
 
-- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
-    
-}
 
 
 - (void)viewWillMoveToWindow:(nullable NSWindow *)newWindow {
@@ -36,7 +32,6 @@
     [self addSubview:searchField];
     self.searchField = searchField;
     
-
     [self.searchField autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:15];
      self.searchField.rightConstrinat = [self.searchField autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:55];
     [self.searchField autoSetDimension:ALDimensionHeight toSize:32];

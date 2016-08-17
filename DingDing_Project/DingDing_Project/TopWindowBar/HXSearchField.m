@@ -24,14 +24,13 @@
 
 @property (nonatomic, strong) HXTextField *textfield;
 
-@property (nonatomic, strong) HXSearchButton *searchButton;
+@property (nonatomic, strong) HXSearchToolBar *searchToolBar;
 
 @property (nonatomic, assign) BOOL searchingState;
 
 @property (nonatomic, assign) BOOL first;
 
 @property (nonatomic, assign) CGRect originFrame;
-
 
 @end
 
@@ -47,7 +46,7 @@
         // 去除光标汇聚的时候的聚焦边框
         _textfield.focusRingType = NSFocusRingTypeNone;
         
-        _textfield.autoresizingMask = kCALayerWidthSizable;
+        // _textfield.autoresizingMask = kCALayerWidthSizable;
         _textfield.backgroundColor = [NSColor clearColor];
         _textfield.font = [NSFont titleBarFontOfSize:14];
         
@@ -73,20 +72,20 @@
     return _placeHolderLabel;
 }
 
-- (HXSearchButton *)searchButton {
-    if (!_searchButton) {
+- (HXSearchToolBar *)searchToolBar {
+    if (!_searchToolBar) {
         __weak typeof(self) weakSelf = self;
-        _searchButton = [[HXSearchButton alloc] init];
-        _searchButton.clearInputBlock = ^() {
+        _searchToolBar = [[HXSearchToolBar alloc] init];
+        _searchToolBar.clearInputBlock = ^() { // 点击清除文字按钮bolck 把文字清除
            weakSelf.textfield.stringValue = @"";
         };
-        _searchButton.frame = NSMakeRect(NSWidth(self.originFrame) , 0, 80, 32);
+        _searchToolBar.frame = NSMakeRect(NSWidth(self.originFrame) , 0, 80, 32);
     }
-    return _searchButton;
+    return _searchToolBar;
 }
 
 
-- (instancetype) initWithFrame:(NSRect)frameRect {
+- (instancetype)initWithFrame:(NSRect)frameRect {
     self = [super initWithFrame:frameRect];
     if(self) {
         [self commonInit];
@@ -94,7 +93,7 @@
     return self;
 }
 
-
+// 防止点击本view其他区域 触发resignFocus
 - (void)mouseDown:(NSEvent *)theEvent {
     
 }
@@ -124,55 +123,44 @@
     [self.placeHolderLabel autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:8];
 }
 
+
 - (void)setPlaceHolderString:(NSString *)placeHolderString {
     _placeHolderString = placeHolderString;
     self.placeHolderLabel.string = placeHolderString;
 }
 
 
-- (void)viewDidMoveToWindow {
-    [super viewDidMoveToWindow];
-//    [self resignFocus];
-}
-
+#pragma -mark  文字改变调用方法 HXTextFieldDelegate
 - (void)controlTextDidChange:(NSNotification *)obj {
     
     if (self.textfield.stringValue.length) {
         self.placeHolderLabel.alphaValue = 0;
-        self.searchButton.clearBtn.hidden = NO;
+        self.searchToolBar.clearBtn.hidden = NO;
     } else {
         self.placeHolderLabel.alphaValue = 1.0;
-        self.searchButton.clearBtn.hidden = YES;
+        self.searchToolBar.clearBtn.hidden = YES;
     }
 }
 
-
+// textfield 光标聚焦输入状态 相应方法
 - (void)textFieldBecomeFirstResponder {
-    
-       self.originFrame = self.frame;
-
-       _searchingState = YES;
-       
-       [self focusedStyleSetting];
-    
-       [self animationWithState:YES];
-
+    self.originFrame = self.frame;
+    _searchingState = YES;
+    [self focusedStyleSetting];
+    [self animationWithState:YES];
 }
 
-
+// textfield 光标退出编辑状态 响应方法 （可供外部调用）
 - (void)resignFocus {
-
     [self.textfield abortEditing];
-    
     [self resignedStyleSetting];
-    
     if (_searchingState) {
         [self animationWithState:NO];
     }
     _searchingState = NO;
 }
 
-
+// textfield 光标聚焦输入状态（搜索条展开）的相关样式设置
 - (void)focusedStyleSetting {
     [self backGroundColor:[NSColor whiteColor]];
     self.placeHolderLabel.textColor = [NSColor lightGrayColor];
@@ -180,25 +168,24 @@
     self.placeHolderLabel.string = @"搜索...";
 }
 
+// textfield 光标退出编辑状态（搜索条收缩）的相关样式设置
 - (void)resignedStyleSetting {
-    [self.searchButton removeFromSuperview];
+    [self.searchToolBar removeFromSuperview];
     [self backGroundColor:HXColor(0, 103, 210)];
     self.placeHolderLabel.textColor = [NSColor whiteColor];
     self.placeHolderLabel.alphaValue = 0.6;
     self.placeHolderLabel.string =  self.placeHolderString;
     self.textfield.stringValue = @"";
-    
-
 }
 
-
+// 处于搜索条展开 以及收缩 两种style下的 动画
 - (void)animationWithState:(BOOL)isSearching {
     
     NSAnimationContext *animationContext = [NSAnimationContext currentContext];
 //    animationContext.allowsImplicitAnimation = YES;
     animationContext.duration = 0.4;
     animationContext.completionHandler = ^{
-        [self addSubview:self.searchButton];
+        [self addSubview:self.searchToolBar];
     };
     [NSAnimationContext beginGrouping];
     if (isSearching) {
@@ -212,25 +199,13 @@
 }
 
 
-- (void)animationDidEnd:(NSAnimation *)animation {
-    NSAnimationContext *animationContext = [NSAnimationContext currentContext];
-    animationContext.allowsImplicitAnimation = NO;
-}
-
+#pragma -mark  NSWindowDidResizeNotification 窗口拉伸通知 回调事件
 - (void)windowDidResize:(NSNotification *)note {
     NSWindow *window = note.object;
     if (_searchingState) {
         self.frame = NSMakeRect(window.frame.size.width - 270 - 55, selfY, 270, selfHeight);
     }
 }
-
-
--(void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
-
-    
-}
-
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -240,22 +215,20 @@
 
 
 
-
-
+#pragma -mark  无高亮，增加 mouse in 和 out 状态下切换图片的按钮
 
 @implementation NOHighlightBtn
-
 
 // 为了去除 系统按钮自带的点击高亮效果，拦截mouseDown事件，把事件传给外部
 - (void)mouseDown:(NSEvent *)theEvent {
     [self sendAction:self.action to:self.target];
     
 }
+
 - (void)setNormalImage:(NSImage *)normalImage {
     _normalImage = normalImage;
     self.image = normalImage;
 }
-
 
 - (void)setMouseinState:(BOOL)mouseinState {
     if (mouseinState) {
@@ -263,15 +236,14 @@
     } else {
         self.image = self.normalImage;
     }
-    
 }
 
 @end
 
 
+#pragma -mark  清除按钮，放大镜搜索按钮 的工具条
 
-
-@implementation HXSearchButton
+@implementation HXSearchToolBar
 
 - (instancetype) initWithFrame:(NSRect)frameRect {
     self = [super initWithFrame:frameRect];
@@ -292,9 +264,7 @@
 }
 
 - (void)commonInit {
-
-//    [self backGroundColor:[NSColor orangeColor]];
-    
+    // [self backGroundColor:[NSColor orangeColor]];
     
     // 搜索按钮
     NOHighlightBtn *clearBtn = [[NOHighlightBtn alloc] initWithFrame: NSMakeRect(0,0, 18, 30)];
@@ -326,18 +296,15 @@
 
 }
 
-
+// 点击清除文字按钮
 - (void)clearBtnClick:(NOHighlightBtn *)btn {
     if (self.clearInputBlock) {
         self.clearInputBlock();
     }
 }
 
-
-
-
+// 点击放大镜搜索按钮
 - (void)searchBtnClick:(NOHighlightBtn *)btn {
-    
     
     
 }
@@ -354,7 +321,6 @@
 }
 
 - (void)mouseExited:(NSEvent *)theEvent {
-    
     NSString *areaId = theEvent.trackingArea.userInfo[@"areaId"];
     if ([areaId isEqualToString:@"seekBtn"]) {
          self.seekBtn.mouseinState = NO;
