@@ -148,9 +148,9 @@
 
 
 - (void)textFieldBecomeFirstResponder {
-
+    
        self.originFrame = self.frame;
-       
+
        _searchingState = YES;
        
        [self focusedStyleSetting];
@@ -194,35 +194,21 @@
 
 - (void)animationWithState:(BOOL)isSearching {
     
-    
     NSAnimationContext *animationContext = [NSAnimationContext currentContext];
-    animationContext.allowsImplicitAnimation = YES;
+//    animationContext.allowsImplicitAnimation = YES;
     animationContext.duration = 0.4;
     animationContext.completionHandler = ^{
-        
         [self addSubview:self.searchButton];
-        
-        //                NSView *view = [[NSView alloc] init];
-        //                [view backGroundColor:[NSColor yellowColor]];
-        //                [self.window.contentView addSubview:view];
-        //
-        //                [view autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:55];
-        //                [view autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:50];
-        //                [view autoSetDimension:ALDimensionHeight toSize:300];
-        //                [view autoSetDimension:ALDimensionWidth toSize:250]
     };
-    
     [NSAnimationContext beginGrouping];
     if (isSearching) {
-        
-        //        self.animator.frame = NSMakeRect(NSMinX(self.originFrame) - 50, selfY, NSWidth(self.originFrame) + 50, selfHeight);
-                self.animator.widthConstrinat.constant = 270;
+        self.animator.frame = NSMakeRect(NSMinX(self.originFrame) - 50, selfY, NSWidth(self.originFrame) + 50, selfHeight);
+//        self.animator.widthConstrinat.constant = 270;
     } else {
-        //       self.animator.frame = self.originFrame;
-        self.animator.widthConstrinat.constant = 210;
+        self.animator.frame = self.originFrame;
+//        self.animator.widthConstrinat.constant = 210;
     }
     [NSAnimationContext endGrouping];
-    
 }
 
 
@@ -232,7 +218,10 @@
 }
 
 - (void)windowDidResize:(NSNotification *)note {
-    
+    NSWindow *window = note.object;
+    if (_searchingState) {
+        self.frame = NSMakeRect(window.frame.size.width - 270 - 55, selfY, 270, selfHeight);
+    }
 }
 
 
