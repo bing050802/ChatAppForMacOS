@@ -29,17 +29,6 @@
 - (void)mouseDown:(NSEvent *)theEvent {
     
     
-    NSAnimationContext *animationContext = [NSAnimationContext currentContext];
-    animationContext.duration = 3.0;
-    
-    
-    [NSAnimationContext beginGrouping];
-    self.view.needsUpdateConstraints = YES;
-    self.right.constant = 50;
-    [self.view updateConstraintsForSubtreeIfNeeded];
-    
-    [NSAnimationContext endGrouping];
-    
 }
 
 
