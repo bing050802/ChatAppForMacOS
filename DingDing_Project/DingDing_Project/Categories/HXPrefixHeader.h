@@ -24,6 +24,10 @@
 
 // https://github.com/michaelvillar/chat mac 即时通讯app
 
+// https://github.com/raffael/NSAlert-Popover
+
+// https://github.com/github/Rebel 输入框下面出现 popver
+
 
 #define selfWidth   self.frame.size.width
 #define selfHeight  self.frame.size.height

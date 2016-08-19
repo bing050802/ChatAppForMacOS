@@ -245,10 +245,10 @@
 		8AE26D551D59B62700855257 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				8AE26D561D59B68700855257 /* HXPrefixHeader.h */,
 				8AAD927D1D632D1D007E4A8F /* HelperClass */,
 				8AE26D5A1D59B73C00855257 /* NSView+BackGroundColor.h */,
 				8AE26D5B1D59B73C00855257 /* NSView+BackGroundColor.m */,
-				8AE26D561D59B68700855257 /* HXPrefixHeader.h */,
 			);
 			name = Categories;
 			path = DingDing_Project/Categories;
