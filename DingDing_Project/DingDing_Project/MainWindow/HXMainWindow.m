@@ -13,7 +13,6 @@
 
 @property (nonatomic, strong) HXWindowTopBarView *topBar;
 
-
 @end
 
 
@@ -25,7 +24,7 @@
     self = [super initWithContentRect:contentRect styleMask:aStyle backing:bufferingType defer:flag];
     
     if (self) {
-        self.minSize = NSMakeSize(1048, 679);
+        self.minSize = NSMakeSize(960, 602);
     }
     return self;
 }
@@ -59,6 +58,7 @@
     [self.topBar autoSetDimension:ALDimensionHeight toSize:60];
     
 }
+
 - (void)mouseEntered:(NSEvent *)theEvent {
     //    self.btn.image =[NSImage imageNamed:@"search_btn_mousein.png"];
 }

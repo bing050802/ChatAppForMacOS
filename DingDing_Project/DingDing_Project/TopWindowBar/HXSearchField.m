@@ -11,6 +11,7 @@
 #import <Quartz/Quartz.h>
 #import "HXTextField.h"
 #import "MLPopupWindowManager.h"
+#import "NSView+RBLAnimationAdditions.h"
 
 
 @interface HXSearchField () <HXTextFieldDelegate,NSAnimationDelegate>
@@ -74,7 +75,7 @@
         _searchToolBar.clearInputBlock = ^() { // 点击清除文字按钮bolck 把文字清除
            weakSelf.textfield.stringValue = @"";
         };
-        _searchToolBar.frame = NSMakeRect(NSWidth(self.originFrame) , 0, 80, 32);
+        _searchToolBar.frame = NSMakeRect(NSWidth(self.originFrame) - 5, 0, 80, 30);
     }
     return _searchToolBar;
 }
@@ -96,7 +97,7 @@
 
 - (void)commonInit {
     
-    self.wantsLayer  = YES;
+    self.wantsLayer = YES;
     self.layer.cornerRadius = 14;
     self.layer.masksToBounds = YES;
     self.layer.backgroundColor = HXColor(0, 103, 210).CGColor;
@@ -137,6 +138,7 @@
     }
 }
 
+
 // textfield 光标聚焦输入状态 相应方法
 - (void)textFieldBecomeFirstResponder {
     self.originFrame = self.frame;
@@ -176,24 +178,21 @@
 // 处于搜索条展开 以及收缩 两种style下的 动画
 - (void)animationWithState:(BOOL)isSearching {
     
-    NSAnimationContext *animationContext = [NSAnimationContext currentContext];
-    //animationContext.allowsImplicitAnimation = YES;
-    animationContext.duration = 0.4;
-    animationContext.completionHandler = ^{
+    [NSView rbl_animate:^{
+        if (isSearching) {
+            self.animator.frame = NSMakeRect(NSMinX(self.originFrame) - 50, selfY, NSWidth(self.originFrame) + 50, selfHeight);
+            //self.animator.widthConstrinat.constant = 270;
+        } else {
+            self.animator.frame = self.originFrame;
+            //self.animator.widthConstrinat.constant = 210;
+        }
+    } completion:^{
         [self addSubview:self.searchToolBar];
         if (!isSearching) {
-            self.animator.widthConstrinat.constant = 210;
+            self.animator.widthConstrinat.constant = 220;
         }
-    };
-    [NSAnimationContext beginGrouping];
-    if (isSearching) {
-        self.animator.frame = NSMakeRect(NSMinX(self.originFrame) - 50, selfY, NSWidth(self.originFrame) + 50, selfHeight);
-        //self.animator.widthConstrinat.constant = 270;
-    } else {
-        self.animator.frame = self.originFrame;
-        //self.animator.widthConstrinat.constant = 210;
-    }
-    [NSAnimationContext endGrouping];
+    }];
+    
 }
 
 #pragma -mark  NSWindowDidResizeNotification 窗口拉伸通知 回调事件
@@ -296,6 +295,7 @@
 
 }
 
+
 // 点击清除文字按钮
 - (void)clearBtnClick:(NOHighlightBtn *)btn {
     if (self.clearInputBlock) {
@@ -309,14 +309,12 @@
     
 }
 
-
 - (void)mouseEntered:(NSEvent *)theEvent {
     NSString *areaId = theEvent.trackingArea.userInfo[@"areaId"];
     if ([areaId isEqualToString:@"seekBtn"]) {
         self.seekBtn.mouseinState = YES;
     } else {
         self.clearBtn.mouseinState = YES;
-
     }
 }
 

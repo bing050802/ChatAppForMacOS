@@ -35,7 +35,7 @@
     [self.searchField autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:15];
      self.searchField.rightConstrinat = [self.searchField autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:55];
     [self.searchField autoSetDimension:ALDimensionHeight toSize:32];
-     self.searchField.widthConstrinat = [self.searchField autoSetDimension:ALDimensionWidth toSize:210];
+     self.searchField.widthConstrinat = [self.searchField autoSetDimension:ALDimensionWidth toSize:220];
 
 }
 

@@ -21,12 +21,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.cView backGroundColor:[NSColor redColor]];
+
     // Do any additional setup after loading the view.
     
 //    self.view.window.minSize = NSMakeSize(1048, 679);
+    
+//    NSSplitView 
 
 
+}
+
+- (void)viewWillAppear {
+    [super viewWillAppear];
+    [self.cView backGroundColor:[NSColor purpleColor]];
 }
 
 

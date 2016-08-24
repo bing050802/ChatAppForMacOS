@@ -28,6 +28,10 @@
 
 // https://github.com/github/Rebel 输入框下面出现 popver
 
+// https://github.com/naftaly/NFSplitViewController
+
+// https://github.com/malcommac/DMSplitView
+
 
 #define selfWidth   self.frame.size.width
 #define selfHeight  self.frame.size.height
