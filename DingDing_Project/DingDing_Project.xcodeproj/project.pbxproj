@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33331AEE1D72986600A80419 /* HXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33331AEC1D72986600A80419 /* HXViewController.m */; };
+		33331AEF1D72986600A80419 /* HXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33331AED1D72986600A80419 /* HXViewController.xib */; };
 		8A565F751D6D8A920049C153 /* NSView+RBLAnimationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A565F741D6D8A920049C153 /* NSView+RBLAnimationAdditions.m */; };
 		8AAD927A1D631BC4007E4A8F /* search_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAD92781D631BC4007E4A8F /* search_btn.png */; };
 		8AAD927B1D631BC4007E4A8F /* search_btn_mousein.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAD92791D631BC4007E4A8F /* search_btn_mousein.png */; };
@@ -28,7 +30,6 @@
 		8AE26D3C1D598C4D00855257 /* HXMainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D3B1D598C4D00855257 /* HXMainWindow.m */; };
 		8AE26D3F1D598C7900855257 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AE26D3D1D598C7900855257 /* Main.storyboard */; };
 		8AE26D421D598CD300855257 /* HXWindowTopBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D411D598CD300855257 /* HXWindowTopBarView.m */; };
-		8AE26D461D59B47300855257 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D451D59B47300855257 /* ViewController.m */; };
 		8AE26D521D59B4F000855257 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D4A1D59B4F000855257 /* ALView+PureLayout.m */; };
 		8AE26D531D59B4F000855257 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D4C1D59B4F000855257 /* NSArray+PureLayout.m */; };
 		8AE26D541D59B4F000855257 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D4E1D59B4F000855257 /* NSLayoutConstraint+PureLayout.m */; };
@@ -36,6 +37,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33331AEB1D72986600A80419 /* HXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXViewController.h; sourceTree = "<group>"; };
+		33331AEC1D72986600A80419 /* HXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXViewController.m; sourceTree = "<group>"; };
+		33331AED1D72986600A80419 /* HXViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXViewController.xib; sourceTree = "<group>"; };
 		8A565F731D6D8A920049C153 /* NSView+RBLAnimationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+RBLAnimationAdditions.h"; sourceTree = "<group>"; };
 		8A565F741D6D8A920049C153 /* NSView+RBLAnimationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+RBLAnimationAdditions.m"; sourceTree = "<group>"; };
 		8AAD92781D631BC4007E4A8F /* search_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_btn.png; sourceTree = "<group>"; };
@@ -70,8 +74,6 @@
 		8AE26D3E1D598C7900855257 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8AE26D401D598CD300855257 /* HXWindowTopBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXWindowTopBarView.h; sourceTree = "<group>"; };
 		8AE26D411D598CD300855257 /* HXWindowTopBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXWindowTopBarView.m; sourceTree = "<group>"; };
-		8AE26D441D59B47300855257 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8AE26D451D59B47300855257 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8AE26D491D59B4F000855257 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
 		8AE26D4A1D59B4F000855257 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALView+PureLayout.m"; sourceTree = "<group>"; };
 		8AE26D4B1D59B4F000855257 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
@@ -212,10 +214,11 @@
 		8AE26D431D59B47300855257 /* MainViewCtroller */ = {
 			isa = PBXGroup;
 			children = (
-				8AE26D441D59B47300855257 /* ViewController.h */,
-				8AE26D451D59B47300855257 /* ViewController.m */,
 				8AAED6F11D64099900C1CDCB /* HXWindowController.h */,
 				8AAED6F21D64099900C1CDCB /* HXWindowController.m */,
+				33331AEB1D72986600A80419 /* HXViewController.h */,
+				33331AEC1D72986600A80419 /* HXViewController.m */,
+				33331AED1D72986600A80419 /* HXViewController.xib */,
 			);
 			path = MainViewCtroller;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				8AAD927B1D631BC4007E4A8F /* search_btn_mousein.png in Resources */,
 				8AAED6F71D64375100C1CDCB /* clear_btn.png in Resources */,
 				8AE26D351D598A4800855257 /* Assets.xcassets in Resources */,
+				33331AEF1D72986600A80419 /* HXViewController.xib in Resources */,
 				8AAED6F61D64375100C1CDCB /* clear_btn_mousein.png in Resources */,
 				8AAD927A1D631BC4007E4A8F /* search_btn.png in Resources */,
 			);
@@ -333,12 +337,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AE26D461D59B47300855257 /* ViewController.m in Sources */,
 				8AAD92891D633588007E4A8F /* MLPopupWindow.m in Sources */,
 				8AADD0081D5DADB300BDD619 /* HXTextField.m in Sources */,
 				8AAD928A1D633588007E4A8F /* MLPopupWindowManager.m in Sources */,
 				8AE26D521D59B4F000855257 /* ALView+PureLayout.m in Sources */,
 				8AAD92831D632D1D007E4A8F /* MVShadow.m in Sources */,
+				33331AEE1D72986600A80419 /* HXViewController.m in Sources */,
 				8AE26D371D598A4800855257 /* main.m in Sources */,
 				8AE26D541D59B4F000855257 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				8AE26D531D59B4F000855257 /* NSArray+PureLayout.m in Sources */,
