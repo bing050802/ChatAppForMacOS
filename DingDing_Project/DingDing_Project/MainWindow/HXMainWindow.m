@@ -47,7 +47,7 @@
     // 兼容10.10以下的系统 window默认的controller不从storyboard加载
     // 使用新建控制器的view赋值 contentView属性
     // 注：当window未设定contentView  contentViewController属性时候，为空（系统不会默认创建）
-    HXViewController  *vc = [[HXViewController alloc] init];
+    HXViewController *vc = [[HXViewController alloc] init];
     self.contentView = vc.view;
     
     [self setupTitlebar];
