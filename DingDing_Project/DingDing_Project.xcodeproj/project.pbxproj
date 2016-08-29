@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		33331AEE1D72986600A80419 /* HXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33331AEC1D72986600A80419 /* HXViewController.m */; };
-		33331AEF1D72986600A80419 /* HXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33331AED1D72986600A80419 /* HXViewController.xib */; };
 		8A5589691D741455000AF3EA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A5589681D741455000AF3EA /* MainMenu.xib */; };
 		8A565F751D6D8A920049C153 /* NSView+RBLAnimationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A565F741D6D8A920049C153 /* NSView+RBLAnimationAdditions.m */; };
 		8AAD927A1D631BC4007E4A8F /* search_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAD92781D631BC4007E4A8F /* search_btn.png */; };
@@ -34,12 +33,12 @@
 		8AE26D541D59B4F000855257 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D4E1D59B4F000855257 /* NSLayoutConstraint+PureLayout.m */; };
 		8AE26D5C1D59B73C00855257 /* NSView+BackGroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D5B1D59B73C00855257 /* NSView+BackGroundColor.m */; };
 		8AEBBC271D7408BC00A1BB9B /* HXBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEBBC261D7408BC00A1BB9B /* HXBarButton.m */; };
+		8AF5CACA1D741AE1003E7DA2 /* HXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AF5CAC91D741AE1003E7DA2 /* HXViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		33331AEB1D72986600A80419 /* HXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXViewController.h; sourceTree = "<group>"; };
 		33331AEC1D72986600A80419 /* HXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXViewController.m; sourceTree = "<group>"; };
-		33331AED1D72986600A80419 /* HXViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXViewController.xib; sourceTree = "<group>"; };
 		8A5589681D741455000AF3EA /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = ../../MainMenu.xib; sourceTree = "<group>"; };
 		8A565F731D6D8A920049C153 /* NSView+RBLAnimationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+RBLAnimationAdditions.h"; sourceTree = "<group>"; };
 		8A565F741D6D8A920049C153 /* NSView+RBLAnimationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+RBLAnimationAdditions.m"; sourceTree = "<group>"; };
@@ -86,6 +85,7 @@
 		8AE26D5B1D59B73C00855257 /* NSView+BackGroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+BackGroundColor.m"; sourceTree = "<group>"; };
 		8AEBBC251D7408BC00A1BB9B /* HXBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXBarButton.h; sourceTree = "<group>"; };
 		8AEBBC261D7408BC00A1BB9B /* HXBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXBarButton.m; sourceTree = "<group>"; };
+		8AF5CAC91D741AE1003E7DA2 /* HXViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,7 +218,7 @@
 				8AEBBC261D7408BC00A1BB9B /* HXBarButton.m */,
 				33331AEB1D72986600A80419 /* HXViewController.h */,
 				33331AEC1D72986600A80419 /* HXViewController.m */,
-				33331AED1D72986600A80419 /* HXViewController.xib */,
+				8AF5CAC91D741AE1003E7DA2 /* HXViewController.xib */,
 			);
 			path = MainViewCtroller;
 			sourceTree = "<group>";
@@ -323,8 +323,8 @@
 				8AAD927B1D631BC4007E4A8F /* search_btn_mousein.png in Resources */,
 				8AAED6F71D64375100C1CDCB /* clear_btn.png in Resources */,
 				8AE26D351D598A4800855257 /* Assets.xcassets in Resources */,
-				33331AEF1D72986600A80419 /* HXViewController.xib in Resources */,
 				8AAED6F61D64375100C1CDCB /* clear_btn_mousein.png in Resources */,
+				8AF5CACA1D741AE1003E7DA2 /* HXViewController.xib in Resources */,
 				8AAD927A1D631BC4007E4A8F /* search_btn.png in Resources */,
 				8A5589691D741455000AF3EA /* MainMenu.xib in Resources */,
 			);

@@ -43,3 +43,18 @@
 // 随机色
 #define HXRandomColor HXColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
 
+
+
+
+
+/**
+ *  常写代码块
+ 
+ NSView *view = [[NSView alloc] initWithFrame:NSMakeRect(10, 200, 200, 300)];
+ [view backGroundColor:[NSColor redColor]];
+ [self.view addSubview:view];
+ */
+
+
+
+

@@ -10,6 +10,7 @@
 #import "HXWindowTopBarView.h"
 #import "HXPrefixHeader.h"
 #import "HXViewController.h"
+#import "HXNoneXibVc.h"
 
 @interface HXMainWindow ()
 
