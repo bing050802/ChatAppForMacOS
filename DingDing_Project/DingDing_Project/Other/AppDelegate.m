@@ -13,9 +13,41 @@
 @end
 
 @implementation AppDelegate
+/**
+     自己创建app window的方法
+ 
+     NSRect frame = NSMakeRect([NSScreen mainScreen].frame.size.width/2 -250, [NSScreen mainScreen].frame.size.height/2 -250, 500, 500);
+     
+     NSWindow *window = [[NSWindow alloc] initWithContentRect:frame
+     styleMask:NSTitledWindowMask
+     backing:NSBackingStoreBuffered
+     defer:NO
+     screen:[NSScreen mainScreen]];
+     [window setStyleMask:[window styleMask] | NSResizableWindowMask];
+     
+     CGSize fixedSize = CGSizeMake(500, 500);
+     [window setMinSize:fixedSize];
+     [window setMaxSize:fixedSize];
+     
+     [window setBackgroundColor:[NSColor grayColor]];
+     [window makeKeyAndOrderFront:NSApp ];
+     
+     
+     ButtonViewController *buttonVC = [[ButtonViewController alloc] init];
+     if (buttonVC){
+     [window setContentView:buttonVC.view];
+     }
+     
+     
+     self.window = window;
+     self.initialVC = buttonVC;
+ */
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    
+
+
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

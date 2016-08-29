@@ -10,11 +10,15 @@
 #import "HXWindowTopBarView.h"
 #import "HXPrefixHeader.h"
 #import "HXViewController.h"
-#import "HXNoneXibVc.h"
 
 @interface HXMainWindow ()
 
+
 @property (nonatomic, strong) HXWindowTopBarView *topBar;
+
+/** 很重要！把控制器view 设置到window的contentView的时候，
+ 需要强引用一下控制器，否则会销毁控制器不接收事件 引起坏内存崩溃*/
+@property (nonatomic, strong) HXViewController *contentVc;
 
 @end
 
@@ -48,8 +52,9 @@
     // 兼容10.10以下的系统 window默认的controller不从storyboard加载
     // 使用新建控制器的view赋值 contentView属性
     // 注：当window未设定contentView  contentViewController属性时候，为空（系统不会默认创建）
-    HXViewController *vc = [[HXViewController alloc] init];
-    self.contentView = vc.view;
+    HXViewController *contentVc = [[HXViewController alloc] init];
+    self.contentView = contentVc.view;
+    self.contentVc = contentVc;
     
     [self setupTitlebar];
 
@@ -70,6 +75,7 @@
     [self.topBar autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:0];
     [self.topBar autoSetDimension:ALDimensionHeight toSize:60];
 }
+
 
 
 

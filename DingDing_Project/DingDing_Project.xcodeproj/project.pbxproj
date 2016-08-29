@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		33331AEE1D72986600A80419 /* HXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33331AEC1D72986600A80419 /* HXViewController.m */; };
 		8A5589691D741455000AF3EA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A5589681D741455000AF3EA /* MainMenu.xib */; };
 		8A565F751D6D8A920049C153 /* NSView+RBLAnimationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A565F741D6D8A920049C153 /* NSView+RBLAnimationAdditions.m */; };
 		8AAD927A1D631BC4007E4A8F /* search_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAD92781D631BC4007E4A8F /* search_btn.png */; };
@@ -33,12 +32,14 @@
 		8AE26D541D59B4F000855257 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D4E1D59B4F000855257 /* NSLayoutConstraint+PureLayout.m */; };
 		8AE26D5C1D59B73C00855257 /* NSView+BackGroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D5B1D59B73C00855257 /* NSView+BackGroundColor.m */; };
 		8AEBBC271D7408BC00A1BB9B /* HXBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEBBC261D7408BC00A1BB9B /* HXBarButton.m */; };
-		8AF5CACA1D741AE1003E7DA2 /* HXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AF5CAC91D741AE1003E7DA2 /* HXViewController.xib */; };
+		8AF5CAD11D74208F003E7DA2 /* HXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF5CACF1D74208F003E7DA2 /* HXViewController.m */; };
+		8AF5CAD21D74208F003E7DA2 /* HXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AF5CAD01D74208F003E7DA2 /* HXViewController.xib */; };
+		8AF5CAD51D743CF9003E7DA2 /* MXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF5CAD41D743CF9003E7DA2 /* MXButton.m */; };
+		8AF5CAD71D744432003E7DA2 /* message.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF5CAD61D744432003E7DA2 /* message.png */; };
+		8AF5CAD91D744475003E7DA2 /* message_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF5CAD81D744475003E7DA2 /* message_highlighted.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		33331AEB1D72986600A80419 /* HXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXViewController.h; sourceTree = "<group>"; };
-		33331AEC1D72986600A80419 /* HXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXViewController.m; sourceTree = "<group>"; };
 		8A5589681D741455000AF3EA /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = ../../MainMenu.xib; sourceTree = "<group>"; };
 		8A565F731D6D8A920049C153 /* NSView+RBLAnimationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+RBLAnimationAdditions.h"; sourceTree = "<group>"; };
 		8A565F741D6D8A920049C153 /* NSView+RBLAnimationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+RBLAnimationAdditions.m"; sourceTree = "<group>"; };
@@ -85,7 +86,13 @@
 		8AE26D5B1D59B73C00855257 /* NSView+BackGroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+BackGroundColor.m"; sourceTree = "<group>"; };
 		8AEBBC251D7408BC00A1BB9B /* HXBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXBarButton.h; sourceTree = "<group>"; };
 		8AEBBC261D7408BC00A1BB9B /* HXBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXBarButton.m; sourceTree = "<group>"; };
-		8AF5CAC91D741AE1003E7DA2 /* HXViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXViewController.xib; sourceTree = "<group>"; };
+		8AF5CACE1D74208F003E7DA2 /* HXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXViewController.h; sourceTree = "<group>"; };
+		8AF5CACF1D74208F003E7DA2 /* HXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXViewController.m; sourceTree = "<group>"; };
+		8AF5CAD01D74208F003E7DA2 /* HXViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXViewController.xib; sourceTree = "<group>"; };
+		8AF5CAD31D743CF9003E7DA2 /* MXButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXButton.h; sourceTree = "<group>"; };
+		8AF5CAD41D743CF9003E7DA2 /* MXButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXButton.m; sourceTree = "<group>"; };
+		8AF5CAD61D744432003E7DA2 /* message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message.png; sourceTree = "<group>"; };
+		8AF5CAD81D744475003E7DA2 /* message_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message_highlighted.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,11 +221,15 @@
 		8AE26D431D59B47300855257 /* MainViewCtroller */ = {
 			isa = PBXGroup;
 			children = (
+				8AF5CAD61D744432003E7DA2 /* message.png */,
+				8AF5CAD81D744475003E7DA2 /* message_highlighted.png */,
+				8AF5CAD31D743CF9003E7DA2 /* MXButton.h */,
+				8AF5CAD41D743CF9003E7DA2 /* MXButton.m */,
 				8AEBBC251D7408BC00A1BB9B /* HXBarButton.h */,
 				8AEBBC261D7408BC00A1BB9B /* HXBarButton.m */,
-				33331AEB1D72986600A80419 /* HXViewController.h */,
-				33331AEC1D72986600A80419 /* HXViewController.m */,
-				8AF5CAC91D741AE1003E7DA2 /* HXViewController.xib */,
+				8AF5CACE1D74208F003E7DA2 /* HXViewController.h */,
+				8AF5CACF1D74208F003E7DA2 /* HXViewController.m */,
+				8AF5CAD01D74208F003E7DA2 /* HXViewController.xib */,
 			);
 			path = MainViewCtroller;
 			sourceTree = "<group>";
@@ -323,8 +334,10 @@
 				8AAD927B1D631BC4007E4A8F /* search_btn_mousein.png in Resources */,
 				8AAED6F71D64375100C1CDCB /* clear_btn.png in Resources */,
 				8AE26D351D598A4800855257 /* Assets.xcassets in Resources */,
+				8AF5CAD71D744432003E7DA2 /* message.png in Resources */,
 				8AAED6F61D64375100C1CDCB /* clear_btn_mousein.png in Resources */,
-				8AF5CACA1D741AE1003E7DA2 /* HXViewController.xib in Resources */,
+				8AF5CAD21D74208F003E7DA2 /* HXViewController.xib in Resources */,
+				8AF5CAD91D744475003E7DA2 /* message_highlighted.png in Resources */,
 				8AAD927A1D631BC4007E4A8F /* search_btn.png in Resources */,
 				8A5589691D741455000AF3EA /* MainMenu.xib in Resources */,
 			);
@@ -337,16 +350,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AF5CAD51D743CF9003E7DA2 /* MXButton.m in Sources */,
 				8AAD92891D633588007E4A8F /* MLPopupWindow.m in Sources */,
 				8AADD0081D5DADB300BDD619 /* HXTextField.m in Sources */,
 				8AAD928A1D633588007E4A8F /* MLPopupWindowManager.m in Sources */,
 				8AE26D521D59B4F000855257 /* ALView+PureLayout.m in Sources */,
 				8AAD92831D632D1D007E4A8F /* MVShadow.m in Sources */,
-				33331AEE1D72986600A80419 /* HXViewController.m in Sources */,
 				8AE26D371D598A4800855257 /* main.m in Sources */,
 				8AE26D541D59B4F000855257 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				8AE26D531D59B4F000855257 /* NSArray+PureLayout.m in Sources */,
 				8AE26D3C1D598C4D00855257 /* HXMainWindow.m in Sources */,
+				8AF5CAD11D74208F003E7DA2 /* HXViewController.m in Sources */,
 				8AE26D421D598CD300855257 /* HXWindowTopBarView.m in Sources */,
 				8AEBBC271D7408BC00A1BB9B /* HXBarButton.m in Sources */,
 				8A565F751D6D8A920049C153 /* NSView+RBLAnimationAdditions.m in Sources */,
