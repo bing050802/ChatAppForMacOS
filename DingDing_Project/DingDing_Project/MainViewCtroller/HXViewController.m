@@ -10,13 +10,15 @@
 
 @interface HXViewController ()
 
+@property (weak) IBOutlet NSButton *btn;
+
 @end
 
 @implementation HXViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do view setup here.
-}
+
+//- (void)loadView {
+//    
+//}
 
 @end
