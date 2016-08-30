@@ -38,9 +38,11 @@
         MXButton *eg1 = [[MXButton alloc] initWithHighlightColor:[NSColor colorWithCalibratedRed:0.0 green:0.9 blue:0.9 alpha:0.7]];
         eg1.image = [NSImage imageNamed:@"message.png"];
         eg1.alternateImage = [NSImage imageNamed:@"message_highlighted.png"];
+        eg1.target = self;
+        eg1.action = @selector(clickBtn);
         //        eg1.backgroundColor = [NSColor colorWithCalibratedRed:0.0 green:0.5 blue:1.0 alpha:0.7];
-        eg1.textColor = [NSColor colorWithWhite:1.0 alpha:0.7];
-        eg1.title = @"";
+//        eg1.textColor = [NSColor colorWithWhite:1.0 alpha:1.0];
+        eg1.title = @"222222222222222222";
         eg1.frame = view.frame;
         
         [self.view addSubview:eg1];
@@ -50,7 +52,7 @@
 }
 
 - (void)clickBtn {
-    //    NSLog(@"%@",_cView.subviews);
+    NSLog(@"MXButton----click");
 }
 
 

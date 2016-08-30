@@ -152,7 +152,7 @@
  */
 - (void)highlight:(BOOL)flag withFrame:(NSRect)cellFrame inView:(NSView *)controlView {
     
-
+    [super highlight:flag withFrame:cellFrame inView:controlView];
 }
 
 
@@ -161,22 +161,28 @@
     [super drawInteriorWithFrame:cellFrame inView:controlView];
 
      if (self.highlighted) {
+         
+          NSLog(@"drawInteriorWithFrame");
          NSGraphicsContext* ctx = [NSGraphicsContext currentContext];
          [ctx saveGraphicsState];
          {
+             
+             
              //Highlight BG
              [[NSBezierPath bezierPathWithRoundedRect:cellFrame
                                               xRadius:self.cornerRadius
                                               yRadius:self.cornerRadius] setClip];
              
              [self.highlightColor setFill];
-             NSRectFillUsingOperation(cellFrame, NSCompositeSourceOver);
+             
+             NSRectFillUsingOperation(cellFrame, NSCompositeSourceIn);
              
              //Draw title text over it
              NSMutableAttributedString *attrString = [self.attributedTitle mutableCopy];
              [attrString beginEditing];
-             [attrString addAttribute:NSForegroundColorAttributeName value:self.highlightTextColor range:NSMakeRange(0, [attrString length])];
+             [attrString addAttribute:NSForegroundColorAttributeName value:[NSColor whiteColor] range:NSMakeRange(0, [attrString length])];
              [attrString endEditing];
+
          }
          [ctx restoreGraphicsState];
      }
