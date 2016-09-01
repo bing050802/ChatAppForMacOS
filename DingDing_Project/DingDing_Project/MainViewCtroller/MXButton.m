@@ -8,7 +8,7 @@
 
 #import "MXButton.h"
 
-@interface MXButtonCell : NSButtonCell
+@interface MXButtonCell : NSButtonCell 
 
 @property (assign) CGFloat cornerRadius;
 @property (strong) NSColor *background;
@@ -36,11 +36,6 @@
     
     if (self) {
         self.cornerRadius = 4;
-//        self.backgroundColor = [NSColor colorWithWhite:0.0 alpha:0.3];
-//        self.highlightColor = [NSColor colorWithWhite:0.0 alpha:0.3];
-        self.textColor = [NSColor colorWithWhite:0.2 alpha:0.9];
-//        self.highlightTextColor = [NSColor colorWithWhite:0.2 alpha:0.5];
-        self.padding = NSEdgeInsetsMake(2, 13, 2, 13);
         
         self.font = [NSFont systemFontOfSize:13];
         self.subpixelAntialiasing = YES;
@@ -124,7 +119,9 @@
 }
 - (void)setTextColor:(NSColor *)textColor
 {
-    self.cell.textColor = textColor; 
+    self.cell.textColor = textColor;
+//    NSLog(@"buttonCell-------%@",self.cell);
+
 }
 - (NSColor *)highlightTextColor
 {
@@ -143,6 +140,16 @@
     self.cell.padding = padding;
 }
 
+//- (BOOL)sendAction:(SEL)theAction to:(id)theTarget {
+//    
+//    return YES;
+//}
+
+
+- (void)mouseDown:(NSEvent *)theEvent {
+
+    [super mouseDown:theEvent];
+}
 
 @end
 
@@ -152,7 +159,7 @@
  */
 - (void)highlight:(BOOL)flag withFrame:(NSRect)cellFrame inView:(NSView *)controlView {
     
-    [super highlight:flag withFrame:cellFrame inView:controlView];
+//    [super highlight:flag withFrame:cellFrame inView:controlView];
 }
 
 
@@ -166,22 +173,22 @@
          NSGraphicsContext* ctx = [NSGraphicsContext currentContext];
          [ctx saveGraphicsState];
          {
-             
-             
-             //Highlight BG
-             [[NSBezierPath bezierPathWithRoundedRect:cellFrame
-                                              xRadius:self.cornerRadius
-                                              yRadius:self.cornerRadius] setClip];
-             
-             [self.highlightColor setFill];
-             
-             NSRectFillUsingOperation(cellFrame, NSCompositeSourceIn);
-             
-             //Draw title text over it
-             NSMutableAttributedString *attrString = [self.attributedTitle mutableCopy];
-             [attrString beginEditing];
-             [attrString addAttribute:NSForegroundColorAttributeName value:[NSColor whiteColor] range:NSMakeRange(0, [attrString length])];
-             [attrString endEditing];
+//             
+//             
+//             //Highlight BG
+//             [[NSBezierPath bezierPathWithRoundedRect:cellFrame
+//                                              xRadius:self.cornerRadius
+//                                              yRadius:self.cornerRadius] setClip];
+//             
+//             [self.highlightColor setFill];
+//             
+//             NSRectFillUsingOperation(cellFrame, NSCompositeSourceIn);
+//             
+//             //Draw title text over it
+//             NSMutableAttributedString *attrString = [self.attributedTitle mutableCopy];
+//             [attrString beginEditing];
+//             [attrString addAttribute:NSForegroundColorAttributeName value:[NSColor whiteColor] range:NSMakeRange(0, [attrString length])];
+//             [attrString endEditing];
 
          }
          [ctx restoreGraphicsState];
@@ -195,12 +202,12 @@
     [ctx saveGraphicsState];
     {
         // 圆角
-        [[NSBezierPath bezierPathWithRoundedRect:frame
-                                         xRadius:self.cornerRadius
-                                         yRadius:self.cornerRadius] setClip];
-
-            [self.background setFill];
-            NSRectFillUsingOperation(frame, NSCompositeSourceOver);
+//        [[NSBezierPath bezierPathWithRoundedRect:frame
+//                                         xRadius:self.cornerRadius
+//                                         yRadius:self.cornerRadius] setClip];
+//
+//            [self.background setFill];
+//            NSRectFillUsingOperation(frame, NSCompositeSourceOver);
     }
     [ctx restoreGraphicsState];
 }
@@ -211,6 +218,7 @@
     NSRect result;
     [ctx saveGraphicsState];
     {
+        NSLog(@"MXButtonCell------%@",self.textColor);
         
         if (self.textColor && !self.highlighted) {
             NSMutableAttributedString *attrString = [title mutableCopy];
@@ -243,16 +251,26 @@
 }
 
 
-- (NSSize)cellSizeForBounds:(NSRect)aRect
-{
-    NSSize result = [super cellSizeForBounds:aRect];
-    NSEdgeInsets padding = self.padding;
-
-    result.width += padding.left + padding.right;
-    result.height += padding.top + padding.bottom;
+- (NSRect)imageRectForBounds:(NSRect)theRect {
     
-    return result;
+    NSRect rect = NSMakeRect(10, 0, 40, theRect.size.height);
+    return rect;
+     
+    
 }
+
+
+
+//- (NSSize)cellSizeForBounds:(NSRect)aRect
+//{
+//    NSSize result = [super cellSizeForBounds:aRect];
+//    NSEdgeInsets padding = self.padding;
+//
+//    result.width += padding.left + padding.right;
+//    result.height += padding.top + padding.bottom;
+//    
+//    return result;
+//}
 
 /*- (NSSize)intrinsicContentSize
 {

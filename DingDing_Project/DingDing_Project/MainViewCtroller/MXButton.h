@@ -15,6 +15,8 @@
 @property (strong) NSColor *highlightColor;
 @property (strong) NSColor *textColor;
 @property (strong) NSColor *highlightTextColor;
+
+
 @property (assign) NSEdgeInsets padding;
 
 @property (assign) BOOL subpixelAntialiasing;

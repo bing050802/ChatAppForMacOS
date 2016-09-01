@@ -9,6 +9,7 @@
 #import "HXViewController.h"
 #import "HXPrefixHeader.h"
 #import "MXButton.h"
+#import "HXBarButton.h"
 
 @interface HXViewController ()
 
@@ -35,30 +36,54 @@
         
         
         
-        MXButton *eg1 = [[MXButton alloc] initWithHighlightColor:[NSColor colorWithCalibratedRed:0.0 green:0.9 blue:0.9 alpha:0.7]];
+        MXButton *eg1 = [[MXButton alloc] init];
         eg1.image = [NSImage imageNamed:@"message.png"];
         eg1.alternateImage = [NSImage imageNamed:@"message_highlighted.png"];
         eg1.target = self;
         eg1.action = @selector(clickBtn);
-        //        eg1.backgroundColor = [NSColor colorWithCalibratedRed:0.0 green:0.5 blue:1.0 alpha:0.7];
-//        eg1.textColor = [NSColor colorWithWhite:1.0 alpha:1.0];
-        eg1.title = @"222222222222222222";
-        eg1.frame = view.frame;
+        eg1.title = @"消息";
+        eg1.frame = NSMakeRect(10, 200, 100, 50);
+        eg1.textColor = [NSColor redColor];
+//        [self.view addSubview:eg1];
+
         
-        [self.view addSubview:eg1];
+        
+        
+        HXBarButton *eg2 = [[HXBarButton alloc] init];
+        eg2.image = [NSImage imageNamed:@"message.png"];
+        eg2.target = self;
+        eg2.action = @selector(clickBtn:);
+        eg2.title = @"DING";
+        eg2.frame = NSMakeRect(200, 200, 100, 50);
+        eg2.imageEdgeInsets = NSEdgeInsetsMake(0, 10, 0, 100 - 40 - 10);
+        eg2.titleEdgeInsets = NSEdgeInsetsMake(0, 50, 0, 0);
+        
+//        [eg2 setBackgroundColor:[NSColor purpleColor] forState:ButtonStateNormal];
+        [eg2 setBackgroundColor:HXColor(192, 221, 246) forState:ButtonStateSelected];
+        
+        [eg2 setTitleColor:[NSColor grayColor] forState:ButtonStateNormal];
+        [eg2 setTitleColor:HXColor(25, 132, 230) forState:ButtonStateSelected];
+        
+        [eg2 setImage:[NSImage imageNamed:@"message.png"] forState:ButtonStateNormal];
+        [eg2 setImage:[NSImage imageNamed:@"message_highlighted.png"] forState:ButtonStateSelected];
+        
+        
+//        eg2.highlightColor = [NSColor yellowColor];
+//        eg2.highlightTextColor = [NSColor blackColor];
+        [self.view addSubview:eg2];
+        
+        
         
     }
     return self;
 }
 
-- (void)clickBtn {
+- (void)clickBtn:(HXBarButton *)btn {
     NSLog(@"MXButton----click");
+    btn.selected = !btn.selected;
 }
 
 
-- (IBAction)clickBtn:(NSButton *)sender {
-    
-}
 
 
 
