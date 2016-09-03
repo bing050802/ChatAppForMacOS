@@ -33,22 +33,7 @@
         NSView *view = [[NSView alloc] initWithFrame:NSMakeRect(10, 200, 200, 200)];
         [view backGroundColor:[NSColor redColor]];
         // [self.view addSubview:view];
-        
-        
-        
-        MXButton *eg1 = [[MXButton alloc] init];
-        eg1.image = [NSImage imageNamed:@"message.png"];
-        eg1.alternateImage = [NSImage imageNamed:@"message_highlighted.png"];
-        eg1.target = self;
-        eg1.action = @selector(clickBtn);
-        eg1.title = @"消息";
-        eg1.frame = NSMakeRect(10, 200, 100, 50);
-        eg1.textColor = [NSColor redColor];
-//        [self.view addSubview:eg1];
-
-        
-        
-        
+    
         HXBarButton *eg2 = [[HXBarButton alloc] init];
         eg2.image = [NSImage imageNamed:@"message.png"];
         eg2.target = self;
@@ -57,23 +42,12 @@
         eg2.frame = NSMakeRect(200, 200, 100, 50);
         eg2.imageEdgeInsets = NSEdgeInsetsMake(0, 10, 0, 100 - 40 - 10);
         eg2.titleEdgeInsets = NSEdgeInsetsMake(0, 50, 0, 0);
-        
-//        [eg2 setBackgroundColor:[NSColor purpleColor] forState:ButtonStateNormal];
         [eg2 setBackgroundColor:HXColor(192, 221, 246) forState:ButtonStateSelected];
-        
         [eg2 setTitleColor:[NSColor grayColor] forState:ButtonStateNormal];
         [eg2 setTitleColor:HXColor(25, 132, 230) forState:ButtonStateSelected];
-        
         [eg2 setImage:[NSImage imageNamed:@"message.png"] forState:ButtonStateNormal];
-        [eg2 setImage:[NSImage imageNamed:@"message_highlighted.png"] forState:ButtonStateSelected];
-        
-        
-//        eg2.highlightColor = [NSColor yellowColor];
-//        eg2.highlightTextColor = [NSColor blackColor];
+        [eg2 setImage:[NSImage imageNamed:@"message_seclected.png"] forState:ButtonStateSelected];
         [self.view addSubview:eg2];
-        
-        
-        
     }
     return self;
 }
