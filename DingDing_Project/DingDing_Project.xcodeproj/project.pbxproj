@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33439EC71D7B221B00DA9FA1 /* HXSelectBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 33439EC61D7B221B00DA9FA1 /* HXSelectBar.m */; };
 		8A5589691D741455000AF3EA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A5589681D741455000AF3EA /* MainMenu.xib */; };
 		8A565F751D6D8A920049C153 /* NSView+RBLAnimationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A565F741D6D8A920049C153 /* NSView+RBLAnimationAdditions.m */; };
 		8AAD927A1D631BC4007E4A8F /* search_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAD92781D631BC4007E4A8F /* search_btn.png */; };
@@ -39,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33439EC51D7B221B00DA9FA1 /* HXSelectBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXSelectBar.h; sourceTree = "<group>"; };
+		33439EC61D7B221B00DA9FA1 /* HXSelectBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXSelectBar.m; sourceTree = "<group>"; };
 		8A5589681D741455000AF3EA /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = ../../MainMenu.xib; sourceTree = "<group>"; };
 		8A565F731D6D8A920049C153 /* NSView+RBLAnimationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+RBLAnimationAdditions.h"; sourceTree = "<group>"; };
 		8A565F741D6D8A920049C153 /* NSView+RBLAnimationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+RBLAnimationAdditions.m"; sourceTree = "<group>"; };
@@ -225,6 +228,8 @@
 				8AF5CACE1D74208F003E7DA2 /* HXViewController.h */,
 				8AF5CACF1D74208F003E7DA2 /* HXViewController.m */,
 				8AF5CAD01D74208F003E7DA2 /* HXViewController.xib */,
+				33439EC51D7B221B00DA9FA1 /* HXSelectBar.h */,
+				33439EC61D7B221B00DA9FA1 /* HXSelectBar.m */,
 			);
 			path = MainViewCtroller;
 			sourceTree = "<group>";
@@ -360,6 +365,7 @@
 				8A565F751D6D8A920049C153 /* NSView+RBLAnimationAdditions.m in Sources */,
 				8AAFF60A1D5C75B600E908EC /* HXSearchField.m in Sources */,
 				8AAD92821D632D1D007E4A8F /* MVGraphicsFunctions.m in Sources */,
+				33439EC71D7B221B00DA9FA1 /* HXSelectBar.m in Sources */,
 				8AE26D341D598A4800855257 /* AppDelegate.m in Sources */,
 				8AE26D5C1D59B73C00855257 /* NSView+BackGroundColor.m in Sources */,
 			);

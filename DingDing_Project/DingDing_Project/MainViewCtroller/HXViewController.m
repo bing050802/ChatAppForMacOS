@@ -8,8 +8,8 @@
 
 #import "HXViewController.h"
 #import "HXPrefixHeader.h"
-#import "MXButton.h"
 #import "HXBarButton.h"
+#import "HXSelectBar.h"
 
 @interface HXViewController ()
 
@@ -30,24 +30,17 @@
         // [self.view backGroundColor:[NSColor purpleColor]];
         
         // 测试添加自子控件
-        NSView *view = [[NSView alloc] initWithFrame:NSMakeRect(10, 200, 200, 200)];
-        [view backGroundColor:[NSColor redColor]];
-        // [self.view addSubview:view];
-    
-        HXBarButton *eg2 = [[HXBarButton alloc] init];
-        eg2.image = [NSImage imageNamed:@"message.png"];
-        eg2.target = self;
-        eg2.action = @selector(clickBtn:);
-        eg2.title = @"DING";
-        eg2.frame = NSMakeRect(200, 200, 100, 50);
-        eg2.imageEdgeInsets = NSEdgeInsetsMake(0, 10, 0, 100 - 40 - 10);
-        eg2.titleEdgeInsets = NSEdgeInsetsMake(0, 50, 0, 0);
-        [eg2 setBackgroundColor:HXColor(192, 221, 246) forState:ButtonStateSelected];
-        [eg2 setTitleColor:[NSColor grayColor] forState:ButtonStateNormal];
-        [eg2 setTitleColor:HXColor(25, 132, 230) forState:ButtonStateSelected];
-        [eg2 setImage:[NSImage imageNamed:@"message.png"] forState:ButtonStateNormal];
-        [eg2 setImage:[NSImage imageNamed:@"message_seclected.png"] forState:ButtonStateSelected];
-        [self.view addSubview:eg2];
+        HXSelectBar *sBar = [[HXSelectBar alloc] initWithFrame:NSMakeRect(10, 200, 200, 200)];
+        [sBar backGroundColor:[NSColor cyanColor]];
+        [self.view addSubview:sBar];
+//        [sBar autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:0];
+        [sBar autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:0];
+        [sBar autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
+        [sBar autoSetDimension:ALDimensionWidth toSize:100];
+        [sBar autoSetDimension:ALDimensionHeight toSize:200];
+
+        
+        
     }
     return self;
 }
@@ -56,8 +49,6 @@
     NSLog(@"MXButton----click");
     btn.selected = !btn.selected;
 }
-
-
 
 
 

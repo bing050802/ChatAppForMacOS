@@ -26,7 +26,7 @@ typedef NS_OPTIONS(NSUInteger, ButtonState) {
 @property (nonatomic,assign) CGFloat cornerRadius;
 
 @property (nonatomic,strong) NSColor *highlightColor;
-//@property (nonatomic,strong) NSColor *textColor;
+
 @property (nonatomic,assign) BOOL selected;
 
 - (void)setImage:(NSImage *)image forState:(ButtonState)state;

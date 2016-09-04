@@ -7,6 +7,7 @@
 //
 
 #import "HXBarButton.h"
+#import "HXPrefixHeader.h"
 #import "MVGraphicsFunctions.h"
 
 @interface HXBarButtonCell : NSButtonCell
@@ -20,6 +21,8 @@
 
 @property (nonatomic,assign) NSEdgeInsets titleEdgeInsets; // default is UIEdgeInsetsZero
 @property (nonatomic,assign) NSEdgeInsets imageEdgeInsets; // default is UIEdgeInsetsZero
+
+
 
 @property (nonatomic,assign) BOOL reversesTitleShadowWhenHighlighted; // default is NO. if YES, shadow reverses to shift between engrave and emboss appearance
 
@@ -39,6 +42,9 @@
 @property (nonatomic,strong) NSMutableDictionary *stateBackGroundDic;
 @property (nonatomic,strong) NSMutableDictionary *stateTitleColorDic;
 
+@property (nonatomic,strong) NSView *leftLine;
+
+
 @end
 
 
@@ -53,9 +59,6 @@
 - (void)setCornerRadius:(CGFloat)cornerRadius {
     self.layer.cornerRadius = cornerRadius;
 }
-
-
-
 
 - (NSColor *)highlightColor {
     return self.cell.highlightColor;
@@ -104,6 +107,16 @@
         _stateTitleColorDic = [NSMutableDictionary dictionary];
     }
     return _stateTitleColorDic;
+}
+
+- (NSView *)leftLine {
+    if (!_leftLine) {
+        _leftLine = [[NSView alloc] initWithFrame:NSMakeRect(0, 0, 2, self.frame.size.height)];
+        [_leftLine backGroundColor:HXColor(0, 151, 219)];
+        _leftLine.hidden = YES;
+        [self addSubview:_leftLine];
+    }
+    return _leftLine;
 }
 
 // 返回自定义的 ButtonCell class
@@ -165,10 +178,12 @@
         self.image = self.stateImageDic[@(ButtonStateSelected)];
         self.cell.backgroundColor = self.stateBackGroundDic[@(ButtonStateSelected)];
         self.cell.textColor = self.stateTitleColorDic[@(ButtonStateSelected)];
+        self.leftLine.hidden = NO;
     } else {
         self.image = self.stateImageDic[@(ButtonStateNormal)];
         self.cell.backgroundColor = self.stateBackGroundDic[@(ButtonStateNormal)];
         self.cell.textColor = self.stateTitleColorDic[@(ButtonStateNormal)];
+        self.leftLine.hidden = YES;
     }
 }
 
@@ -191,6 +206,9 @@
 
 - (void)drawInteriorWithFrame:(NSRect)cellFrame inView:(NSView *)controlView {
     [super drawInteriorWithFrame:cellFrame inView:controlView];
+    
+    
+    
 }
 
 // 画边框
