@@ -29,6 +29,8 @@
 		8A4C6A381D7EB665005BC413 /* creatIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4C6A371D7EB665005BC413 /* creatIcon.png */; };
 		8A4C6A3A1D7EB928005BC413 /* moreIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4C6A391D7EB928005BC413 /* moreIcon.png */; };
 		8A4C6A3D1D7EBBCF005BC413 /* topBarRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4C6A3C1D7EBBCF005BC413 /* topBarRight.png */; };
+		8A4C6A4C1D7ED62A005BC413 /* NFLayerBackedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4C6A491D7ED62A005BC413 /* NFLayerBackedView.m */; };
+		8A4C6A4D1D7ED62A005BC413 /* NFSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4C6A4B1D7ED62A005BC413 /* NFSplitViewController.m */; };
 		8A5589691D741455000AF3EA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A5589681D741455000AF3EA /* MainMenu.xib */; };
 		8A565F751D6D8A920049C153 /* NSView+RBLAnimationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A565F741D6D8A920049C153 /* NSView+RBLAnimationAdditions.m */; };
 		8AAD92821D632D1D007E4A8F /* MVGraphicsFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD927F1D632D1D007E4A8F /* MVGraphicsFunctions.m */; };
@@ -79,6 +81,10 @@
 		8A4C6A371D7EB665005BC413 /* creatIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = creatIcon.png; sourceTree = "<group>"; };
 		8A4C6A391D7EB928005BC413 /* moreIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moreIcon.png; sourceTree = "<group>"; };
 		8A4C6A3C1D7EBBCF005BC413 /* topBarRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topBarRight.png; sourceTree = "<group>"; };
+		8A4C6A481D7ED62A005BC413 /* NFLayerBackedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFLayerBackedView.h; sourceTree = "<group>"; };
+		8A4C6A491D7ED62A005BC413 /* NFLayerBackedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFLayerBackedView.m; sourceTree = "<group>"; };
+		8A4C6A4A1D7ED62A005BC413 /* NFSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFSplitViewController.h; sourceTree = "<group>"; };
+		8A4C6A4B1D7ED62A005BC413 /* NFSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFSplitViewController.m; sourceTree = "<group>"; };
 		8A5589681D741455000AF3EA /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = ../../MainMenu.xib; sourceTree = "<group>"; };
 		8A565F731D6D8A920049C153 /* NSView+RBLAnimationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+RBLAnimationAdditions.h"; sourceTree = "<group>"; };
 		8A565F741D6D8A920049C153 /* NSView+RBLAnimationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+RBLAnimationAdditions.m"; sourceTree = "<group>"; };
@@ -189,6 +195,17 @@
 				8A4C6A3C1D7EBBCF005BC413 /* topBarRight.png */,
 			);
 			path = windowTop;
+			sourceTree = "<group>";
+		};
+		8A4C6A471D7ED62A005BC413 /* SpIitViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8A4C6A481D7ED62A005BC413 /* NFLayerBackedView.h */,
+				8A4C6A491D7ED62A005BC413 /* NFLayerBackedView.m */,
+				8A4C6A4A1D7ED62A005BC413 /* NFSplitViewController.h */,
+				8A4C6A4B1D7ED62A005BC413 /* NFSplitViewController.m */,
+			);
+			path = SpIitViewController;
 			sourceTree = "<group>";
 		};
 		8AAD92771D631BC4007E4A8F /* ImageResource */ = {
@@ -302,6 +319,7 @@
 		8AE26D431D59B47300855257 /* MainViewCtroller */ = {
 			isa = PBXGroup;
 			children = (
+				8A4C6A471D7ED62A005BC413 /* SpIitViewController */,
 				8A4C6A2B1D7EB2E2005BC413 /* LeftBarView */,
 				8AF5CACE1D74208F003E7DA2 /* HXViewController.h */,
 				8AF5CACF1D74208F003E7DA2 /* HXViewController.m */,
@@ -447,6 +465,7 @@
 				8AAD928A1D633588007E4A8F /* MLPopupWindowManager.m in Sources */,
 				8AE26D521D59B4F000855257 /* ALView+PureLayout.m in Sources */,
 				8AAD92831D632D1D007E4A8F /* MVShadow.m in Sources */,
+				8A4C6A4C1D7ED62A005BC413 /* NFLayerBackedView.m in Sources */,
 				8AE26D371D598A4800855257 /* main.m in Sources */,
 				8AE26D541D59B4F000855257 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				8AE26D531D59B4F000855257 /* NSArray+PureLayout.m in Sources */,
@@ -454,6 +473,7 @@
 				8AF5CAD11D74208F003E7DA2 /* HXViewController.m in Sources */,
 				8AE26D421D598CD300855257 /* HXWindowTopBarView.m in Sources */,
 				8A565F751D6D8A920049C153 /* NSView+RBLAnimationAdditions.m in Sources */,
+				8A4C6A4D1D7ED62A005BC413 /* NFSplitViewController.m in Sources */,
 				8AAFF60A1D5C75B600E908EC /* HXSearchField.m in Sources */,
 				8AAD92821D632D1D007E4A8F /* MVGraphicsFunctions.m in Sources */,
 				8AE26D341D598A4800855257 /* AppDelegate.m in Sources */,
