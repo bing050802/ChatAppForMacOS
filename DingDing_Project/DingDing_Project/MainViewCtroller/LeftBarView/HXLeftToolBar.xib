@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="HXLeftToolBar">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="607"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X4Q-iY-wxA">
+                    <rect key="frame" x="20" y="537" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="Vac-Gr-1YS"/>
+                        <constraint firstAttribute="width" constant="60" id="ybT-XS-6Bn"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="nameImage" id="wvt-QC-KMi"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ar0-12-GSz">
+                    <rect key="frame" x="29" y="515" width="43" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="韩小青" id="0OT-uV-oxD">
+                        <font key="font" size="13" name=".PingFangSC-Regular"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="uq3-gB-IYx" customClass="HXSelectBar">
+                    <rect key="frame" x="0.0" y="250" width="100" height="250"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="eRh-A2-ydd"/>
+                    </constraints>
+                </customView>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="O55-CZ-ge4" customClass="HXBarButton">
+                    <rect key="frame" x="10" y="49" width="81" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="hSK-DB-h3x"/>
+                        <constraint firstAttribute="width" constant="69" id="t9S-8K-anM"/>
+                    </constraints>
+                    <buttonCell key="cell" type="push" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BM5-5h-kU8" customClass="HXBarButtonCell">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="creat:" target="c22-O7-iKe" id="iD9-rC-M1a"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="id4-Cb-Mic" customClass="HXBarButton">
+                    <rect key="frame" x="10" y="18" width="81" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="gne-xY-1Kl"/>
+                        <constraint firstAttribute="width" constant="69" id="lIU-oJ-kIj"/>
+                    </constraints>
+                    <buttonCell key="cell" type="push" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pfG-Fy-ZPH" customClass="HXBarButtonCell">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="more:" target="c22-O7-iKe" id="sCJ-RP-qWb"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="O55-CZ-ge4" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="DNq-NJ-oe0"/>
+                <constraint firstItem="ar0-12-GSz" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="NwW-p9-rpt"/>
+                <constraint firstAttribute="bottom" secondItem="id4-Cb-Mic" secondAttribute="bottom" constant="25" id="VUa-rE-5Mu"/>
+                <constraint firstItem="X4Q-iY-wxA" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="Wwm-bc-zXz"/>
+                <constraint firstAttribute="trailing" secondItem="uq3-gB-IYx" secondAttribute="trailing" id="bJb-IU-mef"/>
+                <constraint firstItem="uq3-gB-IYx" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="epP-AQ-zxc"/>
+                <constraint firstItem="uq3-gB-IYx" firstAttribute="top" secondItem="ar0-12-GSz" secondAttribute="bottom" constant="15" id="iI0-bp-2Y4"/>
+                <constraint firstItem="id4-Cb-Mic" firstAttribute="top" secondItem="O55-CZ-ge4" secondAttribute="bottom" constant="10" id="jmt-EB-G0L"/>
+                <constraint firstItem="id4-Cb-Mic" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="nqs-dn-MUp"/>
+                <constraint firstItem="X4Q-iY-wxA" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="10" id="sRV-Oz-X4G"/>
+                <constraint firstItem="ar0-12-GSz" firstAttribute="top" secondItem="X4Q-iY-wxA" secondAttribute="bottom" constant="5" id="wEY-No-SnU"/>
+            </constraints>
+            <connections>
+                <outlet property="creatButton" destination="O55-CZ-ge4" id="DDK-p6-uvB"/>
+                <outlet property="moreButton" destination="id4-Cb-Mic" id="jvG-up-brZ"/>
+                <outlet property="nameLable" destination="ar0-12-GSz" id="Du7-sW-7fw"/>
+                <outlet property="userIconView" destination="X4Q-iY-wxA" id="lXi-Cv-CDm"/>
+            </connections>
+            <point key="canvasLocation" x="327" y="54.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="nameImage" width="64" height="46"/>
+    </resources>
+</document>

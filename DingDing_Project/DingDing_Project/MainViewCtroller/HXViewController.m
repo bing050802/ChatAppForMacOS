@@ -10,6 +10,7 @@
 #import "HXPrefixHeader.h"
 #import "HXBarButton.h"
 #import "HXSelectBar.h"
+#import "HXLeftToolBar.h"
 
 @interface HXViewController ()
 
@@ -32,18 +33,21 @@
         // 测试添加自子控件
         HXSelectBar *sBar = [[HXSelectBar alloc] initWithFrame:NSMakeRect(10, 200, 200, 200)];
         [sBar backGroundColor:[NSColor cyanColor]];
-        [self.view addSubview:sBar];
-//        [sBar autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:0];
-        [sBar autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:0];
-        [sBar autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
-        [sBar autoSetDimension:ALDimensionWidth toSize:100];
-        [sBar autoSetDimension:ALDimensionHeight toSize:200];
+//        [self.view addSubview:sBar];
 
         
-        
+        HXLeftToolBar *leftBar = [HXLeftToolBar loadXibLeftToolBar];
+        leftBar.userName = @"韩小青";
+        [leftBar backGroundColor:HXColor(221, 228, 242)];
+        [self.view addSubview:leftBar];
+        [leftBar autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:60];
+        [leftBar autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:0];
+        [leftBar autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
+        [leftBar autoSetDimension:ALDimensionWidth toSize:100];
     }
     return self;
 }
+
 
 - (void)clickBtn:(HXBarButton *)btn {
     NSLog(@"MXButton----click");

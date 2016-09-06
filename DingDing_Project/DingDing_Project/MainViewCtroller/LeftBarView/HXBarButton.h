@@ -44,3 +44,26 @@ typedef NS_OPTIONS(NSUInteger, ButtonState) {
 
 
 @end
+
+
+@interface HXBarButtonCell : NSButtonCell
+
+@property (nonatomic,assign) CGFloat cornerRadius;
+
+@property (nonatomic,strong) NSColor *highlightColor;
+
+@property (nonatomic,strong) NSColor *textColor;
+@property (nonatomic,strong) NSColor *highlightTextColor;
+
+@property (nonatomic,assign) NSEdgeInsets titleEdgeInsets; // default is UIEdgeInsetsZero
+@property (nonatomic,assign) NSEdgeInsets imageEdgeInsets; // default is UIEdgeInsetsZero
+
+
+@property (nonatomic,assign) BOOL reversesTitleShadowWhenHighlighted; // default is NO. if YES, shadow reverses to shift between engrave and emboss appearance
+
+@property (nonatomic,assign) BOOL adjustsImageWhenHighlighted;  // default is YES. if YES, image is drawn darker when highlighted(pressed)
+@property (nonatomic,assign) BOOL adjustsImageWhenDisabled;
+
+@property (nonatomic,assign) BOOL subpixelAntialiasing;
+
+@end

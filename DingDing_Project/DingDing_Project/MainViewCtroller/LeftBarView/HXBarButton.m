@@ -10,29 +10,6 @@
 #import "HXPrefixHeader.h"
 #import "MVGraphicsFunctions.h"
 
-@interface HXBarButtonCell : NSButtonCell
-
-@property (nonatomic,assign) CGFloat cornerRadius;
-
-@property (nonatomic,strong) NSColor *highlightColor;
-
-@property (nonatomic,strong) NSColor *textColor;
-@property (nonatomic,strong) NSColor *highlightTextColor;
-
-@property (nonatomic,assign) NSEdgeInsets titleEdgeInsets; // default is UIEdgeInsetsZero
-@property (nonatomic,assign) NSEdgeInsets imageEdgeInsets; // default is UIEdgeInsetsZero
-
-
-
-@property (nonatomic,assign) BOOL reversesTitleShadowWhenHighlighted; // default is NO. if YES, shadow reverses to shift between engrave and emboss appearance
-
-@property (nonatomic,assign) BOOL adjustsImageWhenHighlighted;  // default is YES. if YES, image is drawn darker when highlighted(pressed)
-@property (nonatomic,assign) BOOL adjustsImageWhenDisabled;
-
-@property (nonatomic,assign) BOOL subpixelAntialiasing;
-
-@end
-
 
 @interface HXBarButton ()
 
@@ -200,7 +177,7 @@
         // 高亮状态下进行一些 画操作
         MVRoundedRectBezierPath(cellFrame, 5);
     }
-    [super highlight:flag withFrame:cellFrame inView:controlView];
+//    [super highlight:flag withFrame:cellFrame inView:controlView];
 }
 
 
@@ -212,28 +189,24 @@
 }
 
 // 画边框
-- (void)drawBezelWithFrame:(NSRect)frame inView:(NSView *)controlView {
+- (void)drawBezelWithFrame:(NSRect)frame inView:(NSView *)controlView
+{
     
 }
 
 
-- (NSRect)drawTitle:(NSAttributedString *)title withFrame:(NSRect)frame inView:(NSView *)controlView {
-    NSGraphicsContext* ctx = [NSGraphicsContext currentContext];
-    NSRect result;
-    [ctx saveGraphicsState];
-    {   //&& !self.highlighted
-        if (self.textColor) {
-            NSMutableAttributedString *attrString = [title mutableCopy];
-            [attrString addAttribute:NSForegroundColorAttributeName value:self.textColor range:NSMakeRange(0, [attrString length])];
-            title = attrString;
-            result = [super drawTitle:title withFrame:frame inView:controlView];
-        }
+- (NSRect)drawTitle:(NSAttributedString *)title withFrame:(NSRect)frame inView:(NSView *)controlView
+{
+    if (self.textColor) {
+        NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
+        paragraph.alignment = NSTextAlignmentLeft;//设置左对齐
+        NSMutableAttributedString *attrString = [title mutableCopy];
+        [attrString addAttribute:NSForegroundColorAttributeName value:self.textColor range:NSMakeRange(0, attrString.length)];
+        [attrString addAttribute:NSParagraphStyleAttributeName value:paragraph range:NSMakeRange(0, attrString.length)];
+        title = attrString;
     }
-    [ctx restoreGraphicsState];
-    return result;
+    return [super drawTitle:title withFrame:frame inView:controlView];
 }
-
-
 
 
 - (NSRect)titleRectForBounds:(NSRect)theRect

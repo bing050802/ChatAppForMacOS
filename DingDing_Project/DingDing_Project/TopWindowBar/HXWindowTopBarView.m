@@ -14,6 +14,7 @@
 #import "HXSearchField.h"
 
 
+
 @interface HXWindowTopBarView ()
 
 @property (nonatomic, strong) HXSearchField *searchField;
@@ -36,9 +37,24 @@
      self.searchField.rightConstrinat = [self.searchField autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:55];
     [self.searchField autoSetDimension:ALDimensionHeight toSize:32];
      self.searchField.widthConstrinat = [self.searchField autoSetDimension:ALDimensionWidth toSize:220];
-
+    
+    
+    NSButton *rightBtn = [[NSButton alloc] init];
+    rightBtn.bordered = NO;
+    rightBtn.target = self;
+    rightBtn.action = @selector(lookFiles);
+    rightBtn.image = [NSImage imageNamed:@"topBarRight"];
+        [self addSubview:rightBtn];
+    [rightBtn autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:15];
+    [rightBtn autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:10];
+    [rightBtn autoSetDimension:ALDimensionWidth toSize:40];
+    [rightBtn autoSetDimension:ALDimensionHeight toSize:32];
+    
 }
-
+// 查看传输文件
+- (void)lookFiles {
+    
+}
 
 
 - (void)mouseDown:(NSEvent *)theEvent {
