@@ -38,8 +38,9 @@
     [self.searchField autoSetDimension:ALDimensionHeight toSize:32];
      self.searchField.widthConstrinat = [self.searchField autoSetDimension:ALDimensionWidth toSize:220];
     
-    
     NSButton *rightBtn = [[NSButton alloc] init];
+    // 按钮 去除高亮样式
+    [rightBtn.cell setHighlightsBy:NSNoCellMask];
     rightBtn.bordered = NO;
     rightBtn.target = self;
     rightBtn.action = @selector(lookFiles);
