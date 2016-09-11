@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3349A9C81D852DC10095C667 /* HXMiddleMessageControlller.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A9C21D852DC10095C667 /* HXMiddleMessageControlller.m */; };
+		3349A9C91D852DC10095C667 /* HXMiddleMessageControlller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3349A9C31D852DC10095C667 /* HXMiddleMessageControlller.xib */; };
+		3349A9CA1D852DC10095C667 /* HXRightChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A9C61D852DC10095C667 /* HXRightChatViewController.m */; };
+		3349A9CB1D852DC10095C667 /* HXRightChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3349A9C71D852DC10095C667 /* HXRightChatViewController.xib */; };
+		3349A9D81D852FF60095C667 /* HXSearchField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A9CE1D852FF60095C667 /* HXSearchField.m */; };
+		3349A9D91D852FF60095C667 /* HXTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A9D01D852FF60095C667 /* HXTextField.m */; };
+		3349A9DA1D852FF60095C667 /* HXWindowTopBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A9D21D852FF60095C667 /* HXWindowTopBarView.m */; };
+		3349A9DB1D852FF60095C667 /* MLPopupWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A9D51D852FF60095C667 /* MLPopupWindow.m */; };
+		3349A9DC1D852FF60095C667 /* MLPopupWindowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A9D71D852FF60095C667 /* MLPopupWindowManager.m */; };
+		3349A9DF1D8530710095C667 /* HXMessageSplitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A9DE1D8530710095C667 /* HXMessageSplitController.m */; };
 		8A4C6A111D7EB06E005BC413 /* clear_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4C6A0D1D7EB06E005BC413 /* clear_btn.png */; };
 		8A4C6A121D7EB06E005BC413 /* clear_btn_mousein.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4C6A0E1D7EB06E005BC413 /* clear_btn_mousein.png */; };
 		8A4C6A131D7EB06E005BC413 /* search_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4C6A0F1D7EB06E005BC413 /* search_btn.png */; };
@@ -35,18 +45,13 @@
 		8A565F751D6D8A920049C153 /* NSView+RBLAnimationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A565F741D6D8A920049C153 /* NSView+RBLAnimationAdditions.m */; };
 		8AAD92821D632D1D007E4A8F /* MVGraphicsFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD927F1D632D1D007E4A8F /* MVGraphicsFunctions.m */; };
 		8AAD92831D632D1D007E4A8F /* MVShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD92811D632D1D007E4A8F /* MVShadow.m */; };
-		8AAD92891D633588007E4A8F /* MLPopupWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD92861D633588007E4A8F /* MLPopupWindow.m */; };
-		8AAD928A1D633588007E4A8F /* MLPopupWindowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD92881D633588007E4A8F /* MLPopupWindowManager.m */; };
-		8AADD0081D5DADB300BDD619 /* HXTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AADD0071D5DADB300BDD619 /* HXTextField.m */; };
 		8AAFF5FA1D5C622700E908EC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAFF5F91D5C622700E908EC /* QuartzCore.framework */; };
 		8AAFF5FC1D5C623800E908EC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAFF5FB1D5C623800E908EC /* Cocoa.framework */; };
 		8AAFF5FE1D5C624500E908EC /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAFF5FD1D5C624500E908EC /* ApplicationServices.framework */; };
-		8AAFF60A1D5C75B600E908EC /* HXSearchField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAFF6091D5C75B600E908EC /* HXSearchField.m */; };
 		8AE26D341D598A4800855257 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D2F1D598A4800855257 /* AppDelegate.m */; };
 		8AE26D351D598A4800855257 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AE26D301D598A4800855257 /* Assets.xcassets */; };
 		8AE26D371D598A4800855257 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D331D598A4800855257 /* main.m */; };
 		8AE26D3C1D598C4D00855257 /* HXMainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D3B1D598C4D00855257 /* HXMainWindow.m */; };
-		8AE26D421D598CD300855257 /* HXWindowTopBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D411D598CD300855257 /* HXWindowTopBarView.m */; };
 		8AE26D521D59B4F000855257 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D4A1D59B4F000855257 /* ALView+PureLayout.m */; };
 		8AE26D531D59B4F000855257 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D4C1D59B4F000855257 /* NSArray+PureLayout.m */; };
 		8AE26D541D59B4F000855257 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D4E1D59B4F000855257 /* NSLayoutConstraint+PureLayout.m */; };
@@ -56,6 +61,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3349A9C11D852DC10095C667 /* HXMiddleMessageControlller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMiddleMessageControlller.h; sourceTree = "<group>"; };
+		3349A9C21D852DC10095C667 /* HXMiddleMessageControlller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMiddleMessageControlller.m; sourceTree = "<group>"; };
+		3349A9C31D852DC10095C667 /* HXMiddleMessageControlller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXMiddleMessageControlller.xib; sourceTree = "<group>"; };
+		3349A9C51D852DC10095C667 /* HXRightChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXRightChatViewController.h; sourceTree = "<group>"; };
+		3349A9C61D852DC10095C667 /* HXRightChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXRightChatViewController.m; sourceTree = "<group>"; };
+		3349A9C71D852DC10095C667 /* HXRightChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXRightChatViewController.xib; sourceTree = "<group>"; };
+		3349A9CD1D852FF60095C667 /* HXSearchField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXSearchField.h; sourceTree = "<group>"; };
+		3349A9CE1D852FF60095C667 /* HXSearchField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXSearchField.m; sourceTree = "<group>"; };
+		3349A9CF1D852FF60095C667 /* HXTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTextField.h; sourceTree = "<group>"; };
+		3349A9D01D852FF60095C667 /* HXTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTextField.m; sourceTree = "<group>"; };
+		3349A9D11D852FF60095C667 /* HXWindowTopBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXWindowTopBarView.h; sourceTree = "<group>"; };
+		3349A9D21D852FF60095C667 /* HXWindowTopBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXWindowTopBarView.m; sourceTree = "<group>"; };
+		3349A9D41D852FF60095C667 /* MLPopupWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPopupWindow.h; sourceTree = "<group>"; };
+		3349A9D51D852FF60095C667 /* MLPopupWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPopupWindow.m; sourceTree = "<group>"; };
+		3349A9D61D852FF60095C667 /* MLPopupWindowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPopupWindowManager.h; sourceTree = "<group>"; };
+		3349A9D71D852FF60095C667 /* MLPopupWindowManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPopupWindowManager.m; sourceTree = "<group>"; };
+		3349A9DD1D8530710095C667 /* HXMessageSplitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMessageSplitController.h; sourceTree = "<group>"; };
+		3349A9DE1D8530710095C667 /* HXMessageSplitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMessageSplitController.m; sourceTree = "<group>"; };
 		8A4C6A0D1D7EB06E005BC413 /* clear_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear_btn.png; sourceTree = "<group>"; };
 		8A4C6A0E1D7EB06E005BC413 /* clear_btn_mousein.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear_btn_mousein.png; sourceTree = "<group>"; };
 		8A4C6A0F1D7EB06E005BC413 /* search_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_btn.png; sourceTree = "<group>"; };
@@ -92,17 +115,9 @@
 		8AAD927F1D632D1D007E4A8F /* MVGraphicsFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVGraphicsFunctions.m; sourceTree = "<group>"; };
 		8AAD92801D632D1D007E4A8F /* MVShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVShadow.h; sourceTree = "<group>"; };
 		8AAD92811D632D1D007E4A8F /* MVShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVShadow.m; sourceTree = "<group>"; };
-		8AAD92851D633588007E4A8F /* MLPopupWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPopupWindow.h; sourceTree = "<group>"; };
-		8AAD92861D633588007E4A8F /* MLPopupWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPopupWindow.m; sourceTree = "<group>"; };
-		8AAD92871D633588007E4A8F /* MLPopupWindowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPopupWindowManager.h; sourceTree = "<group>"; };
-		8AAD92881D633588007E4A8F /* MLPopupWindowManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPopupWindowManager.m; sourceTree = "<group>"; };
-		8AADD0061D5DADB300BDD619 /* HXTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTextField.h; sourceTree = "<group>"; };
-		8AADD0071D5DADB300BDD619 /* HXTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTextField.m; sourceTree = "<group>"; };
 		8AAFF5F91D5C622700E908EC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8AAFF5FB1D5C623800E908EC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		8AAFF5FD1D5C624500E908EC /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
-		8AAFF6081D5C75B600E908EC /* HXSearchField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXSearchField.h; sourceTree = "<group>"; };
-		8AAFF6091D5C75B600E908EC /* HXSearchField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXSearchField.m; sourceTree = "<group>"; };
 		8AE26D161D5989C500855257 /* DingDing_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DingDing_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE26D271D5989C500855257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		8AE26D2E1D598A4800855257 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -111,8 +126,6 @@
 		8AE26D331D598A4800855257 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8AE26D3A1D598C4D00855257 /* HXMainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMainWindow.h; sourceTree = "<group>"; };
 		8AE26D3B1D598C4D00855257 /* HXMainWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMainWindow.m; sourceTree = "<group>"; };
-		8AE26D401D598CD300855257 /* HXWindowTopBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXWindowTopBarView.h; sourceTree = "<group>"; };
-		8AE26D411D598CD300855257 /* HXWindowTopBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXWindowTopBarView.m; sourceTree = "<group>"; };
 		8AE26D491D59B4F000855257 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
 		8AE26D4A1D59B4F000855257 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALView+PureLayout.m"; sourceTree = "<group>"; };
 		8AE26D4B1D59B4F000855257 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
@@ -144,6 +157,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3349A9BF1D852DC10095C667 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				3349A9DD1D8530710095C667 /* HXMessageSplitController.h */,
+				3349A9DE1D8530710095C667 /* HXMessageSplitController.m */,
+				3349A9C01D852DC10095C667 /* MiddleMessageControlller */,
+				3349A9C41D852DC10095C667 /* RightChatViewController */,
+			);
+			name = Message;
+			path = DingDing_Project/Message;
+			sourceTree = SOURCE_ROOT;
+		};
+		3349A9C01D852DC10095C667 /* MiddleMessageControlller */ = {
+			isa = PBXGroup;
+			children = (
+				3349A9C11D852DC10095C667 /* HXMiddleMessageControlller.h */,
+				3349A9C21D852DC10095C667 /* HXMiddleMessageControlller.m */,
+				3349A9C31D852DC10095C667 /* HXMiddleMessageControlller.xib */,
+			);
+			path = MiddleMessageControlller;
+			sourceTree = "<group>";
+		};
+		3349A9C41D852DC10095C667 /* RightChatViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3349A9C51D852DC10095C667 /* HXRightChatViewController.h */,
+				3349A9C61D852DC10095C667 /* HXRightChatViewController.m */,
+				3349A9C71D852DC10095C667 /* HXRightChatViewController.xib */,
+			);
+			path = RightChatViewController;
+			sourceTree = "<group>";
+		};
+		3349A9CC1D852FF60095C667 /* TopWindowBar */ = {
+			isa = PBXGroup;
+			children = (
+				3349A9CD1D852FF60095C667 /* HXSearchField.h */,
+				3349A9CE1D852FF60095C667 /* HXSearchField.m */,
+				3349A9CF1D852FF60095C667 /* HXTextField.h */,
+				3349A9D01D852FF60095C667 /* HXTextField.m */,
+				3349A9D11D852FF60095C667 /* HXWindowTopBarView.h */,
+				3349A9D21D852FF60095C667 /* HXWindowTopBarView.m */,
+				3349A9D31D852FF60095C667 /* PopverView */,
+			);
+			path = TopWindowBar;
+			sourceTree = "<group>";
+		};
+		3349A9D31D852FF60095C667 /* PopverView */ = {
+			isa = PBXGroup;
+			children = (
+				3349A9D41D852FF60095C667 /* MLPopupWindow.h */,
+				3349A9D51D852FF60095C667 /* MLPopupWindow.m */,
+				3349A9D61D852FF60095C667 /* MLPopupWindowManager.h */,
+				3349A9D71D852FF60095C667 /* MLPopupWindowManager.m */,
+			);
+			path = PopverView;
+			sourceTree = "<group>";
+		};
 		8A4C6A0B1D7EB06E005BC413 /* leftBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,17 +299,6 @@
 			path = HelperClass;
 			sourceTree = "<group>";
 		};
-		8AAD92841D633588007E4A8F /* PopverView */ = {
-			isa = PBXGroup;
-			children = (
-				8AAD92851D633588007E4A8F /* MLPopupWindow.h */,
-				8AAD92861D633588007E4A8F /* MLPopupWindow.m */,
-				8AAD92871D633588007E4A8F /* MLPopupWindowManager.h */,
-				8AAD92881D633588007E4A8F /* MLPopupWindowManager.m */,
-			);
-			path = PopverView;
-			sourceTree = "<group>";
-		};
 		8AE26D0D1D5989C500855257 = {
 			isa = PBXGroup;
 			children = (
@@ -262,9 +321,9 @@
 		8AE26D181D5989C500855257 /* DingDing_Project */ = {
 			isa = PBXGroup;
 			children = (
-				8AE26D381D598B5C00855257 /* TopWindowBar */,
 				8AE26D391D598C2900855257 /* MainWindow */,
 				8AE26D431D59B47300855257 /* MainViewCtroller */,
+				3349A9BF1D852DC10095C667 /* Message */,
 				8AE26D2D1D598A4800855257 /* Other */,
 				8AE26D1C1D5989C500855257 /* Supporting Files */,
 			);
@@ -292,23 +351,10 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
-		8AE26D381D598B5C00855257 /* TopWindowBar */ = {
-			isa = PBXGroup;
-			children = (
-				8AAD92841D633588007E4A8F /* PopverView */,
-				8AAFF6081D5C75B600E908EC /* HXSearchField.h */,
-				8AAFF6091D5C75B600E908EC /* HXSearchField.m */,
-				8AE26D401D598CD300855257 /* HXWindowTopBarView.h */,
-				8AE26D411D598CD300855257 /* HXWindowTopBarView.m */,
-				8AADD0061D5DADB300BDD619 /* HXTextField.h */,
-				8AADD0071D5DADB300BDD619 /* HXTextField.m */,
-			);
-			path = TopWindowBar;
-			sourceTree = "<group>";
-		};
 		8AE26D391D598C2900855257 /* MainWindow */ = {
 			isa = PBXGroup;
 			children = (
+				3349A9CC1D852FF60095C667 /* TopWindowBar */,
 				8A5589681D741455000AF3EA /* MainMenu.xib */,
 				8AE26D3A1D598C4D00855257 /* HXMainWindow.h */,
 				8AE26D3B1D598C4D00855257 /* HXMainWindow.m */,
@@ -443,6 +489,8 @@
 				8A4C6A111D7EB06E005BC413 /* clear_btn.png in Resources */,
 				8A4C6A211D7EB13E005BC413 /* connect_seclected.png in Resources */,
 				8A4C6A121D7EB06E005BC413 /* clear_btn_mousein.png in Resources */,
+				3349A9C91D852DC10095C667 /* HXMiddleMessageControlller.xib in Resources */,
+				3349A9CB1D852DC10095C667 /* HXRightChatViewController.xib in Resources */,
 				8A4C6A1A1D7EB09F005BC413 /* dingIcon_seclected.png in Resources */,
 				8A4C6A3A1D7EB928005BC413 /* moreIcon.png in Resources */,
 				8A5589691D741455000AF3EA /* MainMenu.xib in Resources */,
@@ -458,26 +506,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A4C6A331D7EB2E2005BC413 /* HXBarButton.m in Sources */,
+				3349A9CA1D852DC10095C667 /* HXRightChatViewController.m in Sources */,
+				3349A9DF1D8530710095C667 /* HXMessageSplitController.m in Sources */,
 				8A4C6A361D7EB2E2005BC413 /* HXSelectBar.m in Sources */,
-				8AAD92891D633588007E4A8F /* MLPopupWindow.m in Sources */,
+				3349A9DC1D852FF60095C667 /* MLPopupWindowManager.m in Sources */,
 				8A4C6A341D7EB2E2005BC413 /* HXLeftToolBar.m in Sources */,
-				8AADD0081D5DADB300BDD619 /* HXTextField.m in Sources */,
-				8AAD928A1D633588007E4A8F /* MLPopupWindowManager.m in Sources */,
 				8AE26D521D59B4F000855257 /* ALView+PureLayout.m in Sources */,
 				8AAD92831D632D1D007E4A8F /* MVShadow.m in Sources */,
 				8A4C6A4C1D7ED62A005BC413 /* NFLayerBackedView.m in Sources */,
 				8AE26D371D598A4800855257 /* main.m in Sources */,
 				8AE26D541D59B4F000855257 /* NSLayoutConstraint+PureLayout.m in Sources */,
+				3349A9D91D852FF60095C667 /* HXTextField.m in Sources */,
 				8AE26D531D59B4F000855257 /* NSArray+PureLayout.m in Sources */,
 				8AE26D3C1D598C4D00855257 /* HXMainWindow.m in Sources */,
+				3349A9C81D852DC10095C667 /* HXMiddleMessageControlller.m in Sources */,
 				8AF5CAD11D74208F003E7DA2 /* HXViewController.m in Sources */,
-				8AE26D421D598CD300855257 /* HXWindowTopBarView.m in Sources */,
 				8A565F751D6D8A920049C153 /* NSView+RBLAnimationAdditions.m in Sources */,
 				8A4C6A4D1D7ED62A005BC413 /* NFSplitViewController.m in Sources */,
-				8AAFF60A1D5C75B600E908EC /* HXSearchField.m in Sources */,
 				8AAD92821D632D1D007E4A8F /* MVGraphicsFunctions.m in Sources */,
+				3349A9DB1D852FF60095C667 /* MLPopupWindow.m in Sources */,
 				8AE26D341D598A4800855257 /* AppDelegate.m in Sources */,
 				8AE26D5C1D59B73C00855257 /* NSView+BackGroundColor.m in Sources */,
+				3349A9D81D852FF60095C667 /* HXSearchField.m in Sources */,
+				3349A9DA1D852FF60095C667 /* HXWindowTopBarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

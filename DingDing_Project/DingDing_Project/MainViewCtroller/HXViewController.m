@@ -9,51 +9,25 @@
 #import "HXViewController.h"
 #import "HXPrefixHeader.h"
 #import "HXLeftToolBar.h"
+#import "HXMessageSplitController.h"
+
 
 @interface HXViewController ()
+
+@property (nonatomic,strong)  HXMessageSplitController *messageSplitController;
+
 
 @end
 
 @implementation HXViewController
 
-/**
- NFSplitViewController :
- 
- NSView* contentView = self.window.contentView;
- 
- self.splitViewController = [[NFSplitViewController alloc] init];
- self.splitViewController.view.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
- self.splitViewController.view.frame = contentView.bounds;
- //    self.splitViewController.vertical = NO;
- [contentView addSubview:self.splitViewController.view];
- 
- TestViewController *leftVc = [[TestViewController alloc] init];
- leftVc.backgroundColor = [NSColor whiteColor];
- leftVc.name = @"Master";
- 
- TestViewController* rightVc = [[TestViewController alloc] init];
- rightVc.backgroundColor = [NSColor whiteColor];
- rightVc.name = @"Detail right";
- 
- [self.splitViewController addChildViewController:leftVc];
- [self.splitViewController addChildViewController:rightVc];
- 
- 
- TestViewController :
- 
- - (CGFloat)minimumLengthInSplitViewController:(NFSplitViewController*)splitViewController
- {
- return 214;
- }
- 
- - (CGFloat)maximumLengthInSplitViewController:(NFSplitViewController *)splitViewController
- {
- return 393;
- }
- 
- 
 
- */
+- (HXMessageSplitController *)splitViewController {
+    if (!_messageSplitController) {
+        _messageSplitController = [[HXMessageSplitController alloc] init];
+    }
+    return _messageSplitController;
+}
 
 /**
  当从xib加载控制器view的时候，系统会调用这个方法
@@ -77,6 +51,12 @@
         [leftBar autoSetDimension:ALDimensionWidth toSize:100];
         
         
+        [self.view addSubview:self.splitViewController.view];
+        [self.messageSplitController.view autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:60];
+        [self.messageSplitController.view autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:100];
+        [self.messageSplitController.view autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
+        [self.messageSplitController.view autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:0];
+        [self.messageSplitController setupChildViewController];
         
     }
     return self;

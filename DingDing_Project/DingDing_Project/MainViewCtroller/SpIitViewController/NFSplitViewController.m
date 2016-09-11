@@ -364,8 +364,8 @@ NSString* const NFSplitViewControllerDidFinishLiveResizeNotification = @"NFSplit
     if ( frame1.size.width < min1 )
         frame1.size.width = min1;
     if ( frame1.size.width > max1 )
-        frame1.size.width = max1;
-    
+#warning 中间的控制器view 默认宽度是最小宽度 minimumLengthInSplitViewController：
+        frame1.size.width = min1;
     if ( frame2.size.width < min2 )
         frame2.size.width = min2;
     if ( frame2.size.width > max2 )

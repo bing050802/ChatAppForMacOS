@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
+
 extern NSString* const NFSplitViewControllerWillBeginLiveResizeNotification;
 extern NSString* const NFSplitViewControllerDidFinishLiveResizeNotification;
 
