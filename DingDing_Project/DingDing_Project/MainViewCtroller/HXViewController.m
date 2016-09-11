@@ -16,7 +16,6 @@
 
 @property (nonatomic,strong)  HXMessageSplitController *messageSplitController;
 
-
 @end
 
 @implementation HXViewController

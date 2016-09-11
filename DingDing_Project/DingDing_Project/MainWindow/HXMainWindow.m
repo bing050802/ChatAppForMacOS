@@ -13,7 +13,6 @@
 
 @interface HXMainWindow ()
 
-
 @property (nonatomic, strong) HXWindowTopBarView *topBar;
 
 /** 很重要！把控制器view 设置到window的contentView的时候，

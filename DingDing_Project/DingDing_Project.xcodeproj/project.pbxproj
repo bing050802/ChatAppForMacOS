@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3349A9C81D852DC10095C667 /* HXMiddleMessageControlller.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A9C21D852DC10095C667 /* HXMiddleMessageControlller.m */; };
-		3349A9C91D852DC10095C667 /* HXMiddleMessageControlller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3349A9C31D852DC10095C667 /* HXMiddleMessageControlller.xib */; };
-		3349A9CA1D852DC10095C667 /* HXRightChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A9C61D852DC10095C667 /* HXRightChatViewController.m */; };
-		3349A9CB1D852DC10095C667 /* HXRightChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3349A9C71D852DC10095C667 /* HXRightChatViewController.xib */; };
 		3349A9D81D852FF60095C667 /* HXSearchField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A9CE1D852FF60095C667 /* HXSearchField.m */; };
 		3349A9D91D852FF60095C667 /* HXTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A9D01D852FF60095C667 /* HXTextField.m */; };
 		3349A9DA1D852FF60095C667 /* HXWindowTopBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A9D21D852FF60095C667 /* HXWindowTopBarView.m */; };
 		3349A9DB1D852FF60095C667 /* MLPopupWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A9D51D852FF60095C667 /* MLPopupWindow.m */; };
 		3349A9DC1D852FF60095C667 /* MLPopupWindowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A9D71D852FF60095C667 /* MLPopupWindowManager.m */; };
 		3349A9DF1D8530710095C667 /* HXMessageSplitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A9DE1D8530710095C667 /* HXMessageSplitController.m */; };
+		3349A9F01D8535C20095C667 /* HXMiddleMessageControlller.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A9E51D8535C20095C667 /* HXMiddleMessageControlller.m */; };
+		3349A9F11D8535C20095C667 /* HXMiddleMessageControlller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3349A9E61D8535C20095C667 /* HXMiddleMessageControlller.xib */; };
+		3349A9F21D8535C20095C667 /* HXRightChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A9EC1D8535C20095C667 /* HXRightChatViewController.m */; };
+		3349A9F31D8535C20095C667 /* HXRightChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3349A9ED1D8535C20095C667 /* HXRightChatViewController.xib */; };
 		8A4C6A111D7EB06E005BC413 /* clear_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4C6A0D1D7EB06E005BC413 /* clear_btn.png */; };
 		8A4C6A121D7EB06E005BC413 /* clear_btn_mousein.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4C6A0E1D7EB06E005BC413 /* clear_btn_mousein.png */; };
 		8A4C6A131D7EB06E005BC413 /* search_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4C6A0F1D7EB06E005BC413 /* search_btn.png */; };
@@ -61,12 +61,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3349A9C11D852DC10095C667 /* HXMiddleMessageControlller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMiddleMessageControlller.h; sourceTree = "<group>"; };
-		3349A9C21D852DC10095C667 /* HXMiddleMessageControlller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMiddleMessageControlller.m; sourceTree = "<group>"; };
-		3349A9C31D852DC10095C667 /* HXMiddleMessageControlller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXMiddleMessageControlller.xib; sourceTree = "<group>"; };
-		3349A9C51D852DC10095C667 /* HXRightChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXRightChatViewController.h; sourceTree = "<group>"; };
-		3349A9C61D852DC10095C667 /* HXRightChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXRightChatViewController.m; sourceTree = "<group>"; };
-		3349A9C71D852DC10095C667 /* HXRightChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXRightChatViewController.xib; sourceTree = "<group>"; };
 		3349A9CD1D852FF60095C667 /* HXSearchField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXSearchField.h; sourceTree = "<group>"; };
 		3349A9CE1D852FF60095C667 /* HXSearchField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXSearchField.m; sourceTree = "<group>"; };
 		3349A9CF1D852FF60095C667 /* HXTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTextField.h; sourceTree = "<group>"; };
@@ -79,6 +73,12 @@
 		3349A9D71D852FF60095C667 /* MLPopupWindowManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPopupWindowManager.m; sourceTree = "<group>"; };
 		3349A9DD1D8530710095C667 /* HXMessageSplitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMessageSplitController.h; sourceTree = "<group>"; };
 		3349A9DE1D8530710095C667 /* HXMessageSplitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMessageSplitController.m; sourceTree = "<group>"; };
+		3349A9E41D8535C20095C667 /* HXMiddleMessageControlller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMiddleMessageControlller.h; sourceTree = "<group>"; };
+		3349A9E51D8535C20095C667 /* HXMiddleMessageControlller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMiddleMessageControlller.m; sourceTree = "<group>"; };
+		3349A9E61D8535C20095C667 /* HXMiddleMessageControlller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXMiddleMessageControlller.xib; sourceTree = "<group>"; };
+		3349A9EB1D8535C20095C667 /* HXRightChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXRightChatViewController.h; sourceTree = "<group>"; };
+		3349A9EC1D8535C20095C667 /* HXRightChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXRightChatViewController.m; sourceTree = "<group>"; };
+		3349A9ED1D8535C20095C667 /* HXRightChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXRightChatViewController.xib; sourceTree = "<group>"; };
 		8A4C6A0D1D7EB06E005BC413 /* clear_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear_btn.png; sourceTree = "<group>"; };
 		8A4C6A0E1D7EB06E005BC413 /* clear_btn_mousein.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear_btn_mousein.png; sourceTree = "<group>"; };
 		8A4C6A0F1D7EB06E005BC413 /* search_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_btn.png; sourceTree = "<group>"; };
@@ -162,32 +162,12 @@
 			children = (
 				3349A9DD1D8530710095C667 /* HXMessageSplitController.h */,
 				3349A9DE1D8530710095C667 /* HXMessageSplitController.m */,
-				3349A9C01D852DC10095C667 /* MiddleMessageControlller */,
-				3349A9C41D852DC10095C667 /* RightChatViewController */,
+				3349A9E21D8535C20095C667 /* MiddleMessagePage */,
+				3349A9E91D8535C20095C667 /* RightChatPage */,
 			);
 			name = Message;
 			path = DingDing_Project/Message;
 			sourceTree = SOURCE_ROOT;
-		};
-		3349A9C01D852DC10095C667 /* MiddleMessageControlller */ = {
-			isa = PBXGroup;
-			children = (
-				3349A9C11D852DC10095C667 /* HXMiddleMessageControlller.h */,
-				3349A9C21D852DC10095C667 /* HXMiddleMessageControlller.m */,
-				3349A9C31D852DC10095C667 /* HXMiddleMessageControlller.xib */,
-			);
-			path = MiddleMessageControlller;
-			sourceTree = "<group>";
-		};
-		3349A9C41D852DC10095C667 /* RightChatViewController */ = {
-			isa = PBXGroup;
-			children = (
-				3349A9C51D852DC10095C667 /* HXRightChatViewController.h */,
-				3349A9C61D852DC10095C667 /* HXRightChatViewController.m */,
-				3349A9C71D852DC10095C667 /* HXRightChatViewController.xib */,
-			);
-			path = RightChatViewController;
-			sourceTree = "<group>";
 		};
 		3349A9CC1D852FF60095C667 /* TopWindowBar */ = {
 			isa = PBXGroup;
@@ -212,6 +192,74 @@
 				3349A9D71D852FF60095C667 /* MLPopupWindowManager.m */,
 			);
 			path = PopverView;
+			sourceTree = "<group>";
+		};
+		3349A9E21D8535C20095C667 /* MiddleMessagePage */ = {
+			isa = PBXGroup;
+			children = (
+				3349A9E31D8535C20095C667 /* Controller */,
+				3349A9E71D8535C20095C667 /* Model */,
+				3349A9E81D8535C20095C667 /* View */,
+			);
+			path = MiddleMessagePage;
+			sourceTree = "<group>";
+		};
+		3349A9E31D8535C20095C667 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3349A9E41D8535C20095C667 /* HXMiddleMessageControlller.h */,
+				3349A9E51D8535C20095C667 /* HXMiddleMessageControlller.m */,
+				3349A9E61D8535C20095C667 /* HXMiddleMessageControlller.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3349A9E71D8535C20095C667 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3349A9E81D8535C20095C667 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3349A9E91D8535C20095C667 /* RightChatPage */ = {
+			isa = PBXGroup;
+			children = (
+				3349A9EA1D8535C20095C667 /* Controller */,
+				3349A9EE1D8535C20095C667 /* Model */,
+				3349A9EF1D8535C20095C667 /* View */,
+			);
+			path = RightChatPage;
+			sourceTree = "<group>";
+		};
+		3349A9EA1D8535C20095C667 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3349A9EB1D8535C20095C667 /* HXRightChatViewController.h */,
+				3349A9EC1D8535C20095C667 /* HXRightChatViewController.m */,
+				3349A9ED1D8535C20095C667 /* HXRightChatViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3349A9EE1D8535C20095C667 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3349A9EF1D8535C20095C667 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		8A4C6A0B1D7EB06E005BC413 /* leftBar */ = {
@@ -489,8 +537,8 @@
 				8A4C6A111D7EB06E005BC413 /* clear_btn.png in Resources */,
 				8A4C6A211D7EB13E005BC413 /* connect_seclected.png in Resources */,
 				8A4C6A121D7EB06E005BC413 /* clear_btn_mousein.png in Resources */,
-				3349A9C91D852DC10095C667 /* HXMiddleMessageControlller.xib in Resources */,
-				3349A9CB1D852DC10095C667 /* HXRightChatViewController.xib in Resources */,
+				3349A9F11D8535C20095C667 /* HXMiddleMessageControlller.xib in Resources */,
+				3349A9F31D8535C20095C667 /* HXRightChatViewController.xib in Resources */,
 				8A4C6A1A1D7EB09F005BC413 /* dingIcon_seclected.png in Resources */,
 				8A4C6A3A1D7EB928005BC413 /* moreIcon.png in Resources */,
 				8A5589691D741455000AF3EA /* MainMenu.xib in Resources */,
@@ -506,20 +554,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A4C6A331D7EB2E2005BC413 /* HXBarButton.m in Sources */,
-				3349A9CA1D852DC10095C667 /* HXRightChatViewController.m in Sources */,
 				3349A9DF1D8530710095C667 /* HXMessageSplitController.m in Sources */,
 				8A4C6A361D7EB2E2005BC413 /* HXSelectBar.m in Sources */,
+				3349A9F21D8535C20095C667 /* HXRightChatViewController.m in Sources */,
 				3349A9DC1D852FF60095C667 /* MLPopupWindowManager.m in Sources */,
 				8A4C6A341D7EB2E2005BC413 /* HXLeftToolBar.m in Sources */,
 				8AE26D521D59B4F000855257 /* ALView+PureLayout.m in Sources */,
 				8AAD92831D632D1D007E4A8F /* MVShadow.m in Sources */,
 				8A4C6A4C1D7ED62A005BC413 /* NFLayerBackedView.m in Sources */,
 				8AE26D371D598A4800855257 /* main.m in Sources */,
+				3349A9F01D8535C20095C667 /* HXMiddleMessageControlller.m in Sources */,
 				8AE26D541D59B4F000855257 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				3349A9D91D852FF60095C667 /* HXTextField.m in Sources */,
 				8AE26D531D59B4F000855257 /* NSArray+PureLayout.m in Sources */,
 				8AE26D3C1D598C4D00855257 /* HXMainWindow.m in Sources */,
-				3349A9C81D852DC10095C667 /* HXMiddleMessageControlller.m in Sources */,
 				8AF5CAD11D74208F003E7DA2 /* HXViewController.m in Sources */,
 				8A565F751D6D8A920049C153 /* NSView+RBLAnimationAdditions.m in Sources */,
 				8A4C6A4D1D7ED62A005BC413 /* NFSplitViewController.m in Sources */,
