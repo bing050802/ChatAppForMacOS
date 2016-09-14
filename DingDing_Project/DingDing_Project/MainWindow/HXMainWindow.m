@@ -29,9 +29,20 @@
     self = [super initWithContentRect:contentRect styleMask:aStyle backing:bufferingType defer:flag];
     if (self) {
         self.contentMinSize = NSMakeSize(960, 602);
+         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(allNotifiction:) name:nil object:nil];
     }
     return self;
 }
+
+- (void)allNotifiction:(NSNotification *)noti {
+    if ([noti.name containsString:@"NSTextInput"] || [noti.name containsString:@"NSApplication"]
+        ||[noti.name containsString:@"NSViewFrame"] || [noti.name containsString:@"NSWindow"] ||
+        [noti.name containsString:@"NSMenu"] ) {
+        return;
+    }
+    NSLog(@"----%@",noti.name);
+}
+
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -91,7 +102,5 @@
 //    r.origin = wo;
 //    [self setFrameOrigin:wo];
 //}
-
-
 
 @end

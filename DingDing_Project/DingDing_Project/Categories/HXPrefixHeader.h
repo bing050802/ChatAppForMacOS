@@ -32,6 +32,12 @@
 
 // https://github.com/malcommac/DMSplitView
 
+// IKImageBrowserView。developer.apple.com/library/etc/redirect/xcode/mac/1153/samplecode/ImageBrowserViewAppearance/Introduction/Intro.html
+
+// https://github.com/phaibin/DragDropDemo  拖拽文件到mac app
+
+
+
 
 #define selfWidth   self.frame.size.width
 #define selfHeight  self.frame.size.height

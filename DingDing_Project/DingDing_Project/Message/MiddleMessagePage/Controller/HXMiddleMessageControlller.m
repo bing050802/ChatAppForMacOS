@@ -10,7 +10,7 @@
 #import "NFSplitViewController.h"
 #import "HXPrefixHeader.h"
 
-@interface HXMiddleMessageControlller ()
+@interface HXMiddleMessageControlller () <NSTabViewDelegate,NSTableViewDataSource>
 
 @end
 
@@ -21,7 +21,9 @@
     [self.view backGroundColor:[NSColor whiteColor]];
 }
 
-
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
+    return 2;
+}
 
 - (CGFloat)minimumLengthInSplitViewController:(NFSplitViewController*)splitViewController
 {

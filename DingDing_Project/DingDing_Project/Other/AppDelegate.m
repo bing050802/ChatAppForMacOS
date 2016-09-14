@@ -43,12 +43,22 @@
      self.initialVC = buttonVC;
  */
 
+- (void)applicationWillFinishLaunching:(NSNotification *)notification {
+    
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
     
-
-
+   
+    
 }
+
+- (void)allNotifiction:(NSNotification *)noti {
+    NSLog(@"----%@",noti.name);
+}
+
+
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
