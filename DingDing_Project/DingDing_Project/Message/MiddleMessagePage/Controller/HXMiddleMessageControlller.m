@@ -9,6 +9,7 @@
 #import "HXMiddleMessageControlller.h"
 #import "NFSplitViewController.h"
 #import "HXPrefixHeader.h"
+#import "NSObject+Property.h"
 
 @interface HXMiddleMessageControlller () <NSTabViewDelegate,NSTableViewDataSource>
 
@@ -19,6 +20,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view backGroundColor:[NSColor whiteColor]];
+    
+    
+    
+    // 解析Plist
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"more_topics.plist" ofType:nil];
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
+    NSArray *dictArr = dict[@"list"];
+    
+    // 设计模型属性代码
+    [NSObject createPropertyCodeWithDict:dictArr[0]];
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {

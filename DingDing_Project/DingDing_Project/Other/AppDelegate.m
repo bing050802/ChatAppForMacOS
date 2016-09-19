@@ -55,7 +55,7 @@
 }
 
 - (void)allNotifiction:(NSNotification *)noti {
-    NSLog(@"----%@",noti.name);
+//    NSLog(@"----%@",noti.name);
 }
 
 

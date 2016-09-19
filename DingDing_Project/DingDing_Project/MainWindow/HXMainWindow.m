@@ -29,7 +29,7 @@
     self = [super initWithContentRect:contentRect styleMask:aStyle backing:bufferingType defer:flag];
     if (self) {
         self.contentMinSize = NSMakeSize(960, 602);
-         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(allNotifiction:) name:nil object:nil];
+//         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(allNotifiction:) name:nil object:nil];
     }
     return self;
 }

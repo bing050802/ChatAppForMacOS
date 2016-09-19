@@ -19,6 +19,7 @@
 		3349A9F31D8535C20095C667 /* HXRightChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3349A9ED1D8535C20095C667 /* HXRightChatViewController.xib */; };
 		336041AE1D9033DC0096D2CC /* more_topics.plist in Resources */ = {isa = PBXBuildFile; fileRef = 336041AC1D9033DC0096D2CC /* more_topics.plist */; };
 		336041AF1D9033DC0096D2CC /* new_topics.plist in Resources */ = {isa = PBXBuildFile; fileRef = 336041AD1D9033DC0096D2CC /* new_topics.plist */; };
+		336041B21D9038880096D2CC /* NSObject+Property.m in Sources */ = {isa = PBXBuildFile; fileRef = 336041B11D9038880096D2CC /* NSObject+Property.m */; };
 		8A4C6A111D7EB06E005BC413 /* clear_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4C6A0D1D7EB06E005BC413 /* clear_btn.png */; };
 		8A4C6A121D7EB06E005BC413 /* clear_btn_mousein.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4C6A0E1D7EB06E005BC413 /* clear_btn_mousein.png */; };
 		8A4C6A131D7EB06E005BC413 /* search_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4C6A0F1D7EB06E005BC413 /* search_btn.png */; };
@@ -83,6 +84,8 @@
 		3349A9ED1D8535C20095C667 /* HXRightChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXRightChatViewController.xib; sourceTree = "<group>"; };
 		336041AC1D9033DC0096D2CC /* more_topics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = more_topics.plist; sourceTree = "<group>"; };
 		336041AD1D9033DC0096D2CC /* new_topics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = new_topics.plist; sourceTree = "<group>"; };
+		336041B01D9038880096D2CC /* NSObject+Property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Property.h"; sourceTree = "<group>"; };
+		336041B11D9038880096D2CC /* NSObject+Property.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Property.m"; sourceTree = "<group>"; };
 		8A4C6A0D1D7EB06E005BC413 /* clear_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear_btn.png; sourceTree = "<group>"; };
 		8A4C6A0E1D7EB06E005BC413 /* clear_btn_mousein.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear_btn_mousein.png; sourceTree = "<group>"; };
 		8A4C6A0F1D7EB06E005BC413 /* search_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_btn.png; sourceTree = "<group>"; };
@@ -262,6 +265,8 @@
 		336041AB1D9033BE0096D2CC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				336041B01D9038880096D2CC /* NSObject+Property.h */,
+				336041B11D9038880096D2CC /* NSObject+Property.m */,
 				336041AC1D9033DC0096D2CC /* more_topics.plist */,
 				336041AD1D9033DC0096D2CC /* new_topics.plist */,
 			);
@@ -564,6 +569,7 @@
 				8A4C6A331D7EB2E2005BC413 /* HXBarButton.m in Sources */,
 				3349A9DF1D8530710095C667 /* HXMessageSplitController.m in Sources */,
 				8A4C6A361D7EB2E2005BC413 /* HXSelectBar.m in Sources */,
+				336041B21D9038880096D2CC /* NSObject+Property.m in Sources */,
 				3349A9F21D8535C20095C667 /* HXRightChatViewController.m in Sources */,
 				3349A9DC1D852FF60095C667 /* MLPopupWindowManager.m in Sources */,
 				8A4C6A341D7EB2E2005BC413 /* HXLeftToolBar.m in Sources */,
