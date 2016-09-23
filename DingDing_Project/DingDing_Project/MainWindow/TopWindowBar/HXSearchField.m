@@ -180,7 +180,7 @@
     [NSView rbl_animate:^{
         if (isSearching) {
             self.animator.frame = NSMakeRect(NSMinX(self.originFrame) - 50, selfY, NSWidth(self.originFrame) + 50, selfHeight);
-            //self.animator.widthConstrinat.constant = 270;
+            self.animator.widthConstrinat.constant = 270;
         } else {
             self.animator.frame = self.originFrame;
             //self.animator.widthConstrinat.constant = 210;
