@@ -36,6 +36,8 @@
 
 // https://github.com/phaibin/DragDropDemo  拖拽文件到mac app
 
+// https://github.com/void-main/VMMagnifyComparer 图片处理
+
 
 
 

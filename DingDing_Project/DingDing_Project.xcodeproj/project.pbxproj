@@ -46,6 +46,8 @@
 		8A4C6A4D1D7ED62A005BC413 /* NFSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4C6A4B1D7ED62A005BC413 /* NFSplitViewController.m */; };
 		8A5589691D741455000AF3EA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A5589681D741455000AF3EA /* MainMenu.xib */; };
 		8A565F751D6D8A920049C153 /* NSView+RBLAnimationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A565F741D6D8A920049C153 /* NSView+RBLAnimationAdditions.m */; };
+		8A8664831D95132900F78CF4 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8664821D95132900F78CF4 /* AFNetworking.framework */; };
+		8A8664B81D952EFC00F78CF4 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A8664B71D952EFC00F78CF4 /* test.png */; };
 		8AAD92821D632D1D007E4A8F /* MVGraphicsFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD927F1D632D1D007E4A8F /* MVGraphicsFunctions.m */; };
 		8AAD92831D632D1D007E4A8F /* MVShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD92811D632D1D007E4A8F /* MVShadow.m */; };
 		8AAFF5FA1D5C622700E908EC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAFF5F91D5C622700E908EC /* QuartzCore.framework */; };
@@ -118,6 +120,8 @@
 		8A5589681D741455000AF3EA /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = ../../MainMenu.xib; sourceTree = "<group>"; };
 		8A565F731D6D8A920049C153 /* NSView+RBLAnimationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+RBLAnimationAdditions.h"; sourceTree = "<group>"; };
 		8A565F741D6D8A920049C153 /* NSView+RBLAnimationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+RBLAnimationAdditions.m"; sourceTree = "<group>"; };
+		8A8664821D95132900F78CF4 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = DingDing_Project/AFNetworking.framework; sourceTree = "<group>"; };
+		8A8664B71D952EFC00F78CF4 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		8AAD927E1D632D1D007E4A8F /* MVGraphicsFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVGraphicsFunctions.h; sourceTree = "<group>"; };
 		8AAD927F1D632D1D007E4A8F /* MVGraphicsFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVGraphicsFunctions.m; sourceTree = "<group>"; };
 		8AAD92801D632D1D007E4A8F /* MVShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVShadow.h; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AAFF5FE1D5C624500E908EC /* ApplicationServices.framework in Frameworks */,
+				8A8664831D95132900F78CF4 /* AFNetworking.framework in Frameworks */,
 				8AAFF5FC1D5C623800E908EC /* Cocoa.framework in Frameworks */,
 				8AAFF5FA1D5C622700E908EC /* QuartzCore.framework in Frameworks */,
 			);
@@ -361,6 +366,8 @@
 		8AE26D0D1D5989C500855257 = {
 			isa = PBXGroup;
 			children = (
+				8A8664B71D952EFC00F78CF4 /* test.png */,
+				8A8664821D95132900F78CF4 /* AFNetworking.framework */,
 				8AAFF5FD1D5C624500E908EC /* ApplicationServices.framework */,
 				8AAFF5FB1D5C623800E908EC /* Cocoa.framework */,
 				8AAFF5F91D5C622700E908EC /* QuartzCore.framework */,
@@ -537,6 +544,7 @@
 				8A4C6A291D7EB1F3005BC413 /* dingpan_seclected.png in Resources */,
 				8A4C6A381D7EB665005BC413 /* creatIcon.png in Resources */,
 				8A4C6A131D7EB06E005BC413 /* search_btn.png in Resources */,
+				8A8664B81D952EFC00F78CF4 /* test.png in Resources */,
 				8A4C6A251D7EB1A4005BC413 /* work_seclected.png in Resources */,
 				8A4C6A141D7EB06E005BC413 /* search_btn_mousein.png in Resources */,
 				8AF5CAD21D74208F003E7DA2 /* HXViewController.xib in Resources */,
@@ -684,6 +692,10 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DingDing_Project",
+				);
 				INFOPLIST_FILE = DingDing_Project/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
@@ -699,6 +711,10 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DingDing_Project",
+				);
 				INFOPLIST_FILE = DingDing_Project/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
