@@ -41,6 +41,8 @@
 //        
 //    }];
     
+//    NSBitmapImageRep
+    
     NSLog(@"%@",self.imageView.image.accessibilityDescription);
     
 //     NSImage

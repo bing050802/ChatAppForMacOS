@@ -36,7 +36,11 @@
 
 // https://github.com/phaibin/DragDropDemo  拖拽文件到mac app
 
-// https://github.com/void-main/VMMagnifyComparer 图片处理
+// https://github.com/void-main/VMMagnifyComparer 图片处理 cgimageref nsimage转换 bitmap之间的关系
+
+// https://github.com/enormego/EGOCache 缓存工具类
+
+// NSImage在读取高DPI图像时的bug及解决方案 http://blog.voidmain.guru/blog/2014/07/13/nsimage-for-high-dpi-images/
 
 
 
