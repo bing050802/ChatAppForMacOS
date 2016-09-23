@@ -42,8 +42,8 @@
 
 // NSImage在读取高DPI图像时的bug及解决方案 http://blog.voidmain.guru/blog/2014/07/13/nsimage-for-high-dpi-images/
 
-
-
+// From A View to A Picture  搜索苹果官方示例程序
+//https://github.com/aa703463228/SWAttributedLabel  Use In Mac OS，To show Gif or Images with text
 
 #define selfWidth   self.frame.size.width
 #define selfHeight  self.frame.size.height

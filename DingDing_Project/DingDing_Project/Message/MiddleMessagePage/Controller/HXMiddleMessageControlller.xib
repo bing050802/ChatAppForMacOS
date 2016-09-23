@@ -90,7 +90,7 @@
                         <constraint firstAttribute="height" constant="150" id="3I8-lk-db6"/>
                         <constraint firstAttribute="width" constant="150" id="Eht-LG-Fkd"/>
                     </constraints>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="test" id="9x4-c4-pDN"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="demo_brush.gif" id="9x4-c4-pDN"/>
                 </imageView>
             </subviews>
             <constraints>
@@ -105,6 +105,6 @@
         </customView>
     </objects>
     <resources>
-        <image name="test" width="362" height="532"/>
+        <image name="demo_brush.gif" width="128" height="128"/>
     </resources>
 </document>

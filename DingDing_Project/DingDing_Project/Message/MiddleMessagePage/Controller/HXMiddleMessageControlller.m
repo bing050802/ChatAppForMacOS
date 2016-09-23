@@ -43,7 +43,7 @@
     
 //    NSBitmapImageRep
     
-    NSLog(@"%@",self.imageView.image.accessibilityDescription);
+    NSLog(@"%@",self.imageView.image.representations);
     
 //     NSImage
     
