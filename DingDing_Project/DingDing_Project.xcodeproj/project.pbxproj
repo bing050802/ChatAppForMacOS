@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		331940FD1D97FA66007AF3BF /* HXMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 331940FC1D97FA66007AF3BF /* HXMessage.m */; };
 		3349A9D81D852FF60095C667 /* HXSearchField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A9CE1D852FF60095C667 /* HXSearchField.m */; };
 		3349A9D91D852FF60095C667 /* HXTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A9D01D852FF60095C667 /* HXTextField.m */; };
 		3349A9DA1D852FF60095C667 /* HXWindowTopBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A9D21D852FF60095C667 /* HXWindowTopBarView.m */; };
@@ -20,6 +21,8 @@
 		336041AE1D9033DC0096D2CC /* more_topics.plist in Resources */ = {isa = PBXBuildFile; fileRef = 336041AC1D9033DC0096D2CC /* more_topics.plist */; };
 		336041AF1D9033DC0096D2CC /* new_topics.plist in Resources */ = {isa = PBXBuildFile; fileRef = 336041AD1D9033DC0096D2CC /* new_topics.plist */; };
 		336041B21D9038880096D2CC /* NSObject+Property.m in Sources */ = {isa = PBXBuildFile; fileRef = 336041B11D9038880096D2CC /* NSObject+Property.m */; };
+		33650FBC1D97FCE700D8F571 /* HXMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33650FBB1D97FCE700D8F571 /* HXMessageCell.m */; };
+		33650FBE1D97FD0600D8F571 /* HXMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33650FBD1D97FD0600D8F571 /* HXMessageCell.xib */; };
 		8A4C6A111D7EB06E005BC413 /* clear_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4C6A0D1D7EB06E005BC413 /* clear_btn.png */; };
 		8A4C6A121D7EB06E005BC413 /* clear_btn_mousein.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4C6A0E1D7EB06E005BC413 /* clear_btn_mousein.png */; };
 		8A4C6A131D7EB06E005BC413 /* search_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4C6A0F1D7EB06E005BC413 /* search_btn.png */; };
@@ -46,7 +49,6 @@
 		8A4C6A4D1D7ED62A005BC413 /* NFSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4C6A4B1D7ED62A005BC413 /* NFSplitViewController.m */; };
 		8A5589691D741455000AF3EA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A5589681D741455000AF3EA /* MainMenu.xib */; };
 		8A565F751D6D8A920049C153 /* NSView+RBLAnimationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A565F741D6D8A920049C153 /* NSView+RBLAnimationAdditions.m */; };
-		8A8664831D95132900F78CF4 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8664821D95132900F78CF4 /* AFNetworking.framework */; };
 		8A8664B81D952EFC00F78CF4 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A8664B71D952EFC00F78CF4 /* test.png */; };
 		8A8664BA1D95458700F78CF4 /* demo_brush.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8A8664B91D95458700F78CF4 /* demo_brush.gif */; };
 		8AAD92821D632D1D007E4A8F /* MVGraphicsFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD927F1D632D1D007E4A8F /* MVGraphicsFunctions.m */; };
@@ -67,6 +69,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		331940FB1D97FA66007AF3BF /* HXMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMessage.h; sourceTree = "<group>"; };
+		331940FC1D97FA66007AF3BF /* HXMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMessage.m; sourceTree = "<group>"; };
 		3349A9CD1D852FF60095C667 /* HXSearchField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXSearchField.h; sourceTree = "<group>"; };
 		3349A9CE1D852FF60095C667 /* HXSearchField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXSearchField.m; sourceTree = "<group>"; };
 		3349A9CF1D852FF60095C667 /* HXTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTextField.h; sourceTree = "<group>"; };
@@ -89,6 +93,9 @@
 		336041AD1D9033DC0096D2CC /* new_topics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = new_topics.plist; sourceTree = "<group>"; };
 		336041B01D9038880096D2CC /* NSObject+Property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Property.h"; sourceTree = "<group>"; };
 		336041B11D9038880096D2CC /* NSObject+Property.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Property.m"; sourceTree = "<group>"; };
+		33650FBA1D97FCE700D8F571 /* HXMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMessageCell.h; sourceTree = "<group>"; };
+		33650FBB1D97FCE700D8F571 /* HXMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMessageCell.m; sourceTree = "<group>"; };
+		33650FBD1D97FD0600D8F571 /* HXMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXMessageCell.xib; sourceTree = "<group>"; };
 		8A4C6A0D1D7EB06E005BC413 /* clear_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear_btn.png; sourceTree = "<group>"; };
 		8A4C6A0E1D7EB06E005BC413 /* clear_btn_mousein.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear_btn_mousein.png; sourceTree = "<group>"; };
 		8A4C6A0F1D7EB06E005BC413 /* search_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_btn.png; sourceTree = "<group>"; };
@@ -121,7 +128,6 @@
 		8A5589681D741455000AF3EA /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = ../../MainMenu.xib; sourceTree = "<group>"; };
 		8A565F731D6D8A920049C153 /* NSView+RBLAnimationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+RBLAnimationAdditions.h"; sourceTree = "<group>"; };
 		8A565F741D6D8A920049C153 /* NSView+RBLAnimationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+RBLAnimationAdditions.m"; sourceTree = "<group>"; };
-		8A8664821D95132900F78CF4 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = DingDing_Project/AFNetworking.framework; sourceTree = "<group>"; };
 		8A8664B71D952EFC00F78CF4 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		8A8664B91D95458700F78CF4 /* demo_brush.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo_brush.gif; sourceTree = "<group>"; };
 		8AAD927E1D632D1D007E4A8F /* MVGraphicsFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVGraphicsFunctions.h; sourceTree = "<group>"; };
@@ -162,7 +168,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AAFF5FE1D5C624500E908EC /* ApplicationServices.framework in Frameworks */,
-				8A8664831D95132900F78CF4 /* AFNetworking.framework in Frameworks */,
 				8AAFF5FC1D5C623800E908EC /* Cocoa.framework in Frameworks */,
 				8AAFF5FA1D5C622700E908EC /* QuartzCore.framework in Frameworks */,
 			);
@@ -231,6 +236,9 @@
 		3349A9E81D8535C20095C667 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				33650FBA1D97FCE700D8F571 /* HXMessageCell.h */,
+				33650FBB1D97FCE700D8F571 /* HXMessageCell.m */,
+				33650FBD1D97FD0600D8F571 /* HXMessageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -276,6 +284,8 @@
 				336041B11D9038880096D2CC /* NSObject+Property.m */,
 				336041AC1D9033DC0096D2CC /* more_topics.plist */,
 				336041AD1D9033DC0096D2CC /* new_topics.plist */,
+				331940FB1D97FA66007AF3BF /* HXMessage.h */,
+				331940FC1D97FA66007AF3BF /* HXMessage.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -370,7 +380,6 @@
 			children = (
 				8A8664B91D95458700F78CF4 /* demo_brush.gif */,
 				8A8664B71D952EFC00F78CF4 /* test.png */,
-				8A8664821D95132900F78CF4 /* AFNetworking.framework */,
 				8AAFF5FD1D5C624500E908EC /* ApplicationServices.framework */,
 				8AAFF5FB1D5C623800E908EC /* Cocoa.framework */,
 				8AAFF5F91D5C622700E908EC /* QuartzCore.framework */,
@@ -560,6 +569,7 @@
 				8A4C6A111D7EB06E005BC413 /* clear_btn.png in Resources */,
 				8A8664BA1D95458700F78CF4 /* demo_brush.gif in Resources */,
 				336041AF1D9033DC0096D2CC /* new_topics.plist in Resources */,
+				33650FBE1D97FD0600D8F571 /* HXMessageCell.xib in Resources */,
 				8A4C6A211D7EB13E005BC413 /* connect_seclected.png in Resources */,
 				8A4C6A121D7EB06E005BC413 /* clear_btn_mousein.png in Resources */,
 				3349A9F11D8535C20095C667 /* HXMiddleMessageControlller.xib in Resources */,
@@ -595,10 +605,12 @@
 				8AE26D531D59B4F000855257 /* NSArray+PureLayout.m in Sources */,
 				8AE26D3C1D598C4D00855257 /* HXMainWindow.m in Sources */,
 				8AF5CAD11D74208F003E7DA2 /* HXViewController.m in Sources */,
+				331940FD1D97FA66007AF3BF /* HXMessage.m in Sources */,
 				8A565F751D6D8A920049C153 /* NSView+RBLAnimationAdditions.m in Sources */,
 				8A4C6A4D1D7ED62A005BC413 /* NFSplitViewController.m in Sources */,
 				8AAD92821D632D1D007E4A8F /* MVGraphicsFunctions.m in Sources */,
 				3349A9DB1D852FF60095C667 /* MLPopupWindow.m in Sources */,
+				33650FBC1D97FCE700D8F571 /* HXMessageCell.m in Sources */,
 				8AE26D341D598A4800855257 /* AppDelegate.m in Sources */,
 				8AE26D5C1D59B73C00855257 /* NSView+BackGroundColor.m in Sources */,
 				3349A9D81D852FF60095C667 /* HXSearchField.m in Sources */,
