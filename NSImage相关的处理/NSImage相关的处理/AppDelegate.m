@@ -18,6 +18,8 @@
 
 //About High Resolution for OS X  苹果文档
 
+//http://www.tuicool.com/articles/ARFjei6 详细解读 sdwebimage 源码
+
 @interface AppDelegate ()
 
 @property (weak) IBOutlet NSImageView *ImageView;
