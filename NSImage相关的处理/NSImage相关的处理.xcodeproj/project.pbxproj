@@ -1,0 +1,357 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8AA43A6F1D98C706006D4C49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA43A6E1D98C706006D4C49 /* AppDelegate.m */; };
+		8AA43A721D98C706006D4C49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA43A711D98C706006D4C49 /* main.m */; };
+		8AA43A741D98C706006D4C49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA43A731D98C706006D4C49 /* Assets.xcassets */; };
+		8AA43A771D98C706006D4C49 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA43A751D98C706006D4C49 /* MainMenu.xib */; };
+		8AA43A831D98C7B5006D4C49 /* ANNSImageGifPixelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA43A801D98C7B5006D4C49 /* ANNSImageGifPixelSource.m */; };
+		8AA43A841D98C7B5006D4C49 /* NSImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA43A821D98C7B5006D4C49 /* NSImage+Resize.m */; };
+		8AA43A8A1D98CC6C006D4C49 /* NSImage+BitmapRep.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA43A871D98CC6C006D4C49 /* NSImage+BitmapRep.m */; };
+		8AA43A8B1D98CC6C006D4C49 /* VMBrushImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA43A891D98CC6C006D4C49 /* VMBrushImageView.m */; };
+		8AA43A911D98CD3B006D4C49 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AA43A901D98CD3B006D4C49 /* test.png */; };
+		8AA43A931D98CE6B006D4C49 /* test1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AA43A921D98CE6B006D4C49 /* test1.png */; };
+		8AA43A971D98D305006D4C49 /* AsyncImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA43A961D98D305006D4C49 /* AsyncImageDownloader.m */; };
+		8AA43A9A1D98F504006D4C49 /* demo_brush.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8AA43A991D98F504006D4C49 /* demo_brush.gif */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8AA43A6A1D98C706006D4C49 /* NSImage相关的处理.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NSImage相关的处理.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AA43A6D1D98C706006D4C49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8AA43A6E1D98C706006D4C49 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8AA43A711D98C706006D4C49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8AA43A731D98C706006D4C49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8AA43A761D98C706006D4C49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		8AA43A781D98C706006D4C49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AA43A7F1D98C7B5006D4C49 /* ANNSImageGifPixelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANNSImageGifPixelSource.h; sourceTree = "<group>"; };
+		8AA43A801D98C7B5006D4C49 /* ANNSImageGifPixelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANNSImageGifPixelSource.m; sourceTree = "<group>"; };
+		8AA43A811D98C7B5006D4C49 /* NSImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Resize.h"; sourceTree = "<group>"; };
+		8AA43A821D98C7B5006D4C49 /* NSImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Resize.m"; sourceTree = "<group>"; };
+		8AA43A861D98CC6C006D4C49 /* NSImage+BitmapRep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+BitmapRep.h"; sourceTree = "<group>"; };
+		8AA43A871D98CC6C006D4C49 /* NSImage+BitmapRep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+BitmapRep.m"; sourceTree = "<group>"; };
+		8AA43A881D98CC6C006D4C49 /* VMBrushImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMBrushImageView.h; sourceTree = "<group>"; };
+		8AA43A891D98CC6C006D4C49 /* VMBrushImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMBrushImageView.m; sourceTree = "<group>"; };
+		8AA43A901D98CD3B006D4C49 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		8AA43A921D98CE6B006D4C49 /* test1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test1.png; sourceTree = "<group>"; };
+		8AA43A951D98D305006D4C49 /* AsyncImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageDownloader.h; sourceTree = "<group>"; };
+		8AA43A961D98D305006D4C49 /* AsyncImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageDownloader.m; sourceTree = "<group>"; };
+		8AA43A991D98F504006D4C49 /* demo_brush.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo_brush.gif; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8AA43A671D98C706006D4C49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8AA43A611D98C706006D4C49 = {
+			isa = PBXGroup;
+			children = (
+				8AA43A991D98F504006D4C49 /* demo_brush.gif */,
+				8AA43A921D98CE6B006D4C49 /* test1.png */,
+				8AA43A901D98CD3B006D4C49 /* test.png */,
+				8AA43A6C1D98C706006D4C49 /* NSImage相关的处理 */,
+				8AA43A6B1D98C706006D4C49 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8AA43A6B1D98C706006D4C49 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8AA43A6A1D98C706006D4C49 /* NSImage相关的处理.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8AA43A6C1D98C706006D4C49 /* NSImage相关的处理 */ = {
+			isa = PBXGroup;
+			children = (
+				8AA43A941D98D305006D4C49 /* macImageDownLoader */,
+				8AA43A851D98CC6C006D4C49 /* VMBrushImageView */,
+				8AA43A7E1D98C7B5006D4C49 /* ImageClass */,
+				8AA43A6D1D98C706006D4C49 /* AppDelegate.h */,
+				8AA43A6E1D98C706006D4C49 /* AppDelegate.m */,
+				8AA43A731D98C706006D4C49 /* Assets.xcassets */,
+				8AA43A751D98C706006D4C49 /* MainMenu.xib */,
+				8AA43A781D98C706006D4C49 /* Info.plist */,
+				8AA43A701D98C706006D4C49 /* Supporting Files */,
+			);
+			path = "NSImage相关的处理";
+			sourceTree = "<group>";
+		};
+		8AA43A701D98C706006D4C49 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AA43A711D98C706006D4C49 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8AA43A7E1D98C7B5006D4C49 /* ImageClass */ = {
+			isa = PBXGroup;
+			children = (
+				8AA43A7F1D98C7B5006D4C49 /* ANNSImageGifPixelSource.h */,
+				8AA43A801D98C7B5006D4C49 /* ANNSImageGifPixelSource.m */,
+				8AA43A811D98C7B5006D4C49 /* NSImage+Resize.h */,
+				8AA43A821D98C7B5006D4C49 /* NSImage+Resize.m */,
+			);
+			path = ImageClass;
+			sourceTree = "<group>";
+		};
+		8AA43A851D98CC6C006D4C49 /* VMBrushImageView */ = {
+			isa = PBXGroup;
+			children = (
+				8AA43A861D98CC6C006D4C49 /* NSImage+BitmapRep.h */,
+				8AA43A871D98CC6C006D4C49 /* NSImage+BitmapRep.m */,
+				8AA43A881D98CC6C006D4C49 /* VMBrushImageView.h */,
+				8AA43A891D98CC6C006D4C49 /* VMBrushImageView.m */,
+			);
+			path = VMBrushImageView;
+			sourceTree = "<group>";
+		};
+		8AA43A941D98D305006D4C49 /* macImageDownLoader */ = {
+			isa = PBXGroup;
+			children = (
+				8AA43A951D98D305006D4C49 /* AsyncImageDownloader.h */,
+				8AA43A961D98D305006D4C49 /* AsyncImageDownloader.m */,
+			);
+			path = macImageDownLoader;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8AA43A691D98C706006D4C49 /* NSImage相关的处理 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AA43A7B1D98C706006D4C49 /* Build configuration list for PBXNativeTarget "NSImage相关的处理" */;
+			buildPhases = (
+				8AA43A661D98C706006D4C49 /* Sources */,
+				8AA43A671D98C706006D4C49 /* Frameworks */,
+				8AA43A681D98C706006D4C49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NSImage相关的处理";
+			productName = "NSImage相关的处理";
+			productReference = 8AA43A6A1D98C706006D4C49 /* NSImage相关的处理.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8AA43A621D98C706006D4C49 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Babeltime;
+				TargetAttributes = {
+					8AA43A691D98C706006D4C49 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 8AA43A651D98C706006D4C49 /* Build configuration list for PBXProject "NSImage相关的处理" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8AA43A611D98C706006D4C49;
+			productRefGroup = 8AA43A6B1D98C706006D4C49 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8AA43A691D98C706006D4C49 /* NSImage相关的处理 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8AA43A681D98C706006D4C49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AA43A741D98C706006D4C49 /* Assets.xcassets in Resources */,
+				8AA43A9A1D98F504006D4C49 /* demo_brush.gif in Resources */,
+				8AA43A911D98CD3B006D4C49 /* test.png in Resources */,
+				8AA43A771D98C706006D4C49 /* MainMenu.xib in Resources */,
+				8AA43A931D98CE6B006D4C49 /* test1.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8AA43A661D98C706006D4C49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AA43A841D98C7B5006D4C49 /* NSImage+Resize.m in Sources */,
+				8AA43A831D98C7B5006D4C49 /* ANNSImageGifPixelSource.m in Sources */,
+				8AA43A8B1D98CC6C006D4C49 /* VMBrushImageView.m in Sources */,
+				8AA43A971D98D305006D4C49 /* AsyncImageDownloader.m in Sources */,
+				8AA43A721D98C706006D4C49 /* main.m in Sources */,
+				8AA43A8A1D98CC6C006D4C49 /* NSImage+BitmapRep.m in Sources */,
+				8AA43A6F1D98C706006D4C49 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8AA43A751D98C706006D4C49 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AA43A761D98C706006D4C49 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8AA43A791D98C706006D4C49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8AA43A7A1D98C706006D4C49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8AA43A7C1D98C706006D4C49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "NSImage相关的处理/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.babeltime.NSImage-----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8AA43A7D1D98C706006D4C49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "NSImage相关的处理/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.babeltime.NSImage-----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8AA43A651D98C706006D4C49 /* Build configuration list for PBXProject "NSImage相关的处理" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AA43A791D98C706006D4C49 /* Debug */,
+				8AA43A7A1D98C706006D4C49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AA43A7B1D98C706006D4C49 /* Build configuration list for PBXNativeTarget "NSImage相关的处理" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AA43A7C1D98C706006D4C49 /* Debug */,
+				8AA43A7D1D98C706006D4C49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8AA43A621D98C706006D4C49 /* Project object */;
+}
