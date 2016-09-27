@@ -38,7 +38,7 @@
     self.ImageView.canDrawSubviewsIntoLayer = YES;
     
     
-    [[SDImageCache sharedImageCache] clearDisk];
+//    [[SDImageCache sharedImageCache] clearDisk];
 //    [self.ImageView sd_setImageWithURL:@"http://ww2.sinaimg.cn/bmiddle/005OPWbujw1eltkcrcuoag306w05vkjl.gif"];
     [self.ImageView sd_setImageWithURL:@"http://ww2.sinaimg.cn/bmiddle/005OPWbujw1eltkcrcuoag306w05vkjl.gif"];
     

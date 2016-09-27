@@ -10,6 +10,7 @@
 #import "SDWebImageDecoder.h"
 #import "NSImage+MultiFormat.h"
 #import <CommonCrypto/CommonDigest.h>
+#import "NSData+ImageContentType.h"
 
 // See https://github.com/rs/SDWebImage/pull/1141 for discussion
 @interface AutoPurgeCache : NSCache
@@ -324,8 +325,11 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
     if (data) {
         UIImage *image = [UIImage sd_imageWithData:data];
         image = [self scaledImageForKey:key image:image];
-        if (self.shouldDecompressImages) {
-            image = [UIImage decodedImageWithImage:image];
+        NSString *imageContentType = [NSData sd_contentTypeForImageData:data];
+        if (![imageContentType isEqualToString:@"image/gif"]) {
+            if (self.shouldDecompressImages) {
+                image = [UIImage decodedImageWithImage:image];
+            }
         }
         return image;
     }
