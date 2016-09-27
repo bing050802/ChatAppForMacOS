@@ -191,38 +191,9 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
     if (toDisk) {
         dispatch_async(self.ioQueue, ^{
             NSData *data = imageData;
-
             if (image && (recalculate || !data)) {
-#if TARGET_OS_IPHONE
-                // We need to determine if the image is a PNG or a JPEG
-                // PNGs are easier to detect because they have a unique signature (http://www.w3.org/TR/PNG-Structure.html)
-                // The first eight bytes of a PNG file always contain the following (decimal) values:
-                // 137 80 78 71 13 10 26 10
-
-                // If the imageData is nil (i.e. if trying to save a UIImage directly or the image was transformed on download)
-                // and the image has an alpha channel, we will consider it PNG to avoid losing the transparency
-                int alphaInfo = CGImageGetAlphaInfo(image.CGImage);
-                BOOL hasAlpha = !(alphaInfo == kCGImageAlphaNone ||
-                                  alphaInfo == kCGImageAlphaNoneSkipFirst ||
-                                  alphaInfo == kCGImageAlphaNoneSkipLast);
-                BOOL imageIsPng = hasAlpha;
-
-                // But if we have an image data, we will look at the preffix
-                if ([imageData length] >= [kPNGSignatureData length]) {
-                    imageIsPng = ImageDataHasPNGPreffix(imageData);
-                }
-
-                if (imageIsPng) {
-                    data = UIImagePNGRepresentation(image);
-                }
-                else {
-                    data = UIImageJPEGRepresentation(image, (CGFloat)1.0);
-                }
-#else
                 data = [NSBitmapImageRep representationOfImageRepsInArray:image.representations usingType: NSJPEGFileType properties:nil];
-#endif
             }
-
             [self storeImageDataToDisk:data forKey:key];
         });
     }
@@ -567,25 +538,6 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
     });
 }
 
-- (void)backgroundCleanDisk {
-//    Class UIApplicationClass = NSClassFromString(@"UIApplication");
-//    if(!UIApplicationClass || ![UIApplicationClass respondsToSelector:@selector(sharedApplication)]) {
-//        return;
-//    }
-//    UIApplication *application = [UIApplication performSelector:@selector(sharedApplication)];
-//    __block UIBackgroundTaskIdentifier bgTask = [application beginBackgroundTaskWithExpirationHandler:^{
-//        // Clean up any unfinished task business by marking where you
-//        // stopped or ending the task outright.
-//        [application endBackgroundTask:bgTask];
-//        bgTask = UIBackgroundTaskInvalid;
-//    }];
-//
-//    // Start the long-running task and return immediately.
-//    [self cleanDiskWithCompletionBlock:^{
-//        [application endBackgroundTask:bgTask];
-//        bgTask = UIBackgroundTaskInvalid;
-//    }];
-}
 
 - (NSUInteger)getSize {
     __block NSUInteger size = 0;

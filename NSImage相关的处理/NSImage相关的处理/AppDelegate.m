@@ -40,7 +40,7 @@
 //    http://pic36.nipic.com/20131217/6704106_233034463381_2.jpg
 //    http://d.lanrentuku.com/down/png/1512/2015sdj/2015sdj_004.png
     
-//    [[SDImageCache sharedImageCache] clearDisk];
+    [[SDImageCache sharedImageCache] clearDisk];
     NSImage *gif = [NSImage imageNamed:@"demo_brush.gif"];
     self.ImageView.image  = gif;
     self.ImageView.animates = YES;
