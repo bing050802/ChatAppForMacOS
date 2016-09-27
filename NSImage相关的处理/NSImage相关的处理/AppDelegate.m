@@ -13,6 +13,9 @@
 #import <AppKit/AppKit.h>
 
 #import "NSImageView+WebCache.h"
+#import "NSImageView+Circle.h"
+
+
 
 //https://github.com/orta/GIFs  gif 图片搜索下载 处理展示
 
@@ -41,15 +44,20 @@
 //    http://d.lanrentuku.com/down/png/1512/2015sdj/2015sdj_004.png
     
     [[SDImageCache sharedImageCache] clearDisk];
-    NSImage *gif = [NSImage imageNamed:@"demo_brush.gif"];
+    NSImage *gif = [NSImage imageNamed:@"test"];
+    
+
     self.ImageView.image  = gif;
+    
+    
+    [self.ImageView circle];
     self.ImageView.animates = YES;
     self.ImageView.canDrawSubviewsIntoLayer = YES;
     
 //    [self.ImageView sd_setImageWithURL:@"http://ww2.sinaimg.cn/bmiddle/005OPWbujw1eltkcrcuoag306w05vkjl.gif"];
     
     
-    [self.ImageView sd_setImageWithURL:@"http://imgstore.cdn.sogou.com/app/a/100540002/834169.jpg"];
+//    [self.ImageView sd_setImageWithURL:@"http://imgstore.cdn.sogou.com/app/a/100540002/834169.jpg"];
 
 }
 

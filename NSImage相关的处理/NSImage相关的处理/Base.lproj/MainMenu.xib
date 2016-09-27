@@ -683,7 +683,7 @@
                             <constraint firstAttribute="width" constant="300" id="FUA-JN-w3S"/>
                             <constraint firstAttribute="height" constant="300" id="WeE-zY-IMW"/>
                         </constraints>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="test" id="GqL-eX-otN"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="GqL-eX-otN"/>
                     </imageView>
                 </subviews>
                 <constraints>
@@ -693,7 +693,4 @@
             </view>
         </window>
     </objects>
-    <resources>
-        <image name="test" width="526" height="820"/>
-    </resources>
 </document>
