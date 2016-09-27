@@ -34,7 +34,6 @@
 		8AA9272F1D9A6D48007C3383 /* NSImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA9272E1D9A6D48007C3383 /* NSImage+animatedGIF.m */; };
 		8AA927321D9A6E29007C3383 /* ESSImageCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA927311D9A6E29007C3383 /* ESSImageCategory.m */; };
 		8AA9273B1D9A821F007C3383 /* NSImage+StackBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA927381D9A821F007C3383 /* NSImage+StackBlur.m */; };
-		8AA9273C1D9A821F007C3383 /* NSImageView+Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA9273A1D9A821F007C3383 /* NSImageView+Circle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,8 +88,6 @@
 		8AA927311D9A6E29007C3383 /* ESSImageCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESSImageCategory.m; sourceTree = "<group>"; };
 		8AA927371D9A821F007C3383 /* NSImage+StackBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+StackBlur.h"; sourceTree = "<group>"; };
 		8AA927381D9A821F007C3383 /* NSImage+StackBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+StackBlur.m"; sourceTree = "<group>"; };
-		8AA927391D9A821F007C3383 /* NSImageView+Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImageView+Circle.h"; sourceTree = "<group>"; };
-		8AA9273A1D9A821F007C3383 /* NSImageView+Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImageView+Circle.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,8 +226,6 @@
 			children = (
 				8AA927371D9A821F007C3383 /* NSImage+StackBlur.h */,
 				8AA927381D9A821F007C3383 /* NSImage+StackBlur.m */,
-				8AA927391D9A821F007C3383 /* NSImageView+Circle.h */,
-				8AA9273A1D9A821F007C3383 /* NSImageView+Circle.m */,
 			);
 			path = BlurAndCircleImage;
 			sourceTree = "<group>";
@@ -312,7 +307,6 @@
 				8AA9272F1D9A6D48007C3383 /* NSImage+animatedGIF.m in Sources */,
 				8AA9271D1D9A6652007C3383 /* NSData+ImageContentType.m in Sources */,
 				8AA927281D9A6652007C3383 /* SDWebImagePrefetcher.m in Sources */,
-				8AA9273C1D9A821F007C3383 /* NSImageView+Circle.m in Sources */,
 				8AA927271D9A6652007C3383 /* SDWebImageManager.m in Sources */,
 				8AA43A8B1D98CC6C006D4C49 /* VMBrushImageView.m in Sources */,
 				8AA927201D9A6652007C3383 /* NSImageView+WebCache.m in Sources */,
