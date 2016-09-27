@@ -115,7 +115,7 @@
             if ([imageContentType isEqualToString:@"image/gif"]) {
                 successCallback(image);
             } else {
-                successCallback([self decodeImage:image]);
+                successCallback([self decodeImageData:fileData]);
             }
            
         }
@@ -150,45 +150,32 @@
     }
     return nil;
 }
-- (NSImage *)decodeImage:(NSImage *)image {
-    NSData *imageData = [self dataRepresentationForType:(NSString *)kUTTypeGIF compression:1.0 image:image];
+
+
+
+- (NSImage *)decodeImageData:(NSData *)image {
+    NSData *imageData = [self dataForType:(NSString *)kUTTypeJPEG compression:0.8 image:image];
     NSLog(@"----压缩后的大小%zd",imageData.length);
     return [[NSImage alloc] initWithDataIgnoringOrientation:imageData];
 }
 
-- (NSData *)dataRepresentationForType:(NSString *)type compression:(CGFloat)compressionQuality image:(NSImage *)image {
+
+
+- (NSData *)dataForType:(NSString *)type compression:(CGFloat)compressionQuality image:(NSData *)image {
     
-    NSBitmapImageRep *bitMapRep = [image bitmapImageRepresentation];
-    CGImageRef imageRef = bitMapRep.CGImage;
-    
+    CGImageSourceRef source = CGImageSourceCreateWithData((__bridge CFDataRef)image, NULL);
+
     NSMutableData *mutableData = [NSMutableData data];
     CGImageDestinationRef destination = CGImageDestinationCreateWithData((__bridge CFMutableDataRef)mutableData, (__bridge CFStringRef)type, 1, NULL);
     
     NSDictionary *properties = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithFloat:compressionQuality], kCGImageDestinationLossyCompressionQuality, nil];
     
-    CGImageDestinationAddImage(destination, imageRef, (__bridge CFDictionaryRef)properties);
+    CGImageDestinationAddImageFromSource(destination, source, 0, (__bridge CFDictionaryRef)properties);
     
     CGImageDestinationFinalize(destination);
     CFRelease(destination);
     return mutableData;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
