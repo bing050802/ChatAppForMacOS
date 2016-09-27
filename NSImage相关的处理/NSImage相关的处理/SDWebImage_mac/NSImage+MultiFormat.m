@@ -57,35 +57,4 @@
 }
 
 
-//- (UIImage *)circleImage {
-//    
-//    // 开始图形上下文
-//   
-//    
-//    // 获得图形上下文
-//    CGContextRef ctx =  [NSGraphicsContext currentContext].CGContext;
-//    
-//    // 设置一个范围
-//    CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
-//    
-//    // 根据一个rect创建一个椭圆
-//    CGContextAddEllipseInRect(ctx, rect);
-//    
-//    // 裁剪
-//    CGContextClip(ctx);
-//    
-//    // 将原照片画到图形上下文
-//    [self drawInRect:rect];
-//    
-//    // 从上下文上获取剪裁后的照片
-//    UIGraphicsGet
-//    
-//    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-//    
-//    // 关闭上下文
-//    UIGraphicsEndImageContext();
-//    
-//    return newImage;
-//}
-
 @end

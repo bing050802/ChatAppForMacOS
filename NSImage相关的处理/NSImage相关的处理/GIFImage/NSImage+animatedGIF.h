@@ -1,5 +1,10 @@
 #import <Cocoa/Cocoa.h>
 
+// 参考资料：
+//https://github.com/orta/GIFs  gif 图片搜索下载 处理展示
+//https://github.com/esten/VineGifR  生成 gif 支持 10.10以下
+
+
 /**
         UIImage (animatedGIF)
         

@@ -9,6 +9,7 @@
 #import "NSImageView+WebCache.h"
 #import "objc/runtime.h"
 #import "NSView+WebCacheOperation.h"
+#import "NSImage+StackBlur.h"
 
 static char imageURLKey;
 
@@ -62,7 +63,8 @@ static char imageURLKey;
                     return;
                 }
                 else if (image) {
-                    wself.image = image;
+                    
+                    wself.image =  [image circleImageWithBorderWidth:5 borderColor:[NSColor whiteColor] size:self.bounds.size];
                     [wself setNeedsLayout:YES];
                 } else {
                     if ((options & SDWebImageDelayPlaceholder)) {

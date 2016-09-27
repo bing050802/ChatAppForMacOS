@@ -10,10 +10,7 @@
 #import "NSImage+StackBlur.h"
 @implementation NSImageView (Circle)
 
-
 - (void)circle {
-    
    self.image = [self.image circleImageWithBorderWidth:5 borderColor:[NSColor whiteColor] size:self.bounds.size];
-    
 }
 @end

@@ -17,8 +17,10 @@
     
     NSData *imageData = [self dataRepresentationForType:(NSString *)kUTTypeJPEG compression:0.6 image:image];
     NSLog(@"----压缩后的大小%zd",imageData.length);
-    return [[NSImage alloc] initWithDataIgnoringOrientation:imageData];
-
+    
+    NSImage *resultImage = [[NSImage alloc] initWithDataIgnoringOrientation:imageData];
+    
+    return resultImage;
 }
 
 
