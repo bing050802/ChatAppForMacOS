@@ -34,13 +34,13 @@
 
 //    NSImage *gif = [NSImage imageNamed:@"test"];
 //    self.ImageView.image  = gif;
-//    self.ImageView.animates = YES;
-//    self.ImageView.canDrawSubviewsIntoLayer = YES;
+    self.ImageView.animates = YES;
+    self.ImageView.canDrawSubviewsIntoLayer = YES;
     
     
-//    [[SDImageCache sharedImageCache] clearDisk];
+    [[SDImageCache sharedImageCache] clearDisk];
 //    [self.ImageView sd_setImageWithURL:@"http://ww2.sinaimg.cn/bmiddle/005OPWbujw1eltkcrcuoag306w05vkjl.gif"];
-    [self.ImageView sd_setImageWithURL:@"http://imgstore.cdn.sogou.com/app/a/100540002/834169.jpg"];
+    [self.ImageView sd_setImageWithURL:@"http://ww2.sinaimg.cn/bmiddle/005OPWbujw1eltkcrcuoag306w05vkjl.gif"];
     
 
 }

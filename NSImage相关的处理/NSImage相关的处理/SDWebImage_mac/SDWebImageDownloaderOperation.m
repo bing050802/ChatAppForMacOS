@@ -12,6 +12,7 @@
 #import <ImageIO/ImageIO.h>
 #import "SDWebImageManager.h"
 #import "NSData+ImageContentType.h"
+#import "NSImage+animatedGIF.h"
 
 NSString *const SDWebImageDownloadStartNotification = @"SDWebImageDownloadStartNotification";
 NSString *const SDWebImageDownloadReceiveResponseNotification = @"SDWebImageDownloadReceiveResponseNotification";
@@ -366,6 +367,10 @@ didReceiveResponse:(NSURLResponse *)response
                         image = [UIImage decodedImageWithImage:image];
                     }
                 }
+//                else {
+//                    
+//                     image = [UIImage animatedImageWithAnimatedGIFData:self.imageData];
+//                }
                 if (CGSizeEqualToSize(image.size, CGSizeZero)) {
                     completionBlock(nil, nil, [NSError errorWithDomain:SDWebImageErrorDomain code:0 userInfo:@{NSLocalizedDescriptionKey : @"Downloaded image has 0 pixels"}], YES);
                 }
