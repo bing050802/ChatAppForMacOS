@@ -2,19 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>info</key>
-	<dict>
-		<key>count</key>
-		<integer>2000</integer>
-		<key>maxid</key>
-		<string>1447925401</string>
-		<key>maxtime</key>
-		<string>1447925401</string>
-		<key>page</key>
-		<integer>100</integer>
-		<key>vendor</key>
-		<string>hide.jie.c</string>
-	</dict>
 	<key>list</key>
 	<array>
 		<dict>

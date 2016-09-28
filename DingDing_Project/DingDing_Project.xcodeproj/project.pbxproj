@@ -78,6 +78,17 @@
 		8AE26D5C1D59B73C00855257 /* NSView+BackGroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D5B1D59B73C00855257 /* NSView+BackGroundColor.m */; };
 		8AF5CAD11D74208F003E7DA2 /* HXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF5CACF1D74208F003E7DA2 /* HXViewController.m */; };
 		8AF5CAD21D74208F003E7DA2 /* HXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AF5CAD01D74208F003E7DA2 /* HXViewController.xib */; };
+		8AFF852A1D9BBFE600BB9B67 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AFF85141D9BBFE600BB9B67 /* Info.plist */; };
+		8AFF852B1D9BBFE600BB9B67 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF85171D9BBFE600BB9B67 /* MJExtensionConst.m */; };
+		8AFF852C1D9BBFE600BB9B67 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF85191D9BBFE600BB9B67 /* MJFoundation.m */; };
+		8AFF852D1D9BBFE600BB9B67 /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF851B1D9BBFE600BB9B67 /* MJProperty.m */; };
+		8AFF852E1D9BBFE600BB9B67 /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF851D1D9BBFE600BB9B67 /* MJPropertyKey.m */; };
+		8AFF852F1D9BBFE600BB9B67 /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF851F1D9BBFE600BB9B67 /* MJPropertyType.m */; };
+		8AFF85301D9BBFE600BB9B67 /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF85211D9BBFE600BB9B67 /* NSObject+MJClass.m */; };
+		8AFF85311D9BBFE600BB9B67 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF85231D9BBFE600BB9B67 /* NSObject+MJCoding.m */; };
+		8AFF85321D9BBFE600BB9B67 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF85251D9BBFE600BB9B67 /* NSObject+MJKeyValue.m */; };
+		8AFF85331D9BBFE600BB9B67 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF85271D9BBFE600BB9B67 /* NSObject+MJProperty.m */; };
+		8AFF85341D9BBFE600BB9B67 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF85291D9BBFE600BB9B67 /* NSString+MJExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -197,6 +208,28 @@
 		8AF5CACE1D74208F003E7DA2 /* HXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXViewController.h; sourceTree = "<group>"; };
 		8AF5CACF1D74208F003E7DA2 /* HXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXViewController.m; sourceTree = "<group>"; };
 		8AF5CAD01D74208F003E7DA2 /* HXViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXViewController.xib; sourceTree = "<group>"; };
+		8AFF85141D9BBFE600BB9B67 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AFF85151D9BBFE600BB9B67 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
+		8AFF85161D9BBFE600BB9B67 /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
+		8AFF85171D9BBFE600BB9B67 /* MJExtensionConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConst.m; sourceTree = "<group>"; };
+		8AFF85181D9BBFE600BB9B67 /* MJFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFoundation.h; sourceTree = "<group>"; };
+		8AFF85191D9BBFE600BB9B67 /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
+		8AFF851A1D9BBFE600BB9B67 /* MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJProperty.h; sourceTree = "<group>"; };
+		8AFF851B1D9BBFE600BB9B67 /* MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJProperty.m; sourceTree = "<group>"; };
+		8AFF851C1D9BBFE600BB9B67 /* MJPropertyKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyKey.h; sourceTree = "<group>"; };
+		8AFF851D1D9BBFE600BB9B67 /* MJPropertyKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyKey.m; sourceTree = "<group>"; };
+		8AFF851E1D9BBFE600BB9B67 /* MJPropertyType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyType.h; sourceTree = "<group>"; };
+		8AFF851F1D9BBFE600BB9B67 /* MJPropertyType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyType.m; sourceTree = "<group>"; };
+		8AFF85201D9BBFE600BB9B67 /* NSObject+MJClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJClass.h"; sourceTree = "<group>"; };
+		8AFF85211D9BBFE600BB9B67 /* NSObject+MJClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJClass.m"; sourceTree = "<group>"; };
+		8AFF85221D9BBFE600BB9B67 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		8AFF85231D9BBFE600BB9B67 /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		8AFF85241D9BBFE600BB9B67 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		8AFF85251D9BBFE600BB9B67 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		8AFF85261D9BBFE600BB9B67 /* NSObject+MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		8AFF85271D9BBFE600BB9B67 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
+		8AFF85281D9BBFE600BB9B67 /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
+		8AFF85291D9BBFE600BB9B67 /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -556,6 +589,7 @@
 		8AE26D471D59B4F000855257 /* ThirdPartyLibs */ = {
 			isa = PBXGroup;
 			children = (
+				8AFF85131D9BBFE600BB9B67 /* MJExtension */,
 				8AB430D81D9B70440063CF7A /* SDWebImage_mac */,
 				8AE26D551D59B62700855257 /* Categories */,
 				8AE26D481D59B4F000855257 /* PureLayout */,
@@ -592,6 +626,35 @@
 			name = Categories;
 			path = DingDing_Project/Categories;
 			sourceTree = SOURCE_ROOT;
+		};
+		8AFF85131D9BBFE600BB9B67 /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				8AFF85141D9BBFE600BB9B67 /* Info.plist */,
+				8AFF85151D9BBFE600BB9B67 /* MJExtension.h */,
+				8AFF85161D9BBFE600BB9B67 /* MJExtensionConst.h */,
+				8AFF85171D9BBFE600BB9B67 /* MJExtensionConst.m */,
+				8AFF85181D9BBFE600BB9B67 /* MJFoundation.h */,
+				8AFF85191D9BBFE600BB9B67 /* MJFoundation.m */,
+				8AFF851A1D9BBFE600BB9B67 /* MJProperty.h */,
+				8AFF851B1D9BBFE600BB9B67 /* MJProperty.m */,
+				8AFF851C1D9BBFE600BB9B67 /* MJPropertyKey.h */,
+				8AFF851D1D9BBFE600BB9B67 /* MJPropertyKey.m */,
+				8AFF851E1D9BBFE600BB9B67 /* MJPropertyType.h */,
+				8AFF851F1D9BBFE600BB9B67 /* MJPropertyType.m */,
+				8AFF85201D9BBFE600BB9B67 /* NSObject+MJClass.h */,
+				8AFF85211D9BBFE600BB9B67 /* NSObject+MJClass.m */,
+				8AFF85221D9BBFE600BB9B67 /* NSObject+MJCoding.h */,
+				8AFF85231D9BBFE600BB9B67 /* NSObject+MJCoding.m */,
+				8AFF85241D9BBFE600BB9B67 /* NSObject+MJKeyValue.h */,
+				8AFF85251D9BBFE600BB9B67 /* NSObject+MJKeyValue.m */,
+				8AFF85261D9BBFE600BB9B67 /* NSObject+MJProperty.h */,
+				8AFF85271D9BBFE600BB9B67 /* NSObject+MJProperty.m */,
+				8AFF85281D9BBFE600BB9B67 /* NSString+MJExtension.h */,
+				8AFF85291D9BBFE600BB9B67 /* NSString+MJExtension.m */,
+			);
+			path = MJExtension;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -659,6 +722,7 @@
 				8A4C6A381D7EB665005BC413 /* creatIcon.png in Resources */,
 				8A4C6A131D7EB06E005BC413 /* search_btn.png in Resources */,
 				8A8664B81D952EFC00F78CF4 /* test.png in Resources */,
+				8AFF852A1D9BBFE600BB9B67 /* Info.plist in Resources */,
 				8A4C6A251D7EB1A4005BC413 /* work_seclected.png in Resources */,
 				8A4C6A141D7EB06E005BC413 /* search_btn_mousein.png in Resources */,
 				8AF5CAD21D74208F003E7DA2 /* HXViewController.xib in Resources */,
@@ -695,17 +759,24 @@
 				3349A9DF1D8530710095C667 /* HXMessageSplitController.m in Sources */,
 				8A4C6A361D7EB2E2005BC413 /* HXSelectBar.m in Sources */,
 				8AB430F91D9B70440063CF7A /* NSImage+MultiFormat.m in Sources */,
+				8AFF852F1D9BBFE600BB9B67 /* MJPropertyType.m in Sources */,
 				8AB430FF1D9B70440063CF7A /* NSView+WebCacheOperation.m in Sources */,
+				8AFF852C1D9BBFE600BB9B67 /* MJFoundation.m in Sources */,
 				8AB430FE1D9B70440063CF7A /* NSImageView+WebCache.m in Sources */,
 				336041B21D9038880096D2CC /* NSObject+Property.m in Sources */,
+				8AFF85341D9BBFE600BB9B67 /* NSString+MJExtension.m in Sources */,
 				3349A9F21D8535C20095C667 /* HXRightChatViewController.m in Sources */,
+				8AFF852E1D9BBFE600BB9B67 /* MJPropertyKey.m in Sources */,
 				3349A9DC1D852FF60095C667 /* MLPopupWindowManager.m in Sources */,
 				8AB430FC1D9B70440063CF7A /* SDWebImageDownloaderOperation.m in Sources */,
 				8AB430FA1D9B70440063CF7A /* NSImage+StackBlur.m in Sources */,
 				8A4C6A341D7EB2E2005BC413 /* HXLeftToolBar.m in Sources */,
 				8AB431011D9B70440063CF7A /* SDWebImageDecoder.m in Sources */,
 				8AE26D521D59B4F000855257 /* ALView+PureLayout.m in Sources */,
+				8AFF85311D9BBFE600BB9B67 /* NSObject+MJCoding.m in Sources */,
+				8AFF85301D9BBFE600BB9B67 /* NSObject+MJClass.m in Sources */,
 				8AAD92831D632D1D007E4A8F /* MVShadow.m in Sources */,
+				8AFF852B1D9BBFE600BB9B67 /* MJExtensionConst.m in Sources */,
 				8A4C6A4C1D7ED62A005BC413 /* NFLayerBackedView.m in Sources */,
 				8AE26D371D598A4800855257 /* main.m in Sources */,
 				3349A9F01D8535C20095C667 /* HXMiddleMessageControlller.m in Sources */,
@@ -715,6 +786,7 @@
 				8AE26D3C1D598C4D00855257 /* HXMainWindow.m in Sources */,
 				8AF5CAD11D74208F003E7DA2 /* HXViewController.m in Sources */,
 				331940FD1D97FA66007AF3BF /* HXMessage.m in Sources */,
+				8AFF85331D9BBFE600BB9B67 /* NSObject+MJProperty.m in Sources */,
 				8AB430FD1D9B70440063CF7A /* SDWebImageManager.m in Sources */,
 				8A565F751D6D8A920049C153 /* NSView+RBLAnimationAdditions.m in Sources */,
 				8A4C6A4D1D7ED62A005BC413 /* NFSplitViewController.m in Sources */,
@@ -725,10 +797,12 @@
 				33650FBC1D97FCE700D8F571 /* HXMessageCell.m in Sources */,
 				8AE26D341D598A4800855257 /* AppDelegate.m in Sources */,
 				8AE26D5C1D59B73C00855257 /* NSView+BackGroundColor.m in Sources */,
+				8AFF852D1D9BBFE600BB9B67 /* MJProperty.m in Sources */,
 				3349A9D81D852FF60095C667 /* HXSearchField.m in Sources */,
 				3349A9DA1D852FF60095C667 /* HXWindowTopBarView.m in Sources */,
 				8AB430F71D9B70440063CF7A /* NSData+ImageContentType.m in Sources */,
 				8AB430F61D9B70440063CF7A /* SDImageCache.m in Sources */,
+				8AFF85321D9BBFE600BB9B67 /* NSObject+MJKeyValue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

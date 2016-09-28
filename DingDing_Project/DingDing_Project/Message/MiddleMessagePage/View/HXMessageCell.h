@@ -7,7 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "HXMessage.h"
 
 @interface HXMessageCell : NSTableCellView
+
+@property (nonatomic,strong) HXMessage *message;
 
 @end

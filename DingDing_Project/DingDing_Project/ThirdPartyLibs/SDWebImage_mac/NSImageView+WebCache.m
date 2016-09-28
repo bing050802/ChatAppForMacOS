@@ -63,7 +63,7 @@ static char imageURLKey;
                     return;
                 }
                 else if (image) {
-                    wself.image = (options & SDWebImageCircledImage) ?[image circleImageWithBorderWidth:5 borderColor:[NSColor whiteColor] size:self.bounds.size] : image;
+                    wself.image = (options & SDWebImageCircledImage) ?[image circleImageWithBorderWidth:0 borderColor:[NSColor whiteColor] size:self.bounds.size] : image;
                     [wself setNeedsLayout:YES];
                 } else {
                     if ((options & SDWebImageDelayPlaceholder)) {

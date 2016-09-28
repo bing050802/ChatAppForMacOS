@@ -19,7 +19,7 @@
             <subviews>
                 <scrollView misplaced="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="62" horizontalPageScroll="10" verticalLineScroll="62" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2F-zS-ZUW">
                     <rect key="frame" x="0.0" y="-9" width="480" height="272"/>
-                    <clipView key="contentView" id="672-cW-AXH">
+                    <clipView key="contentView" drawsBackground="NO" id="672-cW-AXH">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -27,7 +27,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="249"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
-                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.96862745098039216" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                 <tableColumns>
                                     <tableColumn width="477" minWidth="40" maxWidth="1000" id="ZOw-ZZ-XzE">

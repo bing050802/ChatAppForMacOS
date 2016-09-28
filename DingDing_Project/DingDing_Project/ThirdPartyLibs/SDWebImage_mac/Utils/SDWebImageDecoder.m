@@ -16,7 +16,7 @@
 + (UIImage *)decodedImageWithImage:(UIImage *)image {
     
     NSData *imageData = [self dataRepresentationForType:(NSString *)kUTTypeJPEG compression:0.6 image:image];
-    NSLog(@"----压缩后的大小%zd",imageData.length);
+//    NSLog(@"----压缩后的大小%zd",imageData.length);
     
     NSImage *resultImage = [[NSImage alloc] initWithDataIgnoringOrientation:imageData];
     
