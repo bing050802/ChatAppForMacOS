@@ -1,5 +1,5 @@
 #import "MVGraphicsFunctions.h"
-#import "MVShadow.h"
+
 
 
 CGImageRef MVCreateNoiseImageRef(NSUInteger width, NSUInteger height, CGFloat factor)
@@ -76,7 +76,7 @@ void MVDrawString (NSString *string, NSRect aRect, NSColor* fontColor, float fon
                    int style, NSColor* shadowColor, NSSize shadowOffset, float shadowBlur)
 {
 	MVDrawStringAlign(string, aRect, fontColor, fontSize, style,
-                     shadowColor, shadowOffset, shadowBlur, 0);
+                     shadowColor, shadowOffset, shadowBlur, 1);
 }
 
 void MVDrawStringAlignLineBreakMode (NSString *string, NSRect aRect, NSColor* fontColor,

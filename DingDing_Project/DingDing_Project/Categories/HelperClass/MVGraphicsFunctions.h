@@ -1,4 +1,9 @@
 #import <Cocoa/Cocoa.h>
+#import "MVShadow.h"
+
+
+
+
 #define kMVSplitViewBorderColor [NSColor colorWithDeviceRed:0.7529 green:0.7725 blue:0.8078 alpha:1]
 
 CGImageRef MVCreateNoiseImageRef(NSUInteger width, NSUInteger height, CGFloat factor);

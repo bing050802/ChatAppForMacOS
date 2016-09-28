@@ -86,7 +86,7 @@ NSString* const NFSplitViewControllerDidFinishLiveResizeNotification = @"NFSplit
 - (id)initWithFrame:(NSRect)frameRect
 {
     self = [super initWithFrame:frameRect];
-    _dividerThickness = 1;
+    _dividerThickness = 0.40;
     _collapsedIndexes = [NSMutableIndexSet indexSet];
     return self;
 }

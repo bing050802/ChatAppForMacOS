@@ -17,6 +17,8 @@
 @property (weak) IBOutlet NSTextField *timeLable;
 @property (weak) IBOutlet NSTextField *msgLabel;
 
+
+
 @end
 
 @implementation HXMessageCell
@@ -31,11 +33,16 @@
     [super awakeFromNib];
     
 //    [self backGroundColor:[NSColor clearColor]];
+//    self.backgroundStyle = NSBackgroundStyleDark;
     
 }
 
 - (void)setMessage:(HXMessage *)message {
     _message = message;
+    
+    if (message.profile_image.length == 0) {
+        NSLog(@"%@", message.name);
+    }
     
     [self.iconImageView sd_setImageWithURL:message.profile_image placeholderImage:nil options:SDWebImageCircledImage];
     self.nameLabel.stringValue = message.name;
@@ -45,7 +52,6 @@
     self.msgLabel.stringValue = message.text;
     
 }
-
 
 
 @end

@@ -89,6 +89,8 @@
 		8AFF85321D9BBFE600BB9B67 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF85251D9BBFE600BB9B67 /* NSObject+MJKeyValue.m */; };
 		8AFF85331D9BBFE600BB9B67 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF85271D9BBFE600BB9B67 /* NSObject+MJProperty.m */; };
 		8AFF85341D9BBFE600BB9B67 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF85291D9BBFE600BB9B67 /* NSString+MJExtension.m */; };
+		8AFF85371D9BCCB500BB9B67 /* HXScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF85361D9BCCB500BB9B67 /* HXScroller.m */; };
+		8AFF853A1D9BD7C000BB9B67 /* HXBageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF85391D9BD7C000BB9B67 /* HXBageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -230,6 +232,10 @@
 		8AFF85271D9BBFE600BB9B67 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
 		8AFF85281D9BBFE600BB9B67 /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
 		8AFF85291D9BBFE600BB9B67 /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
+		8AFF85351D9BCCB500BB9B67 /* HXScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXScroller.h; sourceTree = "<group>"; };
+		8AFF85361D9BCCB500BB9B67 /* HXScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXScroller.m; sourceTree = "<group>"; };
+		8AFF85381D9BD7C000BB9B67 /* HXBageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXBageView.h; sourceTree = "<group>"; };
+		8AFF85391D9BD7C000BB9B67 /* HXBageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXBageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +315,10 @@
 				33650FBA1D97FCE700D8F571 /* HXMessageCell.h */,
 				33650FBB1D97FCE700D8F571 /* HXMessageCell.m */,
 				33650FBD1D97FD0600D8F571 /* HXMessageCell.xib */,
+				8AFF85351D9BCCB500BB9B67 /* HXScroller.h */,
+				8AFF85361D9BCCB500BB9B67 /* HXScroller.m */,
+				8AFF85381D9BD7C000BB9B67 /* HXBageView.h */,
+				8AFF85391D9BD7C000BB9B67 /* HXBageView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -765,6 +775,7 @@
 				8AB430FE1D9B70440063CF7A /* NSImageView+WebCache.m in Sources */,
 				336041B21D9038880096D2CC /* NSObject+Property.m in Sources */,
 				8AFF85341D9BBFE600BB9B67 /* NSString+MJExtension.m in Sources */,
+				8AFF853A1D9BD7C000BB9B67 /* HXBageView.m in Sources */,
 				3349A9F21D8535C20095C667 /* HXRightChatViewController.m in Sources */,
 				8AFF852E1D9BBFE600BB9B67 /* MJPropertyKey.m in Sources */,
 				3349A9DC1D852FF60095C667 /* MLPopupWindowManager.m in Sources */,
@@ -801,6 +812,7 @@
 				3349A9D81D852FF60095C667 /* HXSearchField.m in Sources */,
 				3349A9DA1D852FF60095C667 /* HXWindowTopBarView.m in Sources */,
 				8AB430F71D9B70440063CF7A /* NSData+ImageContentType.m in Sources */,
+				8AFF85371D9BCCB500BB9B67 /* HXScroller.m in Sources */,
 				8AB430F61D9B70440063CF7A /* SDImageCache.m in Sources */,
 				8AFF85321D9BBFE600BB9B67 /* NSObject+MJKeyValue.m in Sources */,
 			);

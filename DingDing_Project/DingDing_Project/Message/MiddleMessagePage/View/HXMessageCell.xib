@@ -20,7 +20,7 @@
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="top" imageScaling="proportionallyDown" id="a1S-vt-VKo"/>
                 </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ge2-D5-Tbt">
-                    <rect key="frame" x="53" y="28" width="177" height="17"/>
+                    <rect key="frame" x="56" y="28" width="174" height="17"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="技术平台部门" id="E5o-Xk-Kpz">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
@@ -39,25 +39,34 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eFs-XS-cyC">
-                    <rect key="frame" x="53" y="11" width="175" height="14"/>
+                    <rect key="frame" x="56" y="11" width="172" height="14"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="回到过去跟你说说话" id="tjL-Xv-Cyk">
                         <font key="font" size="11" name=".PingFangSC-Regular"/>
                         <color key="textColor" red="0.52156862745098043" green="0.52549019607843139" blue="0.52941176470588236" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="YqG-nx-s7c" customClass="HXBageView">
+                    <rect key="frame" x="241" y="2" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="58e-iW-kem"/>
+                        <constraint firstAttribute="width" constant="20" id="aQX-o7-eA8"/>
+                    </constraints>
+                </customView>
             </subviews>
             <constraints>
                 <constraint firstItem="uEM-Pz-eQz" firstAttribute="centerY" secondItem="ge2-D5-Tbt" secondAttribute="centerY" id="0ca-W5-ghK"/>
                 <constraint firstItem="uEM-Pz-eQz" firstAttribute="leading" secondItem="ge2-D5-Tbt" secondAttribute="trailing" constant="3" id="1t1-Hh-PJV"/>
                 <constraint firstAttribute="bottom" secondItem="Obm-jR-eUo" secondAttribute="bottom" constant="5" id="Bs2-P9-1jY"/>
                 <constraint firstItem="ge2-D5-Tbt" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="5" id="Ikf-OG-hxh"/>
-                <constraint firstItem="eFs-XS-cyC" firstAttribute="leading" secondItem="Obm-jR-eUo" secondAttribute="trailing" constant="5" id="O9N-ij-vfV"/>
+                <constraint firstItem="eFs-XS-cyC" firstAttribute="leading" secondItem="Obm-jR-eUo" secondAttribute="trailing" constant="8" id="O9N-ij-vfV"/>
                 <constraint firstAttribute="trailing" secondItem="uEM-Pz-eQz" secondAttribute="trailing" constant="1" id="TNa-hR-aSM"/>
                 <constraint firstItem="Obm-jR-eUo" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="ady-1Q-cey"/>
+                <constraint firstAttribute="bottom" secondItem="YqG-nx-s7c" secondAttribute="bottom" constant="2" id="atB-W7-nbt"/>
                 <constraint firstItem="Obm-jR-eUo" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="10" id="cbN-A0-4M8"/>
+                <constraint firstAttribute="trailing" secondItem="YqG-nx-s7c" secondAttribute="trailing" constant="5" id="gyx-iZ-Q5c"/>
                 <constraint firstItem="eFs-XS-cyC" firstAttribute="top" secondItem="ge2-D5-Tbt" secondAttribute="bottom" constant="3" id="j5A-3X-q1Z"/>
-                <constraint firstItem="ge2-D5-Tbt" firstAttribute="leading" secondItem="Obm-jR-eUo" secondAttribute="trailing" constant="5" id="jIz-QE-eq3"/>
+                <constraint firstItem="ge2-D5-Tbt" firstAttribute="leading" secondItem="Obm-jR-eUo" secondAttribute="trailing" constant="8" id="jIz-QE-eq3"/>
                 <constraint firstAttribute="trailing" secondItem="eFs-XS-cyC" secondAttribute="trailing" constant="40" id="mXj-Bm-VwE"/>
             </constraints>
             <connections>

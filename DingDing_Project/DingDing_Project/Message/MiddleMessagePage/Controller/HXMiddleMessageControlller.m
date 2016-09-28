@@ -24,15 +24,17 @@
 
 @implementation HXMiddleMessageControlller
 
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)loadView {
+    [super loadView];
     
     self.msgTableView.headerView = nil;
     [self.msgTableView registerNib:[[NSNib alloc] initWithNibNamed:NSStringFromClass([HXMessageCell class]) bundle:nil]  forIdentifier:@"msgCell"];
     [self.msgTableView reloadData];
     
+    
+//    NSLog(@"%@",self.msgTableView.superview.superview.subviews);
 }
+
 
 - (NSMutableArray *)msgArray  {
     if (!_msgArray) {
