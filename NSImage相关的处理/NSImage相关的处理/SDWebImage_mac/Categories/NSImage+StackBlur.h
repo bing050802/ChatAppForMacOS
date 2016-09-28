@@ -2,7 +2,7 @@
 //  NSImage+StackBlur.h
 //  NeteaseMusic
 //
-//  Created by 史江浩 on 3/3/15.
+//  Created by han on 3/3/15.
 //  Copyright (c) 2015 openthread. All rights reserved.
 //
 
