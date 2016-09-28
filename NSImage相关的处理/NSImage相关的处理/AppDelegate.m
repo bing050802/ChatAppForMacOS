@@ -40,7 +40,7 @@
     
 //    [[SDImageCache sharedImageCache] clearDisk];
 //    [self.ImageView sd_setImageWithURL:@"http://ww2.sinaimg.cn/bmiddle/005OPWbujw1eltkcrcuoag306w05vkjl.gif"];
-    [self.ImageView sd_setImageWithURL:@"http://ww2.sinaimg.cn/bmiddle/005OPWbujw1eltkcrcuoag306w05vkjl.gif"];
+    [self.ImageView sd_setImageWithURL:@"http://d.lanrentuku.com/down/png/1512/2015sdj/2015sdj_004.png" placeholderImage:[NSImage imageNamed:@"test"] options:SDWebImageCircledImage];
     
 
 }

@@ -27,11 +27,11 @@ inline static void zeroClearInt(int* p, size_t count) { memset(p, 0, sizeof(int)
     // 3.取得当前的上下文
     CGColorSpaceRef genericColorSpace = CGColorSpaceCreateDeviceRGB();
     CGContextRef ctx = CGBitmapContextCreate(NULL,
-                                                         imageW,
-                                                         imageH,
-                                                         8, (4 * imageW),
-                                                         genericColorSpace,
-                                                         (CGBitmapInfo)kCGImageAlphaPremultipliedLast);
+                                             imageW,
+                                             imageH,
+                                             8, (4 * imageW),
+                                             genericColorSpace,
+                                             (CGBitmapInfo)kCGImageAlphaPremultipliedLast);
     
     CGColorSpaceRelease(genericColorSpace);
     
