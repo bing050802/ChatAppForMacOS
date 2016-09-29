@@ -10,4 +10,6 @@
 
 @interface HXBageView : NSView
 
+@property (nonatomic,assign) NSInteger bageValue;
+
 @end

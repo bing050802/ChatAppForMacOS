@@ -72,6 +72,7 @@ NSDictionary* MVDictionaryForStringDrawing (float fontSize, int style)
 	return dict;
 }
 
+
 void MVDrawString (NSString *string, NSRect aRect, NSColor* fontColor, float fontSize,
                    int style, NSColor* shadowColor, NSSize shadowOffset, float shadowBlur)
 {

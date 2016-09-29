@@ -16,15 +16,33 @@ NSDictionary* MVDictionaryForStringDrawing (float fontSize, int style);
 #define kMVStringTypeNormal 0
 #define kMVStringTypeMedium 1
 #define kMVStringTypeBold 2
+
+/**
+ 画文字
+ 
+ @param string       文字内容
+ @param aRect        画区域
+ @param fontColor    字体颜色
+ @param fontSize     字体大小
+ @param style        字体style
+ @param shadowColor  阴影颜色
+ @param shadowOffset 阴影偏移
+ @param shadowBlur   阴影模糊度
+ */
 void MVDrawString (NSString *string, NSRect aRect, NSColor* fontColor, float fontSize,
                    int style, NSColor* shadowColor, NSSize shadowOffset, float shadowBlur);
+
 void MVDrawStringAlignLineBreakMode (NSString *string, NSRect aRect, NSColor* fontColor,
                                       float fontSize, int style, NSColor* shadowColor,
                                       NSSize shadowOffset, float shadowBlur,
                                       int alignment, int lineBreakMode);
+
+
 void MVDrawStringAlign (NSString *string, NSRect aRect, NSColor* fontColor, float fontSize,
                         int style, NSColor* shadowColor, NSSize shadowOffset,
                          float shadowBlur, int alignment);
+
+
 void MVDrawAttributedStringWithColor(NSAttributedString *string, NSRect aRect, NSColor* fontColor,
                                       NSColor* shadowColor, NSSize shadowOffset, int alignment,
                                       int lineBreakMode);

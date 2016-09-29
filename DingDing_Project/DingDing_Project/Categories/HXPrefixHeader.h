@@ -57,6 +57,8 @@
 #define HXRandomColor HXColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
 
 
+#define NotificationCenter [NSNotificationCenter defaultCenter]
+
 
 /**
  *  常写代码块

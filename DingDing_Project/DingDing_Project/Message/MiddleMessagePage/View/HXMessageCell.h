@@ -9,6 +9,8 @@
 #import <Cocoa/Cocoa.h>
 #import "HXMessage.h"
 
+static NSString *const cellDeleteNotification = @"cellDeleteNotification";
+
 @interface HXMessageCell : NSTableCellView
 
 @property (nonatomic,strong) HXMessage *message;

@@ -49,6 +49,7 @@
 		8A4C6A4D1D7ED62A005BC413 /* NFSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4C6A4B1D7ED62A005BC413 /* NFSplitViewController.m */; };
 		8A5589691D741455000AF3EA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A5589681D741455000AF3EA /* MainMenu.xib */; };
 		8A565F751D6D8A920049C153 /* NSView+RBLAnimationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A565F741D6D8A920049C153 /* NSView+RBLAnimationAdditions.m */; };
+		8A66944B1D9D0B2A00C394B7 /* msgcell_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A66944A1D9D0B2A00C394B7 /* msgcell_delete.png */; };
 		8A8664B81D952EFC00F78CF4 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A8664B71D952EFC00F78CF4 /* test.png */; };
 		8A8664BA1D95458700F78CF4 /* demo_brush.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8A8664B91D95458700F78CF4 /* demo_brush.gif */; };
 		8AAD92821D632D1D007E4A8F /* MVGraphicsFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD927F1D632D1D007E4A8F /* MVGraphicsFunctions.m */; };
@@ -153,6 +154,7 @@
 		8A5589681D741455000AF3EA /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = ../../MainMenu.xib; sourceTree = "<group>"; };
 		8A565F731D6D8A920049C153 /* NSView+RBLAnimationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+RBLAnimationAdditions.h"; sourceTree = "<group>"; };
 		8A565F741D6D8A920049C153 /* NSView+RBLAnimationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+RBLAnimationAdditions.m"; sourceTree = "<group>"; };
+		8A66944A1D9D0B2A00C394B7 /* msgcell_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = msgcell_delete.png; sourceTree = "<group>"; };
 		8A8664B71D952EFC00F78CF4 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		8A8664B91D95458700F78CF4 /* demo_brush.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo_brush.gif; sourceTree = "<group>"; };
 		8AAD927E1D632D1D007E4A8F /* MVGraphicsFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVGraphicsFunctions.h; sourceTree = "<group>"; };
@@ -434,9 +436,18 @@
 			path = SpIitViewController;
 			sourceTree = "<group>";
 		};
+		8A6694491D9D0B2A00C394B7 /* MiddleMessage */ = {
+			isa = PBXGroup;
+			children = (
+				8A66944A1D9D0B2A00C394B7 /* msgcell_delete.png */,
+			);
+			path = MiddleMessage;
+			sourceTree = "<group>";
+		};
 		8AAD92771D631BC4007E4A8F /* ImageResource */ = {
 			isa = PBXGroup;
 			children = (
+				8A6694491D9D0B2A00C394B7 /* MiddleMessage */,
 				8A4C6A3B1D7EBBCF005BC413 /* windowTop */,
 				8A4C6A0B1D7EB06E005BC413 /* leftBar */,
 				8A4C6A0C1D7EB06E005BC413 /* searchField */,
@@ -743,6 +754,7 @@
 				8A4C6A1C1D7EB09F005BC413 /* message_seclected.png in Resources */,
 				8A4C6A1E1D7EB09F005BC413 /* nameImage.png in Resources */,
 				8A4C6A111D7EB06E005BC413 /* clear_btn.png in Resources */,
+				8A66944B1D9D0B2A00C394B7 /* msgcell_delete.png in Resources */,
 				8A8664BA1D95458700F78CF4 /* demo_brush.gif in Resources */,
 				336041AF1D9033DC0096D2CC /* new_topics.plist in Resources */,
 				33650FBE1D97FD0600D8F571 /* HXMessageCell.xib in Resources */,

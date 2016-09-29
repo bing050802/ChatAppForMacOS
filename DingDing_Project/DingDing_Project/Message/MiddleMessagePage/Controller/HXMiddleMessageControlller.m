@@ -18,6 +18,7 @@
 
 @property (weak) IBOutlet NSTableView *msgTableView;
 @property (nonatomic,strong) NSMutableArray *msgArray;
+@property (nonatomic,strong) NSTableRowView *currenRowView;
 
 
 @end
@@ -31,8 +32,11 @@
     [self.msgTableView registerNib:[[NSNib alloc] initWithNibNamed:NSStringFromClass([HXMessageCell class]) bundle:nil]  forIdentifier:@"msgCell"];
     [self.msgTableView reloadData];
     
+    [NotificationCenter addObserver:self selector:@selector(cellDelete:)
+                                                 name:cellDeleteNotification object:nil];
     
 //    NSLog(@"%@",self.msgTableView.superview.superview.subviews);
+    
 }
 
 
@@ -46,19 +50,36 @@
 }
 
 - (nullable NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row {
-    
+//    NSLog(@"viewForTableColumn---%zd",row);
     HXMessageCell *cell = [tableView makeViewWithIdentifier:@"msgCell" owner:self];
     cell.message = self.msgArray[row];
     return cell;
 }
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
-    return 50;
+    return 55;
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
     return self.msgArray.count;
 }
+
+- (void)cellDelete:(NSNotification *)noti {
+    HXMessageCell *cellView = noti.object;
+    NSInteger indexRow = [self.msgTableView rowForView:cellView];
+    [self.msgTableView removeRowsAtIndexes:[NSIndexSet indexSetWithIndex:indexRow] withAnimation:NSTableViewAnimationEffectFade];
+    [self.msgArray removeObjectAtIndex:indexRow];
+}
+
+
+- (void)tableViewSelectionDidChange:(NSNotification *)notification {
+    self.currenRowView.backgroundColor = [NSColor clearColor];
+    NSTableRowView *rowView = [self.msgTableView rowViewAtRow: self.msgTableView.selectedRow makeIfNecessary:YES];
+    rowView.backgroundColor = HXColor(204, 232, 253);
+    self.currenRowView = rowView;
+}
+
+
 
 
 - (CGFloat)minimumLengthInSplitViewController:(NFSplitViewController*)splitViewController {
@@ -78,6 +99,10 @@
 //
 //
 //    }];
+}
+
+- (void)dealloc {
+    [NotificationCenter removeObserver:self];
 }
 
 @end
