@@ -20,8 +20,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
-    [self.view backGroundColor:[NSColor whiteColor]];
+    
+    
+}
 
+- (void)loadView {
+    [super loadView];
+    
+    [self.view backGroundColor:[NSColor whiteColor]];
+    
 }
 
 

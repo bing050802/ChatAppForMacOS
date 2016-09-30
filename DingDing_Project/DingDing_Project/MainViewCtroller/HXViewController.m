@@ -36,26 +36,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
-        // 控制器view默认是右边和底部随父控件拉伸的 NSViewMaxXMargin|NSViewMinYMargin
-        // [self.view backGroundColor:[NSColor purpleColor]];
-
-        // 添加左边工具栏 view
-        HXLeftToolBar *leftBar = [HXLeftToolBar loadXibLeftToolBar];
-        leftBar.userName = @"韩小青";
-        [leftBar backGroundColor:HXColor(221, 228, 242)];
-        [self.view addSubview:leftBar];
-        [leftBar autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:60];
-        [leftBar autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:0];
-        [leftBar autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
-        [leftBar autoSetDimension:ALDimensionWidth toSize:100];
-        
-        
-        [self.view addSubview:self.splitViewController.view];
-        [self.messageSplitController.view autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:60];
-        [self.messageSplitController.view autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:100];
-        [self.messageSplitController.view autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
-        [self.messageSplitController.view autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:0];
-        [self.messageSplitController setupChildViewController];
         
     }
     return self;
@@ -65,12 +45,33 @@
 
 
 
-/** 当使用纯代码进行 控制器管理view的时候，重写loadView方法 赋值self.view属性 并添加子控件
- - (void)loadView
- {
- 
- }
- */
+/** 当使用纯代码进行 控制器管理view的时候，重写loadView方法 赋值self.view属性 并添加子控件 */
+- (void)loadView {
+    [super loadView];
+    
+    // 控制器view默认是右边和底部随父控件拉伸的 NSViewMaxXMargin|NSViewMinYMargin
+    // [self.view backGroundColor:[NSColor purpleColor]];
+    
+    // 添加左边工具栏 view
+    HXLeftToolBar *leftBar = [HXLeftToolBar loadXibLeftToolBar];
+    leftBar.userName = @"韩小青";
+    [leftBar backGroundColor:HXColor(221, 228, 242)];
+    [self.view addSubview:leftBar];
+    [leftBar autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:60];
+    [leftBar autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:0];
+    [leftBar autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
+    [leftBar autoSetDimension:ALDimensionWidth toSize:100];
+    
+    
+    [self.view addSubview:self.splitViewController.view];
+    [self.messageSplitController.view autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:60];
+    [self.messageSplitController.view autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:100];
+    [self.messageSplitController.view autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
+    [self.messageSplitController.view autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:0];
+    [self.messageSplitController setupChildViewController];
+
+}
+
 
 - (void)dealloc {
     NSLog(@"HXViewController--------dealloc");

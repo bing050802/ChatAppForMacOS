@@ -50,8 +50,7 @@
 		8A5589691D741455000AF3EA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A5589681D741455000AF3EA /* MainMenu.xib */; };
 		8A565F751D6D8A920049C153 /* NSView+RBLAnimationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A565F741D6D8A920049C153 /* NSView+RBLAnimationAdditions.m */; };
 		8A66944B1D9D0B2A00C394B7 /* msgcell_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A66944A1D9D0B2A00C394B7 /* msgcell_delete.png */; };
-		8A8664B81D952EFC00F78CF4 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A8664B71D952EFC00F78CF4 /* test.png */; };
-		8A8664BA1D95458700F78CF4 /* demo_brush.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8A8664B91D95458700F78CF4 /* demo_brush.gif */; };
+		8A9C6FF61D9E7493002D82AF /* HXChatMessge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C6FF51D9E7493002D82AF /* HXChatMessge.m */; };
 		8AAD92821D632D1D007E4A8F /* MVGraphicsFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD927F1D632D1D007E4A8F /* MVGraphicsFunctions.m */; };
 		8AAD92831D632D1D007E4A8F /* MVShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD92811D632D1D007E4A8F /* MVShadow.m */; };
 		8AAFF5FA1D5C622700E908EC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAFF5F91D5C622700E908EC /* QuartzCore.framework */; };
@@ -155,8 +154,8 @@
 		8A565F731D6D8A920049C153 /* NSView+RBLAnimationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+RBLAnimationAdditions.h"; sourceTree = "<group>"; };
 		8A565F741D6D8A920049C153 /* NSView+RBLAnimationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+RBLAnimationAdditions.m"; sourceTree = "<group>"; };
 		8A66944A1D9D0B2A00C394B7 /* msgcell_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = msgcell_delete.png; sourceTree = "<group>"; };
-		8A8664B71D952EFC00F78CF4 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
-		8A8664B91D95458700F78CF4 /* demo_brush.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo_brush.gif; sourceTree = "<group>"; };
+		8A9C6FF41D9E7493002D82AF /* HXChatMessge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXChatMessge.h; sourceTree = "<group>"; };
+		8A9C6FF51D9E7493002D82AF /* HXChatMessge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXChatMessge.m; sourceTree = "<group>"; };
 		8AAD927E1D632D1D007E4A8F /* MVGraphicsFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVGraphicsFunctions.h; sourceTree = "<group>"; };
 		8AAD927F1D632D1D007E4A8F /* MVGraphicsFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVGraphicsFunctions.m; sourceTree = "<group>"; };
 		8AAD92801D632D1D007E4A8F /* MVShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVShadow.h; sourceTree = "<group>"; };
@@ -329,8 +328,8 @@
 			isa = PBXGroup;
 			children = (
 				3349A9EA1D8535C20095C667 /* Controller */,
-				3349A9EE1D8535C20095C667 /* Model */,
-				3349A9EF1D8535C20095C667 /* View */,
+				8A9C6FF21D9E7472002D82AF /* Model */,
+				8A9C6FF31D9E7472002D82AF /* View */,
 			);
 			path = RightChatPage;
 			sourceTree = "<group>";
@@ -343,20 +342,6 @@
 				3349A9ED1D8535C20095C667 /* HXRightChatViewController.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		3349A9EE1D8535C20095C667 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		3349A9EF1D8535C20095C667 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		336041AB1D9033BE0096D2CC /* Model */ = {
@@ -442,6 +427,22 @@
 				8A66944A1D9D0B2A00C394B7 /* msgcell_delete.png */,
 			);
 			path = MiddleMessage;
+			sourceTree = "<group>";
+		};
+		8A9C6FF21D9E7472002D82AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8A9C6FF41D9E7493002D82AF /* HXChatMessge.h */,
+				8A9C6FF51D9E7493002D82AF /* HXChatMessge.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8A9C6FF31D9E7472002D82AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		8AAD92771D631BC4007E4A8F /* ImageResource */ = {
@@ -533,8 +534,6 @@
 		8AE26D0D1D5989C500855257 = {
 			isa = PBXGroup;
 			children = (
-				8A8664B91D95458700F78CF4 /* demo_brush.gif */,
-				8A8664B71D952EFC00F78CF4 /* test.png */,
 				8AAFF5FD1D5C624500E908EC /* ApplicationServices.framework */,
 				8AAFF5FB1D5C623800E908EC /* Cocoa.framework */,
 				8AAFF5F91D5C622700E908EC /* QuartzCore.framework */,
@@ -742,7 +741,6 @@
 				8A4C6A291D7EB1F3005BC413 /* dingpan_seclected.png in Resources */,
 				8A4C6A381D7EB665005BC413 /* creatIcon.png in Resources */,
 				8A4C6A131D7EB06E005BC413 /* search_btn.png in Resources */,
-				8A8664B81D952EFC00F78CF4 /* test.png in Resources */,
 				8AFF852A1D9BBFE600BB9B67 /* Info.plist in Resources */,
 				8A4C6A251D7EB1A4005BC413 /* work_seclected.png in Resources */,
 				8A4C6A141D7EB06E005BC413 /* search_btn_mousein.png in Resources */,
@@ -755,7 +753,6 @@
 				8A4C6A1E1D7EB09F005BC413 /* nameImage.png in Resources */,
 				8A4C6A111D7EB06E005BC413 /* clear_btn.png in Resources */,
 				8A66944B1D9D0B2A00C394B7 /* msgcell_delete.png in Resources */,
-				8A8664BA1D95458700F78CF4 /* demo_brush.gif in Resources */,
 				336041AF1D9033DC0096D2CC /* new_topics.plist in Resources */,
 				33650FBE1D97FD0600D8F571 /* HXMessageCell.xib in Resources */,
 				8A4C6A211D7EB13E005BC413 /* connect_seclected.png in Resources */,
@@ -813,6 +810,7 @@
 				8AB430FD1D9B70440063CF7A /* SDWebImageManager.m in Sources */,
 				8A565F751D6D8A920049C153 /* NSView+RBLAnimationAdditions.m in Sources */,
 				8A4C6A4D1D7ED62A005BC413 /* NFSplitViewController.m in Sources */,
+				8A9C6FF61D9E7493002D82AF /* HXChatMessge.m in Sources */,
 				8AAD92821D632D1D007E4A8F /* MVGraphicsFunctions.m in Sources */,
 				3349A9DB1D852FF60095C667 /* MLPopupWindow.m in Sources */,
 				8AB431001D9B70440063CF7A /* SDWebImageCompat.m in Sources */,

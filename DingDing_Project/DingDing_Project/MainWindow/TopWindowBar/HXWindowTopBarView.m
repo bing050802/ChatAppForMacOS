@@ -45,7 +45,7 @@
     rightBtn.target = self;
     rightBtn.action = @selector(lookFiles);
     rightBtn.image = [NSImage imageNamed:@"topBarRight"];
-        [self addSubview:rightBtn];
+    [self addSubview:rightBtn];
     [rightBtn autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:15];
     [rightBtn autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:10];
     [rightBtn autoSetDimension:ALDimensionWidth toSize:40];
