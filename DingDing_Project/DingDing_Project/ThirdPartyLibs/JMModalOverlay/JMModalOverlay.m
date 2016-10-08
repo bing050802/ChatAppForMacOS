@@ -195,6 +195,7 @@ NSString * const JMModalOverlayDidCloseNotification = @"JMModalOverlayDidCloseNo
         
         // Add container view
         _containerView = [[NSView alloc] initWithFrame:_overlayView.bounds];
+//        _containerView.acceptsTouchEvents = NO;
         _containerView.autoresizingMask = NSViewWidthSizable|NSViewHeightSizable;
         
         if (JMYosemiteOrSuperior && ([_appearance.name isEqualToString:NSAppearanceNameVibrantDark] || [_appearance.name isEqualToString:NSAppearanceNameVibrantLight])) {
@@ -218,8 +219,14 @@ NSString * const JMModalOverlayDidCloseNotification = @"JMModalOverlayDidCloseNo
         self.contentViewController.view.autoresizingMask = NSViewWidthSizable|NSViewHeightSizable;
         self.contentViewController.view.frame = [_containerView bounds];
         
-        
-        
+        /**
+          _modalWindow.contentView
+             _visualEffectView
+                _overlayView
+                  _containerView
+                     self.contentViewController.view
+         */
+
         
         // Make view visible
         // Attach to parent window and make the window modal
@@ -245,6 +252,7 @@ NSString * const JMModalOverlayDidCloseNotification = @"JMModalOverlayDidCloseNo
     }
     
 }
+
 
 - (void) _afterShow{
     [[NSNotificationCenter defaultCenter] postNotificationName:JMModalOverlayDidShowNotification object:self];
@@ -279,26 +287,26 @@ NSString * const JMModalOverlayDidCloseNotification = @"JMModalOverlayDidCloseNo
     }
 }
 - (void) _afterClose{
-
-        [_parentWindow removeChildWindow:_modalWindow];
-        
-        // Remove modal
-        [_modalWindow orderOut:nil];
-        _modalWindow = nil;
     
-        _containerView = nil;
-        _overlayView = nil;
+    [_parentWindow removeChildWindow:_modalWindow];
     
-        // Restore window mask
-        if(_wasResizable){
-            _parentWindow.styleMask |= NSResizableWindowMask;
-        }
+    // Remove modal
+    [_modalWindow orderOut:nil];
+    _modalWindow = nil;
     
-        self.shown = NO;
-
-        [[NSNotificationCenter defaultCenter] postNotificationName:JMModalOverlayDidCloseNotification object:self];
-
-
+    _containerView = nil;
+    _overlayView = nil;
+    
+    // Restore window mask
+    if(_wasResizable){
+        _parentWindow.styleMask |= NSResizableWindowMask;
+    }
+    
+    self.shown = NO;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:JMModalOverlayDidCloseNotification object:self];
+    
+    
     
 }
 
