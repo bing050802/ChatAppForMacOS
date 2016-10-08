@@ -12,6 +12,10 @@
 #import "HXMessage.h"
 #import "HXBarButton.h"
 
+#import "JMModalOverlay.h"
+#import "JMFirstExampleViewController.h"
+
+
 @interface HXRightChatViewController ()
 
 @property (weak) IBOutlet NSView *topView;
@@ -98,6 +102,16 @@
 
 
 - (IBAction)showChatFiles:(id)sender {
+    
+    JMModalOverlay *modalOverlay = [[JMModalOverlay alloc] init];
+    modalOverlay.contentViewController = [[JMFirstExampleViewController alloc] init];
+    modalOverlay.animates = NO;
+    modalOverlay.animationDirection = JMModalOverlayDirectionBottom;
+    modalOverlay.shouldOverlayTitleBar = YES;
+//    modalOverlay.shouldCloseWhenClickOnBackground = NO;
+    modalOverlay.appearance = [NSAppearance appearanceNamed:NSAppearanceNameVibrantDark];
+    modalOverlay.backgroundColor = [NSColor blackColor];
+    [modalOverlay showInWindow:self.view.window];
     
 }
 
