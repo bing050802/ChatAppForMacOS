@@ -93,7 +93,7 @@
 //    NSLog(@"%s",__func__);
 //}
 
-//- (void) center {
+//- (void)center {
 //    NSRect mr = [NSApplication sharedApplication].mainWindow.frame;
 //    NSPoint mp = NSMakePoint(NSMidX(mr), NSMidY(mr));
 //    

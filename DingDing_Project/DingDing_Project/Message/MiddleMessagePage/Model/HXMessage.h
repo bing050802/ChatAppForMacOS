@@ -22,5 +22,9 @@
 // 消息内容
 @property (nonatomic, strong) NSString *text;
 
+// gif图片第一帧 图片
+@property (nonatomic, strong) NSString *gifFistFrame;
+
+
 
 @end

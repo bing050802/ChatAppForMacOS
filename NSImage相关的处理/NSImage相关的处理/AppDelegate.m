@@ -47,7 +47,15 @@
 
 
 
-
+- (void)chatData {
+    
+    NSDictionary *dic = @{@"name" : @"",
+                          @"iconUrl" : @"",
+                          @"msgTime" : @"",
+                          };
+    
+    
+}
 
 
 

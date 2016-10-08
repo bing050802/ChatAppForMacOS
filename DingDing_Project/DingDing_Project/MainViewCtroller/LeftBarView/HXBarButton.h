@@ -14,12 +14,15 @@
  */
 
 typedef NS_OPTIONS(NSUInteger, ButtonState) {
-    ButtonStateNormal       = 0,
+    ButtonStateNormal    = 0,
     ButtonStateHighlighted  ,                  // used when UIControl isHighlighted is set
     ButtonStateDisabled     ,
-    ButtonStateSelected     ,                  // flag usable by app (see below)
+    ButtonStateSelected     ,
+    ButtonStateMouseIn      ,
     UIControlStateFocused  // Applicable only when the screen supports focus
 };
+
+@class HXBarButtonCell;
 
 @interface HXBarButton : NSButton
 
@@ -28,6 +31,11 @@ typedef NS_OPTIONS(NSUInteger, ButtonState) {
 @property (nonatomic,strong) NSColor *highlightColor;
 
 @property (nonatomic,assign) BOOL selected;
+
+@property (nonatomic,strong) HXBarButtonCell *cell;
+
+// 是否允许 鼠标tracking trackingEabled = YES 的时候 设置ButtonStateMouseIn/ButtonStateMouseExit 状态下的样式才生效
+@property (nonatomic,assign) BOOL trackingEabled;
 
 - (void)setImage:(NSImage *)image forState:(ButtonState)state;
 - (void)setBackgroundColor:(NSColor *)backgroundColor forState:(ButtonState)state;

@@ -9,32 +9,120 @@
 #import "HXRightChatViewController.h"
 #import "NFSplitViewController.h"
 #import "HXPrefixHeader.h"
-
+#import "HXMessage.h"
+#import "HXBarButton.h"
 
 @interface HXRightChatViewController ()
+
+@property (weak) IBOutlet NSView *topView;
+
+@property (weak) IBOutlet NSImageView *iconImage;
+@property (weak) IBOutlet NSTextField *nameLabel;
+
+// 聊天 记录的上传文件
+@property (weak) IBOutlet HXBarButton *chatFilesBtn;
+// 添加成员
+@property (weak) IBOutlet HXBarButton *addMemberBtn;
+// 拨打钉钉电话
+@property (weak) IBOutlet HXBarButton *callBtn;
+// 个人简介
+@property (weak) IBOutlet HXBarButton *personalBtn;
+
+@property (nonatomic,strong) NSMutableArray *msgDetailArray;
 
 @end
 
 @implementation HXRightChatViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do view setup here.
+- (NSMutableArray *)msgDetailArray  {
+    if (!_msgDetailArray) {
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"more_topics.plist" ofType:nil];
+        NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
+        _msgDetailArray = [HXMessage mj_objectArrayWithKeyValuesArray:dict[@"list"]];
+    }
+    return _msgDetailArray;
+}
+
+- (void)buttonsSetting {
     
+    self.chatFilesBtn.trackingEabled = YES;
+    self.chatFilesBtn.cell.highlightsBy = NSNoCellMask;
+    [self.chatFilesBtn setImage:[NSImage imageNamed:@"chatFile"] forState:ButtonStateNormal];
+    [self.chatFilesBtn setImage:[NSImage imageNamed:@"chatFile_entered"] forState:ButtonStateMouseIn];
     
+    self.addMemberBtn.trackingEabled = YES;
+    self.addMemberBtn.cell.highlightsBy = NSNoCellMask;
+    [self.addMemberBtn setImage:[NSImage imageNamed:@"addMember"] forState:ButtonStateNormal];
+    [self.addMemberBtn setImage:[NSImage imageNamed:@"addMember_entered"] forState:ButtonStateMouseIn];
+    
+    self.callBtn.trackingEabled = YES;
+    self.callBtn.cell.highlightsBy = NSNoCellMask;
+    [self.callBtn setImage:[NSImage imageNamed:@"callDing"] forState:ButtonStateNormal];
+    [self.callBtn setImage:[NSImage imageNamed:@"callDing_entered"] forState:ButtonStateMouseIn];
+    
+    self.personalBtn.trackingEabled = YES;
+    self.personalBtn.cell.highlightsBy = NSNoCellMask;
+    [self.personalBtn setImage:[NSImage imageNamed:@"personal"] forState:ButtonStateNormal];
+    [self.personalBtn setImage:[NSImage imageNamed:@"personal_entered"] forState:ButtonStateMouseIn];
+
 }
 
 - (void)loadView {
     [super loadView];
     
     [self.view backGroundColor:[NSColor whiteColor]];
+    [self.topView backGroundColor:HXColor(246, 250, 255)];
+    
+    [self buttonsSetting];
+
+    [NotificationCenter addObserver:self selector:@selector(tableViewSelectionDidChange:)
+                               name:NSTableViewSelectionDidChangeNotification object:nil];
     
 }
 
+
+
+
+
+
+
+- (void)tableViewSelectionDidChange:(NSNotification *)noti {
+    NSTableView *middleTableView = noti.object;
+    NSInteger row = middleTableView.selectedRow;
+    
+    HXMessage *message = self.msgDetailArray[row];
+    [self.iconImage sd_setImageWithURL:message.profile_image placeholderImage:nil options:SDWebImageCircledImage];
+    self.nameLabel.stringValue = message.name;
+    
+}
+
+
+- (IBAction)showChatFiles:(id)sender {
+    
+}
+
+
+- (IBAction)addMember:(id)sender {
+    
+}
+
+
+- (IBAction)callDingding:(id)sender {
+    
+}
+
+
+- (IBAction)showPersonal:(id)sender {
+    
+}
 
 - (CGFloat)minimumLengthInSplitViewController:(NFSplitViewController*)splitViewController
 {
     return 625;
 }
+
+
+
+
 
 @end

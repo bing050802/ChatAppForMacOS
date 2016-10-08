@@ -76,6 +76,14 @@
 		8AE26D531D59B4F000855257 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D4C1D59B4F000855257 /* NSArray+PureLayout.m */; };
 		8AE26D541D59B4F000855257 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D4E1D59B4F000855257 /* NSLayoutConstraint+PureLayout.m */; };
 		8AE26D5C1D59B73C00855257 /* NSView+BackGroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D5B1D59B73C00855257 /* NSView+BackGroundColor.m */; };
+		8AE3FD0F1DA8DBAA0023331C /* chatFile.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE3FD0E1DA8DBAA0023331C /* chatFile.png */; };
+		8AE3FD111DA8DC230023331C /* chatFile_entered.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE3FD101DA8DC230023331C /* chatFile_entered.png */; };
+		8AE3FD141DA8E2060023331C /* addMember.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE3FD121DA8E2060023331C /* addMember.png */; };
+		8AE3FD151DA8E2060023331C /* addMember_entered.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE3FD131DA8E2060023331C /* addMember_entered.png */; };
+		8AE3FD181DA8E2980023331C /* callDing.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE3FD161DA8E2980023331C /* callDing.png */; };
+		8AE3FD191DA8E2980023331C /* callDing_entered.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE3FD171DA8E2980023331C /* callDing_entered.png */; };
+		8AE3FD1C1DA8E3200023331C /* personal.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE3FD1A1DA8E3200023331C /* personal.png */; };
+		8AE3FD1D1DA8E3200023331C /* personal_entered.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE3FD1B1DA8E3200023331C /* personal_entered.png */; };
 		8AF5CAD11D74208F003E7DA2 /* HXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF5CACF1D74208F003E7DA2 /* HXViewController.m */; };
 		8AF5CAD21D74208F003E7DA2 /* HXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AF5CAD01D74208F003E7DA2 /* HXViewController.xib */; };
 		8AFF852A1D9BBFE600BB9B67 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AFF85141D9BBFE600BB9B67 /* Info.plist */; };
@@ -208,6 +216,14 @@
 		8AE26D561D59B68700855257 /* HXPrefixHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXPrefixHeader.h; sourceTree = "<group>"; };
 		8AE26D5A1D59B73C00855257 /* NSView+BackGroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+BackGroundColor.h"; sourceTree = "<group>"; };
 		8AE26D5B1D59B73C00855257 /* NSView+BackGroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+BackGroundColor.m"; sourceTree = "<group>"; };
+		8AE3FD0E1DA8DBAA0023331C /* chatFile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatFile.png; sourceTree = "<group>"; };
+		8AE3FD101DA8DC230023331C /* chatFile_entered.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatFile_entered.png; sourceTree = "<group>"; };
+		8AE3FD121DA8E2060023331C /* addMember.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addMember.png; sourceTree = "<group>"; };
+		8AE3FD131DA8E2060023331C /* addMember_entered.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addMember_entered.png; sourceTree = "<group>"; };
+		8AE3FD161DA8E2980023331C /* callDing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callDing.png; sourceTree = "<group>"; };
+		8AE3FD171DA8E2980023331C /* callDing_entered.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callDing_entered.png; sourceTree = "<group>"; };
+		8AE3FD1A1DA8E3200023331C /* personal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = personal.png; sourceTree = "<group>"; };
+		8AE3FD1B1DA8E3200023331C /* personal_entered.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = personal_entered.png; sourceTree = "<group>"; };
 		8AF5CACE1D74208F003E7DA2 /* HXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXViewController.h; sourceTree = "<group>"; };
 		8AF5CACF1D74208F003E7DA2 /* HXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXViewController.m; sourceTree = "<group>"; };
 		8AF5CAD01D74208F003E7DA2 /* HXViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXViewController.xib; sourceTree = "<group>"; };
@@ -448,6 +464,7 @@
 		8AAD92771D631BC4007E4A8F /* ImageResource */ = {
 			isa = PBXGroup;
 			children = (
+				8AE3FD0D1DA8DBA00023331C /* RightChatView */,
 				8A6694491D9D0B2A00C394B7 /* MiddleMessage */,
 				8A4C6A3B1D7EBBCF005BC413 /* windowTop */,
 				8A4C6A0B1D7EB06E005BC413 /* leftBar */,
@@ -647,6 +664,21 @@
 			path = DingDing_Project/Categories;
 			sourceTree = SOURCE_ROOT;
 		};
+		8AE3FD0D1DA8DBA00023331C /* RightChatView */ = {
+			isa = PBXGroup;
+			children = (
+				8AE3FD0E1DA8DBAA0023331C /* chatFile.png */,
+				8AE3FD101DA8DC230023331C /* chatFile_entered.png */,
+				8AE3FD121DA8E2060023331C /* addMember.png */,
+				8AE3FD131DA8E2060023331C /* addMember_entered.png */,
+				8AE3FD161DA8E2980023331C /* callDing.png */,
+				8AE3FD171DA8E2980023331C /* callDing_entered.png */,
+				8AE3FD1A1DA8E3200023331C /* personal.png */,
+				8AE3FD1B1DA8E3200023331C /* personal_entered.png */,
+			);
+			path = RightChatView;
+			sourceTree = "<group>";
+		};
 		8AFF85131D9BBFE600BB9B67 /* MJExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -736,16 +768,21 @@
 			files = (
 				8A4C6A2A1D7EB1F3005BC413 /* dingpan.png in Resources */,
 				8AE26D351D598A4800855257 /* Assets.xcassets in Resources */,
+				8AE3FD111DA8DC230023331C /* chatFile_entered.png in Resources */,
 				8A4C6A3D1D7EBBCF005BC413 /* topBarRight.png in Resources */,
 				8A4C6A221D7EB13E005BC413 /* connect.png in Resources */,
 				8A4C6A291D7EB1F3005BC413 /* dingpan_seclected.png in Resources */,
 				8A4C6A381D7EB665005BC413 /* creatIcon.png in Resources */,
 				8A4C6A131D7EB06E005BC413 /* search_btn.png in Resources */,
 				8AFF852A1D9BBFE600BB9B67 /* Info.plist in Resources */,
+				8AE3FD0F1DA8DBAA0023331C /* chatFile.png in Resources */,
+				8AE3FD1C1DA8E3200023331C /* personal.png in Resources */,
 				8A4C6A251D7EB1A4005BC413 /* work_seclected.png in Resources */,
+				8AE3FD1D1DA8E3200023331C /* personal_entered.png in Resources */,
 				8A4C6A141D7EB06E005BC413 /* search_btn_mousein.png in Resources */,
 				8AF5CAD21D74208F003E7DA2 /* HXViewController.xib in Resources */,
 				8A4C6A261D7EB1A4005BC413 /* work.png in Resources */,
+				8AE3FD151DA8E2060023331C /* addMember_entered.png in Resources */,
 				8A4C6A1B1D7EB09F005BC413 /* dingIcon.png in Resources */,
 				8A4C6A351D7EB2E2005BC413 /* HXLeftToolBar.xib in Resources */,
 				336041AE1D9033DC0096D2CC /* more_topics.plist in Resources */,
@@ -758,10 +795,13 @@
 				8A4C6A211D7EB13E005BC413 /* connect_seclected.png in Resources */,
 				8A4C6A121D7EB06E005BC413 /* clear_btn_mousein.png in Resources */,
 				3349A9F11D8535C20095C667 /* HXMiddleMessageControlller.xib in Resources */,
+				8AE3FD141DA8E2060023331C /* addMember.png in Resources */,
+				8AE3FD191DA8E2980023331C /* callDing_entered.png in Resources */,
 				3349A9F31D8535C20095C667 /* HXRightChatViewController.xib in Resources */,
 				8A4C6A1A1D7EB09F005BC413 /* dingIcon_seclected.png in Resources */,
 				8A4C6A3A1D7EB928005BC413 /* moreIcon.png in Resources */,
 				8A5589691D741455000AF3EA /* MainMenu.xib in Resources */,
+				8AE3FD181DA8E2980023331C /* callDing.png in Resources */,
 				8A4C6A1D1D7EB09F005BC413 /* message.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

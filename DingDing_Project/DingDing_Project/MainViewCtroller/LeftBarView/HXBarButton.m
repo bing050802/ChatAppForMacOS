@@ -13,7 +13,6 @@
 
 @interface HXBarButton ()
 
-@property (nonatomic,strong) HXBarButtonCell *cell;
 
 @property (nonatomic,strong) NSMutableDictionary *stateImageDic;
 @property (nonatomic,strong) NSMutableDictionary *stateBackGroundDic;
@@ -21,6 +20,7 @@
 
 @property (nonatomic,strong) NSView *leftLine;
 
+@property (nonatomic,strong) NSTrackingArea *trackingArea;
 
 @end
 
@@ -66,6 +66,8 @@
 }
 #pragma mark Cell passthroughs-------------------------------------------------------------------end
 
+
+
 - (NSMutableDictionary *)stateImageDic {
     if (!_stateImageDic) {
         _stateImageDic = [NSMutableDictionary dictionary];
@@ -96,6 +98,7 @@
     return _leftLine;
 }
 
+
 // 返回自定义的 ButtonCell class
 + (Class)cellClass {
     return [HXBarButtonCell class];
@@ -119,15 +122,51 @@
     CGContextRestoreGState(context);
 }
 
+- (void)awakeFromNib {
+    [self setUp];
+}
+
 - (instancetype)initWithFrame:(NSRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.font = [NSFont systemFontOfSize:13];
-        self.subpixelAntialiasing = YES;
-        self.wantsLayer = YES;
+        [self setUp];
     }
     return self;
+}
+
+- (void)setUp {
+    self.font = [NSFont systemFontOfSize:13];
+    self.subpixelAntialiasing = YES;
+    self.wantsLayer = YES;
+}
+
+- (NSTrackingArea *)trackingArea {
+    if (!_trackingArea) {
+        _trackingArea = [[NSTrackingArea alloc] initWithRect:NSZeroRect
+                                                     options:NSTrackingInVisibleRect | NSTrackingActiveAlways | NSTrackingMouseEnteredAndExited
+                                                       owner:self
+                                                    userInfo:nil];
+    }
+    return _trackingArea;
+}
+
+
+- (void)setTrackingEabled:(BOOL)trackingEabled {
+    _trackingEabled = trackingEabled;
+    if (trackingEabled) {
+        [self addTrackingArea:self.trackingArea];
+    } else {
+        [self removeTrackingArea:self.trackingArea];
+    }
+}
+
+- (void)mouseEntered:(NSEvent *)event {
+    self.image = self.stateImageDic[@(ButtonStateMouseIn)];
+}
+
+- (void)mouseExited:(NSEvent *)event {
+    self.image = self.stateImageDic[@(ButtonStateNormal)];
 }
 
 - (void)setImage:(NSImage *)image forState:(ButtonState)state {
@@ -136,6 +175,7 @@
     }
     [self.stateImageDic setObject:image forKey:@(state)];
 }
+
 - (void)setBackgroundColor:(NSColor *)backgroundColor forState:(ButtonState)state {
     if (state == ButtonStateNormal) {
         self.cell.backgroundColor = backgroundColor;
@@ -175,7 +215,7 @@
 - (void)highlight:(BOOL)flag withFrame:(NSRect)cellFrame inView:(NSView *)controlView {
     if (flag) {
         // 高亮状态下进行一些 画操作
-        MVRoundedRectBezierPath(cellFrame, 5);
+//        MVRoundedRectBezierPath(cellFrame, 5);
     }
 //    [super highlight:flag withFrame:cellFrame inView:controlView];
 }

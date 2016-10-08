@@ -34,9 +34,7 @@
     
     [NotificationCenter addObserver:self selector:@selector(cellDelete:)
                                                  name:cellDeleteNotification object:nil];
-    
 //    NSLog(@"%@",self.msgTableView.superview.superview.subviews);
-    
 }
 
 

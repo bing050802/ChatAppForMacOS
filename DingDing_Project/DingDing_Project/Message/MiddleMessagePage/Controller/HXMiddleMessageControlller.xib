@@ -78,7 +78,7 @@
                 <constraint firstAttribute="bottom" secondItem="e2F-zS-ZUW" secondAttribute="bottom" id="NUB-qZ-ni7"/>
                 <constraint firstItem="e2F-zS-ZUW" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="bAx-AZ-lxY"/>
             </constraints>
-            <point key="canvasLocation" x="278.5" y="285.5"/>
+            <point key="canvasLocation" x="10" y="286"/>
         </customView>
     </objects>
 </document>
