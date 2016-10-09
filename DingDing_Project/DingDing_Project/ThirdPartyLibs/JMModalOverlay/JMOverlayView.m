@@ -43,13 +43,13 @@
 }
 #pragma mark -
 #pragma mark background color
-- (BOOL)acceptsFirstMouse:(NSEvent *)theEvent{
-    return _modalOverlay.shouldCloseWhenClickOnBackground;
-
-}
-- (BOOL) acceptsTouchEvents{
-    return _modalOverlay.shouldCloseWhenClickOnBackground;
-}
+//- (BOOL)acceptsFirstMouse:(NSEvent *)theEvent{
+//    return _modalOverlay.shouldCloseWhenClickOnBackground;
+//
+//}
+//- (BOOL) acceptsTouchEvents{
+//    return _modalOverlay.shouldCloseWhenClickOnBackground;
+//}
 - (void)mouseDown:(NSEvent *)theEvent{
     if(_modalOverlay.shouldCloseWhenClickOnBackground)
         [_modalOverlay performClose:self];
@@ -60,4 +60,5 @@
 - (BOOL)allowsVibrancy{
     return YES;
 }
+
 @end

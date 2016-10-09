@@ -33,6 +33,8 @@
 		8AB430D41D9B6F8E0063CF7A /* NSView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB430C31D9B6F8E0063CF7A /* NSView+WebCacheOperation.m */; };
 		8AB430D51D9B6F8E0063CF7A /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB430C61D9B6F8E0063CF7A /* SDWebImageCompat.m */; };
 		8AB430D61D9B6F8E0063CF7A /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB430C81D9B6F8E0063CF7A /* SDWebImageDecoder.m */; };
+		8AE49A801DA9DBC900461D8C /* TopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE49A7F1DA9DBC900461D8C /* TopView.m */; };
+		8AE49A831DA9DBDA00461D8C /* BottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE49A821DA9DBDA00461D8C /* BottomView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +87,10 @@
 		8AB430C61D9B6F8E0063CF7A /* SDWebImageCompat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageCompat.m; sourceTree = "<group>"; };
 		8AB430C71D9B6F8E0063CF7A /* SDWebImageDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDecoder.h; sourceTree = "<group>"; };
 		8AB430C81D9B6F8E0063CF7A /* SDWebImageDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDecoder.m; sourceTree = "<group>"; };
+		8AE49A7E1DA9DBC900461D8C /* TopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopView.h; sourceTree = "<group>"; };
+		8AE49A7F1DA9DBC900461D8C /* TopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopView.m; sourceTree = "<group>"; };
+		8AE49A811DA9DBDA00461D8C /* BottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomView.h; sourceTree = "<group>"; };
+		8AE49A821DA9DBDA00461D8C /* BottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,10 @@
 				8AA43A751D98C706006D4C49 /* MainMenu.xib */,
 				8AA43A781D98C706006D4C49 /* Info.plist */,
 				8AA43A701D98C706006D4C49 /* Supporting Files */,
+				8AE49A7E1DA9DBC900461D8C /* TopView.h */,
+				8AE49A7F1DA9DBC900461D8C /* TopView.m */,
+				8AE49A811DA9DBDA00461D8C /* BottomView.h */,
+				8AE49A821DA9DBDA00461D8C /* BottomView.m */,
 			);
 			path = "NSImage相关的处理";
 			sourceTree = "<group>";
@@ -325,6 +335,7 @@
 				8AA43A841D98C7B5006D4C49 /* NSImage+Resize.m in Sources */,
 				8AB430D11D9B6F8E0063CF7A /* SDWebImageDownloaderOperation.m in Sources */,
 				8AB430D21D9B6F8E0063CF7A /* SDWebImageManager.m in Sources */,
+				8AE49A831DA9DBDA00461D8C /* BottomView.m in Sources */,
 				8AB430CD1D9B6F8E0063CF7A /* NSImage+GIF.m in Sources */,
 				8AB430D31D9B6F8E0063CF7A /* NSImageView+WebCache.m in Sources */,
 				8AA43A831D98C7B5006D4C49 /* ANNSImageGifPixelSource.m in Sources */,
@@ -335,6 +346,7 @@
 				8AA43A971D98D305006D4C49 /* AsyncImageDownloader.m in Sources */,
 				8AB430CE1D9B6F8E0063CF7A /* NSImage+MultiFormat.m in Sources */,
 				8AA43A721D98C706006D4C49 /* main.m in Sources */,
+				8AE49A801DA9DBC900461D8C /* TopView.m in Sources */,
 				8AA927321D9A6E29007C3383 /* ESSImageCategory.m in Sources */,
 				8AA43A8A1D98CC6C006D4C49 /* NSImage+BitmapRep.m in Sources */,
 				8AB430D41D9B6F8E0063CF7A /* NSView+WebCacheOperation.m in Sources */,

@@ -13,7 +13,7 @@
 #import "HXBarButton.h"
 
 #import "JMModalOverlay.h"
-#import "JMFirstExampleViewController.h"
+#import "HXPersonalController.h"
 
 
 @interface HXRightChatViewController ()
@@ -34,6 +34,8 @@
 
 @property (nonatomic,strong) NSMutableArray *msgDetailArray;
 
+@property (nonatomic,strong) JMModalOverlay *modalOverlay;
+
 @end
 
 @implementation HXRightChatViewController
@@ -45,6 +47,19 @@
         _msgDetailArray = [HXMessage mj_objectArrayWithKeyValuesArray:dict[@"list"]];
     }
     return _msgDetailArray;
+}
+
+-(JMModalOverlay *)modalOverlay {
+    if (!_modalOverlay) {
+        _modalOverlay = [[JMModalOverlay alloc] init];
+        _modalOverlay.animates = NO;
+        _modalOverlay.animationDirection = JMModalOverlayDirectionBottom;
+        _modalOverlay.shouldOverlayTitleBar = YES;
+        //_modalOverlay.shouldCloseWhenClickOnBackground = NO;
+        _modalOverlay.appearance = [NSAppearance appearanceNamed:NSAppearanceNameLightContent];
+        //_modalOverlay.backgroundColor = [NSColor blackColor];
+    }
+    return _modalOverlay;
 }
 
 - (void)buttonsSetting {
@@ -101,18 +116,11 @@
 }
 
 
+
+
 - (IBAction)showChatFiles:(id)sender {
-    
-    JMModalOverlay *modalOverlay = [[JMModalOverlay alloc] init];
-    modalOverlay.contentViewController = [[JMFirstExampleViewController alloc] init];
-    modalOverlay.animates = NO;
-    modalOverlay.animationDirection = JMModalOverlayDirectionBottom;
-    modalOverlay.shouldOverlayTitleBar = YES;
-//    modalOverlay.shouldCloseWhenClickOnBackground = NO;
-    modalOverlay.appearance = [NSAppearance appearanceNamed:NSAppearanceNameVibrantDark];
-    modalOverlay.backgroundColor = [NSColor blackColor];
-    [modalOverlay showInWindow:self.view.window];
-    
+    self.modalOverlay.contentViewController = [[HXPersonalController alloc] init];
+    [self.modalOverlay showInWindow:self.view.window];
 }
 
 

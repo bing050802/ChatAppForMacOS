@@ -10,11 +10,18 @@
 #import <AppKit/AppKit.h>
 #import "NSImageView+WebCache.h"
 
+#import "TopView.h"
+#import "BottomView.h"
+
 //About High Resolution for OS X  苹果文档
 //http://www.tuicool.com/articles/ARFjei6 详细解读 sdwebimage 源码
 
 
 @interface AppDelegate ()
+
+
+@property (weak) IBOutlet BottomView *bView;
+@property (weak) IBOutlet TopView *tView;
 
 @property (weak) IBOutlet NSImageView *ImageView;
 @property (weak) IBOutlet NSWindow *window;
@@ -41,6 +48,19 @@
 //    [[SDImageCache sharedImageCache] clearDisk];
 //    [self.ImageView sd_setImageWithURL:@"http://ww2.sinaimg.cn/bmiddle/005OPWbujw1eltkcrcuoag306w05vkjl.gif"];
     [self.ImageView sd_setImageWithURL:@"http://d.lanrentuku.com/down/png/1512/2015sdj/2015sdj_004.png" placeholderImage:[NSImage imageNamed:@"test"] options:SDWebImageCircledImage];
+    
+    
+    [self.tView setWantsLayer:YES];
+    self.tView.layer.backgroundColor = [NSColor purpleColor].CGColor;
+    self.tView.acceptsTouchEvents = NO;
+    
+    [self.window makeFirstResponder:self.tView];
+    
+    [self.bView setWantsLayer:YES];
+    self.bView.layer.backgroundColor = [NSColor yellowColor].CGColor;
+    
+    
+    
     
 
 }

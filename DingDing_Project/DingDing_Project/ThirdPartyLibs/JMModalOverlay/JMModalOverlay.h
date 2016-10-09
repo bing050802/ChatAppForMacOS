@@ -25,8 +25,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-#pragma mark -
-#pragma mark Type
+#define JMYosemiteOrSuperior (floor(NSAppKitVersionNumber) > NSAppKitVersionNumber10_9)
+#define JMMaverickOrSuperior (floor(NSAppKitVersionNumber) > NSAppKitVersionNumber10_8)
 
 /*
  modalOverlay animation direction.

@@ -26,8 +26,6 @@
 #import "JMModalOverlay.h"
 #import "JMOverlayView.h"
 #import <QuartzCore/QuartzCore.h>
-#import "Version.h"
-
 
 #pragma mark Notifications
 /*  Sent before the modalOverlay is shown.
@@ -81,8 +79,6 @@ NSString * const JMModalOverlayDidCloseNotification = @"JMModalOverlayDidCloseNo
 
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-
-    
 }
 
 
@@ -129,7 +125,7 @@ NSString * const JMModalOverlayDidCloseNotification = @"JMModalOverlayDidCloseNo
 #pragma mark window
 - (NSWindow *) _modalWindowForFrame:(NSRect)frame{
     NSWindow *modalWindow = [[NSWindow alloc] initWithContentRect:frame
-                                                        styleMask: NSBorderlessWindowMask backing:NSBackingStoreBuffered defer:YES];
+                                                        styleMask:NSBorderlessWindowMask backing:NSBackingStoreBuffered defer:YES];
     [modalWindow setBackgroundColor:[NSColor clearColor]];
 //    [modalWindow setOpaque:NO];
 //    [modalWindow setHasShadow:NO];
@@ -195,10 +191,9 @@ NSString * const JMModalOverlayDidCloseNotification = @"JMModalOverlayDidCloseNo
         
         // Add container view
         _containerView = [[NSView alloc] initWithFrame:_overlayView.bounds];
-//        _containerView.acceptsTouchEvents = NO;
         _containerView.autoresizingMask = NSViewWidthSizable|NSViewHeightSizable;
         
-        if (JMYosemiteOrSuperior && ([_appearance.name isEqualToString:NSAppearanceNameVibrantDark] || [_appearance.name isEqualToString:NSAppearanceNameVibrantLight])) {
+        if (!JMYosemiteOrSuperior ) {
             _visualEffectView = [[NSVisualEffectView alloc] initWithFrame:overlayFrame];
             _visualEffectView.autoresizingMask = NSViewWidthSizable|NSViewHeightSizable;
             _visualEffectView.state = NSVisualEffectStateActive;
@@ -207,17 +202,17 @@ NSString * const JMModalOverlayDidCloseNotification = @"JMModalOverlayDidCloseNo
             [_visualEffectView addSubview:_overlayView];
             [_modalWindow.contentView addSubview:_visualEffectView];
             
-        }
-        else {
+        } else {
             [_overlayView addSubview:_containerView];
             [_modalWindow.contentView addSubview:_overlayView];
-            
         }
         
         // Configure content view
         self.contentViewController.view.translatesAutoresizingMaskIntoConstraints = YES;
-        self.contentViewController.view.autoresizingMask = NSViewWidthSizable|NSViewHeightSizable;
-        self.contentViewController.view.frame = [_containerView bounds];
+//        self.contentViewController.view.autoresizingMask = NSViewWidthSizable|NSViewHeightSizable;
+//        self.contentViewController.view.frame = [_containerView bounds];
+        self.contentViewController.view.frame = CGRectMake((NSWidth(_containerView.bounds) - 375) * 0.5, (NSHeight(_containerView.bounds) - 510) * 0.5, 375, 510);
+
         
         /**
           _modalWindow.contentView
@@ -235,7 +230,6 @@ NSString * const JMModalOverlayDidCloseNotification = @"JMModalOverlayDidCloseNo
             [NSAnimationContext beginGrouping];
             [[NSAnimationContext currentContext] setCompletionHandler:^{
                 [self _afterShow];
-                
             }];
             [_containerView setAnimations:@{@"subviews":[self.class _appearAnimationForDirection:self.animationDirection]}];
             [[_containerView animator] addSubview:self.contentViewController.view];
