@@ -72,7 +72,7 @@
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
     self.currenRowView.backgroundColor = [NSColor clearColor];
-    NSTableRowView *rowView = [self.msgTableView rowViewAtRow: self.msgTableView.selectedRow makeIfNecessary:YES];
+    NSTableRowView *rowView = [self.msgTableView rowViewAtRow:self.msgTableView.selectedRow makeIfNecessary:YES];
     rowView.backgroundColor = HXColor(204, 232, 253);
     self.currenRowView = rowView;
 }

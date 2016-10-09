@@ -88,6 +88,9 @@
 		8AE3FD2B1DA8F4070023331C /* JMOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE3FD261DA8F4070023331C /* JMOverlayView.m */; };
 		8AE49A871DAA170600461D8C /* HXPersonalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE49A851DAA170600461D8C /* HXPersonalController.m */; };
 		8AE49A881DAA170600461D8C /* HXPersonalController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AE49A861DAA170600461D8C /* HXPersonalController.xib */; };
+		8AE49A8B1DAA1BBA00461D8C /* HXMsgDatailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE49A8A1DAA1BBA00461D8C /* HXMsgDatailCell.m */; };
+		8AE49A8D1DAA1BE600461D8C /* HXMsgDatailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AE49A8C1DAA1BE600461D8C /* HXMsgDatailCell.xib */; };
+		8AE49A941DAA225B00461D8C /* HXBaseTabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE49A931DAA225B00461D8C /* HXBaseTabelCell.m */; };
 		8AF5CAD11D74208F003E7DA2 /* HXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF5CACF1D74208F003E7DA2 /* HXViewController.m */; };
 		8AF5CAD21D74208F003E7DA2 /* HXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AF5CAD01D74208F003E7DA2 /* HXViewController.xib */; };
 		8AFF852A1D9BBFE600BB9B67 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AFF85141D9BBFE600BB9B67 /* Info.plist */; };
@@ -235,6 +238,11 @@
 		8AE49A841DAA170600461D8C /* HXPersonalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXPersonalController.h; sourceTree = "<group>"; };
 		8AE49A851DAA170600461D8C /* HXPersonalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXPersonalController.m; sourceTree = "<group>"; };
 		8AE49A861DAA170600461D8C /* HXPersonalController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXPersonalController.xib; sourceTree = "<group>"; };
+		8AE49A891DAA1BBA00461D8C /* HXMsgDatailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMsgDatailCell.h; sourceTree = "<group>"; };
+		8AE49A8A1DAA1BBA00461D8C /* HXMsgDatailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMsgDatailCell.m; sourceTree = "<group>"; };
+		8AE49A8C1DAA1BE600461D8C /* HXMsgDatailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXMsgDatailCell.xib; sourceTree = "<group>"; };
+		8AE49A921DAA225B00461D8C /* HXBaseTabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXBaseTabelCell.h; sourceTree = "<group>"; };
+		8AE49A931DAA225B00461D8C /* HXBaseTabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXBaseTabelCell.m; sourceTree = "<group>"; };
 		8AF5CACE1D74208F003E7DA2 /* HXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXViewController.h; sourceTree = "<group>"; };
 		8AF5CACF1D74208F003E7DA2 /* HXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXViewController.m; sourceTree = "<group>"; };
 		8AF5CAD01D74208F003E7DA2 /* HXViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXViewController.xib; sourceTree = "<group>"; };
@@ -471,6 +479,9 @@
 		8A9C6FF31D9E7472002D82AF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8AE49A891DAA1BBA00461D8C /* HXMsgDatailCell.h */,
+				8AE49A8A1DAA1BBA00461D8C /* HXMsgDatailCell.m */,
+				8AE49A8C1DAA1BE600461D8C /* HXMsgDatailCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -584,6 +595,7 @@
 		8AE26D181D5989C500855257 /* DingDing_Project */ = {
 			isa = PBXGroup;
 			children = (
+				8AE49A911DAA225B00461D8C /* BaseUIComponents */,
 				8AE26D391D598C2900855257 /* MainWindow */,
 				8AE26D431D59B47300855257 /* MainViewCtroller */,
 				3349A9BF1D852DC10095C667 /* Message */,
@@ -705,6 +717,15 @@
 			path = JMModalOverlay;
 			sourceTree = "<group>";
 		};
+		8AE49A911DAA225B00461D8C /* BaseUIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				8AE49A921DAA225B00461D8C /* HXBaseTabelCell.h */,
+				8AE49A931DAA225B00461D8C /* HXBaseTabelCell.m */,
+			);
+			path = BaseUIComponents;
+			sourceTree = "<group>";
+		};
 		8AFF85131D9BBFE600BB9B67 /* MJExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -807,6 +828,7 @@
 				8AE3FD1D1DA8E3200023331C /* personal_entered.png in Resources */,
 				8A4C6A141D7EB06E005BC413 /* search_btn_mousein.png in Resources */,
 				8AF5CAD21D74208F003E7DA2 /* HXViewController.xib in Resources */,
+				8AE49A8D1DAA1BE600461D8C /* HXMsgDatailCell.xib in Resources */,
 				8A4C6A261D7EB1A4005BC413 /* work.png in Resources */,
 				8AE3FD151DA8E2060023331C /* addMember_entered.png in Resources */,
 				8A4C6A1B1D7EB09F005BC413 /* dingIcon.png in Resources */,
@@ -866,9 +888,11 @@
 				8AFF85311D9BBFE600BB9B67 /* NSObject+MJCoding.m in Sources */,
 				8AFF85301D9BBFE600BB9B67 /* NSObject+MJClass.m in Sources */,
 				8AAD92831D632D1D007E4A8F /* MVShadow.m in Sources */,
+				8AE49A8B1DAA1BBA00461D8C /* HXMsgDatailCell.m in Sources */,
 				8AFF852B1D9BBFE600BB9B67 /* MJExtensionConst.m in Sources */,
 				8A4C6A4C1D7ED62A005BC413 /* NFLayerBackedView.m in Sources */,
 				8AE26D371D598A4800855257 /* main.m in Sources */,
+				8AE49A941DAA225B00461D8C /* HXBaseTabelCell.m in Sources */,
 				3349A9F01D8535C20095C667 /* HXMiddleMessageControlller.m in Sources */,
 				8AE26D541D59B4F000855257 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				3349A9D91D852FF60095C667 /* HXTextField.m in Sources */,

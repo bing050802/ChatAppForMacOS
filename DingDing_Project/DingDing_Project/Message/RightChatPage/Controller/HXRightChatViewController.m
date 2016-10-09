@@ -11,12 +11,13 @@
 #import "HXPrefixHeader.h"
 #import "HXMessage.h"
 #import "HXBarButton.h"
+#import "HXMsgDatailCell.h"
 
 #import "JMModalOverlay.h"
 #import "HXPersonalController.h"
 
 
-@interface HXRightChatViewController ()
+@interface HXRightChatViewController () <NSTableViewDelegate,NSTableViewDataSource>
 
 @property (weak) IBOutlet NSView *topView;
 
@@ -36,9 +37,14 @@
 
 @property (nonatomic,strong) JMModalOverlay *modalOverlay;
 
+@property (weak) IBOutlet NSTableView *datailTableView;
+
+
 @end
 
 @implementation HXRightChatViewController
+
+static NSString *cellID = @"msgDatilCell";
 
 - (NSMutableArray *)msgDetailArray  {
     if (!_msgDetailArray) {
@@ -93,27 +99,57 @@
     [self.topView backGroundColor:HXColor(246, 250, 255)];
     
     [self buttonsSetting];
+    
+    
+    self.datailTableView.headerView = nil;
+    [self.datailTableView registerNib:[[NSNib alloc] initWithNibNamed:NSStringFromClass([HXMsgDatailCell class]) bundle:nil]  forIdentifier:cellID];
+    [self.datailTableView reloadData];
+    
 
-    [NotificationCenter addObserver:self selector:@selector(tableViewSelectionDidChange:)
+    [NotificationCenter addObserver:self selector:@selector(middleTabelViewSelected:)
                                name:NSTableViewSelectionDidChangeNotification object:nil];
     
 }
 
-
-
-
-
-
-
-- (void)tableViewSelectionDidChange:(NSNotification *)noti {
+- (void)middleTabelViewSelected:(NSNotification *)noti {
     NSTableView *middleTableView = noti.object;
     NSInteger row = middleTableView.selectedRow;
-    
     HXMessage *message = self.msgDetailArray[row];
     [self.iconImage sd_setImageWithURL:message.profile_image placeholderImage:nil options:SDWebImageCircledImage];
     self.nameLabel.stringValue = message.name;
     
 }
+
+
+
+- (nullable NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row {
+    HXMsgDatailCell *cell = [tableView makeViewWithIdentifier:cellID owner:self];
+    return cell;
+}
+
+- (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
+    return 55;
+}
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
+    return 3;
+}
+
+
+
+- (void)tableViewSelectionDidChange:(NSNotification *)notification {
+    
+    
+}
+
+
+
+
+
+
+
+
+
 
 
 

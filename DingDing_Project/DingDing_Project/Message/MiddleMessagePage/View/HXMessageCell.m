@@ -37,9 +37,6 @@
     // Drawing code here.
 }
 
-- (NSTableRowView *)rowView {
-    return (NSTableRowView *)self.superview;
-}
 
 - (NSTrackingArea *)trackingArea {
     if (!_trackingArea) {
@@ -71,7 +68,6 @@
 }
 
 
-
 - (void)mouseEntered:(NSEvent *)theEvent {
     self.deleteBtn.hidden = NO;
     if (self.rowView.selected) {
@@ -101,10 +97,6 @@
     self.timeLable.stringValue = [message.create_time substringWithRange:NSMakeRange(message.create_time.length - 5, 5)];
     self.msgLabel.stringValue = message.text;
     
-}
-
-- (void)viewDidMoveToWindow {
-     self.rowView.selectionHighlightStyle = NSTableViewSelectionHighlightStyleNone;
 }
 
 
