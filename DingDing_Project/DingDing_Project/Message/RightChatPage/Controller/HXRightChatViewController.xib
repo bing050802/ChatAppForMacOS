@@ -9,6 +9,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="HXRightChatViewController">
             <connections>
                 <outlet property="addMemberBtn" destination="HYI-E1-4z6" id="kPs-2m-c0e"/>
+                <outlet property="bgView" destination="W70-86-Gwi" id="cG5-Js-ehf"/>
                 <outlet property="callBtn" destination="WYf-Ki-xQg" id="emu-pf-mKw"/>
                 <outlet property="chatFilesBtn" destination="45B-F1-oK3" id="5sx-nE-mOd"/>
                 <outlet property="datailTableView" destination="phV-a9-70K" id="AuL-Fi-FwB"/>
@@ -21,12 +22,29 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView id="Hz6-mo-xeY">
+        <customView misplaced="YES" id="Hz6-mo-xeY">
             <rect key="frame" x="0.0" y="0.0" width="506" height="355"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="W70-86-Gwi">
+                    <rect key="frame" x="0.0" y="0.0" width="506" height="437"/>
+                    <subviews>
+                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JRg-rv-hgj">
+                            <rect key="frame" x="71" y="10" width="365" height="367"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="365" id="fwh-xE-yB9"/>
+                            </constraints>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="rightBG" id="wiI-8m-acU"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="JRg-rv-hgj" firstAttribute="top" secondItem="W70-86-Gwi" secondAttribute="top" constant="60" id="LwY-n0-1fg"/>
+                        <constraint firstItem="JRg-rv-hgj" firstAttribute="centerX" secondItem="W70-86-Gwi" secondAttribute="centerX" id="UjS-ju-7cL"/>
+                        <constraint firstAttribute="bottom" secondItem="JRg-rv-hgj" secondAttribute="bottom" constant="10" id="sKc-gp-uEz"/>
+                    </constraints>
+                </customView>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="O6C-c6-hQX">
-                    <rect key="frame" x="0.0" y="305" width="506" height="50"/>
+                    <rect key="frame" x="0.0" y="437" width="506" height="50"/>
                     <subviews>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="keL-eH-c1V">
                             <rect key="frame" x="0.0" y="0.0" width="506" height="1"/>
@@ -146,13 +164,13 @@
                     </constraints>
                 </customView>
                 <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="62" horizontalPageScroll="10" verticalLineScroll="62" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grs-fX-pj1">
-                    <rect key="frame" x="0.0" y="110" width="506" height="195"/>
+                    <rect key="frame" x="0.0" y="110" width="506" height="327"/>
                     <clipView key="contentView" id="v3n-tY-vcU">
-                        <rect key="frame" x="0.0" y="23" width="506" height="172"/>
+                        <rect key="frame" x="0.0" y="23" width="506" height="304"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="60" rowSizeStyle="automatic" headerView="jN7-Du-5Dt" viewBased="YES" id="phV-a9-70K">
-                                <rect key="frame" x="0.0" y="0.0" width="506" height="172"/>
+                                <rect key="frame" x="0.0" y="0.0" width="506" height="304"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.98039215686274506" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -200,15 +218,22 @@
                 </scrollView>
             </subviews>
             <constraints>
+                <constraint firstItem="W70-86-Gwi" firstAttribute="top" secondItem="O6C-c6-hQX" secondAttribute="bottom" id="Ane-8j-k6Y"/>
                 <constraint firstItem="grs-fX-pj1" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="K2M-oM-GwG"/>
+                <constraint firstAttribute="bottom" secondItem="W70-86-Gwi" secondAttribute="bottom" id="KTp-7g-AdP"/>
                 <constraint firstItem="O6C-c6-hQX" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="Qjv-zO-bqS"/>
                 <constraint firstAttribute="bottom" secondItem="grs-fX-pj1" secondAttribute="bottom" constant="110" id="Rin-7d-yJb"/>
                 <constraint firstAttribute="trailing" secondItem="O6C-c6-hQX" secondAttribute="trailing" id="SKJ-Nd-saJ"/>
                 <constraint firstItem="O6C-c6-hQX" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="Sdl-9r-g2h"/>
                 <constraint firstAttribute="trailing" secondItem="grs-fX-pj1" secondAttribute="trailing" id="mqE-Lr-xcp"/>
                 <constraint firstItem="grs-fX-pj1" firstAttribute="top" secondItem="O6C-c6-hQX" secondAttribute="bottom" id="pr0-db-NQI"/>
+                <constraint firstItem="W70-86-Gwi" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="q4b-7c-E7v"/>
+                <constraint firstAttribute="trailing" secondItem="W70-86-Gwi" secondAttribute="trailing" id="ykl-tz-fHu"/>
             </constraints>
             <point key="canvasLocation" x="-348" y="-128"/>
         </customView>
     </objects>
+    <resources>
+        <image name="rightBG" width="355" height="367"/>
+    </resources>
 </document>

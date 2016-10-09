@@ -21,12 +21,12 @@
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="A6W-Yc-UiG"/>
                 </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fib-7Q-n10">
-                    <rect key="frame" x="70" y="46" width="130" height="35"/>
+                    <rect key="frame" x="70" y="46" width="320" height="35"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="8u9-L8-k6x"/>
-                        <constraint firstAttribute="width" constant="130" id="DcQ-iK-PQV"/>
+                        <constraint firstAttribute="width" constant="320" id="DcQ-iK-PQV"/>
                     </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="我们都已经都是郝鹏后" bezelStyle="round" id="Jq9-cT-2A6">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" title="我们都已经都是郝鹏后" bezelStyle="round" id="Jq9-cT-2A6">
                         <font key="font" size="13" name=".PingFangSC-Regular"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>

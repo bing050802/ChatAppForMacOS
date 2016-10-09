@@ -91,6 +91,7 @@
 		8AE49A8B1DAA1BBA00461D8C /* HXMsgDatailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE49A8A1DAA1BBA00461D8C /* HXMsgDatailCell.m */; };
 		8AE49A8D1DAA1BE600461D8C /* HXMsgDatailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AE49A8C1DAA1BE600461D8C /* HXMsgDatailCell.xib */; };
 		8AE49A941DAA225B00461D8C /* HXBaseTabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE49A931DAA225B00461D8C /* HXBaseTabelCell.m */; };
+		8AE49A961DAA4BFE00461D8C /* rightBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE49A951DAA4BFE00461D8C /* rightBG.png */; };
 		8AF5CAD11D74208F003E7DA2 /* HXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF5CACF1D74208F003E7DA2 /* HXViewController.m */; };
 		8AF5CAD21D74208F003E7DA2 /* HXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AF5CAD01D74208F003E7DA2 /* HXViewController.xib */; };
 		8AFF852A1D9BBFE600BB9B67 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AFF85141D9BBFE600BB9B67 /* Info.plist */; };
@@ -243,6 +244,7 @@
 		8AE49A8C1DAA1BE600461D8C /* HXMsgDatailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXMsgDatailCell.xib; sourceTree = "<group>"; };
 		8AE49A921DAA225B00461D8C /* HXBaseTabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXBaseTabelCell.h; sourceTree = "<group>"; };
 		8AE49A931DAA225B00461D8C /* HXBaseTabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXBaseTabelCell.m; sourceTree = "<group>"; };
+		8AE49A951DAA4BFE00461D8C /* rightBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightBG.png; sourceTree = "<group>"; };
 		8AF5CACE1D74208F003E7DA2 /* HXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXViewController.h; sourceTree = "<group>"; };
 		8AF5CACF1D74208F003E7DA2 /* HXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXViewController.m; sourceTree = "<group>"; };
 		8AF5CAD01D74208F003E7DA2 /* HXViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXViewController.xib; sourceTree = "<group>"; };
@@ -694,6 +696,7 @@
 		8AE3FD0D1DA8DBA00023331C /* RightChatView */ = {
 			isa = PBXGroup;
 			children = (
+				8AE49A951DAA4BFE00461D8C /* rightBG.png */,
 				8AE3FD0E1DA8DBAA0023331C /* chatFile.png */,
 				8AE3FD101DA8DC230023331C /* chatFile_entered.png */,
 				8AE3FD121DA8E2060023331C /* addMember.png */,
@@ -851,6 +854,7 @@
 				8A4C6A3A1D7EB928005BC413 /* moreIcon.png in Resources */,
 				8A5589691D741455000AF3EA /* MainMenu.xib in Resources */,
 				8AE3FD181DA8E2980023331C /* callDing.png in Resources */,
+				8AE49A961DAA4BFE00461D8C /* rightBG.png in Resources */,
 				8A4C6A1D1D7EB09F005BC413 /* message.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -41,6 +41,7 @@
 
 @property (weak) IBOutlet NSTableView *datailTableView;
 
+@property (weak) IBOutlet NSView *bgView;
 
 @end
 
@@ -62,6 +63,7 @@ static NSString *cellID = @"msgDatilCell";
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"new_topics.plist" ofType:nil];
         NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
         _msgDatialArray = [HXMessage mj_objectArrayWithKeyValuesArray:dict[@"list"]];
+        [_msgDatialArray addObjectsFromArray:self.msgArray];
     }
     return _msgDatialArray;
 }
@@ -107,39 +109,50 @@ static NSString *cellID = @"msgDatilCell";
 - (void)loadView {
     [super loadView];
     
-    [self.view backGroundColor:[NSColor whiteColor]];
+    [self.view backGroundColor:HXColor(246, 250, 255)];
+    
+    // 顶部 工具栏
     [self.topView backGroundColor:HXColor(246, 250, 255)];
+    self.topView.hidden = YES;
+    
+    // 名字可选中复制
     self.nameLabel.selectable = YES;
     
+    // 工具栏右侧 按钮设置trackingImage
     [self buttonsSetting];
     
+    // 消息详情列表
     self.datailTableView.headerView = nil;
     [self.datailTableView registerNib:[[NSNib alloc] initWithNibNamed:NSStringFromClass([HXMsgDatailCell class]) bundle:nil]  forIdentifier:cellID];
-//    self.datailTable;
+     [self.datailTableView.superview.superview setHidden:YES];
     
-    [self.datailTableView reloadData];
     
     [NotificationCenter addObserver:self selector:@selector(middleTabelViewSelected:)
                                name:NSTableViewSelectionDidChangeNotification object:nil];
-    
-    
-    
     
 }
 
 - (void)middleTabelViewSelected:(NSNotification *)noti {
     NSTableView *middleTableView = noti.object;
+     // 通知若是来自 本控制器tableView 返回不处理
     if (middleTableView == self.datailTableView) return;
+    
+    // 中间的cell选中 顶部工具栏 展示对应的消息用户头像 名字
     NSInteger row = middleTableView.selectedRow;
     HXMessage *message = self.msgArray[row];
     [self.iconImage sd_setImageWithURL:message.profile_image placeholderImage:nil options:SDWebImageCircledImage];
     self.nameLabel.stringValue = message.name;
+    
+    // 选中之后 背景bgView隐藏，topview datailTableView显示
+    self.bgView.hidden = YES;
+    self.topView.hidden = NO;
+    [self.datailTableView.superview.superview setHidden:NO];
 }
 
 
 - (nullable NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row {
     HXMsgDatailCell *cell = [tableView makeViewWithIdentifier:cellID owner:self];
-        cell.message = self.msgDatialArray[row];
+    cell.message = self.msgDatialArray[row];
     return cell;
 }
 
