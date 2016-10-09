@@ -145,20 +145,20 @@
                         <constraint firstAttribute="trailing" secondItem="rQD-t7-3dw" secondAttribute="trailing" constant="15" id="yYq-6e-1gf"/>
                     </constraints>
                 </customView>
-                <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grs-fX-pj1">
+                <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="62" horizontalPageScroll="10" verticalLineScroll="62" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grs-fX-pj1">
                     <rect key="frame" x="0.0" y="110" width="506" height="195"/>
                     <clipView key="contentView" id="v3n-tY-vcU">
-                        <rect key="frame" x="1" y="23" width="504" height="171"/>
+                        <rect key="frame" x="0.0" y="23" width="506" height="172"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="jN7-Du-5Dt" viewBased="YES" id="phV-a9-70K">
-                                <rect key="frame" x="0.0" y="0.0" width="504" height="171"/>
+                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="60" rowSizeStyle="automatic" headerView="jN7-Du-5Dt" viewBased="YES" id="phV-a9-70K">
+                                <rect key="frame" x="0.0" y="0.0" width="506" height="172"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
-                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" red="0.96470588235294119" green="0.98039215686274506" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                 <tableColumns>
-                                    <tableColumn width="116" minWidth="40" maxWidth="1000" id="wPk-1I-EgC">
+                                    <tableColumn width="503" minWidth="40" maxWidth="1000" id="wPk-1I-EgC">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -172,7 +172,7 @@
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
                                             <tableCellView id="pYD-cJ-dis">
-                                                <rect key="frame" x="1" y="1" width="116" height="17"/>
+                                                <rect key="frame" x="1" y="1" width="503" height="60"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </tableCellView>
                                         </prototypeCellViews>
@@ -193,8 +193,8 @@
                         <rect key="frame" x="224" y="17" width="15" height="102"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
-                    <tableHeaderView key="headerView" hidden="YES" id="jN7-Du-5Dt">
-                        <rect key="frame" x="0.0" y="0.0" width="504" height="23"/>
+                    <tableHeaderView key="headerView" id="jN7-Du-5Dt">
+                        <rect key="frame" x="0.0" y="0.0" width="506" height="23"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </tableHeaderView>
                 </scrollView>
@@ -208,7 +208,7 @@
                 <constraint firstAttribute="trailing" secondItem="grs-fX-pj1" secondAttribute="trailing" id="mqE-Lr-xcp"/>
                 <constraint firstItem="grs-fX-pj1" firstAttribute="top" secondItem="O6C-c6-hQX" secondAttribute="bottom" id="pr0-db-NQI"/>
             </constraints>
-            <point key="canvasLocation" x="-447" y="-106.5"/>
+            <point key="canvasLocation" x="-348" y="-128"/>
         </customView>
     </objects>
 </document>

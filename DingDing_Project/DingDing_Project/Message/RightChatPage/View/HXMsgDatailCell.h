@@ -8,7 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 #import "HXBaseTabelCell.h"
+#import "HXMessage.h"
 
 @interface HXMsgDatailCell : HXBaseTabelCell
+
+@property (nonatomic,strong) HXMessage *message;
+
 
 @end

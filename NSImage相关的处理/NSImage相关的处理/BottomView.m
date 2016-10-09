@@ -26,10 +26,7 @@
     if ([[self window] firstResponder] == self) {
         
     }
-    
-    
     NSLog(@"%@---%s",self.class,__func__);
-    
 }
 
 

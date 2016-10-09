@@ -28,7 +28,7 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uEM-Pz-eQz">
-                    <rect key="frame" x="429" y="29" width="38" height="13"/>
+                    <rect key="frame" x="429" y="28" width="38" height="13"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="34" id="L4B-DF-Wkh"/>
                     </constraints>
@@ -39,9 +39,9 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eFs-XS-cyC">
-                    <rect key="frame" x="59" y="9" width="368" height="14"/>
+                    <rect key="frame" x="59" y="8" width="368" height="15"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="回到过去跟你说说话" id="tjL-Xv-Cyk">
-                        <font key="font" size="11" name=".PingFangSC-Regular"/>
+                        <font key="font" size="12" name=".PingFangSC-Regular"/>
                         <color key="textColor" red="0.52156862745098043" green="0.52549019607843139" blue="0.52941176470588236" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>

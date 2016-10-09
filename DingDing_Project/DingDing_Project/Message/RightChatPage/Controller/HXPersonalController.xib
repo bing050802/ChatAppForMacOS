@@ -32,7 +32,7 @@
                 <constraint firstItem="qna-eB-7B5" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="4TF-Vd-Ugg"/>
                 <constraint firstItem="qna-eB-7B5" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="hXl-Kq-QtZ"/>
             </constraints>
-            <point key="canvasLocation" x="-25" y="167"/>
+            <point key="canvasLocation" x="4" y="55"/>
         </customView>
     </objects>
 </document>

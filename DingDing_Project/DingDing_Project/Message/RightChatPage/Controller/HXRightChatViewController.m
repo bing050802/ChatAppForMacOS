@@ -33,9 +33,11 @@
 // 个人简介
 @property (weak) IBOutlet HXBarButton *personalBtn;
 
-@property (nonatomic,strong) NSMutableArray *msgDetailArray;
 
 @property (nonatomic,strong) JMModalOverlay *modalOverlay;
+
+@property (nonatomic,strong) NSMutableArray *msgArray;
+@property (nonatomic,strong) NSMutableArray *msgDatialArray;
 
 @property (weak) IBOutlet NSTableView *datailTableView;
 
@@ -46,14 +48,24 @@
 
 static NSString *cellID = @"msgDatilCell";
 
-- (NSMutableArray *)msgDetailArray  {
-    if (!_msgDetailArray) {
+- (NSMutableArray *)msgArray  {
+    if (!_msgArray) {
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"more_topics.plist" ofType:nil];
         NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
-        _msgDetailArray = [HXMessage mj_objectArrayWithKeyValuesArray:dict[@"list"]];
+        _msgArray = [HXMessage mj_objectArrayWithKeyValuesArray:dict[@"list"]];
     }
-    return _msgDetailArray;
+    return _msgArray;
 }
+
+- (NSMutableArray *)msgDatialArray  {
+    if (!_msgDatialArray) {
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"new_topics.plist" ofType:nil];
+        NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
+        _msgDatialArray = [HXMessage mj_objectArrayWithKeyValuesArray:dict[@"list"]];
+    }
+    return _msgDatialArray;
+}
+
 
 -(JMModalOverlay *)modalOverlay {
     if (!_modalOverlay) {
@@ -97,42 +109,46 @@ static NSString *cellID = @"msgDatilCell";
     
     [self.view backGroundColor:[NSColor whiteColor]];
     [self.topView backGroundColor:HXColor(246, 250, 255)];
+    self.nameLabel.selectable = YES;
     
     [self buttonsSetting];
     
-    
     self.datailTableView.headerView = nil;
     [self.datailTableView registerNib:[[NSNib alloc] initWithNibNamed:NSStringFromClass([HXMsgDatailCell class]) bundle:nil]  forIdentifier:cellID];
+//    self.datailTable;
+    
     [self.datailTableView reloadData];
     
-
     [NotificationCenter addObserver:self selector:@selector(middleTabelViewSelected:)
                                name:NSTableViewSelectionDidChangeNotification object:nil];
+    
+    
+    
     
 }
 
 - (void)middleTabelViewSelected:(NSNotification *)noti {
     NSTableView *middleTableView = noti.object;
+    if (middleTableView == self.datailTableView) return;
     NSInteger row = middleTableView.selectedRow;
-    HXMessage *message = self.msgDetailArray[row];
+    HXMessage *message = self.msgArray[row];
     [self.iconImage sd_setImageWithURL:message.profile_image placeholderImage:nil options:SDWebImageCircledImage];
     self.nameLabel.stringValue = message.name;
-    
 }
-
 
 
 - (nullable NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row {
     HXMsgDatailCell *cell = [tableView makeViewWithIdentifier:cellID owner:self];
+        cell.message = self.msgDatialArray[row];
     return cell;
 }
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
-    return 55;
+    return 100;
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return 3;
+    return self.msgDatialArray.count;
 }
 
 
@@ -174,12 +190,14 @@ static NSString *cellID = @"msgDatilCell";
     
 }
 
-- (CGFloat)minimumLengthInSplitViewController:(NFSplitViewController*)splitViewController
-{
+
+
+
+
+
+- (CGFloat)minimumLengthInSplitViewController:(NFSplitViewController*)splitViewController {
     return 625;
 }
-
-
 
 
 
