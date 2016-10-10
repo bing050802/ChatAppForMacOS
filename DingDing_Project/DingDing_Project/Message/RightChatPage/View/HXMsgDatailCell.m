@@ -38,6 +38,7 @@
     self.timeLable.stringValue = [message.create_time substringWithRange:NSMakeRange(message.create_time.length - 5, 5)];
     self.msgLabel.stringValue = message.text;
     
+    
 }
 
 @end

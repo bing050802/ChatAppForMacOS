@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>IOSTest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>8AC667881DABA64E00250E02</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>8AE26D151D5989C500855257</key>
 		<dict>
 			<key>primary</key>

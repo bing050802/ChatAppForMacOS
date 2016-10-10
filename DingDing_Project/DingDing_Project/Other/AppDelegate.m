@@ -54,12 +54,6 @@
     
 }
 
-- (void)allNotifiction:(NSNotification *)noti {
-//    NSLog(@"----%@",noti.name);
-}
-
-
-
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
 }
