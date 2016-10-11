@@ -166,14 +166,14 @@
                 <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="62" horizontalPageScroll="10" verticalLineScroll="62" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grs-fX-pj1">
                     <rect key="frame" x="0.0" y="110" width="506" height="327"/>
                     <clipView key="contentView" id="v3n-tY-vcU">
-                        <rect key="frame" x="0.0" y="23" width="506" height="304"/>
+                        <rect key="frame" x="0.0" y="0.0" width="506" height="327"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="60" rowSizeStyle="automatic" headerView="jN7-Du-5Dt" viewBased="YES" id="phV-a9-70K">
                                 <rect key="frame" x="0.0" y="0.0" width="506" height="304"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
-                                <color key="backgroundColor" red="0.96470588235294119" green="0.98039215686274506" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.98431372549019602" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                 <tableColumns>
                                     <tableColumn width="503" minWidth="40" maxWidth="1000" id="wPk-1I-EgC">

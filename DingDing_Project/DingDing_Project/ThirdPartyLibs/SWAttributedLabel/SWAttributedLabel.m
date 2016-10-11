@@ -18,7 +18,9 @@ static NSString* const kEllipsesCharacter = @"\u2026";
     CTFrameRef _frameRef;
 }
 
-
+- (void)awakeFromNib {
+    [self configSettings];
+}
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {

@@ -8,6 +8,7 @@
 
 #import "HXMsgDatailCell.h"
 #import "HXPrefixHeader.h"
+#import "SWAttributedLabel.h"
 
 @interface HXMsgDatailCell ()
 
@@ -17,8 +18,10 @@
 
 @property (weak) IBOutlet NSTextField *timeLable;
 
-@property (weak) IBOutlet NSTextField *msgLabel;
+@property (weak) IBOutlet NSView *labelBgView;
 
+@property (weak) IBOutlet SWAttributedLabel *attLabel;
+@property (weak) IBOutlet NSLayoutConstraint *heightConstriants;
 
 @end
 
@@ -26,7 +29,10 @@
 
 - (void)awakeFromNib {
 //    self.selectionHighlighted = YES;
+    [self.labelBgView backGroundColor:[NSColor whiteColor]];
+
 }
+
 
 
 - (void)setMessage:(HXMessage *)message {
@@ -36,8 +42,21 @@
     
     // 2014-10-30 18:07:47
     self.timeLable.stringValue = [message.create_time substringWithRange:NSMakeRange(message.create_time.length - 5, 5)];
-    self.msgLabel.stringValue = message.text;
+    //self.msgLabel.stringValue = message.text;
     
+//    NSLog(@"----%@",NSStringFromRect(self.attLabel.frame));
+    
+    [self.attLabel setText:message.text];
+    CGSize textRealSize = [self.attLabel textRealContantSize];
+    self.heightConstriants.constant = textRealSize.height + 10;
+
+
+}
+
+
+- (void)layout {
+    [super layout];
+//    NSLog(@"layout");
     
 }
 

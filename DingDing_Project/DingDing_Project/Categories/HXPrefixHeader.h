@@ -59,7 +59,9 @@
 
 #define NotificationCenter [NSNotificationCenter defaultCenter]
 
-
+#ifndef __OPTIMIZE__
+#define NSLog(...) printf("%f %s\n",[[NSDate date]timeIntervalSince1970],[[NSString stringWithFormat:__VA_ARGS__]UTF8String]);
+#endif
 /**
  *  常写代码块
  

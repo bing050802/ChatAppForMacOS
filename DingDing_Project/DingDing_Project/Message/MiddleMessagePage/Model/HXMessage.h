@@ -25,6 +25,7 @@
 // gif图片第一帧 图片
 @property (nonatomic, strong) NSString *gifFistFrame;
 
+@property (nonatomic,assign) CGFloat cellHight;
 
 
 @end

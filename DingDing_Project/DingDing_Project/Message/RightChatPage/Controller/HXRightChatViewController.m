@@ -15,6 +15,7 @@
 
 #import "JMModalOverlay.h"
 #import "HXPersonalController.h"
+#import "SWAttributedLabel.h"
 
 
 @interface HXRightChatViewController () <NSTableViewDelegate,NSTableViewDataSource>
@@ -157,10 +158,17 @@ static NSString *cellID = @"msgDatilCell";
 }
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
-    return 100;
+
+    HXMessage *message = self.msgDatialArray[row];
+    NSMutableAttributedString *mattString = [[NSMutableAttributedString alloc] initWithString:message.text];
+    [mattString setFont:[NSFont systemFontOfSize:16.0]];
+    CGFloat realheight = [mattString realityHeightForWidth:310];
+//   return message.cellHight;
+    return realheight + 75;
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
+  
     return self.msgDatialArray.count;
 }
 

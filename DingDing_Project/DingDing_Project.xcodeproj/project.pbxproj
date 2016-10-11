@@ -89,6 +89,7 @@
 		8AE26D531D59B4F000855257 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D4C1D59B4F000855257 /* NSArray+PureLayout.m */; };
 		8AE26D541D59B4F000855257 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D4E1D59B4F000855257 /* NSLayoutConstraint+PureLayout.m */; };
 		8AE26D5C1D59B73C00855257 /* NSView+BackGroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D5B1D59B73C00855257 /* NSView+BackGroundColor.m */; };
+		8AE2844B1DACD1A000F40EAE /* message_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE2844A1DACD1A000F40EAE /* message_bg.png */; };
 		8AE3FD0F1DA8DBAA0023331C /* chatFile.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE3FD0E1DA8DBAA0023331C /* chatFile.png */; };
 		8AE3FD111DA8DC230023331C /* chatFile_entered.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE3FD101DA8DC230023331C /* chatFile_entered.png */; };
 		8AE3FD141DA8E2060023331C /* addMember.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE3FD121DA8E2060023331C /* addMember.png */; };
@@ -259,6 +260,7 @@
 		8AE26D561D59B68700855257 /* HXPrefixHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXPrefixHeader.h; sourceTree = "<group>"; };
 		8AE26D5A1D59B73C00855257 /* NSView+BackGroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+BackGroundColor.h"; sourceTree = "<group>"; };
 		8AE26D5B1D59B73C00855257 /* NSView+BackGroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+BackGroundColor.m"; sourceTree = "<group>"; };
+		8AE2844A1DACD1A000F40EAE /* message_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message_bg.png; sourceTree = "<group>"; };
 		8AE3FD0E1DA8DBAA0023331C /* chatFile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatFile.png; sourceTree = "<group>"; };
 		8AE3FD101DA8DC230023331C /* chatFile_entered.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatFile_entered.png; sourceTree = "<group>"; };
 		8AE3FD121DA8E2060023331C /* addMember.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addMember.png; sourceTree = "<group>"; };
@@ -794,6 +796,7 @@
 		8AE3FD0D1DA8DBA00023331C /* RightChatView */ = {
 			isa = PBXGroup;
 			children = (
+				8AE2844A1DACD1A000F40EAE /* message_bg.png */,
 				8AE49A951DAA4BFE00461D8C /* rightBG.png */,
 				8AE3FD0E1DA8DBAA0023331C /* chatFile.png */,
 				8AE3FD101DA8DC230023331C /* chatFile_entered.png */,
@@ -985,6 +988,7 @@
 				8A5589691D741455000AF3EA /* MainMenu.xib in Resources */,
 				8AE3FD181DA8E2980023331C /* callDing.png in Resources */,
 				8AE49A961DAA4BFE00461D8C /* rightBG.png in Resources */,
+				8AE2844B1DACD1A000F40EAE /* message_bg.png in Resources */,
 				8A4C6A1D1D7EB09F005BC413 /* message.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
