@@ -27,11 +27,14 @@ CGRect CTRunGetTypographicBoundsForImageRect(CTRunRef run, CTLineRef line, CGPoi
 // 获取CTFrameRef
 - (CTFrameRef)prepareFrameRefWithRect:(CGRect)rect;
 
-// 获取label高度
-- (CGFloat)boundingHeightForWidth:(CGFloat)width;
+// 所有文字占据一行所需要的宽度
+- (CGFloat)oneLineRealityWidth;
 
-// 获取固定行数的高度
-- (CGFloat)boundingHeightForWidth:(CGFloat)width
-                    numberOfLines:(NSUInteger)numberOfLines;
+// 获取固定宽度下文字需要的实际高度
+- (CGFloat)realityHeightForWidth:(CGFloat)width;
+
+// 获取固定行数需要的实际高度
+- (CGSize)realitySizeForWidth:(CGFloat)width
+                numberOfLines:(NSUInteger)numberOfLines;
 
 @end

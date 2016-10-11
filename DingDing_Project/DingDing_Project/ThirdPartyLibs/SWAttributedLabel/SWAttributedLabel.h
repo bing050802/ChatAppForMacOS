@@ -31,8 +31,8 @@
 
 @property (nonatomic, strong) NSMutableAttributedString *attributedString;
 
-//大小
-- (CGSize)sizeThatFits:(CGSize)size;
+// 计算实际文字占据的大小
+- (CGSize)textRealContantSize;
 
 //普通文本
 - (void)setText:(NSString *)text;

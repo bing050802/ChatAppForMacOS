@@ -53,6 +53,7 @@ static NSString* const kEllipsesCharacter = @"\u2026";
     if (!_attributedString) {
         return;
     }
+    
     // 1.获取图形上下文
     CGContextRef context =  (CGContextRef) [[NSGraphicsContext currentContext] graphicsPort];
     
@@ -70,18 +71,16 @@ static NSString* const kEllipsesCharacter = @"\u2026";
 }
 
 
-
 #pragma mark -
 #pragma mark 计算文本的大小
-- (CGSize)sizeThatFits:(CGSize)size
+- (CGSize)textRealContantSize
 {
     if (!_attributedString) {
         return CGSizeZero;
     }
     // _numberOfLines行情况下文字的高度
-    CGFloat height = [_attributedString boundingHeightForWidth:size.width
-                                                 numberOfLines:_numberOfLines];
-    return CGSizeMake(size.width, height);
+    CGSize realSize = [_attributedString realitySizeForWidth:NSWidth(self.frame) numberOfLines:_numberOfLines];
+    return CGSizeMake(realSize.width, realSize.height);
 }
 
 // 获取当前需要展示的行数
@@ -255,7 +254,7 @@ static NSString* const kEllipsesCharacter = @"\u2026";
                 }
             }
             
-            NSLog(@"%@",imageInfo.imageName);
+//            NSLog(@"%@",imageInfo.imageName);
             
             // 绘制图片
             if (imageInfo.imageType == SWImageNormalType) {
@@ -268,7 +267,7 @@ static NSString* const kEllipsesCharacter = @"\u2026";
                 CGImageRef ref = [image CGImageForProposedRect:&imageRect context:[NSGraphicsContext currentContext] hints:nil];
                 
                 rect = CGRectMake(nrect.origin.x, self.frame.size.height - nrect.origin.y, nrect.size.width, nrect.size.height);
-                NSLog(@"%@",NSStringFromRect(rect));
+//                NSLog(@"%@",NSStringFromRect(rect));
                 CGContextDrawImage(context, nrect, ref);
             }
             else if (imageInfo.imageType == SWImageGIFType ) {
@@ -278,7 +277,7 @@ static NSString* const kEllipsesCharacter = @"\u2026";
                                           rect.size.width,
                                           rect.size.height);
                 
-                NSLog(@"%@",NSStringFromRect(frame));
+//                NSLog(@"%@",NSStringFromRect(frame));
                 
                 NSImageView *imageView = [[NSImageView alloc] init];
                 imageView.animates = YES;

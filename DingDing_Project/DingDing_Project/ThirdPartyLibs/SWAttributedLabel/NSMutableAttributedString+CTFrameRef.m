@@ -131,13 +131,19 @@ CGRect UIEdgeInsetsInsetRect(CGRect rect, NSEdgeInsets insets) {
 #pragma mark -
 #pragma mark 获取label高度
 
-- (CGFloat)boundingHeightForWidth:(CGFloat)width {
-    return [self boundingHeightForWidth:width
-                          numberOfLines:0];
+- (CGFloat)oneLineRealityWidth {
+    CGFloat realW = [self realitySizeForWidth:MAXFLOAT numberOfLines:0].width;
+    return ceil(realW);
 }
 
-- (CGFloat)boundingHeightForWidth:(CGFloat)width
-                    numberOfLines:(NSUInteger)numberOfLines {
+
+- (CGFloat)realityHeightForWidth:(CGFloat)width {
+    CGFloat realH =  [self realitySizeForWidth:width numberOfLines:0].height;
+    return ceil(realH);
+}
+
+- (CGSize)realitySizeForWidth:(CGFloat)width
+                numberOfLines:(NSUInteger)numberOfLines {
     CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)self);
     
     CFRange range = CFRangeMake(0, 0);
@@ -157,9 +163,8 @@ CGRect UIEdgeInsetsInsetRect(CGRect rect, NSEdgeInsets insets) {
     }
     
     // range表示计算绘制文字的范围，当值为zero时表示绘制全部文字
-    CGSize newSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, range, NULL, CGSizeMake(width, MAXFLOAT), NULL);
-    
-    return newSize.height;
+    CGSize textSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, range, NULL, CGSizeMake(width, MAXFLOAT), NULL);
+    return CGSizeMake(ceil(textSize.width), ceil(textSize.height));
 }
 
 #pragma mark -
@@ -168,14 +173,14 @@ CGRect UIEdgeInsetsInsetRect(CGRect rect, NSEdgeInsets insets) {
 - (CTFrameRef)prepareFrameRefWithRect:(CGRect)rect {
     CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)self);
     
-//    CGMutablePathRef path = CGPathCreateMutable();
-//    CGPathAddRect(path, nil, rect);
-//    CTFrameRef frameRef = CTFramesetterCreateFrame(framesetter, CFRangeMake(0, 0), path, NULL);
-//    
-//    CGPathRelease(path);
-//    CFRelease(framesetter);
+    CGMutablePathRef path = CGPathCreateMutable();
+    CGPathAddRect(path, nil, rect);
+    CTFrameRef frameRef = CTFramesetterCreateFrame(framesetter, CFRangeMake(0, 0), path, NULL);
     
-    return [self createFrameWithFramesetter:framesetter width:NSWidth(rect) height:NSHeight(rect)];
+    CGPathRelease(path);
+    CFRelease(framesetter);
+    
+    return frameRef;
 }
 
 - (CTFrameRef)createFrameWithFramesetter:(CTFramesetterRef)framesetter
