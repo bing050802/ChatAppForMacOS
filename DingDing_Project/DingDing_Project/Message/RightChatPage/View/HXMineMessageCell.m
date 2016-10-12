@@ -41,8 +41,6 @@
     if (!message.profile_image.length) {
         self.iconImage.image = [NSImage circleImageWithColor:HXRandomColor size:self.iconImage.frame.size text:message.name];
     }
-
-    
     
     // 2014-10-30 18:07:47
     self.timeLabel.stringValue = [message.create_time substringWithRange:NSMakeRange(message.create_time.length - 5, 5)];
@@ -53,7 +51,10 @@
         self.textBgWidthCons.constant = textRealSize.width + 20;
     }
     self.textBgHeightCons.constant = textRealSize.height + 20;
-    [self setNeedsLayout:YES];
+    [self setNeedsDisplay:YES];
+    
+    
+    NSTextView
 }
 
 

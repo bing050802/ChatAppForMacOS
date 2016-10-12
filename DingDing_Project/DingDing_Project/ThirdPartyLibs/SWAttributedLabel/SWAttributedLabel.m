@@ -77,12 +77,6 @@ static NSString* const kEllipsesCharacter = @"\u2026";
 #pragma mark 计算文本的大小
 
 
-- (void)setFont:(NSFont *)font {
-    _font = font;
-    [_attributedString setFont:font];
-    [self setNeedsDisplay:YES];
-}
-
 - (CGSize)textRealContantSize
 {
     if (!_attributedString) {

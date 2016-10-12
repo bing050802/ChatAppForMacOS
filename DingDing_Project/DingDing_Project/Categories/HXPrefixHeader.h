@@ -38,6 +38,7 @@
 // IKImageBrowserView。developer.apple.com/library/etc/redirect/xcode/mac/1153/samplecode/ImageBrowserViewAppearance/Introduction/Intro.html
 
 // https://github.com/phaibin/DragDropDemo  拖拽文件到mac app
+//https://github.com/davepkennedy/DragTable tableView 拖拽
 
 // https://github.com/void-main/VMMagnifyComparer 图片处理 cgimageref nsimage转换 bitmap之间的关系
 
@@ -63,14 +64,6 @@
 #ifndef __OPTIMIZE__
 #define NSLog(...) printf("%f %s\n",[[NSDate date]timeIntervalSince1970],[[NSString stringWithFormat:__VA_ARGS__]UTF8String]);
 #endif
-/**
- *  常写代码块
- 
- NSView *view = [[NSView alloc] initWithFrame:NSMakeRect(10, 200, 200, 300)];
- [view backGroundColor:[NSColor redColor]];
- [self.view addSubview:view];
- */
-
 
 
 
