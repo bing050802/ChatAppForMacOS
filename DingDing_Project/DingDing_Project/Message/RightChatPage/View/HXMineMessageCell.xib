@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="HXMineMessageCell"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="HXMineMessageCell">
+            <rect key="frame" x="0.0" y="0.0" width="449" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v0C-RV-1IU">
+                    <rect key="frame" x="389" y="20" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="0co-o9-zkF"/>
+                        <constraint firstAttribute="height" constant="40" id="RSA-Qm-ARp"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Q04-dh-JDg"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="C2u-qE-uYg">
+                    <rect key="frame" x="340" y="65" width="34" height="14"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="18:00" id="JVy-TO-8Zv">
+                        <font key="font" metaFont="system" size="11"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="BYE-uO-rHQ">
+                    <rect key="frame" x="54" y="30" width="320" height="30"/>
+                    <subviews>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="sBM-O9-wHu" customClass="SWAttributedLabel">
+                            <rect key="frame" x="10" y="10" width="300" height="10"/>
+                        </customView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="0u0-1l-iuI"/>
+                        <constraint firstAttribute="trailing" secondItem="sBM-O9-wHu" secondAttribute="trailing" constant="10" id="fId-QO-cA1"/>
+                        <constraint firstItem="sBM-O9-wHu" firstAttribute="leading" secondItem="BYE-uO-rHQ" secondAttribute="leading" constant="10" id="mce-9s-CPa"/>
+                        <constraint firstAttribute="width" constant="320" id="p1B-kI-YM6"/>
+                        <constraint firstAttribute="bottom" secondItem="sBM-O9-wHu" secondAttribute="bottom" constant="10" id="r4w-ZA-pOz"/>
+                        <constraint firstItem="sBM-O9-wHu" firstAttribute="top" secondItem="BYE-uO-rHQ" secondAttribute="top" constant="10" id="tSW-By-KP7"/>
+                    </constraints>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="v0C-RV-1IU" firstAttribute="top" secondItem="BYE-uO-rHQ" secondAttribute="top" id="VA6-1o-N1e"/>
+                <constraint firstItem="v0C-RV-1IU" firstAttribute="top" secondItem="C2u-qE-uYg" secondAttribute="bottom" constant="5" id="abK-ud-cL4"/>
+                <constraint firstItem="v0C-RV-1IU" firstAttribute="leading" secondItem="BYE-uO-rHQ" secondAttribute="trailing" constant="15" id="fjF-dE-fOC"/>
+                <constraint firstItem="v0C-RV-1IU" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="40" id="k0j-TF-2OC"/>
+                <constraint firstAttribute="trailing" secondItem="v0C-RV-1IU" secondAttribute="trailing" constant="20" id="nu1-Ud-gFC"/>
+                <constraint firstAttribute="trailing" secondItem="C2u-qE-uYg" secondAttribute="trailing" constant="77" id="qTC-te-3h5"/>
+            </constraints>
+            <connections>
+                <outlet property="iconImage" destination="v0C-RV-1IU" id="DQy-aM-ZMq"/>
+                <outlet property="labelBgView" destination="BYE-uO-rHQ" id="WGD-bG-thr"/>
+                <outlet property="msgLabel" destination="sBM-O9-wHu" id="SJy-Iv-grd"/>
+                <outlet property="textBgHeightCons" destination="0u0-1l-iuI" id="ZMm-oa-sdf"/>
+                <outlet property="textBgWidthCons" destination="p1B-kI-YM6" id="u8t-br-lQS"/>
+                <outlet property="timeLabel" destination="C2u-qE-uYg" id="xTQ-bL-ZAG"/>
+            </connections>
+            <point key="canvasLocation" x="-541" y="-166"/>
+        </customView>
+    </objects>
+</document>

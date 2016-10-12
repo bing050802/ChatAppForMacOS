@@ -16,6 +16,51 @@ inline static void zeroClearInt(int* p, size_t count) { memset(p, 0, sizeof(int)
 
 
 
++ (NSImage *)circleImageWithColor:(NSColor *)color size:(NSSize)size {
+    return  [self circleImageWithColor:color size:size text:nil];
+}
+
++ (NSImage *)circleImageWithColor:(NSColor *)color size:(NSSize)size text:(NSString *)text {
+    NSImage *colorImage = [self imageWithColor:color size:size text:text];
+    return [colorImage circleImageWithBorderWidth:0 borderColor:[NSColor whiteColor] size:size];
+}
+
+
++ (NSImage *)imageWithColor:(NSColor *)color size:(NSSize)size {
+    return [self imageWithColor:color size:size text:nil];
+}
+
++ (NSImage *)imageWithColor:(NSColor *)color size:(NSSize)size text:(NSString *)text {
+    NSImage *image = [[NSImage alloc] initWithSize:size];
+    [image lockFocus];
+    [color drawSwatchInRect:NSMakeRect(0, 0, size.width, size.height)];
+    if (text.length) {
+        
+        NSMutableParagraphStyle *pStyle = [[NSMutableParagraphStyle alloc] init];
+        [pStyle setAlignment:NSCenterTextAlignment];
+        text = [text substringWithRange:NSMakeRange(text.length - 2,2)];
+        NSAttributedString *attStr = [[NSAttributedString alloc] initWithString:text
+                                                                     attributes:
+                                      @{
+                                        NSForegroundColorAttributeName:[NSColor whiteColor],
+                                        NSParagraphStyleAttributeName:pStyle,
+                                        NSFontAttributeName:[NSFont systemFontOfSize:13]
+                                        }];
+        [attStr drawInRect:CGRectMake(0, (18 - size.height) * 0.5, size.width, size.height)];
+    }
+    
+    [image unlockFocus];
+    return image;
+}
+
+
+
+
+
+
+
+
+
 - (NSImage *)circleImageWithBorderWidth:(CGFloat)borderWidth borderColor:(NSColor *)borderColor size:(CGSize)size
 {
     // 1.加载原图

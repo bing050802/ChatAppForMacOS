@@ -11,7 +11,9 @@
 #import "HXPrefixHeader.h"
 #import "HXMessage.h"
 #import "HXBarButton.h"
+
 #import "HXMsgDatailCell.h"
+#import "HXMineMessageCell.h"
 
 #import "JMModalOverlay.h"
 #import "HXPersonalController.h"
@@ -48,7 +50,8 @@
 
 @implementation HXRightChatViewController
 
-static NSString *cellID = @"msgDatilCell";
+static NSString *datilCellID = @"datilCellID";
+static NSString *mineCellID = @"mineCellID";
 
 - (NSMutableArray *)msgArray  {
     if (!_msgArray) {
@@ -124,7 +127,10 @@ static NSString *cellID = @"msgDatilCell";
     
     // 消息详情列表
     self.datailTableView.headerView = nil;
-    [self.datailTableView registerNib:[[NSNib alloc] initWithNibNamed:NSStringFromClass([HXMsgDatailCell class]) bundle:nil]  forIdentifier:cellID];
+    [self.datailTableView registerNib:[[NSNib alloc] initWithNibNamed:NSStringFromClass([HXMsgDatailCell class]) bundle:nil]  forIdentifier:datilCellID];
+     [self.datailTableView registerNib:[[NSNib alloc] initWithNibNamed:NSStringFromClass([HXMineMessageCell class]) bundle:nil]  forIdentifier:mineCellID];
+    
+    
      [self.datailTableView.superview.superview setHidden:YES];
 //    HXColor(248, 251, 255)  [NSColor colorWithRed:248 green:251 blue:255 alpha:1.0]
     self.datailTableView.backgroundColor = HXColor(248, 251, 255);
@@ -154,7 +160,7 @@ static NSString *cellID = @"msgDatilCell";
 
 
 - (nullable NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row {
-    HXMsgDatailCell *cell = [tableView makeViewWithIdentifier:cellID owner:self];
+    HXMineMessageCell *cell = [tableView makeViewWithIdentifier:mineCellID owner:self];
     cell.message = self.msgDatialArray[row];
     return cell;
 }
@@ -176,7 +182,7 @@ static NSString *cellID = @"msgDatilCell";
 
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
-    
+
     
 }
 

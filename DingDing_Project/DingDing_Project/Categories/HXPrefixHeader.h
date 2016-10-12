@@ -11,6 +11,7 @@
 #import "PureLayout.h"
 #import "NSImageView+WebCache.h"
 #import "MJExtension.h"
+#import <CoreGraphics/CoreGraphics.h>
 
 // 可能有用的第三方
 

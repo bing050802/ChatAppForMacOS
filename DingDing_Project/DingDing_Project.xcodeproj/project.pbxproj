@@ -82,6 +82,8 @@
 		8AC667B81DABB35300250E02 /* SWAttributedImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC667B21DABB35300250E02 /* SWAttributedImageInfo.m */; };
 		8AC667B91DABB35300250E02 /* SWAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC667B41DABB35300250E02 /* SWAttributedLabel.m */; };
 		8AC78CFD1DADD8DB00BC459D /* QQ20161012-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AC78CFC1DADD8DB00BC459D /* QQ20161012-0.png */; };
+		8AC78D001DAE074200BC459D /* HXMineMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC78CFF1DAE074200BC459D /* HXMineMessageCell.m */; };
+		8AC78D021DAE07A100BC459D /* HXMineMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AC78D011DAE07A100BC459D /* HXMineMessageCell.xib */; };
 		8AE26D341D598A4800855257 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D2F1D598A4800855257 /* AppDelegate.m */; };
 		8AE26D351D598A4800855257 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AE26D301D598A4800855257 /* Assets.xcassets */; };
 		8AE26D371D598A4800855257 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D331D598A4800855257 /* main.m */; };
@@ -242,6 +244,9 @@
 		8AC667B31DABB35300250E02 /* SWAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWAttributedLabel.h; sourceTree = "<group>"; };
 		8AC667B41DABB35300250E02 /* SWAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWAttributedLabel.m; sourceTree = "<group>"; };
 		8AC78CFC1DADD8DB00BC459D /* QQ20161012-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QQ20161012-0.png"; sourceTree = "<group>"; };
+		8AC78CFE1DAE074200BC459D /* HXMineMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMineMessageCell.h; sourceTree = "<group>"; };
+		8AC78CFF1DAE074200BC459D /* HXMineMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMineMessageCell.m; sourceTree = "<group>"; };
+		8AC78D011DAE07A100BC459D /* HXMineMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXMineMessageCell.xib; sourceTree = "<group>"; };
 		8AE26D161D5989C500855257 /* DingDing_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DingDing_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE26D271D5989C500855257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		8AE26D2E1D598A4800855257 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -530,6 +535,9 @@
 		8A9C6FF31D9E7472002D82AF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8AC78CFE1DAE074200BC459D /* HXMineMessageCell.h */,
+				8AC78CFF1DAE074200BC459D /* HXMineMessageCell.m */,
+				8AC78D011DAE07A100BC459D /* HXMineMessageCell.xib */,
 				8AE49A891DAA1BBA00461D8C /* HXMsgDatailCell.h */,
 				8AE49A8A1DAA1BBA00461D8C /* HXMsgDatailCell.m */,
 				8AE49A8C1DAA1BE600461D8C /* HXMsgDatailCell.xib */,
@@ -954,6 +962,7 @@
 			files = (
 				8A4C6A2A1D7EB1F3005BC413 /* dingpan.png in Resources */,
 				8AE26D351D598A4800855257 /* Assets.xcassets in Resources */,
+				8AC78D021DAE07A100BC459D /* HXMineMessageCell.xib in Resources */,
 				8AE3FD111DA8DC230023331C /* chatFile_entered.png in Resources */,
 				8A4C6A3D1D7EBBCF005BC413 /* topBarRight.png in Resources */,
 				8A4C6A221D7EB13E005BC413 /* connect.png in Resources */,
@@ -1042,6 +1051,7 @@
 				8AAD92831D632D1D007E4A8F /* MVShadow.m in Sources */,
 				8AC667B81DABB35300250E02 /* SWAttributedImageInfo.m in Sources */,
 				8AE49A8B1DAA1BBA00461D8C /* HXMsgDatailCell.m in Sources */,
+				8AC78D001DAE074200BC459D /* HXMineMessageCell.m in Sources */,
 				8AFF852B1D9BBFE600BB9B67 /* MJExtensionConst.m in Sources */,
 				8A4C6A4C1D7ED62A005BC413 /* NFLayerBackedView.m in Sources */,
 				8AE26D371D598A4800855257 /* main.m in Sources */,

@@ -23,15 +23,17 @@
 @property (weak) IBOutlet NSView *labelBgView;
 
 @property (weak) IBOutlet SWAttributedLabel *attLabel;
+
 @property (weak) IBOutlet NSLayoutConstraint *textBgHeightCons;
 @property (weak) IBOutlet NSLayoutConstraint *textBgWidthCons;
+
 @end
 
 @implementation HXMsgDatailCell
 
 - (void)awakeFromNib {
 //    self.selectionHighlighted = YES; HXColor(23, 142, 235) [NSColor whiteColor]
-    [self.labelBgView backGroundColor:[NSColor colorWithPatternImage:[NSImage imageNamed:@"message_bg.png"]]];
+    [self.labelBgView backGroundColor:[NSColor whiteColor]];
     self.labelBgView.layer.borderColor = HXColor(225, 224, 228).CGColor;
     self.labelBgView.layer.borderWidth = 1.1;
     self.labelBgView.layer.cornerRadius = 7.0;
