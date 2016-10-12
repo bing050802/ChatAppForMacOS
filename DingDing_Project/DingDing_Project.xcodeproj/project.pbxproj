@@ -81,6 +81,7 @@
 		8AC667B71DABB35300250E02 /* NSMutableAttributedString+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC667B01DABB35300250E02 /* NSMutableAttributedString+Parse.m */; };
 		8AC667B81DABB35300250E02 /* SWAttributedImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC667B21DABB35300250E02 /* SWAttributedImageInfo.m */; };
 		8AC667B91DABB35300250E02 /* SWAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC667B41DABB35300250E02 /* SWAttributedLabel.m */; };
+		8AC78CFD1DADD8DB00BC459D /* QQ20161012-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AC78CFC1DADD8DB00BC459D /* QQ20161012-0.png */; };
 		8AE26D341D598A4800855257 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D2F1D598A4800855257 /* AppDelegate.m */; };
 		8AE26D351D598A4800855257 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AE26D301D598A4800855257 /* Assets.xcassets */; };
 		8AE26D371D598A4800855257 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D331D598A4800855257 /* main.m */; };
@@ -240,6 +241,7 @@
 		8AC667B21DABB35300250E02 /* SWAttributedImageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWAttributedImageInfo.m; sourceTree = "<group>"; };
 		8AC667B31DABB35300250E02 /* SWAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWAttributedLabel.h; sourceTree = "<group>"; };
 		8AC667B41DABB35300250E02 /* SWAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWAttributedLabel.m; sourceTree = "<group>"; };
+		8AC78CFC1DADD8DB00BC459D /* QQ20161012-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QQ20161012-0.png"; sourceTree = "<group>"; };
 		8AE26D161D5989C500855257 /* DingDing_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DingDing_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE26D271D5989C500855257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		8AE26D2E1D598A4800855257 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -420,6 +422,7 @@
 		3349A9EA1D8535C20095C667 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8AC78CFC1DADD8DB00BC459D /* QQ20161012-0.png */,
 				3349A9EB1D8535C20095C667 /* HXRightChatViewController.h */,
 				3349A9EC1D8535C20095C667 /* HXRightChatViewController.m */,
 				3349A9ED1D8535C20095C667 /* HXRightChatViewController.xib */,
@@ -956,6 +959,7 @@
 				8A4C6A221D7EB13E005BC413 /* connect.png in Resources */,
 				8A4C6A291D7EB1F3005BC413 /* dingpan_seclected.png in Resources */,
 				8A4C6A381D7EB665005BC413 /* creatIcon.png in Resources */,
+				8AC78CFD1DADD8DB00BC459D /* QQ20161012-0.png in Resources */,
 				8A4C6A131D7EB06E005BC413 /* search_btn.png in Resources */,
 				8AFF852A1D9BBFE600BB9B67 /* Info.plist in Resources */,
 				8AE3FD0F1DA8DBAA0023331C /* chatFile.png in Resources */,

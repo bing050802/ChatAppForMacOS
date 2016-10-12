@@ -10,6 +10,8 @@
 #import "HXPrefixHeader.h"
 #import "SWAttributedLabel.h"
 
+
+
 @interface HXMsgDatailCell ()
 
 @property (weak) IBOutlet NSImageView *iconImageView;
@@ -21,16 +23,21 @@
 @property (weak) IBOutlet NSView *labelBgView;
 
 @property (weak) IBOutlet SWAttributedLabel *attLabel;
-@property (weak) IBOutlet NSLayoutConstraint *heightConstriants;
-
+@property (weak) IBOutlet NSLayoutConstraint *textBgHeightCons;
+@property (weak) IBOutlet NSLayoutConstraint *textBgWidthCons;
 @end
 
 @implementation HXMsgDatailCell
 
 - (void)awakeFromNib {
-//    self.selectionHighlighted = YES;
-    [self.labelBgView backGroundColor:[NSColor whiteColor]];
-
+//    self.selectionHighlighted = YES; HXColor(23, 142, 235) [NSColor whiteColor]
+    [self.labelBgView backGroundColor:[NSColor colorWithPatternImage:[NSImage imageNamed:@"message_bg.png"]]];
+    self.labelBgView.layer.borderColor = HXColor(225, 224, 228).CGColor;
+    self.labelBgView.layer.borderWidth = 1.1;
+    self.labelBgView.layer.cornerRadius = 7.0;
+    
+    self.attLabel.font = [NSFont systemFontOfSize:messageTextFont];
+    
 }
 
 
@@ -48,8 +55,11 @@
     
     [self.attLabel setText:message.text];
     CGSize textRealSize = [self.attLabel textRealContantSize];
-    self.heightConstriants.constant = textRealSize.height + 10;
-
+    if (textRealSize.height <= 17) {
+        self.textBgWidthCons.constant = textRealSize.width + 20;
+    }
+    self.textBgHeightCons.constant = textRealSize.height + 20;
+    [self setNeedsLayout:YES];
 
 }
 

@@ -110,7 +110,7 @@ static NSString *cellID = @"msgDatilCell";
 - (void)loadView {
     [super loadView];
     
-    [self.view backGroundColor:HXColor(246, 250, 255)];
+    [self.view backGroundColor:HXColor(248, 251, 255)];
     
     // 顶部 工具栏
     [self.topView backGroundColor:HXColor(246, 250, 255)];
@@ -126,6 +126,8 @@ static NSString *cellID = @"msgDatilCell";
     self.datailTableView.headerView = nil;
     [self.datailTableView registerNib:[[NSNib alloc] initWithNibNamed:NSStringFromClass([HXMsgDatailCell class]) bundle:nil]  forIdentifier:cellID];
      [self.datailTableView.superview.superview setHidden:YES];
+//    HXColor(248, 251, 255)  [NSColor colorWithRed:248 green:251 blue:255 alpha:1.0]
+    self.datailTableView.backgroundColor = HXColor(248, 251, 255);
     
     
     [NotificationCenter addObserver:self selector:@selector(middleTabelViewSelected:)
@@ -158,13 +160,12 @@ static NSString *cellID = @"msgDatilCell";
 }
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
-
     HXMessage *message = self.msgDatialArray[row];
     NSMutableAttributedString *mattString = [[NSMutableAttributedString alloc] initWithString:message.text];
-    [mattString setFont:[NSFont systemFontOfSize:16.0]];
-    CGFloat realheight = [mattString realityHeightForWidth:310];
+    [mattString setFont:[NSFont systemFontOfSize:messageTextFont]];
+    CGFloat realheight = [mattString realityHeightForWidth:300];
 //   return message.cellHight;
-    return realheight + 75;
+    return realheight + 85;
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
@@ -178,15 +179,6 @@ static NSString *cellID = @"msgDatilCell";
     
     
 }
-
-
-
-
-
-
-
-
-
 
 
 

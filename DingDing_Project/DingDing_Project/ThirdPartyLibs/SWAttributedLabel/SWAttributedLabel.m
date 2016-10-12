@@ -36,11 +36,11 @@ static NSString* const kEllipsesCharacter = @"\u2026";
     
     _imageSize         = CGSizeZero;
     _imageMargin       = NSEdgeInsetsMake(0, 1, 0, 1);
-    _font              = [NSFont systemFontOfSize:16.f];
+    _font              = [NSFont systemFontOfSize:14.f];
     _textColor         = [NSColor blackColor];
     
     _textAlignment     = kCTTextAlignmentLeft;
-    _lineBreakMode     = kCTLineBreakByWordWrapping | kCTLineBreakByCharWrapping;
+    _lineBreakMode     = kCTLineBreakByWordWrapping;
     _imageAlignment    = SWImageAlignmentBottom;
     
     _images = [NSMutableArray array];
@@ -75,6 +75,14 @@ static NSString* const kEllipsesCharacter = @"\u2026";
 
 #pragma mark -
 #pragma mark 计算文本的大小
+
+
+- (void)setFont:(NSFont *)font {
+    _font = font;
+    [_attributedString setFont:font];
+    [self setNeedsDisplay:YES];
+}
+
 - (CGSize)textRealContantSize
 {
     if (!_attributedString) {
@@ -135,6 +143,7 @@ static NSString* const kEllipsesCharacter = @"\u2026";
     
     [self.layer setNeedsDisplay];
 }
+
 
 #pragma mark -
 #pragma mark 绘制内容

@@ -10,6 +10,8 @@
 #import "HXBaseTabelCell.h"
 #import "HXMessage.h"
 
+#define  messageTextFont 14.0
+
 @interface HXMsgDatailCell : HXBaseTabelCell
 
 @property (nonatomic,strong) HXMessage *message;

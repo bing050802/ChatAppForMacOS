@@ -546,7 +546,7 @@ NSString* const NFSplitViewControllerDidFinishLiveResizeNotification = @"NFSplit
     
     self.splitView = [[NFSplitViewControllerView alloc] initWithFrame:self.view.bounds];
     self.splitView.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
-    self.splitView.backgroundColor = [NSColor lightGrayColor];
+    self.splitView.backgroundColor = [NSColor clearColor];
     self.splitView.controller = self;
     [self.view addSubview:self.splitView];
     
