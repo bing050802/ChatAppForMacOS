@@ -249,7 +249,6 @@ static NSString* const kEllipsesCharacter = @"\u2026";
             CGRect rect = CGRectMake(nrect.origin.x, self.frame.size.height - nrect.origin.y - nrect.size.height, nrect.size.width, nrect.size.height);
             
             
-            
             if (index == numberOfLines - 1 && idx >= runCount - 2 && _lineBreakMode == kCTLineBreakByTruncatingTail) {
                 //最后行最后的2个CTRun需要做额外判断
                 CGFloat attachmentWidth = CGRectGetWidth(rect);
@@ -264,44 +263,18 @@ static NSString* const kEllipsesCharacter = @"\u2026";
             // 绘制图片
             if (imageInfo.imageType == SWImageNormalType) {
                 
-//                NSImage *image = [[NSImage alloc] initWithContentsOfFile:imageInfo.imagePath];
-                
                 NSImage *image = [NSImage imageNamed:imageInfo.imageName];
                 NSRect imageRect = NSMakeRect(0, 0, imageInfo.imageSize.width, imageInfo.imageSize.height);
                 
                 CGImageRef ref = [image CGImageForProposedRect:&imageRect context:[NSGraphicsContext currentContext] hints:nil];
                 
-                rect = CGRectMake(nrect.origin.x, self.frame.size.height - nrect.origin.y, nrect.size.width, nrect.size.height);
-//                NSLog(@"%@",NSStringFromRect(rect));
+//                rect = CGRectMake(nrect.origin.x, self.frame.size.height - nrect.origin.y, nrect.size.width, nrect.size.height);
+
                 CGContextDrawImage(context, nrect, ref);
             }
             else if (imageInfo.imageType == SWImageGIFType ) {
-                
-                CGRect frame = CGRectMake(rect.origin.x,
-                                          self.bounds.size.height - rect.origin.y - rect.size.height,
-                                          rect.size.width,
-                                          rect.size.height);
-                
-//                NSLog(@"%@",NSStringFromRect(frame));
-                
-                NSImageView *imageView = [[NSImageView alloc] init];
-                imageView.animates = YES;
-                imageView.canDrawSubviewsIntoLayer = YES;
-                
-                NSImage *image = [NSImage imageNamed:imageInfo.imageName];
-                
-                if (image) {
-                    imageView.image = image;
-                }else{
-                    NSImage *gifImage = [[NSImage alloc] initWithContentsOfFile:imageInfo.imagePath];
-                    imageView.image = gifImage;
-                }
-                
-//                if (imageView.superview == nil) {
-//                    [self addSubview:imageView];
-//                }
-                [self addSubview:imageView];
-                [imageView setFrame:frame];
+                [self loadGIFImageWithRect:rect info:imageInfo];
+
             }
             else {
                 NSLog(@"view类型的");
@@ -309,5 +282,28 @@ static NSString* const kEllipsesCharacter = @"\u2026";
         }
     }
 }
+
+
+- (void)loadGIFImageWithRect:(NSRect)rect info:(SWAttributedImageInfo *)imageInfo {
+    CGRect frame = CGRectMake(rect.origin.x,
+                              self.bounds.size.height - rect.origin.y - rect.size.height,
+                              rect.size.width,
+                              rect.size.height);
+    
+    NSImageView *imageView = [[NSImageView alloc] init];
+    imageView.animates = YES;
+    imageView.canDrawSubviewsIntoLayer = YES;
+    NSImage *image = [NSImage imageNamed:imageInfo.imageName];
+    if (image) {
+        imageView.image = image;
+    } else {
+        NSImage *gifImage = [[NSImage alloc] initWithContentsOfFile:imageInfo.imagePath];
+        imageView.image = gifImage;
+    }
+    [self addSubview:imageView];
+    [imageView setFrame:frame];
+}
+
+
 
 @end

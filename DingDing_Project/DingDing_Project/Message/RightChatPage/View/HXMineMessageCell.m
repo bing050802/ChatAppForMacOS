@@ -54,7 +54,7 @@
     [self setNeedsDisplay:YES];
     
     
-    NSTextView
+//    NSTextView
 }
 
 
