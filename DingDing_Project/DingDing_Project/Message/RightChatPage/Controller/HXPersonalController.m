@@ -21,7 +21,7 @@
     [self.view backGroundColor:[NSColor grayColor]];
     self.view.layer.borderColor = [NSColor whiteColor].CGColor;
     self.view.layer.borderWidth = 5;
-        
+    
 }
 
 

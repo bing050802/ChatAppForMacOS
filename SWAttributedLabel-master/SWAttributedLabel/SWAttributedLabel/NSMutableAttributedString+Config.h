@@ -12,6 +12,8 @@
 
 @interface NSMutableAttributedString (Config)
 
++ (NSMutableAttributedString *)attributedStringWithAttachmentCell:(NSTextAttachmentCell *)attachment;
+
 // 设置颜色
 - (void)setTextColor:(NSColor *)color;
 - (void)setTextColor:(NSColor *)color range:(NSRange)range;

@@ -32,7 +32,11 @@
                                                                       owner:self
                                                                    userInfo:nil];
         [self addTrackingArea:trackingArea];
+//        [self refusesFirstResponder];
         
+        
+//        self.delaysKeyEvents = YES;
+//        NSTextField
         
         
     }
@@ -41,6 +45,7 @@
 - (void)copyText:(id)sender {
     
 }
+
 
 - (NSMenu *)menuForEvent:(NSEvent *)event
 {
@@ -80,11 +85,18 @@
 - (void)layout
 {
     [super layout];
-    
     self.button.frame = CGRectMake(5, 5, NSWidth(self.frame) - 10, NSHeight(self.frame) - 10);
-    
     NSLog(@"layout");
-    
+}
+
+- (BOOL)canBecomeKeyView {
+    return NO;
+}
+- (BOOL)performKeyEquivalent:(NSEvent *)event {
+    return YES;
+}
+- (BOOL)acceptsFirstMouse:(nullable NSEvent *)event {
+    return NO;
 }
 
 @end

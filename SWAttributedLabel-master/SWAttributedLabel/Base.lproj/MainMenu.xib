@@ -15,6 +15,7 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
                 <outlet property="imageView" destination="Cc9-O7-wJE" id="ZmK-A1-ggk"/>
+                <outlet property="textField" destination="jtb-tk-9cK" id="hmo-Cv-Zwc"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -667,8 +668,9 @@
                     </menu>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="-40" y="-236"/>
         </menu>
-        <window title="SWAttributedLabel" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
+        <window title="SWAttributedLabel" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="CWindow">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
@@ -682,16 +684,23 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="sQw-ut-aWQ"/>
                     </imageView>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wrk-X2-6K4">
-                        <rect key="frame" x="380" y="234" width="37" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="Tdk-12-a9Z">
-                            <font key="font" metaFont="system"/>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jtb-tk-9cK">
+                        <rect key="frame" x="188" y="165" width="104" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="WYM-HX-2su"/>
+                            <constraint firstAttribute="height" constant="30" id="eTG-mF-mbX"/>
+                        </constraints>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="Pzi-ph-Y3h">
+                            <font key="font" metaFont="system" size="15"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="jtb-tk-9cK" firstAttribute="centerX" secondItem="EiT-Mj-1SZ" secondAttribute="centerX" id="M3g-2s-gpY"/>
+                    <constraint firstItem="jtb-tk-9cK" firstAttribute="centerY" secondItem="EiT-Mj-1SZ" secondAttribute="centerY" id="rfL-8F-CH8"/>
+                </constraints>
             </view>
             <point key="canvasLocation" x="-16" y="34"/>
         </window>

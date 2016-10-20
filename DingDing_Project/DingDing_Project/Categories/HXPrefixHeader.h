@@ -47,6 +47,11 @@
 // https://github.com/enormego/EGOCache 缓存工具类
 
 //https://github.com/aa703463228/SWAttributedLabel  Use In Mac OS，To show Gif or Images with text
+// How an Event Enters a Cocoa Application 苹果官方文档 事件处理
+
+
+//  158 1053 5371
+
 
 #define selfWidth   self.frame.size.width
 #define selfHeight  self.frame.size.height
