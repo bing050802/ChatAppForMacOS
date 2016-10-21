@@ -10,8 +10,11 @@
 #import "SWAttributedLabel.h"
 #import "CustomView.h"
 #import "CustomAttachMentCell.h"
+#import "HXTextView.h"
 
 @interface AppDelegate ()
+
+@property (unsafe_unretained) IBOutlet HXTextView *textView;
 
 @property (weak) IBOutlet NSTextField *textField;
 
@@ -27,20 +30,17 @@
     
     CustomAttachMentCell *attCell = [[CustomAttachMentCell alloc] init];
     attCell.attachImage = [NSImage imageNamed:@"haha@2x"];
-    attCell.attachSize = CGSizeMake(20, 20);
+    attCell.attachSize = CGSizeMake(30, 30);
     NSMutableAttributedString *attString = [NSMutableAttributedString attributedStringWithAttachmentCell:attCell];
-
-    NSMutableAttributedString *mAttString = [[NSMutableAttributedString alloc] initWithString:@"我是个"];
+    
+    NSMutableAttributedString *mAttString = [[NSMutableAttributedString alloc] initWithString:@"我是刘强东微[/haha]博发声shi个好事刘强东微个"];
     [mAttString appendAttributedString:attString];
     
-    self.textField.attributedStringValue = mAttString;
-
-    
-//    CGRect boundingRect = self.textField.font.boundingRectForFont;
-//    CGFloat pointSize = self.textField.font.pointSize;
-//    NSSize maximumAdvancement = self.textField.font.maximumAdvancement;
-    
-    
+    self.textView.textContainerInset = NSMakeSize(0, 10.0);
+    self.textView.drawsBackground = NO;
+    self.textView.font = [NSFont systemFontOfSize:14];
+    [self.textView insertText:mAttString replacementRange:NSMakeRange(0, 0)];
+    self.textView.editable = NO;
 }
 
 

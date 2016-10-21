@@ -12,20 +12,15 @@
 
 - (void)drawWithFrame:(NSRect)cellFrame inView:(nullable NSView *)controlView {
     
-    CGFloat controlViewH = NSHeight(controlView.frame);
-    CGFloat cellX = cellFrame.origin.x;
-    CGFloat cellW = cellFrame.size.width;
-    CGFloat cellH = cellFrame.size.height;
-    CGFloat cellY = (controlViewH - cellH) * 0.5;
-    [self.attachImage drawInRect:CGRectMake(cellX, cellY, cellW, cellH)];
+    [self.attachImage drawInRect:cellFrame];
 }
 
 - (NSSize)cellSize {
     return self.attachSize;
 }
-//- (NSPoint)cellBaselineOffset {
-//    return CGPointZero;
-//}
+- (NSPoint)cellBaselineOffset {
+    return CGPointMake(0, -5);
+}
 
 
 @end

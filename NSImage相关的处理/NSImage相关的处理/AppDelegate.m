@@ -15,6 +15,7 @@
 
 //About High Resolution for OS X  苹果文档
 //http://www.tuicool.com/articles/ARFjei6 详细解读 sdwebimage 源码
+//http://blog.csdn.net/sodaslay/article/details/10050039  将一个NSImage实例保存成图片文件 
 
 
 @interface AppDelegate ()

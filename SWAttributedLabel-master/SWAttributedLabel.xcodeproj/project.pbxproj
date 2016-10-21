@@ -23,6 +23,7 @@
 		0DE90D901D76DBD100CA210E /* haha1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0DE90D8C1D76DBD100CA210E /* haha1.gif */; };
 		0DE90D911D76DBD100CA210E /* haqian.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0DE90D8D1D76DBD100CA210E /* haqian.gif */; };
 		8AC78CFB1DADCFF200BC459D /* white_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AC78CFA1DADCFF200BC459D /* white_bg.png */; };
+		8ACDE0E11DBA084000260063 /* HXTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACDE0E01DBA084000260063 /* HXTextView.m */; };
 		8AD11D5B1DB8A98F004D2AB4 /* CustomAttachMentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD11D5A1DB8A98F004D2AB4 /* CustomAttachMentCell.m */; };
 		8AE2844E1DACFA3900F40EAE /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE2844D1DACFA3900F40EAE /* CustomView.m */; };
 		8AEDE40F1DB4D53C0074AA0C /* CWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEDE40E1DB4D53C0074AA0C /* CWindow.m */; };
@@ -74,6 +75,8 @@
 		0DE90D8C1D76DBD100CA210E /* haha1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = haha1.gif; sourceTree = "<group>"; };
 		0DE90D8D1D76DBD100CA210E /* haqian.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = haqian.gif; sourceTree = "<group>"; };
 		8AC78CFA1DADCFF200BC459D /* white_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white_bg.png; sourceTree = "<group>"; };
+		8ACDE0DF1DBA084000260063 /* HXTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTextView.h; sourceTree = "<group>"; };
+		8ACDE0E01DBA084000260063 /* HXTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTextView.m; sourceTree = "<group>"; };
 		8AD11D591DB8A98F004D2AB4 /* CustomAttachMentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAttachMentCell.h; sourceTree = "<group>"; };
 		8AD11D5A1DB8A98F004D2AB4 /* CustomAttachMentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAttachMentCell.m; sourceTree = "<group>"; };
 		8AE2844C1DACFA3900F40EAE /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
@@ -148,6 +151,8 @@
 				0DE90D501D76DB7300CA210E /* Supporting Files */,
 				8AD11D591DB8A98F004D2AB4 /* CustomAttachMentCell.h */,
 				8AD11D5A1DB8A98F004D2AB4 /* CustomAttachMentCell.m */,
+				8ACDE0DF1DBA084000260063 /* HXTextView.h */,
+				8ACDE0E01DBA084000260063 /* HXTextView.m */,
 			);
 			path = SWAttributedLabel;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ACDE0E11DBA084000260063 /* HXTextView.m in Sources */,
 				0DE90D851D76DB8700CA210E /* NSMutableAttributedString+Config.m in Sources */,
 				8AD11D5B1DB8A98F004D2AB4 /* CustomAttachMentCell.m in Sources */,
 				0DE90D881D76DB8700CA210E /* SWAttributedImageInfo.m in Sources */,
