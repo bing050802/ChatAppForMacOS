@@ -8,6 +8,7 @@
 
 #import "CustomAttachMentCell.h"
 
+
 @implementation CustomAttachMentCell
 
 - (void)drawWithFrame:(NSRect)cellFrame inView:(nullable NSView *)controlView {

@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "SWAttributedLabel.h"
 #import "CustomView.h"
+
+
 #import "CustomAttachMentCell.h"
 #import "HXTextView.h"
 
@@ -41,6 +43,7 @@
     self.textView.font = [NSFont systemFontOfSize:14];
     [self.textView insertText:mAttString replacementRange:NSMakeRange(0, 0)];
     self.textView.editable = NO;
+     
 }
 
 

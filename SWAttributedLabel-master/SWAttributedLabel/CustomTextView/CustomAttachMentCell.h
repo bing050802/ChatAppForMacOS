@@ -7,6 +7,7 @@
 //
 
 #import <AppKit/AppKit.h>
+#import "NSMutableAttributedString+AttachMent.h"
 
 @interface CustomAttachMentCell : NSTextAttachmentCell
 

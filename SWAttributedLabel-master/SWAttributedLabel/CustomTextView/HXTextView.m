@@ -21,7 +21,7 @@
 - (NSView *)backGroundView {
     if (!_backGroundView) {
         NSRect rect = self.bounds;
-        NSRect newRect = NSMakeRect(rect.origin.x + 1, rect.origin.y + 1, rect.size.width - 1, rect.size.height - 1);
+        NSRect newRect = NSMakeRect(rect.origin.x + 0, rect.origin.y + 0, rect.size.width - 0, rect.size.height - 0);
         _backGroundView = [[NSView alloc] initWithFrame:newRect];
         _backGroundView.wantsLayer = YES;
         _backGroundView.layer.cornerRadius = 8;

@@ -10,12 +10,6 @@
 
 @implementation NSMutableAttributedString (Config)
 
-+ (NSMutableAttributedString *)attributedStringWithAttachmentCell:(NSTextAttachmentCell *)attachmentCell {
-    NSTextAttachment *att = [[NSTextAttachment alloc] init];
-    att.attachmentCell = attachmentCell;
-    NSAttributedString *attString = [NSAttributedString attributedStringWithAttachment:att];
-    return [[NSMutableAttributedString alloc] initWithAttributedString:attString];
-}
 
 // 设置颜色
 - (void)setTextColor:(NSColor *)color {
