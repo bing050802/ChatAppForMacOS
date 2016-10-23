@@ -169,11 +169,8 @@ static NSString *mineCellID = @"mineCellID";
     HXMessage *message = self.msgDatialArray[row];
     NSMutableAttributedString *mattString = [[NSMutableAttributedString alloc] initWithString:message.text];
     [mattString setFont:[NSFont systemFontOfSize:messageTextFont]];
-//    CGFloat realheight = [mattString realityHeightForWidth:300];
-    
-    CGFloat realheight = [mattString boundingRectWithSize:CGSizeMake(300, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin| NSStringDrawingUsesFontLeading].size.height;
-//   return message.cellHight;
-    return realheight + 85;
+    CGFloat realheight = [mattString realityHeightForWidth:320];
+    return realheight + 60;
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {

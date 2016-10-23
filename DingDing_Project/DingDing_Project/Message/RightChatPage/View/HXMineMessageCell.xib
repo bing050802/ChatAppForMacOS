@@ -23,7 +23,7 @@
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="C2u-qE-uYg">
                     <rect key="frame" x="340" y="65" width="34" height="14"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="18:00" id="JVy-TO-8Zv">
-                        <font key="font" metaFont="system" size="11"/>
+                        <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -31,17 +31,40 @@
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="BYE-uO-rHQ">
                     <rect key="frame" x="54" y="30" width="320" height="30"/>
                     <subviews>
-                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="sBM-O9-wHu" customClass="SWAttributedLabel">
-                            <rect key="frame" x="10" y="10" width="300" height="10"/>
-                        </customView>
+                        <scrollView wantsLayer="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPJ-9k-tIa">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                            <clipView key="contentView" id="NFq-3t-D3W">
+                                <rect key="frame" x="1" y="1" width="318" height="28"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="Dge-ug-19Q" customClass="HXTextView">
+                                        <rect key="frame" x="0.0" y="-0.5" width="318" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="minSize" width="318" height="28"/>
+                                        <size key="maxSize" width="463" height="10000000"/>
+                                        <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </clipView>
+                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="n51-Dh-gKT">
+                                <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </scroller>
+                            <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="Ws9-nn-sd4">
+                                <rect key="frame" x="303" y="1" width="16" height="28"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </scroller>
+                        </scrollView>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="0u0-1l-iuI"/>
-                        <constraint firstAttribute="trailing" secondItem="sBM-O9-wHu" secondAttribute="trailing" constant="10" id="fId-QO-cA1"/>
-                        <constraint firstItem="sBM-O9-wHu" firstAttribute="leading" secondItem="BYE-uO-rHQ" secondAttribute="leading" constant="10" id="mce-9s-CPa"/>
+                        <constraint firstItem="bPJ-9k-tIa" firstAttribute="leading" secondItem="BYE-uO-rHQ" secondAttribute="leading" id="BoM-FW-Zb3"/>
+                        <constraint firstAttribute="trailing" secondItem="bPJ-9k-tIa" secondAttribute="trailing" id="mW4-f1-ppJ"/>
                         <constraint firstAttribute="width" constant="320" id="p1B-kI-YM6"/>
-                        <constraint firstAttribute="bottom" secondItem="sBM-O9-wHu" secondAttribute="bottom" constant="10" id="r4w-ZA-pOz"/>
-                        <constraint firstItem="sBM-O9-wHu" firstAttribute="top" secondItem="BYE-uO-rHQ" secondAttribute="top" constant="10" id="tSW-By-KP7"/>
+                        <constraint firstItem="bPJ-9k-tIa" firstAttribute="top" secondItem="BYE-uO-rHQ" secondAttribute="top" id="qWy-ep-XMQ"/>
+                        <constraint firstAttribute="bottom" secondItem="bPJ-9k-tIa" secondAttribute="bottom" id="rSt-kC-uZw"/>
                     </constraints>
                 </customView>
             </subviews>
@@ -56,12 +79,12 @@
             <connections>
                 <outlet property="iconImage" destination="v0C-RV-1IU" id="DQy-aM-ZMq"/>
                 <outlet property="labelBgView" destination="BYE-uO-rHQ" id="WGD-bG-thr"/>
-                <outlet property="msgLabel" destination="sBM-O9-wHu" id="SJy-Iv-grd"/>
+                <outlet property="msgTextView" destination="Dge-ug-19Q" id="iST-vh-xxD"/>
                 <outlet property="textBgHeightCons" destination="0u0-1l-iuI" id="ZMm-oa-sdf"/>
                 <outlet property="textBgWidthCons" destination="p1B-kI-YM6" id="u8t-br-lQS"/>
                 <outlet property="timeLabel" destination="C2u-qE-uYg" id="xTQ-bL-ZAG"/>
             </connections>
-            <point key="canvasLocation" x="-541" y="-166"/>
+            <point key="canvasLocation" x="-593" y="-227"/>
         </customView>
     </objects>
 </document>

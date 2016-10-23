@@ -8,7 +8,10 @@
 
 #import "HXMineMessageCell.h"
 #import "HXPrefixHeader.h"
+
 #import "SWAttributedLabel.h"
+#import "HXTextView.h"
+
 #import "NSImage+StackBlur.h"
 
 @interface HXMineMessageCell ()
@@ -18,7 +21,7 @@
 
 @property (weak) IBOutlet NSView *labelBgView;
 
-@property (weak) IBOutlet SWAttributedLabel *msgLabel;
+@property (unsafe_unretained) IBOutlet HXTextView *msgTextView;
 
 @property (weak) IBOutlet NSLayoutConstraint *textBgHeightCons;
 @property (weak) IBOutlet NSLayoutConstraint *textBgWidthCons;
@@ -28,10 +31,18 @@
 @implementation HXMineMessageCell
 
 - (void)awakeFromNib {
-    [self.labelBgView backGroundColor:[NSColor whiteColor]];
-    self.labelBgView.layer.borderColor = HXColor(225, 224, 228).CGColor;
-    self.labelBgView.layer.borderWidth = 1.1;
-    self.labelBgView.layer.cornerRadius = 7.0;
+    
+//    [self.labelBgView backGroundColor:[NSColor redColor]];
+//    self.labelBgView.layer.borderColor = HXColor(225, 224, 228).CGColor;
+//    self.labelBgView.layer.borderWidth = 1.1;
+//    self.labelBgView.layer.cornerRadius = 7.0;
+    
+    self.msgTextView.textContainerInset = NSMakeSize(0, 8.0);
+    self.msgTextView.drawsBackground = NO;
+    self.msgTextView.borderColor = HXColor(225, 224, 228);
+    self.msgTextView.font = [NSFont systemFontOfSize:14.0];
+
+
 }
 
 - (void)setMessage:(HXMessage *)message {
@@ -45,16 +56,18 @@
     // 2014-10-30 18:07:47
     self.timeLabel.stringValue = [message.create_time substringWithRange:NSMakeRange(message.create_time.length - 5, 5)];
     
-    [self.msgLabel setText:message.text];
-    CGSize textRealSize = [self.msgLabel textRealContantSize];
+    
+    NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:message.text];
+    [attString setFont:[NSFont systemFontOfSize:14.0]];
+    [self.msgTextView insertText:attString replacementRange:NSMakeRange(0, 0)];
+    self.msgTextView.editable = NO;
+    
+    CGSize textRealSize = [attString realitySizeForWidth:320 numberOfLines:0];
     if (textRealSize.height <= 17) {
-        self.textBgWidthCons.constant = textRealSize.width + 20;
+        self.textBgWidthCons.constant = textRealSize.width + 15;
     }
-    self.textBgHeightCons.constant = textRealSize.height + 20;
-    [self setNeedsDisplay:YES];
+    self.textBgHeightCons.constant = textRealSize.height + 16;
     
-    
-//    NSTextView
 }
 
 

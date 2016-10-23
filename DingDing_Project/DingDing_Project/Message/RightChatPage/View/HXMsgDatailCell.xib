@@ -72,7 +72,7 @@
                 <outlet property="textBgWidthCons" destination="RC4-xl-S74" id="GQ5-iF-Eez"/>
                 <outlet property="timeLable" destination="7Uc-We-56w" id="dcj-E2-iO0"/>
             </connections>
-            <point key="canvasLocation" x="-437" y="-446"/>
+            <point key="canvasLocation" x="-473" y="-498"/>
         </customView>
     </objects>
 </document>
