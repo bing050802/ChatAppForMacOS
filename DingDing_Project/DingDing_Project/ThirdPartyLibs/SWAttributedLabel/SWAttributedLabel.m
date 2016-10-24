@@ -130,7 +130,7 @@ static NSString* const kEllipsesCharacter = @"\u2026";
     
     _images = [_attributedString setImageAlignment:_imageAlignment imageMargin:_imageMargin imageSize:_imageSize font:_font];
     
-    [_attributedString setAttributedsWithLineSpacing:_lineSpacing
+    [_attributedString setLineSpacing:_lineSpacing
                                     paragraphSpacing:_paragraphSpacing
                                        textAlignment:_textAlignment
                                        lineBreakMode:_lineBreakMode];

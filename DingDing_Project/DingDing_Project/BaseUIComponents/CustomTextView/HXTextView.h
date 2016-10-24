@@ -7,6 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "NSScrollView+Enabled.h"
+#import "CustomAttachMentCell.h"
 
 @interface HXTextView : NSTextView
 

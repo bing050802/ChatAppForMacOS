@@ -12,5 +12,6 @@
 
 + (NSMutableAttributedString *)attributedStringWithAttachmentCell:(NSTextAttachmentCell *)attachmentCell;
 
+- (void)apppendAttachmentCell:(NSTextAttachmentCell *)attachmentCell;
 
 @end

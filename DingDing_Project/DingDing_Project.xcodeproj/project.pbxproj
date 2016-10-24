@@ -111,6 +111,8 @@
 		8AE49A8D1DAA1BE600461D8C /* HXMsgDatailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AE49A8C1DAA1BE600461D8C /* HXMsgDatailCell.xib */; };
 		8AE49A941DAA225B00461D8C /* HXBaseTabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE49A931DAA225B00461D8C /* HXBaseTabelCell.m */; };
 		8AE49A961DAA4BFE00461D8C /* rightBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE49A951DAA4BFE00461D8C /* rightBG.png */; };
+		8AF2075C1DBDE1C200710DBC /* NSScrollView+Enabled.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF2075B1DBDE1C200710DBC /* NSScrollView+Enabled.m */; };
+		8AF2075E1DBDF0F400710DBC /* haha@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF2075D1DBDF0F400710DBC /* haha@2x.png */; };
 		8AF5CAD11D74208F003E7DA2 /* HXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF5CACF1D74208F003E7DA2 /* HXViewController.m */; };
 		8AF5CAD21D74208F003E7DA2 /* HXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AF5CAD01D74208F003E7DA2 /* HXViewController.xib */; };
 		8AFF852A1D9BBFE600BB9B67 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AFF85141D9BBFE600BB9B67 /* Info.plist */; };
@@ -296,6 +298,9 @@
 		8AE49A921DAA225B00461D8C /* HXBaseTabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXBaseTabelCell.h; sourceTree = "<group>"; };
 		8AE49A931DAA225B00461D8C /* HXBaseTabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXBaseTabelCell.m; sourceTree = "<group>"; };
 		8AE49A951DAA4BFE00461D8C /* rightBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightBG.png; sourceTree = "<group>"; };
+		8AF2075A1DBDE1C200710DBC /* NSScrollView+Enabled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSScrollView+Enabled.h"; sourceTree = "<group>"; };
+		8AF2075B1DBDE1C200710DBC /* NSScrollView+Enabled.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSScrollView+Enabled.m"; sourceTree = "<group>"; };
+		8AF2075D1DBDF0F400710DBC /* haha@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "haha@2x.png"; sourceTree = "<group>"; };
 		8AF5CACE1D74208F003E7DA2 /* HXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXViewController.h; sourceTree = "<group>"; };
 		8AF5CACF1D74208F003E7DA2 /* HXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXViewController.m; sourceTree = "<group>"; };
 		8AF5CAD01D74208F003E7DA2 /* HXViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXViewController.xib; sourceTree = "<group>"; };
@@ -460,6 +465,9 @@
 		33C74A021DBCF6340017BBD9 /* CustomTextView */ = {
 			isa = PBXGroup;
 			children = (
+				8AF2075D1DBDF0F400710DBC /* haha@2x.png */,
+				8AF2075A1DBDE1C200710DBC /* NSScrollView+Enabled.h */,
+				8AF2075B1DBDE1C200710DBC /* NSScrollView+Enabled.m */,
 				33C74A031DBCF6340017BBD9 /* CustomAttachMentCell.h */,
 				33C74A041DBCF6340017BBD9 /* CustomAttachMentCell.m */,
 				33C74A051DBCF6340017BBD9 /* HXTextView.h */,
@@ -986,6 +994,7 @@
 				8AE3FD111DA8DC230023331C /* chatFile_entered.png in Resources */,
 				8A4C6A3D1D7EBBCF005BC413 /* topBarRight.png in Resources */,
 				8A4C6A221D7EB13E005BC413 /* connect.png in Resources */,
+				8AF2075E1DBDF0F400710DBC /* haha@2x.png in Resources */,
 				8A4C6A291D7EB1F3005BC413 /* dingpan_seclected.png in Resources */,
 				8A4C6A381D7EB665005BC413 /* creatIcon.png in Resources */,
 				8A4C6A131D7EB06E005BC413 /* search_btn.png in Resources */,
@@ -1095,6 +1104,7 @@
 				8A9C6FF61D9E7493002D82AF /* HXChatMessge.m in Sources */,
 				8AAD92821D632D1D007E4A8F /* MVGraphicsFunctions.m in Sources */,
 				3349A9DB1D852FF60095C667 /* MLPopupWindow.m in Sources */,
+				8AF2075C1DBDE1C200710DBC /* NSScrollView+Enabled.m in Sources */,
 				8AB431001D9B70440063CF7A /* SDWebImageCompat.m in Sources */,
 				8AB430FB1D9B70440063CF7A /* SDWebImageDownloader.m in Sources */,
 				33650FBC1D97FCE700D8F571 /* HXMessageCell.m in Sources */,

@@ -8,9 +8,10 @@
 
 #import "HXMsgDatailCell.h"
 #import "HXPrefixHeader.h"
-#import "SWAttributedLabel.h"
 
-
+#import "HXTextView.h"
+#import "NSMutableAttributedString+CTFrameRef.h"
+#import "NSMutableAttributedString+Config.h"
 
 @interface HXMsgDatailCell ()
 
@@ -20,26 +21,23 @@
 
 @property (weak) IBOutlet NSTextField *timeLable;
 
-@property (weak) IBOutlet NSView *labelBgView;
+@property (unsafe_unretained) IBOutlet HXTextView *attTextView;
 
-@property (weak) IBOutlet SWAttributedLabel *attLabel;
-
-@property (weak) IBOutlet NSLayoutConstraint *textBgHeightCons;
-@property (weak) IBOutlet NSLayoutConstraint *textBgWidthCons;
+@property (weak) IBOutlet NSLayoutConstraint *textHeightCons;
+@property (weak) IBOutlet NSLayoutConstraint *textWidthCons;
 
 @end
 
 @implementation HXMsgDatailCell
 
 - (void)awakeFromNib {
-//    self.selectionHighlighted = YES; HXColor(23, 142, 235) [NSColor whiteColor]
-    [self.labelBgView backGroundColor:[NSColor whiteColor]];
-    self.labelBgView.layer.borderColor = HXColor(225, 224, 228).CGColor;
-    self.labelBgView.layer.borderWidth = 1.1;
-    self.labelBgView.layer.cornerRadius = 7.0;
     
-    self.attLabel.font = [NSFont systemFontOfSize:messageTextFont];
-    
+    self.attTextView.textContainerInset = NSMakeSize(5, 10.0);
+    self.attTextView.drawsBackground = NO;
+    self.attTextView.borderColor = HXColor(225, 224, 228);
+    self.attTextView.font = [NSFont systemFontOfSize:14.0];
+    self.attTextView.textColor = HXColor(70, 70, 70);
+
 }
 
 
@@ -51,25 +49,33 @@
     
     // 2014-10-30 18:07:47
     self.timeLable.stringValue = [message.create_time substringWithRange:NSMakeRange(message.create_time.length - 5, 5)];
-    //self.msgLabel.stringValue = message.text;
     
-//    NSLog(@"----%@",NSStringFromRect(self.attLabel.frame));
     
-    [self.attLabel setText:message.text];
-    CGSize textRealSize = [self.attLabel textRealContantSize];
-    if (textRealSize.height <= 17) {
-        self.textBgWidthCons.constant = textRealSize.width + 20;
+    CustomAttachMentCell *attCell = [[CustomAttachMentCell alloc] init];
+    attCell.attachImage = [NSImage imageNamed:@"haha@2x"];
+    attCell.attachSize = CGSizeMake(20, 20);
+
+    NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:message.text];
+//    [attString apppendAttachmentCell:attCell];
+    
+    
+    [attString setFont:[NSFont systemFontOfSize:14.0]];
+    [attString setLineSpacing:5];
+    [self.attTextView insertText:attString replacementRange:NSMakeRange(0, 0)];
+    self.attTextView.editable = NO;
+    CGSize textRealSize = [attString realitySizeForWidth:310 numberOfLines:0];
+    CGFloat onelineWidth = [attString oneLineRealityWidth];
+    if (onelineWidth <= 310.0) {
+        self.textWidthCons.constant = textRealSize.width + 20;
     }
-    self.textBgHeightCons.constant = textRealSize.height + 20;
-    [self setNeedsLayout:YES];
+    self.textHeightCons.constant = textRealSize.height + 20;
+    
 
 }
 
 
 - (void)layout {
     [super layout];
-//    NSLog(@"layout");
-    
 }
 
 @end

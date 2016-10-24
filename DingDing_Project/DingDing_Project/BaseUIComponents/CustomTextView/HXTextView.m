@@ -72,9 +72,10 @@
 
 
 - (void)setUp {
+    self.enclosingScrollView.disableScroller = YES;
     self.enclosingScrollView.borderType = NSNoBorder;
-//    self.enclosingScrollView.hasVerticalScroller = NO;
-//    self.enclosingScrollView.hasHorizontalScroller = NO;
+    self.enclosingScrollView.hasVerticalScroller = NO;
+    self.enclosingScrollView.hasHorizontalScroller = NO;
     [self.superview addSubview:self.backGroundView positioned:NSWindowBelow relativeTo:self];
 }
 

@@ -12,7 +12,6 @@
 @implementation CustomAttachMentCell
 
 - (void)drawWithFrame:(NSRect)cellFrame inView:(nullable NSView *)controlView {
-    
     [self.attachImage drawInRect:cellFrame];
 }
 

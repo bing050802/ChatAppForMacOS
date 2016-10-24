@@ -20,6 +20,9 @@
 - (void)setFont:(NSFont *)font;
 - (void)setFont:(NSFont *)font range:(NSRange)range;
 
+- (void)setLineSpacing:(CGFloat)lineSpacing;
+
+
 // 设置下划线
 - (void)setUnderlineStyle:(CTUnderlineStyle)style
                  modifier:(CTUnderlineStyleModifiers)modifier;
@@ -28,10 +31,10 @@
                     range:(NSRange)range;
 
 // 设置属性
-- (NSMutableAttributedString *)setAttributedsWithLineSpacing:(CGFloat)lineSpacing
-                                            paragraphSpacing:(CGFloat)paragraphSpacing
-                                               textAlignment:(CTTextAlignment)textAlignment
-                                               lineBreakMode:(CTLineBreakMode)lineBreakMode;
+- (void)setLineSpacing:(CGFloat)lineSpacing
+      paragraphSpacing:(CGFloat)paragraphSpacing
+         textAlignment:(CTTextAlignment)textAlignment
+         lineBreakMode:(CTLineBreakMode)lineBreakMode;
 
 @end
 

@@ -67,7 +67,7 @@ static NSString *mineCellID = @"mineCellID";
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"new_topics.plist" ofType:nil];
         NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
         _msgDatialArray = [HXMessage mj_objectArrayWithKeyValuesArray:dict[@"list"]];
-        [_msgDatialArray addObjectsFromArray:self.msgArray];
+//        [_msgDatialArray addObjectsFromArray:self.msgArray];
     }
     return _msgDatialArray;
 }
@@ -128,13 +128,14 @@ static NSString *mineCellID = @"mineCellID";
     // 消息详情列表
     self.datailTableView.headerView = nil;
     [self.datailTableView registerNib:[[NSNib alloc] initWithNibNamed:NSStringFromClass([HXMsgDatailCell class]) bundle:nil]  forIdentifier:datilCellID];
-     [self.datailTableView registerNib:[[NSNib alloc] initWithNibNamed:NSStringFromClass([HXMineMessageCell class]) bundle:nil]  forIdentifier:mineCellID];
+    [self.datailTableView registerNib:[[NSNib alloc] initWithNibNamed:NSStringFromClass([HXMineMessageCell class]) bundle:nil]  forIdentifier:mineCellID];
     
     
      [self.datailTableView.superview.superview setHidden:YES];
 //    HXColor(248, 251, 255)  [NSColor colorWithRed:248 green:251 blue:255 alpha:1.0]
     self.datailTableView.backgroundColor = HXColor(248, 251, 255);
     
+//    self.datailTableView.rowHeight
     
     [NotificationCenter addObserver:self selector:@selector(middleTabelViewSelected:)
                                name:NSTableViewSelectionDidChangeNotification object:nil];
@@ -160,17 +161,19 @@ static NSString *mineCellID = @"mineCellID";
 
 
 - (nullable NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row {
-    HXMineMessageCell *cell = [tableView makeViewWithIdentifier:mineCellID owner:self];
+    HXMsgDatailCell *cell = [tableView makeViewWithIdentifier:datilCellID owner:self];
     cell.message = self.msgDatialArray[row];
     return cell;
 }
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
     HXMessage *message = self.msgDatialArray[row];
+    
     NSMutableAttributedString *mattString = [[NSMutableAttributedString alloc] initWithString:message.text];
     [mattString setFont:[NSFont systemFontOfSize:messageTextFont]];
-    CGFloat realheight = [mattString realityHeightForWidth:320];
-    return realheight + 60;
+    [mattString setLineSpacing:5];
+    CGFloat realheight = [mattString realityHeightForWidth:310];
+    return realheight + 75;
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {

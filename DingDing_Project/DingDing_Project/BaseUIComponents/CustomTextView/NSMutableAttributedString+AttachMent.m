@@ -17,4 +17,11 @@
     return [[NSMutableAttributedString alloc] initWithAttributedString:attString];
 }
 
+- (void)apppendAttachmentCell:(NSTextAttachmentCell *)attachmentCell {
+    NSTextAttachment *att = [[NSTextAttachment alloc] init];
+    att.attachmentCell = attachmentCell;
+    NSAttributedString *attString = [NSAttributedString attributedStringWithAttachment:att];
+    [self appendAttributedString:attString];
+}
+
 @end

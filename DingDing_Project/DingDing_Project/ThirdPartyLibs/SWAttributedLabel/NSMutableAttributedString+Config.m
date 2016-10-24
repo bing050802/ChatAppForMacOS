@@ -60,11 +60,21 @@
     
 }
 
-// 设置属性
-- (NSMutableAttributedString *)setAttributedsWithLineSpacing:(CGFloat)lineSpacing
-                                            paragraphSpacing:(CGFloat)paragraphSpacing
-                                               textAlignment:(CTTextAlignment)textAlignment
-                                               lineBreakMode:(CTLineBreakMode)lineBreakMode {
+
+- (void)setLineSpacing:(CGFloat)lineSpacing {
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    [paragraphStyle setLineSpacing:lineSpacing];//调整行间距
+    [self addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [self length])];
+}
+
+- (void)setLineSpacing:(CGFloat)lineSpacing
+      paragraphSpacing:(CGFloat)paragraphSpacing
+         textAlignment:(CTTextAlignment)textAlignment
+         lineBreakMode:(CTLineBreakMode)lineBreakMode {
+    
+    [self removeAttribute:(id)kCTParagraphStyleAttributeName range:NSMakeRange(0, [self length])];
+    
+    
     // 设置行间距
     const CFIndex kNumberOfSettings = 6;
     CTParagraphStyleSetting theSettings[kNumberOfSettings] = {
@@ -81,8 +91,9 @@
                  value:(__bridge id)theParagraphRef
                  range:NSMakeRange(0, [self length])];
     CFRelease(theParagraphRef);
-    
-    return self;
+
 }
+
+
 
 @end
