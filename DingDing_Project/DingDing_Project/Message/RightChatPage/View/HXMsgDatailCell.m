@@ -12,6 +12,7 @@
 #import "HXTextView.h"
 #import "NSMutableAttributedString+CTFrameRef.h"
 #import "NSMutableAttributedString+Config.h"
+#import "SWAttributedLabel.h"
 
 @interface HXMsgDatailCell ()
 
@@ -53,16 +54,18 @@
     
     CustomAttachMentCell *attCell = [[CustomAttachMentCell alloc] init];
     attCell.attachImage = [NSImage imageNamed:@"haha@2x"];
-    attCell.attachSize = CGSizeMake(20, 20);
+    attCell.attachSize = CGSizeMake(30, 30);
 
     NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:message.text];
-//    [attString apppendAttachmentCell:attCell];
     
-    
+    [attString apppendAttachmentCell:attCell];
+
     [attString setFont:[NSFont systemFontOfSize:14.0]];
+    [attString setFont:[NSFont systemFontOfSize:30] range:NSMakeRange(attString.length - 1, 1)];
     [attString setLineSpacing:5];
     [self.attTextView insertText:attString replacementRange:NSMakeRange(0, 0)];
     self.attTextView.editable = NO;
+    
     CGSize textRealSize = [attString realitySizeForWidth:310 numberOfLines:0];
     CGFloat onelineWidth = [attString oneLineRealityWidth];
     if (onelineWidth <= 310.0) {

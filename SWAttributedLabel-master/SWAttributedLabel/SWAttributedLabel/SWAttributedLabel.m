@@ -64,10 +64,10 @@ static NSString* const kEllipsesCharacter = @"\u2026"; // 代表中文的 … �
 //    [self drawHighlightWithRect:rect];
     
     // 4.绘制文字
-    [self drawText:context];
+//    [self drawText:context];
     
     // 5.绘制图片
-    [self drawImages];
+//    [self drawImages];
 }
 
 

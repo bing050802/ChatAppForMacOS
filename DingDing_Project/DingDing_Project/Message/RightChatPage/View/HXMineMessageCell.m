@@ -7,12 +7,7 @@
 //
 
 #import "HXMineMessageCell.h"
-#import "HXPrefixHeader.h"
 
-#import "SWAttributedLabel.h"
-#import "HXTextView.h"
-
-#import "NSImage+StackBlur.h"
 
 @interface HXMineMessageCell ()
 
@@ -48,7 +43,6 @@
     if (!message.profile_image.length) {
         self.iconImage.image = [NSImage circleImageWithColor:HXRandomColor size:self.iconImage.frame.size text:message.name];
     }
-    
     // 2014-10-30 18:07:47
     self.timeLabel.stringValue = [message.create_time substringWithRange:NSMakeRange(message.create_time.length - 5, 5)];
     
@@ -58,7 +52,10 @@
     [self.msgTextView insertText:attString replacementRange:NSMakeRange(0, 0)];
     self.msgTextView.editable = NO;
     
-    CGSize textRealSize = [attString realitySizeForWidth:310 numberOfLines:0];
+//      NSLog(@"-----textContantSize-- %@",NSStringFromSize() );
+//    [attString realitySizeForWidth:310 numberOfLines:0]
+    
+    CGSize textRealSize = self.msgTextView.enclosingScrollView.contentSize;
     CGFloat onelineWidth = [attString oneLineRealityWidth];
     if (onelineWidth <= 310.0) {
         self.textWidthCons.constant = textRealSize.width + 20;

@@ -69,7 +69,7 @@ static NSString *const END_FLAG   = @"]";
         }
         
         // 获取图片imageAttString
-        NSMutableAttributedString *imageAttString = [self createImageAttributedString:imageInfo];
+        NSMutableAttributedString *imageAttString = nil;
         
         // imageAttString替换文字AttString
         NSString *imageStr = [NSString stringWithFormat:@"%@%@%@", BEGIN_FLAG, imageInfo.imageName, END_FLAG];
@@ -125,7 +125,7 @@ static NSString *const END_FLAG   = @"]";
     }
 }
 
-// 创建图片attString
+ //创建图片attString
 - (NSMutableAttributedString *)createImageAttributedString:(SWAttributedImageInfo *)imageInfo
 {
     CTRunDelegateCallbacks callbacks;

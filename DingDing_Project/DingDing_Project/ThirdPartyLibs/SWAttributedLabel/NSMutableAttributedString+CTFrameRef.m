@@ -9,6 +9,7 @@
 #import "NSMutableAttributedString+CTFrameRef.h"
 #import "SWAttributedImageInfo.h"
 
+
 @implementation NSMutableAttributedString (CTFrameRef)
 
 #pragma mark - NSRange / CFRange
@@ -144,27 +145,15 @@ CGRect UIEdgeInsetsInsetRect(CGRect rect, NSEdgeInsets insets) {
 
 - (CGSize)realitySizeForWidth:(CGFloat)width
                 numberOfLines:(NSUInteger)numberOfLines {
+    
     CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)self);
     
-    CFRange range = CFRangeMake(0, 0);
-    if (numberOfLines > 0 && framesetter) {
-        
-        CTFrameRef frameRef = [self createFrameWithFramesetter:framesetter width:width height:MAXFLOAT];
-        CFArrayRef lines = CTFrameGetLines(frameRef);
-        
-        if (nil != lines && CFArrayGetCount(lines) > 0) {
-            NSInteger lastVisibleLineIndex = MIN(numberOfLines, CFArrayGetCount(lines)) - 1;
-            CTLineRef lastVisibleLine = CFArrayGetValueAtIndex(lines, lastVisibleLineIndex);
-            
-            CFRange rangeToLayout = CTLineGetStringRange(lastVisibleLine);
-            range = CFRangeMake(0, rangeToLayout.location + rangeToLayout.length);
-        }
-        CFRelease(frameRef);
-    }
+    // 获得要缓制的区域的高度
+    CGSize restrictSize = CGSizeMake(width, CGFLOAT_MAX);
+    CGSize coreTextSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRangeMake(0,0), nil, restrictSize, nil);
+
+    return CGSizeMake(ceil(coreTextSize.width), ceil(coreTextSize.height));
     
-    // range表示计算绘制文字的范围，当值为zero时表示绘制全部文字
-    CGSize textSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, range, NULL, CGSizeMake(width, MAXFLOAT), NULL);
-    return CGSizeMake(ceil(textSize.width), ceil(textSize.height));
 }
 
 #pragma mark -

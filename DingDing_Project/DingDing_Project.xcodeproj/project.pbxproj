@@ -54,6 +54,7 @@
 		8A565F751D6D8A920049C153 /* NSView+RBLAnimationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A565F741D6D8A920049C153 /* NSView+RBLAnimationAdditions.m */; };
 		8A66944B1D9D0B2A00C394B7 /* msgcell_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A66944A1D9D0B2A00C394B7 /* msgcell_delete.png */; };
 		8A9C6FF61D9E7493002D82AF /* HXChatMessge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C6FF51D9E7493002D82AF /* HXChatMessge.m */; };
+		8AA792A81DBE134E002B01B6 /* NSMutableAttributedString+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA792A71DBE134E002B01B6 /* NSMutableAttributedString+Parse.m */; };
 		8AAD92821D632D1D007E4A8F /* MVGraphicsFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD927F1D632D1D007E4A8F /* MVGraphicsFunctions.m */; };
 		8AAD92831D632D1D007E4A8F /* MVShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD92811D632D1D007E4A8F /* MVShadow.m */; };
 		8AAFF5FA1D5C622700E908EC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAFF5F91D5C622700E908EC /* QuartzCore.framework */; };
@@ -81,7 +82,6 @@
 		8AC667A51DABAE0D00250E02 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC667A41DABAE0D00250E02 /* UIKit.framework */; };
 		8AC667B51DABB35300250E02 /* NSMutableAttributedString+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC667AC1DABB35300250E02 /* NSMutableAttributedString+Config.m */; };
 		8AC667B61DABB35300250E02 /* NSMutableAttributedString+CTFrameRef.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC667AE1DABB35300250E02 /* NSMutableAttributedString+CTFrameRef.m */; };
-		8AC667B71DABB35300250E02 /* NSMutableAttributedString+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC667B01DABB35300250E02 /* NSMutableAttributedString+Parse.m */; };
 		8AC667B81DABB35300250E02 /* SWAttributedImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC667B21DABB35300250E02 /* SWAttributedImageInfo.m */; };
 		8AC667B91DABB35300250E02 /* SWAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC667B41DABB35300250E02 /* SWAttributedLabel.m */; };
 		8AC78D001DAE074200BC459D /* HXMineMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC78CFF1DAE074200BC459D /* HXMineMessageCell.m */; };
@@ -199,6 +199,8 @@
 		8A66944A1D9D0B2A00C394B7 /* msgcell_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = msgcell_delete.png; sourceTree = "<group>"; };
 		8A9C6FF41D9E7493002D82AF /* HXChatMessge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXChatMessge.h; sourceTree = "<group>"; };
 		8A9C6FF51D9E7493002D82AF /* HXChatMessge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXChatMessge.m; sourceTree = "<group>"; };
+		8AA792A61DBE134E002B01B6 /* NSMutableAttributedString+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Parse.h"; sourceTree = "<group>"; };
+		8AA792A71DBE134E002B01B6 /* NSMutableAttributedString+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Parse.m"; sourceTree = "<group>"; };
 		8AAD927E1D632D1D007E4A8F /* MVGraphicsFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVGraphicsFunctions.h; sourceTree = "<group>"; };
 		8AAD927F1D632D1D007E4A8F /* MVGraphicsFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVGraphicsFunctions.m; sourceTree = "<group>"; };
 		8AAD92801D632D1D007E4A8F /* MVShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVShadow.h; sourceTree = "<group>"; };
@@ -247,8 +249,6 @@
 		8AC667AC1DABB35300250E02 /* NSMutableAttributedString+Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Config.m"; sourceTree = "<group>"; };
 		8AC667AD1DABB35300250E02 /* NSMutableAttributedString+CTFrameRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+CTFrameRef.h"; sourceTree = "<group>"; };
 		8AC667AE1DABB35300250E02 /* NSMutableAttributedString+CTFrameRef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+CTFrameRef.m"; sourceTree = "<group>"; };
-		8AC667AF1DABB35300250E02 /* NSMutableAttributedString+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Parse.h"; sourceTree = "<group>"; };
-		8AC667B01DABB35300250E02 /* NSMutableAttributedString+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Parse.m"; sourceTree = "<group>"; };
 		8AC667B11DABB35300250E02 /* SWAttributedImageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWAttributedImageInfo.h; sourceTree = "<group>"; };
 		8AC667B21DABB35300250E02 /* SWAttributedImageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWAttributedImageInfo.m; sourceTree = "<group>"; };
 		8AC667B31DABB35300250E02 /* SWAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWAttributedLabel.h; sourceTree = "<group>"; };
@@ -697,10 +697,10 @@
 			children = (
 				8AC667AB1DABB35300250E02 /* NSMutableAttributedString+Config.h */,
 				8AC667AC1DABB35300250E02 /* NSMutableAttributedString+Config.m */,
+				8AA792A61DBE134E002B01B6 /* NSMutableAttributedString+Parse.h */,
+				8AA792A71DBE134E002B01B6 /* NSMutableAttributedString+Parse.m */,
 				8AC667AD1DABB35300250E02 /* NSMutableAttributedString+CTFrameRef.h */,
 				8AC667AE1DABB35300250E02 /* NSMutableAttributedString+CTFrameRef.m */,
-				8AC667AF1DABB35300250E02 /* NSMutableAttributedString+Parse.h */,
-				8AC667B01DABB35300250E02 /* NSMutableAttributedString+Parse.m */,
 				8AC667B11DABB35300250E02 /* SWAttributedImageInfo.h */,
 				8AC667B21DABB35300250E02 /* SWAttributedImageInfo.m */,
 				8AC667B31DABB35300250E02 /* SWAttributedLabel.h */,
@@ -1076,6 +1076,7 @@
 				33C74A091DBCF6340017BBD9 /* CustomAttachMentCell.m in Sources */,
 				8AB431011D9B70440063CF7A /* SDWebImageDecoder.m in Sources */,
 				8AE26D521D59B4F000855257 /* ALView+PureLayout.m in Sources */,
+				8AA792A81DBE134E002B01B6 /* NSMutableAttributedString+Parse.m in Sources */,
 				8AFF85311D9BBFE600BB9B67 /* NSObject+MJCoding.m in Sources */,
 				8AFF85301D9BBFE600BB9B67 /* NSObject+MJClass.m in Sources */,
 				8AAD92831D632D1D007E4A8F /* MVShadow.m in Sources */,
@@ -1100,7 +1101,6 @@
 				8AB430FD1D9B70440063CF7A /* SDWebImageManager.m in Sources */,
 				8A565F751D6D8A920049C153 /* NSView+RBLAnimationAdditions.m in Sources */,
 				8A4C6A4D1D7ED62A005BC413 /* NFSplitViewController.m in Sources */,
-				8AC667B71DABB35300250E02 /* NSMutableAttributedString+Parse.m in Sources */,
 				8A9C6FF61D9E7493002D82AF /* HXChatMessge.m in Sources */,
 				8AAD92821D632D1D007E4A8F /* MVGraphicsFunctions.m in Sources */,
 				3349A9DB1D852FF60095C667 /* MLPopupWindow.m in Sources */,

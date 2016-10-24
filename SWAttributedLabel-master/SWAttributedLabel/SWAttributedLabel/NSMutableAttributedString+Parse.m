@@ -68,6 +68,9 @@ static NSString *const END_FLAG   = @"]";
             imageInfo.imageType = SWImageGIFType;
         }
         
+        
+        
+        
         // 获取图片imageAttString
         NSMutableAttributedString *imageAttString = [self createImageAttributedString:imageInfo];
         
