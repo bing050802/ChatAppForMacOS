@@ -180,9 +180,6 @@ static NSString *mineCellID = @"mineCellID";
     [self inputViewButtonsSetting];
     
     [self.inputBgView backGroundColor:HXColor(245, 249, 255)];
-    self.inputBgView.layer.borderWidth = 1.5;
-     self.inputBgView.layer.borderColor = [NSColor grayColor].CGColor;
-    self.inputTextView.textContainerInset = NSMakeSize(5, 10.0);
     self.inputTextView.drawsBackground = NO;
     self.inputTextView.borderWidth = 0;
     self.inputTextView.textViewBgColor = [NSColor clearColor];

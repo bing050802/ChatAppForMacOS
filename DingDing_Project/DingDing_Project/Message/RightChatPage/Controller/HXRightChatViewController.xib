@@ -229,7 +229,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="506" height="110"/>
                     <subviews>
                         <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Jp-6i-fhl">
-                            <rect key="frame" x="15" y="80" width="258" height="30"/>
+                            <rect key="frame" x="15" y="79" width="258" height="30"/>
                             <subviews>
                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MOC-7z-FFJ" customClass="HXBarButton">
                                     <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -353,16 +353,16 @@
                             </customSpacing>
                         </stackView>
                         <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9y-UV-lI7">
-                            <rect key="frame" x="0.0" y="0.0" width="506" height="80"/>
+                            <rect key="frame" x="0.0" y="0.0" width="506" height="79"/>
                             <clipView key="contentView" id="scA-tc-ik9">
-                                <rect key="frame" x="1" y="1" width="489" height="78"/>
+                                <rect key="frame" x="1" y="1" width="489" height="77"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="Tvq-lh-9aB" customClass="HXTextView">
-                                        <rect key="frame" x="0.0" y="0.0" width="489" height="78"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="489" height="77"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <size key="minSize" width="489" height="78"/>
+                                        <size key="minSize" width="489" height="77"/>
                                         <size key="maxSize" width="489" height="10000000"/>
                                         <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     </textView>
@@ -374,16 +374,30 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
                             <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="9xS-C2-UYd">
-                                <rect key="frame" x="490" y="1" width="15" height="78"/>
+                                <rect key="frame" x="490" y="1" width="15" height="77"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
                         </scrollView>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dbS-e0-90e">
+                            <rect key="frame" x="0.0" y="109" width="506" height="1"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1.5" id="nbM-CF-I6c"/>
+                            </constraints>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" drawsBackground="YES" id="QLq-XQ-98j">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                            </textFieldCell>
+                        </textField>
                     </subviews>
                     <constraints>
+                        <constraint firstItem="dbS-e0-90e" firstAttribute="top" secondItem="ffg-sA-UeS" secondAttribute="top" id="1R1-7z-1Vh"/>
+                        <constraint firstItem="dbS-e0-90e" firstAttribute="leading" secondItem="ffg-sA-UeS" secondAttribute="leading" id="Ee9-eZ-SwK"/>
                         <constraint firstAttribute="bottom" secondItem="X9y-UV-lI7" secondAttribute="bottom" id="JV1-yl-tuX"/>
                         <constraint firstItem="X9y-UV-lI7" firstAttribute="top" secondItem="8Jp-6i-fhl" secondAttribute="bottom" id="QVg-dO-3Lm"/>
-                        <constraint firstItem="8Jp-6i-fhl" firstAttribute="top" secondItem="ffg-sA-UeS" secondAttribute="top" id="hJX-UK-C2i"/>
+                        <constraint firstItem="8Jp-6i-fhl" firstAttribute="top" secondItem="ffg-sA-UeS" secondAttribute="top" constant="1.5" id="hJX-UK-C2i"/>
                         <constraint firstItem="8Jp-6i-fhl" firstAttribute="leading" secondItem="ffg-sA-UeS" secondAttribute="leading" constant="15" id="iw6-jI-nug"/>
+                        <constraint firstAttribute="trailing" secondItem="dbS-e0-90e" secondAttribute="trailing" id="obS-1L-53J"/>
                         <constraint firstAttribute="trailing" secondItem="X9y-UV-lI7" secondAttribute="trailing" id="pex-TN-2B8"/>
                         <constraint firstItem="X9y-UV-lI7" firstAttribute="leading" secondItem="ffg-sA-UeS" secondAttribute="leading" id="vtF-5r-ydt"/>
                     </constraints>
