@@ -32,13 +32,11 @@
 @implementation HXMsgDatailCell
 
 - (void)awakeFromNib {
-    
     self.attTextView.textContainerInset = NSMakeSize(5, 10.0);
     self.attTextView.drawsBackground = NO;
     self.attTextView.borderColor = HXColor(225, 224, 228);
     self.attTextView.font = [NSFont systemFontOfSize:14.0];
     self.attTextView.textColor = HXColor(70, 70, 70);
-
 }
 
 
@@ -57,15 +55,14 @@
     attCell.attachSize = CGSizeMake(30, 30);
 
     NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:message.text];
-    
     [attString apppendAttachmentCell:attCell];
-
     [attString setFont:[NSFont systemFontOfSize:14.0]];
     [attString setFont:[NSFont systemFontOfSize:30] range:NSMakeRange(attString.length - 1, 1)];
     [attString setLineSpacing:5];
+    
     [self.attTextView insertText:attString replacementRange:NSMakeRange(0, 0)];
     self.attTextView.editable = NO;
-    
+      [attString setFont:[NSFont systemFontOfSize:30] range:NSMakeRange(attString.length - 1, 1)];
     CGSize textRealSize = [attString realitySizeForWidth:310 numberOfLines:0];
     CGFloat onelineWidth = [attString oneLineRealityWidth];
     if (onelineWidth <= 310.0) {

@@ -10,6 +10,13 @@
 
 @implementation NSMutableAttributedString (AttachMent)
 
++ (NSMutableAttributedString *)attributedStringWithImage:(NSImage *)image {
+    CustomAttachMentCell *attCell = [[CustomAttachMentCell alloc] init];
+    attCell.attachImage = image;
+    attCell.attachSize = CGSizeMake(30, 30);
+    return [self attributedStringWithAttachmentCell:attCell];
+}
+
 + (NSMutableAttributedString *)attributedStringWithAttachmentCell:(NSTextAttachmentCell *)attachmentCell {
     NSTextAttachment *att = [[NSTextAttachment alloc] init];
     att.attachmentCell = attachmentCell;

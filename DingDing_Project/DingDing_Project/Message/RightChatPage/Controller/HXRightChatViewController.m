@@ -36,15 +36,25 @@
 // 个人简介
 @property (weak) IBOutlet HXBarButton *personalBtn;
 
-
 @property (nonatomic,strong) JMModalOverlay *modalOverlay;
 
 @property (nonatomic,strong) NSMutableArray *msgArray;
 @property (nonatomic,strong) NSMutableArray *msgDatialArray;
 
 @property (weak) IBOutlet NSTableView *datailTableView;
-
 @property (weak) IBOutlet NSView *bgView;
+
+
+@property (weak) IBOutlet HXBarButton *attchBtn;
+@property (weak) IBOutlet HXBarButton *faceBtn;
+@property (weak) IBOutlet HXBarButton *aiteBtn;
+@property (weak) IBOutlet HXBarButton *dingFileBtn;
+@property (weak) IBOutlet HXBarButton *cutBtn;
+@property (weak) IBOutlet HXBarButton *mingPianBtn;
+@property (weak) IBOutlet HXBarButton *zanBtn;
+
+@property (unsafe_unretained) IBOutlet HXTextView *inputTextView;
+@property (weak) IBOutlet NSView *inputBgView;
 
 @end
 
@@ -107,7 +117,49 @@ static NSString *mineCellID = @"mineCellID";
     self.personalBtn.cell.highlightsBy = NSNoCellMask;
     [self.personalBtn setImage:[NSImage imageNamed:@"personal"] forState:ButtonStateNormal];
     [self.personalBtn setImage:[NSImage imageNamed:@"personal_entered"] forState:ButtonStateMouseIn];
+    
+    
 
+}
+
+- (void)inputViewButtonsSetting {
+    
+    self.attchBtn.trackingEabled = YES;
+    self.attchBtn.cell.highlightsBy = NSNoCellMask;
+    [self.attchBtn setImage:[NSImage imageNamed:@"attach"] forState:ButtonStateNormal];
+    [self.attchBtn setImage:[NSImage imageNamed:@"attach_entered"] forState:ButtonStateMouseIn];
+    
+    self.faceBtn.trackingEabled = YES;
+    self.faceBtn.cell.highlightsBy = NSNoCellMask;
+    [self.faceBtn setImage:[NSImage imageNamed:@"face"] forState:ButtonStateNormal];
+    [self.faceBtn setImage:[NSImage imageNamed:@"face_entered"] forState:ButtonStateMouseIn];
+    
+    self.aiteBtn.trackingEabled = YES;
+    self.aiteBtn.cell.highlightsBy = NSNoCellMask;
+    [self.aiteBtn setImage:[NSImage imageNamed:@"aite"] forState:ButtonStateNormal];
+    [self.aiteBtn setImage:[NSImage imageNamed:@"aite_entered"] forState:ButtonStateMouseIn];
+    
+    
+    self.dingFileBtn.trackingEabled = YES;
+    self.dingFileBtn.cell.highlightsBy = NSNoCellMask;
+    [self.dingFileBtn setImage:[NSImage imageNamed:@"file"] forState:ButtonStateNormal];
+    [self.dingFileBtn setImage:[NSImage imageNamed:@"file_entered"] forState:ButtonStateMouseIn];
+    
+    self.cutBtn.trackingEabled = YES;
+    self.cutBtn.cell.highlightsBy = NSNoCellMask;
+    [self.cutBtn setImage:[NSImage imageNamed:@"cut"] forState:ButtonStateNormal];
+    [self.cutBtn setImage:[NSImage imageNamed:@"cut_entered"] forState:ButtonStateMouseIn];
+    
+    self.mingPianBtn.trackingEabled = YES;
+    self.mingPianBtn.cell.highlightsBy = NSNoCellMask;
+    [self.mingPianBtn setImage:[NSImage imageNamed:@"mingPian"] forState:ButtonStateNormal];
+    [self.mingPianBtn setImage:[NSImage imageNamed:@"mingPian_entered"] forState:ButtonStateMouseIn];
+    
+    self.zanBtn.trackingEabled = YES;
+    self.zanBtn.cell.highlightsBy = NSNoCellMask;
+    [self.zanBtn setImage:[NSImage imageNamed:@"zan"] forState:ButtonStateNormal];
+    [self.zanBtn setImage:[NSImage imageNamed:@"zan_entered"] forState:ButtonStateMouseIn];
+    
 }
 
 - (void)loadView {
@@ -124,6 +176,19 @@ static NSString *mineCellID = @"mineCellID";
     
     // 工具栏右侧 按钮设置trackingImage
     [self buttonsSetting];
+    
+    [self inputViewButtonsSetting];
+    
+    [self.inputBgView backGroundColor:HXColor(245, 249, 255)];
+    self.inputBgView.layer.borderWidth = 1.5;
+     self.inputBgView.layer.borderColor = [NSColor grayColor].CGColor;
+    self.inputTextView.textContainerInset = NSMakeSize(5, 10.0);
+    self.inputTextView.drawsBackground = NO;
+    self.inputTextView.borderWidth = 0;
+    self.inputTextView.textViewBgColor = [NSColor clearColor];
+    self.inputTextView.font = [NSFont systemFontOfSize:14.0];
+    self.inputTextView.textColor = HXColor(70, 70, 70);
+    
     
     // 消息详情列表
     self.datailTableView.headerView = nil;
@@ -223,6 +288,41 @@ static NSString *mineCellID = @"mineCellID";
 
 
 
+
+
+- (IBAction)showAttch:(id)sender {
+    
+    NSLog(@"%s",__func__);
+}
+
+
+- (IBAction)showFaces:(id)sender {
+    NSLog(@"%s",__func__);
+}
+
+
+- (IBAction)showAite:(id)sender {
+    NSLog(@"%s",__func__);
+}
+
+
+- (IBAction)showDingPanFile:(id)sender {
+    NSLog(@"%s",__func__);
+}
+
+- (IBAction)cutScreen:(id)sender {
+    NSLog(@"%s",__func__);
+}
+
+
+- (IBAction)sendMingPian:(id)sender {
+    NSLog(@"%s",__func__);
+}
+
+- (IBAction)dianZan:(id)sender {
+    NSLog(@"%s",__func__);
+
+}
 
 
 
