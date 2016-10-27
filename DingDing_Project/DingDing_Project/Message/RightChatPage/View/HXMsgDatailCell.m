@@ -32,7 +32,7 @@
 @implementation HXMsgDatailCell
 
 - (void)awakeFromNib {
-    self.attTextView.textContainerInset = NSMakeSize(5, 10.0);
+    self.attTextView.textContainerInset = NSMakeSize(5, 8.0);
     self.attTextView.drawsBackground = NO;
     self.attTextView.borderColor = HXColor(225, 224, 228);
     self.attTextView.font = [NSFont systemFontOfSize:14.0];
@@ -61,9 +61,9 @@
         if (textRealSize.width + 20 > 310.0) {
             self.textWidthCons.constant = 310.0;
         }
-        self.textWidthCons.constant = textRealSize.width + 20;
+        self.textWidthCons.constant = textRealSize.width + 20.0;
     }
-    self.textHeightCons.constant = textRealSize.height + 20;
+    self.textHeightCons.constant = textRealSize.height + 15;
     
 }
 

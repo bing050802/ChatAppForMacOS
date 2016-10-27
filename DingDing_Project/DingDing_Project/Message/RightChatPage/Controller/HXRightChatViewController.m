@@ -230,8 +230,6 @@ static NSString *mineCellID = @"mineCellID";
     
     NSMutableAttributedString *mattString = [NSMutableAttributedString parseFaceWordFromString:message.text];
     [mattString setLineSpacing:5];
-
-    
     CGFloat realheight = [mattString realityHeightForWidth:310];
     return realheight + 75;
 }

@@ -15,7 +15,7 @@
 + (NSMutableAttributedString *)attributedStringWithImage:(NSImage *)image {
     CustomAttachMentCell *attCell = [[CustomAttachMentCell alloc] init];
     attCell.attachImage = image;
-    attCell.attachSize = CGSizeMake(30, 30);
+    attCell.attachSize = CGSizeMake(28, 28);
     return [self attributedStringWithAttachmentCell:attCell];
 }
 
@@ -24,7 +24,7 @@
     att.attachmentCell = attachmentCell;
     NSAttributedString *attString = [NSAttributedString attributedStringWithAttachment:att];
     NSMutableAttributedString *attStr = [[NSMutableAttributedString alloc] initWithAttributedString:attString];
-    [attStr setFont:[NSFont systemFontOfSize:30]];
+    [attStr setFont:[NSFont systemFontOfSize:28]];
     return attStr;
 }
 
