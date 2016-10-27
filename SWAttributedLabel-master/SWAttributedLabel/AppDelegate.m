@@ -51,9 +51,13 @@
 //    [self.textView insertText:mAttString replacementRange:NSMakeRange(0, 0)];
 //    self.textView.editable = NO;
     
-  
+    NSString *str = @"womenshi[哈哈]打算[rwrqw]发顺丰[觉得]分手季阿卡丽放假[偷笑]";
+    NSString *patternStr = @"\\[\\w{0,100}\\]";
+    NSRegularExpression *regs = [[NSRegularExpression alloc] initWithPattern:patternStr options:0 error:nil];
+    NSArray *results = [regs matchesInString:str options:0 range:NSMakeRange(0, str.length)];
+    NSLog(@"%@",results);
     
-    [self textSWAttributedLabel];
+//    [self textSWAttributedLabel];
 }
 
 

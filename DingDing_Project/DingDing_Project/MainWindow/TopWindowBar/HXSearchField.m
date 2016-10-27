@@ -91,7 +91,6 @@
 
 // 防止点击本view其他区域 触发resignFocus
 - (void)mouseDown:(NSEvent *)theEvent {
-    
 }
 
 

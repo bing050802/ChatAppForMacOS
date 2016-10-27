@@ -353,17 +353,17 @@
                             </customSpacing>
                         </stackView>
                         <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9y-UV-lI7">
-                            <rect key="frame" x="0.0" y="0.0" width="506" height="79"/>
+                            <rect key="frame" x="10" y="0.0" width="496" height="79"/>
                             <clipView key="contentView" id="scA-tc-ik9">
-                                <rect key="frame" x="1" y="1" width="489" height="77"/>
+                                <rect key="frame" x="1" y="1" width="479" height="77"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="Tvq-lh-9aB" customClass="HXTextView">
-                                        <rect key="frame" x="0.0" y="0.0" width="489" height="77"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="479" height="77"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <size key="minSize" width="489" height="77"/>
-                                        <size key="maxSize" width="489" height="10000000"/>
+                                        <size key="minSize" width="479" height="77"/>
+                                        <size key="maxSize" width="506" height="10000000"/>
                                         <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     </textView>
                                 </subviews>
@@ -374,7 +374,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
                             <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="9xS-C2-UYd">
-                                <rect key="frame" x="490" y="1" width="15" height="77"/>
+                                <rect key="frame" x="480" y="1" width="15" height="77"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
                         </scrollView>
@@ -399,7 +399,7 @@
                         <constraint firstItem="8Jp-6i-fhl" firstAttribute="leading" secondItem="ffg-sA-UeS" secondAttribute="leading" constant="15" id="iw6-jI-nug"/>
                         <constraint firstAttribute="trailing" secondItem="dbS-e0-90e" secondAttribute="trailing" id="obS-1L-53J"/>
                         <constraint firstAttribute="trailing" secondItem="X9y-UV-lI7" secondAttribute="trailing" id="pex-TN-2B8"/>
-                        <constraint firstItem="X9y-UV-lI7" firstAttribute="leading" secondItem="ffg-sA-UeS" secondAttribute="leading" id="vtF-5r-ydt"/>
+                        <constraint firstItem="X9y-UV-lI7" firstAttribute="leading" secondItem="ffg-sA-UeS" secondAttribute="leading" constant="10" id="vtF-5r-ydt"/>
                     </constraints>
                 </customView>
             </subviews>

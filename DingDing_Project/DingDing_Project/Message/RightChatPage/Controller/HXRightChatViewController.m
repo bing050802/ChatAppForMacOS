@@ -117,9 +117,6 @@ static NSString *mineCellID = @"mineCellID";
     self.personalBtn.cell.highlightsBy = NSNoCellMask;
     [self.personalBtn setImage:[NSImage imageNamed:@"personal"] forState:ButtonStateNormal];
     [self.personalBtn setImage:[NSImage imageNamed:@"personal_entered"] forState:ButtonStateMouseIn];
-    
-    
-
 }
 
 - (void)inputViewButtonsSetting {
@@ -177,15 +174,15 @@ static NSString *mineCellID = @"mineCellID";
     // 工具栏右侧 按钮设置trackingImage
     [self buttonsSetting];
     
+    //inputView 相关设置
     [self inputViewButtonsSetting];
-    
     [self.inputBgView backGroundColor:HXColor(245, 249, 255)];
     self.inputTextView.drawsBackground = NO;
+    self.inputTextView.textContainerInset = NSMakeSize(0, 10.0);
     self.inputTextView.borderWidth = 0;
     self.inputTextView.textViewBgColor = [NSColor clearColor];
     self.inputTextView.font = [NSFont systemFontOfSize:14.0];
     self.inputTextView.textColor = HXColor(70, 70, 70);
-    
     
     // 消息详情列表
     self.datailTableView.headerView = nil;
