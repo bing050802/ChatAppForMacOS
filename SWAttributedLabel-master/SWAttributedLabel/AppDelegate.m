@@ -51,11 +51,24 @@
 //    [self.textView insertText:mAttString replacementRange:NSMakeRange(0, 0)];
 //    self.textView.editable = NO;
     
-    NSString *str = @"womenshi[哈哈]打算[rwrqw]发顺丰[觉得]分手季阿卡丽放假[偷笑]";
+    NSString *str = @"我戳，戳戳戳就是不破。很很牛牛比比，谁也不必聊，[哈哈]老师第一的，牛逼得很我曹很很[哈哈]牛比比，谁也不必聊，老师第一的，牛逼得[哈哈]我曹很很牛牛比比，谁也不必聊，老师第一的，牛逼得很我曹很很牛牛比比，谁也不必聊，老师第一的，牛逼得很我曹";
+    
+
     NSString *patternStr = @"\\[\\w{0,100}\\]";
     NSRegularExpression *regs = [[NSRegularExpression alloc] initWithPattern:patternStr options:0 error:nil];
     NSArray *results = [regs matchesInString:str options:0 range:NSMakeRange(0, str.length)];
     NSLog(@"%@",results);
+    for (NSTextCheckingResult *match in results) {
+        
+        str = [str stringByReplacingCharactersInRange:match.range withString:@"黑"];
+        
+    }
+    
+       NSLog(@"%@",str);
+    
+    
+    
+    
     
 //    [self textSWAttributedLabel];
 }

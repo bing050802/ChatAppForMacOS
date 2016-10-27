@@ -100,6 +100,8 @@
 		8AC667B91DABB35300250E02 /* SWAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC667B41DABB35300250E02 /* SWAttributedLabel.m */; };
 		8AC78D001DAE074200BC459D /* HXMineMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC78CFF1DAE074200BC459D /* HXMineMessageCell.m */; };
 		8AC78D021DAE07A100BC459D /* HXMineMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AC78D011DAE07A100BC459D /* HXMineMessageCell.xib */; };
+		8AD9FE151DC2370900FBDFC6 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9FE141DC2370900FBDFC6 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8AD9FE171DC2372700FBDFC6 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD9FE161DC2372700FBDFC6 /* libicucore.tbd */; };
 		8AE26D341D598A4800855257 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D2F1D598A4800855257 /* AppDelegate.m */; };
 		8AE26D351D598A4800855257 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AE26D301D598A4800855257 /* Assets.xcassets */; };
 		8AE26D371D598A4800855257 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D331D598A4800855257 /* main.m */; };
@@ -284,6 +286,9 @@
 		8AC78CFE1DAE074200BC459D /* HXMineMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMineMessageCell.h; sourceTree = "<group>"; };
 		8AC78CFF1DAE074200BC459D /* HXMineMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMineMessageCell.m; sourceTree = "<group>"; };
 		8AC78D011DAE07A100BC459D /* HXMineMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXMineMessageCell.xib; sourceTree = "<group>"; };
+		8AD9FE131DC2370900FBDFC6 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		8AD9FE141DC2370900FBDFC6 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		8AD9FE161DC2372700FBDFC6 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		8AE26D161D5989C500855257 /* DingDing_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DingDing_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE26D271D5989C500855257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		8AE26D2E1D598A4800855257 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -373,6 +378,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD9FE171DC2372700FBDFC6 /* libicucore.tbd in Frameworks */,
 				8AC667A31DABAD7600250E02 /* AppKit.framework in Frameworks */,
 				8AAFF5FE1D5C624500E908EC /* ApplicationServices.framework in Frameworks */,
 				8AAFF5FC1D5C623800E908EC /* Cocoa.framework in Frameworks */,
@@ -735,6 +741,7 @@
 		8AC667A11DABAD7600250E02 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8AD9FE161DC2372700FBDFC6 /* libicucore.tbd */,
 				8AC667A41DABAE0D00250E02 /* UIKit.framework */,
 				8AC667A21DABAD7600250E02 /* AppKit.framework */,
 			);
@@ -912,6 +919,8 @@
 		8AE49A911DAA225B00461D8C /* BaseUIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				8AD9FE131DC2370900FBDFC6 /* RegexKitLite.h */,
+				8AD9FE141DC2370900FBDFC6 /* RegexKitLite.m */,
 				33C74A021DBCF6340017BBD9 /* CustomTextView */,
 				8AE49A921DAA225B00461D8C /* HXBaseTabelCell.h */,
 				8AE49A931DAA225B00461D8C /* HXBaseTabelCell.m */,
@@ -1177,6 +1186,7 @@
 				8AFF852D1D9BBFE600BB9B67 /* MJProperty.m in Sources */,
 				3349A9D81D852FF60095C667 /* HXSearchField.m in Sources */,
 				3349A9DA1D852FF60095C667 /* HXWindowTopBarView.m in Sources */,
+				8AD9FE151DC2370900FBDFC6 /* RegexKitLite.m in Sources */,
 				8AB430F71D9B70440063CF7A /* NSData+ImageContentType.m in Sources */,
 				8AFF85371D9BCCB500BB9B67 /* HXScroller.m in Sources */,
 				8AB430F61D9B70440063CF7A /* SDImageCache.m in Sources */,

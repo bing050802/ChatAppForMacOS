@@ -228,18 +228,9 @@ static NSString *mineCellID = @"mineCellID";
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
     HXMessage *message = self.msgDatialArray[row];
     
-    
-    CustomAttachMentCell *attCell = [[CustomAttachMentCell alloc] init];
-    attCell.attachImage = [NSImage imageNamed:@"haha@2x"];
-    attCell.attachSize = CGSizeMake(30, 30);
-    
-    NSMutableAttributedString *mattString = [[NSMutableAttributedString alloc] initWithString:message.text];
-    [mattString apppendAttachmentCell:attCell];
-    
-    
-    [mattString setFont:[NSFont systemFontOfSize:messageTextFont]];
-    [mattString setFont:[NSFont systemFontOfSize:30] range:NSMakeRange(mattString.length - 1, 1)];
+    NSMutableAttributedString *mattString = [NSMutableAttributedString parseFaceWordFromString:message.text];
     [mattString setLineSpacing:5];
+
     
     CGFloat realheight = [mattString realityHeightForWidth:310];
     return realheight + 75;

@@ -7,6 +7,8 @@
 //
 
 #import "NSMutableAttributedString+AttachMent.h"
+#import "NSMutableAttributedString+Config.h"
+#import "RegexKitLite.h"
 
 @implementation NSMutableAttributedString (AttachMent)
 
@@ -21,7 +23,9 @@
     NSTextAttachment *att = [[NSTextAttachment alloc] init];
     att.attachmentCell = attachmentCell;
     NSAttributedString *attString = [NSAttributedString attributedStringWithAttachment:att];
-    return [[NSMutableAttributedString alloc] initWithAttributedString:attString];
+    NSMutableAttributedString *attStr = [[NSMutableAttributedString alloc] initWithAttributedString:attString];
+    [attStr setFont:[NSFont systemFontOfSize:30]];
+    return attStr;
 }
 
 - (void)apppendAttachmentCell:(NSTextAttachmentCell *)attachmentCell {
@@ -31,4 +35,26 @@
     [self appendAttributedString:attString];
 }
 
++ (NSMutableAttributedString *)parseFaceWordFromString:(NSString *)string {
+    
+    //  NSString *str = @"womenshi[哈哈]打算[rwrqw]发顺丰[觉得]分手季阿卡丽放假[偷笑]";
+    NSMutableAttributedString *resultAttString = [[NSMutableAttributedString alloc] initWithString:string];
+    [resultAttString setFont:[NSFont systemFontOfSize:14.0]];
+    NSString *patternStr = @"\\[[0-9a-zA-Z\\u4e00-\\u9fa5]+\\]";
+    
+    [string enumerateStringsMatchedByRegex:patternStr usingBlock:^(NSInteger captureCount, NSString *const __unsafe_unretained *capturedStrings, const NSRange *capturedRanges, volatile BOOL *const stop) {
+        NSMutableAttributedString *attach = [self attributedStringWithImage:[NSImage imageNamed:@"haha@2x"]];
+        NSRange range = *capturedRanges;
+        [resultAttString replaceCharactersInRange:NSMakeRange(range.location, 1) withAttributedString:attach];
+    }];
+    
+
+
+    
+    
+    
+    
+    return resultAttString;
+    
+}
 @end

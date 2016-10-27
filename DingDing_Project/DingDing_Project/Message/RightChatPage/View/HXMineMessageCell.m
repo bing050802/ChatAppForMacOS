@@ -49,6 +49,8 @@
     NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:message.text];
     [attString setFont:[NSFont systemFontOfSize:14.0]];
     [attString setLineSpacing:5];
+    
+    
     [self.msgTextView insertText:attString replacementRange:NSMakeRange(0, 0)];
     self.msgTextView.editable = NO;
     

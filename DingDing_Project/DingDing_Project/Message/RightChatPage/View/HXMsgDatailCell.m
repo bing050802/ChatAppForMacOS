@@ -50,27 +50,21 @@
     self.timeLable.stringValue = [message.create_time substringWithRange:NSMakeRange(message.create_time.length - 5, 5)];
     
     
-    CustomAttachMentCell *attCell = [[CustomAttachMentCell alloc] init];
-    attCell.attachImage = [NSImage imageNamed:@"haha@2x"];
-    attCell.attachSize = CGSizeMake(30, 30);
-
-    NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:message.text];
-    [attString apppendAttachmentCell:attCell];
-    [attString setFont:[NSFont systemFontOfSize:14.0]];
-    [attString setFont:[NSFont systemFontOfSize:30] range:NSMakeRange(attString.length - 1, 1)];
+    NSMutableAttributedString *attString = [NSMutableAttributedString parseFaceWordFromString:message.text];
     [attString setLineSpacing:5];
     
     [self.attTextView insertText:attString replacementRange:NSMakeRange(0, 0)];
     self.attTextView.editable = NO;
-      [attString setFont:[NSFont systemFontOfSize:30] range:NSMakeRange(attString.length - 1, 1)];
     CGSize textRealSize = [attString realitySizeForWidth:310 numberOfLines:0];
     CGFloat onelineWidth = [attString oneLineRealityWidth];
-    if (onelineWidth <= 310.0) {
+    if (onelineWidth < 310.0) {
+        if (textRealSize.width + 20 > 310.0) {
+            self.textWidthCons.constant = 310.0;
+        }
         self.textWidthCons.constant = textRealSize.width + 20;
     }
     self.textHeightCons.constant = textRealSize.height + 20;
     
-
 }
 
 

@@ -17,4 +17,7 @@
 
 - (void)apppendAttachmentCell:(NSTextAttachmentCell *)attachmentCell;
 
+
++ (NSMutableAttributedString *)parseFaceWordFromString:(NSString *)string;
+
 @end
