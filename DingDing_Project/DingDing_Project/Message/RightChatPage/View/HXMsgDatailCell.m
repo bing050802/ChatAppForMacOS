@@ -35,8 +35,9 @@
     self.attTextView.textContainerInset = NSMakeSize(5, 8.0);
     self.attTextView.drawsBackground = NO;
     self.attTextView.borderColor = HXColor(225, 224, 228);
-    self.attTextView.font = [NSFont systemFontOfSize:14.0];
+//    self.attTextView.font = [NSFont systemFontOfSize:14.0];
     self.attTextView.textColor = HXColor(70, 70, 70);
+    self.attTextView.canEdit = NO;
 }
 
 
@@ -54,7 +55,6 @@
     [attString setLineSpacing:5];
     
     [self.attTextView insertText:attString replacementRange:NSMakeRange(0, 0)];
-    self.attTextView.editable = NO;
     CGSize textRealSize = [attString realitySizeForWidth:310 numberOfLines:0];
     CGFloat onelineWidth = [attString oneLineRealityWidth];
     if (onelineWidth < 310.0) {

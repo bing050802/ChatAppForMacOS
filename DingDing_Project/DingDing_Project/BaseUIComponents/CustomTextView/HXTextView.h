@@ -41,4 +41,7 @@
 /** 是否要Scroller */
 @property (nonatomic,assign) BOOL hasScroller;
 
+/** 是否能Edit */
+@property (nonatomic,assign) BOOL canEdit;
+
 @end

@@ -59,16 +59,9 @@
     NSArray *results = [regs matchesInString:str options:0 range:NSMakeRange(0, str.length)];
     NSLog(@"%@",results);
     for (NSTextCheckingResult *match in results) {
-        
         str = [str stringByReplacingCharactersInRange:match.range withString:@"黑"];
-        
     }
-    
-       NSLog(@"%@",str);
-    
-    
-    
-    
+    NSLog(@"%@",str);
     
 //    [self textSWAttributedLabel];
 }

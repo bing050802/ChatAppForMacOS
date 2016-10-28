@@ -31,6 +31,12 @@
     return _backGroundView;
 }
 
+- (void)insertText:(id)string replacementRange:(NSRange)replacementRange {
+    [super insertText:string replacementRange:replacementRange];
+    self.editable = self.canEdit;
+    
+}
+
 - (void)setBorderWidth:(CGFloat)borderWidth {
     self.backGroundView.layer.borderWidth = borderWidth;
     NSRect rect = self.bounds;
@@ -72,6 +78,7 @@
 
 
 - (void)setUp {
+    self.canEdit = YES;
     self.enclosingScrollView.disableScroller = YES;
     self.enclosingScrollView.borderType = NSNoBorder;
     self.enclosingScrollView.hasVerticalScroller = NO;
