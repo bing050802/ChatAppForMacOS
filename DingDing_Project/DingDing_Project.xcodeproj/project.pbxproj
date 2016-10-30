@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		331940FD1D97FA66007AF3BF /* HXMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 331940FC1D97FA66007AF3BF /* HXMessage.m */; };
+		331F5F891DC4E8D9003922EF /* HXTextPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 331F5F881DC4E8D9003922EF /* HXTextPart.m */; };
 		3349A9D81D852FF60095C667 /* HXSearchField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A9CE1D852FF60095C667 /* HXSearchField.m */; };
 		3349A9D91D852FF60095C667 /* HXTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A9D01D852FF60095C667 /* HXTextField.m */; };
 		3349A9DA1D852FF60095C667 /* HXWindowTopBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A9D21D852FF60095C667 /* HXWindowTopBarView.m */; };
@@ -149,6 +150,8 @@
 /* Begin PBXFileReference section */
 		331940FB1D97FA66007AF3BF /* HXMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMessage.h; sourceTree = "<group>"; };
 		331940FC1D97FA66007AF3BF /* HXMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMessage.m; sourceTree = "<group>"; };
+		331F5F871DC4E8D9003922EF /* HXTextPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTextPart.h; sourceTree = "<group>"; };
+		331F5F881DC4E8D9003922EF /* HXTextPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTextPart.m; sourceTree = "<group>"; };
 		3349A9CD1D852FF60095C667 /* HXSearchField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXSearchField.h; sourceTree = "<group>"; };
 		3349A9CE1D852FF60095C667 /* HXSearchField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXSearchField.m; sourceTree = "<group>"; };
 		3349A9CF1D852FF60095C667 /* HXTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTextField.h; sourceTree = "<group>"; };
@@ -499,6 +502,8 @@
 		33C74A021DBCF6340017BBD9 /* CustomTextView */ = {
 			isa = PBXGroup;
 			children = (
+				331F5F871DC4E8D9003922EF /* HXTextPart.h */,
+				331F5F881DC4E8D9003922EF /* HXTextPart.m */,
 				8AF2075D1DBDF0F400710DBC /* haha@2x.png */,
 				8AF2075A1DBDE1C200710DBC /* NSScrollView+Enabled.h */,
 				8AF2075B1DBDE1C200710DBC /* NSScrollView+Enabled.m */,
@@ -1183,6 +1188,7 @@
 				33650FBC1D97FCE700D8F571 /* HXMessageCell.m in Sources */,
 				8AE26D341D598A4800855257 /* AppDelegate.m in Sources */,
 				8AE26D5C1D59B73C00855257 /* NSView+BackGroundColor.m in Sources */,
+				331F5F891DC4E8D9003922EF /* HXTextPart.m in Sources */,
 				8AFF852D1D9BBFE600BB9B67 /* MJProperty.m in Sources */,
 				3349A9D81D852FF60095C667 /* HXSearchField.m in Sources */,
 				3349A9DA1D852FF60095C667 /* HXWindowTopBarView.m in Sources */,

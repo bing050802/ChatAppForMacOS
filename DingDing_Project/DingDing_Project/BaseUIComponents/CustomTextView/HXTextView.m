@@ -33,8 +33,7 @@
 
 - (void)insertText:(id)string replacementRange:(NSRange)replacementRange {
     [super insertText:string replacementRange:replacementRange];
-    self.editable = self.canEdit;
-    
+    self.editable = NO;
 }
 
 - (void)setBorderWidth:(CGFloat)borderWidth {

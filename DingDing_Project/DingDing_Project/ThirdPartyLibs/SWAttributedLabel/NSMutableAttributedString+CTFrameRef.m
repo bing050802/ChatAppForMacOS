@@ -8,6 +8,7 @@
 
 #import "NSMutableAttributedString+CTFrameRef.h"
 #import "SWAttributedImageInfo.h"
+#import "NSMutableAttributedString+Config.h"
 
 
 @implementation NSMutableAttributedString (CTFrameRef)
@@ -132,9 +133,46 @@ CGRect UIEdgeInsetsInsetRect(CGRect rect, NSEdgeInsets insets) {
 #pragma mark -
 #pragma mark 获取label高度
 
+- (CGFloat)getAttributedStringHeightWithString:(NSAttributedString *) string  WidthValue:(CGFloat) width
+{
+    CGFloat total_height = 0;
+    
+    CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)string);    //string 为要计算高度的NSAttributedString
+    CGRect drawingRect = CGRectMake(0, 0, width, 1000);  //这里的高要设置足够大
+    CGMutablePathRef path = CGPathCreateMutable();
+    CGPathAddRect(path, NULL, drawingRect);
+    CTFrameRef textFrame = CTFramesetterCreateFrame(framesetter,CFRangeMake(0,0), path, NULL);
+    CGPathRelease(path);
+    CFRelease(framesetter);
+    
+    NSArray *linesArray = (NSArray *) CTFrameGetLines(textFrame);
+    
+    CGPoint origins[[linesArray count]];
+    CTFrameGetLineOrigins(textFrame, CFRangeMake(0, 0), origins);
+    
+    int line_y = (int) origins[[linesArray count] -1].y;  //最后一行line的原点y坐标
+    
+    CGFloat ascent;
+    CGFloat descent;
+    CGFloat leading;
+    
+    CTLineRef line = (__bridge CTLineRef) [linesArray objectAtIndex:[linesArray count]-1];
+    CTLineGetTypographicBounds(line, &ascent, &descent, &leading);
+    
+    total_height = 1000 - line_y +  descent ;    //+1为了纠正descent转换成int小数点后舍去的值
+    
+    CFRelease(textFrame);
+    
+    return total_height;
+    
+}
+
 - (CGFloat)oneLineRealityWidth {
-    CGFloat realW = [self realitySizeForWidth:MAXFLOAT numberOfLines:0].width;
-    return ceil(realW);
+    CTLineRef  line = CTLineCreateWithAttributedString((CFAttributedStringRef) self);
+    CGFloat ascent;
+    CGFloat descent;
+    CGFloat width = CTLineGetTypographicBounds(line, &ascent, &descent, NULL);
+    return width;
 }
 
 
@@ -164,7 +202,7 @@ CGRect UIEdgeInsetsInsetRect(CGRect rect, NSEdgeInsets insets) {
     
     CGMutablePathRef path = CGPathCreateMutable();
     CGPathAddRect(path, nil, rect);
-    CTFrameRef frameRef = CTFramesetterCreateFrame(framesetter, CFRangeMake(0, 0), path, NULL);
+    CTFrameRef frameRef = CTFramesetterCreateFrame(framesetter, CFRangeMake(0, self.length), path, NULL);
     
     CGPathRelease(path);
     CFRelease(framesetter);

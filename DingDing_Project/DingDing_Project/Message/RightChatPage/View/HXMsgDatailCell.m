@@ -54,16 +54,14 @@
     NSMutableAttributedString *attString = [NSMutableAttributedString parseFaceWordFromString:message.text];
     [attString setLineSpacing:5];
     
+    
     [self.attTextView insertText:attString replacementRange:NSMakeRange(0, 0)];
     CGSize textRealSize = [attString realitySizeForWidth:310 numberOfLines:0];
     CGFloat onelineWidth = [attString oneLineRealityWidth];
     if (onelineWidth < 310.0) {
-        if (textRealSize.width + 20 > 310.0) {
-            self.textWidthCons.constant = 310.0;
-        }
-        self.textWidthCons.constant = textRealSize.width + 20.0;
+        self.textWidthCons.constant = onelineWidth + 24;
     }
-    self.textHeightCons.constant = textRealSize.height + 15;
+    self.textHeightCons.constant = textRealSize.height + 16;
     
 }
 
