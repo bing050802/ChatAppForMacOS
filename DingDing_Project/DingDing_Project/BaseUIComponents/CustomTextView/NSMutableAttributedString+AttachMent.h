@@ -10,6 +10,9 @@
 #import "CustomAttachMentCell.h"
 #import "NSMutableAttributedString+Config.h"
 
+static const CGFloat EmotionWH = 30;
+static const CGFloat BaselineOffsetY = -8.0;
+
 @interface NSMutableAttributedString (AttachMent)
 
 + (NSMutableAttributedString *)attributedStringWithImage:(NSImage *)image attachSize:(CGSize)size;

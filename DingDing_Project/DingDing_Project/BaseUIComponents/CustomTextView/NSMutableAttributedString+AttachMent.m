@@ -26,6 +26,7 @@
     CustomAttachMentCell *attCell = [[CustomAttachMentCell alloc] init];
     attCell.attachImage = image;
     attCell.attachSize = size;
+    attCell.baselineOffset = CGPointMake(0, BaselineOffsetY);
     return [self attributedStringWithAttachmentCell:attCell];
 }
 
@@ -83,7 +84,7 @@
         NSMutableAttributedString *subCalculateString = nil;
         
         if (part.isEmotion) { // 表情
-            CGSize attSize = CGSizeMake(30, 30);
+            CGSize attSize = CGSizeMake(EmotionWH, EmotionWH);
             substr = [self attributedStringWithImage:[NSImage imageNamed:@"haha@2x"] attachSize:attSize];
             subCalculateString = [self createReplacementAttString];
             
@@ -176,17 +177,17 @@
 
 // 调整图片对齐方式
 static CGFloat ascentCallback(void *ref) {
-    return -10;
+    return EmotionWH + BaselineOffsetY;
 }
 
 // 调整图片对齐方式
 static CGFloat descentCallback(void *ref) {
-    return 40;
+    return - BaselineOffsetY;
 }
 
 // 获取图片宽度
 static CGFloat widthCallback(void *ref) {
-    return 30.0;
+    return EmotionWH;
 }
 
 @end
