@@ -13,20 +13,12 @@
 
 @implementation NSMutableAttributedString (AttachMent)
 
-+ (NSMutableAttributedString *)attributedStringWithImage:(NSImage *)image {
-    CustomAttachMentCell *attCell = [[CustomAttachMentCell alloc] init];
-    attCell.attachImage = image;
-    CGFloat size = [NSFont systemFontOfSize:24].ascender - [NSFont systemFontOfSize:24].descender ;
-    attCell.attachSize = CGSizeMake(size, size);
-    return [self attributedStringWithAttachmentCell:attCell];
-}
 
 + (NSMutableAttributedString *)attributedStringWithAttachmentCell:(NSTextAttachmentCell *)attachmentCell {
     NSTextAttachment *att = [[NSTextAttachment alloc] init];
     att.attachmentCell = attachmentCell;
     NSAttributedString *attString = [NSAttributedString attributedStringWithAttachment:att];
     NSMutableAttributedString *attStr = [[NSMutableAttributedString alloc] initWithAttributedString:attString];
-    [attStr setFont:[NSFont systemFontOfSize:24]];
     return attStr;
 }
 
@@ -122,13 +114,10 @@
 - (CGSize)realitySizeForWidth:(CGFloat)width {
     
     CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)self);
-    
     // 获得要缓制的区域的高度
     CGSize restrictSize = CGSizeMake(width, CGFLOAT_MAX);
     CGSize coreTextSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRangeMake(0,0), nil, restrictSize, nil);
-    
     return CGSizeMake(ceil(coreTextSize.width), ceil(coreTextSize.height));
-    
 }
 
 
@@ -140,7 +129,6 @@
     }
     return [value sizeValue];
 }
-
 
 - (CGSize)singelineSize {
     NSValue *value = [self attribute:@"singelineSize" atIndex:0 effectiveRange:NULL];
@@ -164,8 +152,7 @@
 }
 
 
-+ (NSMutableAttributedString *)createReplacementAttString
-{
++ (NSMutableAttributedString *)createReplacementAttString {
     CTRunDelegateCallbacks callbacks;
     memset(&callbacks, 0, sizeof(CTRunDelegateCallbacks));
     callbacks.version = kCTRunDelegateVersion1;

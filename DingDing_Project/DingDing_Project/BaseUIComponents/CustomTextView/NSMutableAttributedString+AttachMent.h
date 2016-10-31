@@ -12,7 +12,7 @@
 
 @interface NSMutableAttributedString (AttachMent)
 
-+ (NSMutableAttributedString *)attributedStringWithImage:(NSImage *)image;
++ (NSMutableAttributedString *)attributedStringWithImage:(NSImage *)image attachSize:(CGSize)size;
 + (NSMutableAttributedString *)attributedStringWithAttachmentCell:(NSTextAttachmentCell *)attachmentCell;
 
 + (NSMutableAttributedString *)parseFaceWordFromString:(NSString *)string;

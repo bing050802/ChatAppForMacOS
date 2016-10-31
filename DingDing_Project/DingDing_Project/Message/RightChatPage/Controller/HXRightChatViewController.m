@@ -236,7 +236,6 @@ static NSString *mineCellID = @"mineCellID";
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-  
     return self.msgDatialArray.count;
 }
 
