@@ -8,16 +8,16 @@
 
 #import <AppKit/AppKit.h>
 #import "CustomAttachMentCell.h"
+#import "NSMutableAttributedString+Config.h"
 
 @interface NSMutableAttributedString (AttachMent)
 
++ (NSMutableAttributedString *)attributedStringWithImage:(NSImage *)image;
 + (NSMutableAttributedString *)attributedStringWithAttachmentCell:(NSTextAttachmentCell *)attachmentCell;
 
-+ (NSMutableAttributedString *)attributedStringWithImage:(NSImage *)image;
-
-- (void)apppendAttachmentCell:(NSTextAttachmentCell *)attachmentCell;
-
-
 + (NSMutableAttributedString *)parseFaceWordFromString:(NSString *)string;
+
+- (CGSize)singelineSize;
+- (CGSize)mlineSize;
 
 @end

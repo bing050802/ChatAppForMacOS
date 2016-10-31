@@ -10,9 +10,7 @@
 #import "HXPrefixHeader.h"
 
 #import "HXTextView.h"
-#import "NSMutableAttributedString+CTFrameRef.h"
-#import "NSMutableAttributedString+Config.h"
-#import "SWAttributedLabel.h"
+#import "NSMutableAttributedString+AttachMent.h"
 
 @interface HXMsgDatailCell ()
 
@@ -32,10 +30,9 @@
 @implementation HXMsgDatailCell
 
 - (void)awakeFromNib {
-    self.attTextView.textContainerInset = NSMakeSize(5, 8.0);
+    self.attTextView.textContainerInset = NSMakeSize(5.0, 8.0);
     self.attTextView.drawsBackground = NO;
     self.attTextView.borderColor = HXColor(225, 224, 228);
-//    self.attTextView.font = [NSFont systemFontOfSize:14.0];
     self.attTextView.textColor = HXColor(70, 70, 70);
     self.attTextView.canEdit = NO;
 }
@@ -54,12 +51,11 @@
     NSMutableAttributedString *attString = [NSMutableAttributedString parseFaceWordFromString:message.text];
     [attString setLineSpacing:5];
     
-    
     [self.attTextView insertText:attString replacementRange:NSMakeRange(0, 0)];
-    CGSize textRealSize = [attString realitySizeForWidth:310 numberOfLines:0];
-    CGFloat onelineWidth = [attString oneLineRealityWidth];
-    if (onelineWidth < 310.0) {
-        self.textWidthCons.constant = onelineWidth + 24;
+    CGSize textRealSize = [attString mlineSize];
+    CGSize onelineSize = [attString singelineSize];
+    if (onelineSize.width < 300) {
+        self.textWidthCons.constant = onelineSize.width + 20;
     }
     self.textHeightCons.constant = textRealSize.height + 16;
     

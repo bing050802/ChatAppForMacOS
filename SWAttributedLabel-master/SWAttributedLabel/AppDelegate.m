@@ -14,7 +14,8 @@
 #import "CustomAttachMentCell.h"
 #import "HXTextView.h"
 
-//#import <>
+#import <CoreText/CoreText.h>
+
 
 @interface AppDelegate ()
 
@@ -25,35 +26,41 @@
 @property (weak) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSImageView *imageView;
 
+
+@property (weak) IBOutlet NSLayoutConstraint *widthCns;
+@property (weak) IBOutlet NSLayoutConstraint *heightCns;
+
 @end
 
 @implementation AppDelegate
 
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    
-//    CustomAttachMentCell *attCell = [[CustomAttachMentCell alloc] init];
-//    attCell.attachImage = [NSImage imageNamed:@"haha@2x"];
-//    attCell.attachSize = CGSizeMake(30, 30);
-//    NSMutableAttributedString *attString = [NSMutableAttributedString attributedStringWithAttachmentCell:attCell];
-//    
-//    NSMutableAttributedString *mAttString = [[NSMutableAttributedString alloc] initWithString:@"我是刘强东微[/haha]博发声shi个好事刘强东微个"];
-//    [mAttString appendAttributedString:attString];
-//    
-//    
-////    [mAttString ]
-//    
-//    
-//    
-//    self.textView.textContainerInset = NSMakeSize(0, 10.0);
-//    self.textView.drawsBackground = NO;
-//    self.textView.font = [NSFont systemFontOfSize:14];
-//    [self.textView insertText:mAttString replacementRange:NSMakeRange(0, 0)];
-//    self.textView.editable = NO;
-    
-    NSString *str = @"我戳，戳戳戳就是不破。很很牛牛比比，谁也不必聊，[哈哈]老师第一的，牛逼得很我曹很很[哈哈]牛比比，谁也不必聊，老师第一的，牛逼得[哈哈]我曹很很牛牛比比，谁也不必聊，老师第一的，牛逼得很我曹很很牛牛比比，谁也不必聊，老师第一的，牛逼得很我曹";
-    
 
+    NSMutableAttributedString *mAttString = [NSMutableAttributedString parseFaceWordFromString:@"我是刘强东[hha]"];
+    CGSize size = [mAttString singelineSize];
+    
+    NSLog(@"--%@",NSStringFromSize(size));
+    
+    
+    self.widthCns.constant = size.width + 13 ;
+    self.heightCns.constant = size.height + 2;
+    self.textView.drawsBackground = NO;
+    [self.textView insertText:mAttString replacementRange:NSMakeRange(0, 0)];
+    self.textView.editable = NO;
+    
+//    [self textSWAttributedLabel];
+}
+
+
+
+
+
+
+
+
+- (void)pattarn {
+    NSString *str = @"我戳，戳戳戳就是不破。很很牛牛比比，谁也不必聊，[哈哈]老师第一的，牛逼得很我曹很很[哈哈]牛比比，谁也不必聊，老师第一的，牛逼得[哈哈]我曹很很牛牛比比，谁也不必聊，老师第一的，牛逼得很我曹很很牛牛比比，谁也不必聊，老师第一的，牛逼得很我曹";
     NSString *patternStr = @"\\[\\w{0,100}\\]";
     NSRegularExpression *regs = [[NSRegularExpression alloc] initWithPattern:patternStr options:0 error:nil];
     NSArray *results = [regs matchesInString:str options:0 range:NSMakeRange(0, str.length)];
@@ -62,11 +69,7 @@
         str = [str stringByReplacingCharactersInRange:match.range withString:@"黑"];
     }
     NSLog(@"%@",str);
-    
-//    [self textSWAttributedLabel];
 }
-
-
 
 
 

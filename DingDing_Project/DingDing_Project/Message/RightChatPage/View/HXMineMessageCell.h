@@ -12,7 +12,6 @@
 
 #import "HXPrefixHeader.h"
 
-#import "SWAttributedLabel.h"
 #import "HXTextView.h"
 
 #import "NSImage+StackBlur.h"

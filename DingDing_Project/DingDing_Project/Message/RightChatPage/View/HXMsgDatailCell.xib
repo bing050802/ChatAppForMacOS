@@ -39,14 +39,14 @@
                 <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJH-f1-9NU">
                     <rect key="frame" x="75" y="29" width="320" height="30"/>
                     <clipView key="contentView" id="0fm-P9-dTE">
-                        <rect key="frame" x="1" y="1" width="318" height="28"/>
+                        <rect key="frame" x="1" y="1" width="303" height="28"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="qxg-Qr-h9U" customClass="HXTextView">
-                                <rect key="frame" x="0.0" y="0.0" width="318" height="28"/>
+                                <rect key="frame" x="0.0" y="0.0" width="303" height="28"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <size key="minSize" width="318" height="28"/>
+                                <size key="minSize" width="303" height="28"/>
                                 <size key="maxSize" width="463" height="10000000"/>
                                 <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             </textView>
@@ -62,7 +62,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="KvZ-N1-JAz">
-                        <rect key="frame" x="303" y="1" width="16" height="28"/>
+                        <rect key="frame" x="304" y="1" width="15" height="28"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>

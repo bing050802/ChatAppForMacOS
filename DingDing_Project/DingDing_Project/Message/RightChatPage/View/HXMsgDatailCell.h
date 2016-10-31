@@ -13,8 +13,7 @@
 #import "HXPrefixHeader.h"
 
 #import "HXTextView.h"
-#import "NSMutableAttributedString+CTFrameRef.h"
-#import "NSMutableAttributedString+Config.h"
+
 
 #define  messageTextFont 14.0
 

@@ -31,11 +31,6 @@
 // 设置字体
 - (void)setFont:(NSFont *)font {
     [self setFont:font range:NSMakeRange(0, [self length])];
-    // 改变表情字符的font
-
-//    self.string
-    
-    
 }
 
 - (void)setFont:(NSFont *)font range:(NSRange)range {

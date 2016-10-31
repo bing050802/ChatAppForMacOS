@@ -12,5 +12,6 @@
 
 + (NSMutableAttributedString *)attributedStringWithAttachmentCell:(NSTextAttachmentCell *)attachmentCell;
 
-
++ (NSMutableAttributedString *)parseFaceWordFromString:(NSString *)string;
+- (CGSize)singelineSize;
 @end
