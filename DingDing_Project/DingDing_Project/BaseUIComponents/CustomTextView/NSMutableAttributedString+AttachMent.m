@@ -65,8 +65,7 @@
 }
 
 + (NSMutableAttributedString *)parseFaceWordFromString:(NSString *)string {
-    //  NSString *str = @"womenshi[哈哈]打算[rwrqw]发顺丰[觉得]分手季阿卡丽放假[偷笑]";
-    
+
     // 表情的规则
     NSString *emotionPattern = @"\\[[0-9a-zA-Z\\u4e00-\\u9fa5]+\\]";
     // url链接的规则
@@ -75,12 +74,12 @@
     
     // 按顺序拼接每一段文字
     NSMutableAttributedString *resultAttString = [[NSMutableAttributedString alloc] init];
-    NSMutableAttributedString *singelineCalculateString = [[NSMutableAttributedString alloc] init];
+    NSMutableAttributedString *calculateString = [[NSMutableAttributedString alloc] init];
     
     for (HXTextPart *part in [self patternPartsWithRegex:pattern originString:string]) {
         // 等会需要拼接的子串
         NSMutableAttributedString *substr = nil;
-        // 由于计算含有attachMent的单行属性文字宽度不准确 提供一个临时的用CTRunDelegate代表表情的属性文字用于计算单行宽度
+        // 由于计算含有attachMent的属性文字宽高不准确 提供一个临时的用CTRunDelegate代表表情的属性文字用于计算单行宽度
         NSMutableAttributedString *subCalculateString = nil;
         
         if (part.isEmotion) { // 表情
@@ -96,15 +95,15 @@
             subCalculateString = substr;
         }
         [resultAttString appendAttributedString:substr];
-        [singelineCalculateString appendAttributedString:subCalculateString];
+        [calculateString appendAttributedString:subCalculateString];
     }
     
     // 计算 单行文字宽高
-    CGSize singelineSize = [singelineCalculateString calculateSingelineSize];
+    CGSize singelineSize = [calculateString calculateSingelineSize];
     [resultAttString addAttribute:@"singelineSize" value:[NSValue valueWithSize:singelineSize] range:NSMakeRange(0, 1)];
    
-    [singelineCalculateString setLineSpacing:5];
-    CGSize mlineSize = [singelineCalculateString realitySizeForWidth:300];
+    [calculateString setLineSpacing:5];
+    CGSize mlineSize = [calculateString realitySizeForWidth:300];
     [resultAttString addAttribute:@"mlineSize" value:[NSValue valueWithSize:mlineSize] range:NSMakeRange(0, 1)];
 
     return resultAttString;
@@ -117,7 +116,7 @@
     // 获得要缓制的区域的高度
     CGSize restrictSize = CGSizeMake(width, CGFLOAT_MAX);
     CGSize coreTextSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRangeMake(0,0), nil, restrictSize, nil);
-    return CGSizeMake(ceil(coreTextSize.width), ceil(coreTextSize.height));
+    return CGSizeMake(ceil(coreTextSize.width), coreTextSize.height);
 }
 
 
@@ -146,7 +145,7 @@
     CTLineRef lineRef = CTLineCreateWithAttributedString((CFAttributedStringRef)self);
     CGFloat width = CTLineGetTypographicBounds(lineRef, &ascent, &descent, &leading);
     width = ceil(width);
-    CGFloat height = ceil(ascent + leading + descent);
+    CGFloat height = (ascent + leading + descent);
 //    NSLog(@"--%@--%f",self.string,height);
     return CGSizeMake(width, height);
 }

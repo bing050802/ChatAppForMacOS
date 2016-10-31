@@ -256,7 +256,7 @@ static NSString *mineCellID = @"mineCellID";
 
 
 - (IBAction)addMember:(id)sender {
-    
+    [self.datailTableView reloadData];
 }
 
 
