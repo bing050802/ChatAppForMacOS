@@ -176,12 +176,12 @@
 
 // 调整图片对齐方式
 static CGFloat ascentCallback(void *ref) {
-    return 22.0;
+    return -10;
 }
 
 // 调整图片对齐方式
 static CGFloat descentCallback(void *ref) {
-    return 8;
+    return 40;
 }
 
 // 获取图片宽度

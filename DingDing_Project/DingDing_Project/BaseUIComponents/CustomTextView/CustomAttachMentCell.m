@@ -19,7 +19,7 @@
     return self.attachSize;
 }
 - (NSPoint)cellBaselineOffset {
-    return CGPointMake(0, -8);
+    return CGPointMake(0, -40);
 }
 
 
