@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "SWAttributedLabel.h"
-#import "CustomView.h"
+#import "HXEmotionView.h"
 
 
 #import "CustomAttachMentCell.h"
@@ -26,9 +26,8 @@
 @property (weak) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSImageView *imageView;
 
+@property (weak) IBOutlet HXEmotionView *emotionView;
 
-@property (weak) IBOutlet NSLayoutConstraint *widthCns;
-@property (weak) IBOutlet NSLayoutConstraint *heightCns;
 
 @end
 
@@ -37,19 +36,10 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 
-    NSMutableAttributedString *mAttString = [NSMutableAttributedString parseFaceWordFromString:@"我是刘强东[hha]"];
-    CGSize size = [mAttString singelineSize];
-    
-    NSLog(@"--%@",NSStringFromSize(size));
     
     
-    self.widthCns.constant = size.width + 13 ;
-    self.heightCns.constant = size.height + 2;
-    self.textView.drawsBackground = NO;
-    [self.textView insertText:mAttString replacementRange:NSMakeRange(0, 0)];
-    self.textView.editable = NO;
-    
-//    [self textSWAttributedLabel];
+
+
 }
 
 
@@ -60,6 +50,7 @@
 
 
 - (void)pattarn {
+
     NSString *str = @"我戳，戳戳戳就是不破。很很牛牛比比，谁也不必聊，[哈哈]老师第一的，牛逼得很我曹很很[哈哈]牛比比，谁也不必聊，老师第一的，牛逼得[哈哈]我曹很很牛牛比比，谁也不必聊，老师第一的，牛逼得很我曹很很牛牛比比，谁也不必聊，老师第一的，牛逼得很我曹";
     NSString *patternStr = @"\\[\\w{0,100}\\]";
     NSRegularExpression *regs = [[NSRegularExpression alloc] initWithPattern:patternStr options:0 error:nil];
@@ -74,10 +65,13 @@
 
 
 - (void)testCustomView {
-    CustomView *cview = [[CustomView alloc] init];
-    cview.frame = CGRectMake(400, 300, 100, 100);
-    [self.window.contentView addSubview:cview];
-    self.imageView.image = [self swatchWithColor:[NSColor redColor] size:CGSizeMake(40, 40)];
+    NSMutableAttributedString *mAttString = [NSMutableAttributedString parseFaceWordFromString:@"我是刘强东[hha]"];
+    CGSize size = [mAttString singelineSize];
+    
+    NSLog(@"--%@",NSStringFromSize(size));
+    self.textView.drawsBackground = NO;
+    [self.textView insertText:mAttString replacementRange:NSMakeRange(0, 0)];
+    self.textView.editable = NO;
 }
 
 

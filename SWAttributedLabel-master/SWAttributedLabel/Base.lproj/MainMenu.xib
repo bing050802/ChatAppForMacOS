@@ -14,10 +14,8 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
-                <outlet property="heightCns" destination="ZRa-Ir-oR9" id="7Ma-JM-c5E"/>
+                <outlet property="emotionView" destination="CZT-Lp-Rhm" id="wwb-GE-ite"/>
                 <outlet property="imageView" destination="Cc9-O7-wJE" id="ZmK-A1-ggk"/>
-                <outlet property="textView" destination="wjV-3K-LQP" id="6d4-gi-1KX"/>
-                <outlet property="widthCns" destination="S7L-a7-3G4" id="93E-qc-1yM"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -686,40 +684,17 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="sQw-ut-aWQ"/>
                     </imageView>
-                    <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z20-i8-fZs">
-                        <rect key="frame" x="120" y="112" width="240" height="135"/>
-                        <clipView key="contentView" id="ZsW-qf-DZJ">
-                            <rect key="frame" x="1" y="1" width="223" height="133"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="wjV-3K-LQP" customClass="HXTextView">
-                                    <rect key="frame" x="0.0" y="0.0" width="223" height="133"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="223" height="133"/>
-                                    <size key="maxSize" width="463" height="10000000"/>
-                                    <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                </textView>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </clipView>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="CZT-Lp-Rhm" customClass="HXEmotionView">
+                        <rect key="frame" x="30" y="30" width="420" height="300"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="240" id="S7L-a7-3G4"/>
-                            <constraint firstAttribute="height" constant="135" id="ZRa-Ir-oR9"/>
+                            <constraint firstAttribute="height" constant="300" id="hTj-Uk-DFI"/>
+                            <constraint firstAttribute="width" constant="420" id="pvj-yY-ifa"/>
                         </constraints>
-                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="n27-fZ-CWa">
-                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </scroller>
-                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="eG4-U5-PDl">
-                            <rect key="frame" x="224" y="1" width="15" height="133"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </scroller>
-                    </scrollView>
+                    </customView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Z20-i8-fZs" firstAttribute="centerY" secondItem="EiT-Mj-1SZ" secondAttribute="centerY" id="C4d-mI-sO2"/>
-                    <constraint firstItem="Z20-i8-fZs" firstAttribute="centerX" secondItem="EiT-Mj-1SZ" secondAttribute="centerX" id="li2-YO-sbK"/>
+                    <constraint firstItem="CZT-Lp-Rhm" firstAttribute="centerX" secondItem="EiT-Mj-1SZ" secondAttribute="centerX" id="5V7-bR-Qk6"/>
+                    <constraint firstItem="CZT-Lp-Rhm" firstAttribute="centerY" secondItem="EiT-Mj-1SZ" secondAttribute="centerY" id="A6m-9v-8oT"/>
                 </constraints>
             </view>
             <point key="canvasLocation" x="-16" y="34"/>
