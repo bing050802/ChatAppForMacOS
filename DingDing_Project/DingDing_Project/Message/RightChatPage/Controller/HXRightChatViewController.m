@@ -20,6 +20,8 @@
 #import "NSMutableAttributedString+AttachMent.h"
 
 
+#import "MLPopupWindowManager.h"
+
 
 
 @interface HXRightChatViewController () <NSTableViewDelegate,NSTableViewDataSource>
@@ -222,7 +224,8 @@ static NSString *mineCellID = @"mineCellID";
 
 
 - (nullable NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row {
-    HXMsgDatailCell *cell = [tableView makeViewWithIdentifier:datilCellID owner:self];
+//    HXMsgDatailCell *cell = [tableView makeViewWithIdentifier:datilCellID owner:self];
+    HXMineMessageCell *cell = [tableView makeViewWithIdentifier:mineCellID owner:self];
     cell.message = self.msgDatialArray[row];
     return cell;
 }
@@ -295,10 +298,24 @@ static NSString *mineCellID = @"mineCellID";
 
 - (IBAction)cutScreen:(id)sender {
     NSLog(@"%s",__func__);
+    
+   
 }
 
 
 - (IBAction)sendMingPian:(id)sender {
+
+//    NSPopover *popover = [[NSPopover alloc] init];
+//    
+//    [popover setContentSize:NSMakeSize(380, 300)];
+//    popover.contentViewController = [[HXEmotionSelectController alloc] init];
+//    [popover setAnimates:NO];
+//    [popover setAppearance: NSPopoverAppearanceMinimal];
+//    
+//    NSButton *btn = sender;
+//    NSRect cellRect = [btn bounds];
+//    
+//    [popover showRelativeToRect:cellRect ofView:btn preferredEdge:NSRectEdgeMinY];
     NSLog(@"%s",__func__);
 }
 

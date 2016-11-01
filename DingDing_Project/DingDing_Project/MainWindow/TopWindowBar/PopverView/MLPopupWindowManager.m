@@ -90,42 +90,34 @@ MLPopupWindowManager* _popupManager;
             screenFrame = [[self.popupWindow screen] visibleFrame];
         } else {
             screenFrame = [[NSScreen mainScreen] visibleFrame];
-            
         }
-        //		[self.control convert ]
-        //		NSRect screenRect = [self.control.window convertRectToScreen:self.control.frame];
         
+        NSRect screenRect = [self.control.window convertRectToScreen:self.control.frame];
+        NSRect frame = NSZeroRect;
+        NSRect contentRect = self.control.bounds;
+        frame.size.width = contentRect.size.width;
+        frame.size.height = originalHeight;
+        frame.origin.x = screenRect.origin.x;
+        frame.origin.y = screenRect.origin.y - originalHeight;
         
-        //        NSLog(@"screenRect---%@",NSStringFromRect(screenRect));
+        CGFloat x1 = frame.origin.x;
+        CGFloat y1 = frame.origin.y;
+        CGFloat x2 = x1 + frame.size.width;
+        //		CGFloat y2 = y1 + frame.size.height;
         
-        //		NSRect frame = NSZeroRect;
-        //		NSRect contentRect = self.control.bounds;
-        //		frame.size.width = contentRect.size.width;
-        //		frame.size.height = originalHeight;
-        //		frame.origin.x = screenRect.origin.x;
-        //		frame.origin.y = screenRect.origin.y - originalHeight;
-        //
-        //		CGFloat x1 = frame.origin.x;
-        //		CGFloat y1 = frame.origin.y;
-        //		CGFloat x2 = x1 + frame.size.width;
-        ////		CGFloat y2 = y1 + frame.size.height;
-        //
-        //		if(x1 < screenFrame.origin.x) {
-        //			frame.origin.x = screenFrame.origin.x;
-        //		}
-        //		if(y1 < screenFrame.origin.y) {
-        //			frame.origin.y = screenRect.origin.y + contentRect.size.height;
-        //		}
-        //		if(x2 > screenFrame.size.width) {
-        //			frame.origin.x -= (x2 - screenFrame.size.width);
-        //		}
-        //        
-        //        CGFloat x1 = screenRect.origin.x;
-        //        CGFloat y1 = screenRect.origin.y;
-        //		[self.popupWindow setFrame:NSMakeRect(x1, y1, 300, 400) display:NO];
+        if(x1 < screenFrame.origin.x) {
+            frame.origin.x = screenFrame.origin.x;
+        }
+        if(y1 < screenFrame.origin.y) {
+            frame.origin.y = screenRect.origin.y + contentRect.size.height;
+        }
+        if(x2 > screenFrame.size.width) {
+            frame.origin.x -= (x2 - screenFrame.size.width);
+        }
+        [self.popupWindow setFrame:frame display:NO];
     };
-    
 }
+
 
 
 - (void)windowDidResignKey:(NSNotification *)note

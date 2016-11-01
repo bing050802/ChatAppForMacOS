@@ -8,7 +8,7 @@
 
 #import "HXPersonalController.h"
 #import "HXPrefixHeader.h"
-#import "HXRightChatViewController.h"
+
 
 @interface HXPersonalController ()
 
@@ -29,15 +29,14 @@
     
     NSPopover *popover = [[NSPopover alloc] init];
     
-    [popover setContentSize:NSMakeSize(100.0f, 100.0f)];
-    
-    popover.contentViewController = [[HXRightChatViewController alloc] init];
+    [popover setContentSize:NSMakeSize(380, 300)];
+
     [popover setAnimates:NO];
-    
-    popover.appearance = [NSAppearance appearanceNamed:NSAppearanceNameAqua];
-    
-    NSButton* btn = sender;
+    [popover setAppearance: NSPopoverAppearanceMinimal];
+
+    NSButton *btn = sender;
     NSRect cellRect = [btn bounds];
+    
     [popover showRelativeToRect:cellRect ofView:btn preferredEdge:NSRectEdgeMinY];
 }
 

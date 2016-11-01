@@ -54,6 +54,7 @@
 		8A4C6A4D1D7ED62A005BC413 /* NFSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4C6A4B1D7ED62A005BC413 /* NFSplitViewController.m */; };
 		8A5589691D741455000AF3EA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A5589681D741455000AF3EA /* MainMenu.xib */; };
 		8A565F751D6D8A920049C153 /* NSView+RBLAnimationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A565F741D6D8A920049C153 /* NSView+RBLAnimationAdditions.m */; };
+		8A64FE481DC8910B00617ED6 /* HXEmotionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A64FE471DC8910B00617ED6 /* HXEmotionView.m */; };
 		8A66944B1D9D0B2A00C394B7 /* msgcell_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A66944A1D9D0B2A00C394B7 /* msgcell_delete.png */; };
 		8A92870F1DBF826A004CFAEA /* aite.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A9287011DBF826A004CFAEA /* aite.png */; };
 		8A9287101DBF826A004CFAEA /* aite_entered.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A9287021DBF826A004CFAEA /* aite_entered.png */; };
@@ -119,7 +120,6 @@
 		8AE3FD2A1DA8F4070023331C /* JMModalOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE3FD241DA8F4070023331C /* JMModalOverlay.m */; };
 		8AE3FD2B1DA8F4070023331C /* JMOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE3FD261DA8F4070023331C /* JMOverlayView.m */; };
 		8AE49A871DAA170600461D8C /* HXPersonalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE49A851DAA170600461D8C /* HXPersonalController.m */; };
-		8AE49A881DAA170600461D8C /* HXPersonalController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AE49A861DAA170600461D8C /* HXPersonalController.xib */; };
 		8AE49A8B1DAA1BBA00461D8C /* HXMsgDatailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE49A8A1DAA1BBA00461D8C /* HXMsgDatailCell.m */; };
 		8AE49A8D1DAA1BE600461D8C /* HXMsgDatailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AE49A8C1DAA1BE600461D8C /* HXMsgDatailCell.xib */; };
 		8AE49A941DAA225B00461D8C /* HXBaseTabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE49A931DAA225B00461D8C /* HXBaseTabelCell.m */; };
@@ -213,6 +213,8 @@
 		8A5589681D741455000AF3EA /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = ../../MainMenu.xib; sourceTree = "<group>"; };
 		8A565F731D6D8A920049C153 /* NSView+RBLAnimationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+RBLAnimationAdditions.h"; sourceTree = "<group>"; };
 		8A565F741D6D8A920049C153 /* NSView+RBLAnimationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+RBLAnimationAdditions.m"; sourceTree = "<group>"; };
+		8A64FE461DC8910B00617ED6 /* HXEmotionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXEmotionView.h; sourceTree = "<group>"; };
+		8A64FE471DC8910B00617ED6 /* HXEmotionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXEmotionView.m; sourceTree = "<group>"; };
 		8A66944A1D9D0B2A00C394B7 /* msgcell_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = msgcell_delete.png; sourceTree = "<group>"; };
 		8A9287011DBF826A004CFAEA /* aite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aite.png; sourceTree = "<group>"; };
 		8A9287021DBF826A004CFAEA /* aite_entered.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aite_entered.png; sourceTree = "<group>"; };
@@ -315,7 +317,6 @@
 		8AE3FD261DA8F4070023331C /* JMOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMOverlayView.m; sourceTree = "<group>"; };
 		8AE49A841DAA170600461D8C /* HXPersonalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXPersonalController.h; sourceTree = "<group>"; };
 		8AE49A851DAA170600461D8C /* HXPersonalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXPersonalController.m; sourceTree = "<group>"; };
-		8AE49A861DAA170600461D8C /* HXPersonalController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXPersonalController.xib; sourceTree = "<group>"; };
 		8AE49A891DAA1BBA00461D8C /* HXMsgDatailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMsgDatailCell.h; sourceTree = "<group>"; };
 		8AE49A8A1DAA1BBA00461D8C /* HXMsgDatailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMsgDatailCell.m; sourceTree = "<group>"; };
 		8AE49A8C1DAA1BE600461D8C /* HXMsgDatailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXMsgDatailCell.xib; sourceTree = "<group>"; };
@@ -469,7 +470,6 @@
 				3349A9ED1D8535C20095C667 /* HXRightChatViewController.xib */,
 				8AE49A841DAA170600461D8C /* HXPersonalController.h */,
 				8AE49A851DAA170600461D8C /* HXPersonalController.m */,
-				8AE49A861DAA170600461D8C /* HXPersonalController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -612,6 +612,8 @@
 		8A9C6FF31D9E7472002D82AF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8A64FE461DC8910B00617ED6 /* HXEmotionView.h */,
+				8A64FE471DC8910B00617ED6 /* HXEmotionView.m */,
 				8AC78CFE1DAE074200BC459D /* HXMineMessageCell.h */,
 				8AC78CFF1DAE074200BC459D /* HXMineMessageCell.m */,
 				8AC78D011DAE07A100BC459D /* HXMineMessageCell.xib */,
@@ -1068,7 +1070,6 @@
 				8AE3FD191DA8E2980023331C /* callDing_entered.png in Resources */,
 				3349A9F31D8535C20095C667 /* HXRightChatViewController.xib in Resources */,
 				8A9287181DBF826A004CFAEA /* file_entered.png in Resources */,
-				8AE49A881DAA170600461D8C /* HXPersonalController.xib in Resources */,
 				8A4C6A1A1D7EB09F005BC413 /* dingIcon_seclected.png in Resources */,
 				8A9287141DBF826A004CFAEA /* cut_entered.png in Resources */,
 				8A4C6A3A1D7EB928005BC413 /* moreIcon.png in Resources */,
@@ -1121,6 +1122,7 @@
 				3349A9DC1D852FF60095C667 /* MLPopupWindowManager.m in Sources */,
 				8AB430FC1D9B70440063CF7A /* SDWebImageDownloaderOperation.m in Sources */,
 				8AB430FA1D9B70440063CF7A /* NSImage+StackBlur.m in Sources */,
+				8A64FE481DC8910B00617ED6 /* HXEmotionView.m in Sources */,
 				8A4C6A341D7EB2E2005BC413 /* HXLeftToolBar.m in Sources */,
 				33C74A091DBCF6340017BBD9 /* CustomAttachMentCell.m in Sources */,
 				8AB431011D9B70440063CF7A /* SDWebImageDecoder.m in Sources */,

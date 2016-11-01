@@ -11,9 +11,7 @@
 #import "HXMessage.h"
 
 #import "HXPrefixHeader.h"
-
 #import "HXTextView.h"
-
 #import "NSImage+StackBlur.h"
 
 @interface HXMineMessageCell : HXBaseTabelCell

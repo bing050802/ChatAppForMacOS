@@ -14,7 +14,7 @@
 
 @interface HXViewController ()
 
-@property (nonatomic,strong)  HXMessageSplitController *messageSplitController;
+@property (nonatomic,strong) HXMessageSplitController *messageSplitController;
 
 @end
 
@@ -36,13 +36,10 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
-        
+//        NSCollectionView
     }
     return self;
 }
-
-
-
 
 
 /** 当使用纯代码进行 控制器管理view的时候，重写loadView方法 赋值self.view属性 并添加子控件 */

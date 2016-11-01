@@ -9,7 +9,6 @@
 #import "HXMsgDatailCell.h"
 #import "HXPrefixHeader.h"
 
-#import "HXTextView.h"
 #import "NSMutableAttributedString+AttachMent.h"
 
 @interface HXMsgDatailCell ()
@@ -46,7 +45,6 @@
     
     // 2014-10-30 18:07:47
     self.timeLable.stringValue = [message.create_time substringWithRange:NSMakeRange(message.create_time.length - 5, 5)];
-    
     
     NSMutableAttributedString *attString = [NSMutableAttributedString parseFaceWordFromString:message.text];
     [attString setLineSpacing:5];

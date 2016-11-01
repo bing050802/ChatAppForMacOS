@@ -91,8 +91,8 @@
         } else if (part.special) { // 非表情的特殊文字
             
         } else { // 非特殊文字
-            substr = [[NSMutableAttributedString alloc] initWithString:part.text];
-            [substr setFont:[NSFont systemFontOfSize:14] range:NSMakeRange(0, part.text.length)];
+            substr = [[NSMutableAttributedString alloc] initWithString:part.text]; //HelveticaNeue，HelveticaNeue-Bold
+            [substr setFont:[NSFont systemFontOfSize:13.4] range:NSMakeRange(0, part.text.length)];
             subCalculateString = substr;
         }
         [resultAttString appendAttributedString:substr];

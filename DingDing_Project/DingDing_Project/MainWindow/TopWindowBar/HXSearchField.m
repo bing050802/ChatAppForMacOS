@@ -62,7 +62,7 @@
         _placeHolderLabel.selectable = NO;
         _placeHolderLabel.backgroundColor = [NSColor clearColor];
         _placeHolderLabel.textColor = [NSColor whiteColor];
-        _placeHolderLabel.font = [NSFont labelFontOfSize:14];
+        _placeHolderLabel.font = [NSFont titleBarFontOfSize:14];
         [self addSubview:_placeHolderLabel positioned:NSWindowBelow relativeTo:self.textfield];
     }
     return _placeHolderLabel;

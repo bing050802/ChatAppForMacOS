@@ -7,7 +7,7 @@
 //
 
 #import "HXMineMessageCell.h"
-
+#import "NSMutableAttributedString+AttachMent.h"
 
 @interface HXMineMessageCell ()
 
@@ -26,18 +26,15 @@
 
 
 - (void)awakeFromNib {
-    
-    self.msgTextView.textContainerInset = NSMakeSize(5, 10.0);
+    self.msgTextView.textContainerInset = NSMakeSize(5, 8.0);
     self.msgTextView.drawsBackground = NO;
-    self.msgTextView.borderColor = HXColor(225, 224, 228);
-    self.msgTextView.font = [NSFont systemFontOfSize:14.0];
-    self.msgTextView.textColor = HXColor(70, 70, 70);
-    
+    self.msgTextView.borderColor = [NSColor clearColor];
+    self.msgTextView.textViewBgColor = HXSColor(64, 175, 252);
+    self.msgTextView.textColor = HXSColor(228, 244, 255);
 }
 
 - (void)setMessage:(HXMessage *)message {
     _message = message;
-    
     
     [self.iconImage sd_setImageWithURL:message.profile_image placeholderImage:nil options:SDWebImageCircledImage];
     if (!message.profile_image.length) {
@@ -46,7 +43,16 @@
     // 2014-10-30 18:07:47
     self.timeLabel.stringValue = [message.create_time substringWithRange:NSMakeRange(message.create_time.length - 5, 5)];
     
+    NSMutableAttributedString *attString = [NSMutableAttributedString parseFaceWordFromString:message.text];
+    [attString setLineSpacing:5];
     
+    [self.msgTextView insertText:attString replacementRange:NSMakeRange(0, 0)];
+    CGSize textRealSize = [attString mlineSize];
+    CGSize onelineSize = [attString singelineSize];
+    if (onelineSize.width < 300) {
+        self.textWidthCons.constant = onelineSize.width + 20;
+    }
+    self.textHeightCons.constant = textRealSize.height + 16;
     
 }
 
