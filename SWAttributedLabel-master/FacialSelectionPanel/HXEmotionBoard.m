@@ -8,7 +8,7 @@
 
 #import "HXEmotionBoard.h"
 #import "HXBarButton.h"
-#import "HXEmotionTool.h"
+#import "HXEmotion.h"
 
 @interface HXDocomentView : NSView
 
@@ -48,13 +48,13 @@
 }
 
 - (void)setUp {
-    
+    // 设置 scrollView 属性
     self.hasHorizontalScroller = NO;
     self.hasVerticalScroller = YES;
     self.documentView = self.docoment_View;
-    self.emotionWH = 35;
     
-    self.emotions = [HXEmotionTool defaultEmotions];
+    // 每个表情按钮的宽高
+    self.emotionWH = 35;
 }
 
 
@@ -91,7 +91,8 @@
 }
 
 - (void)clickBtn:(HXBarButton *)btn {
-    NSLog(@"%zd",btn.tag);
+    HXEmotion *emotion = self.emotions[btn.tag];
+    NSLog(@"%@",emotion.chs);
 }
 
 - (CGRect)contentRectWithEmotions:(NSInteger)emCount {

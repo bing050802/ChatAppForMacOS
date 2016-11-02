@@ -13,7 +13,6 @@
 @property (nonatomic, copy) NSString *chs;
 /** 表情的png图片名 */
 @property (nonatomic, copy) NSString *png;
-
 /** 表情的png*/
 @property (nonatomic,strong,readonly) NSImage *emotionimage;
 @end

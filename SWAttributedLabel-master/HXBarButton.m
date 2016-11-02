@@ -211,7 +211,11 @@
 - (void)setSelected:(BOOL)selected {
     _selected = selected;
     if (selected) {
-        self.image = self.stateImageDic[@(ButtonStateSelected)];
+        if (self.stateImageDic[@(ButtonStateSelected)]) {
+             self.image = self.stateImageDic[@(ButtonStateSelected)];
+        } else {
+             self.image = self.stateImageDic[@(ButtonStateNormal)];
+        }
         self.cell.backgroundColor = self.stateBackGroundDic[@(ButtonStateSelected)];
         self.cell.textColor = self.stateTitleColorDic[@(ButtonStateSelected)];
         self.leftLine.hidden = NO;
