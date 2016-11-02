@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "SWAttributedLabel.h"
-#import "HXEmotionView.h"
 
 
 #import "CustomAttachMentCell.h"
@@ -26,7 +25,7 @@
 @property (weak) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSImageView *imageView;
 
-@property (weak) IBOutlet HXEmotionView *emotionView;
+
 
 
 @end

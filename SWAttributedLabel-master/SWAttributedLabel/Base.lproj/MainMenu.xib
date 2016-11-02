@@ -14,7 +14,6 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
-                <outlet property="emotionView" destination="CZT-Lp-Rhm" id="wwb-GE-ite"/>
                 <outlet property="imageView" destination="Cc9-O7-wJE" id="ZmK-A1-ggk"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
@@ -684,17 +683,35 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="sQw-ut-aWQ"/>
                     </imageView>
-                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="CZT-Lp-Rhm" customClass="HXEmotionView">
-                        <rect key="frame" x="30" y="30" width="420" height="300"/>
+                    <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEf-Xx-8E8" customClass="HXEmotionBoard">
+                        <rect key="frame" x="25" y="55" width="430" height="250"/>
+                        <clipView key="contentView" id="DoI-HJ-NwP">
+                            <rect key="frame" x="1" y="1" width="413" height="233"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oGK-ad-pVd">
+                                    <rect key="frame" x="0.0" y="0.0" width="398" height="218"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                            </subviews>
+                        </clipView>
                         <constraints>
-                            <constraint firstAttribute="height" constant="300" id="hTj-Uk-DFI"/>
-                            <constraint firstAttribute="width" constant="420" id="pvj-yY-ifa"/>
+                            <constraint firstAttribute="width" constant="430" id="VCe-xj-qwG"/>
+                            <constraint firstAttribute="height" constant="250" id="bGk-F8-6Rh"/>
                         </constraints>
-                    </customView>
+                        <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="bvs-pL-QBl">
+                            <rect key="frame" x="1" y="234" width="413" height="15"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="RMa-W6-8GF">
+                            <rect key="frame" x="414" y="1" width="15" height="233"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="CZT-Lp-Rhm" firstAttribute="centerX" secondItem="EiT-Mj-1SZ" secondAttribute="centerX" id="5V7-bR-Qk6"/>
-                    <constraint firstItem="CZT-Lp-Rhm" firstAttribute="centerY" secondItem="EiT-Mj-1SZ" secondAttribute="centerY" id="A6m-9v-8oT"/>
+                    <constraint firstItem="xEf-Xx-8E8" firstAttribute="centerX" secondItem="EiT-Mj-1SZ" secondAttribute="centerX" id="TH3-aF-LFl"/>
+                    <constraint firstItem="xEf-Xx-8E8" firstAttribute="centerY" secondItem="EiT-Mj-1SZ" secondAttribute="centerY" id="zIt-Gh-sdp"/>
                 </constraints>
             </view>
             <point key="canvasLocation" x="-16" y="34"/>
