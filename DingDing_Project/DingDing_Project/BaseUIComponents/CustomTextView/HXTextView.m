@@ -31,10 +31,6 @@
     return _backGroundView;
 }
 
-- (void)insertText:(id)string replacementRange:(NSRange)replacementRange {
-    [super insertText:string replacementRange:replacementRange];
-    self.editable = NO;
-}
 
 - (void)setBorderWidth:(CGFloat)borderWidth {
     self.backGroundView.layer.borderWidth = borderWidth;
@@ -85,6 +81,10 @@
     [self.superview addSubview:self.backGroundView positioned:NSWindowBelow relativeTo:self];
 }
 
+- (void)insertText:(id)string replacementRange:(NSRange)replacementRange {
+    [super insertText:string replacementRange:replacementRange];
+    self.editable = self.canEdit;
+}
 
 
 - (void)setDrawsBackground:(BOOL)drawsBackground {

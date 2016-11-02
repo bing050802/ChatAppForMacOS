@@ -18,7 +18,7 @@
 
 @property (nonatomic, strong) NSArray *titles;
 
-@property (nonatomic, strong) HXBarButton *currentBtn;
+@property (nonatomic, strong) HXBarButton *lastSelectBtn;
 
 
 @end
@@ -75,9 +75,9 @@
 }
 
 - (void)clickBtn:(HXBarButton *)btn {
-    btn.selected = !btn.selected;
-    self.currentBtn.selected = !btn.selected;
-    self.currentBtn = btn;
+    self.lastSelectBtn.selected = NO;
+     btn.selected = YES;
+    self.lastSelectBtn = btn;
 }
 
 

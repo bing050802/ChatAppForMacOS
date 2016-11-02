@@ -180,6 +180,7 @@ static NSString *mineCellID = @"mineCellID";
     
     //inputView 相关设置
     [self inputViewButtonsSetting];
+    self.inputBgView.hidden = YES;
     [self.inputBgView backGroundColor:HXColor(245, 249, 255)];
     self.inputTextView.drawsBackground = NO;
     self.inputTextView.textContainerInset = NSMakeSize(0, 10.0);
@@ -219,6 +220,7 @@ static NSString *mineCellID = @"mineCellID";
     // 选中之后 背景bgView隐藏，topview datailTableView显示
     self.bgView.hidden = YES;
     self.topView.hidden = NO;
+     self.inputBgView.hidden = NO;
     [self.datailTableView.superview.superview setHidden:NO];
 }
 

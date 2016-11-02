@@ -86,12 +86,7 @@
     [self.topBar autoSetDimension:ALDimensionHeight toSize:60];
 }
 
-- (void)sendEvent:(NSEvent *)event {
-    if (event.type == NSEventTypeKeyDown) {
-         NSLog(@"--%@",event);
-    }
-    [super sendEvent:event];
-}
+
 
 //- (void)mouseMoved:(NSEvent *)theEvent {
 //    NSLog(@"%s",__func__);

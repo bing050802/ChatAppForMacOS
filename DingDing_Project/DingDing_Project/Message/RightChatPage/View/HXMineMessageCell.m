@@ -31,6 +31,7 @@
     self.msgTextView.borderColor = [NSColor clearColor];
     self.msgTextView.textViewBgColor = HXSColor(64, 175, 252);
     self.msgTextView.textColor = HXSColor(228, 244, 255);
+    self.msgTextView.canEdit  = NO;
 }
 
 - (void)setMessage:(HXMessage *)message {
@@ -47,6 +48,7 @@
     [attString setLineSpacing:5];
     
     [self.msgTextView insertText:attString replacementRange:NSMakeRange(0, 0)];
+
     CGSize textRealSize = [attString mlineSize];
     CGSize onelineSize = [attString singelineSize];
     if (onelineSize.width < 300) {
