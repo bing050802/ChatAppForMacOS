@@ -67,6 +67,8 @@
 
 #define NotificationCenter [NSNotificationCenter defaultCenter]
 
+#define NSWindowClickedNotification @"NSWindowClickedNotification"
+
 #ifndef __OPTIMIZE__
 #define NSLog(...) printf("%f %s\n",[[NSDate date]timeIntervalSince1970],[[NSString stringWithFormat:__VA_ARGS__]UTF8String]);
 #endif

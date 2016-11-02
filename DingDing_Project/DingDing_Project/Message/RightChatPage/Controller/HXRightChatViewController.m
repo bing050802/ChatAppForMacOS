@@ -19,9 +19,8 @@
 #import "HXPersonalController.h"
 #import "NSMutableAttributedString+AttachMent.h"
 
-
 #import "MLPopupWindowManager.h"
-
+#import "HXFacialSelectionPanel.h"
 
 
 @interface HXRightChatViewController () <NSTableViewDelegate,NSTableViewDataSource>
@@ -60,12 +59,30 @@
 @property (unsafe_unretained) IBOutlet HXTextView *inputTextView;
 @property (weak) IBOutlet NSView *inputBgView;
 
+
+@property (nonatomic,strong) HXFacialSelectionPanel *facialPanel;
+
 @end
 
 @implementation HXRightChatViewController
 
 static NSString *datilCellID = @"datilCellID";
 static NSString *mineCellID = @"mineCellID";
+
+
+
+- (HXFacialSelectionPanel *)facialPanel {
+    if (!_facialPanel) {
+        _facialPanel = [[HXFacialSelectionPanel alloc] init];
+        [self.view addSubview:_facialPanel];
+        [_facialPanel autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:20];
+        [_facialPanel autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:115];
+        [_facialPanel autoSetDimension:ALDimensionHeight toSize:300];
+        [_facialPanel autoSetDimension:ALDimensionWidth toSize:430];
+    }
+    return _facialPanel;
+}
+
 
 - (NSMutableArray *)msgArray  {
     if (!_msgArray) {
@@ -195,14 +212,15 @@ static NSString *mineCellID = @"mineCellID";
     [self.datailTableView registerNib:[[NSNib alloc] initWithNibNamed:NSStringFromClass([HXMineMessageCell class]) bundle:nil]  forIdentifier:mineCellID];
     
     
-     [self.datailTableView.superview.superview setHidden:YES];
-//    HXColor(248, 251, 255)  [NSColor colorWithRed:248 green:251 blue:255 alpha:1.0]
+    [self.datailTableView.superview.superview setHidden:YES];
     self.datailTableView.backgroundColor = HXColor(248, 251, 255);
     
-//    self.datailTableView.rowHeight
     
     [NotificationCenter addObserver:self selector:@selector(middleTabelViewSelected:)
                                name:NSTableViewSelectionDidChangeNotification object:nil];
+    
+    [NotificationCenter addObserver:self selector:@selector(windowClicked:)
+                               name:NSWindowClickedNotification object:nil];
     
 }
 
@@ -220,7 +238,7 @@ static NSString *mineCellID = @"mineCellID";
     // 选中之后 背景bgView隐藏，topview datailTableView显示
     self.bgView.hidden = YES;
     self.topView.hidden = NO;
-     self.inputBgView.hidden = NO;
+    self.inputBgView.hidden = NO;
     [self.datailTableView.superview.superview setHidden:NO];
 }
 
@@ -284,8 +302,26 @@ static NSString *mineCellID = @"mineCellID";
 }
 
 
+- (void)windowClicked:(NSNotification *)noti {
+    
+    NSEvent *event = noti.object;
+    NSRect panelRect = [self.facialPanel convertRect:self.facialPanel.frame toView:nil];
+    
+    if (CGRectContainsPoint(panelRect, event.locationInWindow)) {
+        NSLog(@"windowClicked--%@",noti.object);
+    }
+    
+    
+}
+
 - (IBAction)showFaces:(id)sender {
-    NSLog(@"%s",__func__);
+    self.facialPanel.wantsLayer = YES;
+    NSShadow *dropShadow = [[NSShadow alloc] init];
+    [dropShadow setShadowColor:[NSColor grayColor]];
+    [dropShadow setShadowOffset:NSMakeSize(0, -5.0)];
+    [dropShadow setShadowBlurRadius:10.0];
+    [self.facialPanel setShadow: dropShadow];
+
 }
 
 
@@ -323,7 +359,6 @@ static NSString *mineCellID = @"mineCellID";
 
 - (IBAction)dianZan:(id)sender {
     NSLog(@"%s",__func__);
-
 }
 
 

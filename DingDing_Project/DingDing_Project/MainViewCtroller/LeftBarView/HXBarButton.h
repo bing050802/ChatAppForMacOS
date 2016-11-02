@@ -26,6 +26,9 @@ typedef NS_OPTIONS(NSUInteger, ButtonState) {
 
 @interface HXBarButton : NSButton
 
+
+@property (nonatomic,strong) NSView *leftLine;
+
 @property (nonatomic,assign) CGFloat cornerRadius;
 
 @property (nonatomic,strong) NSColor *highlightColor;
