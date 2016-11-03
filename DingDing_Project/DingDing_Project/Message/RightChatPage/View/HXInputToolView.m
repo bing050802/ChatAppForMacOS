@@ -79,4 +79,13 @@
     //    [self backGroundColor:[NSColor redColor]];
 }
 
+
+- (IBAction)buttonClick:(HXBarButton *)sender {
+    
+       NSLog(@"---%zd",sender.tag);
+}
+
+
+
+
 @end

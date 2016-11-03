@@ -108,7 +108,7 @@ static NSString *mineCellID = @"mineCellID";
 }
 
 
--(JMModalOverlay *)modalOverlay {
+- (JMModalOverlay *)modalOverlay {
     if (!_modalOverlay) {
         _modalOverlay = [[JMModalOverlay alloc] init];
         _modalOverlay.animates = NO;
@@ -141,34 +141,26 @@ static NSString *mineCellID = @"mineCellID";
 - (void)loadView {
     [super loadView];
     
+    // 背景色
     [self.view backGroundColor:HXColor(248, 251, 255)];
-    
-    // 顶部 工具栏
+    self.topView.hidden = YES;
     [self.topView backGroundColor:HXColor(246, 250, 255)];
-    self.bgView.hidden = YES;
-    self.view.hidden = YES;
     
 
-    
     // 工具栏右侧 按钮设置trackingImage
     [self buttonsSetting];
     
-    //inputView 相关设置
     
-    self.inputView;
-    
-    
-    
+    //inputView 先hidden
+    self.inputView.hidden = YES;
     
     
     // 消息详情列表
     self.datailTableView.headerView = nil;
     [self.datailTableView registerNib:[[NSNib alloc] initWithNibNamed:NSStringFromClass([HXMsgDatailCell class]) bundle:nil]  forIdentifier:datilCellID];
     [self.datailTableView registerNib:[[NSNib alloc] initWithNibNamed:NSStringFromClass([HXMineMessageCell class]) bundle:nil]  forIdentifier:mineCellID];
-    
-    
-    [self.datailTableView.superview.superview setHidden:YES];
     self.datailTableView.backgroundColor = HXColor(248, 251, 255);
+    self.datailTableView.enclosingScrollView.hidden = YES;
     
     
     [NotificationCenter addObserver:self selector:@selector(middleTabelViewSelected:)
@@ -190,9 +182,12 @@ static NSString *mineCellID = @"mineCellID";
     [self.iconImage sd_setImageWithURL:message.profile_image placeholderImage:nil options:SDWebImageCircledImage];
     self.nameLabel.stringValue = message.name;
     
-    // 选中之后 背景bgView隐藏，控制器view显示
+    // 选中之后 背景bgView隐藏，inputView datailTableView 显示
     self.bgView.hidden = YES;
-    self.view.hidden = NO;
+    self.inputView.hidden = NO;
+    self.topView.hidden = NO;
+    self.datailTableView.enclosingScrollView.hidden = NO;
+
 }
 
 
@@ -213,13 +208,6 @@ static NSString *mineCellID = @"mineCellID";
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
     return self.msgDatialArray.count;
-}
-
-
-
-- (void)tableViewSelectionDidChange:(NSNotification *)notification {
-
-    
 }
 
 
@@ -249,12 +237,19 @@ static NSString *mineCellID = @"mineCellID";
 
 
 
-- (IBAction)showAttch:(id)sender {
-    
-    NSLog(@"%s",__func__);
+- (IBAction)showFaces:(id)sender {
+    self.facialPanel.wantsLayer = YES;
+    NSShadow *dropShadow = [[NSShadow alloc] init];
+    [dropShadow setShadowColor:[NSColor grayColor]];
+    [dropShadow setShadowOffset:NSMakeSize(0, -5.0)];
+    [dropShadow setShadowBlurRadius:10.0];
+    [self.facialPanel setShadow:dropShadow];
+
 }
 
 
+
+// window 整个区域被点击通知
 - (void)windowClicked:(NSNotification *)noti {
     if (_facialPanel) {
         NSEvent *event = noti.object;
@@ -267,59 +262,9 @@ static NSString *mineCellID = @"mineCellID";
     }
 }
 
-- (IBAction)showFaces:(id)sender {
-    self.facialPanel.wantsLayer = YES;
-    NSShadow *dropShadow = [[NSShadow alloc] init];
-    [dropShadow setShadowColor:[NSColor grayColor]];
-    [dropShadow setShadowOffset:NSMakeSize(0, -5.0)];
-    [dropShadow setShadowBlurRadius:10.0];
-    [self.facialPanel setShadow:dropShadow];
-
-}
-
-
-- (IBAction)showAite:(id)sender {
-    NSLog(@"%s",__func__);
-}
-
-
-- (IBAction)showDingPanFile:(id)sender {
-    NSLog(@"%s",__func__);
-}
-
-- (IBAction)cutScreen:(id)sender {
-    NSLog(@"%s",__func__);
-    
-   
-}
-
-
-- (IBAction)sendMingPian:(id)sender {
-
-//    NSPopover *popover = [[NSPopover alloc] init];
-//    
-//    [popover setContentSize:NSMakeSize(380, 300)];
-//    popover.contentViewController = [[HXEmotionSelectController alloc] init];
-//    [popover setAnimates:NO];
-//    [popover setAppearance: NSPopoverAppearanceMinimal];
-//    
-//    NSButton *btn = sender;
-//    NSRect cellRect = [btn bounds];
-//    
-//    [popover showRelativeToRect:cellRect ofView:btn preferredEdge:NSRectEdgeMinY];
-    NSLog(@"%s",__func__);
-}
-
-- (IBAction)dianZan:(id)sender {
-    NSLog(@"%s",__func__);
-}
-
-
-
 - (CGFloat)minimumLengthInSplitViewController:(NFSplitViewController*)splitViewController {
     return 625;
 }
-
 
 
 @end
