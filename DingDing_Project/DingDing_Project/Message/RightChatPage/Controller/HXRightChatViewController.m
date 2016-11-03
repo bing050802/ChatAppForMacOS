@@ -22,6 +22,8 @@
 #import "MLPopupWindowManager.h"
 #import "HXFacialSelectionPanel.h"
 
+#import "HXInputToolView.h"
+
 
 @interface HXRightChatViewController () <NSTableViewDelegate,NSTableViewDataSource>
 
@@ -48,17 +50,7 @@
 @property (weak) IBOutlet NSView *bgView;
 
 
-@property (weak) IBOutlet HXBarButton *attchBtn;
-@property (weak) IBOutlet HXBarButton *faceBtn;
-@property (weak) IBOutlet HXBarButton *aiteBtn;
-@property (weak) IBOutlet HXBarButton *dingFileBtn;
-@property (weak) IBOutlet HXBarButton *cutBtn;
-@property (weak) IBOutlet HXBarButton *mingPianBtn;
-@property (weak) IBOutlet HXBarButton *zanBtn;
-
-@property (unsafe_unretained) IBOutlet HXTextView *inputTextView;
-@property (weak) IBOutlet NSView *inputBgView;
-
+@property (nonatomic,strong)  HXInputToolView *inputView;
 
 @property (nonatomic,strong) HXFacialSelectionPanel *facialPanel;
 
@@ -69,6 +61,18 @@
 static NSString *datilCellID = @"datilCellID";
 static NSString *mineCellID = @"mineCellID";
 
+
+- (HXInputToolView *)inputView {
+    if (!_inputView) {
+        _inputView = [HXInputToolView loadXibInputView];
+        [self.view addSubview:_inputView];
+        [_inputView autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:0];
+        [_inputView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0];
+        [_inputView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
+        [_inputView autoSetDimension:ALDimensionHeight toSize:110];
+    }
+    return _inputView;
+}
 
 
 - (HXFacialSelectionPanel *)facialPanel {
@@ -118,67 +122,21 @@ static NSString *mineCellID = @"mineCellID";
 }
 
 - (void)buttonsSetting {
-    
-    self.chatFilesBtn.trackingEabled = YES;
-    self.chatFilesBtn.cell.highlightsBy = NSNoCellMask;
-    [self.chatFilesBtn setImage:[NSImage imageNamed:@"chatFile"] forState:ButtonStateNormal];
-    [self.chatFilesBtn setImage:[NSImage imageNamed:@"chatFile_entered"] forState:ButtonStateMouseIn];
-    
-    self.addMemberBtn.trackingEabled = YES;
-    self.addMemberBtn.cell.highlightsBy = NSNoCellMask;
-    [self.addMemberBtn setImage:[NSImage imageNamed:@"addMember"] forState:ButtonStateNormal];
-    [self.addMemberBtn setImage:[NSImage imageNamed:@"addMember_entered"] forState:ButtonStateMouseIn];
-    
-    self.callBtn.trackingEabled = YES;
-    self.callBtn.cell.highlightsBy = NSNoCellMask;
-    [self.callBtn setImage:[NSImage imageNamed:@"callDing"] forState:ButtonStateNormal];
-    [self.callBtn setImage:[NSImage imageNamed:@"callDing_entered"] forState:ButtonStateMouseIn];
-    
-    self.personalBtn.trackingEabled = YES;
-    self.personalBtn.cell.highlightsBy = NSNoCellMask;
-    [self.personalBtn setImage:[NSImage imageNamed:@"personal"] forState:ButtonStateNormal];
-    [self.personalBtn setImage:[NSImage imageNamed:@"personal_entered"] forState:ButtonStateMouseIn];
+    [self settingWithImageName:@"chatFile" btn:self.chatFilesBtn];
+    [self settingWithImageName:@"addMember" btn:self.addMemberBtn];
+    [self settingWithImageName:@"callDing" btn:self.callBtn];
+    [self settingWithImageName:@"personal" btn:self.personalBtn];
 }
 
-- (void)inputViewButtonsSetting {
-    
-    self.attchBtn.trackingEabled = YES;
-    self.attchBtn.cell.highlightsBy = NSNoCellMask;
-    [self.attchBtn setImage:[NSImage imageNamed:@"attach"] forState:ButtonStateNormal];
-    [self.attchBtn setImage:[NSImage imageNamed:@"attach_entered"] forState:ButtonStateMouseIn];
-    
-    self.faceBtn.trackingEabled = YES;
-    self.faceBtn.cell.highlightsBy = NSNoCellMask;
-    [self.faceBtn setImage:[NSImage imageNamed:@"face"] forState:ButtonStateNormal];
-    [self.faceBtn setImage:[NSImage imageNamed:@"face_entered"] forState:ButtonStateMouseIn];
-    
-    self.aiteBtn.trackingEabled = YES;
-    self.aiteBtn.cell.highlightsBy = NSNoCellMask;
-    [self.aiteBtn setImage:[NSImage imageNamed:@"aite"] forState:ButtonStateNormal];
-    [self.aiteBtn setImage:[NSImage imageNamed:@"aite_entered"] forState:ButtonStateMouseIn];
-    
-    
-    self.dingFileBtn.trackingEabled = YES;
-    self.dingFileBtn.cell.highlightsBy = NSNoCellMask;
-    [self.dingFileBtn setImage:[NSImage imageNamed:@"file"] forState:ButtonStateNormal];
-    [self.dingFileBtn setImage:[NSImage imageNamed:@"file_entered"] forState:ButtonStateMouseIn];
-    
-    self.cutBtn.trackingEabled = YES;
-    self.cutBtn.cell.highlightsBy = NSNoCellMask;
-    [self.cutBtn setImage:[NSImage imageNamed:@"cut"] forState:ButtonStateNormal];
-    [self.cutBtn setImage:[NSImage imageNamed:@"cut_entered"] forState:ButtonStateMouseIn];
-    
-    self.mingPianBtn.trackingEabled = YES;
-    self.mingPianBtn.cell.highlightsBy = NSNoCellMask;
-    [self.mingPianBtn setImage:[NSImage imageNamed:@"mingPian"] forState:ButtonStateNormal];
-    [self.mingPianBtn setImage:[NSImage imageNamed:@"mingPian_entered"] forState:ButtonStateMouseIn];
-    
-    self.zanBtn.trackingEabled = YES;
-    self.zanBtn.cell.highlightsBy = NSNoCellMask;
-    [self.zanBtn setImage:[NSImage imageNamed:@"zan"] forState:ButtonStateNormal];
-    [self.zanBtn setImage:[NSImage imageNamed:@"zan_entered"] forState:ButtonStateMouseIn];
-    
+- (void)settingWithImageName:(NSString *)name btn:(HXBarButton *)btn {
+    btn.trackingEabled = YES;
+    btn.cell.highlightsBy = NSNoCellMask;
+    [btn setImage:[NSImage imageNamed:name] forState:ButtonStateNormal];
+    [btn setImage:[NSImage imageNamed:[NSString stringWithFormat:@"%@_entered",name]] forState:ButtonStateMouseIn];
 }
+
+
+
 
 - (void)loadView {
     [super loadView];
@@ -187,24 +145,21 @@ static NSString *mineCellID = @"mineCellID";
     
     // 顶部 工具栏
     [self.topView backGroundColor:HXColor(246, 250, 255)];
-    self.topView.hidden = YES;
+    self.bgView.hidden = YES;
+    self.view.hidden = YES;
     
-    // 名字可选中复制
-    self.nameLabel.selectable = YES;
+
     
     // 工具栏右侧 按钮设置trackingImage
     [self buttonsSetting];
     
     //inputView 相关设置
-    [self inputViewButtonsSetting];
-    self.inputBgView.hidden = YES;
-    [self.inputBgView backGroundColor:HXColor(245, 249, 255)];
-    self.inputTextView.drawsBackground = NO;
-    self.inputTextView.textContainerInset = NSMakeSize(0, 10.0);
-    self.inputTextView.borderWidth = 0;
-    self.inputTextView.textViewBgColor = [NSColor clearColor];
-    self.inputTextView.font = [NSFont systemFontOfSize:14.0];
-    self.inputTextView.textColor = HXColor(70, 70, 70);
+    
+    self.inputView;
+    
+    
+    
+    
     
     // 消息详情列表
     self.datailTableView.headerView = nil;
@@ -235,11 +190,9 @@ static NSString *mineCellID = @"mineCellID";
     [self.iconImage sd_setImageWithURL:message.profile_image placeholderImage:nil options:SDWebImageCircledImage];
     self.nameLabel.stringValue = message.name;
     
-    // 选中之后 背景bgView隐藏，topview datailTableView显示
+    // 选中之后 背景bgView隐藏，控制器view显示
     self.bgView.hidden = YES;
-    self.topView.hidden = NO;
-    self.inputBgView.hidden = NO;
-    [self.datailTableView.superview.superview setHidden:NO];
+    self.view.hidden = NO;
 }
 
 
@@ -303,15 +256,15 @@ static NSString *mineCellID = @"mineCellID";
 
 
 - (void)windowClicked:(NSNotification *)noti {
-    
-    NSEvent *event = noti.object;
-    NSRect panelRect = [self.facialPanel convertRect:self.facialPanel.frame toView:nil];
-    
-    if (CGRectContainsPoint(panelRect, event.locationInWindow)) {
-        NSLog(@"windowClicked--%@",noti.object);
+    if (_facialPanel) {
+        NSEvent *event = noti.object;
+        NSRect panelRect = [self.facialPanel convertRect:self.facialPanel.bounds toView:nil];
+        if (!CGRectContainsPoint(panelRect, event.locationInWindow)) {
+            self.facialPanel.hidden = YES;
+            self.facialPanel = nil;
+            NSLog(@"点击了面板其他区域");
+        }
     }
-    
-    
 }
 
 - (IBAction)showFaces:(id)sender {
@@ -320,7 +273,7 @@ static NSString *mineCellID = @"mineCellID";
     [dropShadow setShadowColor:[NSColor grayColor]];
     [dropShadow setShadowOffset:NSMakeSize(0, -5.0)];
     [dropShadow setShadowBlurRadius:10.0];
-    [self.facialPanel setShadow: dropShadow];
+    [self.facialPanel setShadow:dropShadow];
 
 }
 

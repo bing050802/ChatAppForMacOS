@@ -9,6 +9,7 @@
 #import "HXEmotionBoard.h"
 #import "HXBarButton.h"
 #import "HXEmotion.h"
+#import "HXPrefixHeader.h"
 
 @interface HXDocomentView : NSView
 
@@ -44,7 +45,6 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self setUp];
-    
 }
 
 - (void)setUp {

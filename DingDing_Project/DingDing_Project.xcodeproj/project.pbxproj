@@ -317,6 +317,8 @@
 		8AB430FF1D9B70440063CF7A /* NSView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB430F01D9B70440063CF7A /* NSView+WebCacheOperation.m */; };
 		8AB431001D9B70440063CF7A /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB430F31D9B70440063CF7A /* SDWebImageCompat.m */; };
 		8AB431011D9B70440063CF7A /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB430F51D9B70440063CF7A /* SDWebImageDecoder.m */; };
+		8AB850401DCAE4AC00638698 /* HXInputToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB8503F1DCAE4AC00638698 /* HXInputToolView.m */; };
+		8AB850421DCAE4C600638698 /* HXInputToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AB850411DCAE4C600638698 /* HXInputToolView.xib */; };
 		8AC6678D1DABA64E00250E02 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC6678C1DABA64E00250E02 /* main.m */; };
 		8AC667901DABA64E00250E02 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC6678F1DABA64E00250E02 /* AppDelegate.m */; };
 		8AC667931DABA64E00250E02 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC667921DABA64E00250E02 /* ViewController.m */; };
@@ -726,6 +728,9 @@
 		8AB430F31D9B70440063CF7A /* SDWebImageCompat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageCompat.m; sourceTree = "<group>"; };
 		8AB430F41D9B70440063CF7A /* SDWebImageDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDecoder.h; sourceTree = "<group>"; };
 		8AB430F51D9B70440063CF7A /* SDWebImageDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDecoder.m; sourceTree = "<group>"; };
+		8AB8503E1DCAE4AC00638698 /* HXInputToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXInputToolView.h; sourceTree = "<group>"; };
+		8AB8503F1DCAE4AC00638698 /* HXInputToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXInputToolView.m; sourceTree = "<group>"; };
+		8AB850411DCAE4C600638698 /* HXInputToolView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXInputToolView.xib; sourceTree = "<group>"; };
 		8AC667891DABA64E00250E02 /* IOSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC6678C1DABA64E00250E02 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8AC6678E1DABA64E00250E02 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1355,6 +1360,9 @@
 				8AE49A891DAA1BBA00461D8C /* HXMsgDatailCell.h */,
 				8AE49A8A1DAA1BBA00461D8C /* HXMsgDatailCell.m */,
 				8AE49A8C1DAA1BE600461D8C /* HXMsgDatailCell.xib */,
+				8AB8503E1DCAE4AC00638698 /* HXInputToolView.h */,
+				8AB8503F1DCAE4AC00638698 /* HXInputToolView.m */,
+				8AB850411DCAE4C600638698 /* HXInputToolView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1766,6 +1774,7 @@
 				8A898C121DC9F8AA0065D3EF /* d_bizui@2x.png in Resources */,
 				8A898CDD1DC9F8AA0065D3EF /* lxh_youyali.gif in Resources */,
 				8AE26D351D598A4800855257 /* Assets.xcassets in Resources */,
+				8AB850421DCAE4C600638698 /* HXInputToolView.xib in Resources */,
 				8A898C261DC9F8AA0065D3EF /* d_ku@2x.png in Resources */,
 				8A898C711DC9F8AA0065D3EF /* lxh.plist in Resources */,
 				8A898C841DC9F8AA0065D3EF /* lxh_deyidexiao.gif in Resources */,
@@ -2067,6 +2076,7 @@
 				8A4C6A331D7EB2E2005BC413 /* HXBarButton.m in Sources */,
 				8AB430F81D9B70440063CF7A /* NSImage+GIF.m in Sources */,
 				3349A9DF1D8530710095C667 /* HXMessageSplitController.m in Sources */,
+				8AB850401DCAE4AC00638698 /* HXInputToolView.m in Sources */,
 				8AE3FD2B1DA8F4070023331C /* JMOverlayView.m in Sources */,
 				8A4C6A361D7EB2E2005BC413 /* HXSelectBar.m in Sources */,
 				8AB430F91D9B70440063CF7A /* NSImage+MultiFormat.m in Sources */,
