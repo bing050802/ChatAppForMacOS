@@ -12,7 +12,7 @@
 #import "HXTextView.h"
 
 
-@interface HXInputToolView ()
+@interface HXInputToolView () <NSTextViewDelegate>
 
 @property (weak) IBOutlet HXBarButton *attchBtn;
 @property (weak) IBOutlet HXBarButton *faceBtn;
@@ -27,7 +27,7 @@
 
 @end
 
-@implementation HXInputToolView
+@implementation HXInputToolView 
 
 + (HXInputToolView *)loadXibInputView {
     NSArray *viewsArray;
@@ -64,6 +64,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
+    [NotificationCenter addObserver:self selector:@selector(emotionSelect:) name:EmotionSelectNotification object:nil];
+    
     [self backGroundColor:HXColor(245, 249, 255)];
     [self inputViewButtonsSetting];
     
@@ -73,19 +75,31 @@
     self.inputTextView.textViewBgColor = [NSColor clearColor];
     self.inputTextView.font = [NSFont systemFontOfSize:14.0];
     self.inputTextView.textColor = HXColor(70, 70, 70);
-    
+    self.inputTextView.delegate = self;
     
     NSLog(@"---%@",self.subviews);
     //    [self backGroundColor:[NSColor redColor]];
 }
 
 
-- (IBAction)buttonClick:(HXBarButton *)sender {
+- (BOOL)textView:(NSTextView *)textView doCommandBySelector:(SEL)commandSelector {
     
-       NSLog(@"---%zd",sender.tag);
+    if (commandSelector == @selector(insertNewline:)) {
+        if (!textView.string.length) return YES;
+        [self.delegate inputCompleteToSend:textView];
+        return YES;
+    }
+    return NO;
 }
 
 
+- (IBAction)buttonClick:(HXBarButton *)sender {
+    [self.delegate toolViewSelect:sender.tag];
+}
+
+- (void)emotionSelect:(NSNotification *)noti {
+    [self.inputTextView insertText:noti.object];
+}
 
 
 @end

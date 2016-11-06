@@ -8,9 +8,17 @@
 
 #import <Cocoa/Cocoa.h>
 
+@protocol InputToolViewDelegate <NSObject>
+
+- (void)toolViewSelect:(NSInteger)tag;
+- (void)inputCompleteToSend:(NSTextView *)textView;
+
+@end
+
 @interface HXInputToolView : NSView
 
 + (HXInputToolView *)loadXibInputView;
 
+@property (nonatomic,weak) id <InputToolViewDelegate> delegate;
 
 @end

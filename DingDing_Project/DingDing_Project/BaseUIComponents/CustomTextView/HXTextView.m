@@ -81,10 +81,7 @@
     [self.superview addSubview:self.backGroundView positioned:NSWindowBelow relativeTo:self];
 }
 
-- (void)insertText:(id)string replacementRange:(NSRange)replacementRange {
-    [super insertText:string replacementRange:replacementRange];
-    self.editable = self.canEdit;
-}
+
 
 
 - (void)setDrawsBackground:(BOOL)drawsBackground {

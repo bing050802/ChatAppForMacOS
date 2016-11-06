@@ -44,12 +44,13 @@
     self.nameLabel.stringValue = message.name;
     
     // 2014-10-30 18:07:47
-    self.timeLable.stringValue = [message.create_time substringWithRange:NSMakeRange(message.create_time.length - 5, 5)];
+    self.timeLable.stringValue = message.create_time;
     
     NSMutableAttributedString *attString = [NSMutableAttributedString parseFaceWordFromString:message.text];
     [attString setLineSpacing:5];
     
     [self.attTextView insertText:attString replacementRange:NSMakeRange(0, 0)];
+    self.attTextView.editable = NO;
     CGSize textRealSize = [attString mlineSize];
     CGSize onelineSize = [attString singelineSize];
     if (onelineSize.width < 300) {

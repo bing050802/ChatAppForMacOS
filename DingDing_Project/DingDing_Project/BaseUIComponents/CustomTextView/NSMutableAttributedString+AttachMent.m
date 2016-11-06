@@ -10,6 +10,7 @@
 #import "RegexKitLite.h"
 #import "HXTextPart.h"
 #import "HXPrefixHeader.h"
+#import "HXEmotionTool.h"
 
 @implementation NSMutableAttributedString (AttachMent)
 
@@ -85,7 +86,9 @@
         
         if (part.isEmotion) { // 表情
             CGSize attSize = CGSizeMake(EmotionWH, EmotionWH);
-            substr = [self attributedStringWithImage:[NSImage imageNamed:@"haha@2x"] attachSize:attSize];
+            HXEmotion *em = [HXEmotionTool emotionWithChs:part.text];
+            NSLog(@"isEmotion---substr--%@---%@",part.text,em);
+            substr = [self attributedStringWithImage:em.emotionimage attachSize:attSize];
             subCalculateString = [self createReplacementAttString];
             
         } else if (part.special) { // 非表情的特殊文字

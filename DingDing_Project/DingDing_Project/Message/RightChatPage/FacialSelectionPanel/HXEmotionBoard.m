@@ -92,7 +92,7 @@
 
 - (void)clickBtn:(HXBarButton *)btn {
     HXEmotion *emotion = self.emotions[btn.tag];
-    NSLog(@"%@",emotion.chs);
+    [NotificationCenter postNotificationName:EmotionSelectNotification object:emotion.chs];
 }
 
 - (CGRect)contentRectWithEmotions:(NSInteger)emCount {

@@ -25,7 +25,7 @@
 #import "HXInputToolView.h"
 
 
-@interface HXRightChatViewController () <NSTableViewDelegate,NSTableViewDataSource>
+@interface HXRightChatViewController () <NSTableViewDelegate,NSTableViewDataSource,InputToolViewDelegate>
 
 @property (weak) IBOutlet NSView *topView;
 
@@ -66,6 +66,7 @@ static NSString *mineCellID = @"mineCellID";
     if (!_inputView) {
         _inputView = [HXInputToolView loadXibInputView];
         [self.view addSubview:_inputView];
+        _inputView.delegate = self;
         [_inputView autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:0];
         [_inputView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0];
         [_inputView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
@@ -161,7 +162,7 @@ static NSString *mineCellID = @"mineCellID";
     [self.datailTableView registerNib:[[NSNib alloc] initWithNibNamed:NSStringFromClass([HXMineMessageCell class]) bundle:nil]  forIdentifier:mineCellID];
     self.datailTableView.backgroundColor = HXColor(248, 251, 255);
     self.datailTableView.enclosingScrollView.hidden = YES;
-    
+    self.datailTableView.usesStaticContents = YES;
     
     [NotificationCenter addObserver:self selector:@selector(middleTabelViewSelected:)
                                name:NSTableViewSelectionDidChangeNotification object:nil];
@@ -192,6 +193,7 @@ static NSString *mineCellID = @"mineCellID";
 
 
 - (nullable NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row {
+      NSLog(@"viewForTableColumn-- %zd",row);
 //    HXMsgDatailCell *cell = [tableView makeViewWithIdentifier:datilCellID owner:self];
     HXMineMessageCell *cell = [tableView makeViewWithIdentifier:mineCellID owner:self];
     cell.message = self.msgDatialArray[row];
@@ -199,6 +201,9 @@ static NSString *mineCellID = @"mineCellID";
 }
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
+
+    NSLog(@"heightOfRow-- %zd",row);
+    
     HXMessage *message = self.msgDatialArray[row];
     NSMutableAttributedString *mattString = [NSMutableAttributedString parseFaceWordFromString:message.text];
     [mattString setLineSpacing:5];
@@ -234,19 +239,42 @@ static NSString *mineCellID = @"mineCellID";
 }
 
 
-
-
-
-- (IBAction)showFaces:(id)sender {
-    self.facialPanel.wantsLayer = YES;
-    NSShadow *dropShadow = [[NSShadow alloc] init];
-    [dropShadow setShadowColor:[NSColor grayColor]];
-    [dropShadow setShadowOffset:NSMakeSize(0, -5.0)];
-    [dropShadow setShadowBlurRadius:10.0];
-    [self.facialPanel setShadow:dropShadow];
-
+- (void)inputCompleteToSend:(NSTextView *)textView {
+    
+    // 创建消息对象
+    HXMessage *msg = [[HXMessage alloc] init];
+    msg.name = @"我";
+    msg.create_time = @"2016-11-11 03:00:00";
+    msg.text = textView.string;
+    
+    // inser row
+    [self.datailTableView beginUpdates];
+    [self.msgDatialArray addObject:msg];
+    [self.datailTableView  insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:self.msgDatialArray.count-1] withAnimation:NSTableViewAnimationEffectNone];
+    [self.datailTableView endUpdates];
+    
+    // 文字清空
+    textView.string = @"";
+    
+    // 滑动到最新的消息位置
+    [self.datailTableView scrollRowToVisible:self.msgDatialArray.count - 1];
+    
+    // 隐藏表情键盘
+    self.facialPanel.hidden = YES;
+    self.facialPanel = nil;
 }
 
+
+- (void)toolViewSelect:(NSInteger)tag {
+    if (tag == 101) { // 表情
+        self.facialPanel.wantsLayer = YES;
+        NSShadow *dropShadow = [[NSShadow alloc] init];
+        [dropShadow setShadowColor:[NSColor grayColor]];
+        [dropShadow setShadowOffset:NSMakeSize(0, -5.0)];
+        [dropShadow setShadowBlurRadius:10.0];
+        [self.facialPanel setShadow:dropShadow];
+    }
+}
 
 
 // window 整个区域被点击通知
@@ -257,7 +285,6 @@ static NSString *mineCellID = @"mineCellID";
         if (!CGRectContainsPoint(panelRect, event.locationInWindow)) {
             self.facialPanel.hidden = YES;
             self.facialPanel = nil;
-            NSLog(@"点击了面板其他区域");
         }
     }
 }
