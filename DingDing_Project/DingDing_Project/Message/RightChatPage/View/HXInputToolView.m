@@ -77,7 +77,7 @@
     self.inputTextView.textColor = HXColor(70, 70, 70);
     self.inputTextView.delegate = self;
     
-    NSLog(@"---%@",self.subviews);
+//    NSLog(@"---%@",self.subviews);
     //    [self backGroundColor:[NSColor redColor]];
 }
 

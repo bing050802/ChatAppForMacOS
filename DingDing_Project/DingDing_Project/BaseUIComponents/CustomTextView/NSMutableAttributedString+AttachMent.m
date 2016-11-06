@@ -87,11 +87,14 @@
         if (part.isEmotion) { // 表情
             CGSize attSize = CGSizeMake(EmotionWH, EmotionWH);
             HXEmotion *em = [HXEmotionTool emotionWithChs:part.text];
-            NSLog(@"isEmotion---substr--%@---%@",part.text,em);
+//            NSLog(@"isEmotion---substr--%@---%@",part.text,em);
             substr = [self attributedStringWithImage:em.emotionimage attachSize:attSize];
             subCalculateString = [self createReplacementAttString];
             
         } else if (part.special) { // 非表情的特殊文字
+            substr = [[NSMutableAttributedString alloc] initWithString:part.text]; //HelveticaNeue，HelveticaNeue-Bold
+            [substr setFont:[NSFont systemFontOfSize:13.4] range:NSMakeRange(0, part.text.length)];
+            subCalculateString = substr;
             
         } else { // 非特殊文字
             substr = [[NSMutableAttributedString alloc] initWithString:part.text]; //HelveticaNeue，HelveticaNeue-Bold
