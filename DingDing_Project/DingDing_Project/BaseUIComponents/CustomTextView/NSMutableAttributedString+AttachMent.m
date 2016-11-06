@@ -175,17 +175,17 @@
     return attString;
 }
 
-// 调整图片对齐方式
+//
 static CGFloat ascentCallback(void *ref) {
     return EmotionWH + BaselineOffsetY;
 }
 
-// 调整图片对齐方式
+//
 static CGFloat descentCallback(void *ref) {
     return - BaselineOffsetY;
 }
 
-// 获取图片宽度
+//
 static CGFloat widthCallback(void *ref) {
     return EmotionWH;
 }
