@@ -75,7 +75,7 @@
         _searchToolBar.clearInputBlock = ^() { // 点击清除文字按钮bolck 把文字清除
            weakSelf.textfield.stringValue = @"";
         };
-        _searchToolBar.frame = NSMakeRect(NSWidth(self.originFrame) , 0, 80, 30);
+       
     }
     return _searchToolBar;
 }
@@ -206,6 +206,11 @@
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)layout {
+    [super layout];
+     _searchToolBar.frame = NSMakeRect(NSWidth(self.originFrame) , 0, 80, 30);
 }
 
 @end

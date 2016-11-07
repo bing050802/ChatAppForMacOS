@@ -15,5 +15,6 @@
 
 @property (nonatomic,strong,readonly) NSTableRowView *rowView;
 
+@property (nonatomic,assign) BOOL canTrackAction;
 
 @end

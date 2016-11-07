@@ -27,5 +27,6 @@
 
 @property (nonatomic,assign) CGFloat cellHight;
 
+@property (nonatomic,assign) BOOL isMine;
 
 @end

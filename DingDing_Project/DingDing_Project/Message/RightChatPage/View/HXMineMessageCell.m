@@ -26,6 +26,8 @@
 
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
+    self.canTrackAction = YES;
     self.msgTextView.textContainerInset = NSMakeSize(5, 8.0);
     self.msgTextView.drawsBackground = NO;
     self.msgTextView.borderColor = [NSColor clearColor];
@@ -42,7 +44,7 @@
         self.iconImage.image = [NSImage circleImageWithColor:HXRandomColor size:self.iconImage.frame.size text:message.name];
     }
     // 2014-10-30 18:07:47
-    self.timeLabel.stringValue = message.create_time ;
+    self.timeLabel.stringValue = message.create_time;
     
     NSMutableAttributedString *attString = [NSMutableAttributedString parseFaceWordFromString:message.text];
     [attString setLineSpacing:5];

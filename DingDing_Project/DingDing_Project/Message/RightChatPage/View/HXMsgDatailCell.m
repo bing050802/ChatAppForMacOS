@@ -8,6 +8,7 @@
 
 #import "HXMsgDatailCell.h"
 #import "HXPrefixHeader.h"
+#import "HXBarButton.h"
 
 #import "NSMutableAttributedString+AttachMent.h"
 
@@ -24,16 +25,29 @@
 @property (weak) IBOutlet NSLayoutConstraint *textHeightCons;
 @property (weak) IBOutlet NSLayoutConstraint *textWidthCons;
 
+@property (weak) IBOutlet HXBarButton *popButton;
+
 @end
 
 @implementation HXMsgDatailCell
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
+    _timeLable.hidden = YES;
+    self.canTrackAction = YES;
     self.attTextView.textContainerInset = NSMakeSize(5.0, 8.0);
     self.attTextView.drawsBackground = NO;
     self.attTextView.borderColor = HXColor(225, 224, 228);
     self.attTextView.textColor = HXColor(70, 70, 70);
     self.attTextView.canEdit = NO;
+    
+    _popButton.trackingEabled = YES;
+    _popButton.hidden = YES;
+    _popButton.cell.highlightsBy = NSNoCellMask;
+    NSString *imgName = @"cell_popbtn";
+    [_popButton setImage:[NSImage imageNamed:imgName] forState:ButtonStateNormal];
+    [_popButton setImage:[NSImage imageNamed:[NSString stringWithFormat:@"%@_entered",imgName]] forState:ButtonStateMouseIn];
+    
 }
 
 
@@ -60,6 +74,18 @@
     
 }
 
+
+- (void)mouseEntered:(NSEvent *)event {
+    _popButton.hidden = NO;
+    _timeLable.hidden = NO;
+    NSLog(@"%s",__func__);
+}
+
+- (void)mouseExited:(NSEvent *)event {
+    _popButton.hidden = YES;
+    _timeLable.hidden = YES;
+      NSLog(@"%s",__func__);
+}
 
 - (void)layout {
     [super layout];

@@ -28,6 +28,8 @@
 		33C74A0A1DBCF6340017BBD9 /* HXTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C74A061DBCF6340017BBD9 /* HXTextView.m */; };
 		8A1F454C1DC74FE400546BE3 /* NSMutableAttributedString+AttachMent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1F454B1DC74FE400546BE3 /* NSMutableAttributedString+AttachMent.m */; };
 		8A1F455E1DC751BC00546BE3 /* NSMutableAttributedString+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1F455D1DC751BC00546BE3 /* NSMutableAttributedString+Config.m */; };
+		8A2A7EE41DD091A000BC1DA4 /* cell_popbtn_entered.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A7EE21DD091A000BC1DA4 /* cell_popbtn_entered.png */; };
+		8A2A7EE51DD091A000BC1DA4 /* cell_popbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A7EE31DD091A000BC1DA4 /* cell_popbtn.png */; };
 		8A4C6A111D7EB06E005BC413 /* clear_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4C6A0D1D7EB06E005BC413 /* clear_btn.png */; };
 		8A4C6A121D7EB06E005BC413 /* clear_btn_mousein.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4C6A0E1D7EB06E005BC413 /* clear_btn_mousein.png */; };
 		8A4C6A131D7EB06E005BC413 /* search_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4C6A0F1D7EB06E005BC413 /* search_btn.png */; };
@@ -412,6 +414,8 @@
 		8A1F454B1DC74FE400546BE3 /* NSMutableAttributedString+AttachMent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+AttachMent.m"; sourceTree = "<group>"; };
 		8A1F455C1DC751BC00546BE3 /* NSMutableAttributedString+Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Config.h"; sourceTree = "<group>"; };
 		8A1F455D1DC751BC00546BE3 /* NSMutableAttributedString+Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Config.m"; sourceTree = "<group>"; };
+		8A2A7EE21DD091A000BC1DA4 /* cell_popbtn_entered.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_popbtn_entered.png; sourceTree = "<group>"; };
+		8A2A7EE31DD091A000BC1DA4 /* cell_popbtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_popbtn.png; sourceTree = "<group>"; };
 		8A4C6A0D1D7EB06E005BC413 /* clear_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear_btn.png; sourceTree = "<group>"; };
 		8A4C6A0E1D7EB06E005BC413 /* clear_btn_mousein.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear_btn_mousein.png; sourceTree = "<group>"; };
 		8A4C6A0F1D7EB06E005BC413 /* search_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_btn.png; sourceTree = "<group>"; };
@@ -1615,6 +1619,8 @@
 				8A9287001DBF826A004CFAEA /* textInputView */,
 				8AE2844A1DACD1A000F40EAE /* message_bg.png */,
 				8AE49A951DAA4BFE00461D8C /* rightBG.png */,
+				8A2A7EE21DD091A000BC1DA4 /* cell_popbtn_entered.png */,
+				8A2A7EE31DD091A000BC1DA4 /* cell_popbtn.png */,
 				8AE3FD0E1DA8DBAA0023331C /* chatFile.png */,
 				8AE3FD101DA8DC230023331C /* chatFile_entered.png */,
 				8AE3FD121DA8E2060023331C /* addMember.png */,
@@ -1858,6 +1864,7 @@
 				8A898CB91DC9F8AA0065D3EF /* lxh_qiaoqiao.gif in Resources */,
 				8A898C7D1DC9F8AA0065D3EF /* lxh_biefanwo@2x.png in Resources */,
 				8A898C141DC9F8AA0065D3EF /* d_chijing@2x.png in Resources */,
+				8A2A7EE41DD091A000BC1DA4 /* cell_popbtn_entered.png in Resources */,
 				8A898C8D1DC9F8AA0065D3EF /* lxh_haobang.gif in Resources */,
 				8A898C661DC9F8AA0065D3EF /* o_weiguan@2x.png in Resources */,
 				8A4C6A291D7EB1F3005BC413 /* dingpan_seclected.png in Resources */,
@@ -1995,6 +2002,7 @@
 				8A898CA71DC9F8AA0065D3EF /* lxh_kunsile@2x.png in Resources */,
 				8A898C0D1DC9F8AA0065D3EF /* d_aini@2x.png in Resources */,
 				8A898C211DC9F8AA0065D3EF /* d_heng@2x.png in Resources */,
+				8A2A7EE51DD091A000BC1DA4 /* cell_popbtn.png in Resources */,
 				8A898CA11DC9F8AA0065D3EF /* lxh_juhan@2x.png in Resources */,
 				3349A9F31D8535C20095C667 /* HXRightChatViewController.xib in Resources */,
 				8A9287181DBF826A004CFAEA /* file_entered.png in Resources */,

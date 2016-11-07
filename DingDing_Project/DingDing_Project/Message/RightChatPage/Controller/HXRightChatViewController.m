@@ -103,7 +103,7 @@ static NSString *mineCellID = @"mineCellID";
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"new_topics.plist" ofType:nil];
         NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
         _msgDatialArray = [HXMessage mj_objectArrayWithKeyValuesArray:dict[@"list"]];
-//        [_msgDatialArray addObjectsFromArray:self.msgArray];
+        [_msgDatialArray addObjectsFromArray:self.msgArray];
     }
     return _msgDatialArray;
 }
@@ -147,14 +147,11 @@ static NSString *mineCellID = @"mineCellID";
     self.topView.hidden = YES;
     [self.topView backGroundColor:HXColor(246, 250, 255)];
     
-
     // 工具栏右侧 按钮设置trackingImage
     [self buttonsSetting];
     
-    
     //inputView 先hidden
     self.inputView.hidden = YES;
-    
     
     // 消息详情列表
     self.datailTableView.headerView = nil;
@@ -193,11 +190,17 @@ static NSString *mineCellID = @"mineCellID";
 
 
 - (nullable NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row {
-//      NSLog(@"viewForTableColumn-- %zd",row);
-//    HXMsgDatailCell *cell = [tableView makeViewWithIdentifier:datilCellID owner:self];
-    HXMineMessageCell *cell = [tableView makeViewWithIdentifier:mineCellID owner:self];
-    cell.message = self.msgDatialArray[row];
-    return cell;
+    //      NSLog(@"viewForTableColumn-- %zd",row);
+    HXMessage *msg = self.msgDatialArray[row];
+    if (msg.isMine) {
+        HXMineMessageCell *cell = [tableView makeViewWithIdentifier:mineCellID owner:self];
+        cell.message = msg;
+        return cell;
+    } else {
+        HXMsgDatailCell *cell = [tableView makeViewWithIdentifier:datilCellID owner:self];
+        cell.message = msg;
+        return cell;
+    }
 }
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
@@ -241,6 +244,7 @@ static NSString *mineCellID = @"mineCellID";
     
     // 创建消息对象
     HXMessage *msg = [[HXMessage alloc] init];
+    msg.isMine = YES;
     msg.name = @"我";
     msg.create_time = @"2016-11-11 03:00:00";
     msg.text = textView.string;
