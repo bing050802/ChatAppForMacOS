@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
@@ -21,15 +21,15 @@
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Q04-dh-JDg"/>
                 </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="C2u-qE-uYg">
-                    <rect key="frame" x="340" y="75" width="34" height="14"/>
+                    <rect key="frame" x="350" y="71" width="34" height="14"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="18:00" id="JVy-TO-8Zv">
                         <font key="font" metaFont="smallSystem"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3i-0I-9OQ">
-                    <rect key="frame" x="54" y="40" width="320" height="30"/>
+                <scrollView misplaced="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3i-0I-9OQ">
+                    <rect key="frame" x="62" y="40" width="320" height="30"/>
                     <clipView key="contentView" id="PUp-wG-378">
                         <rect key="frame" x="1" y="1" width="303" height="28"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,23 +58,37 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
+                <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YSL-mT-gmA" customClass="HXBarButton">
+                    <rect key="frame" x="39" y="48" width="18" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="18" id="1su-3j-cBU"/>
+                        <constraint firstAttribute="height" constant="21" id="KzJ-9A-m03"/>
+                    </constraints>
+                    <buttonCell key="cell" type="bevel" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="X7E-b7-JqM">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
             </subviews>
             <constraints>
+                <constraint firstItem="Q3i-0I-9OQ" firstAttribute="bottom" secondItem="YSL-mT-gmA" secondAttribute="bottom" constant="8" id="0kI-LV-sDK"/>
                 <constraint firstItem="Q3i-0I-9OQ" firstAttribute="top" secondItem="C2u-qE-uYg" secondAttribute="bottom" constant="5" id="9ft-qO-YRa"/>
-                <constraint firstItem="v0C-RV-1IU" firstAttribute="top" secondItem="C2u-qE-uYg" secondAttribute="bottom" constant="5" id="abK-ud-cL4"/>
-                <constraint firstItem="v0C-RV-1IU" firstAttribute="leading" secondItem="Q3i-0I-9OQ" secondAttribute="trailing" constant="15" id="hya-l5-j60"/>
+                <constraint firstItem="C2u-qE-uYg" firstAttribute="trailing" secondItem="Q3i-0I-9OQ" secondAttribute="trailing" id="U0T-Lp-xIa"/>
+                <constraint firstItem="v0C-RV-1IU" firstAttribute="leading" secondItem="Q3i-0I-9OQ" secondAttribute="trailing" constant="7" id="hya-l5-j60"/>
                 <constraint firstItem="v0C-RV-1IU" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="30" id="k0j-TF-2OC"/>
+                <constraint firstItem="Q3i-0I-9OQ" firstAttribute="leading" secondItem="YSL-mT-gmA" secondAttribute="trailing" constant="5" id="njI-Ft-qFd"/>
                 <constraint firstAttribute="trailing" secondItem="v0C-RV-1IU" secondAttribute="trailing" constant="20" id="nu1-Ud-gFC"/>
-                <constraint firstAttribute="trailing" secondItem="C2u-qE-uYg" secondAttribute="trailing" constant="77" id="qTC-te-3h5"/>
+                <constraint firstItem="C2u-qE-uYg" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="15" id="oZ1-T3-jGD"/>
             </constraints>
             <connections>
                 <outlet property="iconImage" destination="v0C-RV-1IU" id="DQy-aM-ZMq"/>
                 <outlet property="msgTextView" destination="UgP-jI-K0C" id="BAE-k3-Z37"/>
+                <outlet property="popButton" destination="YSL-mT-gmA" id="Hl2-96-CjA"/>
                 <outlet property="textHeightCons" destination="W9l-b7-V9G" id="YlV-xD-I7c"/>
                 <outlet property="textWidthCons" destination="IuE-eC-w2t" id="UmH-5Q-VD5"/>
                 <outlet property="timeLabel" destination="C2u-qE-uYg" id="xTQ-bL-ZAG"/>
             </connections>
-            <point key="canvasLocation" x="-714" y="-422"/>
+            <point key="canvasLocation" x="-714.5" y="-422"/>
         </customView>
     </objects>
 </document>

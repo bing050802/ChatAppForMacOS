@@ -246,7 +246,7 @@ static NSString *mineCellID = @"mineCellID";
     HXMessage *msg = [[HXMessage alloc] init];
     msg.isMine = YES;
     msg.name = @"我";
-    msg.create_time = @"2016-11-11 03:00:00";
+    msg.create_time = @"11-11 03:00:00";
     msg.text = textView.string;
     
     // inser row
