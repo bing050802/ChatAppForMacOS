@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -14,7 +14,7 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
-                <outlet property="imageView" destination="Cc9-O7-wJE" id="ZmK-A1-ggk"/>
+                <outlet property="button" destination="Gqb-Ar-cCG" id="JCh-y5-vv3"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -678,23 +678,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cc9-O7-wJE">
-                        <rect key="frame" x="375" y="223" width="40" height="40"/>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gqb-Ar-cCG" customClass="HXBarButton">
+                        <rect key="frame" x="167" y="197" width="81" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="sQw-ut-aWQ"/>
-                    </imageView>
-                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="ohP-II-DOa" customClass="HXFacialSelectionPanel">
-                        <rect key="frame" x="25" y="30" width="430" height="300"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="430" id="QQW-Xr-aZg"/>
-                            <constraint firstAttribute="height" constant="300" id="mec-Wo-R2F"/>
-                        </constraints>
-                    </customView>
+                        <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nEW-tj-fTL">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
                 </subviews>
-                <constraints>
-                    <constraint firstItem="ohP-II-DOa" firstAttribute="centerY" secondItem="EiT-Mj-1SZ" secondAttribute="centerY" id="juC-X5-hJk"/>
-                    <constraint firstItem="ohP-II-DOa" firstAttribute="centerX" secondItem="EiT-Mj-1SZ" secondAttribute="centerX" id="km7-K5-lUi"/>
-                </constraints>
             </view>
             <point key="canvasLocation" x="-16" y="34"/>
         </window>

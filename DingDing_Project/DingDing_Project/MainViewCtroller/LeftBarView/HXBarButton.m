@@ -183,7 +183,7 @@
 }
 - (void)setTitleColor:(NSColor *)titleColor forState:(ButtonState)state {
     if (state == ButtonStateNormal) {
-        self.cell.textColor = titleColor;
+//        self.cell.textColor = titleColor; 
     }
      [self.stateTitleColorDic setObject:titleColor forKey:@(state)];
 }

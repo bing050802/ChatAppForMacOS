@@ -75,8 +75,8 @@
 }
 
 - (void)clickBtn:(HXBarButton *)btn {
+    btn.selected = YES;
     self.lastSelectBtn.selected = NO;
-     btn.selected = YES;
     self.lastSelectBtn = btn;
 }
 

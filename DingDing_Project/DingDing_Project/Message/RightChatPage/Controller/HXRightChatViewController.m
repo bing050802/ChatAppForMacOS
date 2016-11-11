@@ -131,7 +131,7 @@ static NSString *mineCellID = @"mineCellID";
 
 - (void)settingWithImageName:(NSString *)name btn:(HXBarButton *)btn {
     btn.trackingEabled = YES;
-    btn.cell.highlightsBy = NSNoCellMask;
+    btn.cell.highlighted = NO;
     [btn setImage:[NSImage imageNamed:name] forState:ButtonStateNormal];
     [btn setImage:[NSImage imageNamed:[NSString stringWithFormat:@"%@_entered",name]] forState:ButtonStateMouseIn];
 }
@@ -147,7 +147,7 @@ static NSString *mineCellID = @"mineCellID";
     self.topView.hidden = YES;
     [self.topView backGroundColor:HXColor(246, 250, 255)];
     
-    // 工具栏右侧 按钮设置trackingImage
+    // 工具栏右侧 按钮设置trackingImagse
     [self buttonsSetting];
     
     //inputView 先hidden
@@ -242,12 +242,22 @@ static NSString *mineCellID = @"mineCellID";
 
 - (void)inputCompleteToSend:(NSTextView *)textView {
     
+    // 更新消息
+    [self updateMessageWithText:textView.string];
+    
+    // 文字清空
+    textView.string = @"";
+}
+
+
+- (void)updateMessageWithText:(NSString *)text {
+    
     // 创建消息对象
     HXMessage *msg = [[HXMessage alloc] init];
     msg.isMine = YES;
     msg.name = @"我";
     msg.create_time = @"11-11 03:00:00";
-    msg.text = textView.string;
+    msg.text = text;
     
     // inser row
     [self.datailTableView beginUpdates];
@@ -255,8 +265,6 @@ static NSString *mineCellID = @"mineCellID";
     [self.datailTableView  insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:self.msgDatialArray.count-1] withAnimation:NSTableViewAnimationEffectNone];
     [self.datailTableView endUpdates];
     
-    // 文字清空
-    textView.string = @"";
     
     // 滑动到最新的消息位置
     [self.datailTableView scrollRowToVisible:self.msgDatialArray.count - 1];
@@ -276,6 +284,20 @@ static NSString *mineCellID = @"mineCellID";
         [dropShadow setShadowBlurRadius:10.0];
         [self.facialPanel setShadow:dropShadow];
     }
+    if (tag == 100) {
+        NSOpenPanel *panel = [NSOpenPanel openPanel];
+        panel.allowsMultipleSelection = NO;
+        panel.canChooseDirectories = NO;
+        panel.canChooseFiles = YES;
+        panel.resolvesAliases = YES;
+        [panel beginSheetModalForWindow:self.view.window completionHandler:^(NSInteger result){
+            NSLog(@"%@",panel.URL);
+        }];
+    }
+    if (tag == 106) {
+        [self updateMessageWithText:@"[耶]"];
+    }
+    
 }
 
 

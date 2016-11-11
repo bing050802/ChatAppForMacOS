@@ -43,7 +43,7 @@
     
     _popButton.trackingEabled = YES;
     _popButton.hidden = YES;
-    _popButton.cell.highlightsBy = NSNoCellMask;
+    _popButton.cell.highlighted = NO;
     NSString *imgName = @"cell_popbtn";
     [_popButton setImage:[NSImage imageNamed:imgName] forState:ButtonStateNormal];
     [_popButton setImage:[NSImage imageNamed:[NSString stringWithFormat:@"%@_entered",imgName]] forState:ButtonStateMouseIn];
@@ -79,13 +79,11 @@
 - (void)mouseEntered:(NSEvent *)event {
     _popButton.hidden = NO;
     _timeLabel.hidden = NO;
-    NSLog(@"%s",__func__);
 }
 
 - (void)mouseExited:(NSEvent *)event {
     _popButton.hidden = YES;
     _timeLabel.hidden = YES;
-    NSLog(@"%s",__func__);
 }
 
 

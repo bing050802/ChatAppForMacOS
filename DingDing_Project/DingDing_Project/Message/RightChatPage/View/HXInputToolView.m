@@ -24,6 +24,7 @@
 
 @property (unsafe_unretained) IBOutlet HXTextView *inputTextView;
 
+@property (weak) IBOutlet HXBarButton *sendButton;
 
 @end
 
@@ -54,7 +55,7 @@
 
 - (void)settingWithImageName:(NSString *)name btn:(HXBarButton *)btn {
     btn.trackingEabled = YES;
-    btn.cell.highlightsBy = NSNoCellMask;
+    btn.cell.highlighted = NO;
     [btn setImage:[NSImage imageNamed:name] forState:ButtonStateNormal];
     [btn setImage:[NSImage imageNamed:[NSString stringWithFormat:@"%@_entered",name]] forState:ButtonStateMouseIn];
 }
@@ -77,6 +78,14 @@
     self.inputTextView.textColor = HXColor(70, 70, 70);
     self.inputTextView.delegate = self;
     
+    self.sendButton.title = @"发送";
+    [self.sendButton setBackgroundColor:[NSColor redColor] forState:ButtonStateNormal];
+    [self.sendButton setBackgroundColor:[NSColor whiteColor] forState:ButtonStateSelected];
+    [self.sendButton setTitleColor:[NSColor redColor] forState:ButtonStateNormal];
+    [self.sendButton setTitleColor:HXColor(25, 132, 230) forState:ButtonStateSelected];
+
+
+
 //    NSLog(@"---%@",self.subviews);
     //    [self backGroundColor:[NSColor redColor]];
 }

@@ -32,7 +32,7 @@ typedef NS_OPTIONS(NSUInteger, ButtonState) {
 
 @property (nonatomic,assign) BOOL selected;
 
-@property (nonatomic,strong) HXBarButtonCell *cell;
+//@property (nonatomic,strong) HXBarButtonCell *cell;
 
 // 是否允许 鼠标tracking trackingEabled = YES 的时候 设置ButtonStateMouseIn/ButtonStateMouseExit 状态下的样式才生效
 @property (nonatomic,assign) BOOL trackingEabled;
