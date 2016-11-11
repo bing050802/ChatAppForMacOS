@@ -116,9 +116,6 @@
     return _leftLine;
 }
 
-- (HXBarButtonCell *)btnCell {
-    return (HXBarButtonCell *)[super cell];
-}
 
 - (void)drawRect:(NSRect)dirtyRect {
     // Get the graphics context.
@@ -157,6 +154,11 @@
     self.wantsLayer = YES;
     [self setCell:[HXBarButtonCell new]];
 }
+
+- (HXBarButtonCell *)btnCell {
+    return (HXBarButtonCell *)[super cell];
+}
+
 
 - (NSTrackingArea *)trackingArea {
     if (!_trackingArea) {

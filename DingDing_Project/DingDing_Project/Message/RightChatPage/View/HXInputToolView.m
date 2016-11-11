@@ -78,11 +78,11 @@
     self.inputTextView.textColor = HXColor(70, 70, 70);
     self.inputTextView.delegate = self;
     
-    self.sendButton.title = @"发送";
-    [self.sendButton setBackgroundColor:[NSColor redColor] forState:ButtonStateNormal];
-    [self.sendButton setBackgroundColor:[NSColor whiteColor] forState:ButtonStateSelected];
-    [self.sendButton setTitleColor:[NSColor redColor] forState:ButtonStateNormal];
-    [self.sendButton setTitleColor:HXColor(25, 132, 230) forState:ButtonStateSelected];
+//    self.sendButton.title = @"发送";
+//    [self.sendButton setBackgroundColor:[NSColor redColor] forState:ButtonStateNormal];
+//    [self.sendButton setBackgroundColor:[NSColor whiteColor] forState:ButtonStateSelected];
+//    [self.sendButton setTitleColor:[NSColor redColor] forState:ButtonStateNormal];
+//    [self.sendButton setTitleColor:HXColor(25, 132, 230) forState:ButtonStateSelected];
 
 
 

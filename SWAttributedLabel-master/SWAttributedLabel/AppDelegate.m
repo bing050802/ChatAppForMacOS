@@ -36,16 +36,14 @@
 
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-
     
-    self.button.title = @"发送";
+     self.button.title = @"发送";
     [self.button setBackgroundColor:[NSColor whiteColor] forState:ButtonStateNormal];
     [self.button setBackgroundColor:[NSColor whiteColor] forState:ButtonStateSelected];
     [self.button setTitleColor:[NSColor grayColor] forState:ButtonStateNormal];
     [self.button setTitleColor:[NSColor purpleColor] forState:ButtonStateSelected];
-    [self.button setImage:[NSImage imageNamed:@"icon_face"] forState:ButtonStateNormal];
+//    [self.button setImage:[NSImage imageNamed:@"icon_face.png"] forState:ButtonStateNormal];
     
-
 }
 
 

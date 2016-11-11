@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10116" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner"/>
@@ -35,12 +36,12 @@
                     </constraints>
                 </customView>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="O55-CZ-ge4" customClass="HXBarButton">
-                    <rect key="frame" x="10" y="49" width="81" height="32"/>
+                    <rect key="frame" x="16" y="56" width="69" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="hSK-DB-h3x"/>
                         <constraint firstAttribute="width" constant="69" id="t9S-8K-anM"/>
                     </constraints>
-                    <buttonCell key="cell" type="push" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BM5-5h-kU8" customClass="HXBarButtonCell">
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="BM5-5h-kU8" customClass="HXBarButtonCell">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -49,12 +50,12 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="id4-Cb-Mic" customClass="HXBarButton">
-                    <rect key="frame" x="10" y="18" width="81" height="32"/>
+                    <rect key="frame" x="16" y="25" width="69" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="gne-xY-1Kl"/>
                         <constraint firstAttribute="width" constant="69" id="lIU-oJ-kIj"/>
                     </constraints>
-                    <buttonCell key="cell" type="push" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pfG-Fy-ZPH" customClass="HXBarButtonCell">
+                    <buttonCell key="cell" type="bevel" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="pfG-Fy-ZPH" customClass="HXBarButtonCell">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>

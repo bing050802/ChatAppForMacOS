@@ -44,10 +44,11 @@
     CGFloat btnImgL = 0;
     CGFloat btnImgW = 40;
     CGFloat btnW = NSWidth(self.creatButton.frame);
+    [btn setTitle:title forState:ButtonStateNormal];
     [btn setImage:[NSImage imageNamed:image] forState:ButtonStateNormal];
     btn.imageEdgeInsets = NSEdgeInsetsMake(0, btnImgL, 0, btnW - btnImgL - btnImgW);
-    btn.titleEdgeInsets = NSEdgeInsetsMake(0, 15, 0, 0);
-    btn.title = title;
+    btn.titleEdgeInsets = NSEdgeInsetsMake(0, 40, 0, 0);
+
 }
 
 - (void)setUserName:(NSString *)userName {

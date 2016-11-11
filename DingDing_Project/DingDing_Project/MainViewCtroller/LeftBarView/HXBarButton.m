@@ -17,6 +17,7 @@
 @property (nonatomic,strong) NSMutableDictionary *stateImageDic;
 @property (nonatomic,strong) NSMutableDictionary *stateBackGroundDic;
 @property (nonatomic,strong) NSMutableDictionary *stateTitleColorDic;
+@property (nonatomic,strong) NSMutableDictionary *stateTitleDic;
 
 
 @property (nonatomic,strong) NSTrackingArea *trackingArea;
@@ -25,43 +26,43 @@
 
 
 @implementation HXBarButton
-@dynamic cell;
+
 
 #pragma mark Cell passthroughs------------------------------------------------------------------begin
 
 - (CGFloat)cornerRadius {
-    return self.cell.cornerRadius;
+    return self.btnCell.cornerRadius;
 }
 - (void)setCornerRadius:(CGFloat)cornerRadius {
     self.layer.cornerRadius = cornerRadius;
 }
 
 - (NSColor *)highlightColor {
-    return self.cell.highlightColor;
+    return self.btnCell.highlightColor;
 }
 - (void)setHighlightColor:(NSColor *)highlightColor {
-    self.cell.highlightColor = highlightColor;
+    self.btnCell.highlightColor = highlightColor;
 }
 
 - (NSColor *)highlightTextColor {
-    return self.cell.highlightTextColor;
+    return self.btnCell.highlightTextColor;
 }
 - (void)setHighlightTextColor:(NSColor *)textColor {
-    self.cell.highlightTextColor = textColor;
+    self.btnCell.highlightTextColor = textColor;
 }
 
 - (NSEdgeInsets)titleEdgeInsets {
-    return self.cell.titleEdgeInsets;
+    return self.btnCell.titleEdgeInsets;
 }
 - (void)setTitleEdgeInsets:(NSEdgeInsets)titleEdgeInsets {
-    self.cell.titleEdgeInsets = titleEdgeInsets;
+    self.btnCell.titleEdgeInsets = titleEdgeInsets;
 }
 
 - (NSEdgeInsets)imageEdgeInsets {
-    return self.cell.imageEdgeInsets;
+    return self.btnCell.imageEdgeInsets;
 }
 - (void)setImageEdgeInsets:(NSEdgeInsets)imageEdgeInsets {
-    self.cell.imageEdgeInsets = imageEdgeInsets;
+    self.btnCell.imageEdgeInsets = imageEdgeInsets;
 }
 #pragma mark Cell passthroughs-------------------------------------------------------------------end
 
@@ -98,27 +99,10 @@
 }
 
 
-// 返回自定义的 ButtonCell class
-+ (Class)cellClass {
-    return [HXBarButtonCell class];
-}
-
 - (void)drawRect:(NSRect)dirtyRect {
-    // Get the graphics context.
-    CGContextRef context = [[NSGraphicsContext currentContext] CGContext];
-    
-    // Save the graphics context state.
-    CGContextSaveGState(context);
-    
-    // Set up font rasterization so that subpixel antialiasing is used.
-    CGContextSetShouldSmoothFonts(context, self.subpixelAntialiasing);
-    CGContextSetShouldSubpixelPositionFonts(context, self.subpixelAntialiasing);
-    CGContextSetShouldSubpixelQuantizeFonts(context, self.subpixelAntialiasing);
-    
-    // Draw the button.
+
     [super drawRect:dirtyRect];
-    // Restore the graphics context state.
-    CGContextRestoreGState(context);
+
 }
 
 - (void)awakeFromNib {
@@ -136,8 +120,13 @@
 
 - (void)setUp {
     self.font = [NSFont systemFontOfSize:13];
-    self.subpixelAntialiasing = YES;
     self.wantsLayer = YES;
+    [self setCell:[HXBarButtonCell new]];
+    self.btnCell.backgroundColor = [NSColor clearColor];
+}
+
+- (HXBarButtonCell *)btnCell {
+    return (HXBarButtonCell *)[super cell];
 }
 
 - (NSTrackingArea *)trackingArea {
@@ -177,13 +166,24 @@
 
 - (void)setBackgroundColor:(NSColor *)backgroundColor forState:(ButtonState)state {
     if (state == ButtonStateNormal) {
-        self.cell.backgroundColor = backgroundColor;
+        self.btnCell.backgroundColor = backgroundColor;
     }
     [self.stateBackGroundDic setObject:backgroundColor forKey:@(state)];
 }
+
+
+- (void)setTitle:(NSString *)title forState:(ButtonState)state {
+    if (state == ButtonStateNormal) {
+        self.btnCell.titleText = title;
+        self.btnCell.title = title;
+    }
+    [self.stateTitleDic setObject:title forKey:@(state)];
+}
+
+
 - (void)setTitleColor:(NSColor *)titleColor forState:(ButtonState)state {
     if (state == ButtonStateNormal) {
-//        self.cell.textColor = titleColor; 
+//        self.btnCell.textColor = titleColor;
     }
      [self.stateTitleColorDic setObject:titleColor forKey:@(state)];
 }
@@ -196,13 +196,13 @@
         } else {
             self.image = self.stateImageDic[@(ButtonStateNormal)];
         }
-        self.cell.backgroundColor = self.stateBackGroundDic[@(ButtonStateSelected)];
-        self.cell.textColor = self.stateTitleColorDic[@(ButtonStateSelected)];
+        self.btnCell.backgroundColor = self.stateBackGroundDic[@(ButtonStateSelected)];
+        self.btnCell.textColor = self.stateTitleColorDic[@(ButtonStateSelected)];
         self.leftLine.hidden = NO;
     } else {
         self.image = self.stateImageDic[@(ButtonStateNormal)];
-        self.cell.backgroundColor = self.stateBackGroundDic[@(ButtonStateNormal)];
-        self.cell.textColor = self.stateTitleColorDic[@(ButtonStateNormal)];
+        self.btnCell.backgroundColor = self.stateBackGroundDic[@(ButtonStateNormal)];
+        self.btnCell.textColor = self.stateTitleColorDic[@(ButtonStateNormal)];
         self.leftLine.hidden = YES;
     }
 }
@@ -240,15 +240,21 @@
 
 - (NSRect)drawTitle:(NSAttributedString *)title withFrame:(NSRect)frame inView:(NSView *)controlView
 {
-    if (self.textColor) {
-        NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
-        paragraph.alignment = NSTextAlignmentLeft;//设置左对齐
-        NSMutableAttributedString *attrString = [title mutableCopy];
-        [attrString addAttribute:NSForegroundColorAttributeName value:self.textColor range:NSMakeRange(0, attrString.length)];
-        [attrString addAttribute:NSParagraphStyleAttributeName value:paragraph range:NSMakeRange(0, attrString.length)];
-        title = attrString;
-    }
-    return [super drawTitle:title withFrame:frame inView:controlView];
+    
+      NSLog(@"drawTitle-----%@",self.titleText);
+      NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:self.title];
+//    if (self.textColor) {
+//       
+//        NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
+//        paragraph.alignment = NSTextAlignmentLeft;//设置左对齐
+//      
+//        [attrString addAttribute:NSForegroundColorAttributeName value:self.textColor range:NSMakeRange(0, attrString.length)];
+//        [attrString addAttribute:NSParagraphStyleAttributeName value:paragraph range:NSMakeRange(0, attrString.length)];
+//        title = attrString;
+//    }
+    return [super drawTitle:attrString withFrame:frame inView:controlView];
+    
+    
 }
 
 

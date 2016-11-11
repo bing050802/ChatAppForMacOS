@@ -35,13 +35,15 @@ typedef NS_OPTIONS(NSUInteger, ButtonState) {
 
 @property (nonatomic,assign) BOOL selected;
 
-@property (nonatomic,strong) HXBarButtonCell *cell;
+//@property (nonatomic,strong) HXBarButtonCell *cell;
 
 // 是否允许 鼠标tracking trackingEabled = YES 的时候 设置ButtonStateMouseIn/ButtonStateMouseExit 状态下的样式才生效
 @property (nonatomic,assign) BOOL trackingEabled;
 
 - (void)setImage:(NSImage *)image forState:(ButtonState)state;
 - (void)setBackgroundColor:(NSColor *)backgroundColor forState:(ButtonState)state;
+
+- (void)setTitle:(NSString *)title forState:(ButtonState)state;
 - (void)setTitleColor:(NSColor *)titleColor forState:(ButtonState)state;
 
 @property (nonatomic,assign) NSEdgeInsets titleEdgeInsets; // default is UIEdgeInsetsZero
@@ -51,7 +53,6 @@ typedef NS_OPTIONS(NSUInteger, ButtonState) {
 @property (nonatomic,assign) BOOL reversesTitleShadowWhenHighlighted; // default is NO. if YES, shadow reverses to shift between engrave and emboss appearance
 @property (nonatomic,assign) BOOL adjustsImageWhenHighlighted;  // default is YES. if YES, image is drawn darker when highlighted(pressed)
 @property (nonatomic,assign) BOOL adjustsImageWhenDisabled;
-@property (nonatomic,assign) BOOL subpixelAntialiasing;
 
 
 @end
@@ -64,6 +65,8 @@ typedef NS_OPTIONS(NSUInteger, ButtonState) {
 @property (nonatomic,strong) NSColor *highlightColor;
 
 @property (nonatomic,strong) NSColor *textColor;
+@property (nonatomic,copy)   NSString *titleText;
+
 @property (nonatomic,strong) NSColor *highlightTextColor;
 
 @property (nonatomic,assign) NSEdgeInsets titleEdgeInsets; // default is UIEdgeInsetsZero

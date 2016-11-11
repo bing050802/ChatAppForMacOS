@@ -54,6 +54,7 @@
     
     for (int i = 0; i < self.normalImages.count; i++) {
         HXBarButton *barButton = [[HXBarButton alloc] init];
+                [barButton setTitle:self.titles[i] forState:ButtonStateNormal];
         CGFloat btnY = i * 50;
         barButton.frame = NSMakeRect(0, btnY, 100, 50);
         CGFloat btnImgL = 10;
@@ -69,7 +70,7 @@
         [barButton setImage:[NSImage imageNamed:self.selectedImages[i]] forState:ButtonStateSelected];
         barButton.target = self;
         barButton.action = @selector(clickBtn:);
-        barButton.title = self.titles[i];
+
         [self addSubview:barButton];
     }
 }
