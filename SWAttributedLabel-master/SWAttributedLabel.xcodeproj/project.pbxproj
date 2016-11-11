@@ -25,7 +25,7 @@
 		33C749FD1DBCEF6B0017BBD9 /* CustomAttachMentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C749FA1DBCEF6B0017BBD9 /* CustomAttachMentCell.m */; };
 		33C749FE1DBCEF6B0017BBD9 /* HXTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C749FC1DBCEF6B0017BBD9 /* HXTextView.m */; };
 		33C74A011DBCEFAE0017BBD9 /* NSMutableAttributedString+AttachMent.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C74A001DBCEFAE0017BBD9 /* NSMutableAttributedString+AttachMent.m */; };
-		8A06138E1DC9937E00C52BE6 /* HXBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A06138D1DC9937E00C52BE6 /* HXBarButton.m */; };
+		8A06138E1DC9937E00C52BE6 /* HXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A06138D1DC9937E00C52BE6 /* HXButton.m */; };
 		8A0613AC1DC99A0500C52BE6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A0613961DC99A0500C52BE6 /* Info.plist */; };
 		8A0613AD1DC99A0500C52BE6 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0613991DC99A0500C52BE6 /* MJExtensionConst.m */; };
 		8A0613AE1DC99A0500C52BE6 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A06139B1DC99A0500C52BE6 /* MJFoundation.m */; };
@@ -264,9 +264,6 @@
 		8A898B111DC9EB7A0065D3EF /* lxh_zhuanfa.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8A898A271DC9EB7A0065D3EF /* lxh_zhuanfa.gif */; };
 		8A898B121DC9EB7A0065D3EF /* lxh_zhuanfa.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A898A281DC9EB7A0065D3EF /* lxh_zhuanfa.png */; };
 		8A898B131DC9EB7A0065D3EF /* lxh_zhuanfa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A898A291DC9EB7A0065D3EF /* lxh_zhuanfa@2x.png */; };
-		8A898B141DC9EB7A0065D3EF /* HXEmotionBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A898A2B1DC9EB7A0065D3EF /* HXEmotionBoard.m */; };
-		8A898B151DC9EB7A0065D3EF /* HXEmotionToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A898A2D1DC9EB7A0065D3EF /* HXEmotionToolBar.m */; };
-		8A898B161DC9EB7A0065D3EF /* HXFacialSelectionPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A898A2F1DC9EB7A0065D3EF /* HXFacialSelectionPanel.m */; };
 		8A898B171DC9EB7A0065D3EF /* HXEmotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A898A321DC9EB7A0065D3EF /* HXEmotion.m */; };
 		8A898B181DC9EB7A0065D3EF /* HXEmotionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A898A341DC9EB7A0065D3EF /* HXEmotionTool.m */; };
 		8A898B1B1DC9EBD70065D3EF /* icon_face.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A898B191DC9EBD70065D3EF /* icon_face.png */; };
@@ -326,8 +323,7 @@
 		33C749FC1DBCEF6B0017BBD9 /* HXTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTextView.m; sourceTree = "<group>"; };
 		33C749FF1DBCEFAE0017BBD9 /* NSMutableAttributedString+AttachMent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+AttachMent.h"; sourceTree = "<group>"; };
 		33C74A001DBCEFAE0017BBD9 /* NSMutableAttributedString+AttachMent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+AttachMent.m"; sourceTree = "<group>"; };
-		8A06138C1DC9937E00C52BE6 /* HXBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXBarButton.h; sourceTree = "<group>"; };
-		8A06138D1DC9937E00C52BE6 /* HXBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXBarButton.m; sourceTree = "<group>"; };
+		8A06138D1DC9937E00C52BE6 /* HXButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXButton.m; sourceTree = "<group>"; };
 		8A0613961DC99A0500C52BE6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A0613971DC99A0500C52BE6 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
 		8A0613981DC99A0500C52BE6 /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
@@ -579,12 +575,6 @@
 		8A898A271DC9EB7A0065D3EF /* lxh_zhuanfa.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = lxh_zhuanfa.gif; sourceTree = "<group>"; };
 		8A898A281DC9EB7A0065D3EF /* lxh_zhuanfa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lxh_zhuanfa.png; sourceTree = "<group>"; };
 		8A898A291DC9EB7A0065D3EF /* lxh_zhuanfa@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lxh_zhuanfa@2x.png"; sourceTree = "<group>"; };
-		8A898A2A1DC9EB7A0065D3EF /* HXEmotionBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXEmotionBoard.h; sourceTree = "<group>"; };
-		8A898A2B1DC9EB7A0065D3EF /* HXEmotionBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXEmotionBoard.m; sourceTree = "<group>"; };
-		8A898A2C1DC9EB7A0065D3EF /* HXEmotionToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXEmotionToolBar.h; sourceTree = "<group>"; };
-		8A898A2D1DC9EB7A0065D3EF /* HXEmotionToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXEmotionToolBar.m; sourceTree = "<group>"; };
-		8A898A2E1DC9EB7A0065D3EF /* HXFacialSelectionPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXFacialSelectionPanel.h; sourceTree = "<group>"; };
-		8A898A2F1DC9EB7A0065D3EF /* HXFacialSelectionPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXFacialSelectionPanel.m; sourceTree = "<group>"; };
 		8A898A311DC9EB7A0065D3EF /* HXEmotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXEmotion.h; sourceTree = "<group>"; };
 		8A898A321DC9EB7A0065D3EF /* HXEmotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXEmotion.m; sourceTree = "<group>"; };
 		8A898A331DC9EB7A0065D3EF /* HXEmotionTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXEmotionTool.h; sourceTree = "<group>"; };
@@ -592,6 +582,7 @@
 		8A898B191DC9EBD70065D3EF /* icon_face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_face.png; sourceTree = "<group>"; };
 		8A898B1A1DC9EBD70065D3EF /* icon_heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_heart.png; sourceTree = "<group>"; };
 		8AC78CFA1DADCFF200BC459D /* white_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white_bg.png; sourceTree = "<group>"; };
+		8AECC4101DD5DCC400F4F590 /* HXButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXButton.h; sourceTree = SOURCE_ROOT; };
 		8AEDE40D1DB4D53C0074AA0C /* CWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWindow.h; sourceTree = "<group>"; };
 		8AEDE40E1DB4D53C0074AA0C /* CWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWindow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -627,8 +618,8 @@
 			children = (
 				8A8989471DC9EB7A0065D3EF /* FacialSelectionPanel */,
 				8A0613951DC99A0500C52BE6 /* MJExtension */,
-				8A06138C1DC9937E00C52BE6 /* HXBarButton.h */,
-				8A06138D1DC9937E00C52BE6 /* HXBarButton.m */,
+				8AECC4101DD5DCC400F4F590 /* HXButton.h */,
+				8A06138D1DC9937E00C52BE6 /* HXButton.m */,
 				0DE90D4C1D76DB7300CA210E /* SWAttributedLabel */,
 				0DE90D601D76DB7300CA210E /* SWAttributedLabelTests */,
 				0DE90D6B1D76DB7300CA210E /* SWAttributedLabelUITests */,
@@ -775,12 +766,6 @@
 				8A898B1A1DC9EBD70065D3EF /* icon_heart.png */,
 				8A8989481DC9EB7A0065D3EF /* EmotionIcons */,
 				8A898A301DC9EB7A0065D3EF /* Model */,
-				8A898A2A1DC9EB7A0065D3EF /* HXEmotionBoard.h */,
-				8A898A2B1DC9EB7A0065D3EF /* HXEmotionBoard.m */,
-				8A898A2C1DC9EB7A0065D3EF /* HXEmotionToolBar.h */,
-				8A898A2D1DC9EB7A0065D3EF /* HXEmotionToolBar.m */,
-				8A898A2E1DC9EB7A0065D3EF /* HXFacialSelectionPanel.h */,
-				8A898A2F1DC9EB7A0065D3EF /* HXFacialSelectionPanel.m */,
 			);
 			path = FacialSelectionPanel;
 			sourceTree = "<group>";
@@ -1417,16 +1402,13 @@
 				0DE90D861D76DB8700CA210E /* NSMutableAttributedString+CTFrameRef.m in Sources */,
 				0DE90D521D76DB7300CA210E /* main.m in Sources */,
 				8A0613AD1DC99A0500C52BE6 /* MJExtensionConst.m in Sources */,
-				8A06138E1DC9937E00C52BE6 /* HXBarButton.m in Sources */,
+				8A06138E1DC9937E00C52BE6 /* HXButton.m in Sources */,
 				8A0613B31DC99A0500C52BE6 /* NSObject+MJCoding.m in Sources */,
-				8A898B161DC9EB7A0065D3EF /* HXFacialSelectionPanel.m in Sources */,
-				8A898B151DC9EB7A0065D3EF /* HXEmotionToolBar.m in Sources */,
 				0DE90D4F1D76DB7300CA210E /* AppDelegate.m in Sources */,
 				8A0613B51DC99A0500C52BE6 /* NSObject+MJProperty.m in Sources */,
 				8A0613AF1DC99A0500C52BE6 /* MJProperty.m in Sources */,
 				8AEDE40F1DB4D53C0074AA0C /* CWindow.m in Sources */,
 				8A898B181DC9EB7A0065D3EF /* HXEmotionTool.m in Sources */,
-				8A898B141DC9EB7A0065D3EF /* HXEmotionBoard.m in Sources */,
 				0DE90D871D76DB8700CA210E /* NSMutableAttributedString+Parse.m in Sources */,
 				0DE90D891D76DB8700CA210E /* SWAttributedLabel.m in Sources */,
 				8A0613B61DC99A0500C52BE6 /* NSString+MJExtension.m in Sources */,

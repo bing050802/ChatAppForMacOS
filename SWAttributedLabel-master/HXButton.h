@@ -1,0 +1,51 @@
+//
+//  HXButton.h
+//  DingDing_Project
+//
+//  Created by hanxiaoqing on 16/8/29.
+//  Copyright © 2016年NSQ. All rights reserved.
+//
+
+#import <Cocoa/Cocoa.h>
+/**
+ * 自定义button 参考资料代码
+ http://blog.csdn.net/leonpengweicn/article/details/7750445
+ https://github.com/Concpt13/MXButton
+ */
+
+typedef NS_OPTIONS(NSInteger,NSControlState) {
+   NSControlStateNormal       = 0,
+   NSControlStateHighlighted  = 1 << 0,                  // used whenNSControl isHighlighted is set
+   NSControlStateDisabled     = 1 << 1,
+   NSControlStateSelected     = 1 << 2,                  // flag usable by app (see below)
+   NSControlStateMouseIn      = 1 << 3, // Applicable only when the screen supports focus
+};
+
+
+@interface HXButton : NSButton
+
+@property(nonatomic)          NSEdgeInsets contentEdgeInsets; // default is UIEdgeInsetsZero. On tvOS 10 or later, default is nonzero except for custom buttons.
+@property(nonatomic)          NSEdgeInsets titleEdgeInsets;                // default is UIEdgeInsetsZero
+@property(nonatomic)          BOOL         reversesTitleShadowWhenHighlighted; // default is NO. if YES, shadow reverses to shift between engrave and emboss appearance
+@property(nonatomic)          NSEdgeInsets imageEdgeInsets;                // default is UIEdgeInsetsZero
+@property(nonatomic)          BOOL         adjustsImageWhenHighlighted;    // default is YES. if YES, image is drawn darker when highlighted(pressed)
+@property(nonatomic)          BOOL         adjustsImageWhenDisabled;       // default is YES. if YES, image is drawn lighter when disabled
+
+
+
+// you can set the image, title color, title shadow color, and background image to use for each state. you can specify data
+// for a combined state by using the flags added together. in general, you should specify a value for the normal state to be used
+// by other states which don't have a custom value set
+
+- (void)setTitle:(nullable NSString *)title forState:(NSControlState)state;                     // default is nil. title is assumed to be single line
+- (void)setTitleColor:(nullable NSColor *)color forState:(NSControlState)state; // default if nil. use opaque white
+- (void)setTitleShadowColor:(nullable NSColor *)color forState:(NSControlState)state; // default is nil. use 50% black
+- (void)setImage:(nullable NSImage *)image forState:(NSControlState)state;                      // default is nil. should be same size if different for different states
+- (void)setBackgroundImage:(nullable NSImage *)image forState:(NSControlState)state; // default is nil
+- (void)setAttributedTitle:(nullable NSAttributedString *)title forState:(NSControlState)state; // default is nil. title is assumed to be single line
+
+
+@end
+
+
+

@@ -7,11 +7,11 @@
 //
 
 #import "HXEmotionToolBar.h"
-#import "HXBarButton.h"
+//#import "HXBarButton.h"
 
 @interface HXEmotionToolBar ()
 
-@property (nonatomic,assign) HXBarButton *lastSelectBtn;
+//@property (nonatomic,assign) HXBarButton *lastSelectBtn;
 
 @end
 

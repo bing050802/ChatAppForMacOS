@@ -7,7 +7,7 @@
 //
 
 #import "HXEmotionBoard.h"
-#import "HXBarButton.h"
+//#import "HXBarButton.h"
 #import "HXEmotion.h"
 
 @interface HXDocomentView : NSView
@@ -75,25 +75,25 @@
         NSInteger col = index % maxColumns; //列号
         
         // 设置 表情按钮
-        HXBarButton *emotionBtn = [[HXBarButton alloc] init];
-        emotionBtn.tag = index;
-        HXEmotion *emotion = emotions[index];
-        [emotionBtn setImage:emotion.emotionimage forState:ButtonStateNormal];
-        [emotionBtn setBackgroundColor:[NSColor clearColor] forState:ButtonStateNormal];
-        emotionBtn.target = self;
-        emotionBtn.action = @selector(clickBtn:);
-        CGFloat imageViewX = emotionMargin + col * (btnWH + emotionMargin);
-        CGFloat imageViewY = emotionMargin + row * (btnWH + emotionMargin);
-        emotionBtn.frame = CGRectMake(imageViewX, imageViewY, btnWH, btnWH);
-        [self.documentView addSubview:emotionBtn];
+//        HXBarButton *emotionBtn = [[HXBarButton alloc] init];
+//        emotionBtn.tag = index;
+//        HXEmotion *emotion = emotions[index];
+//        [emotionBtn setImage:emotion.emotionimage forState:ButtonStateNormal];
+//        [emotionBtn setBackgroundColor:[NSColor clearColor] forState:ButtonStateNormal];
+//        emotionBtn.target = self;
+//        emotionBtn.action = @selector(clickBtn:);
+//        CGFloat imageViewX = emotionMargin + col * (btnWH + emotionMargin);
+//        CGFloat imageViewY = emotionMargin + row * (btnWH + emotionMargin);
+//        emotionBtn.frame = CGRectMake(imageViewX, imageViewY, btnWH, btnWH);
+//        [self.documentView addSubview:emotionBtn];
     }
     
 }
 
-- (void)clickBtn:(HXBarButton *)btn {
-    HXEmotion *emotion = self.emotions[btn.tag];
-    NSLog(@"%@",emotion.chs);
-}
+//- (void)clickBtn:(HXBarButton *)btn {
+////    HXEmotion *emotion = self.emotions[btn.tag];
+//    NSLog(@"%@",emotion.chs);
+//}
 
 - (CGRect)contentRectWithEmotions:(NSInteger)emCount {
     CGFloat btnWH = self.emotionWH;
