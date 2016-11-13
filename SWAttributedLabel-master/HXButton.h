@@ -22,7 +22,7 @@ typedef NS_OPTIONS(NSInteger,NSControlState) {
 };
 
 
-@interface HXButton : NSButton
+@interface HXButton : NSControl
 
 @property(nonatomic)          NSEdgeInsets contentEdgeInsets; // default is UIEdgeInsetsZero. On tvOS 10 or later, default is nonzero except for custom buttons.
 @property(nonatomic)          NSEdgeInsets titleEdgeInsets;                // default is UIEdgeInsetsZero
@@ -32,17 +32,15 @@ typedef NS_OPTIONS(NSInteger,NSControlState) {
 @property(nonatomic)          BOOL         adjustsImageWhenDisabled;       // default is YES. if YES, image is drawn lighter when disabled
 
 
+@property(nonatomic,strong,nonnull) NSFont *titleFont;
 
-// you can set the image, title color, title shadow color, and background image to use for each state. you can specify data
-// for a combined state by using the flags added together. in general, you should specify a value for the normal state to be used
-// by other states which don't have a custom value set
+
 
 - (void)setTitle:(nullable NSString *)title forState:(NSControlState)state;                     // default is nil. title is assumed to be single line
 - (void)setTitleColor:(nullable NSColor *)color forState:(NSControlState)state; // default if nil. use opaque white
-- (void)setTitleShadowColor:(nullable NSColor *)color forState:(NSControlState)state; // default is nil. use 50% black
+
 - (void)setImage:(nullable NSImage *)image forState:(NSControlState)state;                      // default is nil. should be same size if different for different states
-- (void)setBackgroundImage:(nullable NSImage *)image forState:(NSControlState)state; // default is nil
-- (void)setAttributedTitle:(nullable NSAttributedString *)title forState:(NSControlState)state; // default is nil. title is assumed to be single line
+
 
 
 @end

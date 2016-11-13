@@ -25,6 +25,7 @@
 		33C749FD1DBCEF6B0017BBD9 /* CustomAttachMentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C749FA1DBCEF6B0017BBD9 /* CustomAttachMentCell.m */; };
 		33C749FE1DBCEF6B0017BBD9 /* HXTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C749FC1DBCEF6B0017BBD9 /* HXTextView.m */; };
 		33C74A011DBCEFAE0017BBD9 /* NSMutableAttributedString+AttachMent.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C74A001DBCEFAE0017BBD9 /* NSMutableAttributedString+AttachMent.m */; };
+		33CB1FDE1DD89E260004F5AD /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CB1FDD1DD89E260004F5AD /* bg@2x.png */; };
 		8A06138E1DC9937E00C52BE6 /* HXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A06138D1DC9937E00C52BE6 /* HXButton.m */; };
 		8A0613AC1DC99A0500C52BE6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A0613961DC99A0500C52BE6 /* Info.plist */; };
 		8A0613AD1DC99A0500C52BE6 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0613991DC99A0500C52BE6 /* MJExtensionConst.m */; };
@@ -37,7 +38,6 @@
 		8A0613B41DC99A0500C52BE6 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0613A71DC99A0500C52BE6 /* NSObject+MJKeyValue.m */; };
 		8A0613B51DC99A0500C52BE6 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0613A91DC99A0500C52BE6 /* NSObject+MJProperty.m */; };
 		8A0613B61DC99A0500C52BE6 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0613AB1DC99A0500C52BE6 /* NSString+MJExtension.m */; };
-		8A1C56BF1DC8AB5500CE9D67 /* xiao.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A1C56BE1DC8AB5500CE9D67 /* xiao.png */; };
 		8A1F45321DC715D200546BE3 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1F45311DC715D200546BE3 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8A1F45351DC7160D00546BE3 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1F45341DC7160D00546BE3 /* libicucore.tbd */; };
 		8A1F45381DC717FF00546BE3 /* HXTextPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1F45371DC717FF00546BE3 /* HXTextPart.m */; };
@@ -323,6 +323,7 @@
 		33C749FC1DBCEF6B0017BBD9 /* HXTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTextView.m; sourceTree = "<group>"; };
 		33C749FF1DBCEFAE0017BBD9 /* NSMutableAttributedString+AttachMent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+AttachMent.h"; sourceTree = "<group>"; };
 		33C74A001DBCEFAE0017BBD9 /* NSMutableAttributedString+AttachMent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+AttachMent.m"; sourceTree = "<group>"; };
+		33CB1FDD1DD89E260004F5AD /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg@2x.png"; sourceTree = "<group>"; };
 		8A06138D1DC9937E00C52BE6 /* HXButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXButton.m; sourceTree = "<group>"; };
 		8A0613961DC99A0500C52BE6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A0613971DC99A0500C52BE6 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
@@ -346,7 +347,6 @@
 		8A0613A91DC99A0500C52BE6 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
 		8A0613AA1DC99A0500C52BE6 /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
 		8A0613AB1DC99A0500C52BE6 /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
-		8A1C56BE1DC8AB5500CE9D67 /* xiao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = xiao.png; path = "../../../../QQ截图/xiao.png"; sourceTree = "<group>"; };
 		8A1F45301DC715D200546BE3 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		8A1F45311DC715D200546BE3 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		8A1F45341DC7160D00546BE3 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
@@ -649,9 +649,9 @@
 				8AEDE40E1DB4D53C0074AA0C /* CWindow.m */,
 				0DE90D531D76DB7300CA210E /* Assets.xcassets */,
 				0DE90D8A1D76DBD100CA210E /* 010.jpg */,
-				8A1C56BE1DC8AB5500CE9D67 /* xiao.png */,
 				8AC78CFA1DADCFF200BC459D /* white_bg.png */,
 				0DE90D8B1D76DBD100CA210E /* haha@2x.png */,
+				33CB1FDD1DD89E260004F5AD /* bg@2x.png */,
 				0DE90D8C1D76DBD100CA210E /* haha1.gif */,
 				0DE90D8D1D76DBD100CA210E /* haqian.gif */,
 				0DE90D551D76DB7300CA210E /* MainMenu.xib */,
@@ -1222,6 +1222,7 @@
 				8A898AA61DC9EB7A0065D3EF /* lxh_buhaoyisi.gif in Resources */,
 				8A898A7C1DC9EB7A0065D3EF /* h_good@2x.png in Resources */,
 				8A898A411DC9EB7A0065D3EF /* d_feizao@2x.png in Resources */,
+				33CB1FDE1DD89E260004F5AD /* bg@2x.png in Resources */,
 				8A898A871DC9EB7A0065D3EF /* o_feiji@2x.png in Resources */,
 				8A898A481DC9EB7A0065D3EF /* d_heixian@2x.png in Resources */,
 				8A898AC91DC9EB7A0065D3EF /* lxh_juhan@2x.png in Resources */,
@@ -1349,7 +1350,6 @@
 				8A898AC31DC9EB7A0065D3EF /* lxh_jiekexun@2x.png in Resources */,
 				8A898ADC1DC9EB7A0065D3EF /* lxh_oye@2x.png in Resources */,
 				8A898A391DC9EB7A0065D3EF /* d_bishi@2x.png in Resources */,
-				8A1C56BF1DC8AB5500CE9D67 /* xiao.png in Resources */,
 				8A898A741DC9EB7A0065D3EF /* f_hufen@2x.png in Resources */,
 				8A898A911DC9EB7A0065D3EF /* o_zhong@2x.png in Resources */,
 				8A898AE51DC9EB7A0065D3EF /* lxh_qiubite.png in Resources */,

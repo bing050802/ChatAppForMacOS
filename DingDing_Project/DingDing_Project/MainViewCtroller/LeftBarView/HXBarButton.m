@@ -241,7 +241,7 @@
 - (NSRect)drawTitle:(NSAttributedString *)title withFrame:(NSRect)frame inView:(NSView *)controlView
 {
     
-      NSLog(@"drawTitle-----%@",self.titleText);
+      NSLog(@"drawTitle-----%@",self.title);
       NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:self.title];
 //    if (self.textColor) {
 //       
