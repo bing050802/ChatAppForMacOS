@@ -31,6 +31,7 @@ typedef NS_OPTIONS(NSInteger,NSControlState) {
 @property(nonatomic)          BOOL         adjustsImageWhenHighlighted;    // default is YES. if YES, image is drawn darker when highlighted(pressed)
 @property(nonatomic)          BOOL         adjustsImageWhenDisabled;       // default is YES. if YES, image is drawn lighter when disabled
 
+@property(nonatomic,assign) BOOL selected;
 
 @property(nonatomic,strong,nonnull) NSFont *titleFont;
 

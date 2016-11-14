@@ -17,19 +17,34 @@
 @property (nonatomic,strong) NSTrackingArea *trackingArea;
 
 
-@property (nonatomic,strong) NSImage *displayImage;
 
-@property (nonatomic,copy) NSString *displayTitle;
+
+//@property (nonatomic,copy) NSString *displayTitle;
 
 
 @property (nonatomic,copy) NSMutableAttributedString *currtentDisplayString;
-
+@property (nonatomic,strong) NSImage *currtentDisplayImage;
 
 @end
 
 
 
 @implementation HXButton
+
+- (NSMutableDictionary *)stateImageDic {
+    if (!_stateImageDic) {
+        _stateImageDic = [NSMutableDictionary dictionary];
+    }
+    return _stateImageDic;
+}
+
+
+- (NSMutableDictionary *)stateTitleColorDic {
+    if (!_stateTitleColorDic) {
+        _stateTitleColorDic = [NSMutableDictionary dictionary];
+    }
+    return _stateTitleColorDic;
+}
 
 - (instancetype)initWithFrame:(NSRect)frame
 {
@@ -44,39 +59,64 @@
 {
     [super awakeFromNib];
      [self setUp];
+
 }
 
-- (void)setUp {
+- (void)setUp
+{
+    self.wantsLayer = YES;
+    self.layer.backgroundColor = [NSColor redColor].CGColor;
+    
     _titleFont = [NSFont systemFontOfSize:16];
+    
+    [self setTitleColor:[NSColor blackColor] forState:NSControlStateNormal];
 }
 
 
-- (void)drawRect:(NSRect)dirtyRect {
+- (void)drawRect:(NSRect)dirtyRect
+{
     
     if (self.highlighted) { } // do highlighted things
     
     
-    NSImage *image = [NSImage imageNamed:@"bg@2x"];
-    [image drawInRect:dirtyRect];
+    NSImage *drawImage = self.currtentDisplayImage;
+    [drawImage drawInRect:[self imageRectForBounds:dirtyRect]];
     
     
     NSAttributedString *disPlayString = self.currtentDisplayString;
-    
     CGFloat stringH =  NSHeight(dirtyRect);
     CGFloat stringY = (stringH - disPlayString.size.height) * 0.5;
     CGFloat stringW =  NSWidth(dirtyRect);
+    CGRect  titleRect = CGRectMake(0,-stringY, stringW, stringH);
     
-    [disPlayString drawWithRect:CGRectMake(0,-stringY, stringW, stringH) options:NSStringDrawingUsesLineFragmentOrigin];
+    [disPlayString drawWithRect:[self titleRectForBounds:titleRect] options:NSStringDrawingUsesLineFragmentOrigin];
     
+}
+
+- (NSRect)titleRectForBounds:(NSRect)theRect
+{
+    NSEdgeInsets padding = self.titleEdgeInsets;
+    theRect.origin.x += padding.left;
+    theRect.origin.y += padding.top;
+    theRect.size.width -= (padding.left + padding.right);
+    theRect.size.height -= (padding.top + padding.bottom);
+    return theRect;
+}
+
+
+- (NSRect)imageRectForBounds:(NSRect)theRect
+{
+    NSEdgeInsets padding = self.imageEdgeInsets;
+    theRect.origin.x += padding.left;
+    theRect.origin.y += padding.top;
+    theRect.size.width -= (padding.left + padding.right);
+    theRect.size.height -= (padding.top + padding.bottom);
+    return theRect;
 }
 
 
 
-
-
-
-
-- (NSMutableAttributedString *)bulidDisplayStringWith:(NSString *)title
+- (void)bulidDisplayStringWith:(NSString *)title
 {
 
     NSMutableParagraphStyle *pStyle = [[NSMutableParagraphStyle alloc] init];
@@ -92,9 +132,8 @@
     NSMutableAttributedString *displayString = [[NSMutableAttributedString alloc]
                                                  initWithString:title
                                                  attributes:atts];
-    self.currtentDisplayString = [displayString mutableCopy];
+    self.currtentDisplayString = displayString;
 
-    return displayString;
 }
 
 - (void)setTitleFont:(NSFont *)titleFont
@@ -106,28 +145,59 @@
 - (void)setTitle:(nullable NSString *)title forState:(NSControlState)state
 {
     [self bulidDisplayStringWith:title];
-    [self setNeedsDisplay];
+     self.selected = NO;
 }
 
 - (void)setTitleColor:(nullable NSColor *)color forState:(NSControlState)state
 {
     [self.stateTitleColorDic setObject:color forKey:@(state)];
+    self.selected = NO;
+}
+
+- (void)setImage:(nullable NSImage *)image forState:(NSControlState)state
+{
+    [self.stateImageDic setObject:image forKey:@(state)];
+    self.selected = NO;
+}
+
+
+
+- (void)setSelected:(BOOL)selected
+{
+    _selected = selected;
     
-    [self.currtentDisplayString addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(0, self.currtentDisplayString.length)];
+    NSImage *normalStateImage      = self.stateImageDic[@(NSControlStateNormal)];
+    NSColor *normalStateTitleColor = self.stateTitleColorDic[@(NSControlStateNormal)];
+    
+    NSImage *image;
+    NSColor *titleColor;
+    
+    if (selected) {
+        image      = self.stateImageDic[@(NSControlStateSelected)];
+        titleColor = self.stateTitleColorDic[@(NSControlStateSelected)];
+        
+        if (!image) {
+            image = normalStateImage;
+        }
+        if (!titleColor) {
+            titleColor = normalStateTitleColor;
+        }
+        
+    } else {
+        image      = normalStateImage;
+        titleColor = normalStateTitleColor;
+    }
+    
+    NSMutableAttributedString *mattStr = [self.currtentDisplayString mutableCopy];
+    [mattStr addAttribute:NSForegroundColorAttributeName
+                    value:titleColor
+                    range:NSMakeRange(0, mattStr.length)];
+    self.currtentDisplayString = mattStr;
+    
+    self.currtentDisplayImage = image;
+    
     [self setNeedsDisplay];
-    
 }
-
-
-
-
-- (void)setImage:(nullable NSImage *)image forState:(NSControlState)state {
-    
-    
-}
-
-
-
 
 
 @end
