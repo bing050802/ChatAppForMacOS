@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="HXRightChatViewController">
             <connections>
-                <outlet property="addMemberBtn" destination="HYI-E1-4z6" id="kPs-2m-c0e"/>
                 <outlet property="bgView" destination="W70-86-Gwi" id="cG5-Js-ehf"/>
-                <outlet property="callBtn" destination="WYf-Ki-xQg" id="emu-pf-mKw"/>
-                <outlet property="chatFilesBtn" destination="45B-F1-oK3" id="5sx-nE-mOd"/>
                 <outlet property="datailTableView" destination="phV-a9-70K" id="AuL-Fi-FwB"/>
                 <outlet property="iconImage" destination="7uE-Ph-GYN" id="JOB-Xm-fMC"/>
                 <outlet property="nameLabel" destination="pHX-p9-bhR" id="kJO-dh-240"/>
-                <outlet property="personalBtn" destination="bnO-Gd-YUB" id="hMc-c9-ofe"/>
                 <outlet property="topView" destination="O6C-c6-hQX" id="fDq-bW-iir"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -76,62 +73,34 @@
                         <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="3" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rQD-t7-3dw">
                             <rect key="frame" x="362" y="10" width="129" height="30"/>
                             <subviews>
-                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="45B-F1-oK3" customClass="HXBarButton">
+                                <customView translatesAutoresizingMaskIntoConstraints="NO" id="Hej-YI-ZR9" customClass="HXButton">
                                     <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="30" id="D0r-8D-MNz"/>
-                                        <constraint firstAttribute="height" constant="30" id="pl5-Sc-SsJ"/>
+                                        <constraint firstAttribute="height" constant="30" id="cyM-ac-5bV"/>
+                                        <constraint firstAttribute="width" constant="30" id="yMl-BL-NVj"/>
                                     </constraints>
-                                    <buttonCell key="cell" type="bevel" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="Z12-ie-sNH">
-                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system"/>
-                                    </buttonCell>
-                                    <connections>
-                                        <action selector="showChatFiles:" target="-2" id="y3h-fS-ZCh"/>
-                                    </connections>
-                                </button>
-                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HYI-E1-4z6" customClass="HXBarButton">
+                                </customView>
+                                <customView translatesAutoresizingMaskIntoConstraints="NO" id="EFM-IY-Fbr" customClass="HXButton">
                                     <rect key="frame" x="33" y="0.0" width="30" height="30"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="30" id="2Bm-Le-aIl"/>
-                                        <constraint firstAttribute="height" constant="30" id="R48-Cz-jTz"/>
+                                        <constraint firstAttribute="height" constant="30" id="CKs-MU-eK0"/>
+                                        <constraint firstAttribute="width" constant="30" id="yN0-Wj-HdY"/>
                                     </constraints>
-                                    <buttonCell key="cell" type="bevel" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="LD0-G5-b7Z">
-                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system"/>
-                                    </buttonCell>
-                                    <connections>
-                                        <action selector="addMember:" target="-2" id="11V-mT-OZt"/>
-                                    </connections>
-                                </button>
-                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WYf-Ki-xQg" customClass="HXBarButton">
+                                </customView>
+                                <customView translatesAutoresizingMaskIntoConstraints="NO" id="Fvg-h4-O1N" customClass="HXButton">
                                     <rect key="frame" x="66" y="0.0" width="30" height="30"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="30" id="WLv-a7-YYZ"/>
-                                        <constraint firstAttribute="height" constant="30" id="olF-kH-3bf"/>
+                                        <constraint firstAttribute="height" constant="30" id="TR0-Xh-O0Q"/>
+                                        <constraint firstAttribute="width" constant="30" id="loB-99-Idb"/>
                                     </constraints>
-                                    <buttonCell key="cell" type="bevel" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="7yF-na-pBb">
-                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system"/>
-                                    </buttonCell>
-                                    <connections>
-                                        <action selector="callDingding:" target="-2" id="mhl-zw-Hp0"/>
-                                    </connections>
-                                </button>
-                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bnO-Gd-YUB" customClass="HXBarButton">
+                                </customView>
+                                <customView translatesAutoresizingMaskIntoConstraints="NO" id="ldw-nK-amH" customClass="HXButton">
                                     <rect key="frame" x="99" y="0.0" width="30" height="30"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="30" id="64b-Np-3t6"/>
-                                        <constraint firstAttribute="width" constant="30" id="p8d-uO-yhd"/>
+                                        <constraint firstAttribute="width" constant="30" id="87k-hY-3Pm"/>
+                                        <constraint firstAttribute="height" constant="30" id="XyN-A5-ScL"/>
                                     </constraints>
-                                    <buttonCell key="cell" type="bevel" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="Y2s-la-lou">
-                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system"/>
-                                    </buttonCell>
-                                    <connections>
-                                        <action selector="showPersonal:" target="-2" id="dWI-LO-sTe"/>
-                                    </connections>
-                                </button>
+                                </customView>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="2dv-xj-3X3"/>

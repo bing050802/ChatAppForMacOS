@@ -10,7 +10,7 @@
 #import "NFSplitViewController.h"
 #import "HXPrefixHeader.h"
 #import "HXMessage.h"
-#import "HXBarButton.h"
+#import "HXButton.h"
 
 #import "HXMsgDatailCell.h"
 #import "HXMineMessageCell.h"
@@ -33,13 +33,13 @@
 @property (weak) IBOutlet NSTextField *nameLabel;
 
 // 聊天 记录的上传文件
-@property (weak) IBOutlet HXBarButton *chatFilesBtn;
+@property (weak) IBOutlet HXButton *chatFilesBtn;
 // 添加成员
-@property (weak) IBOutlet HXBarButton *addMemberBtn;
+@property (weak) IBOutlet HXButton *addMemberBtn;
 // 拨打钉钉电话
-@property (weak) IBOutlet HXBarButton *callBtn;
+@property (weak) IBOutlet HXButton *callBtn;
 // 个人简介
-@property (weak) IBOutlet HXBarButton *personalBtn;
+@property (weak) IBOutlet HXButton *personalBtn;
 
 @property (nonatomic,strong) JMModalOverlay *modalOverlay;
 
@@ -129,11 +129,10 @@ static NSString *mineCellID = @"mineCellID";
     [self settingWithImageName:@"personal" btn:self.personalBtn];
 }
 
-- (void)settingWithImageName:(NSString *)name btn:(HXBarButton *)btn {
+- (void)settingWithImageName:(NSString *)name btn:(HXButton *)btn {
     btn.trackingEabled = YES;
-    btn.cell.highlighted = NO;
-    [btn setImage:[NSImage imageNamed:name] forState:ButtonStateNormal];
-    [btn setImage:[NSImage imageNamed:[NSString stringWithFormat:@"%@_entered",name]] forState:ButtonStateMouseIn];
+    [btn setImage:[NSImage imageNamed:name] forState:NSControlStateNormal];
+    [btn setImage:[NSImage imageNamed:[NSString stringWithFormat:@"%@_entered",name]] forState:NSControlStateMouseIn];
 }
 
 

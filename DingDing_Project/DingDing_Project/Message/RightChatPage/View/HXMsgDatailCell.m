@@ -8,7 +8,7 @@
 
 #import "HXMsgDatailCell.h"
 #import "HXPrefixHeader.h"
-#import "HXBarButton.h"
+#import "HXButton.h"
 
 #import "NSMutableAttributedString+AttachMent.h"
 
@@ -25,7 +25,7 @@
 @property (weak) IBOutlet NSLayoutConstraint *textHeightCons;
 @property (weak) IBOutlet NSLayoutConstraint *textWidthCons;
 
-@property (weak) IBOutlet HXBarButton *popButton;
+@property (weak) IBOutlet HXButton *popButton;
 
 @end
 
@@ -43,10 +43,9 @@
     
     _popButton.trackingEabled = YES;
     _popButton.hidden = YES;
-    _popButton.cell.highlighted = NO;
     NSString *imgName = @"cell_popbtn";
-    [_popButton setImage:[NSImage imageNamed:imgName] forState:ButtonStateNormal];
-    [_popButton setImage:[NSImage imageNamed:[NSString stringWithFormat:@"%@_entered",imgName]] forState:ButtonStateMouseIn];
+    [_popButton setImage:[NSImage imageNamed:imgName] forState:NSControlStateNormal];
+    [_popButton setImage:[NSImage imageNamed:[NSString stringWithFormat:@"%@_entered",imgName]] forState:NSControlStateMouseIn];
     
 }
 

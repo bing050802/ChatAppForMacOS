@@ -14,7 +14,7 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
-                <outlet property="button" destination="Gqb-Ar-cCG" id="JCh-y5-vv3"/>
+                <outlet property="button" destination="Cra-rO-hmZ" id="OUQ-53-ZEf"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -673,29 +673,20 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Gqb-Ar-cCG" customClass="HXButton">
-                        <rect key="frame" x="173" y="204" width="100" height="50"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="100" id="2x3-bm-nko"/>
-                            <constraint firstAttribute="height" constant="50" id="YMn-qr-sPb"/>
-                        </constraints>
-                        <buttonCell key="cell" type="bevel" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="nEW-tj-fTL">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="click:" target="Voe-Tx-rLC" id="Mg5-qL-VfV"/>
-                        </connections>
-                    </button>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="Cra-rO-hmZ" customClass="HXButton">
+                        <rect key="frame" x="180" y="179" width="163" height="96"/>
+                    </customView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Gqb-Ar-cCG" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="106" id="EGT-HH-2lR"/>
-                    <constraint firstItem="Gqb-Ar-cCG" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="173" id="rKA-gx-g0R"/>
+                    <constraint firstAttribute="bottom" secondItem="Cra-rO-hmZ" secondAttribute="bottom" constant="179" id="9kf-Ki-k7K"/>
+                    <constraint firstItem="Cra-rO-hmZ" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="180" id="cWE-r3-Bb9"/>
+                    <constraint firstAttribute="trailing" secondItem="Cra-rO-hmZ" secondAttribute="trailing" constant="137" id="lu2-aK-nIS"/>
+                    <constraint firstItem="Cra-rO-hmZ" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="85" id="yfc-zo-E7e"/>
                 </constraints>
             </view>
             <point key="canvasLocation" x="-16" y="34"/>

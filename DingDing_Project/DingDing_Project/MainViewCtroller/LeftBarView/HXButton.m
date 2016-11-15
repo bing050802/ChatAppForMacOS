@@ -63,8 +63,7 @@
 - (void)setUp
 {
     self.wantsLayer = YES;
-    self.layer.backgroundColor = [NSColor redColor].CGColor;
-    
+ 
     _titleFont = [NSFont systemFontOfSize:16];
     
     [self setTitleColor:[NSColor blackColor] forState:NSControlStateNormal];
@@ -138,6 +137,11 @@
                                                     userInfo:nil];
     }
     return _trackingArea;
+}
+
+- (void)setBackGroundColor:(NSColor *)backGroundColor {
+    _backGroundColor = backGroundColor;
+    self.layer.backgroundColor = backGroundColor.CGColor;
 }
 
 - (void)setTrackingEabled:(BOOL)trackingEabled {

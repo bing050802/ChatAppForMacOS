@@ -7,7 +7,7 @@
 //
 
 #import "HXLeftToolBar.h"
-#import "HXBarButton.h"
+#import "HXButton.h"
 //#import "HXSelectBar.h"
 
 @interface HXLeftToolBar ()
@@ -15,8 +15,8 @@
 @property (weak) IBOutlet NSImageView *userIconView;
 @property (weak) IBOutlet NSTextField *nameLable;
 
-@property (weak) IBOutlet HXBarButton *creatButton;
-@property (weak) IBOutlet HXBarButton *moreButton;
+@property (weak) IBOutlet HXButton *creatButton;
+@property (weak) IBOutlet HXButton *moreButton;
 
 @end
 
@@ -40,15 +40,15 @@
     [self setBottmButton:self.moreButton image:@"moreIcon" title:@"更多"];
 }
 
-- (void)setBottmButton:(HXBarButton *)btn image:(NSString *)image title:(NSString *)title {
+- (void)setBottmButton:(HXButton *)btn image:(NSString *)image title:(NSString *)title {
     CGFloat btnImgL = 0;
     CGFloat btnImgW = 40;
     CGFloat btnW = NSWidth(self.creatButton.frame);
-    [btn setTitle:title forState:ButtonStateNormal];
-    [btn setImage:[NSImage imageNamed:image] forState:ButtonStateNormal];
-    btn.imageEdgeInsets = NSEdgeInsetsMake(0, btnImgL, 0, btnW - btnImgL - btnImgW);
     btn.titleEdgeInsets = NSEdgeInsetsMake(0, 40, 0, 0);
-
+    btn.imageEdgeInsets = NSEdgeInsetsMake(0, btnImgL, 0, btnW - btnImgL - btnImgW);
+    [btn setImage:[NSImage imageNamed:image] forState:NSControlStateNormal];
+    
+    [btn setTitle:title forState:NSControlStateNormal];
 }
 
 - (void)setUserName:(NSString *)userName {

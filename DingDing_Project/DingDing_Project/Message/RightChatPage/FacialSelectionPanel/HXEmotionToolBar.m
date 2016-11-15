@@ -7,11 +7,11 @@
 //
 
 #import "HXEmotionToolBar.h"
-#import "HXBarButton.h"
+#import "HXButton.h"
 
 @interface HXEmotionToolBar ()
 
-@property (nonatomic,assign) HXBarButton *lastSelectBtn;
+@property (nonatomic,assign) HXButton *lastSelectBtn;
 
 @end
 
@@ -49,25 +49,24 @@
     CGFloat margin = 15;
     for (NSInteger index = 0; index < emotionTypes.count; index++) {
         // 设置 表情类型按钮
-        HXBarButton *typeBtn = [[HXBarButton alloc] init];
+        HXButton *typeBtn = [[HXButton alloc] init];
         typeBtn.tag = index;
-        typeBtn.imageScaling = NSImageScaleAxesIndependently;
         typeBtn.imageEdgeInsets = NSEdgeInsetsMake(10, 10, 10, 10);
-        [typeBtn setImage:emotionTypes[index] forState:ButtonStateNormal];
-        [typeBtn setBackgroundColor:[NSColor clearColor] forState:ButtonStateNormal];
-        [typeBtn setBackgroundColor:[NSColor whiteColor] forState:ButtonStateSelected];
+        [typeBtn setImage:emotionTypes[index] forState:NSControlStateNormal];
+
         typeBtn.target = self;
         typeBtn.action = @selector(clickBtn:);
         CGFloat btnX = margin + (toolBarBtnSize.width + margin) * index;
         typeBtn.frame = CGRectMake(btnX, 0, toolBarBtnSize.width, toolBarBtnSize.height);
-        [typeBtn.leftLine removeFromSuperview];
         [self addSubview:typeBtn];
         if (index == 0)  [self clickBtn:typeBtn];
     }
     
 }
 
-- (void)clickBtn:(HXBarButton *)typeBtn {
+- (void)clickBtn:(HXButton *)typeBtn {
+//    [typeBtn setBackgroundColor:[NSColor clearColor] forState:ButtonStateNormal];
+//    [typeBtn setBackgroundColor:[NSColor whiteColor] forState:ButtonStateSelected];
     self.lastSelectBtn.selected = NO; // 上一个按钮取消选中
     typeBtn.selected = YES; // 当前按钮选中
     self.lastSelectBtn = typeBtn; // 赋值最新按钮

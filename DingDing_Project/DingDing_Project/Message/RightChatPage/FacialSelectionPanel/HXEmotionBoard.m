@@ -7,7 +7,7 @@
 //
 
 #import "HXEmotionBoard.h"
-#import "HXBarButton.h"
+#import "HXButton.h"
 #import "HXEmotion.h"
 #import "HXPrefixHeader.h"
 
@@ -75,11 +75,11 @@
         NSInteger col = index % maxColumns; //列号
         
         // 设置 表情按钮
-        HXBarButton *emotionBtn = [[HXBarButton alloc] init];
+        HXButton *emotionBtn = [[HXButton alloc] init];
         emotionBtn.tag = index;
         HXEmotion *emotion = emotions[index];
-        [emotionBtn setImage:emotion.emotionimage forState:ButtonStateNormal];
-        [emotionBtn setBackgroundColor:[NSColor clearColor] forState:ButtonStateNormal];
+        [emotionBtn setImage:emotion.emotionimage forState:NSControlStateNormal];
+        emotionBtn.backGroundColor = [NSColor clearColor];
         emotionBtn.target = self;
         emotionBtn.action = @selector(clickBtn:);
         CGFloat imageViewX = emotionMargin + col * (btnWH + emotionMargin);
@@ -90,7 +90,7 @@
     
 }
 
-- (void)clickBtn:(HXBarButton *)btn {
+- (void)clickBtn:(HXButton *)btn {
     HXEmotion *emotion = self.emotions[btn.tag];
     [NotificationCenter postNotificationName:EmotionSelectNotification object:emotion.chs];
 }

@@ -8,23 +8,23 @@
 
 #import "HXInputToolView.h"
 #import "HXPrefixHeader.h"
-#import "HXBarButton.h"
+#import "HXButton.h"
 #import "HXTextView.h"
 
 
 @interface HXInputToolView () <NSTextViewDelegate>
 
-@property (weak) IBOutlet HXBarButton *attchBtn;
-@property (weak) IBOutlet HXBarButton *faceBtn;
-@property (weak) IBOutlet HXBarButton *aiteBtn;
-@property (weak) IBOutlet HXBarButton *dingFileBtn;
-@property (weak) IBOutlet HXBarButton *cutBtn;
-@property (weak) IBOutlet HXBarButton *mingPianBtn;
-@property (weak) IBOutlet HXBarButton *zanBtn;
+@property (weak) IBOutlet HXButton *attchBtn;
+@property (weak) IBOutlet HXButton *faceBtn;
+@property (weak) IBOutlet HXButton *aiteBtn;
+@property (weak) IBOutlet HXButton *dingFileBtn;
+@property (weak) IBOutlet HXButton *cutBtn;
+@property (weak) IBOutlet HXButton *mingPianBtn;
+@property (weak) IBOutlet HXButton *zanBtn;
 
 @property (unsafe_unretained) IBOutlet HXTextView *inputTextView;
 
-@property (weak) IBOutlet HXBarButton *sendButton;
+@property (weak) IBOutlet HXButton *sendButton;
 
 @end
 
@@ -53,11 +53,10 @@
 }
 
 
-- (void)settingWithImageName:(NSString *)name btn:(HXBarButton *)btn {
+- (void)settingWithImageName:(NSString *)name btn:(HXButton *)btn {
     btn.trackingEabled = YES;
-    btn.cell.highlighted = NO;
-    [btn setImage:[NSImage imageNamed:name] forState:ButtonStateNormal];
-    [btn setImage:[NSImage imageNamed:[NSString stringWithFormat:@"%@_entered",name]] forState:ButtonStateMouseIn];
+    [btn setImage:[NSImage imageNamed:name] forState:NSControlStateNormal];
+    [btn setImage:[NSImage imageNamed:[NSString stringWithFormat:@"%@_entered",name]] forState:NSControlStateMouseIn];
 }
 
 
@@ -102,7 +101,7 @@
 }
 
 
-- (IBAction)buttonClick:(HXBarButton *)sender {
+- (IBAction)buttonClick:(HXButton *)sender {
     [self.delegate toolViewSelect:sender.tag];
 }
 

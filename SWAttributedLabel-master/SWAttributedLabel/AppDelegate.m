@@ -30,6 +30,9 @@
 @property (weak) IBOutlet HXButton *button;
 
 
+//@property (weak) IBOutlet HXButton *button;
+
+
 @end
 
 @implementation AppDelegate
@@ -52,13 +55,13 @@
     //    [self.button setImage:[NSImage imageNamed:@"icon_face.png"] forState:ButtonStateNormal];
     
     //    self.button.titleFont = [NSFont systemFontOfSize:29];
-
+    self.button.trackingEabled = YES;
     self.button.imageEdgeInsets = NSEdgeInsetsMake(0, 0, 0, 40);
     self.button.titleEdgeInsets = NSEdgeInsetsMake(0, 60, 0, 0);
     [self.button setTitleColor:[NSColor whiteColor] forState:NSControlStateNormal];
     [self.button setTitleColor:[NSColor blueColor] forState:NSControlStateSelected];
     [self.button setImage:[NSImage imageNamed:@"bg@2x"]  forState:NSControlStateNormal];
-    [self.button setImage:[NSImage imageNamed:@"white_bg"]  forState:NSControlStateSelected];
+    [self.button setImage:[NSImage imageNamed:@"white_bg"]  forState:NSControlStateMouseIn];
     [self.button setTitle:@"消息" forState:NSControlStateNormal];
     
     

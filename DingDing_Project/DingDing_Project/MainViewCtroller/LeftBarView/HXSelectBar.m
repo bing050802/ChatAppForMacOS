@@ -7,7 +7,7 @@
 //
 
 #import "HXSelectBar.h"
-#import "HXBarButton.h"
+#import "HXButton.h"
 #import "HXPrefixHeader.h"
 
 @interface HXSelectBar ()
@@ -18,7 +18,7 @@
 
 @property (nonatomic, strong) NSArray *titles;
 
-@property (nonatomic, strong) HXBarButton *lastSelectBtn;
+@property (nonatomic, strong) HXButton *lastSelectBtn;
 
 
 @end
@@ -53,8 +53,7 @@
 - (void)addBarButtons {
     
     for (int i = 0; i < self.normalImages.count; i++) {
-        HXBarButton *barButton = [[HXBarButton alloc] init];
-                [barButton setTitle:self.titles[i] forState:ButtonStateNormal];
+        HXButton *barButton = [[HXButton alloc] init];
         CGFloat btnY = i * 50;
         barButton.frame = NSMakeRect(0, btnY, 100, 50);
         CGFloat btnImgL = 10;
@@ -62,20 +61,24 @@
         CGFloat btnW = NSWidth(barButton.frame);
         barButton.imageEdgeInsets = NSEdgeInsetsMake(0, btnImgL, 0, btnW - btnImgL - btnImgW);
         barButton.titleEdgeInsets = NSEdgeInsetsMake(0, btnImgL + btnImgW, 0, 0);
-        [barButton setBackgroundColor:HXColor(221, 228, 242) forState:ButtonStateNormal];
-        [barButton setBackgroundColor:HXColor(192, 221, 246) forState:ButtonStateSelected];
-        [barButton setTitleColor:[NSColor grayColor] forState:ButtonStateNormal];
-        [barButton setTitleColor:HXColor(25, 132, 230) forState:ButtonStateSelected];
-        [barButton setImage:[NSImage imageNamed:self.normalImages[i]] forState:ButtonStateNormal];
-        [barButton setImage:[NSImage imageNamed:self.selectedImages[i]] forState:ButtonStateSelected];
+        [barButton setTitleColor:[NSColor grayColor] forState:NSControlStateNormal];
+        [barButton setTitleColor:HXColor(25, 132, 230) forState:NSControlStateSelected];
+        [barButton setTitle:self.titles[i] forState:NSControlStateNormal];
+        [barButton setImage:[NSImage imageNamed:self.normalImages[i]] forState:NSControlStateNormal];
+        [barButton setImage:[NSImage imageNamed:self.selectedImages[i]] forState:NSControlStateSelected];
         barButton.target = self;
         barButton.action = @selector(clickBtn:);
-
+        
         [self addSubview:barButton];
     }
 }
 
-- (void)clickBtn:(HXBarButton *)btn {
+- (void)clickBtn:(HXButton *)btn {
+    
+    
+    
+//    [barButton setBackgroundColor:HXColor(221, 228, 242) forState:ButtonStateNormal];
+//    [barButton setBackgroundColor:HXColor(192, 221, 246) forState:ButtonStateSelected];
     btn.selected = YES;
     self.lastSelectBtn.selected = NO;
     self.lastSelectBtn = btn;

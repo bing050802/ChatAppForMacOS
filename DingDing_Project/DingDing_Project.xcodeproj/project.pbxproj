@@ -45,7 +45,6 @@
 		8A4C6A261D7EB1A4005BC413 /* work.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4C6A241D7EB1A4005BC413 /* work.png */; };
 		8A4C6A291D7EB1F3005BC413 /* dingpan_seclected.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4C6A271D7EB1F3005BC413 /* dingpan_seclected.png */; };
 		8A4C6A2A1D7EB1F3005BC413 /* dingpan.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4C6A281D7EB1F3005BC413 /* dingpan.png */; };
-		8A4C6A331D7EB2E2005BC413 /* HXBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4C6A2D1D7EB2E2005BC413 /* HXBarButton.m */; };
 		8A4C6A341D7EB2E2005BC413 /* HXLeftToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4C6A2F1D7EB2E2005BC413 /* HXLeftToolBar.m */; };
 		8A4C6A351D7EB2E2005BC413 /* HXLeftToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A4C6A301D7EB2E2005BC413 /* HXLeftToolBar.xib */; };
 		8A4C6A361D7EB2E2005BC413 /* HXSelectBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4C6A321D7EB2E2005BC413 /* HXSelectBar.m */; };
@@ -331,6 +330,7 @@
 		8AC667A51DABAE0D00250E02 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC667A41DABAE0D00250E02 /* UIKit.framework */; };
 		8AC78D001DAE074200BC459D /* HXMineMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC78CFF1DAE074200BC459D /* HXMineMessageCell.m */; };
 		8AC78D021DAE07A100BC459D /* HXMineMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AC78D011DAE07A100BC459D /* HXMineMessageCell.xib */; };
+		8AD18AE21DDB2AE9008F1B43 /* HXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD18AE11DDB2AE9008F1B43 /* HXButton.m */; };
 		8AD9FE151DC2370900FBDFC6 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9FE141DC2370900FBDFC6 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8AD9FE171DC2372700FBDFC6 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD9FE161DC2372700FBDFC6 /* libicucore.tbd */; };
 		8AE26D341D598A4800855257 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D2F1D598A4800855257 /* AppDelegate.m */; };
@@ -431,8 +431,6 @@
 		8A4C6A241D7EB1A4005BC413 /* work.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = work.png; sourceTree = "<group>"; };
 		8A4C6A271D7EB1F3005BC413 /* dingpan_seclected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dingpan_seclected.png; sourceTree = "<group>"; };
 		8A4C6A281D7EB1F3005BC413 /* dingpan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dingpan.png; sourceTree = "<group>"; };
-		8A4C6A2C1D7EB2E2005BC413 /* HXBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXBarButton.h; sourceTree = "<group>"; };
-		8A4C6A2D1D7EB2E2005BC413 /* HXBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXBarButton.m; sourceTree = "<group>"; };
 		8A4C6A2E1D7EB2E2005BC413 /* HXLeftToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXLeftToolBar.h; sourceTree = "<group>"; };
 		8A4C6A2F1D7EB2E2005BC413 /* HXLeftToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXLeftToolBar.m; sourceTree = "<group>"; };
 		8A4C6A301D7EB2E2005BC413 /* HXLeftToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXLeftToolBar.xib; sourceTree = "<group>"; };
@@ -750,6 +748,8 @@
 		8AC78CFE1DAE074200BC459D /* HXMineMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMineMessageCell.h; sourceTree = "<group>"; };
 		8AC78CFF1DAE074200BC459D /* HXMineMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMineMessageCell.m; sourceTree = "<group>"; };
 		8AC78D011DAE07A100BC459D /* HXMineMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXMineMessageCell.xib; sourceTree = "<group>"; };
+		8AD18AE01DDB2AE9008F1B43 /* HXButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXButton.h; sourceTree = "<group>"; };
+		8AD18AE11DDB2AE9008F1B43 /* HXButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXButton.m; sourceTree = "<group>"; };
 		8AD9FE131DC2370900FBDFC6 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		8AD9FE141DC2370900FBDFC6 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		8AD9FE161DC2372700FBDFC6 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
@@ -1013,8 +1013,8 @@
 		8A4C6A2B1D7EB2E2005BC413 /* LeftBarView */ = {
 			isa = PBXGroup;
 			children = (
-				8A4C6A2C1D7EB2E2005BC413 /* HXBarButton.h */,
-				8A4C6A2D1D7EB2E2005BC413 /* HXBarButton.m */,
+				8AD18AE01DDB2AE9008F1B43 /* HXButton.h */,
+				8AD18AE11DDB2AE9008F1B43 /* HXButton.m */,
 				8A4C6A2E1D7EB2E2005BC413 /* HXLeftToolBar.h */,
 				8A4C6A2F1D7EB2E2005BC413 /* HXLeftToolBar.m */,
 				8A4C6A301D7EB2E2005BC413 /* HXLeftToolBar.xib */,
@@ -2081,7 +2081,6 @@
 			files = (
 				8AE3FD2A1DA8F4070023331C /* JMModalOverlay.m in Sources */,
 				8AE49A871DAA170600461D8C /* HXPersonalController.m in Sources */,
-				8A4C6A331D7EB2E2005BC413 /* HXBarButton.m in Sources */,
 				8AB430F81D9B70440063CF7A /* NSImage+GIF.m in Sources */,
 				3349A9DF1D8530710095C667 /* HXMessageSplitController.m in Sources */,
 				8AB850401DCAE4AC00638698 /* HXInputToolView.m in Sources */,
@@ -2136,6 +2135,7 @@
 				8AB430FB1D9B70440063CF7A /* SDWebImageDownloader.m in Sources */,
 				33650FBC1D97FCE700D8F571 /* HXMessageCell.m in Sources */,
 				8AE26D341D598A4800855257 /* AppDelegate.m in Sources */,
+				8AD18AE21DDB2AE9008F1B43 /* HXButton.m in Sources */,
 				8AE26D5C1D59B73C00855257 /* NSView+BackGroundColor.m in Sources */,
 				331F5F891DC4E8D9003922EF /* HXTextPart.m in Sources */,
 				8A898CF21DC9F8AA0065D3EF /* HXEmotionTool.m in Sources */,
