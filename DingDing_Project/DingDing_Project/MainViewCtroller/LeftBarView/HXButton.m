@@ -14,14 +14,20 @@
 
 @property (nonatomic,strong) NSMutableDictionary *stateTitleColorDic;
 
+@property (nonatomic,strong) NSMutableDictionary *stateBgColorDic;
+
 @property (nonatomic,strong) NSTrackingArea *trackingArea;
 
 
 //@property (nonatomic,copy) NSString *displayTitle;
 
 
-@property (nonatomic,copy) NSMutableAttributedString *currtentDisplayString;
+@property (nonatomic,copy)   NSMutableAttributedString *currtentDisplayString;
+
 @property (nonatomic,strong) NSImage *currtentDisplayImage;
+@property (nonatomic,strong) NSImageView *imageView;
+
+@property (nonatomic,assign) BOOL mouseDown;
 
 @end
 
@@ -36,6 +42,12 @@
     return _stateImageDic;
 }
 
+- (NSMutableDictionary *)stateBgColorDic {
+    if (!_stateBgColorDic) {
+        _stateBgColorDic = [NSMutableDictionary dictionary];
+    }
+    return _stateBgColorDic;
+}
 
 - (NSMutableDictionary *)stateTitleColorDic {
     if (!_stateTitleColorDic) {
@@ -67,6 +79,11 @@
     _titleFont = [NSFont systemFontOfSize:16];
     
     [self setTitleColor:[NSColor blackColor] forState:NSControlStateNormal];
+    
+    NSImageView *imageView = [[NSImageView alloc] init];
+    [self addSubview:imageView];
+    self.imageView = imageView;
+    
 }
 
 
@@ -74,9 +91,9 @@
 {
     if (self.highlighted) { } // do highlighted things
     
-    NSImage *drawImage = self.currtentDisplayImage;
-    [drawImage drawInRect:[self imageRectForBounds:dirtyRect]];
-    
+//    NSImage *drawImage = self.currtentDisplayImage;
+//    [drawImage drawInRect:[self imageRectForBounds:dirtyRect]];
+     self.imageView.frame = [self imageRectForBounds:dirtyRect];
     
     NSAttributedString *disPlayString = self.currtentDisplayString;
     CGFloat stringH =  NSHeight(dirtyRect);
@@ -115,16 +132,16 @@
     NSMutableParagraphStyle *pStyle = [[NSMutableParagraphStyle alloc] init];
     pStyle.alignment = NSTextAlignmentCenter;
     pStyle.lineBreakMode = NSLineBreakByWordWrapping;
-
+    
     
     NSDictionary *atts = @{NSForegroundColorAttributeName:[NSColor blackColor],
-                           NSFontAttributeName:_titleFont,
+                           NSFontAttributeName:[NSFont systemFontOfSize:15],
                            NSParagraphStyleAttributeName:pStyle
                            };
     
     NSMutableAttributedString *displayString = [[NSMutableAttributedString alloc]
-                                                 initWithString:title
-                                                 attributes:atts];
+                                                initWithString:title
+                                                attributes:atts];
     self.currtentDisplayString = displayString;
 }
 
@@ -153,12 +170,18 @@
     }
 }
 
-
+- (void)setBackgroundColor:(nullable NSColor *)color forState:(NSControlState)state {
+    
+    [self.stateBgColorDic setObject:color forKey:@(state)];
+    if (state == NSControlStateNormal) {
+        self.selected = NO;
+    }
+}
 
 - (void)setTitle:(nullable NSString *)title forState:(NSControlState)state
 {
     [self bulidDisplayStringWith:title];
-     self.selected = NO;
+    self.selected = NO;
 }
 
 - (void)setTitleColor:(nullable NSColor *)color forState:(NSControlState)state
@@ -188,7 +211,7 @@
     if (selected) {
         image      = self.stateImageDic[@(NSControlStateSelected)];
         titleColor = self.stateTitleColorDic[@(NSControlStateSelected)];
-        
+        self.backGroundColor = self.stateBgColorDic[@(NSControlStateSelected)];
         if (!image) {
             image = normalStateImage;
         }
@@ -199,30 +222,50 @@
     } else {
         image      = normalStateImage;
         titleColor = normalStateTitleColor;
+        self.backGroundColor = self.stateBgColorDic[@(NSControlStateNormal)];
     }
     
     NSMutableAttributedString *mattStr = [self.currtentDisplayString mutableCopy];
     [mattStr addAttribute:NSForegroundColorAttributeName
                     value:titleColor
                     range:NSMakeRange(0, mattStr.length)];
+    [mattStr addAttribute:NSFontAttributeName
+                    value:_titleFont
+                    range:NSMakeRange(0, mattStr.length)];
     self.currtentDisplayString = mattStr;
     
-    self.currtentDisplayImage = image;
-    
+    self.imageView.image = image;
     [self setNeedsDisplay];
 }
 
 
 - (void)mouseEntered:(NSEvent *)event
 {
-    self.currtentDisplayImage = self.stateImageDic[@(NSControlStateMouseIn)];
+    self.imageView.image = self.stateImageDic[@(NSControlStateMouseIn)];
     [self setNeedsDisplay];
 }
 
 - (void)mouseExited:(NSEvent *)event
 {
-    self.currtentDisplayImage = self.stateImageDic[@(NSControlStateNormal)];
+    self.imageView.image = self.stateImageDic[@(NSControlStateNormal)];
     [self setNeedsDisplay];
+}
+
+- (void)mouseDown:(NSEvent *)theEvent
+{
+    _mouseDown = YES;
+    self.needsDisplay = YES;
+}
+
+- (void)mouseUp:(NSEvent *)theEvent
+{
+    if (_mouseDown) {
+        _mouseDown = NO;
+        self.needsDisplay = YES;
+        if ( self.target && self.action) {
+            [self.target performSelector:self.action withObject:self afterDelay:0.0];
+        }
+    }
 }
 
 

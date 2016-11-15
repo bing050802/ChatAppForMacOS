@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="HXMsgDatailCell"/>
@@ -66,23 +67,19 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
-                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q9R-Tw-R9W" customClass="HXBarButton">
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="1Zf-VC-aMj" customClass="HXButton">
                     <rect key="frame" x="387" y="32" width="18" height="21"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="21" id="Bs0-dJ-IUA"/>
-                        <constraint firstAttribute="width" constant="18" id="JUk-ml-TbS"/>
+                        <constraint firstAttribute="width" constant="18" id="3Xn-3f-QDd"/>
+                        <constraint firstAttribute="height" constant="21" id="MoH-Nw-MfW"/>
                     </constraints>
-                    <buttonCell key="cell" type="bevel" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="MrZ-fH-ed2">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                </button>
+                </customView>
             </subviews>
             <constraints>
                 <constraint firstItem="Afh-bh-gIs" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="15" id="6a7-Qn-JoO"/>
-                <constraint firstItem="Q9R-Tw-R9W" firstAttribute="leading" secondItem="dJH-f1-9NU" secondAttribute="trailing" constant="5" id="8Tu-tR-wrQ"/>
-                <constraint firstItem="Q9R-Tw-R9W" firstAttribute="bottom" secondItem="dJH-f1-9NU" secondAttribute="bottom" constant="-8" id="EPb-kW-1fU"/>
+                <constraint firstItem="1Zf-VC-aMj" firstAttribute="leading" secondItem="dJH-f1-9NU" secondAttribute="trailing" constant="5" id="Gf5-KM-3hc"/>
                 <constraint firstItem="7Uc-We-56w" firstAttribute="leading" secondItem="kbA-MX-vaA" secondAttribute="trailing" constant="20" id="IHu-fJ-b5r"/>
+                <constraint firstItem="1Zf-VC-aMj" firstAttribute="bottom" secondItem="dJH-f1-9NU" secondAttribute="bottom" constant="-8" id="JpL-Jl-VZ4"/>
                 <constraint firstItem="dJH-f1-9NU" firstAttribute="leading" secondItem="Afh-bh-gIs" secondAttribute="trailing" constant="7" id="MOO-Ib-l1c"/>
                 <constraint firstItem="kbA-MX-vaA" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="25" id="V5j-t5-uik"/>
                 <constraint firstItem="dJH-f1-9NU" firstAttribute="top" secondItem="kbA-MX-vaA" secondAttribute="bottom" constant="5" id="WqE-mS-tYK"/>
@@ -94,12 +91,12 @@
                 <outlet property="attTextView" destination="qxg-Qr-h9U" id="aQ3-nh-ztX"/>
                 <outlet property="iconImageView" destination="Afh-bh-gIs" id="thM-Uh-wXZ"/>
                 <outlet property="nameLabel" destination="kbA-MX-vaA" id="Sdr-Oe-MQD"/>
-                <outlet property="popButton" destination="Q9R-Tw-R9W" id="uLG-dR-iDZ"/>
+                <outlet property="popButton" destination="1Zf-VC-aMj" id="kwp-iZ-wb2"/>
                 <outlet property="textHeightCons" destination="E0C-Km-pPA" id="Fvv-5S-HCA"/>
                 <outlet property="textWidthCons" destination="nbS-5E-vzZ" id="GWG-ND-Cyg"/>
                 <outlet property="timeLable" destination="7Uc-We-56w" id="dcj-E2-iO0"/>
             </connections>
-            <point key="canvasLocation" x="-981" y="-504"/>
+            <point key="canvasLocation" x="-981.5" y="-504"/>
         </customView>
     </objects>
 </document>

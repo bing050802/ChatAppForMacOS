@@ -36,6 +36,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self setUp];
+//         [self addBarButtons];
     }
     return self;
 }
@@ -59,13 +60,17 @@
         CGFloat btnImgL = 10;
         CGFloat btnImgW = 40;
         CGFloat btnW = NSWidth(barButton.frame);
-        barButton.imageEdgeInsets = NSEdgeInsetsMake(0, btnImgL, 0, btnW - btnImgL - btnImgW);
+        
+        barButton.imageEdgeInsets = NSEdgeInsetsMake(10, btnImgL, 10, btnW - btnImgL - btnImgW);
         barButton.titleEdgeInsets = NSEdgeInsetsMake(0, btnImgL + btnImgW, 0, 0);
-        [barButton setTitleColor:[NSColor grayColor] forState:NSControlStateNormal];
-        [barButton setTitleColor:HXColor(25, 132, 230) forState:NSControlStateSelected];
-        [barButton setTitle:self.titles[i] forState:NSControlStateNormal];
         [barButton setImage:[NSImage imageNamed:self.normalImages[i]] forState:NSControlStateNormal];
         [barButton setImage:[NSImage imageNamed:self.selectedImages[i]] forState:NSControlStateSelected];
+        barButton.titleFont = [NSFont systemFontOfSize:13];
+        [barButton setTitleColor:[NSColor grayColor] forState:NSControlStateNormal];
+        [barButton setTitleColor:HXColor(25, 132, 230) forState:NSControlStateSelected];
+        [barButton setBackgroundColor:HXColor(221, 228, 242) forState:NSControlStateNormal];
+        [barButton setBackgroundColor:HXColor(192, 221, 246) forState:NSControlStateSelected];
+        [barButton setTitle:self.titles[i] forState:NSControlStateNormal];
         barButton.target = self;
         barButton.action = @selector(clickBtn:);
         
@@ -74,17 +79,15 @@
 }
 
 - (void)clickBtn:(HXButton *)btn {
-    
-    
-    
-//    [barButton setBackgroundColor:HXColor(221, 228, 242) forState:ButtonStateNormal];
-//    [barButton setBackgroundColor:HXColor(192, 221, 246) forState:ButtonStateSelected];
     btn.selected = YES;
     self.lastSelectBtn.selected = NO;
     self.lastSelectBtn = btn;
 }
 
-
+- (void)layout {
+    [super layout];
+   
+}
 
 
 @end

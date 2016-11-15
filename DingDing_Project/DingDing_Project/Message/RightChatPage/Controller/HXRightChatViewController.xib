@@ -9,10 +9,14 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="HXRightChatViewController">
             <connections>
+                <outlet property="addMemberBtn" destination="EFM-IY-Fbr" id="Imq-34-yV6"/>
                 <outlet property="bgView" destination="W70-86-Gwi" id="cG5-Js-ehf"/>
+                <outlet property="callBtn" destination="Fvg-h4-O1N" id="Oxc-e5-jyt"/>
+                <outlet property="chatFilesBtn" destination="Hej-YI-ZR9" id="yjL-3c-D7M"/>
                 <outlet property="datailTableView" destination="phV-a9-70K" id="AuL-Fi-FwB"/>
                 <outlet property="iconImage" destination="7uE-Ph-GYN" id="JOB-Xm-fMC"/>
                 <outlet property="nameLabel" destination="pHX-p9-bhR" id="kJO-dh-240"/>
+                <outlet property="personalBtn" destination="ldw-nK-amH" id="dae-hn-6zc"/>
                 <outlet property="topView" destination="O6C-c6-hQX" id="fDq-bW-iir"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -199,7 +203,7 @@
                 <constraint firstItem="W70-86-Gwi" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="q4b-7c-E7v"/>
                 <constraint firstAttribute="trailing" secondItem="W70-86-Gwi" secondAttribute="trailing" id="ykl-tz-fHu"/>
             </constraints>
-            <point key="canvasLocation" x="-765" y="-491"/>
+            <point key="canvasLocation" x="-852" y="-646"/>
         </customView>
     </objects>
     <resources>

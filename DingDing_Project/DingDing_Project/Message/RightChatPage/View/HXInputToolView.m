@@ -43,20 +43,23 @@
 }
 
 - (void)inputViewButtonsSetting {
-    [self settingWithImageName:@"attach" btn:self.attchBtn];
-    [self settingWithImageName:@"face" btn:self.faceBtn];
-    [self settingWithImageName:@"aite" btn:self.aiteBtn];
-    [self settingWithImageName:@"file" btn:self.dingFileBtn];
-    [self settingWithImageName:@"cut" btn:self.cutBtn];
-    [self settingWithImageName:@"mingPian" btn:self.mingPianBtn];
-    [self settingWithImageName:@"zan" btn:self.zanBtn];
+    [self settingWithImageName:@"attach" btn:self.attchBtn tag:100];
+    [self settingWithImageName:@"face" btn:self.faceBtn tag:101];
+    [self settingWithImageName:@"aite" btn:self.aiteBtn tag:102];
+    [self settingWithImageName:@"file" btn:self.dingFileBtn tag:103];
+    [self settingWithImageName:@"cut" btn:self.cutBtn tag:104] ;
+    [self settingWithImageName:@"mingPian" btn:self.mingPianBtn tag:105];
+    [self settingWithImageName:@"zan" btn:self.zanBtn tag:106];
 }
 
 
-- (void)settingWithImageName:(NSString *)name btn:(HXButton *)btn {
+- (void)settingWithImageName:(NSString *)name btn:(HXButton *)btn tag:(NSInteger)tag {
     btn.trackingEabled = YES;
+    btn.tag = tag;
     [btn setImage:[NSImage imageNamed:name] forState:NSControlStateNormal];
     [btn setImage:[NSImage imageNamed:[NSString stringWithFormat:@"%@_entered",name]] forState:NSControlStateMouseIn];
+    btn.target = self;
+    btn.action = @selector(buttonClick:);
 }
 
 
@@ -101,7 +104,7 @@
 }
 
 
-- (IBAction)buttonClick:(HXButton *)sender {
+- (void)buttonClick:(HXButton *)sender {
     [self.delegate toolViewSelect:sender.tag];
 }
 

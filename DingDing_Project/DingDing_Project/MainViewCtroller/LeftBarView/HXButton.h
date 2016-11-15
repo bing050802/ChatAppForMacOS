@@ -44,6 +44,8 @@ typedef NS_OPTIONS(NSInteger,NSControlState) {
 
 - (void)setImage:(nullable NSImage *)image forState:(NSControlState)state;                      // default is nil. should be same size if different for different states
 
+- (void)setBackgroundColor:(nullable NSColor *)color forState:(NSControlState)state;
+
 @property(nonatomic,strong,nonnull) NSColor *backGroundColor;
 
 
