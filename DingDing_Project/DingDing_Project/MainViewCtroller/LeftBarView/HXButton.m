@@ -76,7 +76,7 @@
 {
     self.wantsLayer = YES;
  
-    _titleFont = [NSFont systemFontOfSize:16];
+    self.titleFont = [NSFont systemFontOfSize:13];
     
     [self setTitleColor:[NSColor blackColor] forState:NSControlStateNormal];
     
@@ -91,9 +91,7 @@
 {
     if (self.highlighted) { } // do highlighted things
     
-//    NSImage *drawImage = self.currtentDisplayImage;
-//    [drawImage drawInRect:[self imageRectForBounds:dirtyRect]];
-     self.imageView.frame = [self imageRectForBounds:dirtyRect];
+    self.imageView.frame = [self imageRectForBounds:dirtyRect];
     
     NSAttributedString *disPlayString = self.currtentDisplayString;
     CGFloat stringH =  NSHeight(dirtyRect);
@@ -130,12 +128,17 @@
 - (void)bulidDisplayStringWith:(NSString *)title
 {
     NSMutableParagraphStyle *pStyle = [[NSMutableParagraphStyle alloc] init];
-    pStyle.alignment = NSTextAlignmentCenter;
+//    pStyle.alignment = NSTextAlignmentCenter;
     pStyle.lineBreakMode = NSLineBreakByWordWrapping;
     
     
-    NSDictionary *atts = @{NSForegroundColorAttributeName:[NSColor blackColor],
-                           NSFontAttributeName:[NSFont systemFontOfSize:15],
+    NSColor *normalStateTitleColor = self.stateTitleColorDic[@(NSControlStateNormal)];
+    if (!normalStateTitleColor) {
+        normalStateTitleColor = [NSColor blackColor];
+    }
+
+    NSDictionary *atts = @{NSForegroundColorAttributeName:normalStateTitleColor,
+                           NSFontAttributeName:self.titleFont,
                            NSParagraphStyleAttributeName:pStyle
                            };
     
@@ -171,29 +174,26 @@
 }
 
 - (void)setBackgroundColor:(nullable NSColor *)color forState:(NSControlState)state {
-    
     [self.stateBgColorDic setObject:color forKey:@(state)];
-    if (state == NSControlStateNormal) {
-        self.selected = NO;
-    }
 }
 
 - (void)setTitle:(nullable NSString *)title forState:(NSControlState)state
 {
     [self bulidDisplayStringWith:title];
-    self.selected = NO;
+    [self setNeedsDisplay];
 }
 
 - (void)setTitleColor:(nullable NSColor *)color forState:(NSControlState)state
 {
     [self.stateTitleColorDic setObject:color forKey:@(state)];
-    self.selected = NO;
 }
 
 - (void)setImage:(nullable NSImage *)image forState:(NSControlState)state
 {
     [self.stateImageDic setObject:image forKey:@(state)];
-    self.selected = NO;
+    if (state == NSControlStateNormal) {
+        self.imageView.image = image;
+    }
 }
 
 
@@ -229,9 +229,7 @@
     [mattStr addAttribute:NSForegroundColorAttributeName
                     value:titleColor
                     range:NSMakeRange(0, mattStr.length)];
-    [mattStr addAttribute:NSFontAttributeName
-                    value:_titleFont
-                    range:NSMakeRange(0, mattStr.length)];
+
     self.currtentDisplayString = mattStr;
     
     self.imageView.image = image;
@@ -267,7 +265,6 @@
         }
     }
 }
-
 
 
 @end

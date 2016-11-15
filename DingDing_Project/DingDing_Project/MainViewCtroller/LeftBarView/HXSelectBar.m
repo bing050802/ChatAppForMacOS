@@ -62,7 +62,7 @@
         CGFloat btnW = NSWidth(barButton.frame);
         
         barButton.imageEdgeInsets = NSEdgeInsetsMake(10, btnImgL, 10, btnW - btnImgL - btnImgW);
-        barButton.titleEdgeInsets = NSEdgeInsetsMake(0, btnImgL + btnImgW, 0, 0);
+        barButton.titleEdgeInsets = NSEdgeInsetsMake(0, btnImgL + btnImgW , 0, 0);
         [barButton setImage:[NSImage imageNamed:self.normalImages[i]] forState:NSControlStateNormal];
         [barButton setImage:[NSImage imageNamed:self.selectedImages[i]] forState:NSControlStateSelected];
         barButton.titleFont = [NSFont systemFontOfSize:13];

@@ -70,7 +70,7 @@
     [NotificationCenter addObserver:self selector:@selector(emotionSelect:) name:EmotionSelectNotification object:nil];
     
     [self backGroundColor:HXColor(245, 249, 255)];
-    [self inputViewButtonsSetting];
+
     
     self.inputTextView.drawsBackground = NO;
     self.inputTextView.textContainerInset = NSMakeSize(0, 10.0);
@@ -80,16 +80,13 @@
     self.inputTextView.textColor = HXColor(70, 70, 70);
     self.inputTextView.delegate = self;
     
-//    self.sendButton.title = @"发送";
-//    [self.sendButton setBackgroundColor:[NSColor redColor] forState:ButtonStateNormal];
-//    [self.sendButton setBackgroundColor:[NSColor whiteColor] forState:ButtonStateSelected];
-//    [self.sendButton setTitleColor:[NSColor redColor] forState:ButtonStateNormal];
-//    [self.sendButton setTitleColor:HXColor(25, 132, 230) forState:ButtonStateSelected];
 
+    self.sendButton.titleFont = [NSFont systemFontOfSize:13];
+    [self.sendButton setTitleColor:[NSColor blueColor] forState:NSControlStateNormal];
+    [self.sendButton setTitleColor:HXColor(25, 132, 230) forState:NSControlStateSelected];
+    [self.sendButton setTitle:@"发送" forState:NSControlStateNormal];
+    [self.sendButton setBackgroundColor:[NSColor whiteColor] forState:NSControlStateNormal];
 
-
-//    NSLog(@"---%@",self.subviews);
-    //    [self backGroundColor:[NSColor redColor]];
 }
 
 
@@ -112,5 +109,10 @@
     [self.inputTextView insertText:noti.object];
 }
 
-
+- (void)setHidden:(BOOL)hidden{
+    [super setHidden:hidden];
+    if (hidden == NO) {
+        [self inputViewButtonsSetting];
+    }
+}
 @end
