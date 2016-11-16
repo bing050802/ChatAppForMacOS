@@ -14,7 +14,6 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
-                <outlet property="button" destination="Cra-rO-hmZ" id="OUQ-53-ZEf"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -674,20 +673,10 @@
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <value key="minSize" type="size" width="480" height="360"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="Cra-rO-hmZ" customClass="HXButton">
-                        <rect key="frame" x="180" y="179" width="163" height="96"/>
-                    </customView>
-                </subviews>
-                <constraints>
-                    <constraint firstAttribute="bottom" secondItem="Cra-rO-hmZ" secondAttribute="bottom" constant="179" id="9kf-Ki-k7K"/>
-                    <constraint firstItem="Cra-rO-hmZ" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="180" id="cWE-r3-Bb9"/>
-                    <constraint firstAttribute="trailing" secondItem="Cra-rO-hmZ" secondAttribute="trailing" constant="137" id="lu2-aK-nIS"/>
-                    <constraint firstItem="Cra-rO-hmZ" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="85" id="yfc-zo-E7e"/>
-                </constraints>
             </view>
             <point key="canvasLocation" x="-16" y="34"/>
         </window>

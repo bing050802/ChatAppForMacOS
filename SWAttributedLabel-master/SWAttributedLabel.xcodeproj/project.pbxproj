@@ -269,6 +269,8 @@
 		8A898B1B1DC9EBD70065D3EF /* icon_face.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A898B191DC9EBD70065D3EF /* icon_face.png */; };
 		8A898B1C1DC9EBD70065D3EF /* icon_heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A898B1A1DC9EBD70065D3EF /* icon_heart.png */; };
 		8AC78CFB1DADCFF200BC459D /* white_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AC78CFA1DADCFF200BC459D /* white_bg.png */; };
+		8AD9C2391DDC4BE80090A913 /* DINGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9C2371DDC4BE80090A913 /* DINGViewController.m */; };
+		8AD9C23A1DDC4BE80090A913 /* DINGViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AD9C2381DDC4BE80090A913 /* DINGViewController.xib */; };
 		8AEDE40F1DB4D53C0074AA0C /* CWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEDE40E1DB4D53C0074AA0C /* CWindow.m */; };
 /* End PBXBuildFile section */
 
@@ -582,6 +584,9 @@
 		8A898B191DC9EBD70065D3EF /* icon_face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_face.png; sourceTree = "<group>"; };
 		8A898B1A1DC9EBD70065D3EF /* icon_heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_heart.png; sourceTree = "<group>"; };
 		8AC78CFA1DADCFF200BC459D /* white_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white_bg.png; sourceTree = "<group>"; };
+		8AD9C2361DDC4BE80090A913 /* DINGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DINGViewController.h; sourceTree = "<group>"; };
+		8AD9C2371DDC4BE80090A913 /* DINGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DINGViewController.m; sourceTree = "<group>"; };
+		8AD9C2381DDC4BE80090A913 /* DINGViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DINGViewController.xib; sourceTree = "<group>"; };
 		8AECC4101DD5DCC400F4F590 /* HXButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXButton.h; sourceTree = SOURCE_ROOT; };
 		8AEDE40D1DB4D53C0074AA0C /* CWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWindow.h; sourceTree = "<group>"; };
 		8AEDE40E1DB4D53C0074AA0C /* CWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWindow.m; sourceTree = "<group>"; };
@@ -616,6 +621,7 @@
 		0DE90D411D76DB7300CA210E = {
 			isa = PBXGroup;
 			children = (
+				8AD9C2351DDC4BAD0090A913 /* Controllers */,
 				8A8989471DC9EB7A0065D3EF /* FacialSelectionPanel */,
 				8A0613951DC99A0500C52BE6 /* MJExtension */,
 				8AECC4101DD5DCC400F4F590 /* HXButton.h */,
@@ -1027,6 +1033,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		8AD9C2351DDC4BAD0090A913 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9C2361DDC4BE80090A913 /* DINGViewController.h */,
+				8AD9C2371DDC4BE80090A913 /* DINGViewController.m */,
+				8AD9C2381DDC4BE80090A913 /* DINGViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1325,6 +1341,7 @@
 				8A898ABA1DC9EB7A0065D3EF /* lxh_haojiong@2x.png in Resources */,
 				8A898AC11DC9EB7A0065D3EF /* lxh_jiekexun.gif in Resources */,
 				8A898B0E1DC9EB7A0065D3EF /* lxh_zhenjing.gif in Resources */,
+				8AD9C23A1DDC4BE80090A913 /* DINGViewController.xib in Resources */,
 				8A898A8B1DC9EB7A0065D3EF /* o_liwu@2x.png in Resources */,
 				8A898A5B1DC9EB7A0065D3EF /* d_shiwang@2x.png in Resources */,
 				8A898AE21DC9EB7A0065D3EF /* lxh_qiaoqiao.png in Resources */,
@@ -1409,6 +1426,7 @@
 				8A0613AF1DC99A0500C52BE6 /* MJProperty.m in Sources */,
 				8AEDE40F1DB4D53C0074AA0C /* CWindow.m in Sources */,
 				8A898B181DC9EB7A0065D3EF /* HXEmotionTool.m in Sources */,
+				8AD9C2391DDC4BE80090A913 /* DINGViewController.m in Sources */,
 				0DE90D871D76DB8700CA210E /* NSMutableAttributedString+Parse.m in Sources */,
 				0DE90D891D76DB8700CA210E /* SWAttributedLabel.m in Sources */,
 				8A0613B61DC99A0500C52BE6 /* NSString+MJExtension.m in Sources */,

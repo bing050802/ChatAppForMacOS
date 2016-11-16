@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="DINGViewController">
+            <connections>
+                <outlet property="collectView" destination="qau-32-p5l" id="zpn-xD-9yQ"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="691" height="458"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nm1-yc-5jx">
+                    <rect key="frame" x="233" y="-42" width="1" height="500"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="500" id="1nh-sI-C6A"/>
+                        <constraint firstAttribute="width" constant="1" id="niO-wN-1tK"/>
+                    </constraints>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" drawsBackground="YES" id="BAd-QC-4bP">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="windowFrameColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQZ-1n-JZ0">
+                    <rect key="frame" x="234" y="0.0" width="457" height="458"/>
+                    <clipView key="contentView" drawsBackground="NO" id="YoY-vV-RUi">
+                        <rect key="frame" x="1" y="1" width="455" height="456"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView id="qau-32-p5l">
+                                <rect key="frame" x="0.0" y="0.0" width="455" height="456"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <outlet property="itemPrototype" destination="kRg-4V-KMr" id="skn-Hj-qDu"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="rs1-41-rbo">
+                        <rect key="frame" x="1" y="144" width="233" height="15"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="MBE-kO-Td4">
+                        <rect key="frame" x="234" y="1" width="15" height="143"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="mQZ-1n-JZ0" firstAttribute="leading" secondItem="nm1-yc-5jx" secondAttribute="trailing" id="I7f-kt-lLd"/>
+                <constraint firstAttribute="bottom" secondItem="mQZ-1n-JZ0" secondAttribute="bottom" id="Zkm-o2-a38"/>
+                <constraint firstItem="nm1-yc-5jx" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="233" id="dsb-dz-ZnV"/>
+                <constraint firstItem="nm1-yc-5jx" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="jIP-6U-ZLj"/>
+                <constraint firstAttribute="trailing" secondItem="mQZ-1n-JZ0" secondAttribute="trailing" id="oBJ-2P-sSA"/>
+                <constraint firstItem="mQZ-1n-JZ0" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="yVe-pU-V6v"/>
+            </constraints>
+            <point key="canvasLocation" x="-603" y="-591"/>
+        </customView>
+        <collectionViewItem id="kRg-4V-KMr">
+            <connections>
+                <outlet property="view" destination="QNR-Il-Mao" id="aMP-Ud-8O6"/>
+            </connections>
+        </collectionViewItem>
+        <view id="QNR-Il-Mao">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+        </view>
+    </objects>
+</document>

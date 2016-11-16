@@ -52,6 +52,8 @@
 
 //http://www.tuicool.com/articles/z6naMvZ Mac OS 开发 － 聊聊如何打包dmg文件
 
+//https://github.com/phranck/CNGridView  这个作者搞了很多自定的ui 控件 for mac
+
 
 #define selfWidth   self.frame.size.width
 #define selfHeight  self.frame.size.height

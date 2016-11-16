@@ -16,6 +16,7 @@
 #import <CoreText/CoreText.h>
 #import "HXButton.h"
 
+#import "DINGViewController.h"
 
 @interface AppDelegate ()
 
@@ -26,7 +27,7 @@
 @property (weak) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSImageView *imageView;
 
-
+@property (nonatomic,strong) DINGViewController *dingVC;
 @property (weak) IBOutlet HXButton *button;
 
 
@@ -38,23 +39,26 @@
 @implementation AppDelegate
 
 
-- (IBAction)click:(HXButton *)sender {
-    
-    sender.selected = !sender.selected;
-    NSLog(@"%s--%@",__func__,sender.stringValue);
-}
+
 
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     
-    //     self.button.title = @"发送";
-    //    [self.button setBackgroundColor:[NSColor whiteColor] forState:ButtonStateNormal];
-    //    [self.button setBackgroundColor:[NSColor whiteColor] forState:ButtonStateSelected];
-    //    [self.button setTitleColor:[NSColor grayColor] forState:ButtonStateNormal];
-    //    [self.button setTitleColor:[NSColor purpleColor] forState:ButtonStateSelected];
-    //    [self.button setImage:[NSImage imageNamed:@"icon_face.png"] forState:ButtonStateNormal];
-    
-    //    self.button.titleFont = [NSFont systemFontOfSize:29];
+    DINGViewController *dingVC = [[DINGViewController alloc] init];
+    self.window.contentView = dingVC.view;
+    self.dingVC = dingVC;
+
+}
+
+
+
+
+
+
+
+
+- (void)customButton
+{
     self.button.trackingEabled = YES;
     self.button.imageEdgeInsets = NSEdgeInsetsMake(0, 0, 0, 40);
     self.button.titleEdgeInsets = NSEdgeInsetsMake(0, 60, 0, 0);
@@ -63,20 +67,12 @@
     [self.button setImage:[NSImage imageNamed:@"bg@2x"]  forState:NSControlStateNormal];
     [self.button setImage:[NSImage imageNamed:@"white_bg"]  forState:NSControlStateMouseIn];
     [self.button setTitle:@"消息" forState:NSControlStateNormal];
-    
-    
-
-
-
-    
 }
 
-
-
-
-
-
-
+- (IBAction)click:(HXButton *)sender {
+    sender.selected = !sender.selected;
+    NSLog(@"%s--%@",__func__,sender.stringValue);
+}
 
 - (void)pattarn {
 
