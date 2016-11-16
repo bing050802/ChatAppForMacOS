@@ -50,7 +50,7 @@
 @property (weak) IBOutlet NSView *bgView;
 
 
-@property (nonatomic,strong)  HXInputToolView *inputView;
+@property (nonatomic,strong) HXInputToolView *inputView;
 
 @property (nonatomic,strong) HXFacialSelectionPanel *facialPanel;
 
@@ -115,9 +115,9 @@ static NSString *mineCellID = @"mineCellID";
         _modalOverlay.animates = NO;
         _modalOverlay.animationDirection = JMModalOverlayDirectionBottom;
         _modalOverlay.shouldOverlayTitleBar = YES;
-        //_modalOverlay.shouldCloseWhenClickOnBackground = NO;
+        _modalOverlay.shouldCloseWhenClickOnBackground = NO;
         _modalOverlay.appearance = [NSAppearance appearanceNamed:NSAppearanceNameLightContent];
-        //_modalOverlay.backgroundColor = [NSColor blackColor];
+        _modalOverlay.backgroundColor = [NSColor blackColor];
     }
     return _modalOverlay;
 }
@@ -218,39 +218,32 @@ static NSString *mineCellID = @"mineCellID";
 
 
 
-- (IBAction)showChatFiles:(id)sender {
-    self.modalOverlay.contentViewController = [[HXPersonalController alloc] init];
+- (IBAction)showChatFiles:(id)sender
+{
+    NSViewController *pVc = [[NSViewController alloc] init];
+    [pVc.view backGroundColor:[NSColor redColor]];
+    self.modalOverlay.contentViewController = pVc;
     [self.modalOverlay showInWindow:self.view.window];
 }
 
-
-- (IBAction)addMember:(id)sender {
-    [self.datailTableView reloadData];
-}
-
-
-- (IBAction)callDingding:(id)sender {
-    
-}
+- (IBAction)addMember:(id)sender {}
+- (IBAction)callDingding:(id)sender {}
+- (IBAction)showPersonal:(id)sender {}
 
 
-- (IBAction)showPersonal:(id)sender {
-    
-}
 
 
-- (void)inputCompleteToSend:(NSTextView *)textView {
-    
+- (void)inputCompleteToSend:(NSTextView *)textView
+{
     // 更新消息
     [self updateMessageWithText:textView.string];
-    
     // 文字清空
     textView.string = @"";
 }
 
 
-- (void)updateMessageWithText:(NSString *)text {
-    
+- (void)updateMessageWithText:(NSString *)text
+{
     // 创建消息对象
     HXMessage *msg = [[HXMessage alloc] init];
     msg.isMine = YES;
@@ -263,7 +256,6 @@ static NSString *mineCellID = @"mineCellID";
     [self.msgDatialArray addObject:msg];
     [self.datailTableView  insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:self.msgDatialArray.count-1] withAnimation:NSTableViewAnimationEffectNone];
     [self.datailTableView endUpdates];
-    
     
     // 滑动到最新的消息位置
     [self.datailTableView scrollRowToVisible:self.msgDatialArray.count - 1];
@@ -296,7 +288,6 @@ static NSString *mineCellID = @"mineCellID";
     if (tag == 106) {
         [self updateMessageWithText:@"[耶]"];
     }
-    
 }
 
 

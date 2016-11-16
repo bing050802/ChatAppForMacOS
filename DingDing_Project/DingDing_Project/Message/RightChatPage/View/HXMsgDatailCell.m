@@ -31,8 +31,10 @@
 
 @implementation HXMsgDatailCell
 
-- (void)awakeFromNib {
+- (void)awakeFromNib
+{
     [super awakeFromNib];
+    
     _timeLable.hidden = YES;
     self.canTrackAction = YES;
     self.attTextView.textContainerInset = NSMakeSize(5.0, 8.0);

@@ -38,7 +38,6 @@
     self.msgTextView.textColor = HXSColor(228, 244, 255);
     self.msgTextView.canEdit  = NO;
     
-    
     _timeLabel.hidden = YES;
     
     _popButton.trackingEabled = YES;

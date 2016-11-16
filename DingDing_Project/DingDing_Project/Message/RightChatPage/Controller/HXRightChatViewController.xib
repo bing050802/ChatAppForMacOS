@@ -83,6 +83,9 @@
                                         <constraint firstAttribute="height" constant="30" id="cyM-ac-5bV"/>
                                         <constraint firstAttribute="width" constant="30" id="yMl-BL-NVj"/>
                                     </constraints>
+                                    <connections>
+                                        <action selector="showChatFiles:" target="-2" id="Ma6-4n-jIs"/>
+                                    </connections>
                                 </customView>
                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="EFM-IY-Fbr" customClass="HXButton">
                                     <rect key="frame" x="33" y="0.0" width="30" height="30"/>
@@ -203,7 +206,7 @@
                 <constraint firstItem="W70-86-Gwi" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="q4b-7c-E7v"/>
                 <constraint firstAttribute="trailing" secondItem="W70-86-Gwi" secondAttribute="trailing" id="ykl-tz-fHu"/>
             </constraints>
-            <point key="canvasLocation" x="-852" y="-646"/>
+            <point key="canvasLocation" x="-1170" y="-690"/>
         </customView>
     </objects>
     <resources>

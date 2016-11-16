@@ -30,7 +30,8 @@
 
 @implementation HXInputToolView 
 
-+ (HXInputToolView *)loadXibInputView {
++ (HXInputToolView *)loadXibInputView
+{
     NSArray *viewsArray;
     NSNib *nib = [[NSNib alloc] initWithNibNamed:@"HXInputToolView" bundle:nil];
     [nib instantiateWithOwner:self topLevelObjects:&viewsArray];
@@ -42,7 +43,8 @@
     return nil;
 }
 
-- (void)inputViewButtonsSetting {
+- (void)inputViewButtonsSetting
+{
     [self settingWithImageName:@"attach" btn:self.attchBtn tag:100];
     [self settingWithImageName:@"face" btn:self.faceBtn tag:101];
     [self settingWithImageName:@"aite" btn:self.aiteBtn tag:102];
@@ -53,7 +55,8 @@
 }
 
 
-- (void)settingWithImageName:(NSString *)name btn:(HXButton *)btn tag:(NSInteger)tag {
+- (void)settingWithImageName:(NSString *)name btn:(HXButton *)btn tag:(NSInteger)tag
+{
     btn.trackingEabled = YES;
     btn.tag = tag;
     [btn setImage:[NSImage imageNamed:name] forState:NSControlStateNormal];
@@ -64,14 +67,14 @@
 
 
 
-- (void)awakeFromNib {
+- (void)awakeFromNib
+{
     [super awakeFromNib];
     
     [NotificationCenter addObserver:self selector:@selector(emotionSelect:) name:EmotionSelectNotification object:nil];
     
     [self backGroundColor:HXColor(245, 249, 255)];
 
-    
     self.inputTextView.drawsBackground = NO;
     self.inputTextView.textContainerInset = NSMakeSize(0, 10.0);
     self.inputTextView.borderWidth = 0;
@@ -80,7 +83,6 @@
     self.inputTextView.textColor = HXColor(70, 70, 70);
     self.inputTextView.delegate = self;
     
-
     self.sendButton.titleFont = [NSFont systemFontOfSize:13];
     [self.sendButton setTitleColor:[NSColor blueColor] forState:NSControlStateNormal];
     [self.sendButton setTitleColor:HXColor(25, 132, 230) forState:NSControlStateSelected];
@@ -90,8 +92,8 @@
 }
 
 
-- (BOOL)textView:(NSTextView *)textView doCommandBySelector:(SEL)commandSelector {
-    
+- (BOOL)textView:(NSTextView *)textView doCommandBySelector:(SEL)commandSelector
+{
     if (commandSelector == @selector(insertNewline:)) {
         if (!textView.string.length) return YES;
         [self.delegate inputCompleteToSend:textView];
@@ -101,18 +103,22 @@
 }
 
 
-- (void)buttonClick:(HXButton *)sender {
+- (void)buttonClick:(HXButton *)sender
+{
     [self.delegate toolViewSelect:sender.tag];
 }
 
-- (void)emotionSelect:(NSNotification *)noti {
+- (void)emotionSelect:(NSNotification *)noti
+{
     [self.inputTextView insertText:noti.object];
 }
 
-- (void)setHidden:(BOOL)hidden{
+- (void)setHidden:(BOOL)hidden
+{
     [super setHidden:hidden];
     if (hidden == NO) {
         [self inputViewButtonsSetting];
     }
 }
+
 @end
