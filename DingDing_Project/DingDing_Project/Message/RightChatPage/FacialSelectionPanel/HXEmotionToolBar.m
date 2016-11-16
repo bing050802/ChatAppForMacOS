@@ -53,7 +53,8 @@
         typeBtn.tag = index;
         typeBtn.imageEdgeInsets = NSEdgeInsetsMake(10, 10, 10, 10);
         [typeBtn setImage:emotionTypes[index] forState:NSControlStateNormal];
-
+        [typeBtn setBackgroundColor:[NSColor clearColor] forState:NSControlStateNormal];
+        [typeBtn setBackgroundColor:[NSColor whiteColor] forState:NSControlStateSelected];
         typeBtn.target = self;
         typeBtn.action = @selector(clickBtn:);
         CGFloat btnX = margin + (toolBarBtnSize.width + margin) * index;
@@ -65,8 +66,6 @@
 }
 
 - (void)clickBtn:(HXButton *)typeBtn {
-//    [typeBtn setBackgroundColor:[NSColor clearColor] forState:ButtonStateNormal];
-//    [typeBtn setBackgroundColor:[NSColor whiteColor] forState:ButtonStateSelected];
     self.lastSelectBtn.selected = NO; // 上一个按钮取消选中
     typeBtn.selected = YES; // 当前按钮选中
     self.lastSelectBtn = typeBtn; // 赋值最新按钮

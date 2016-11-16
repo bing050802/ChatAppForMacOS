@@ -50,7 +50,7 @@
 // How an Event Enters a Cocoa Application 苹果官方文档 事件处理
 
 
-//  158 1053 5371
+//http://www.tuicool.com/articles/z6naMvZ Mac OS 开发 － 聊聊如何打包dmg文件
 
 
 #define selfWidth   self.frame.size.width

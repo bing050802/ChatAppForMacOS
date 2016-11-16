@@ -35,8 +35,32 @@
                         <constraint firstAttribute="height" constant="250" id="eRh-A2-ydd"/>
                     </constraints>
                 </customView>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="iuM-aP-yyp" customClass="HXButton">
+                    <rect key="frame" x="16" y="40" width="70" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="MFl-U1-kYx"/>
+                        <constraint firstAttribute="width" constant="70" id="SRC-Ri-I7W"/>
+                    </constraints>
+                    <connections>
+                        <action selector="more:" target="c22-O7-iKe" id="n34-Ug-OvY"/>
+                    </connections>
+                </customView>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="jqu-Da-tnR" customClass="HXButton">
+                    <rect key="frame" x="15" y="68" width="70" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Efh-hj-d42"/>
+                        <constraint firstAttribute="width" constant="70" id="UqF-Gd-wSV"/>
+                    </constraints>
+                    <connections>
+                        <action selector="creat:" target="c22-O7-iKe" id="kPO-nE-hX6"/>
+                    </connections>
+                </customView>
             </subviews>
             <constraints>
+                <constraint firstItem="jqu-Da-tnR" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="1kX-6T-jEL"/>
+                <constraint firstItem="iuM-aP-yyp" firstAttribute="top" secondItem="jqu-Da-tnR" secondAttribute="bottom" constant="8" id="Br6-wC-Tm5"/>
+                <constraint firstAttribute="bottom" secondItem="iuM-aP-yyp" secondAttribute="bottom" constant="40" id="JUT-i6-X7B"/>
+                <constraint firstItem="iuM-aP-yyp" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="Kz2-QF-ya8"/>
                 <constraint firstItem="ar0-12-GSz" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="NwW-p9-rpt"/>
                 <constraint firstItem="X4Q-iY-wxA" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="Wwm-bc-zXz"/>
                 <constraint firstAttribute="trailing" secondItem="uq3-gB-IYx" secondAttribute="trailing" id="bJb-IU-mef"/>
@@ -46,6 +70,8 @@
                 <constraint firstItem="ar0-12-GSz" firstAttribute="top" secondItem="X4Q-iY-wxA" secondAttribute="bottom" constant="5" id="wEY-No-SnU"/>
             </constraints>
             <connections>
+                <outlet property="creatButton" destination="jqu-Da-tnR" id="vvm-ao-Wx1"/>
+                <outlet property="moreButton" destination="iuM-aP-yyp" id="zTV-co-FcE"/>
                 <outlet property="nameLable" destination="ar0-12-GSz" id="Du7-sW-7fw"/>
                 <outlet property="userIconView" destination="X4Q-iY-wxA" id="lXi-Cv-CDm"/>
             </connections>

@@ -137,10 +137,11 @@
         normalStateTitleColor = [NSColor blackColor];
     }
 
-    NSDictionary *atts = @{NSForegroundColorAttributeName:normalStateTitleColor,
-                           NSFontAttributeName:self.titleFont,
-                           NSParagraphStyleAttributeName:pStyle
-                           };
+    NSDictionary *atts = [NSDictionary dictionaryWithObjectsAndKeys:
+                          normalStateTitleColor,NSForegroundColorAttributeName,
+                          self.titleFont,NSFontAttributeName,
+                          pStyle,NSParagraphStyleAttributeName
+                          , nil];
     
     NSMutableAttributedString *displayString = [[NSMutableAttributedString alloc]
                                                 initWithString:title
@@ -180,7 +181,7 @@
 - (void)setTitle:(nullable NSString *)title forState:(NSControlState)state
 {
     [self bulidDisplayStringWith:title];
-    [self setNeedsDisplay];
+    [self setNeedsDisplay:YES];
 }
 
 - (void)setTitleColor:(nullable NSColor *)color forState:(NSControlState)state

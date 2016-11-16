@@ -8,6 +8,7 @@
 
 #import "HXLeftToolBar.h"
 #import "HXButton.h"
+#import "HXPrefixHeader.h"
 //#import "HXSelectBar.h"
 
 @interface HXLeftToolBar ()
@@ -35,19 +36,25 @@
 }
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
+   
+}
+
+- (void)viewWillMoveToWindow:(nullable NSWindow *)newWindow {
+    [super viewWillMoveToWindow:newWindow];
     // 设置底部按钮
     [self setBottmButton:self.creatButton image:@"creatIcon" title:@"创建"];
     [self setBottmButton:self.moreButton image:@"moreIcon" title:@"更多"];
 }
 
+
 - (void)setBottmButton:(HXButton *)btn image:(NSString *)image title:(NSString *)title {
-    CGFloat btnImgL = 0;
-    CGFloat btnImgW = 40;
+    CGFloat btnImgW = 35;
     CGFloat btnW = NSWidth(self.creatButton.frame);
-    btn.titleEdgeInsets = NSEdgeInsetsMake(0, 40, 0, 0);
-    btn.imageEdgeInsets = NSEdgeInsetsMake(0, btnImgL, 0, btnW - btnImgL - btnImgW);
+    [btn setTitleColor:[NSColor grayColor] forState:NSControlStateNormal];
+    btn.imageEdgeInsets = NSEdgeInsetsMake(0, 0, 0, btnW - btnImgW);
+    btn.titleEdgeInsets = NSEdgeInsetsMake(0, btnImgW, 0, 0);
     [btn setImage:[NSImage imageNamed:image] forState:NSControlStateNormal];
-    
     [btn setTitle:title forState:NSControlStateNormal];
 }
 
@@ -57,13 +64,18 @@
 }
 
 // 创建
-- (IBAction)creat:(id)sender {
-    
+- (IBAction)creat:(HXButton *)sender
+{
+    NSLog(@"--%s",__func__);
 }
 
+
+
 // 更多
-- (IBAction)more:(id)sender {
-    
+- (IBAction)more:(HXButton *)sender
+{
+    NSLog(@"--%s",__func__);
 }
+
 
 @end

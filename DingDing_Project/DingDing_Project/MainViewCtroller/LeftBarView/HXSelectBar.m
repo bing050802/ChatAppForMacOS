@@ -26,8 +26,8 @@
 @implementation HXSelectBar
 
 
-
 - (void)awakeFromNib {
+    [super awakeFromNib];
     [self setUp];
 }
 
@@ -36,7 +36,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self setUp];
-//         [self addBarButtons];
     }
     return self;
 }
@@ -78,9 +77,10 @@
     }
 }
 
-- (void)clickBtn:(HXButton *)btn {
-    btn.selected = YES;
+- (void)clickBtn:(HXButton *)btn
+{
     self.lastSelectBtn.selected = NO;
+    btn.selected = YES;
     self.lastSelectBtn = btn;
 }
 
