@@ -7,7 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="DINGViewController">
             <connections>
-                <outlet property="collectView" destination="qau-32-p5l" id="zpn-xD-9yQ"/>
+                <outlet property="gridView" destination="EY5-rI-3vw" id="gwE-A8-DAi"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -28,51 +28,42 @@
                         <color key="backgroundColor" name="windowFrameColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQZ-1n-JZ0">
+                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygr-zN-Db9">
                     <rect key="frame" x="234" y="0.0" width="457" height="458"/>
-                    <clipView key="contentView" drawsBackground="NO" id="YoY-vV-RUi">
-                        <rect key="frame" x="1" y="1" width="455" height="456"/>
+                    <clipView key="contentView" id="EI6-e5-qzZ">
+                        <rect key="frame" x="1" y="1" width="440" height="441"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView id="qau-32-p5l">
-                                <rect key="frame" x="0.0" y="0.0" width="455" height="456"/>
+                            <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EY5-rI-3vw" customClass="CNGridView">
+                                <rect key="frame" x="0.0" y="0.0" width="425" height="426"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <connections>
-                                    <outlet property="itemPrototype" destination="kRg-4V-KMr" id="skn-Hj-qDu"/>
+                                    <outlet property="dataSource" destination="-2" id="RwA-Bc-TSs"/>
+                                    <outlet property="delegate" destination="-2" id="lCL-eh-gKf"/>
                                 </connections>
-                            </collectionView>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </clipView>
-                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="rs1-41-rbo">
-                        <rect key="frame" x="1" y="144" width="233" height="15"/>
+                    <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="YKl-Xo-HO7">
+                        <rect key="frame" x="1" y="442" width="440" height="15"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
-                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="MBE-kO-Td4">
-                        <rect key="frame" x="234" y="1" width="15" height="143"/>
+                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="o3S-1m-4wr">
+                        <rect key="frame" x="441" y="1" width="15" height="441"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
             </subviews>
             <constraints>
-                <constraint firstItem="mQZ-1n-JZ0" firstAttribute="leading" secondItem="nm1-yc-5jx" secondAttribute="trailing" id="I7f-kt-lLd"/>
-                <constraint firstAttribute="bottom" secondItem="mQZ-1n-JZ0" secondAttribute="bottom" id="Zkm-o2-a38"/>
+                <constraint firstItem="Ygr-zN-Db9" firstAttribute="leading" secondItem="nm1-yc-5jx" secondAttribute="trailing" id="Rib-NS-e5L"/>
+                <constraint firstAttribute="trailing" secondItem="Ygr-zN-Db9" secondAttribute="trailing" id="XXN-8A-PGB"/>
                 <constraint firstItem="nm1-yc-5jx" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="233" id="dsb-dz-ZnV"/>
                 <constraint firstItem="nm1-yc-5jx" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="jIP-6U-ZLj"/>
-                <constraint firstAttribute="trailing" secondItem="mQZ-1n-JZ0" secondAttribute="trailing" id="oBJ-2P-sSA"/>
-                <constraint firstItem="mQZ-1n-JZ0" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="yVe-pU-V6v"/>
+                <constraint firstItem="Ygr-zN-Db9" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="l4k-7v-KvW"/>
+                <constraint firstAttribute="bottom" secondItem="Ygr-zN-Db9" secondAttribute="bottom" id="yFo-tp-0eg"/>
             </constraints>
-            <point key="canvasLocation" x="-603" y="-591"/>
+            <point key="canvasLocation" x="-920" y="-514"/>
         </customView>
-        <collectionViewItem id="kRg-4V-KMr">
-            <connections>
-                <outlet property="view" destination="QNR-Il-Mao" id="aMP-Ud-8O6"/>
-            </connections>
-        </collectionViewItem>
-        <view id="QNR-Il-Mao">
-            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-            <autoresizingMask key="autoresizingMask"/>
-        </view>
+        <collectionViewItem id="kRg-4V-KMr"/>
     </objects>
 </document>

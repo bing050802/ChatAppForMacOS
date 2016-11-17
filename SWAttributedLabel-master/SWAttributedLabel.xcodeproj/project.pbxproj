@@ -269,6 +269,13 @@
 		8A898B1B1DC9EBD70065D3EF /* icon_face.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A898B191DC9EBD70065D3EF /* icon_face.png */; };
 		8A898B1C1DC9EBD70065D3EF /* icon_heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A898B1A1DC9EBD70065D3EF /* icon_heart.png */; };
 		8AC78CFB1DADCFF200BC459D /* white_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AC78CFA1DADCFF200BC459D /* white_bg.png */; };
+		8ACFF2111DDD8ADD00AA5F71 /* CNGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACFF2061DDD8ADD00AA5F71 /* CNGridView.m */; };
+		8ACFF2121DDD8ADD00AA5F71 /* CNGridViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACFF20A1DDD8ADD00AA5F71 /* CNGridViewItem.m */; };
+		8ACFF2131DDD8ADD00AA5F71 /* CNGridViewItemLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACFF20C1DDD8ADD00AA5F71 /* CNGridViewItemLayout.m */; };
+		8ACFF2141DDD8ADD00AA5F71 /* NSColor+CNGridViewPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACFF20E1DDD8ADD00AA5F71 /* NSColor+CNGridViewPalette.m */; };
+		8ACFF2151DDD8ADD00AA5F71 /* NSView+CNGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACFF2101DDD8ADD00AA5F71 /* NSView+CNGridView.m */; };
+		8ACFF2321DDDB23400AA5F71 /* DINGMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACFF2301DDDB23400AA5F71 /* DINGMessageCell.m */; };
+		8ACFF2331DDDB23400AA5F71 /* DINGMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACFF2311DDDB23400AA5F71 /* DINGMessageCell.xib */; };
 		8AD9C2391DDC4BE80090A913 /* DINGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9C2371DDC4BE80090A913 /* DINGViewController.m */; };
 		8AD9C23A1DDC4BE80090A913 /* DINGViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AD9C2381DDC4BE80090A913 /* DINGViewController.xib */; };
 		8AEDE40F1DB4D53C0074AA0C /* CWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEDE40E1DB4D53C0074AA0C /* CWindow.m */; };
@@ -584,6 +591,21 @@
 		8A898B191DC9EBD70065D3EF /* icon_face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_face.png; sourceTree = "<group>"; };
 		8A898B1A1DC9EBD70065D3EF /* icon_heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_heart.png; sourceTree = "<group>"; };
 		8AC78CFA1DADCFF200BC459D /* white_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white_bg.png; sourceTree = "<group>"; };
+		8ACFF2051DDD8ADD00AA5F71 /* CNGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNGridView.h; sourceTree = "<group>"; };
+		8ACFF2061DDD8ADD00AA5F71 /* CNGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNGridView.m; sourceTree = "<group>"; };
+		8ACFF2071DDD8ADD00AA5F71 /* CNGridViewDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNGridViewDefinitions.h; sourceTree = "<group>"; };
+		8ACFF2081DDD8ADD00AA5F71 /* CNGridViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNGridViewDelegate.h; sourceTree = "<group>"; };
+		8ACFF2091DDD8ADD00AA5F71 /* CNGridViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNGridViewItem.h; sourceTree = "<group>"; };
+		8ACFF20A1DDD8ADD00AA5F71 /* CNGridViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNGridViewItem.m; sourceTree = "<group>"; };
+		8ACFF20B1DDD8ADD00AA5F71 /* CNGridViewItemLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNGridViewItemLayout.h; sourceTree = "<group>"; };
+		8ACFF20C1DDD8ADD00AA5F71 /* CNGridViewItemLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNGridViewItemLayout.m; sourceTree = "<group>"; };
+		8ACFF20D1DDD8ADD00AA5F71 /* NSColor+CNGridViewPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+CNGridViewPalette.h"; sourceTree = "<group>"; };
+		8ACFF20E1DDD8ADD00AA5F71 /* NSColor+CNGridViewPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+CNGridViewPalette.m"; sourceTree = "<group>"; };
+		8ACFF20F1DDD8ADD00AA5F71 /* NSView+CNGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+CNGridView.h"; sourceTree = "<group>"; };
+		8ACFF2101DDD8ADD00AA5F71 /* NSView+CNGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+CNGridView.m"; sourceTree = "<group>"; };
+		8ACFF22F1DDDB23400AA5F71 /* DINGMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DINGMessageCell.h; sourceTree = "<group>"; };
+		8ACFF2301DDDB23400AA5F71 /* DINGMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DINGMessageCell.m; sourceTree = "<group>"; };
+		8ACFF2311DDDB23400AA5F71 /* DINGMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DINGMessageCell.xib; sourceTree = "<group>"; };
 		8AD9C2361DDC4BE80090A913 /* DINGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DINGViewController.h; sourceTree = "<group>"; };
 		8AD9C2371DDC4BE80090A913 /* DINGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DINGViewController.m; sourceTree = "<group>"; };
 		8AD9C2381DDC4BE80090A913 /* DINGViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DINGViewController.xib; sourceTree = "<group>"; };
@@ -621,6 +643,7 @@
 		0DE90D411D76DB7300CA210E = {
 			isa = PBXGroup;
 			children = (
+				8ACFF2041DDD8ADD00AA5F71 /* CNGridView */,
 				8AD9C2351DDC4BAD0090A913 /* Controllers */,
 				8A8989471DC9EB7A0065D3EF /* FacialSelectionPanel */,
 				8A0613951DC99A0500C52BE6 /* MJExtension */,
@@ -1033,9 +1056,31 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		8ACFF2041DDD8ADD00AA5F71 /* CNGridView */ = {
+			isa = PBXGroup;
+			children = (
+				8ACFF2051DDD8ADD00AA5F71 /* CNGridView.h */,
+				8ACFF2061DDD8ADD00AA5F71 /* CNGridView.m */,
+				8ACFF2071DDD8ADD00AA5F71 /* CNGridViewDefinitions.h */,
+				8ACFF2081DDD8ADD00AA5F71 /* CNGridViewDelegate.h */,
+				8ACFF2091DDD8ADD00AA5F71 /* CNGridViewItem.h */,
+				8ACFF20A1DDD8ADD00AA5F71 /* CNGridViewItem.m */,
+				8ACFF20B1DDD8ADD00AA5F71 /* CNGridViewItemLayout.h */,
+				8ACFF20C1DDD8ADD00AA5F71 /* CNGridViewItemLayout.m */,
+				8ACFF20D1DDD8ADD00AA5F71 /* NSColor+CNGridViewPalette.h */,
+				8ACFF20E1DDD8ADD00AA5F71 /* NSColor+CNGridViewPalette.m */,
+				8ACFF20F1DDD8ADD00AA5F71 /* NSView+CNGridView.h */,
+				8ACFF2101DDD8ADD00AA5F71 /* NSView+CNGridView.m */,
+			);
+			path = CNGridView;
+			sourceTree = "<group>";
+		};
 		8AD9C2351DDC4BAD0090A913 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8ACFF22F1DDDB23400AA5F71 /* DINGMessageCell.h */,
+				8ACFF2301DDDB23400AA5F71 /* DINGMessageCell.m */,
+				8ACFF2311DDDB23400AA5F71 /* DINGMessageCell.xib */,
 				8AD9C2361DDC4BE80090A913 /* DINGViewController.h */,
 				8AD9C2371DDC4BE80090A913 /* DINGViewController.m */,
 				8AD9C2381DDC4BE80090A913 /* DINGViewController.xib */,
@@ -1173,6 +1218,7 @@
 				8A898AD91DC9EB7A0065D3EF /* lxh_mobaile.gif in Resources */,
 				8A898AA21DC9EB7A0065D3EF /* lxh_bengkui@2x.png in Resources */,
 				8A898B1C1DC9EBD70065D3EF /* icon_heart.png in Resources */,
+				8ACFF2331DDDB23400AA5F71 /* DINGMessageCell.xib in Resources */,
 				8A898A641DC9EB7A0065D3EF /* d_wabishi@2x.png in Resources */,
 				8A898AE91DC9EB7A0065D3EF /* lxh_qiuguanzhu@2x.png in Resources */,
 				8A898AD61DC9EB7A0065D3EF /* lxh_meigui.gif in Resources */,
@@ -1407,13 +1453,16 @@
 			files = (
 				33C749FE1DBCEF6B0017BBD9 /* HXTextView.m in Sources */,
 				8A898B171DC9EB7A0065D3EF /* HXEmotion.m in Sources */,
+				8ACFF2121DDD8ADD00AA5F71 /* CNGridViewItem.m in Sources */,
 				8A0613B01DC99A0500C52BE6 /* MJPropertyKey.m in Sources */,
 				8A0613B41DC99A0500C52BE6 /* NSObject+MJKeyValue.m in Sources */,
 				8A1F45381DC717FF00546BE3 /* HXTextPart.m in Sources */,
 				0DE90D851D76DB8700CA210E /* NSMutableAttributedString+Config.m in Sources */,
+				8ACFF2151DDD8ADD00AA5F71 /* NSView+CNGridView.m in Sources */,
 				8A0613AE1DC99A0500C52BE6 /* MJFoundation.m in Sources */,
 				33C749FD1DBCEF6B0017BBD9 /* CustomAttachMentCell.m in Sources */,
 				33C74A011DBCEFAE0017BBD9 /* NSMutableAttributedString+AttachMent.m in Sources */,
+				8ACFF2321DDDB23400AA5F71 /* DINGMessageCell.m in Sources */,
 				0DE90D881D76DB8700CA210E /* SWAttributedImageInfo.m in Sources */,
 				8A1F45321DC715D200546BE3 /* RegexKitLite.m in Sources */,
 				0DE90D861D76DB8700CA210E /* NSMutableAttributedString+CTFrameRef.m in Sources */,
@@ -1422,7 +1471,10 @@
 				8A06138E1DC9937E00C52BE6 /* HXButton.m in Sources */,
 				8A0613B31DC99A0500C52BE6 /* NSObject+MJCoding.m in Sources */,
 				0DE90D4F1D76DB7300CA210E /* AppDelegate.m in Sources */,
+				8ACFF2131DDD8ADD00AA5F71 /* CNGridViewItemLayout.m in Sources */,
+				8ACFF2111DDD8ADD00AA5F71 /* CNGridView.m in Sources */,
 				8A0613B51DC99A0500C52BE6 /* NSObject+MJProperty.m in Sources */,
+				8ACFF2141DDD8ADD00AA5F71 /* NSColor+CNGridViewPalette.m in Sources */,
 				8A0613AF1DC99A0500C52BE6 /* MJProperty.m in Sources */,
 				8AEDE40F1DB4D53C0074AA0C /* CWindow.m in Sources */,
 				8A898B181DC9EB7A0065D3EF /* HXEmotionTool.m in Sources */,

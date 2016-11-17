@@ -22,16 +22,16 @@
 
 @property (unsafe_unretained) IBOutlet HXTextView *textView;
 
-@property (weak) IBOutlet NSTextField *textField;
+
+@property (weak) IBOutlet HXButton *button;
 
 @property (weak) IBOutlet NSWindow *window;
+
+@property (weak) IBOutlet NSTextField *textField;
 @property (weak) IBOutlet NSImageView *imageView;
 
 @property (nonatomic,strong) DINGViewController *dingVC;
-@property (weak) IBOutlet HXButton *button;
 
-
-//@property (weak) IBOutlet HXButton *button;
 
 
 @end
