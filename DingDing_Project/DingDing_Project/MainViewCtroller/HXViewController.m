@@ -9,24 +9,80 @@
 #import "HXViewController.h"
 #import "HXPrefixHeader.h"
 #import "HXLeftToolBar.h"
+
 #import "HXMessageSplitController.h"
+#import "DINGViewController.h"
+#import "HXCallPageController.h"
+#import "HXContactController.h"
+#import "HXWorkController.h"
+#import "HXDingPanController.h"
 
 
 @interface HXViewController ()
 
 @property (nonatomic,strong) HXMessageSplitController *messageSplitController;
+@property (nonatomic,strong) DINGViewController       *dingVc;
+@property (nonatomic,strong) HXCallPageController     *callPageVc;
+@property (nonatomic,strong) HXContactController      *contactVc;
+@property (nonatomic,strong) HXWorkController         *workVc;
+@property (nonatomic,strong) HXDingPanController      *dingpanVc;
+
+
+@property (nonatomic,strong) NSViewController  *lastSelectedVc;
 
 @end
 
 @implementation HXViewController
 
-
 - (HXMessageSplitController *)messageSplitController {
     if (!_messageSplitController) {
         _messageSplitController = [[HXMessageSplitController alloc] init];
+        [self addChildViewController:_messageSplitController];
+        [_messageSplitController setupChildViewController];
     }
     return _messageSplitController;
 }
+- (DINGViewController *)dingVc {
+    if (!_dingVc) {
+        _dingVc = [[DINGViewController alloc] init];
+          [self addChildViewController:_dingVc];
+    }
+    return _dingVc;
+}
+- (HXCallPageController *)callPageVc {
+    if (!_callPageVc) {
+        _callPageVc = [[HXCallPageController alloc] init];
+          [self addChildViewController:_callPageVc];
+    }
+    return _callPageVc;
+}
+
+- (HXContactController *)contactVc {
+    if (!_contactVc) {
+        _contactVc = [[HXContactController alloc] init];
+         [self addChildViewController:_contactVc];
+    }
+    return _contactVc;
+}
+
+- (HXWorkController *)workVc {
+    if (!_workVc) {
+        _workVc = [[HXWorkController alloc] init];
+        [self addChildViewController:_workVc];
+    }
+    return _workVc;
+}
+
+- (HXDingPanController *)dingpanVc {
+    if (!_dingpanVc) {
+        _dingpanVc = [[HXDingPanController alloc] init];
+        [self addChildViewController:_dingpanVc];
+    }
+    return _dingpanVc;
+}
+
+
+
 
 /**
  当从xib加载控制器view的时候，系统会调用这个方法
@@ -62,22 +118,50 @@
     [leftBar autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
     [leftBar autoSetDimension:ALDimensionWidth toSize:100];
     
-    
-    [self.view addSubview:self.messageSplitController.view];
-    [self addChildViewController:self.messageSplitController];
-    [self.messageSplitController.view autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:60];
-    [self.messageSplitController.view autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:100];
-    [self.messageSplitController.view autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
-    [self.messageSplitController.view autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:0];
-    [self.messageSplitController setupChildViewController];
 
 }
 
 - (void)itemSelected:(NSNotification *)noti {
     NSView *btn = noti.object;
-    NSLog(@"itemSelected-- %zd", btn.tag);
-    
-    
+//    NSLog(@"itemSelected-- %zd", btn.tag);
+    [self.lastSelectedVc removeFromParentViewController];
+    [self.lastSelectedVc.view removeFromSuperview];
+    if (btn.tag == 4) {
+        if ([self.view.subviews containsObject:self.messageSplitController.view]) {
+            return;
+        }
+        [self setUpControllerView:self.messageSplitController.view];
+        self.lastSelectedVc = self.messageSplitController;
+    }
+    if (btn.tag == 3) {
+        if ([self.view.subviews containsObject:self.dingVc.view]) {
+            return;
+        }
+        [self setUpControllerView:self.dingVc.view];
+        self.lastSelectedVc = self.dingVc;
+    }
+    if (btn.tag == 2) {
+        if ([self.view.subviews containsObject:self.contactVc.view]) {
+            return;
+        }
+        [self setUpControllerView:self.contactVc.view];
+        self.lastSelectedVc = self.contactVc;
+    }
+    if (btn.tag == 1) {
+        if ([self.view.subviews containsObject:self.workVc.view]) {
+            return;
+        }
+        [self setUpControllerView:self.workVc.view];
+        self.lastSelectedVc = self.workVc;
+    }
+    if (btn.tag == 0) {
+        if ([self.view.subviews containsObject:self.dingpanVc.view]) {
+            return;
+        }
+        [self setUpControllerView:self.dingpanVc.view];
+        self.lastSelectedVc = self.dingpanVc;
+    }
+
 }
 
 
@@ -86,5 +170,15 @@
     [NotificationCenter removeObserver:self];
     NSLog(@"HXViewController--------dealloc");
 }
+
+
+- (void)setUpControllerView:(NSView *)view {
+    [self.view addSubview:view];
+    [view autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:60];
+    [view autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:100];
+    [view autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
+    [view autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:0];
+}
+
 
 @end

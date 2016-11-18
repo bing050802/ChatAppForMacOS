@@ -94,7 +94,8 @@
     self.nameLabel.stringValue = message.name;
     
     // 2014-10-30 18:07:47
-    self.timeLable.stringValue = message.create_time;
+    NSString *radomTime = [NSString stringWithFormat:@"%d:%d",arc4random_uniform(24),arc4random_uniform(60)];
+    self.timeLable.stringValue = radomTime;
     self.msgLabel.stringValue = message.text;
     
 }

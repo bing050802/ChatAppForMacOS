@@ -71,8 +71,10 @@
         [barButton setTitle:self.titles[i] forState:NSControlStateNormal];
         barButton.target = self;
         barButton.action = @selector(clickBtn:);
-        
         [self addSubview:barButton];
+        if (i == 4) {
+            [self clickBtn:barButton];
+        }
     }
 }
 
