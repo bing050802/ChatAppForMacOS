@@ -226,29 +226,41 @@
         self.backGroundColor = self.stateBgColorDic[@(NSControlStateNormal)];
     }
     
-    NSMutableAttributedString *mattStr = [self.currtentDisplayString mutableCopy];
-    [mattStr addAttribute:NSForegroundColorAttributeName
-                    value:titleColor
-                    range:NSMakeRange(0, mattStr.length)];
-
-    self.currtentDisplayString = mattStr;
-    
+    [self updateTitleColor:titleColor];
     self.imageView.image = image;
     [self setNeedsDisplay];
+}
+
+- (void)updateTitleColor:(NSColor *)color {
+    NSMutableAttributedString *mattStr = [self.currtentDisplayString mutableCopy];
+    [mattStr addAttribute:NSForegroundColorAttributeName
+                    value:color
+                    range:NSMakeRange(0, mattStr.length)];
+    
+    self.currtentDisplayString = mattStr;
 }
 
 
 - (void)mouseEntered:(NSEvent *)event
 {
     self.imageView.image = self.stateImageDic[@(NSControlStateMouseIn)];
+    NSColor *titleColor = self.stateTitleColorDic[@(NSControlStateMouseIn)];
+    if (titleColor) {
+        [self updateTitleColor:titleColor];
+    }
     [self setNeedsDisplay];
 }
 
 - (void)mouseExited:(NSEvent *)event
 {
     self.imageView.image = self.stateImageDic[@(NSControlStateNormal)];
+    NSColor *titleColor = self.stateTitleColorDic[@(NSControlStateNormal)];
+    if (titleColor) {
+        [self updateTitleColor:titleColor];
+    }
     [self setNeedsDisplay];
 }
+
 
 - (void)mouseDown:(NSEvent *)theEvent
 {
@@ -261,7 +273,7 @@
     if (_mouseDown) {
         _mouseDown = NO;
         self.needsDisplay = YES;
-        if ( self.target && self.action) {
+        if (self.target && self.action) {
             [self.target performSelector:self.action withObject:self afterDelay:0.0];
         }
     }

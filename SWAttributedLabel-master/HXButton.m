@@ -14,14 +14,20 @@
 
 @property (nonatomic,strong) NSMutableDictionary *stateTitleColorDic;
 
+@property (nonatomic,strong) NSMutableDictionary *stateBgColorDic;
+
 @property (nonatomic,strong) NSTrackingArea *trackingArea;
 
 
 //@property (nonatomic,copy) NSString *displayTitle;
 
 
-@property (nonatomic,copy) NSMutableAttributedString *currtentDisplayString;
+@property (nonatomic,copy)   NSMutableAttributedString *currtentDisplayString;
+
 @property (nonatomic,strong) NSImage *currtentDisplayImage;
+@property (nonatomic,strong) NSImageView *imageView;
+
+@property (nonatomic,assign) BOOL mouseDown;
 
 @end
 
@@ -36,6 +42,12 @@
     return _stateImageDic;
 }
 
+- (NSMutableDictionary *)stateBgColorDic {
+    if (!_stateBgColorDic) {
+        _stateBgColorDic = [NSMutableDictionary dictionary];
+    }
+    return _stateBgColorDic;
+}
 
 - (NSMutableDictionary *)stateTitleColorDic {
     if (!_stateTitleColorDic) {
@@ -56,18 +68,22 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-     [self setUp];
-
+    [self setUp];
+    
 }
 
 - (void)setUp
 {
     self.wantsLayer = YES;
-    self.layer.backgroundColor = [NSColor redColor].CGColor;
     
-    _titleFont = [NSFont systemFontOfSize:16];
+    self.titleFont = [NSFont systemFontOfSize:13];
     
     [self setTitleColor:[NSColor blackColor] forState:NSControlStateNormal];
+    
+    NSImageView *imageView = [[NSImageView alloc] init];
+    [self addSubview:imageView];
+    self.imageView = imageView;
+    
 }
 
 
@@ -75,9 +91,7 @@
 {
     if (self.highlighted) { } // do highlighted things
     
-    NSImage *drawImage = self.currtentDisplayImage;
-    [drawImage drawInRect:[self imageRectForBounds:dirtyRect]];
-    
+    self.imageView.frame = [self imageRectForBounds:dirtyRect];
     
     NSAttributedString *disPlayString = self.currtentDisplayString;
     CGFloat stringH =  NSHeight(dirtyRect);
@@ -114,30 +128,41 @@
 - (void)bulidDisplayStringWith:(NSString *)title
 {
     NSMutableParagraphStyle *pStyle = [[NSMutableParagraphStyle alloc] init];
-    pStyle.alignment = NSTextAlignmentCenter;
+    //    pStyle.alignment = NSTextAlignmentCenter;
     pStyle.lineBreakMode = NSLineBreakByWordWrapping;
-
     
-    NSDictionary *atts = @{NSForegroundColorAttributeName:[NSColor blackColor],
-                           NSFontAttributeName:_titleFont,
-                           NSParagraphStyleAttributeName:pStyle
-                           };
+    
+    NSColor *normalStateTitleColor = self.stateTitleColorDic[@(NSControlStateNormal)];
+    if (!normalStateTitleColor) {
+        normalStateTitleColor = [NSColor blackColor];
+    }
+    
+    NSDictionary *atts = [NSDictionary dictionaryWithObjectsAndKeys:
+                          normalStateTitleColor,NSForegroundColorAttributeName,
+                          self.titleFont,NSFontAttributeName,
+                          pStyle,NSParagraphStyleAttributeName
+                          , nil];
     
     NSMutableAttributedString *displayString = [[NSMutableAttributedString alloc]
-                                                 initWithString:title
-                                                 attributes:atts];
+                                                initWithString:title
+                                                attributes:atts];
     self.currtentDisplayString = displayString;
 }
 
 
 - (NSTrackingArea *)trackingArea {
     if (!_trackingArea) {
-        _trackingArea = [[NSTrackingArea alloc] initWithRect:NSZeroRect
+        _trackingArea = [[NSTrackingArea alloc] initWithRect:self.bounds
                                                      options:NSTrackingInVisibleRect | NSTrackingActiveAlways | NSTrackingMouseEnteredAndExited
                                                        owner:self
                                                     userInfo:nil];
     }
     return _trackingArea;
+}
+
+- (void)setBackGroundColor:(NSColor *)backGroundColor {
+    _backGroundColor = backGroundColor;
+    self.layer.backgroundColor = backGroundColor.CGColor;
 }
 
 - (void)setTrackingEabled:(BOOL)trackingEabled {
@@ -149,24 +174,27 @@
     }
 }
 
-
+- (void)setBackgroundColor:(nullable NSColor *)color forState:(NSControlState)state {
+    [self.stateBgColorDic setObject:color forKey:@(state)];
+}
 
 - (void)setTitle:(nullable NSString *)title forState:(NSControlState)state
 {
     [self bulidDisplayStringWith:title];
-     self.selected = NO;
+    [self setNeedsDisplay:YES];
 }
 
 - (void)setTitleColor:(nullable NSColor *)color forState:(NSControlState)state
 {
     [self.stateTitleColorDic setObject:color forKey:@(state)];
-    self.selected = NO;
 }
 
 - (void)setImage:(nullable NSImage *)image forState:(NSControlState)state
 {
     [self.stateImageDic setObject:image forKey:@(state)];
-    self.selected = NO;
+    if (state == NSControlStateNormal) {
+        self.imageView.image = image;
+    }
 }
 
 
@@ -184,7 +212,7 @@
     if (selected) {
         image      = self.stateImageDic[@(NSControlStateSelected)];
         titleColor = self.stateTitleColorDic[@(NSControlStateSelected)];
-        
+        self.backGroundColor = self.stateBgColorDic[@(NSControlStateSelected)];
         if (!image) {
             image = normalStateImage;
         }
@@ -195,32 +223,60 @@
     } else {
         image      = normalStateImage;
         titleColor = normalStateTitleColor;
+        self.backGroundColor = self.stateBgColorDic[@(NSControlStateNormal)];
     }
     
+    [self updateTitleColor:titleColor];
+    self.imageView.image = image;
+    [self setNeedsDisplay];
+}
+
+- (void)updateTitleColor:(NSColor *)color {
     NSMutableAttributedString *mattStr = [self.currtentDisplayString mutableCopy];
     [mattStr addAttribute:NSForegroundColorAttributeName
-                    value:titleColor
+                    value:color
                     range:NSMakeRange(0, mattStr.length)];
+    
     self.currtentDisplayString = mattStr;
-    
-    self.currtentDisplayImage = image;
-    
-    [self setNeedsDisplay];
 }
 
 
 - (void)mouseEntered:(NSEvent *)event
 {
-    self.currtentDisplayImage = self.stateImageDic[@(NSControlStateMouseIn)];
+    self.imageView.image = self.stateImageDic[@(NSControlStateMouseIn)];
+    NSColor *titleColor = self.stateTitleColorDic[@(NSControlStateMouseIn)];
+    if (titleColor) {
+        [self updateTitleColor:titleColor];
+    }
     [self setNeedsDisplay];
 }
 
 - (void)mouseExited:(NSEvent *)event
 {
-    self.currtentDisplayImage = self.stateImageDic[@(NSControlStateNormal)];
+    self.imageView.image = self.stateImageDic[@(NSControlStateNormal)];
+    NSColor *titleColor = self.stateTitleColorDic[@(NSControlStateNormal)];
+    if (titleColor) {
+        [self updateTitleColor:titleColor];
+    }
     [self setNeedsDisplay];
 }
 
+- (void)mouseDown:(NSEvent *)theEvent
+{
+    _mouseDown = YES;
+    self.needsDisplay = YES;
+}
+
+- (void)mouseUp:(NSEvent *)theEvent
+{
+    if (_mouseDown) {
+        _mouseDown = NO;
+        self.needsDisplay = YES;
+        if ( self.target && self.action) {
+            [self.target performSelector:self.action withObject:self afterDelay:0.0];
+        }
+    }
+}
 
 
 @end

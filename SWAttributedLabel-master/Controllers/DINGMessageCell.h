@@ -8,8 +8,7 @@
 
 #import "CNGridViewItem.h"
 
-@interface DINGMessageCell : NSView
+@interface DINGMessageCell : CNGridViewItem
 
-//- (DINGMessageCell *)loadCellWithLayout:(CNGridViewItemLayout *)layout reuseIdentifier:(NSString *)reuseIdentifier;
 
 @end

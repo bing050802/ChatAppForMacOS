@@ -40,18 +40,19 @@ static NSString *kContentTitleKey, *kContentImageKey, *kItemSizeSliderPositionKe
 - (void)loadView {
     [super loadView];
     
+//     NSCollectionViewItem
     _defaultLayout = [CNGridViewItemLayout defaultLayout];
     _hoverLayout = [CNGridViewItemLayout defaultLayout];
     _selectionLayout = [CNGridViewItemLayout defaultLayout];
     
     self.hoverLayout.backgroundColor = [[NSColor grayColor] colorWithAlphaComponent:0.42];
     self.selectionLayout.backgroundColor = [NSColor colorWithCalibratedRed:0.542 green:0.699 blue:0.807 alpha:0.420];
-    _defaultLayout.contentInset = 10;
+//    _defaultLayout.contentInset = 10;
 //    self.items = [NSMutableArray array];
     
     
-    
-    self.gridView.itemSize = NSMakeSize(100, 100);
+    self.gridView.backgroundColor = [NSColor colorWithRed:248/255.0 green:251/255.0 blue:255/255.0 alpha:1.0];
+    self.gridView.itemSize = NSMakeSize(280, 170);
     self.gridView.useHover =NO;
     self.gridView.allowsSelection = NO;
     self.gridView.scrollElasticity = YES;

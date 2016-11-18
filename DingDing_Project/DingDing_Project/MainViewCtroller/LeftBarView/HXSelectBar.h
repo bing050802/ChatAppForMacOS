@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
+
 @interface HXSelectBar : NSView
+
 
 @end

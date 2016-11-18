@@ -21,7 +21,7 @@
 @implementation HXViewController
 
 
-- (HXMessageSplitController *)splitViewController {
+- (HXMessageSplitController *)messageSplitController {
     if (!_messageSplitController) {
         _messageSplitController = [[HXMessageSplitController alloc] init];
     }
@@ -49,6 +49,9 @@
     // 控制器view默认是右边和底部随父控件拉伸的 NSViewMaxXMargin|NSViewMinYMargin
     // [self.view backGroundColor:[NSColor purpleColor]];
     
+    [NotificationCenter addObserver:self selector:@selector(itemSelected:)
+                               name:ItemSelectedNotification object:nil];
+    
     // 添加左边工具栏 view
     HXLeftToolBar *leftBar = [HXLeftToolBar loadXibLeftToolBar];
     leftBar.userName = @"韩小青";
@@ -60,7 +63,8 @@
     [leftBar autoSetDimension:ALDimensionWidth toSize:100];
     
     
-    [self.view addSubview:self.splitViewController.view];
+    [self.view addSubview:self.messageSplitController.view];
+    [self addChildViewController:self.messageSplitController];
     [self.messageSplitController.view autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:60];
     [self.messageSplitController.view autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:100];
     [self.messageSplitController.view autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
@@ -69,8 +73,17 @@
 
 }
 
+- (void)itemSelected:(NSNotification *)noti {
+    NSView *btn = noti.object;
+    NSLog(@"itemSelected-- %zd", btn.tag);
+    
+    
+}
+
+
 
 - (void)dealloc {
+    [NotificationCenter removeObserver:self];
     NSLog(@"HXViewController--------dealloc");
 }
 

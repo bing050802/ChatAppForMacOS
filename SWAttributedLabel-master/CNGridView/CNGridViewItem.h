@@ -29,8 +29,7 @@
  */
 
 #import <Cocoa/Cocoa.h>
-
-@class CNGridViewItemLayout;
+#import "CNGridViewItemLayout.h"
 
 APPKIT_EXTERN NSString* const kCNDefaultItemIdentifier;
 #define CNItemIndexUndefined NSNotFound

@@ -20,7 +20,6 @@
 
 @property (nonatomic, strong) HXButton *lastSelectBtn;
 
-
 @end
 
 @implementation HXSelectBar
@@ -59,7 +58,7 @@
         CGFloat btnImgL = 10;
         CGFloat btnImgW = 40;
         CGFloat btnW = NSWidth(barButton.frame);
-        
+        barButton.tag = i;
         barButton.imageEdgeInsets = NSEdgeInsetsMake(10, btnImgL, 10, btnW - btnImgL - btnImgW);
         barButton.titleEdgeInsets = NSEdgeInsetsMake(0, btnImgL + btnImgW , 0, 0);
         [barButton setImage:[NSImage imageNamed:self.normalImages[i]] forState:NSControlStateNormal];
@@ -82,6 +81,7 @@
     self.lastSelectBtn.selected = NO;
     btn.selected = YES;
     self.lastSelectBtn = btn;
+    [NotificationCenter postNotificationName:ItemSelectedNotification object:btn];
 }
 
 - (void)layout {

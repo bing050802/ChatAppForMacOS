@@ -279,6 +279,8 @@
 		8AD9C2391DDC4BE80090A913 /* DINGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9C2371DDC4BE80090A913 /* DINGViewController.m */; };
 		8AD9C23A1DDC4BE80090A913 /* DINGViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AD9C2381DDC4BE80090A913 /* DINGViewController.xib */; };
 		8AEDE40F1DB4D53C0074AA0C /* CWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEDE40E1DB4D53C0074AA0C /* CWindow.m */; };
+		8AEE571E1DDEA38F009CE582 /* detail.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AEE571C1DDEA38F009CE582 /* detail.png */; };
+		8AEE571F1DDEA38F009CE582 /* detail_in.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AEE571D1DDEA38F009CE582 /* detail_in.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -612,6 +614,8 @@
 		8AECC4101DD5DCC400F4F590 /* HXButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXButton.h; sourceTree = SOURCE_ROOT; };
 		8AEDE40D1DB4D53C0074AA0C /* CWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWindow.h; sourceTree = "<group>"; };
 		8AEDE40E1DB4D53C0074AA0C /* CWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWindow.m; sourceTree = "<group>"; };
+		8AEE571C1DDEA38F009CE582 /* detail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detail.png; sourceTree = "<group>"; };
+		8AEE571D1DDEA38F009CE582 /* detail_in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detail_in.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1078,6 +1082,8 @@
 		8AD9C2351DDC4BAD0090A913 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8AEE571C1DDEA38F009CE582 /* detail.png */,
+				8AEE571D1DDEA38F009CE582 /* detail_in.png */,
 				8ACFF22F1DDDB23400AA5F71 /* DINGMessageCell.h */,
 				8ACFF2301DDDB23400AA5F71 /* DINGMessageCell.m */,
 				8ACFF2311DDDB23400AA5F71 /* DINGMessageCell.xib */,
@@ -1311,6 +1317,7 @@
 				8AC78CFB1DADCFF200BC459D /* white_bg.png in Resources */,
 				8A898A3F1DC9EB7A0065D3EF /* d_ding@2x.png in Resources */,
 				8A898A841DC9EB7A0065D3EF /* l_xin@2x.png in Resources */,
+				8AEE571E1DDEA38F009CE582 /* detail.png in Resources */,
 				8A898AFD1DC9EB7A0065D3EF /* lxh_xiaohaha.png in Resources */,
 				0DE90D8F1D76DBD100CA210E /* haha@2x.png in Resources */,
 				8A898A491DC9EB7A0065D3EF /* d_heng@2x.png in Resources */,
@@ -1406,6 +1413,7 @@
 				8A898B041DC9EB7A0065D3EF /* lxh_xuyuan@2x.png in Resources */,
 				8A898B061DC9EB7A0065D3EF /* lxh_youyali.png in Resources */,
 				8A898AC81DC9EB7A0065D3EF /* lxh_juhan.png in Resources */,
+				8AEE571F1DDEA38F009CE582 /* detail_in.png in Resources */,
 				8A898AD21DC9EB7A0065D3EF /* lxh_leifeng@2x.png in Resources */,
 				8A898ABE1DC9EB7A0065D3EF /* lxh_holdzhu.gif in Resources */,
 				8A898AD01DC9EB7A0065D3EF /* lxh_leifeng.gif in Resources */,

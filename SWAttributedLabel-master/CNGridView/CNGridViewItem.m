@@ -260,6 +260,7 @@ extern NSString *CNGridViewDeSelectAllItemsNotification;
 
 	else if (self.currentLayout.visibleContentMask & CNGridViewItemVisibleContentTitle) {
 	}
+
 }
 
 #pragma mark - Notifications

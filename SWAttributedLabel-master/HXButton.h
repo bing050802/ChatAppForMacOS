@@ -14,11 +14,11 @@
  */
 
 typedef NS_OPTIONS(NSInteger,NSControlState) {
-   NSControlStateNormal       = 0,
-   NSControlStateHighlighted  = 1 << 0,                  // used whenNSControl isHighlighted is set
-   NSControlStateDisabled     = 1 << 1,
-   NSControlStateSelected     = 1 << 2,                  // flag usable by app (see below)
-   NSControlStateMouseIn      = 1 << 3, // Applicable only when the screen supports focus
+    NSControlStateNormal       = 0,
+    NSControlStateHighlighted  = 1 << 0,                  // used whenNSControl isHighlighted is set
+    NSControlStateDisabled     = 1 << 1,
+    NSControlStateSelected     = 1 << 2,                  // flag usable by app (see below)
+    NSControlStateMouseIn      = 1 << 3, // Applicable only when the screen supports focus
 };
 
 
@@ -44,6 +44,9 @@ typedef NS_OPTIONS(NSInteger,NSControlState) {
 
 - (void)setImage:(nullable NSImage *)image forState:(NSControlState)state;                      // default is nil. should be same size if different for different states
 
+- (void)setBackgroundColor:(nullable NSColor *)color forState:(NSControlState)state;
+
+@property(nonatomic,strong,nonnull) NSColor *backGroundColor;
 
 
 @end

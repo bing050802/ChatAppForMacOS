@@ -226,6 +226,7 @@ CNItemPoint CNMakeItemPoint(NSUInteger aColumn, NSUInteger aRow) {
 	else {
 		_contentInset = 0;
 	}
+  
 }
 
 - (void)updateVisibleRect {
@@ -251,6 +252,7 @@ CNItemPoint CNMakeItemPoint(NSUInteger aColumn, NSUInteger aRow) {
 	    [wSelf updateReuseableItems];
 	    [wSelf updateVisibleItems];
 	    [wSelf arrangeGridViewItemsAnimated:animated];
+        
 	});
 }
 

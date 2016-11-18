@@ -71,6 +71,8 @@
 
 #define EmotionSelectNotification    @"EmotionSelectNotification"
 #define NSWindowClickedNotification  @"NSWindowClickedNotification"
+#define ItemSelectedNotification     @"ItemSelectedNotification"
+
 
 #ifndef __OPTIMIZE__
 #define NSLog(...) printf("%f %s\n",[[NSDate date]timeIntervalSince1970],[[NSString stringWithFormat:__VA_ARGS__]UTF8String]);
