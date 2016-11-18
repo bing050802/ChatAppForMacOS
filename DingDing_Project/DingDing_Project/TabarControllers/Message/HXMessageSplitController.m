@@ -14,10 +14,6 @@
 
 @implementation HXMessageSplitController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do view setup here.
-}
 
 - (void)setupChildViewController {
     HXMiddleMessageControlller *middleMsgVc = [[HXMiddleMessageControlller alloc] init];

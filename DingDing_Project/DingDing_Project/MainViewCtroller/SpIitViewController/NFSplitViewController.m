@@ -554,12 +554,7 @@ NSString* const NFSplitViewControllerDidFinishLiveResizeNotification = @"NFSplit
         [self.splitView addSubview:cntlr.view];
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
 
-}
 
 - (void)setDividerColor:(NSColor *)dividerColor
 {
