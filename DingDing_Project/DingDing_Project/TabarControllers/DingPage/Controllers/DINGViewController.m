@@ -40,7 +40,10 @@ static NSString *kContentTitleKey, *kContentImageKey, *kItemSizeSliderPositionKe
 - (void)loadView {
     [super loadView];
     
-//     NSCollectionViewItem
+    self.view.wantsLayer = YES;
+    self.view.layer.backgroundColor = [NSColor colorWithRed:248/255.0 green:251/255.0 blue:255/255.0 alpha:1.0].CGColor;
+    
+
     _defaultLayout = [CNGridViewItemLayout defaultLayout];
     _hoverLayout = [CNGridViewItemLayout defaultLayout];
     _selectionLayout = [CNGridViewItemLayout defaultLayout];

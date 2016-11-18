@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -62,7 +63,7 @@
                 <constraint firstItem="Ygr-zN-Db9" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="l4k-7v-KvW"/>
                 <constraint firstAttribute="bottom" secondItem="Ygr-zN-Db9" secondAttribute="bottom" id="yFo-tp-0eg"/>
             </constraints>
-            <point key="canvasLocation" x="-920" y="-514"/>
+            <point key="canvasLocation" x="-987" y="-566"/>
         </customView>
         <collectionViewItem id="kRg-4V-KMr"/>
     </objects>
