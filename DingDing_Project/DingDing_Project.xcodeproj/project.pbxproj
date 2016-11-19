@@ -15,6 +15,10 @@
 		3349A9DC1D852FF60095C667 /* MLPopupWindowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A9D71D852FF60095C667 /* MLPopupWindowManager.m */; };
 		33C74A091DBCF6340017BBD9 /* CustomAttachMentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C74A041DBCF6340017BBD9 /* CustomAttachMentCell.m */; };
 		33C74A0A1DBCF6340017BBD9 /* HXTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C74A061DBCF6340017BBD9 /* HXTextView.m */; };
+		33CB20081DE0A4420004F5AD /* dingBtn_in.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CB20061DE0A4420004F5AD /* dingBtn_in.png */; };
+		33CB20091DE0A4420004F5AD /* dingBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CB20071DE0A4420004F5AD /* dingBtn.png */; };
+		33CB200D1DE0B5530004F5AD /* HXDingMessageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CB200B1DE0B5530004F5AD /* HXDingMessageItem.m */; };
+		33CB200E1DE0B5530004F5AD /* HXDingMessageItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CB200C1DE0B5530004F5AD /* HXDingMessageItem.xib */; };
 		8A1F454C1DC74FE400546BE3 /* NSMutableAttributedString+AttachMent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1F454B1DC74FE400546BE3 /* NSMutableAttributedString+AttachMent.m */; };
 		8A1F455E1DC751BC00546BE3 /* NSMutableAttributedString+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1F455D1DC751BC00546BE3 /* NSMutableAttributedString+Config.m */; };
 		8A2A7EE41DD091A000BC1DA4 /* cell_popbtn_entered.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A7EE21DD091A000BC1DA4 /* cell_popbtn_entered.png */; };
@@ -361,8 +365,6 @@
 		8AEE59811DDEEC29009CE582 /* NSView+CNGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE59751DDEEC29009CE582 /* NSView+CNGridView.m */; };
 		8AEE59821DDEEC29009CE582 /* detail.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AEE59761DDEEC29009CE582 /* detail.png */; };
 		8AEE59831DDEEC29009CE582 /* detail_in.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AEE59771DDEEC29009CE582 /* detail_in.png */; };
-		8AEE59841DDEEC29009CE582 /* DINGMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE59791DDEEC29009CE582 /* DINGMessageCell.m */; };
-		8AEE59851DDEEC29009CE582 /* DINGMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AEE597A1DDEEC29009CE582 /* DINGMessageCell.xib */; };
 		8AEE59891DDEEC95009CE582 /* HXCallPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE59871DDEEC95009CE582 /* HXCallPageController.m */; };
 		8AEE598A1DDEEC95009CE582 /* HXCallPageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AEE59881DDEEC95009CE582 /* HXCallPageController.xib */; };
 		8AEE598E1DDEECB0009CE582 /* HXContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE598C1DDEECB0009CE582 /* HXContactController.m */; };
@@ -406,6 +408,11 @@
 		33C74A051DBCF6340017BBD9 /* HXTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTextView.h; sourceTree = "<group>"; };
 		33C74A061DBCF6340017BBD9 /* HXTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTextView.m; sourceTree = "<group>"; };
 		33C74A071DBCF6340017BBD9 /* NSMutableAttributedString+AttachMent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+AttachMent.h"; sourceTree = "<group>"; };
+		33CB20061DE0A4420004F5AD /* dingBtn_in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dingBtn_in.png; sourceTree = "<group>"; };
+		33CB20071DE0A4420004F5AD /* dingBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dingBtn.png; sourceTree = "<group>"; };
+		33CB200A1DE0B5530004F5AD /* HXDingMessageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXDingMessageItem.h; sourceTree = "<group>"; };
+		33CB200B1DE0B5530004F5AD /* HXDingMessageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXDingMessageItem.m; sourceTree = "<group>"; };
+		33CB200C1DE0B5530004F5AD /* HXDingMessageItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXDingMessageItem.xib; sourceTree = "<group>"; };
 		8A1F454B1DC74FE400546BE3 /* NSMutableAttributedString+AttachMent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+AttachMent.m"; sourceTree = "<group>"; };
 		8A1F455C1DC751BC00546BE3 /* NSMutableAttributedString+Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Config.h"; sourceTree = "<group>"; };
 		8A1F455D1DC751BC00546BE3 /* NSMutableAttributedString+Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Config.m"; sourceTree = "<group>"; };
@@ -816,9 +823,6 @@
 		8AEE59751DDEEC29009CE582 /* NSView+CNGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+CNGridView.m"; sourceTree = "<group>"; };
 		8AEE59761DDEEC29009CE582 /* detail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detail.png; sourceTree = "<group>"; };
 		8AEE59771DDEEC29009CE582 /* detail_in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detail_in.png; sourceTree = "<group>"; };
-		8AEE59781DDEEC29009CE582 /* DINGMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DINGMessageCell.h; sourceTree = "<group>"; };
-		8AEE59791DDEEC29009CE582 /* DINGMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DINGMessageCell.m; sourceTree = "<group>"; };
-		8AEE597A1DDEEC29009CE582 /* DINGMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DINGMessageCell.xib; sourceTree = "<group>"; };
 		8AEE59861DDEEC95009CE582 /* HXCallPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXCallPageController.h; sourceTree = "<group>"; };
 		8AEE59871DDEEC95009CE582 /* HXCallPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXCallPageController.m; sourceTree = "<group>"; };
 		8AEE59881DDEEC95009CE582 /* HXCallPageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXCallPageController.xib; sourceTree = "<group>"; };
@@ -1729,9 +1733,11 @@
 				8AEE59691DDEEC29009CE582 /* CNGridView */,
 				8AEE59761DDEEC29009CE582 /* detail.png */,
 				8AEE59771DDEEC29009CE582 /* detail_in.png */,
-				8AEE59781DDEEC29009CE582 /* DINGMessageCell.h */,
-				8AEE59791DDEEC29009CE582 /* DINGMessageCell.m */,
-				8AEE597A1DDEEC29009CE582 /* DINGMessageCell.xib */,
+				33CB20061DE0A4420004F5AD /* dingBtn_in.png */,
+				33CB20071DE0A4420004F5AD /* dingBtn.png */,
+				33CB200A1DE0B5530004F5AD /* HXDingMessageItem.h */,
+				33CB200B1DE0B5530004F5AD /* HXDingMessageItem.m */,
+				33CB200C1DE0B5530004F5AD /* HXDingMessageItem.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1887,6 +1893,7 @@
 				8AEE59211DDEEAD4009CE582 /* lxh_xuyuan@2x.png in Resources */,
 				8AEE586F1DDEEAD4009CE582 /* d_madaochenggong@2x.png in Resources */,
 				8AEE58D31DDEEAD4009CE582 /* lxh_haobang.png in Resources */,
+				33CB200E1DE0B5530004F5AD /* HXDingMessageItem.xib in Resources */,
 				8AEE587E1DDEEAD4009CE582 /* d_travel@2x.png in Resources */,
 				8AEE59051DDEEAD4009CE582 /* lxh_qiuguanzhu.png in Resources */,
 				8AEE58851DDEEAD4009CE582 /* d_xu@2x.png in Resources */,
@@ -1894,6 +1901,7 @@
 				8A4C6A3D1D7EBBCF005BC413 /* topBarRight.png in Resources */,
 				8AEE58F81DDEEAD4009CE582 /* lxh_oye.png in Resources */,
 				8AEE589C1DDEEAD4009CE582 /* h_ok@2x.png in Resources */,
+				33CB20091DE0A4420004F5AD /* dingBtn.png in Resources */,
 				8AEE591A1DDEEAD4009CE582 /* lxh_xiaohaha.png in Resources */,
 				8AEE58DB1DDEEAD4009CE582 /* lxh_holdzhu.gif in Resources */,
 				8AEE58F11DDEEAD4009CE582 /* lxh_leiliumanmian.png in Resources */,
@@ -1957,6 +1965,7 @@
 				8AEE58B41DDEEAD4009CE582 /* w_xiayu@2x.png in Resources */,
 				8AEE58CF1DDEEAD4009CE582 /* lxh_haoaio.gif in Resources */,
 				8A4C6A381D7EB665005BC413 /* creatIcon.png in Resources */,
+				33CB20081DE0A4420004F5AD /* dingBtn_in.png in Resources */,
 				8AEE58981DDEEAD4009CE582 /* h_buyao@2x.png in Resources */,
 				8A4C6A131D7EB06E005BC413 /* search_btn.png in Resources */,
 				8AEE59341DDEEAD4009CE582 /* icon_face.png in Resources */,
@@ -2078,7 +2087,6 @@
 				8AEE58BA1DDEEAD4009CE582 /* lxh_beidian.gif in Resources */,
 				8AEE58BB1DDEEAD4009CE582 /* lxh_beidian.png in Resources */,
 				8AEE587A1DDEEAD4009CE582 /* d_shuijiao@2x.png in Resources */,
-				8AEE59851DDEEC29009CE582 /* DINGMessageCell.xib in Resources */,
 				8AEE58B01DDEEAD4009CE582 /* w_shachenbao@2x.png in Resources */,
 				8AEE58E31DDEEAD4009CE582 /* lxh_jiujie@2x.png in Resources */,
 				8AEE58791DDEEAD4009CE582 /* d_shuai@2x.png in Resources */,
@@ -2179,7 +2187,6 @@
 				8AEE58451DDEEAD4009CE582 /* HXMiddleMessageControlller.m in Sources */,
 				8AB430FC1D9B70440063CF7A /* SDWebImageDownloaderOperation.m in Sources */,
 				8AEE584E1DDEEAD4009CE582 /* HXScroller.m in Sources */,
-				8AEE59841DDEEC29009CE582 /* DINGMessageCell.m in Sources */,
 				8AB430FA1D9B70440063CF7A /* NSImage+StackBlur.m in Sources */,
 				8A4C6A341D7EB2E2005BC413 /* HXLeftToolBar.m in Sources */,
 				33C74A091DBCF6340017BBD9 /* CustomAttachMentCell.m in Sources */,
@@ -2231,6 +2238,7 @@
 				8AEE593D1DDEEAD4009CE582 /* HXMsgDatailCell.m in Sources */,
 				8AEE597B1DDEEC29009CE582 /* DINGViewController.m in Sources */,
 				8AEE584F1DDEEAD4009CE582 /* HXPersonalController.m in Sources */,
+				33CB200D1DE0B5530004F5AD /* HXDingMessageItem.m in Sources */,
 				8AEE59811DDEEC29009CE582 /* NSView+CNGridView.m in Sources */,
 				8AB430F61D9B70440063CF7A /* SDImageCache.m in Sources */,
 				8AEE597E1DDEEC29009CE582 /* CNGridViewItem.m in Sources */,

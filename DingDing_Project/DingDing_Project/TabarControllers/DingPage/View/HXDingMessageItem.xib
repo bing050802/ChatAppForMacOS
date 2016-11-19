@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="HXDingMessageItem">
+            <connections>
+                <outlet property="contentView" destination="frJ-j8-KCq" id="wsX-x2-O8R"/>
+                <outlet property="lookDetailBtn" destination="04i-fo-TnS" id="aJH-T6-cz7"/>
+                <outlet property="nameBtn" destination="xv2-Yu-0J6" id="ejy-WM-irl"/>
+                <outlet property="textScrollView" destination="0pZ-Kh-fIw" id="5fy-Qt-SKo"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="316" height="175"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="frJ-j8-KCq">
+                    <rect key="frame" x="10" y="10" width="296" height="155"/>
+                    <subviews>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="xv2-Yu-0J6" customClass="HXButton">
+                            <rect key="frame" x="25" y="125" width="60" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="KGF-82-lw6"/>
+                                <constraint firstAttribute="width" constant="60" id="ry3-xU-AI9"/>
+                            </constraints>
+                        </customView>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nFB-TI-DUS">
+                            <rect key="frame" x="194" y="120" width="84" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="gMb-eM-a4C"/>
+                                <constraint firstAttribute="width" constant="80" id="qZ1-M1-5xT"/>
+                            </constraints>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="11-18 13:00" id="Um4-Ih-hsK">
+                                <font key="font" metaFont="smallSystem"/>
+                                <color key="textColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pZ-Kh-fIw">
+                            <rect key="frame" x="23" y="75" width="250" height="35"/>
+                            <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="iks-X3-eHU">
+                                <rect key="frame" x="0.0" y="0.0" width="250" height="35"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <textView editable="NO" importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="qEU-nq-E4v">
+                                        <rect key="frame" x="0.0" y="77" width="260" height="119"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="minSize" width="250" height="35"/>
+                                        <size key="maxSize" width="487" height="10000000"/>
+                                        <attributedString key="textStorage">
+                                            <fragment>
+                                                <string key="content">hi, 大家以后创建jira时, 区分一下 jira的类型, improvement, new feature, task, bug 这几种. 
+improvement: 定位于改进已有的功能
+new feature: 定位于 之前没有功能
+task: 常规的任务, 比如开服, 活动开发
+bug: 故障, bug, 等. </string>
+                                                <attributes>
+                                                    <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="12" name="PingFangSC-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.23255584042209909" green="1" blue="0.13625827595790341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </clipView>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="COm-Oj-FaP"/>
+                            </constraints>
+                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="0we-iD-luq">
+                                <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </scroller>
+                            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="5P6-fW-epc">
+                                <rect key="frame" x="-100" y="-100" width="15" height="38"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </scroller>
+                        </scrollView>
+                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FZl-Hy-jYf">
+                            <rect key="frame" x="25" y="59" width="246" height="1"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="cqe-9u-VWr"/>
+                            </constraints>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" drawsBackground="YES" id="tOR-eN-baW">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="04i-fo-TnS" customClass="HXButton">
+                            <rect key="frame" x="25" y="24" width="246" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="IZF-sG-U2p"/>
+                            </constraints>
+                        </customView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="nFB-TI-DUS" firstAttribute="centerY" secondItem="xv2-Yu-0J6" secondAttribute="centerY" constant="5" id="7f5-b9-vch"/>
+                        <constraint firstItem="xv2-Yu-0J6" firstAttribute="leading" secondItem="frJ-j8-KCq" secondAttribute="leading" constant="25" id="Frw-Ay-o1L"/>
+                        <constraint firstItem="FZl-Hy-jYf" firstAttribute="top" secondItem="0pZ-Kh-fIw" secondAttribute="bottom" constant="15" id="QXG-eS-reB"/>
+                        <constraint firstAttribute="trailing" secondItem="04i-fo-TnS" secondAttribute="trailing" constant="25" id="TBV-7R-nYq"/>
+                        <constraint firstItem="nFB-TI-DUS" firstAttribute="top" secondItem="frJ-j8-KCq" secondAttribute="top" constant="15" id="WVa-6f-7GU"/>
+                        <constraint firstItem="FZl-Hy-jYf" firstAttribute="leading" secondItem="frJ-j8-KCq" secondAttribute="leading" constant="25" id="Xhd-ZY-QQC"/>
+                        <constraint firstItem="04i-fo-TnS" firstAttribute="top" secondItem="FZl-Hy-jYf" secondAttribute="bottom" constant="5" id="bML-ic-7qM"/>
+                        <constraint firstAttribute="trailing" secondItem="nFB-TI-DUS" secondAttribute="trailing" constant="20" id="dAQ-9i-2Jv"/>
+                        <constraint firstItem="0pZ-Kh-fIw" firstAttribute="top" secondItem="nFB-TI-DUS" secondAttribute="bottom" constant="10" id="egX-3T-XTA"/>
+                        <constraint firstItem="0pZ-Kh-fIw" firstAttribute="leading" secondItem="frJ-j8-KCq" secondAttribute="leading" constant="23" id="l2u-DF-3jY"/>
+                        <constraint firstItem="04i-fo-TnS" firstAttribute="leading" secondItem="frJ-j8-KCq" secondAttribute="leading" constant="25" id="lUA-yB-rsY"/>
+                        <constraint firstAttribute="trailing" secondItem="FZl-Hy-jYf" secondAttribute="trailing" constant="25" id="n2H-0F-gDF"/>
+                        <constraint firstAttribute="trailing" secondItem="0pZ-Kh-fIw" secondAttribute="trailing" constant="23" id="tFB-8t-VcZ"/>
+                    </constraints>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="frJ-j8-KCq" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="eWx-xH-Fvr"/>
+                <constraint firstItem="frJ-j8-KCq" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="gZe-ez-5m8"/>
+                <constraint firstAttribute="bottom" secondItem="frJ-j8-KCq" secondAttribute="bottom" constant="10" id="sA3-aZ-h7n"/>
+                <constraint firstAttribute="trailing" secondItem="frJ-j8-KCq" secondAttribute="trailing" constant="10" id="uAk-SW-EQ1"/>
+            </constraints>
+            <point key="canvasLocation" x="-78" y="102"/>
+        </customView>
+    </objects>
+</document>

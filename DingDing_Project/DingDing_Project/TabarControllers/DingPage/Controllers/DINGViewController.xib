@@ -8,17 +8,18 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="DINGViewController">
             <connections>
-                <outlet property="gridView" destination="EY5-rI-3vw" id="gwE-A8-DAi"/>
+                <outlet property="collectionView" destination="Nc5-7k-QDt" id="6HA-9Z-qVF"/>
+                <outlet property="testBtn" destination="thr-tD-EsX" id="dvX-1B-Rin"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="691" height="458"/>
+            <rect key="frame" x="0.0" y="0.0" width="691" height="520"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nm1-yc-5jx">
-                    <rect key="frame" x="233" y="-42" width="1" height="500"/>
+                    <rect key="frame" x="233" y="20" width="1" height="500"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="500" id="1nh-sI-C6A"/>
                         <constraint firstAttribute="width" constant="0.5" id="niO-wN-1tK"/>
@@ -29,42 +30,77 @@
                         <color key="backgroundColor" name="windowFrameColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygr-zN-Db9">
-                    <rect key="frame" x="234" y="0.0" width="457" height="458"/>
-                    <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="EI6-e5-qzZ">
-                        <rect key="frame" x="0.0" y="0.0" width="442" height="443"/>
+                <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGP-Cg-S7F">
+                    <rect key="frame" x="244" y="10" width="427" height="459"/>
+                    <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="D6m-8U-mEc">
+                        <rect key="frame" x="0.0" y="0.0" width="427" height="459"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EY5-rI-3vw" customClass="CNGridView">
-                                <rect key="frame" x="0.0" y="0.0" width="427" height="428"/>
+                            <collectionView id="Nc5-7k-QDt">
+                                <rect key="frame" x="0.0" y="0.0" width="427" height="459"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="primaryBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="-2" id="RwA-Bc-TSs"/>
-                                    <outlet property="delegate" destination="-2" id="lCL-eh-gKf"/>
+                                    <outlet property="itemPrototype" destination="tTy-U5-mkB" id="MRL-sF-A9E"/>
                                 </connections>
-                            </view>
+                            </collectionView>
                         </subviews>
+                        <color key="backgroundColor" red="0.16982688462611217" green="1" blue="0.79981326229037919" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </clipView>
-                    <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="YKl-Xo-HO7">
-                        <rect key="frame" x="0.0" y="443" width="442" height="15"/>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="beW-PS-3gI">
+                        <rect key="frame" x="-100" y="-100" width="233" height="15"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
-                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="o3S-1m-4wr">
-                        <rect key="frame" x="442" y="0.0" width="15" height="443"/>
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="CYD-so-XjO">
+                        <rect key="frame" x="-100" y="-100" width="15" height="143"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rDG-gg-5s7">
+                    <rect key="frame" x="234" y="469" width="457" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="jGD-Ca-aGx"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" drawsBackground="YES" id="FRJ-tM-RiF">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KXT-YE-zZ3">
+                    <rect key="frame" x="262" y="488.5" width="96" height="18"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="我收到的DING" id="f2g-cJ-V3J">
+                        <font key="font" size="14" name=".PingFangSC-Regular"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="thr-tD-EsX" customClass="HXButton">
+                    <rect key="frame" x="646" y="485" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="LRy-1L-XBq"/>
+                        <constraint firstAttribute="height" constant="25" id="XsN-Zi-TgT"/>
+                    </constraints>
+                </customView>
             </subviews>
             <constraints>
-                <constraint firstItem="Ygr-zN-Db9" firstAttribute="leading" secondItem="nm1-yc-5jx" secondAttribute="trailing" id="Rib-NS-e5L"/>
-                <constraint firstAttribute="trailing" secondItem="Ygr-zN-Db9" secondAttribute="trailing" id="XXN-8A-PGB"/>
+                <constraint firstAttribute="trailing" secondItem="rDG-gg-5s7" secondAttribute="trailing" id="0p9-kY-grQ"/>
+                <constraint firstItem="KXT-YE-zZ3" firstAttribute="leading" secondItem="nm1-yc-5jx" secondAttribute="trailing" constant="30" id="6fp-94-vfV"/>
+                <constraint firstAttribute="trailing" secondItem="GGP-Cg-S7F" secondAttribute="trailing" constant="20" id="7UQ-gH-TTo"/>
+                <constraint firstItem="thr-tD-EsX" firstAttribute="centerY" secondItem="KXT-YE-zZ3" secondAttribute="centerY" id="DcS-wF-o5I"/>
+                <constraint firstItem="GGP-Cg-S7F" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="51" id="YdT-hF-17P"/>
+                <constraint firstItem="GGP-Cg-S7F" firstAttribute="leading" secondItem="nm1-yc-5jx" secondAttribute="trailing" constant="10" id="Zmz-lE-aKd"/>
                 <constraint firstItem="nm1-yc-5jx" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="233" id="dsb-dz-ZnV"/>
+                <constraint firstItem="rDG-gg-5s7" firstAttribute="leading" secondItem="nm1-yc-5jx" secondAttribute="trailing" id="fvj-Ip-Bgd"/>
+                <constraint firstAttribute="bottom" secondItem="GGP-Cg-S7F" secondAttribute="bottom" constant="10" id="g5B-ln-6Fg"/>
                 <constraint firstItem="nm1-yc-5jx" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="jIP-6U-ZLj"/>
-                <constraint firstItem="Ygr-zN-Db9" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="l4k-7v-KvW"/>
-                <constraint firstAttribute="bottom" secondItem="Ygr-zN-Db9" secondAttribute="bottom" id="yFo-tp-0eg"/>
+                <constraint firstItem="thr-tD-EsX" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="qpy-sk-BpQ"/>
+                <constraint firstAttribute="trailing" secondItem="thr-tD-EsX" secondAttribute="trailing" constant="20" id="xEe-yk-Uma"/>
+                <constraint firstItem="rDG-gg-5s7" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="50" id="zeC-ZX-cG4"/>
             </constraints>
-            <point key="canvasLocation" x="-987" y="-566"/>
+            <point key="canvasLocation" x="-1097.5" y="-931"/>
         </customView>
         <collectionViewItem id="kRg-4V-KMr"/>
+        <collectionViewItem id="tTy-U5-mkB"/>
     </objects>
 </document>
