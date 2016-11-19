@@ -279,5 +279,8 @@
     }
 }
 
+- (NSString *)titleString {
+    return self.currtentDisplayString.string;
+}
 
 @end

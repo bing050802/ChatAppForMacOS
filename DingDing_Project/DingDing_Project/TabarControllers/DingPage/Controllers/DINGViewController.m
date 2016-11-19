@@ -8,8 +8,7 @@
 //
 
 #import "DINGViewController.h"
-#import "CNGridView.h"
-#import "CNGridViewItemLayout.h"
+#import "HXPrefixHeader.h"
 #import "HXButton.h"
 #import "HXDingMessageItem.h"
 
@@ -20,38 +19,26 @@ static NSString *kContentTitleKey, *kContentImageKey, *kItemSizeSliderPositionKe
 @interface DINGViewController () <NSCollectionViewDelegate>
 
 
-@property (weak) IBOutlet CNGridView *gridView;
 @property (strong) NSMutableArray *items;
 
-
-@property (strong) CNGridViewItemLayout *defaultLayout;
-@property (strong) CNGridViewItemLayout *hoverLayout;
-@property (strong) CNGridViewItemLayout *selectionLayout;
 
 @property (weak) IBOutlet HXButton *testBtn;
 
 @property (weak) IBOutlet NSCollectionView *collectionView;
 
+@property (weak) IBOutlet NSTextField *titleLabel;
+
+
+@property (weak) IBOutlet HXButton *myShouBtn;
+
+@property (weak) IBOutlet HXButton *mySendBtn;
+@property (nonatomic,strong) HXButton *lastBtn;
+
 @end
 
 @implementation DINGViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do view setup here.
-    
 
-
-}
-
-- (instancetype)initWithCoder:(NSCoder *)coder
-{
-    self = [super initWithCoder:coder];
-    if (self) {
-
-    }
-    return self;
-}
 
 - (void)loadView {
     [super loadView];
@@ -74,11 +61,34 @@ static NSString *kContentTitleKey, *kContentImageKey, *kItemSizeSliderPositionKe
     self.collectionView.itemPrototype = item;
     self.collectionView.content = @[@"dfa",@"faf",@"dfa",@"dfa",@"dfa",@"dfa",@"dfa",@"dfa"];
     self.collectionView.backgroundColors = @[[NSColor clearColor],[NSColor clearColor]];
+        
+    [self setBtn:_myShouBtn imageName:@"shouDing" title:@"我收到的"];
+    [self setBtn:_mySendBtn imageName:@"sendDing" title:@"我发出的"];
+    [self leftBtnClick:_myShouBtn];
+}
 
+- (void)setBtn:(HXButton *)btn imageName:(NSString *)imgName title:(NSString *)title{
+    btn.titleEdgeInsets = NSEdgeInsetsMake(0, 60, 0, 0);
+    btn.imageEdgeInsets = NSEdgeInsetsMake(0, 0, 0, 60);
+    [btn setImage:[NSImage imageNamed:imgName] forState:NSControlStateNormal];
+    [btn setImage:[NSImage imageNamed:[imgName stringByAppendingString:@"_s"]] forState:NSControlStateSelected];
+    [btn setTitleColor:[NSColor grayColor] forState:NSControlStateNormal];
+    [btn setTitleColor:HXColor(85, 183, 252) forState:NSControlStateSelected];
+    [btn setTitle:title forState:NSControlStateNormal];
+
+}
+
+- (IBAction)leftBtnClick:(HXButton *)sender {
     
-
-
-
+    _titleLabel.stringValue = [sender.titleString stringByAppendingString:@"DING"];
+    if ([sender.titleString isEqualToString:@"我发出的"]) {
+        self.collectionView.hidden = YES ;
+    } else{
+        self.collectionView.hidden = NO;
+    }
+    self.lastBtn.selected = NO;
+    sender.selected = YES;
+    self.lastBtn = sender;
 }
 
 @end

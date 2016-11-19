@@ -48,6 +48,7 @@ typedef NS_OPTIONS(NSInteger,NSControlState) {
 
 @property(nonatomic,strong,nonnull) NSColor *backGroundColor;
 
+@property(nonatomic,strong,readonly) NSString *titleString;
 
 @end
 

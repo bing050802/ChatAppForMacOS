@@ -4,12 +4,16 @@
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="DINGViewController">
             <connections>
                 <outlet property="collectionView" destination="Nc5-7k-QDt" id="6HA-9Z-qVF"/>
+                <outlet property="mySendBtn" destination="xg6-Ah-qY3" id="6c4-hi-xce"/>
+                <outlet property="myShouBtn" destination="GEm-83-1fJ" id="Esi-oa-c10"/>
                 <outlet property="testBtn" destination="thr-tD-EsX" id="dvX-1B-Rin"/>
+                <outlet property="titleLabel" destination="KXT-YE-zZ3" id="mwa-ph-79J"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -30,6 +34,13 @@
                         <color key="backgroundColor" name="windowFrameColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="thr-tD-EsX" customClass="HXButton">
+                    <rect key="frame" x="646" y="485" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="LRy-1L-XBq"/>
+                        <constraint firstAttribute="height" constant="25" id="XsN-Zi-TgT"/>
+                    </constraints>
+                </customView>
                 <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGP-Cg-S7F">
                     <rect key="frame" x="244" y="10" width="427" height="459"/>
                     <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="D6m-8U-mEc">
@@ -68,26 +79,54 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KXT-YE-zZ3">
-                    <rect key="frame" x="262" y="488.5" width="96" height="18"/>
+                    <rect key="frame" x="262" y="488" width="96" height="18"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="我收到的DING" id="f2g-cJ-V3J">
                         <font key="font" size="14" name=".PingFangSC-Regular"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <customView translatesAutoresizingMaskIntoConstraints="NO" id="thr-tD-EsX" customClass="HXButton">
-                    <rect key="frame" x="646" y="485" width="25" height="25"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="25" id="LRy-1L-XBq"/>
-                        <constraint firstAttribute="height" constant="25" id="XsN-Zi-TgT"/>
-                    </constraints>
-                </customView>
+                <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="USe-yT-GgN">
+                    <rect key="frame" x="0.0" y="442" width="233" height="68"/>
+                    <subviews>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="GEm-83-1fJ" customClass="HXButton">
+                            <rect key="frame" x="0.0" y="38" width="140" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="8on-I9-AW0"/>
+                                <constraint firstAttribute="width" constant="140" id="UDN-yZ-sDl"/>
+                            </constraints>
+                            <connections>
+                                <action selector="leftBtnClick:" target="-2" id="slM-QB-4Az"/>
+                            </connections>
+                        </customView>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="xg6-Ah-qY3" customClass="HXButton">
+                            <rect key="frame" x="0.0" y="0.0" width="140" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="140" id="560-di-d1R"/>
+                                <constraint firstAttribute="height" constant="30" id="68J-Y4-FZJ"/>
+                            </constraints>
+                            <connections>
+                                <action selector="leftBtnClick:" target="-2" id="5tz-fc-SqN"/>
+                            </connections>
+                        </customView>
+                    </subviews>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
             </subviews>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="rDG-gg-5s7" secondAttribute="trailing" id="0p9-kY-grQ"/>
                 <constraint firstItem="KXT-YE-zZ3" firstAttribute="leading" secondItem="nm1-yc-5jx" secondAttribute="trailing" constant="30" id="6fp-94-vfV"/>
                 <constraint firstAttribute="trailing" secondItem="GGP-Cg-S7F" secondAttribute="trailing" constant="20" id="7UQ-gH-TTo"/>
                 <constraint firstItem="thr-tD-EsX" firstAttribute="centerY" secondItem="KXT-YE-zZ3" secondAttribute="centerY" id="DcS-wF-o5I"/>
+                <constraint firstItem="USe-yT-GgN" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="KXo-Tu-A7h"/>
+                <constraint firstItem="nm1-yc-5jx" firstAttribute="leading" secondItem="USe-yT-GgN" secondAttribute="trailing" id="XOe-e1-5PG"/>
                 <constraint firstItem="GGP-Cg-S7F" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="51" id="YdT-hF-17P"/>
                 <constraint firstItem="GGP-Cg-S7F" firstAttribute="leading" secondItem="nm1-yc-5jx" secondAttribute="trailing" constant="10" id="Zmz-lE-aKd"/>
                 <constraint firstItem="nm1-yc-5jx" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="233" id="dsb-dz-ZnV"/>
@@ -95,6 +134,7 @@
                 <constraint firstAttribute="bottom" secondItem="GGP-Cg-S7F" secondAttribute="bottom" constant="10" id="g5B-ln-6Fg"/>
                 <constraint firstItem="nm1-yc-5jx" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="jIP-6U-ZLj"/>
                 <constraint firstItem="thr-tD-EsX" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="qpy-sk-BpQ"/>
+                <constraint firstItem="USe-yT-GgN" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="wQs-Nr-Gjz"/>
                 <constraint firstAttribute="trailing" secondItem="thr-tD-EsX" secondAttribute="trailing" constant="20" id="xEe-yk-Uma"/>
                 <constraint firstItem="rDG-gg-5s7" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="50" id="zeC-ZX-cG4"/>
             </constraints>

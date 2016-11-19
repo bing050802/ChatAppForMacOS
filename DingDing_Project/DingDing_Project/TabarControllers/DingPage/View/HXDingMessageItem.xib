@@ -99,7 +99,7 @@ bug: 故障, bug, 等. </string>
                             </textFieldCell>
                         </textField>
                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="04i-fo-TnS" customClass="HXButton">
-                            <rect key="frame" x="25" y="24" width="246" height="30"/>
+                            <rect key="frame" x="20" y="24" width="251" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="IZF-sG-U2p"/>
                             </constraints>
@@ -116,7 +116,7 @@ bug: 故障, bug, 等. </string>
                         <constraint firstAttribute="trailing" secondItem="nFB-TI-DUS" secondAttribute="trailing" constant="20" id="dAQ-9i-2Jv"/>
                         <constraint firstItem="0pZ-Kh-fIw" firstAttribute="top" secondItem="nFB-TI-DUS" secondAttribute="bottom" constant="10" id="egX-3T-XTA"/>
                         <constraint firstItem="0pZ-Kh-fIw" firstAttribute="leading" secondItem="frJ-j8-KCq" secondAttribute="leading" constant="23" id="l2u-DF-3jY"/>
-                        <constraint firstItem="04i-fo-TnS" firstAttribute="leading" secondItem="frJ-j8-KCq" secondAttribute="leading" constant="25" id="lUA-yB-rsY"/>
+                        <constraint firstItem="04i-fo-TnS" firstAttribute="leading" secondItem="frJ-j8-KCq" secondAttribute="leading" constant="20" id="lUA-yB-rsY"/>
                         <constraint firstAttribute="trailing" secondItem="FZl-Hy-jYf" secondAttribute="trailing" constant="25" id="n2H-0F-gDF"/>
                         <constraint firstAttribute="trailing" secondItem="0pZ-Kh-fIw" secondAttribute="trailing" constant="23" id="tFB-8t-VcZ"/>
                     </constraints>

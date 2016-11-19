@@ -21,6 +21,8 @@
 @property (weak) IBOutlet NSScrollView *textScrollView;
 
 
+
+
 @end
 
 @implementation HXDingMessageItem
@@ -47,7 +49,7 @@
     
     self.lookDetailBtn.trackingEabled = YES;
     self.lookDetailBtn.titleEdgeInsets = NSEdgeInsetsMake(0, 30, 0, 0);
-    self.lookDetailBtn.imageEdgeInsets = NSEdgeInsetsMake(0, 0, 0, 180);
+    self.lookDetailBtn.imageEdgeInsets = NSEdgeInsetsMake(0, 0, 0, 190);
     
     [self.lookDetailBtn setTitleColor:[NSColor grayColor] forState:NSControlStateNormal];
     [self.lookDetailBtn setTitleColor:HXColor(85, 183, 252) forState:NSControlStateMouseIn];

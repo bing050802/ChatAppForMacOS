@@ -19,6 +19,10 @@
 		33CB20091DE0A4420004F5AD /* dingBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CB20071DE0A4420004F5AD /* dingBtn.png */; };
 		33CB200D1DE0B5530004F5AD /* HXDingMessageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CB200B1DE0B5530004F5AD /* HXDingMessageItem.m */; };
 		33CB200E1DE0B5530004F5AD /* HXDingMessageItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CB200C1DE0B5530004F5AD /* HXDingMessageItem.xib */; };
+		33CB20131DE0D0ED0004F5AD /* sendDing.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CB200F1DE0D0ED0004F5AD /* sendDing.png */; };
+		33CB20141DE0D0ED0004F5AD /* sendDing_s.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CB20101DE0D0ED0004F5AD /* sendDing_s.png */; };
+		33CB20151DE0D0ED0004F5AD /* shouDing.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CB20111DE0D0ED0004F5AD /* shouDing.png */; };
+		33CB20161DE0D0ED0004F5AD /* shouDing_s.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CB20121DE0D0ED0004F5AD /* shouDing_s.png */; };
 		8A1F454C1DC74FE400546BE3 /* NSMutableAttributedString+AttachMent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1F454B1DC74FE400546BE3 /* NSMutableAttributedString+AttachMent.m */; };
 		8A1F455E1DC751BC00546BE3 /* NSMutableAttributedString+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1F455D1DC751BC00546BE3 /* NSMutableAttributedString+Config.m */; };
 		8A2A7EE41DD091A000BC1DA4 /* cell_popbtn_entered.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A7EE21DD091A000BC1DA4 /* cell_popbtn_entered.png */; };
@@ -413,6 +417,10 @@
 		33CB200A1DE0B5530004F5AD /* HXDingMessageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXDingMessageItem.h; sourceTree = "<group>"; };
 		33CB200B1DE0B5530004F5AD /* HXDingMessageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXDingMessageItem.m; sourceTree = "<group>"; };
 		33CB200C1DE0B5530004F5AD /* HXDingMessageItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXDingMessageItem.xib; sourceTree = "<group>"; };
+		33CB200F1DE0D0ED0004F5AD /* sendDing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sendDing.png; sourceTree = "<group>"; };
+		33CB20101DE0D0ED0004F5AD /* sendDing_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sendDing_s.png; sourceTree = "<group>"; };
+		33CB20111DE0D0ED0004F5AD /* shouDing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shouDing.png; sourceTree = "<group>"; };
+		33CB20121DE0D0ED0004F5AD /* shouDing_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shouDing_s.png; sourceTree = "<group>"; };
 		8A1F454B1DC74FE400546BE3 /* NSMutableAttributedString+AttachMent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+AttachMent.m"; sourceTree = "<group>"; };
 		8A1F455C1DC751BC00546BE3 /* NSMutableAttributedString+Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Config.h"; sourceTree = "<group>"; };
 		8A1F455D1DC751BC00546BE3 /* NSMutableAttributedString+Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Config.m"; sourceTree = "<group>"; };
@@ -1735,6 +1743,10 @@
 				8AEE59771DDEEC29009CE582 /* detail_in.png */,
 				33CB20061DE0A4420004F5AD /* dingBtn_in.png */,
 				33CB20071DE0A4420004F5AD /* dingBtn.png */,
+				33CB200F1DE0D0ED0004F5AD /* sendDing.png */,
+				33CB20101DE0D0ED0004F5AD /* sendDing_s.png */,
+				33CB20111DE0D0ED0004F5AD /* shouDing.png */,
+				33CB20121DE0D0ED0004F5AD /* shouDing_s.png */,
 				33CB200A1DE0B5530004F5AD /* HXDingMessageItem.h */,
 				33CB200B1DE0B5530004F5AD /* HXDingMessageItem.m */,
 				33CB200C1DE0B5530004F5AD /* HXDingMessageItem.xib */,
@@ -1873,6 +1885,7 @@
 				8AE3FD111DA8DC230023331C /* chatFile_entered.png in Resources */,
 				8AEE58F31DDEEAD4009CE582 /* lxh_meigui.gif in Resources */,
 				8AEE58BC1DDEEAD4009CE582 /* lxh_beidian@2x.png in Resources */,
+				33CB20151DE0D0ED0004F5AD /* shouDing.png in Resources */,
 				8AEE58FB1DDEEAD4009CE582 /* lxh_pili.gif in Resources */,
 				8AEE58951DDEEAD4009CE582 /* f_v5@2x.png in Resources */,
 				8AEE58CC1DDEEAD4009CE582 /* lxh_geijin.gif in Resources */,
@@ -2031,6 +2044,7 @@
 				8AEE58761DDEEAD4009CE582 /* d_shengbing@2x.png in Resources */,
 				8A4C6A1C1D7EB09F005BC413 /* message_seclected.png in Resources */,
 				8AEE58B51DDEEAD4009CE582 /* w_yueliang@2x.png in Resources */,
+				33CB20131DE0D0ED0004F5AD /* sendDing.png in Resources */,
 				8AEE58C41DDEEAD4009CE582 /* lxh_buhaoyisi.png in Resources */,
 				8AEE59291DDEEAD4009CE582 /* lxh_zaokuangzheng.png in Resources */,
 				8AEE58781DDEEAD4009CE582 /* d_shiwang@2x.png in Resources */,
@@ -2049,6 +2063,7 @@
 				8AEE59061DDEEAD4009CE582 /* lxh_qiuguanzhu@2x.png in Resources */,
 				8AEE58F21DDEEAD4009CE582 /* lxh_leiliumanmian@2x.png in Resources */,
 				8AEE587C1DDEEAD4009CE582 /* d_taikaixin@2x.png in Resources */,
+				33CB20141DE0D0ED0004F5AD /* sendDing_s.png in Resources */,
 				8AEE591E1DDEEAD4009CE582 /* lxh_xiudada@2x.png in Resources */,
 				8AEE58461DDEEAD4009CE582 /* HXMiddleMessageControlller.xib in Resources */,
 				8AEE59281DDEEAD4009CE582 /* lxh_zaokuangzheng.gif in Resources */,
@@ -2091,6 +2106,7 @@
 				8AEE58E31DDEEAD4009CE582 /* lxh_jiujie@2x.png in Resources */,
 				8AEE58791DDEEAD4009CE582 /* d_shuai@2x.png in Resources */,
 				8AEE58EC1DDEEAD4009CE582 /* lxh_kunsile@2x.png in Resources */,
+				33CB20161DE0D0ED0004F5AD /* shouDing_s.png in Resources */,
 				8AEE58521DDEEAD4009CE582 /* d_aini@2x.png in Resources */,
 				8AEE58661DDEEAD4009CE582 /* d_heng@2x.png in Resources */,
 				8AEE58E61DDEEAD4009CE582 /* lxh_juhan@2x.png in Resources */,
