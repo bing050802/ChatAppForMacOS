@@ -87,7 +87,7 @@
 }
 
 - (void)sendEvent:(NSEvent *)event {
-    if (event.type == NSEventTypeLeftMouseDown) { //
+    if (event.type == kCGEventLeftMouseDown) { //
         [NotificationCenter postNotificationName:NSWindowClickedNotification object:event];
     }
     [super sendEvent:event];
@@ -106,5 +106,9 @@
 //    r.origin = wo;
 //    [self setFrameOrigin:wo];
 //}
+
+- (void)dealloc {
+    
+}
 
 @end

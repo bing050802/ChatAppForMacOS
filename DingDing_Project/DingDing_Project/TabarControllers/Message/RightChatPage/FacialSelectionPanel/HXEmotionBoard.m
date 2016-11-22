@@ -62,10 +62,12 @@
     _emotions = emotions;
     
     // 清除所有表情
-    [self.documentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    NSClipView *documentView = self.documentView;
+    
+    [documentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     
     //根据表情数量 计算content Size
-    self.documentView.frame = [self contentRectWithEmotions:emotions.count];
+    documentView.frame = [self contentRectWithEmotions:emotions.count];
     
     // 创建表情按钮
     CGFloat btnWH = self.emotionWH;

@@ -50,12 +50,21 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
     
-   
+}
+
+
+- (void)applicationWillResignActive:(NSNotification *)notification {
+    
+}
+- (void)applicationWillUpdate:(NSNotification *)notification
+{
     
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
 }
+
+
 
 @end
