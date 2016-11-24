@@ -18,10 +18,6 @@
 
 @property (nonatomic,strong) NSTrackingArea *trackingArea;
 
-
-//@property (nonatomic,copy) NSString *displayTitle;
-
-
 @property (nonatomic,copy)   NSMutableAttributedString *currtentDisplayString;
 
 @property (nonatomic,strong) NSImage *currtentDisplayImage;

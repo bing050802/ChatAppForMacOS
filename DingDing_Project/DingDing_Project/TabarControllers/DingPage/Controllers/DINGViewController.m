@@ -50,8 +50,6 @@ static NSString *kContentTitleKey, *kContentImageKey, *kItemSizeSliderPositionKe
     [self.testBtn setImage:[NSImage imageNamed:@"dingBtn"] forState:NSControlStateNormal];
     [self.testBtn setImage:[NSImage imageNamed:@"dingBtn_in"] forState:NSControlStateMouseIn];
     
-    self.collectionView.wantsLayer = YES;
-    self.collectionView.layer.backgroundColor = [NSColor redColor].CGColor;
     
     HXDingMessageItem *item = [[HXDingMessageItem alloc] initWithNibName:@"HXDingMessageItem" bundle:nil];
     CGSize itemSize = NSMakeSize(285, 160);
@@ -61,7 +59,7 @@ static NSString *kContentTitleKey, *kContentImageKey, *kItemSizeSliderPositionKe
     self.collectionView.itemPrototype = item;
     self.collectionView.content = @[@"dfa",@"faf",@"dfa",@"dfa",@"dfa",@"dfa",@"dfa",@"dfa"];
     self.collectionView.backgroundColors = @[[NSColor clearColor],[NSColor clearColor]];
-        
+    
     [self setBtn:_myShouBtn imageName:@"shouDing" title:@"我收到的"];
     [self setBtn:_mySendBtn imageName:@"sendDing" title:@"我发出的"];
     [self leftBtnClick:_myShouBtn];
