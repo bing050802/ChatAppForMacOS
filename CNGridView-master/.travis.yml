@@ -1,3 +1,0 @@
-language: objective-c
-xcode_project: 'Example/CNGridView Example.xcodeproj'
-xcode_scheme: 'CNGridView Example'

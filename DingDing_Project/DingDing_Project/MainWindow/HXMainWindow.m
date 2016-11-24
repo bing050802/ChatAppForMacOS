@@ -46,6 +46,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+
     
     // 为了防止 window 从storyboard加载的时候尺寸是最初设定的，需要再设定一次最小的尺寸
     [self setContentSize:NSMakeSize(960, 602)];
@@ -109,6 +110,19 @@
 
 - (void)dealloc {
     
+}
+
+
+- (void)makeMainWindow{
+    [super makeMainWindow];
+}
+- (void)makeKeyWindow {
+    [super makeKeyWindow];
+}
+
+- (void)makeKeyAndOrderFront:(id)sender {
+    [super makeKeyAndOrderFront:sender];
+
 }
 
 @end

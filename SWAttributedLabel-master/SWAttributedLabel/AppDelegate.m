@@ -17,6 +17,10 @@
 #import "HXButton.h"
 
 #import "DINGViewController.h"
+#import "HXContactPeopleController.h"
+
+
+
 
 @interface AppDelegate ()
 
@@ -33,6 +37,7 @@
 @property (nonatomic,strong) DINGViewController *dingVC;
 
 
+@property (nonatomic,strong) HXContactPeopleController *contactVC;
 
 @end
 
@@ -44,9 +49,9 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     
-    DINGViewController *dingVC = [[DINGViewController alloc] init];
-    self.window.contentView = dingVC.view;
-    self.dingVC = dingVC;
+    HXContactPeopleController *contactVC = [[HXContactPeopleController alloc] init];
+    self.window.contentView = contactVC.view;
+    self.contactVC = contactVC;
 
 }
 
@@ -55,6 +60,17 @@
 
 
 
+
+
+
+
+
+
+- (void)testDing {
+    DINGViewController *dingVC = [[DINGViewController alloc] init];
+    self.window.contentView = dingVC.view;
+    self.dingVC = dingVC;
+}
 
 
 - (void)customButton

@@ -66,5 +66,12 @@
 }
 
 
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag {
+    
+    
+    [sender.keyWindow makeKeyAndOrderFront:self];
+    return YES;
+}
+
 
 @end

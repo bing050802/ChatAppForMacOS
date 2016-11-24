@@ -11,8 +11,6 @@
 		0DE90D521D76DB7300CA210E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE90D511D76DB7300CA210E /* main.m */; };
 		0DE90D541D76DB7300CA210E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE90D531D76DB7300CA210E /* Assets.xcassets */; };
 		0DE90D571D76DB7300CA210E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DE90D551D76DB7300CA210E /* MainMenu.xib */; };
-		0DE90D621D76DB7300CA210E /* SWAttributedLabelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE90D611D76DB7300CA210E /* SWAttributedLabelTests.m */; };
-		0DE90D6D1D76DB7300CA210E /* SWAttributedLabelUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE90D6C1D76DB7300CA210E /* SWAttributedLabelUITests.m */; };
 		0DE90D851D76DB8700CA210E /* NSMutableAttributedString+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE90D7C1D76DB8700CA210E /* NSMutableAttributedString+Config.m */; };
 		0DE90D861D76DB8700CA210E /* NSMutableAttributedString+CTFrameRef.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE90D7E1D76DB8700CA210E /* NSMutableAttributedString+CTFrameRef.m */; };
 		0DE90D871D76DB8700CA210E /* NSMutableAttributedString+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE90D801D76DB8700CA210E /* NSMutableAttributedString+Parse.m */; };
@@ -278,6 +276,8 @@
 		8ACFF2331DDDB23400AA5F71 /* DINGMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACFF2311DDDB23400AA5F71 /* DINGMessageCell.xib */; };
 		8AD9C2391DDC4BE80090A913 /* DINGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9C2371DDC4BE80090A913 /* DINGViewController.m */; };
 		8AD9C23A1DDC4BE80090A913 /* DINGViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AD9C2381DDC4BE80090A913 /* DINGViewController.xib */; };
+		8ADA66AB1DE3EE0D001C53DF /* HXContactPeopleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA66A91DE3EE0D001C53DF /* HXContactPeopleController.m */; };
+		8ADA66AC1DE3EE0D001C53DF /* HXContactPeopleController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ADA66AA1DE3EE0D001C53DF /* HXContactPeopleController.xib */; };
 		8AEDE40F1DB4D53C0074AA0C /* CWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEDE40E1DB4D53C0074AA0C /* CWindow.m */; };
 		8AEE571E1DDEA38F009CE582 /* detail.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AEE571C1DDEA38F009CE582 /* detail.png */; };
 		8AEE571F1DDEA38F009CE582 /* detail_in.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AEE571D1DDEA38F009CE582 /* detail_in.png */; };
@@ -309,11 +309,7 @@
 		0DE90D561D76DB7300CA210E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		0DE90D581D76DB7300CA210E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DE90D5D1D76DB7300CA210E /* SWAttributedLabelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SWAttributedLabelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0DE90D611D76DB7300CA210E /* SWAttributedLabelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWAttributedLabelTests.m; sourceTree = "<group>"; };
-		0DE90D631D76DB7300CA210E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DE90D681D76DB7300CA210E /* SWAttributedLabelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SWAttributedLabelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0DE90D6C1D76DB7300CA210E /* SWAttributedLabelUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWAttributedLabelUITests.m; sourceTree = "<group>"; };
-		0DE90D6E1D76DB7300CA210E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DE90D7B1D76DB8700CA210E /* NSMutableAttributedString+Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Config.h"; sourceTree = "<group>"; };
 		0DE90D7C1D76DB8700CA210E /* NSMutableAttributedString+Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Config.m"; sourceTree = "<group>"; };
 		0DE90D7D1D76DB8700CA210E /* NSMutableAttributedString+CTFrameRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+CTFrameRef.h"; sourceTree = "<group>"; };
@@ -611,6 +607,9 @@
 		8AD9C2361DDC4BE80090A913 /* DINGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DINGViewController.h; sourceTree = "<group>"; };
 		8AD9C2371DDC4BE80090A913 /* DINGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DINGViewController.m; sourceTree = "<group>"; };
 		8AD9C2381DDC4BE80090A913 /* DINGViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DINGViewController.xib; sourceTree = "<group>"; };
+		8ADA66A81DE3EE0D001C53DF /* HXContactPeopleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXContactPeopleController.h; sourceTree = "<group>"; };
+		8ADA66A91DE3EE0D001C53DF /* HXContactPeopleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXContactPeopleController.m; sourceTree = "<group>"; };
+		8ADA66AA1DE3EE0D001C53DF /* HXContactPeopleController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXContactPeopleController.xib; sourceTree = "<group>"; };
 		8AECC4101DD5DCC400F4F590 /* HXButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXButton.h; sourceTree = SOURCE_ROOT; };
 		8AEDE40D1DB4D53C0074AA0C /* CWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWindow.h; sourceTree = "<group>"; };
 		8AEDE40E1DB4D53C0074AA0C /* CWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWindow.m; sourceTree = "<group>"; };
@@ -647,6 +646,7 @@
 		0DE90D411D76DB7300CA210E = {
 			isa = PBXGroup;
 			children = (
+				8ADA66A71DE3EDE2001C53DF /* ContactPeople */,
 				8ACFF2041DDD8ADD00AA5F71 /* CNGridView */,
 				8AD9C2351DDC4BAD0090A913 /* Controllers */,
 				8A8989471DC9EB7A0065D3EF /* FacialSelectionPanel */,
@@ -654,8 +654,6 @@
 				8AECC4101DD5DCC400F4F590 /* HXButton.h */,
 				8A06138D1DC9937E00C52BE6 /* HXButton.m */,
 				0DE90D4C1D76DB7300CA210E /* SWAttributedLabel */,
-				0DE90D601D76DB7300CA210E /* SWAttributedLabelTests */,
-				0DE90D6B1D76DB7300CA210E /* SWAttributedLabelUITests */,
 				0DE90D4B1D76DB7300CA210E /* Products */,
 				8A1F45331DC7160D00546BE3 /* Frameworks */,
 			);
@@ -700,24 +698,6 @@
 				0DE90D511D76DB7300CA210E /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		0DE90D601D76DB7300CA210E /* SWAttributedLabelTests */ = {
-			isa = PBXGroup;
-			children = (
-				0DE90D611D76DB7300CA210E /* SWAttributedLabelTests.m */,
-				0DE90D631D76DB7300CA210E /* Info.plist */,
-			);
-			path = SWAttributedLabelTests;
-			sourceTree = "<group>";
-		};
-		0DE90D6B1D76DB7300CA210E /* SWAttributedLabelUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0DE90D6C1D76DB7300CA210E /* SWAttributedLabelUITests.m */,
-				0DE90D6E1D76DB7300CA210E /* Info.plist */,
-			);
-			path = SWAttributedLabelUITests;
 			sourceTree = "<group>";
 		};
 		0DE90D7A1D76DB8700CA210E /* SWAttributedLabel */ = {
@@ -1094,6 +1074,16 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		8ADA66A71DE3EDE2001C53DF /* ContactPeople */ = {
+			isa = PBXGroup;
+			children = (
+				8ADA66A81DE3EE0D001C53DF /* HXContactPeopleController.h */,
+				8ADA66A91DE3EE0D001C53DF /* HXContactPeopleController.m */,
+				8ADA66AA1DE3EE0D001C53DF /* HXContactPeopleController.xib */,
+			);
+			path = ContactPeople;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1365,6 +1355,7 @@
 				8A898A421DC9EB7A0065D3EF /* d_ganmao@2x.png in Resources */,
 				8A898B101DC9EB7A0065D3EF /* lxh_zhenjing@2x.png in Resources */,
 				8A898A931DC9EB7A0065D3EF /* w_shachenbao@2x.png in Resources */,
+				8ADA66AC1DE3EE0D001C53DF /* HXContactPeopleController.xib in Resources */,
 				8A898B011DC9EB7A0065D3EF /* lxh_xiudada@2x.png in Resources */,
 				8A898A4E1DC9EB7A0065D3EF /* d_ku@2x.png in Resources */,
 				8A898AB61DC9EB7A0065D3EF /* lxh_haobang.png in Resources */,
@@ -1472,6 +1463,7 @@
 				33C74A011DBCEFAE0017BBD9 /* NSMutableAttributedString+AttachMent.m in Sources */,
 				8ACFF2321DDDB23400AA5F71 /* DINGMessageCell.m in Sources */,
 				0DE90D881D76DB8700CA210E /* SWAttributedImageInfo.m in Sources */,
+				8ADA66AB1DE3EE0D001C53DF /* HXContactPeopleController.m in Sources */,
 				8A1F45321DC715D200546BE3 /* RegexKitLite.m in Sources */,
 				0DE90D861D76DB8700CA210E /* NSMutableAttributedString+CTFrameRef.m in Sources */,
 				0DE90D521D76DB7300CA210E /* main.m in Sources */,
@@ -1499,7 +1491,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DE90D621D76DB7300CA210E /* SWAttributedLabelTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1507,7 +1498,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DE90D6D1D76DB7300CA210E /* SWAttributedLabelUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
