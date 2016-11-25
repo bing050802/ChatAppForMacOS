@@ -138,6 +138,10 @@
     return image;
 }
 
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag {
+    [self.window makeKeyAndOrderFront:self];
+    return YES;
+}
 
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

@@ -14,7 +14,5 @@
 
 - (NSTableRowView *)selectedRowView;
 
-- (NSTableRowView *)lastSelectedRowView;
-- (NSArray *)lastSelectedCellViews;
 
 @end

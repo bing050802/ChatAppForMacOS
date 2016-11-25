@@ -62,7 +62,7 @@
                 <constraint firstItem="Ygr-zN-Db9" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="l4k-7v-KvW"/>
                 <constraint firstAttribute="bottom" secondItem="Ygr-zN-Db9" secondAttribute="bottom" id="yFo-tp-0eg"/>
             </constraints>
-            <point key="canvasLocation" x="-920" y="-514"/>
+            <point key="canvasLocation" x="-948" y="-923"/>
         </customView>
         <collectionViewItem id="kRg-4V-KMr"/>
     </objects>

@@ -11,16 +11,12 @@
 
 @interface HXContactPeopleController () <NSTableViewDelegate,NSTableViewDataSource>
 
-
 @property (weak) IBOutlet NSTableView *organizeTableView;
 
 @property (nonatomic,strong) NSMutableArray *architectures;
 
-@property (nonatomic,strong) NSTableCellView *lastSelectedCell;
-
-
 @property (weak) IBOutlet NSView *HeadView;
-
+@property (nonatomic,strong) NSTableCellView *lastSelectedCell;
 
 @end
 
@@ -47,11 +43,13 @@
     self.view.wantsLayer = YES;
     self.view.layer.backgroundColor = [NSColor colorWithRed:242/255.0 green:247/255.0 blue:255/255.0 alpha:1.0].CGColor;
     
-    // tableView设置颜色:scrollView drawBackGround = NO clipView drawBackGround = NO（clipView在xib默认就是no）
+    // tableView设置颜色:scrollView drawBackGround = NO
+    // clipView drawBackGround = NO（clipView在xib默认就是no）
     self.organizeTableView.backgroundColor = [NSColor clearColor];
     self.organizeTableView.selectionHighlightStyle = NSTableViewSelectionHighlightStyleNone;
     //    NSTableCellView
     self.organizeTableView.headerView = nil;
+    
 }
 
 
@@ -59,7 +57,6 @@
 {
     return self.architectures.count;
 }
-
 
 
 
@@ -93,5 +90,8 @@
     self.lastSelectedCell = cell;
 }
 
+- (void)keyDown:(NSEvent *)event {
+    NSLog(@"--%@",event);
+}
 
 @end
