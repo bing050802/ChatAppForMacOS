@@ -254,7 +254,7 @@ static NSString *mineCellID = @"mineCellID";
     // inser row
     [self.datailTableView beginUpdates];
     [self.msgDatialArray addObject:msg];
-    [self.datailTableView  insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:self.msgDatialArray.count-1] withAnimation:NSTableViewAnimationEffectNone];
+    [self.datailTableView insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:self.msgDatialArray.count-1] withAnimation:NSTableViewAnimationEffectNone];
     [self.datailTableView endUpdates];
     
     // 滑动到最新的消息位置

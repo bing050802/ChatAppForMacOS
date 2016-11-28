@@ -79,6 +79,7 @@
 		8A92871A1DBF826A004CFAEA /* mingPian_entered.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A92870C1DBF826A004CFAEA /* mingPian_entered.png */; };
 		8A92871B1DBF826A004CFAEA /* zan.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A92870D1DBF826A004CFAEA /* zan.png */; };
 		8A92871C1DBF826A004CFAEA /* zan_entered.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A92870E1DBF826A004CFAEA /* zan_entered.png */; };
+		8AA844D91DEC3A7D00560BCA /* HXClickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA844D81DEC3A7D00560BCA /* HXClickView.m */; };
 		8AAD92821D632D1D007E4A8F /* MVGraphicsFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD927F1D632D1D007E4A8F /* MVGraphicsFunctions.m */; };
 		8AAD92831D632D1D007E4A8F /* MVShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD92811D632D1D007E4A8F /* MVShadow.m */; };
 		8AAFF5FA1D5C622700E908EC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAFF5F91D5C622700E908EC /* QuartzCore.framework */; };
@@ -493,6 +494,8 @@
 		8A92870C1DBF826A004CFAEA /* mingPian_entered.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mingPian_entered.png; sourceTree = "<group>"; };
 		8A92870D1DBF826A004CFAEA /* zan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zan.png; sourceTree = "<group>"; };
 		8A92870E1DBF826A004CFAEA /* zan_entered.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zan_entered.png; sourceTree = "<group>"; };
+		8AA844D71DEC3A7D00560BCA /* HXClickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXClickView.h; sourceTree = "<group>"; };
+		8AA844D81DEC3A7D00560BCA /* HXClickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXClickView.m; sourceTree = "<group>"; };
 		8AAD927E1D632D1D007E4A8F /* MVGraphicsFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVGraphicsFunctions.h; sourceTree = "<group>"; };
 		8AAD927F1D632D1D007E4A8F /* MVGraphicsFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVGraphicsFunctions.m; sourceTree = "<group>"; };
 		8AAD92801D632D1D007E4A8F /* MVShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVShadow.h; sourceTree = "<group>"; };
@@ -1050,6 +1053,8 @@
 				8A72A2E61DEC1B2B00BCC218 /* HXStaffCell.h */,
 				8A72A2E71DEC1B2B00BCC218 /* HXStaffCell.m */,
 				8A72A2E81DEC1B2B00BCC218 /* HXStaffCell.xib */,
+				8AA844D71DEC3A7D00560BCA /* HXClickView.h */,
+				8AA844D81DEC3A7D00560BCA /* HXClickView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2214,6 +2219,7 @@
 				8A72A2F21DEC1B2B00BCC218 /* HXStaffCell.m in Sources */,
 				8AFF852F1D9BBFE600BB9B67 /* MJPropertyType.m in Sources */,
 				8AB430FF1D9B70440063CF7A /* NSView+WebCacheOperation.m in Sources */,
+				8AA844D91DEC3A7D00560BCA /* HXClickView.m in Sources */,
 				8AEE59931DDEECE1009CE582 /* HXWorkController.m in Sources */,
 				8A72A2ED1DEC1B2B00BCC218 /* NSTableView+Selection.m in Sources */,
 				8AFF852C1D9BBFE600BB9B67 /* MJFoundation.m in Sources */,

@@ -10,10 +10,14 @@
 #import "NSTableView+Selection.h"
 #import "HXButton.h"
 #import "HXBaseTableViewModel.h"
+#import "NSView+RBLAnimationAdditions.h"
+#import "HXClickView.h"
+
+static BOOL stateSelect = NO;
 
 @interface HXContactPeopleController () <NSTableViewDelegate,NSTableViewDataSource>
 
-@property (weak) IBOutlet NSView *HeadView;
+@property (weak) IBOutlet HXClickView *HeadView;
 
 @property (weak) IBOutlet NSTableView *organizeTableView;
 @property (nonatomic,strong) NSMutableArray *architectures;
@@ -25,6 +29,7 @@
 
 
 @property (weak) IBOutlet NSTableView *gropDatail;
+@property (weak) IBOutlet NSLayoutConstraint *leftScrollViewHeight;
 
 @end
 
@@ -50,9 +55,25 @@
 }
 
 
+- (void)downList:(NSGestureRecognizer *)ges {
+    if (stateSelect) {
+        self.leftScrollViewHeight.constant = 0;
+        stateSelect = NO;
+    } else {
+        self.leftScrollViewHeight.constant = 190;
+        stateSelect = YES;
+    }
+}
+
+
 - (void)loadView
 {
     [super loadView];
+    
+    NSClickGestureRecognizer *ges = [[NSClickGestureRecognizer alloc] initWithTarget:self action:@selector(downList:)];
+    [self.HeadView addGestureRecognizer:ges];
+    [self downList:nil];
+    
     
     self.view.wantsLayer = YES;
     self.view.layer.backgroundColor = [NSColor colorWithRed:242/255.0 green:247/255.0 blue:255/255.0 alpha:1.0].CGColor;
@@ -63,12 +84,12 @@
     self.organizeTableView.selectionHighlightStyle = NSTableViewSelectionHighlightStyleNone;
     //    NSTableCellView
     self.organizeTableView.headerView = nil;
+    [self.organizeTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:0] byExtendingSelection:NO];
     
     
     [self.IndicateBtn setTitleColor:[NSColor colorWithRed:37/255.0 green:140/255.0 blue:240/255.0 alpha:1.0] forState:NSControlStateNormal];
-    [self.IndicateBtn setTitle:@"xxx公司" forState:0];
-    
-     [self.gropViewModel relaodDataWithModel:nil];
+    [self.IndicateBtn setTitle:@"北京巴别时代科技有限公司" forState:0];
+    [self.gropViewModel relaodDataWithModel:nil];
 }
 
 
