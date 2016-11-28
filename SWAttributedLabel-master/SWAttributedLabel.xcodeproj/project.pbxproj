@@ -43,6 +43,11 @@
 		8A4E2A191DE6F2BD00075A10 /* NSTableView+Selection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4E2A181DE6F2BD00075A10 /* NSTableView+Selection.m */; };
 		8A4E2A1B1DE6FC1700075A10 /* company_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4E2A1A1DE6FC1700075A10 /* company_logo.png */; };
 		8A4E2A1D1DE6FD7000075A10 /* right_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4E2A1C1DE6FD7000075A10 /* right_arrow.png */; };
+		8A72A2CA1DEC0F8700BCC218 /* HXBaseTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A72A2C91DEC0F8700BCC218 /* HXBaseTableViewModel.m */; };
+		8A72A2CD1DEC118D00BCC218 /* HXDepartmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A72A2CC1DEC118D00BCC218 /* HXDepartmentCell.m */; };
+		8A72A2CF1DEC11D100BCC218 /* HXDepartmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A72A2CE1DEC11D100BCC218 /* HXDepartmentCell.xib */; };
+		8A72A2D21DEC122400BCC218 /* HXStaffCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A72A2D11DEC122400BCC218 /* HXStaffCell.m */; };
+		8A72A2D41DEC123000BCC218 /* HXStaffCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A72A2D31DEC123000BCC218 /* HXStaffCell.xib */; };
 		8A898A351DC9EB7A0065D3EF /* d_aini@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A89894A1DC9EB7A0065D3EF /* d_aini@2x.png */; };
 		8A898A361DC9EB7A0065D3EF /* d_aoteman@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A89894B1DC9EB7A0065D3EF /* d_aoteman@2x.png */; };
 		8A898A371DC9EB7A0065D3EF /* d_baibai@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A89894C1DC9EB7A0065D3EF /* d_baibai@2x.png */; };
@@ -368,6 +373,14 @@
 		8A4E2A181DE6F2BD00075A10 /* NSTableView+Selection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTableView+Selection.m"; sourceTree = "<group>"; };
 		8A4E2A1A1DE6FC1700075A10 /* company_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = company_logo.png; sourceTree = "<group>"; };
 		8A4E2A1C1DE6FD7000075A10 /* right_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_arrow.png; sourceTree = "<group>"; };
+		8A72A2C81DEC0F8700BCC218 /* HXBaseTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXBaseTableViewModel.h; sourceTree = "<group>"; };
+		8A72A2C91DEC0F8700BCC218 /* HXBaseTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXBaseTableViewModel.m; sourceTree = "<group>"; };
+		8A72A2CB1DEC118D00BCC218 /* HXDepartmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXDepartmentCell.h; sourceTree = "<group>"; };
+		8A72A2CC1DEC118D00BCC218 /* HXDepartmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXDepartmentCell.m; sourceTree = "<group>"; };
+		8A72A2CE1DEC11D100BCC218 /* HXDepartmentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXDepartmentCell.xib; sourceTree = "<group>"; };
+		8A72A2D01DEC122400BCC218 /* HXStaffCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXStaffCell.h; sourceTree = "<group>"; };
+		8A72A2D11DEC122400BCC218 /* HXStaffCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXStaffCell.m; sourceTree = "<group>"; };
+		8A72A2D31DEC123000BCC218 /* HXStaffCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXStaffCell.xib; sourceTree = "<group>"; };
 		8A89894A1DC9EB7A0065D3EF /* d_aini@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "d_aini@2x.png"; sourceTree = "<group>"; };
 		8A89894B1DC9EB7A0065D3EF /* d_aoteman@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "d_aoteman@2x.png"; sourceTree = "<group>"; };
 		8A89894C1DC9EB7A0065D3EF /* d_baibai@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "d_baibai@2x.png"; sourceTree = "<group>"; };
@@ -1111,6 +1124,8 @@
 		8ADA9E721DE6D5590054FBB9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8A72A2C81DEC0F8700BCC218 /* HXBaseTableViewModel.h */,
+				8A72A2C91DEC0F8700BCC218 /* HXBaseTableViewModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1118,6 +1133,12 @@
 		8ADA9E731DE6D5590054FBB9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8A72A2CB1DEC118D00BCC218 /* HXDepartmentCell.h */,
+				8A72A2CC1DEC118D00BCC218 /* HXDepartmentCell.m */,
+				8A72A2CE1DEC11D100BCC218 /* HXDepartmentCell.xib */,
+				8A72A2D01DEC122400BCC218 /* HXStaffCell.h */,
+				8A72A2D11DEC122400BCC218 /* HXStaffCell.m */,
+				8A72A2D31DEC123000BCC218 /* HXStaffCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1257,6 +1278,7 @@
 				8A898AE91DC9EB7A0065D3EF /* lxh_qiuguanzhu@2x.png in Resources */,
 				8A898AD61DC9EB7A0065D3EF /* lxh_meigui.gif in Resources */,
 				8A898A7A1DC9EB7A0065D3EF /* f_zhi@2x.png in Resources */,
+				8A72A2D41DEC123000BCC218 /* HXStaffCell.xib in Resources */,
 				8A898A661DC9EB7A0065D3EF /* d_xiongmao@2x.png in Resources */,
 				8A898AD81DC9EB7A0065D3EF /* lxh_meigui@2x.png in Resources */,
 				8A898AE11DC9EB7A0065D3EF /* lxh_qiaoqiao.gif in Resources */,
@@ -1344,6 +1366,7 @@
 				8A898AC51DC9EB7A0065D3EF /* lxh_jiujie.png in Resources */,
 				8A898A621DC9EB7A0065D3EF /* d_tu@2x.png in Resources */,
 				8A898A951DC9EB7A0065D3EF /* w_weifeng@2x.png in Resources */,
+				8A72A2CF1DEC11D100BCC218 /* HXDepartmentCell.xib in Resources */,
 				8A898A6F1DC9EB7A0065D3EF /* d_zhutou@2x.png in Resources */,
 				8AC78CFB1DADCFF200BC459D /* white_bg.png in Resources */,
 				8A898A3F1DC9EB7A0065D3EF /* d_ding@2x.png in Resources */,
@@ -1501,6 +1524,7 @@
 				0DE90D851D76DB8700CA210E /* NSMutableAttributedString+Config.m in Sources */,
 				8ACFF2151DDD8ADD00AA5F71 /* NSView+CNGridView.m in Sources */,
 				8A0613AE1DC99A0500C52BE6 /* MJFoundation.m in Sources */,
+				8A72A2D21DEC122400BCC218 /* HXStaffCell.m in Sources */,
 				33C749FD1DBCEF6B0017BBD9 /* CustomAttachMentCell.m in Sources */,
 				33C74A011DBCEFAE0017BBD9 /* NSMutableAttributedString+AttachMent.m in Sources */,
 				8ACFF2321DDDB23400AA5F71 /* DINGMessageCell.m in Sources */,
@@ -1515,9 +1539,11 @@
 				8ACFF2131DDD8ADD00AA5F71 /* CNGridViewItemLayout.m in Sources */,
 				8ACFF2111DDD8ADD00AA5F71 /* CNGridView.m in Sources */,
 				8A0613B51DC99A0500C52BE6 /* NSObject+MJProperty.m in Sources */,
+				8A72A2CA1DEC0F8700BCC218 /* HXBaseTableViewModel.m in Sources */,
 				8A4E2A191DE6F2BD00075A10 /* NSTableView+Selection.m in Sources */,
 				8ACFF2141DDD8ADD00AA5F71 /* NSColor+CNGridViewPalette.m in Sources */,
 				8A0613AF1DC99A0500C52BE6 /* MJProperty.m in Sources */,
+				8A72A2CD1DEC118D00BCC218 /* HXDepartmentCell.m in Sources */,
 				8AEDE40F1DB4D53C0074AA0C /* CWindow.m in Sources */,
 				8A898B181DC9EB7A0065D3EF /* HXEmotionTool.m in Sources */,
 				8AD9C2391DDC4BE80090A913 /* DINGViewController.m in Sources */,

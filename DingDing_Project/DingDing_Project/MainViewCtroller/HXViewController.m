@@ -13,7 +13,7 @@
 #import "HXMessageSplitController.h"
 #import "DINGViewController.h"
 #import "HXCallPageController.h"
-#import "HXContactController.h"
+#import "HXContactPeopleController.h"
 #import "HXWorkController.h"
 #import "HXDingPanController.h"
 
@@ -23,7 +23,7 @@
 @property (nonatomic,strong) HXMessageSplitController *messageSplitController;
 @property (nonatomic,strong) DINGViewController       *dingVc;
 @property (nonatomic,strong) HXCallPageController     *callPageVc;
-@property (nonatomic,strong) HXContactController      *contactVc;
+@property (nonatomic,strong) HXContactPeopleController      *contactVc;
 @property (nonatomic,strong) HXWorkController         *workVc;
 @property (nonatomic,strong) HXDingPanController      *dingpanVc;
 
@@ -57,9 +57,9 @@
     return _callPageVc;
 }
 
-- (HXContactController *)contactVc {
+- (HXContactPeopleController *)contactVc {
     if (!_contactVc) {
-        _contactVc = [[HXContactController alloc] init];
+        _contactVc = [[HXContactPeopleController alloc] init];
          [self addChildViewController:_contactVc];
     }
     return _contactVc;
