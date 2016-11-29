@@ -45,14 +45,14 @@
 - (DINGViewController *)dingVc {
     if (!_dingVc) {
         _dingVc = [[DINGViewController alloc] init];
-          [self addChildViewController:_dingVc];
+        [self addChildViewController:_dingVc];
     }
     return _dingVc;
 }
 - (HXCallPageController *)callPageVc {
     if (!_callPageVc) {
         _callPageVc = [[HXCallPageController alloc] init];
-          [self addChildViewController:_callPageVc];
+        [self addChildViewController:_callPageVc];
     }
     return _callPageVc;
 }
@@ -60,7 +60,7 @@
 - (HXContactPeopleController *)contactVc {
     if (!_contactVc) {
         _contactVc = [[HXContactPeopleController alloc] init];
-         [self addChildViewController:_contactVc];
+        [self addChildViewController:_contactVc];
     }
     return _contactVc;
 }

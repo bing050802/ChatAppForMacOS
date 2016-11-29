@@ -83,13 +83,17 @@
     self.inputTextView.textColor = HXColor(70, 70, 70);
     self.inputTextView.delegate = self;
     
+    self.sendButton.titleEdgeInsets = NSEdgeInsetsMake(0, 25, 0, 0);
     self.sendButton.titleFont = [NSFont systemFontOfSize:13];
-    [self.sendButton setTitleColor:[NSColor blueColor] forState:NSControlStateNormal];
+    [self.sendButton setTitleColor:[NSColor lightGrayColor] forState:NSControlStateNormal];
     [self.sendButton setTitleColor:HXColor(25, 132, 230) forState:NSControlStateSelected];
     [self.sendButton setTitle:@"发送" forState:NSControlStateNormal];
     [self.sendButton setBackgroundColor:[NSColor whiteColor] forState:NSControlStateNormal];
+    self.sendButton.target = self;
+    self.sendButton.action = @selector(send);
 
 }
+
 
 
 - (BOOL)textView:(NSTextView *)textView doCommandBySelector:(SEL)commandSelector
@@ -97,9 +101,26 @@
     if (commandSelector == @selector(insertNewline:)) {
         if (!textView.string.length) return YES;
         [self.delegate inputCompleteToSend:textView];
+        self.sendButton.selected = NO;
         return YES;
     }
     return NO;
+}
+- (BOOL)textView:(NSTextView *)textView shouldChangeTextInRange:(NSRange)affectedCharRange replacementString:(nullable NSString *)replacementString
+{
+    if (affectedCharRange.location == 0) {
+        self.sendButton.selected = NO;
+    } else {
+        self.sendButton.selected = YES;
+    }
+    return YES;
+}
+
+- (void)send
+{
+    if (!self.inputTextView.string.length) return;
+    [self.delegate inputCompleteToSend:self.inputTextView];
+    self.sendButton.selected = NO;
 }
 
 

@@ -68,8 +68,7 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-     [self setUp];
-
+    [self setUp];
 }
 
 - (void)setUp
@@ -174,8 +173,12 @@
     }
 }
 
-- (void)setBackgroundColor:(nullable NSColor *)color forState:(NSControlState)state {
+- (void)setBackgroundColor:(nullable NSColor *)color forState:(NSControlState)state
+{
     [self.stateBgColorDic setObject:color forKey:@(state)];
+    if (state == NSControlStateNormal) {
+        self.layer.backgroundColor = color.CGColor;
+    }
 }
 
 - (void)setTitle:(nullable NSString *)title forState:(NSControlState)state
@@ -205,27 +208,33 @@
     
     NSImage *normalStateImage      = self.stateImageDic[@(NSControlStateNormal)];
     NSColor *normalStateTitleColor = self.stateTitleColorDic[@(NSControlStateNormal)];
+    NSColor *normalbackGroundColor = self.stateBgColorDic[@(NSControlStateNormal)];
     
     NSImage *image;
     NSColor *titleColor;
+    NSColor *backGroundColor;
     
     if (selected) {
         image      = self.stateImageDic[@(NSControlStateSelected)];
         titleColor = self.stateTitleColorDic[@(NSControlStateSelected)];
-        self.backGroundColor = self.stateBgColorDic[@(NSControlStateSelected)];
+        backGroundColor = self.stateBgColorDic[@(NSControlStateSelected)];
         if (!image) {
             image = normalStateImage;
         }
         if (!titleColor) {
             titleColor = normalStateTitleColor;
         }
-        
-    } else {
+        if (!backGroundColor) {
+            backGroundColor = normalbackGroundColor;
+        }
+    }
+    else {
         image      = normalStateImage;
         titleColor = normalStateTitleColor;
-        self.backGroundColor = self.stateBgColorDic[@(NSControlStateNormal)];
+        backGroundColor = normalbackGroundColor;
     }
     
+    self.backGroundColor = backGroundColor;
     [self updateTitleColor:titleColor];
     self.imageView.image = image;
     [self setNeedsDisplay];

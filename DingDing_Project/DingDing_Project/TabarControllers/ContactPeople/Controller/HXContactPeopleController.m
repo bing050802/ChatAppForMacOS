@@ -84,7 +84,7 @@ static BOOL stateSelect = NO;
     self.organizeTableView.selectionHighlightStyle = NSTableViewSelectionHighlightStyleNone;
     //    NSTableCellView
     self.organizeTableView.headerView = nil;
-    [self.organizeTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:0] byExtendingSelection:NO];
+//    [self.organizeTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:0] byExtendingSelection:NO];
     
     
     [self.IndicateBtn setTitleColor:[NSColor colorWithRed:37/255.0 green:140/255.0 blue:240/255.0 alpha:1.0] forState:NSControlStateNormal];
@@ -130,8 +130,5 @@ static BOOL stateSelect = NO;
     self.lastSelectedCell = cell;
 }
 
-- (void)keyDown:(NSEvent *)event {
-    NSLog(@"--%@",event);
-}
 
 @end
