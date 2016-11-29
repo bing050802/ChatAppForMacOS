@@ -120,13 +120,18 @@ static BOOL stateSelect = NO;
 - (void)tableViewSelectionDidChange:(NSNotification *)notification
 {
     // 上次选中cell回复原有文字颜色
-    self.lastSelectedCell.textField.textColor = [NSColor darkGrayColor];
+    if ([self.lastSelectedCell respondsToSelector:@selector(textField)]) {
+        self.lastSelectedCell.textField.textColor = [NSColor darkGrayColor];
+    }
     
     // 当前选中cell
     NSTableCellView *cell = [self.organizeTableView selectedCellViews][0];
     
     // 文字颜色选中色
-    cell.textField.textColor = [NSColor colorWithRed:37/255.0 green:140/255.0 blue:240/255.0 alpha:1.0];
+    if ([cell respondsToSelector:@selector(textField)]) {
+        cell.textField.textColor = [NSColor colorWithRed:37/255.0 green:140/255.0 blue:240/255.0 alpha:1.0];
+    }
+    
     self.lastSelectedCell = cell;
 }
 
