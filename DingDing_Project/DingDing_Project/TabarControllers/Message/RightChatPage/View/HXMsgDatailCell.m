@@ -12,7 +12,7 @@
 
 #import "NSMutableAttributedString+AttachMent.h"
 
-@interface HXMsgDatailCell ()
+@interface HXMsgDatailCell () <NSTextViewDelegate>
 
 @property (weak) IBOutlet NSImageView *iconImageView;
 
@@ -42,6 +42,8 @@
     self.attTextView.borderColor = HXColor(225, 224, 228);
     self.attTextView.textColor = HXColor(70, 70, 70);
     self.attTextView.selectedRange = NSMakeRange(0, 0);
+    self.attTextView.delegate = self;
+    
     
     _popButton.trackingEabled = YES;
     _popButton.hidden = YES;
@@ -73,7 +75,9 @@
     }
     self.textHeightCons.constant = textRealSize.height + 16;
     
+    
 }
+
 
 
 - (void)mouseEntered:(NSEvent *)event {

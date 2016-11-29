@@ -75,13 +75,20 @@
 
 - (void)setUp {
     self.canEdit = YES;
+    self.hasScroller = NO;
     self.enclosingScrollView.disableScroller = YES;
     self.enclosingScrollView.borderType = NSNoBorder;
-    self.enclosingScrollView.hasVerticalScroller = NO;
-    self.enclosingScrollView.hasHorizontalScroller = NO;
     [self.superview addSubview:self.backGroundView positioned:NSWindowBelow relativeTo:self];
 }
 
+- (void)mouseDown:(NSEvent *)event {
+    CGPoint touchPointInWindow = event.locationInWindow;
+    CGPoint  point = [self.window convertBaseToScreen:touchPointInWindow];
+    NSInteger index = [self characterIndexForPoint:point];
+    
+    [super mouseDown:event];
+    
+}
 
 
 

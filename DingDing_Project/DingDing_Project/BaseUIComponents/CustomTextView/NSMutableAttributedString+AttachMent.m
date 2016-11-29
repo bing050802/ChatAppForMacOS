@@ -91,12 +91,14 @@
             substr = [self attributedStringWithImage:em.emotionimage attachSize:attSize];
             subCalculateString = [self createReplacementAttString];
             
-        } else if (part.special) { // 非表情的特殊文字
+        }
+        else if (part.special) { // 非表情的特殊文字
             substr = [[NSMutableAttributedString alloc] initWithString:part.text]; //HelveticaNeue，HelveticaNeue-Bold
             [substr setFont:[NSFont systemFontOfSize:13.4] range:NSMakeRange(0, part.text.length)];
             subCalculateString = substr;
             
-        } else { // 非特殊文字
+        }
+        else { // 非特殊文字
             substr = [[NSMutableAttributedString alloc] initWithString:part.text]; //HelveticaNeue，HelveticaNeue-Bold
             [substr setFont:[NSFont systemFontOfSize:13.4] range:NSMakeRange(0, part.text.length)];
             subCalculateString = substr;
@@ -153,7 +155,7 @@
     CGFloat width = CTLineGetTypographicBounds(lineRef, &ascent, &descent, &leading);
     width = ceil(width);
     CGFloat height = (ascent + leading + descent);
-//    NSLog(@"--%@--%f",self.string,height);
+    //    NSLog(@"--%@--%f",self.string,height);
     return CGSizeMake(width, height);
 }
 

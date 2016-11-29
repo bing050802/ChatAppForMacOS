@@ -20,6 +20,7 @@
 
 @property (weak) IBOutlet NSLayoutConstraint *textHeightCons;
 @property (weak) IBOutlet NSLayoutConstraint *textWidthCons;
+
 @property (weak) IBOutlet HXButton *popButton;
 
 @end
