@@ -115,9 +115,9 @@ static NSString *mineCellID = @"mineCellID";
         _modalOverlay.animates = NO;
         _modalOverlay.animationDirection = JMModalOverlayDirectionBottom;
         _modalOverlay.shouldOverlayTitleBar = YES;
-        _modalOverlay.shouldCloseWhenClickOnBackground = NO;
+        _modalOverlay.shouldCloseWhenClickOnBackground = YES;
         _modalOverlay.appearance = [NSAppearance appearanceNamed:NSAppearanceNameLightContent];
-        _modalOverlay.backgroundColor = [NSColor blackColor];
+//        _modalOverlay.backgroundColor = [NSColor blackColor];
     }
     return _modalOverlay;
 }
@@ -220,11 +220,16 @@ static NSString *mineCellID = @"mineCellID";
 
 - (IBAction)showChatFiles:(id)sender
 {
-    NSViewController *pVc = [[NSViewController alloc] init];
-    [pVc.view backGroundColor:[NSColor redColor]];
+    HXPersonalController *pVc = [[HXPersonalController alloc] init];
     self.modalOverlay.contentViewController = pVc;
     [self.modalOverlay showInWindow:self.view.window];
+
 }
+
+
+
+
+
 
 - (IBAction)addMember:(id)sender {}
 - (IBAction)callDingding:(id)sender {}

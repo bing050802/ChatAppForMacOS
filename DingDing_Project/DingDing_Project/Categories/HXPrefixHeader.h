@@ -13,6 +13,15 @@
 #import "MJExtension.h"
 #import <CoreGraphics/CoreGraphics.h>
 
+/**
+ 1.熟悉Cocoa框架，以及mac应用相关的UI组件的使用以及个性化自定义
+ 2.自定义类似IOS TabBar选项卡切换不同的控制器，实现页面切换
+ 3.实现了mac版本的SDWebImage，用于异步下载网络图片
+ 4.
+ 
+ */
+
+
 // 可能有用的第三方
 
 // https://github.com/twitter/twui

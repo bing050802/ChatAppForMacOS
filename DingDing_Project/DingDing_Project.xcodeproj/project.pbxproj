@@ -22,6 +22,8 @@
 		33CB20141DE0D0ED0004F5AD /* sendDing_s.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CB20101DE0D0ED0004F5AD /* sendDing_s.png */; };
 		33CB20151DE0D0ED0004F5AD /* shouDing.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CB20111DE0D0ED0004F5AD /* shouDing.png */; };
 		33CB20161DE0D0ED0004F5AD /* shouDing_s.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CB20121DE0D0ED0004F5AD /* shouDing_s.png */; };
+		8A0D40B71DEEACB100FABB6A /* HXPersonalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0D40B51DEEACB100FABB6A /* HXPersonalController.m */; };
+		8A0D40B81DEEACB100FABB6A /* HXPersonalController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A0D40B61DEEACB100FABB6A /* HXPersonalController.xib */; };
 		8A1F454C1DC74FE400546BE3 /* NSMutableAttributedString+AttachMent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1F454B1DC74FE400546BE3 /* NSMutableAttributedString+AttachMent.m */; };
 		8A1F455E1DC751BC00546BE3 /* NSMutableAttributedString+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1F455D1DC751BC00546BE3 /* NSMutableAttributedString+Config.m */; };
 		8A2A7EE41DD091A000BC1DA4 /* cell_popbtn_entered.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A7EE21DD091A000BC1DA4 /* cell_popbtn_entered.png */; };
@@ -133,7 +135,6 @@
 		8AEE584C1DDEEAD4009CE582 /* HXMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE573B1DDEEAD3009CE582 /* HXMessageCell.m */; };
 		8AEE584D1DDEEAD4009CE582 /* HXMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AEE573C1DDEEAD3009CE582 /* HXMessageCell.xib */; };
 		8AEE584E1DDEEAD4009CE582 /* HXScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE573E1DDEEAD3009CE582 /* HXScroller.m */; };
-		8AEE584F1DDEEAD4009CE582 /* HXPersonalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE57421DDEEAD3009CE582 /* HXPersonalController.m */; };
 		8AEE58501DDEEAD4009CE582 /* HXRightChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE57441DDEEAD3009CE582 /* HXRightChatViewController.m */; };
 		8AEE58511DDEEAD4009CE582 /* HXRightChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AEE57451DDEEAD3009CE582 /* HXRightChatViewController.xib */; };
 		8AEE58521DDEEAD4009CE582 /* d_aini@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AEE57491DDEEAD3009CE582 /* d_aini@2x.png */; };
@@ -425,6 +426,9 @@
 		33CB20101DE0D0ED0004F5AD /* sendDing_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sendDing_s.png; sourceTree = "<group>"; };
 		33CB20111DE0D0ED0004F5AD /* shouDing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shouDing.png; sourceTree = "<group>"; };
 		33CB20121DE0D0ED0004F5AD /* shouDing_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shouDing_s.png; sourceTree = "<group>"; };
+		8A0D40B41DEEACB100FABB6A /* HXPersonalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXPersonalController.h; sourceTree = "<group>"; };
+		8A0D40B51DEEACB100FABB6A /* HXPersonalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXPersonalController.m; sourceTree = "<group>"; };
+		8A0D40B61DEEACB100FABB6A /* HXPersonalController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXPersonalController.xib; sourceTree = "<group>"; };
 		8A1F454B1DC74FE400546BE3 /* NSMutableAttributedString+AttachMent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+AttachMent.m"; sourceTree = "<group>"; };
 		8A1F455C1DC751BC00546BE3 /* NSMutableAttributedString+Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Config.h"; sourceTree = "<group>"; };
 		8A1F455D1DC751BC00546BE3 /* NSMutableAttributedString+Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Config.m"; sourceTree = "<group>"; };
@@ -589,8 +593,6 @@
 		8AEE573C1DDEEAD3009CE582 /* HXMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXMessageCell.xib; sourceTree = "<group>"; };
 		8AEE573D1DDEEAD3009CE582 /* HXScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXScroller.h; sourceTree = "<group>"; };
 		8AEE573E1DDEEAD3009CE582 /* HXScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXScroller.m; sourceTree = "<group>"; };
-		8AEE57411DDEEAD3009CE582 /* HXPersonalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXPersonalController.h; sourceTree = "<group>"; };
-		8AEE57421DDEEAD3009CE582 /* HXPersonalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXPersonalController.m; sourceTree = "<group>"; };
 		8AEE57431DDEEAD3009CE582 /* HXRightChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXRightChatViewController.h; sourceTree = "<group>"; };
 		8AEE57441DDEEAD3009CE582 /* HXRightChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXRightChatViewController.m; sourceTree = "<group>"; };
 		8AEE57451DDEEAD3009CE582 /* HXRightChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXRightChatViewController.xib; sourceTree = "<group>"; };
@@ -1452,11 +1454,12 @@
 		8AEE57401DDEEAD3009CE582 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8AEE57411DDEEAD3009CE582 /* HXPersonalController.h */,
-				8AEE57421DDEEAD3009CE582 /* HXPersonalController.m */,
 				8AEE57431DDEEAD3009CE582 /* HXRightChatViewController.h */,
 				8AEE57441DDEEAD3009CE582 /* HXRightChatViewController.m */,
 				8AEE57451DDEEAD3009CE582 /* HXRightChatViewController.xib */,
+				8A0D40B41DEEACB100FABB6A /* HXPersonalController.h */,
+				8A0D40B51DEEACB100FABB6A /* HXPersonalController.m */,
+				8A0D40B61DEEACB100FABB6A /* HXPersonalController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2175,6 +2178,7 @@
 				8AEE58F51DDEEAD4009CE582 /* lxh_meigui@2x.png in Resources */,
 				8AEE58C61DDEEAD4009CE582 /* lxh_buxiangshangban.gif in Resources */,
 				8A9287151DBF826A004CFAEA /* face.png in Resources */,
+				8A0D40B81DEEACB100FABB6A /* HXPersonalController.xib in Resources */,
 				8AE2844B1DACD1A000F40EAE /* message_bg.png in Resources */,
 				8AEE58D61DDEEAD4009CE582 /* lxh_haojiong.png in Resources */,
 				8AEE59941DDEECE1009CE582 /* HXWorkController.xib in Resources */,
@@ -2293,9 +2297,9 @@
 				8AEE59371DDEEAD4009CE582 /* HXEmotionTool.m in Sources */,
 				8AEE593D1DDEEAD4009CE582 /* HXMsgDatailCell.m in Sources */,
 				8AEE597B1DDEEC29009CE582 /* DINGViewController.m in Sources */,
-				8AEE584F1DDEEAD4009CE582 /* HXPersonalController.m in Sources */,
 				33CB200D1DE0B5530004F5AD /* HXDingMessageItem.m in Sources */,
 				8AB430F61D9B70440063CF7A /* SDImageCache.m in Sources */,
+				8A0D40B71DEEACB100FABB6A /* HXPersonalController.m in Sources */,
 				8AEE59331DDEEAD4009CE582 /* HXFacialSelectionPanel.m in Sources */,
 				8AFF85321D9BBFE600BB9B67 /* NSObject+MJKeyValue.m in Sources */,
 			);
