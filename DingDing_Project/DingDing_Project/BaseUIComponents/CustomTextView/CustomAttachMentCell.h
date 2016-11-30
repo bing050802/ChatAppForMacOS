@@ -8,8 +8,6 @@
 
 #import <AppKit/AppKit.h>
 
-
-
 @interface CustomAttachMentCell : NSTextAttachmentCell
 
 @property (nonatomic,strong) NSImage *attachImage;
@@ -17,5 +15,5 @@
 
 @property (nonatomic,assign) CGPoint baselineOffset;
 
-@property (nonatomic,assign,readonly) NSTextAttachment *bulidAttachment;
+
 @end
