@@ -81,16 +81,6 @@
     [self.superview addSubview:self.backGroundView positioned:NSWindowBelow relativeTo:self];
 }
 
-- (void)mouseDown:(NSEvent *)event {
-    CGPoint touchPointInWindow = event.locationInWindow;
-    CGPoint  point = [self.window convertBaseToScreen:touchPointInWindow];
-    NSInteger index = [self characterIndexForPoint:point];
-    
-    [super mouseDown:event];
-    
-}
-
-
 
 - (void)setDrawsBackground:(BOOL)drawsBackground {
     [super setDrawsBackground:drawsBackground];

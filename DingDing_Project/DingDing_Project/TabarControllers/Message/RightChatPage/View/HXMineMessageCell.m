@@ -37,7 +37,11 @@
     self.msgTextView.borderColor = [NSColor clearColor];
     self.msgTextView.textViewBgColor = HXSColor(64, 175, 252);
     self.msgTextView.textColor = HXSColor(228, 244, 255);
-    self.msgTextView.canEdit  = NO;
+    self.msgTextView.canEdit = NO;
+    
+    NSMutableDictionary *atts = [self.msgTextView.linkTextAttributes mutableCopy];
+    [atts setObject:HXSColor(200, 231, 252) forKey:@"NSColor"];
+    self.msgTextView.linkTextAttributes = atts;
     
     _timeLabel.hidden = YES;
     

@@ -98,6 +98,7 @@
 		8AB431001D9B70440063CF7A /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB430F31D9B70440063CF7A /* SDWebImageCompat.m */; };
 		8AB431011D9B70440063CF7A /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB430F51D9B70440063CF7A /* SDWebImageDecoder.m */; };
 		8AC667A31DABAD7600250E02 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC667A21DABAD7600250E02 /* AppKit.framework */; };
+		8AC9D2841DEE721A00DA1210 /* HXSpecial.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9D2831DEE721A00DA1210 /* HXSpecial.m */; };
 		8AD9FE151DC2370900FBDFC6 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9FE141DC2370900FBDFC6 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8AD9FE171DC2372700FBDFC6 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD9FE161DC2372700FBDFC6 /* libicucore.tbd */; };
 		8AE26D341D598A4800855257 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE26D2F1D598A4800855257 /* AppDelegate.m */; };
@@ -529,6 +530,8 @@
 		8AB430F41D9B70440063CF7A /* SDWebImageDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDecoder.h; sourceTree = "<group>"; };
 		8AB430F51D9B70440063CF7A /* SDWebImageDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDecoder.m; sourceTree = "<group>"; };
 		8AC667A21DABAD7600250E02 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		8AC9D2821DEE721A00DA1210 /* HXSpecial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXSpecial.h; sourceTree = "<group>"; };
+		8AC9D2831DEE721A00DA1210 /* HXSpecial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXSpecial.m; sourceTree = "<group>"; };
 		8AD9FE131DC2370900FBDFC6 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		8AD9FE141DC2370900FBDFC6 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		8AD9FE161DC2372700FBDFC6 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
@@ -924,6 +927,8 @@
 			isa = PBXGroup;
 			children = (
 				8AF2075D1DBDF0F400710DBC /* haha@2x.png */,
+				8AC9D2821DEE721A00DA1210 /* HXSpecial.h */,
+				8AC9D2831DEE721A00DA1210 /* HXSpecial.m */,
 				331F5F871DC4E8D9003922EF /* HXTextPart.h */,
 				331F5F881DC4E8D9003922EF /* HXTextPart.m */,
 				8AF2075A1DBDE1C200710DBC /* NSScrollView+Enabled.h */,
@@ -2251,6 +2256,7 @@
 				8AE49A941DAA225B00461D8C /* HXBaseTabelCell.m in Sources */,
 				8AEE584A1DDEEAD4009CE582 /* NSObject+Property.m in Sources */,
 				8A72A2F61DEC1C9100BCC218 /* HXButton.m in Sources */,
+				8AC9D2841DEE721A00DA1210 /* HXSpecial.m in Sources */,
 				8A72A2EA1DEC1B2B00BCC218 /* HXContactPeopleController.m in Sources */,
 				8AE26D541D59B4F000855257 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				8AE26D531D59B4F000855257 /* NSArray+PureLayout.m in Sources */,

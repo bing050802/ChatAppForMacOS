@@ -41,9 +41,13 @@
     self.attTextView.drawsBackground = NO;
     self.attTextView.borderColor = HXColor(225, 224, 228);
     self.attTextView.textColor = HXColor(70, 70, 70);
-    self.attTextView.selectedRange = NSMakeRange(0, 0);
+//    self.attTextView.selectedRange = NSMakeRange(0, 0);
     self.attTextView.delegate = self;
     
+    NSMutableDictionary *atts = [self.attTextView.linkTextAttributes mutableCopy];
+    [atts setObject:HXSColor(47, 155, 255) forKey:@"NSColor"];
+    self.attTextView.linkTextAttributes = atts;
+
     
     _popButton.trackingEabled = YES;
     _popButton.hidden = YES;
@@ -66,6 +70,7 @@
     NSMutableAttributedString *attString = [NSMutableAttributedString parseFaceWordFromString:message.text];
     [attString setLineSpacing:5];
     
+
     [self.attTextView insertText:attString replacementRange:NSMakeRange(0, 0)];
     self.attTextView.editable = NO;
     CGSize textRealSize = [attString mlineSize];
@@ -90,8 +95,6 @@
     _timeLable.hidden = YES;
 }
 
-- (void)layout {
-    [super layout];
-}
+
 
 @end

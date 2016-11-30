@@ -11,6 +11,7 @@
 #import "HXTextPart.h"
 #import "HXPrefixHeader.h"
 #import "HXEmotionTool.h"
+#import "HXSpecial.h"
 
 @implementation NSMutableAttributedString (AttachMent)
 
@@ -39,11 +40,13 @@
         if ((*capturedRanges).length == 0) return;
         
         HXTextPart *part = [[HXTextPart alloc] init];
-        part.special = YES;
         part.text = *capturedStrings;
         part.emotion = [part.text hasPrefix:@"["] && [part.text hasSuffix:@"]"];
+        part.special = YES;
         part.range = *capturedRanges;
         [parts addObject:part];
+
+        
     }];
     // 遍历所有的非特殊字符
     [Ostr enumerateStringsSeparatedByRegex:regex usingBlock:^(NSInteger captureCount, NSString *const __unsafe_unretained *capturedStrings, const NSRange *capturedRanges, volatile BOOL *const stop) {
@@ -67,16 +70,18 @@
 }
 
 + (NSMutableAttributedString *)parseFaceWordFromString:(NSString *)string {
-
+    
     // 表情的规则
     NSString *emotionPattern = @"\\[[0-9a-zA-Z\\u4e00-\\u9fa5]+\\]";
     // url链接的规则
-    NSString *urlPattern = @"\\b(([\\w-]+://?|www[.])[^\\s()<>]+(?:\\([\\w\\d]+\\)|([^[:punct:]\\s]|/)))";
+    NSString *urlPattern =@"http(s)?://([a-zA-Z|\\d]+\\.)+[a-zA-Z|\\d]+(/[a-zA-Z|\\d|\\-|\\+|_./?%&=]*)?";
     NSString *pattern = [NSString stringWithFormat:@"%@|%@", emotionPattern,urlPattern];
     
     // 按顺序拼接每一段文字
     NSMutableAttributedString *resultAttString = [[NSMutableAttributedString alloc] init];
     NSMutableAttributedString *calculateString = [[NSMutableAttributedString alloc] init];
+    
+    NSMutableArray *specials = [NSMutableArray array];
     
     for (HXTextPart *part in [self patternPartsWithRegex:pattern originString:string]) {
         // 等会需要拼接的子串
@@ -87,19 +92,24 @@
         if (part.isEmotion) { // 表情
             CGSize attSize = CGSizeMake(EmotionWH, EmotionWH);
             HXEmotion *em = [HXEmotionTool emotionWithChs:part.text];
-//            NSLog(@"isEmotion---substr--%@---%@",part.text,em);
+            //            NSLog(@"isEmotion---substr--%@---%@",part.text,em);
             substr = [self attributedStringWithImage:em.emotionimage attachSize:attSize];
             subCalculateString = [self createReplacementAttString];
             
         }
         else if (part.special) { // 非表情的特殊文字
-            substr = [[NSMutableAttributedString alloc] initWithString:part.text]; //HelveticaNeue，HelveticaNeue-Bold
-            [substr setFont:[NSFont systemFontOfSize:13.4] range:NSMakeRange(0, part.text.length)];
-            subCalculateString = substr;
             
+            substr = [[NSMutableAttributedString alloc] initWithString:part.text];
+            [substr addAttribute:NSLinkAttributeName
+                           value:part.text
+                           range:NSMakeRange(0, substr.length)];
+            [substr setFont:[NSFont systemFontOfSize:14.0]];
+
+            subCalculateString = substr;
+        
         }
         else { // 非特殊文字
-            substr = [[NSMutableAttributedString alloc] initWithString:part.text]; //HelveticaNeue，HelveticaNeue-Bold
+            substr = [[NSMutableAttributedString alloc] initWithString:part.text];
             [substr setFont:[NSFont systemFontOfSize:13.4] range:NSMakeRange(0, part.text.length)];
             subCalculateString = substr;
         }
@@ -110,11 +120,11 @@
     // 计算 单行文字宽高
     CGSize singelineSize = [calculateString calculateSingelineSize];
     [resultAttString addAttribute:@"singelineSize" value:[NSValue valueWithSize:singelineSize] range:NSMakeRange(0, 1)];
-   
+    
     [calculateString setLineSpacing:5];
     CGSize mlineSize = [calculateString realitySizeForWidth:300];
     [resultAttString addAttribute:@"mlineSize" value:[NSValue valueWithSize:mlineSize] range:NSMakeRange(0, 1)];
-
+    
     return resultAttString;
 }
 
