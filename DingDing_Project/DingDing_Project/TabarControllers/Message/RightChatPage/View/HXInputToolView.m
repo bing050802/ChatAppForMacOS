@@ -106,14 +106,15 @@
     }
     return NO;
 }
-- (BOOL)textView:(NSTextView *)textView shouldChangeTextInRange:(NSRange)affectedCharRange replacementString:(nullable NSString *)replacementString
-{
-    if (affectedCharRange.location == 0) {
+
+
+- (void)textDidChange:(NSNotification *)notification {
+    if (self.inputTextView.string.length == 0) {
         self.sendButton.selected = NO;
     } else {
         self.sendButton.selected = YES;
     }
-    return YES;
+    
 }
 
 - (void)send
