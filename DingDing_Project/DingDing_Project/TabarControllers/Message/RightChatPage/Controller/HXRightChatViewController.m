@@ -268,6 +268,7 @@ static NSString *mineCellID = @"mineCellID";
     // 隐藏表情键盘
     self.facialPanel.hidden = YES;
     self.facialPanel = nil;
+    
 }
 
 

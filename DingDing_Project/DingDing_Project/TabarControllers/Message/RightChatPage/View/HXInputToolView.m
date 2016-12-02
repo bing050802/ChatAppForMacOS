@@ -26,9 +26,25 @@
 
 @property (weak) IBOutlet HXButton *sendButton;
 
+
+@property (nonatomic,strong) NSView *listView;
+
+
+
 @end
 
-@implementation HXInputToolView 
+@implementation HXInputToolView
+
+- (NSView  *)listView {
+    if (!_listView) {
+        _listView = [[NSView alloc] init];
+        _listView.wantsLayer = YES;
+        _listView.layer.backgroundColor = [NSColor redColor].CGColor;
+    }
+    return _listView;
+}
+
+
 
 + (HXInputToolView *)loadXibInputView
 {
@@ -82,7 +98,7 @@
     self.inputTextView.font = [NSFont systemFontOfSize:14.0];
     self.inputTextView.textColor = HXColor(70, 70, 70);
     self.inputTextView.delegate = self;
-    
+
     self.sendButton.titleEdgeInsets = NSEdgeInsetsMake(0, 25, 0, 0);
     self.sendButton.titleFont = [NSFont systemFontOfSize:13];
     [self.sendButton setTitleColor:[NSColor lightGrayColor] forState:NSControlStateNormal];
@@ -104,11 +120,87 @@
         self.sendButton.selected = NO;
         return YES;
     }
+    if (commandSelector == @selector(moveLeft:) || commandSelector == @selector(moveRight:)) {
+
+        if (textView.selectedRange.location <= textView.string.length) {
+//            [view removeFromSuperview];
+        }
+        // 得到光标前一个字符
+        
+        // 如果光标移动中碰到@ 就显示popver菜单
+        
+        return NO;
+    }
+    if (commandSelector == @selector(deleteBackward:)) {
+        
+//        NSLog(@"------%@",NSStringFromRange(textView.selectedRange));
+        
+        return NO;
+    }
+    
+    
     return NO;
 }
 
 
+/*
+ 
+ NSString *old = [textView.string substringFromIndex:affectedCharRange.location];
+ //    NSLog(@"old------%@",old);
+ 
+ if ([textView.string rangeOfString:@"@"].location != NSNotFound && self.listView)  {
+ [self.listView removeFromSuperview];
+ }
+ 
+ if ([old isEqualToString:@"@"]) {
+ [self.listView removeFromSuperview];
+ }
+ 
+ 
+ */
+- (BOOL)textView:(NSTextView *)textView shouldChangeTextInRange:(NSRange)affectedCharRange replacementString:(nullable NSString *)replacementString {
+    
+    // 当删除的时候 replacementString = nil
+    
+    NSLog(@"new------%@",replacementString);
+    // 第一步：实现任意位置输入@弹出框展示所有的人员列表
+    if ([replacementString isEqualToString:@"@"]) {
+        NSRange range;
+        NSRect rect = [textView firstRectForCharacterRange:NSMakeRange(affectedCharRange.location, 1) actualRange:&range];
+        NSRect windowRect = [self.window  convertRectFromScreen:rect];
+        self.listView.frame = CGRectMake(NSMinX(windowRect), NSMinY(windowRect) + 17, 30, 160);
+        [self.window.contentView addSubview:self.listView];
+    }
+    
+    // 判断是否是输入@之后接着再输入的
+    // 得到新插入字符的前一个字符
+    NSString *beforeCurorChar;
+    if (textView.string.length > 0 ) {
+        beforeCurorChar = [textView.string substringWithRange:NSMakeRange(textView.selectedRange.location - 1, 1)];
+    }
+    NSLog(@"beforeCurorChar------%@",beforeCurorChar);
+    
+    // 如果显示列表之后，继续输入，则进入过滤模式，根据新加入的字符串，过滤人名
+    [self startfilterWithPattern:replacementString];
+    
+    
+    
+    
+    
+    //    NSLog(@"------%@",NSStringFromRange(affectedCharRange));
+    return YES;
+}
+
+
+- (void)startfilterWithPattern:(NSString *)string  {
+    
+
+}
+
+
+
 - (void)textDidChange:(NSNotification *)notification {
+
     if (self.inputTextView.string.length == 0) {
         self.sendButton.selected = NO;
     } else {
