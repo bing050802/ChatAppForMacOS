@@ -81,7 +81,6 @@
     NSMutableAttributedString *resultAttString = [[NSMutableAttributedString alloc] init];
     NSMutableAttributedString *calculateString = [[NSMutableAttributedString alloc] init];
     
-    NSMutableArray *specials = [NSMutableArray array];
     
     for (HXTextPart *part in [self patternPartsWithRegex:pattern originString:string]) {
         // 等会需要拼接的子串

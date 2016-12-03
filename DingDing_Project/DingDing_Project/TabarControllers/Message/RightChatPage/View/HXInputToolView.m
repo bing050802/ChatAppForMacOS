@@ -11,6 +11,8 @@
 #import "HXButton.h"
 #import "HXTextView.h"
 
+#import "RegexKitLite.h"
+
 
 @interface HXInputToolView () <NSTextViewDelegate>
 
@@ -28,6 +30,11 @@
 
 
 @property (nonatomic,strong) NSView *listView;
+
+@property (nonatomic,strong) NSMutableString *filterKey;
+
+//@property (nonatomic,assign) NSRange elterRange;
+
 
 
 
@@ -133,81 +140,100 @@
     }
     if (commandSelector == @selector(deleteBackward:)) {
         
-//        NSLog(@"------%@",NSStringFromRange(textView.selectedRange));
+        
+        
+        
         
         return NO;
     }
+    
     
     
     return NO;
 }
 
 
-/*
- 
- NSString *old = [textView.string substringFromIndex:affectedCharRange.location];
- //    NSLog(@"old------%@",old);
- 
- if ([textView.string rangeOfString:@"@"].location != NSNotFound && self.listView)  {
- [self.listView removeFromSuperview];
- }
- 
- if ([old isEqualToString:@"@"]) {
- [self.listView removeFromSuperview];
- }
- 
- 
- */
+
+- (NSMutableString *)filterKey {
+    if (!_filterKey) {
+        _filterKey = [NSMutableString string];
+    }
+    return  _filterKey;
+}
+
+
 - (BOOL)textView:(NSTextView *)textView shouldChangeTextInRange:(NSRange)affectedCharRange replacementString:(nullable NSString *)replacementString {
     
-    // 当删除的时候 replacementString = nil
-    
-    NSLog(@"new------%@",replacementString);
-    // 第一步：实现任意位置输入@弹出框展示所有的人员列表
     if ([replacementString isEqualToString:@"@"]) {
-        NSRange range;
-        NSRect rect = [textView firstRectForCharacterRange:NSMakeRange(affectedCharRange.location, 1) actualRange:&range];
-        NSRect windowRect = [self.window  convertRectFromScreen:rect];
-        self.listView.frame = CGRectMake(NSMinX(windowRect), NSMinY(windowRect) + 17, 30, 160);
-        [self.window.contentView addSubview:self.listView];
+
+    }
+    if (replacementString.length == 0) {
+        
     }
     
-    // 判断是否是输入@之后接着再输入的
-    // 得到新插入字符的前一个字符
-    NSString *beforeCurorChar;
-    if (textView.string.length > 0 ) {
-        beforeCurorChar = [textView.string substringWithRange:NSMakeRange(textView.selectedRange.location - 1, 1)];
-    }
-    NSLog(@"beforeCurorChar------%@",beforeCurorChar);
-    
-    // 如果显示列表之后，继续输入，则进入过滤模式，根据新加入的字符串，过滤人名
-    [self startfilterWithPattern:replacementString];
     
     
-    
-    
-    
-    //    NSLog(@"------%@",NSStringFromRange(affectedCharRange));
     return YES;
 }
 
 
-- (void)startfilterWithPattern:(NSString *)string  {
+
+
+- (void)textDidChange:(NSNotification *)notification
+{
     
-
-}
-
-
-
-- (void)textDidChange:(NSNotification *)notification {
-
-    if (self.inputTextView.string.length == 0) {
-        self.sendButton.selected = NO;
+    NSTextView *textView = notification.object;
+    
+    NSMutableArray *elterRanges = [NSMutableArray array];
+    [textView.string enumerateStringsMatchedByRegex:@"@" usingBlock:^(NSInteger captureCount, NSString *const __unsafe_unretained *capturedStrings, const NSRange *capturedRanges, volatile BOOL *const stop) {
+        NSLog(@"--%@--%@",*capturedStrings,NSStringFromRange(*capturedRanges));
+        [elterRanges addObject:[NSValue valueWithRange:*capturedRanges]];
+    }];
+    
+    if (elterRanges.count) {
+        
+        NSRange lastElterRange = [[elterRanges lastObject] rangeValue];
+        
+        NSRange range;
+        NSRect rect = [textView firstRectForCharacterRange:NSMakeRange(lastElterRange.location, 1) actualRange:&range];
+        NSRect windowRect = [self.window  convertRectFromScreen:rect];
+        self.listView.frame = CGRectMake(NSMinX(windowRect), NSMinY(windowRect) + 17, 30, 160);
+        [self.window.contentView addSubview:self.listView];
+        
+    
+        NSString *filterString = [textView.string substringFromIndex:lastElterRange.location + 1];
+        [self startfilterWithPattern:filterString];
+        
+        
     } else {
+        
+        [self.listView removeFromSuperview];
+    }
+
+    if (textView.string.length == 0) {
+        self.sendButton.selected = NO;
+    }
+    else {
         self.sendButton.selected = YES;
     }
     
 }
+
+
+- (void)startfilterWithPattern:(NSString *)string
+{
+    
+    if (string.length == 0) {
+          NSLog(@"展示所有");
+        
+        return;
+    }
+
+   // 比钉钉做的好的一点 dfdasfad@faf （先输入dfdasfadfaf，然后光标后移3位，输入@，能识别@后面的faf，做过滤）
+    NSLog(@"filter------%@",string);
+}
+
+
 
 - (void)send
 {
