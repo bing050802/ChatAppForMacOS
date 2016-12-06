@@ -65,6 +65,8 @@
 
 // ZYPinYinSearch 拼音模糊搜索
 
+//https://github.com/BokkkRottt/BRDrawer  模仿qq登录界面
+
 
 #define selfWidth   self.frame.size.width
 #define selfHeight  self.frame.size.height

@@ -31,7 +31,7 @@
 
 @property (nonatomic,strong) NSView *listView;
 
-@property (nonatomic,strong) NSMutableString *filterKey;
+//@property (nonatomic,strong) NSMutableString *filterKey;
 
 //@property (nonatomic,assign) NSRange elterRange;
 
@@ -130,7 +130,7 @@
     if (commandSelector == @selector(moveLeft:) || commandSelector == @selector(moveRight:)) {
 
         if (textView.selectedRange.location <= textView.string.length) {
-//            [view removeFromSuperview];
+        // [view removeFromSuperview];
         }
         // 得到光标前一个字符
         
@@ -154,12 +154,12 @@
 
 
 
-- (NSMutableString *)filterKey {
-    if (!_filterKey) {
-        _filterKey = [NSMutableString string];
-    }
-    return  _filterKey;
-}
+//- (NSMutableString *)filterKey {
+//    if (!_filterKey) {
+//        _filterKey = [NSMutableString string];
+//    }
+//    return  _filterKey;
+//}
 
 
 - (BOOL)textView:(NSTextView *)textView shouldChangeTextInRange:(NSRange)affectedCharRange replacementString:(nullable NSString *)replacementString {
@@ -191,25 +191,17 @@
     }];
     
     if (elterRanges.count) {
-        
         NSRange lastElterRange = [[elterRanges lastObject] rangeValue];
-        
-        NSRange range;
-        NSRect rect = [textView firstRectForCharacterRange:NSMakeRange(lastElterRange.location, 1) actualRange:&range];
-        NSRect windowRect = [self.window  convertRectFromScreen:rect];
-        self.listView.frame = CGRectMake(NSMinX(windowRect), NSMinY(windowRect) + 17, 30, 160);
-        [self.window.contentView addSubview:self.listView];
-        
+        [self contactListWithElterRange:lastElterRange];
     
         NSString *filterString = [textView.string substringFromIndex:lastElterRange.location + 1];
         [self startfilterWithPattern:filterString];
-        
-        
-    } else {
-        
+    }
+    else {
         [self.listView removeFromSuperview];
     }
 
+    
     if (textView.string.length == 0) {
         self.sendButton.selected = NO;
     }
@@ -217,6 +209,16 @@
         self.sendButton.selected = YES;
     }
     
+}
+
+
+
+- (void)contactListWithElterRange:(NSRange)eRange
+{
+    NSRect rect = [self.inputTextView firstRectForCharacterRange:NSMakeRange(eRange.location, 1) actualRange:NULL];
+    NSRect windowRect = [self.window  convertRectFromScreen:rect];
+    self.listView.frame = CGRectMake(NSMinX(windowRect), NSMinY(windowRect) + 17, 30, 160);
+    [self.window.contentView addSubview:self.listView];
 }
 
 
