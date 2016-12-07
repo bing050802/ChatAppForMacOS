@@ -57,14 +57,9 @@
 }
 
 
-//self.listView.contactsArray = [HXSaveContact selectNameWithFilteString:textField.stringValue];
-
-
 - (NSView *)listView {
     if (!_listView) {
         _listView = [HXContactListView loadXibContactListView];
-//        _listView.wantsLayer = YES;
-//        _listView.layer.backgroundColor = [NSColor redColor].CGColor;
     }
     return _listView;
 }
@@ -141,6 +136,7 @@
     [self.sendButton setBackgroundColor:[NSColor whiteColor] forState:NSControlStateNormal];
     self.sendButton.target = self;
     self.sendButton.action = @selector(send);
+    
 
 }
 
@@ -167,26 +163,17 @@
     }
     if (commandSelector == @selector(deleteBackward:)) {
         
+        return NO;
+    }
+    if (commandSelector == @selector(moveUp:) || commandSelector == @selector(moveDown:)) {
         
-        
-        
+        [self.window makeFirstResponder:self.listView.subviews[0]];
         
         return NO;
     }
-    
-    
-    
+
     return NO;
 }
-
-
-
-//- (NSMutableString *)filterKey {
-//    if (!_filterKey) {
-//        _filterKey = [NSMutableString string];
-//    }
-//    return  _filterKey;
-//}
 
 
 - (BOOL)textView:(NSTextView *)textView shouldChangeTextInRange:(NSRange)affectedCharRange replacementString:(nullable NSString *)replacementString {
@@ -202,8 +189,6 @@
     
     return YES;
 }
-
-
 
 
 - (void)textDidChange:(NSNotification *)notification
@@ -251,9 +236,7 @@
 
 - (void)startfilterWithPattern:(NSString *)string
 {
-    
-//    [self.listView removeFromSuperview];
-//    self.listView = nil;
+
     if (string.length == 0) {
         NSLog(@"展示所有");
         self.listView.contactsArray = [HXSaveContact selectAll];
@@ -261,6 +244,7 @@
     }
     
     self.listView.contactsArray = [HXSaveContact selectNameWithFilteString:string];
+    
     // 比钉钉做的好的一点 dfdasfad@faf （先输入dfdasfadfaf，然后光标后移3位，输入@，能识别@后面的faf，做过滤）
 //    NSLog(@"filter------%@",string);
 }

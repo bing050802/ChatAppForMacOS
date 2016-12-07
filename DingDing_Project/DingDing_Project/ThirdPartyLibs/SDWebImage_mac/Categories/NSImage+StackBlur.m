@@ -16,6 +16,9 @@ inline static void zeroClearInt(int* p, size_t count) { memset(p, 0, sizeof(int)
 
 + (NSImage *)circleImageWithColor:(NSColor *)color size:(NSSize)size text:(NSString *)text font:(NSFont *)font {
     NSImage *colorImage = [self imageWithColor:color size:size text:text font:font];
+    if ([text isEqualToString:@"所有人"]) {
+        colorImage = [NSImage imageNamed:@"all_icon"];
+    }
     return [colorImage circleImageWithBorderWidth:0 borderColor:[NSColor whiteColor] size:size];
 }
 

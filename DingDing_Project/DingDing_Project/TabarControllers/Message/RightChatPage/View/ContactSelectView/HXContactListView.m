@@ -49,8 +49,6 @@
 }
 
 
-
-
 @end
 
 
@@ -107,17 +105,8 @@
 
 - (nullable NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row
 {
-    
-    // NSTableColumn的identifier可在xib里面设置，如果不设置系统会有一个默认的命名
-    NSString *identifiy = tableColumn.identifier;
-    
     // 提取cell
     NSTableCellView *cell = [tableView makeViewWithIdentifier:@"abc" owner:self];
-    if (!cell) {
-         NSLog(@"--null-cell");
-    }
-
-//    cell.layer.backgroundColor = [NSColor redColor].CGColor;
     // 设置cell
     cell.textField.stringValue = _contactsArray[row];
     cell.textField.textColor = [NSColor darkGrayColor];

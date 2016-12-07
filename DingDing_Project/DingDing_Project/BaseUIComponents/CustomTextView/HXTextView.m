@@ -7,6 +7,7 @@
 //
 
 #import "HXTextView.h"
+#import "HXPrefixHeader.h"
 
 @interface HXTextView ()
 
@@ -106,5 +107,11 @@
     NSRect newRect = NSMakeRect(rect.origin.x + 0, rect.origin.y + 0, rect.size.width - 0, rect.size.height - 0);
     self.backGroundView.frame = newRect;
 }
+
+- (void)keyDown:(NSEvent *)event {
+    [super keyDown:event];
+}
+
+
 
 @end
