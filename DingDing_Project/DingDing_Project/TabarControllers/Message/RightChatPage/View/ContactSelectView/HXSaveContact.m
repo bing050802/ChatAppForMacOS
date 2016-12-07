@@ -88,6 +88,23 @@ static FMDatabase *_db;
     [_db executeUpdateWithFormat:@"DELETE FROM t_saveContact;"];
 }
 
++ (NSInteger)savedCount {
+    //SELECT count(*) ... FROM （*代表任意字段）
+    NSString *sqlstr = @"SELECT count(*) as 'count' FROM t_saveContact";
+    FMResultSet *set = [_db executeQuery:sqlstr];
+    while (set.next) {
+        NSInteger count = [set intForColumn:@"count"];
+        return count;
+    }
+    return 0;
+}
+
++ (NSArray *)selectAll {
+    NSMutableArray *arrayM = [[self selectNameWithFilteString:@""] mutableCopy];
+    [arrayM insertObject:@"所有人" atIndex:0];
+    return arrayM;
+}
+
 
 
 @end

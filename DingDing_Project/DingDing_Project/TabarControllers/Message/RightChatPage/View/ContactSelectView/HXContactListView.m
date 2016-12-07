@@ -8,6 +8,8 @@
 
 #import "HXContactListView.h"
 #import "NSTableView+Selection.h"
+#import "HXPrefixHeader.h"
+#import "NSImage+StackBlur.h"
 
 
 #define cellColor [NSColor colorWithRed:215/255.0 green:232/255.0 blue:248/255.0 alpha:1.0]
@@ -80,40 +82,46 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    self.contactListView.allowsTypeSelect = NO;
+
     self.contactListView.headerView = nil;
     self.contactListView.selectionHighlightStyle = NSTableViewSelectionHighlightStyleNone;
 }
 
 
 - (void)setContactsArray:(NSArray *)contactsArray {
-    _contactsArray = contactsArray;
+     _contactsArray = contactsArray;
     [self.contactListView reloadData];
     [self.contactListView selectRowIndexes:[NSIndexSet indexSetWithIndex:0] byExtendingSelection:YES];
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
 {
-    [self setFrameSize:NSMakeSize(154, _contactsArray.count * 40)];
+    if (_contactsArray.count < 9) {
+        [self setFrameSize:NSMakeSize(154, _contactsArray.count * 40)];
+    } else {
+        [self setFrameSize:NSMakeSize(154, 282)];
+    }
     return _contactsArray.count;
 }
 
 
 - (nullable NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row
 {
+    
     // NSTableColumn的identifier可在xib里面设置，如果不设置系统会有一个默认的命名
     NSString *identifiy = tableColumn.identifier;
     
     // 提取cell
-    NSTableCellView *cell = [tableView makeViewWithIdentifier:identifiy owner:self];
+    NSTableCellView *cell = [tableView makeViewWithIdentifier:@"abc" owner:self];
+    if (!cell) {
+         NSLog(@"--null-cell");
+    }
+
 //    cell.layer.backgroundColor = [NSColor redColor].CGColor;
     // 设置cell
     cell.textField.stringValue = _contactsArray[row];
     cell.textField.textColor = [NSColor darkGrayColor];
-    if ([cell.textField.stringValue isEqualToString:@"所有人"]) {
-        cell.imageView.image = [NSImage imageNamed:@"all_icon"];
-    }
-    
+    cell.imageView.image = [NSImage circleImageWithColor:HXRandomColor size:cell.imageView.frame.size text:cell.textField.stringValue font:[NSFont systemFontOfSize:11]];
     return cell;
 }
 

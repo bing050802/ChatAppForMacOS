@@ -12,6 +12,8 @@
 #import "HXTextView.h"
 
 #import "RegexKitLite.h"
+#import "HXSaveContact.h"
+#import "HXContactListView.h"
 
 
 @interface HXInputToolView () <NSTextViewDelegate>
@@ -29,11 +31,8 @@
 @property (weak) IBOutlet HXButton *sendButton;
 
 
-@property (nonatomic,strong) NSView *listView;
-
-//@property (nonatomic,strong) NSMutableString *filterKey;
-
-//@property (nonatomic,assign) NSRange elterRange;
+@property (nonatomic,strong) NSMutableArray *peopleList;
+@property (nonatomic,strong) HXContactListView *listView;
 
 
 
@@ -42,16 +41,33 @@
 
 @implementation HXInputToolView
 
-- (NSView  *)listView {
-    if (!_listView) {
-        _listView = [[NSView alloc] init];
-        _listView.wantsLayer = YES;
-        _listView.layer.backgroundColor = [NSColor redColor].CGColor;
+- (NSMutableArray *)peopleList {
+    if (!_peopleList) {
+        _peopleList = [[NSMutableArray alloc] init];
+        [_peopleList addObject:@"玄知枫"];
+        [_peopleList addObject:@"李小将"];
+        [_peopleList addObject:@"沐君勒"];
+        [_peopleList addObject:@"吴原"];
+        [_peopleList addObject:@"沐连勒"];
+        [_peopleList addObject:@"宇凌司"];
+        [_peopleList addObject:@"苏献宁"];
+        [_peopleList addObject:@"乔汜枫"];
     }
-    return _listView;
+    return _peopleList;
 }
 
 
+//self.listView.contactsArray = [HXSaveContact selectNameWithFilteString:textField.stringValue];
+
+
+- (NSView *)listView {
+    if (!_listView) {
+        _listView = [HXContactListView loadXibContactListView];
+//        _listView.wantsLayer = YES;
+//        _listView.layer.backgroundColor = [NSColor redColor].CGColor;
+    }
+    return _listView;
+}
 
 + (HXInputToolView *)loadXibInputView
 {
@@ -89,10 +105,21 @@
 }
 
 
+- (void)configContacts {
+    [HXSaveContact clearAll];
+    if (![HXSaveContact savedCount]) {
+        for (NSString *name in self.peopleList) {
+            [HXSaveContact saveContact:name];
+        }
+    }
+}
+
 
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+    
+    [self configContacts];
     
     [NotificationCenter addObserver:self selector:@selector(emotionSelect:) name:EmotionSelectNotification object:nil];
     
@@ -225,14 +252,17 @@
 - (void)startfilterWithPattern:(NSString *)string
 {
     
+//    [self.listView removeFromSuperview];
+//    self.listView = nil;
     if (string.length == 0) {
-          NSLog(@"展示所有");
-        
+        NSLog(@"展示所有");
+        self.listView.contactsArray = [HXSaveContact selectAll];
         return;
     }
-
-   // 比钉钉做的好的一点 dfdasfad@faf （先输入dfdasfadfaf，然后光标后移3位，输入@，能识别@后面的faf，做过滤）
-    NSLog(@"filter------%@",string);
+    
+    self.listView.contactsArray = [HXSaveContact selectNameWithFilteString:string];
+    // 比钉钉做的好的一点 dfdasfad@faf （先输入dfdasfadfaf，然后光标后移3位，输入@，能识别@后面的faf，做过滤）
+//    NSLog(@"filter------%@",string);
 }
 
 

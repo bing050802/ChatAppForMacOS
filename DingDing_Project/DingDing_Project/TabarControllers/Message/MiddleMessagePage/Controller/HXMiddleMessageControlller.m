@@ -29,6 +29,7 @@
     [super loadView];
     
     self.msgTableView.headerView = nil;
+    self.msgTableView.tag = 10;
     [self.msgTableView registerNib:[[NSNib alloc] initWithNibNamed:NSStringFromClass([HXMessageCell class]) bundle:nil]  forIdentifier:@"msgCell"];
     [self.msgTableView reloadData];
     

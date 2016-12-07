@@ -22,6 +22,9 @@
 @property (weak) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSTextField *searchField;
 
+@property (nonatomic,strong) HXContactListView *listView;
+
+
 @end
 
 @implementation AppDelegate
@@ -39,6 +42,7 @@
     listView.layer.backgroundColor = [NSColor purpleColor].CGColor;
     [listView setFrameOrigin:NSMakePoint(30, 50)];
     [self.window.contentView addSubview:listView];
+    self.listView = listView;
     
     
     
@@ -52,7 +56,7 @@
     NSTextField *textField = obj.object;
     NSLog(@"检索字符----%@",textField.stringValue);
     NSLog(@"----检索结果%@",[HXSaveContact selectNameWithFilteString:textField.stringValue]);
-    
+    self.listView.contactsArray = [HXSaveContact selectNameWithFilteString:textField.stringValue];
 }
 
 

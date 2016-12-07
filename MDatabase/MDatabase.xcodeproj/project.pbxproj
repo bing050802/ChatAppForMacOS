@@ -36,6 +36,8 @@
 		8AD2221C1DF69EA0002FF035 /* HXSaveContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD2221B1DF69EA0002FF035 /* HXSaveContact.m */; };
 		8AD2222D1DF6C5D9002FF035 /* HXContactListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD2222C1DF6C5D9002FF035 /* HXContactListView.m */; };
 		8AD2222F1DF6C5E9002FF035 /* HXContactListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AD2222E1DF6C5E9002FF035 /* HXContactListView.xib */; };
+		8AEBDD001DF7B06E00C0E9DD /* NSTableView+Selection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEBDCFF1DF7B06E00C0E9DD /* NSTableView+Selection.m */; };
+		8AEBDD0A1DF7F0D100C0E9DD /* all_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AEBDD091DF7F0D100C0E9DD /* all_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +95,9 @@
 		8AD2222C1DF6C5D9002FF035 /* HXContactListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXContactListView.m; sourceTree = "<group>"; };
 		8AD2222E1DF6C5E9002FF035 /* HXContactListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXContactListView.xib; sourceTree = "<group>"; };
 		8AE077341DF5787B00C5E9FE /* MDatabase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MDatabase.entitlements; sourceTree = "<group>"; };
+		8AEBDCFE1DF7B06E00C0E9DD /* NSTableView+Selection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTableView+Selection.h"; sourceTree = "<group>"; };
+		8AEBDCFF1DF7B06E00C0E9DD /* NSTableView+Selection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTableView+Selection.m"; sourceTree = "<group>"; };
+		8AEBDD091DF7F0D100C0E9DD /* all_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = all_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +141,9 @@
 				71F1B8111D07DDC000ED0144 /* fmdb */,
 				71F1B8001D07DD3B00ED0144 /* AppDelegate.h */,
 				71F1B8011D07DD3B00ED0144 /* AppDelegate.m */,
+				8AEBDD091DF7F0D100C0E9DD /* all_icon.png */,
+				8AEBDCFE1DF7B06E00C0E9DD /* NSTableView+Selection.h */,
+				8AEBDCFF1DF7B06E00C0E9DD /* NSTableView+Selection.m */,
 				8AD2222B1DF6C5D9002FF035 /* HXContactListView.h */,
 				8AD2222C1DF6C5D9002FF035 /* HXContactListView.m */,
 				8AD2222E1DF6C5E9002FF035 /* HXContactListView.xib */,
@@ -316,6 +324,7 @@
 				71F1B8321D081B6200ED0144 /* DatabaseDemo.sqlite in Resources */,
 				71F1B80A1D07DD3B00ED0144 /* MainMenu.xib in Resources */,
 				71F1B8231D07DDC000ED0144 /* Info.plist in Resources */,
+				8AEBDD0A1DF7F0D100C0E9DD /* all_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +350,7 @@
 				71F1B8401D082AAA00ED0144 /* DAO.m in Sources */,
 				8AD2221C1DF69EA0002FF035 /* HXSaveContact.m in Sources */,
 				71F1B82C1D07DE4900ED0144 /* MDAO.m in Sources */,
+				8AEBDD001DF7B06E00C0E9DD /* NSTableView+Selection.m in Sources */,
 				71F1B8201D07DDC000ED0144 /* FMDatabasePool.m in Sources */,
 				8AD2222D1DF6C5D9002FF035 /* HXContactListView.m in Sources */,
 				71F1B8531D09248800ED0144 /* TypeKit.m in Sources */,

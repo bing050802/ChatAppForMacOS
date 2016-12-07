@@ -124,6 +124,17 @@
 		8AE3FD2B1DA8F4070023331C /* JMOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE3FD261DA8F4070023331C /* JMOverlayView.m */; };
 		8AE49A941DAA225B00461D8C /* HXBaseTabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE49A931DAA225B00461D8C /* HXBaseTabelCell.m */; };
 		8AE49A961DAA4BFE00461D8C /* rightBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE49A951DAA4BFE00461D8C /* rightBG.png */; };
+		8AEBDD1E1DF7F6C600C0E9DD /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEBDD0E1DF7F6C600C0E9DD /* FMDatabase.m */; };
+		8AEBDD1F1DF7F6C600C0E9DD /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEBDD101DF7F6C600C0E9DD /* FMDatabaseAdditions.m */; };
+		8AEBDD201DF7F6C600C0E9DD /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEBDD121DF7F6C600C0E9DD /* FMDatabasePool.m */; };
+		8AEBDD211DF7F6C600C0E9DD /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEBDD141DF7F6C600C0E9DD /* FMDatabaseQueue.m */; };
+		8AEBDD221DF7F6C600C0E9DD /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEBDD171DF7F6C600C0E9DD /* FMResultSet.m */; };
+		8AEBDD231DF7F6C600C0E9DD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AEBDD181DF7F6C600C0E9DD /* Info.plist */; };
+		8AEBDD241DF7F6C600C0E9DD /* HXContactListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEBDD1A1DF7F6C600C0E9DD /* HXContactListView.m */; };
+		8AEBDD251DF7F6C600C0E9DD /* HXContactListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AEBDD1B1DF7F6C600C0E9DD /* HXContactListView.xib */; };
+		8AEBDD261DF7F6C600C0E9DD /* HXSaveContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEBDD1D1DF7F6C600C0E9DD /* HXSaveContact.m */; };
+		8AEBDD281DF7F6D200C0E9DD /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AEBDD271DF7F6D200C0E9DD /* libsqlite3.tbd */; };
+		8AEBDD2A1DF7F70200C0E9DD /* all_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AEBDD291DF7F70200C0E9DD /* all_icon.png */; };
 		8AEE58441DDEEAD4009CE582 /* HXMessageSplitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE572A1DDEEAD3009CE582 /* HXMessageSplitController.m */; };
 		8AEE58451DDEEAD4009CE582 /* HXMiddleMessageControlller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE572E1DDEEAD3009CE582 /* HXMiddleMessageControlller.m */; };
 		8AEE58461DDEEAD4009CE582 /* HXMiddleMessageControlller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AEE572F1DDEEAD3009CE582 /* HXMiddleMessageControlller.xib */; };
@@ -575,6 +586,25 @@
 		8AE49A921DAA225B00461D8C /* HXBaseTabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXBaseTabelCell.h; sourceTree = "<group>"; };
 		8AE49A931DAA225B00461D8C /* HXBaseTabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXBaseTabelCell.m; sourceTree = "<group>"; };
 		8AE49A951DAA4BFE00461D8C /* rightBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightBG.png; sourceTree = "<group>"; };
+		8AEBDD0D1DF7F6C600C0E9DD /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		8AEBDD0E1DF7F6C600C0E9DD /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		8AEBDD0F1DF7F6C600C0E9DD /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		8AEBDD101DF7F6C600C0E9DD /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		8AEBDD111DF7F6C600C0E9DD /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		8AEBDD121DF7F6C600C0E9DD /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		8AEBDD131DF7F6C600C0E9DD /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		8AEBDD141DF7F6C600C0E9DD /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		8AEBDD151DF7F6C600C0E9DD /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		8AEBDD161DF7F6C600C0E9DD /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		8AEBDD171DF7F6C600C0E9DD /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		8AEBDD181DF7F6C600C0E9DD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AEBDD191DF7F6C600C0E9DD /* HXContactListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXContactListView.h; sourceTree = "<group>"; };
+		8AEBDD1A1DF7F6C600C0E9DD /* HXContactListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXContactListView.m; sourceTree = "<group>"; };
+		8AEBDD1B1DF7F6C600C0E9DD /* HXContactListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXContactListView.xib; sourceTree = "<group>"; };
+		8AEBDD1C1DF7F6C600C0E9DD /* HXSaveContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXSaveContact.h; sourceTree = "<group>"; };
+		8AEBDD1D1DF7F6C600C0E9DD /* HXSaveContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXSaveContact.m; sourceTree = "<group>"; };
+		8AEBDD271DF7F6D200C0E9DD /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		8AEBDD291DF7F70200C0E9DD /* all_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = all_icon.png; sourceTree = "<group>"; };
 		8AEE57291DDEEAD3009CE582 /* HXMessageSplitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMessageSplitController.h; sourceTree = "<group>"; };
 		8AEE572A1DDEEAD3009CE582 /* HXMessageSplitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMessageSplitController.m; sourceTree = "<group>"; };
 		8AEE572D1DDEEAD3009CE582 /* HXMiddleMessageControlller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMiddleMessageControlller.h; sourceTree = "<group>"; };
@@ -891,6 +921,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AEBDD281DF7F6D200C0E9DD /* libsqlite3.tbd in Frameworks */,
 				8AD9FE171DC2372700FBDFC6 /* libicucore.tbd in Frameworks */,
 				8AC667A31DABAD7600250E02 /* AppKit.framework in Frameworks */,
 				8AAFF5FE1D5C624500E908EC /* ApplicationServices.framework in Frameworks */,
@@ -1177,6 +1208,7 @@
 		8AC667A11DABAD7600250E02 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8AEBDD271DF7F6D200C0E9DD /* libsqlite3.tbd */,
 				8AD9FE161DC2372700FBDFC6 /* libicucore.tbd */,
 				8AC667A21DABAD7600250E02 /* AppKit.framework */,
 			);
@@ -1347,6 +1379,39 @@
 				8AE49A931DAA225B00461D8C /* HXBaseTabelCell.m */,
 			);
 			path = BaseUIComponents;
+			sourceTree = "<group>";
+		};
+		8AEBDD0B1DF7F6C600C0E9DD /* ContactSelectView */ = {
+			isa = PBXGroup;
+			children = (
+				8AEBDD291DF7F70200C0E9DD /* all_icon.png */,
+				8AEBDD0C1DF7F6C600C0E9DD /* fmdb */,
+				8AEBDD191DF7F6C600C0E9DD /* HXContactListView.h */,
+				8AEBDD1A1DF7F6C600C0E9DD /* HXContactListView.m */,
+				8AEBDD1B1DF7F6C600C0E9DD /* HXContactListView.xib */,
+				8AEBDD1C1DF7F6C600C0E9DD /* HXSaveContact.h */,
+				8AEBDD1D1DF7F6C600C0E9DD /* HXSaveContact.m */,
+			);
+			path = ContactSelectView;
+			sourceTree = "<group>";
+		};
+		8AEBDD0C1DF7F6C600C0E9DD /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				8AEBDD0D1DF7F6C600C0E9DD /* FMDatabase.h */,
+				8AEBDD0E1DF7F6C600C0E9DD /* FMDatabase.m */,
+				8AEBDD0F1DF7F6C600C0E9DD /* FMDatabaseAdditions.h */,
+				8AEBDD101DF7F6C600C0E9DD /* FMDatabaseAdditions.m */,
+				8AEBDD111DF7F6C600C0E9DD /* FMDatabasePool.h */,
+				8AEBDD121DF7F6C600C0E9DD /* FMDatabasePool.m */,
+				8AEBDD131DF7F6C600C0E9DD /* FMDatabaseQueue.h */,
+				8AEBDD141DF7F6C600C0E9DD /* FMDatabaseQueue.m */,
+				8AEBDD151DF7F6C600C0E9DD /* FMDB.h */,
+				8AEBDD161DF7F6C600C0E9DD /* FMResultSet.h */,
+				8AEBDD171DF7F6C600C0E9DD /* FMResultSet.m */,
+				8AEBDD181DF7F6C600C0E9DD /* Info.plist */,
+			);
+			path = fmdb;
 			sourceTree = "<group>";
 		};
 		8AEE57241DDEEAD3009CE582 /* TabarControllers */ = {
@@ -1750,6 +1815,7 @@
 		8AEE58391DDEEAD4009CE582 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8AEBDD0B1DF7F6C600C0E9DD /* ContactSelectView */,
 				8AEE583A1DDEEAD4009CE582 /* HXInputToolView.h */,
 				8AEE583B1DDEEAD4009CE582 /* HXInputToolView.m */,
 				8AEE583C1DDEEAD4009CE582 /* HXInputToolView.xib */,
@@ -2154,6 +2220,7 @@
 				8AEE589F1DDEEAD4009CE582 /* h_ye@2x.png in Resources */,
 				8AEE590B1DDEEAD4009CE582 /* lxh_shuaishuaishou.png in Resources */,
 				8A4C6A3A1D7EB928005BC413 /* moreIcon.png in Resources */,
+				8AEBDD251DF7F6C600C0E9DD /* HXContactListView.xib in Resources */,
 				8AEE588D1DDEEAD4009CE582 /* d_zuiyou@2x.png in Resources */,
 				8AEE58A21DDEEAD4009CE582 /* o_dangao@2x.png in Resources */,
 				8AEE588F1DDEEAD4009CE582 /* default.plist in Resources */,
@@ -2198,6 +2265,7 @@
 				8AEE58B31DDEEAD4009CE582 /* w_xianhua@2x.png in Resources */,
 				8AEE58A01DDEEAD4009CE582 /* l_shangxin@2x.png in Resources */,
 				8AEE587D1DDEEAD4009CE582 /* d_touxiao@2x.png in Resources */,
+				8AEBDD231DF7F6C600C0E9DD /* Info.plist in Resources */,
 				8AEE59251DDEEAD4009CE582 /* lxh_zana.gif in Resources */,
 				8AEE58DA1DDEEAD4009CE582 /* lxh_haoxihuan@2x.png in Resources */,
 				8AEE585A1DDEEAD4009CE582 /* d_chitangyuan@2x.png in Resources */,
@@ -2208,6 +2276,7 @@
 				8AEE589E1DDEEAD4009CE582 /* h_woshou@2x.png in Resources */,
 				8A9287171DBF826A004CFAEA /* file.png in Resources */,
 				8AEE58EA1DDEEAD4009CE582 /* lxh_kunsile.gif in Resources */,
+				8AEBDD2A1DF7F70200C0E9DD /* all_icon.png in Resources */,
 				8AEE58F01DDEEAD4009CE582 /* lxh_leiliumanmian.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2222,6 +2291,8 @@
 				8AE3FD2A1DA8F4070023331C /* JMModalOverlay.m in Sources */,
 				8AEE584C1DDEEAD4009CE582 /* HXMessageCell.m in Sources */,
 				8AB430F81D9B70440063CF7A /* NSImage+GIF.m in Sources */,
+				8AEBDD1E1DF7F6C600C0E9DD /* FMDatabase.m in Sources */,
+				8AEBDD1F1DF7F6C600C0E9DD /* FMDatabaseAdditions.m in Sources */,
 				8AE3FD2B1DA8F4070023331C /* JMOverlayView.m in Sources */,
 				8A4C6A361D7EB2E2005BC413 /* HXSelectBar.m in Sources */,
 				8AB430F91D9B70440063CF7A /* NSImage+MultiFormat.m in Sources */,
@@ -2235,10 +2306,12 @@
 				8AEE58441DDEEAD4009CE582 /* HXMessageSplitController.m in Sources */,
 				8AB430FE1D9B70440063CF7A /* NSImageView+WebCache.m in Sources */,
 				8AFF85341D9BBFE600BB9B67 /* NSString+MJExtension.m in Sources */,
+				8AEBDD241DF7F6C600C0E9DD /* HXContactListView.m in Sources */,
 				8AEE58471DDEEAD4009CE582 /* HXMessage.m in Sources */,
 				8AEE58501DDEEAD4009CE582 /* HXRightChatViewController.m in Sources */,
 				8AEE59311DDEEAD4009CE582 /* HXEmotionBoard.m in Sources */,
 				8AFF852E1D9BBFE600BB9B67 /* MJPropertyKey.m in Sources */,
+				8AEBDD261DF7F6C600C0E9DD /* HXSaveContact.m in Sources */,
 				3349A9DC1D852FF60095C667 /* MLPopupWindowManager.m in Sources */,
 				8AEE59381DDEEAD4009CE582 /* HXChatMessge.m in Sources */,
 				8AEE58451DDEEAD4009CE582 /* HXMiddleMessageControlller.m in Sources */,
@@ -2247,6 +2320,7 @@
 				8AB430FA1D9B70440063CF7A /* NSImage+StackBlur.m in Sources */,
 				8A4C6A341D7EB2E2005BC413 /* HXLeftToolBar.m in Sources */,
 				33C74A091DBCF6340017BBD9 /* CustomAttachMentCell.m in Sources */,
+				8AEBDD221DF7F6C600C0E9DD /* FMResultSet.m in Sources */,
 				8AB431011D9B70440063CF7A /* SDWebImageDecoder.m in Sources */,
 				8AE26D521D59B4F000855257 /* ALView+PureLayout.m in Sources */,
 				8AEE584B1DDEEAD4009CE582 /* HXBageView.m in Sources */,
@@ -2268,6 +2342,7 @@
 				8A72A2F91DEC1CC600BCC218 /* HXTextField.m in Sources */,
 				8AF5CAD11D74208F003E7DA2 /* HXViewController.m in Sources */,
 				8AFF85331D9BBFE600BB9B67 /* NSObject+MJProperty.m in Sources */,
+				8AEBDD201DF7F6C600C0E9DD /* FMDatabasePool.m in Sources */,
 				8AEE593B1DDEEAD4009CE582 /* HXMineMessageCell.m in Sources */,
 				33C74A0A1DBCF6340017BBD9 /* HXTextView.m in Sources */,
 				8AB430FD1D9B70440063CF7A /* SDWebImageManager.m in Sources */,
@@ -2302,6 +2377,7 @@
 				8A0D40B71DEEACB100FABB6A /* HXPersonalController.m in Sources */,
 				8AEE59331DDEEAD4009CE582 /* HXFacialSelectionPanel.m in Sources */,
 				8AFF85321D9BBFE600BB9B67 /* NSObject+MJKeyValue.m in Sources */,
+				8AEBDD211DF7F6C600C0E9DD /* FMDatabaseQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

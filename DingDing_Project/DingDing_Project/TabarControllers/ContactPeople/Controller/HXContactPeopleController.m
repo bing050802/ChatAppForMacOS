@@ -21,6 +21,7 @@ static BOOL stateSelect = NO;
 
 @property (weak) IBOutlet NSTableView *organizeTableView;
 @property (nonatomic,strong) NSMutableArray *architectures;
+
 @property (nonatomic,strong) NSTableCellView *lastSelectedCell;
 
 @property (weak) IBOutlet HXButton *IndicateBtn;

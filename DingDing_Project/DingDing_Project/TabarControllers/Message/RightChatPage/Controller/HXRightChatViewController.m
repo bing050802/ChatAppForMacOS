@@ -171,7 +171,7 @@ static NSString *mineCellID = @"mineCellID";
 - (void)middleTabelViewSelected:(NSNotification *)noti {
     NSTableView *middleTableView = noti.object;
      // 通知若是来自 本控制器tableView 返回不处理
-    if (middleTableView == self.datailTableView) return;
+    if (middleTableView.tag != 10) return;
     
     // 中间的cell选中 顶部工具栏 展示对应的消息用户头像 名字
     NSInteger row = middleTableView.selectedRow;

@@ -52,6 +52,6 @@
  */
 + (NSImage *)circleImageWithColor:(NSColor *)color size:(NSSize)size text:(NSString *)text;
 
-
++ (NSImage *)circleImageWithColor:(NSColor *)color size:(NSSize)size text:(NSString *)text font:(NSFont *)font;
 
 @end

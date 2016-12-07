@@ -14,28 +14,31 @@ inline static void zeroClearInt(int* p, size_t count) { memset(p, 0, sizeof(int)
 
 @implementation NSImage (StackBlur)
 
-
++ (NSImage *)circleImageWithColor:(NSColor *)color size:(NSSize)size text:(NSString *)text font:(NSFont *)font {
+    NSImage *colorImage = [self imageWithColor:color size:size text:text font:font];
+    return [colorImage circleImageWithBorderWidth:0 borderColor:[NSColor whiteColor] size:size];
+}
 
 + (NSImage *)circleImageWithColor:(NSColor *)color size:(NSSize)size {
     return  [self circleImageWithColor:color size:size text:nil];
 }
 
 + (NSImage *)circleImageWithColor:(NSColor *)color size:(NSSize)size text:(NSString *)text {
-    NSImage *colorImage = [self imageWithColor:color size:size text:text];
+    NSImage *colorImage = [self imageWithColor:color size:size text:text font:nil];
     return [colorImage circleImageWithBorderWidth:0 borderColor:[NSColor whiteColor] size:size];
 }
 
 
 + (NSImage *)imageWithColor:(NSColor *)color size:(NSSize)size {
-    return [self imageWithColor:color size:size text:nil];
+    return [self imageWithColor:color size:size text:nil font:nil];
 }
 
-+ (NSImage *)imageWithColor:(NSColor *)color size:(NSSize)size text:(NSString *)text {
++ (NSImage *)imageWithColor:(NSColor *)color size:(NSSize)size text:(NSString *)text font:(NSFont *)font {
     NSImage *image = [[NSImage alloc] initWithSize:size];
     [image lockFocus];
     [color drawSwatchInRect:NSMakeRect(0, 0, size.width, size.height)];
     if (text.length) {
-        
+        font == nil ? font = [NSFont systemFontOfSize:13] :font;
         NSMutableParagraphStyle *pStyle = [[NSMutableParagraphStyle alloc] init];
         [pStyle setAlignment:NSCenterTextAlignment];
         text = [text substringWithRange:NSMakeRange(text.length - 2,2)];
@@ -44,7 +47,7 @@ inline static void zeroClearInt(int* p, size_t count) { memset(p, 0, sizeof(int)
                                       @{
                                         NSForegroundColorAttributeName:[NSColor whiteColor],
                                         NSParagraphStyleAttributeName:pStyle,
-                                        NSFontAttributeName:[NSFont systemFontOfSize:13]
+                                        NSFontAttributeName:font
                                         }];
         [attStr drawInRect:CGRectMake(0, (18 - size.height) * 0.5, size.width, size.height)];
     }
