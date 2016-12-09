@@ -22,7 +22,6 @@
 
 @implementation HXContactCell
 
-
 - (NSTrackingArea *)trackingArea {
     if (!_trackingArea) {
         _trackingArea = [[NSTrackingArea alloc] initWithRect:self.bounds options:NSTrackingInVisibleRect | NSTrackingActiveAlways | NSTrackingMouseEnteredAndExited owner:self userInfo:nil];
@@ -33,12 +32,9 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    
     self.wantsLayer = YES;
     [self addTrackingArea:self.trackingArea];
 }
-
-
 
 - (void)mouseEntered:(NSEvent *)theEvent {
     self.layer.backgroundColor = cellColor.CGColor;
@@ -47,7 +43,6 @@
 - (void)mouseExited:(NSEvent *)theEvent {
     self.layer.backgroundColor = [NSColor clearColor].CGColor;
 }
-
 
 @end
 
@@ -58,6 +53,8 @@
 @property (weak) IBOutlet NSTableView *contactListView;
 
 @property (nonatomic,strong) NSTableRowView *lastSelectedRow;
+
+@property (nonatomic,strong) id eventMonitor;
 
 @end
 
@@ -81,13 +78,30 @@
 {
     [super awakeFromNib];
 
+    NSShadow *dropShadow = [[NSShadow alloc] init];
+    [dropShadow setShadowColor:[NSColor grayColor]];
+    [dropShadow setShadowOffset:NSMakeSize(0, -5.0)];
+    [dropShadow setShadowBlurRadius:10.0];
+    [self setShadow:dropShadow];
+    
+    self.contactListView.allowsTypeSelect = YES;
     self.contactListView.headerView = nil;
     self.contactListView.selectionHighlightStyle = NSTableViewSelectionHighlightStyleNone;
+    
+    static NSEvent *currentEvent;
+    self.eventMonitor = [NSEvent addLocalMonitorForEventsMatchingMask:NSEventMaskKeyDown handler:^(NSEvent *_Nonnull theEvent) {
+        if (currentEvent != theEvent) {
+            NSLog(@"--currentEvent--%p---%p",currentEvent,theEvent);
+            [self.contactListView performSelector:@selector(keyDown:) withObject:theEvent afterDelay:0.0];
+            currentEvent = theEvent;
+        }
+        return theEvent;
+    }];
 }
 
 
 - (void)setContactsArray:(NSArray *)contactsArray {
-     _contactsArray = contactsArray;
+    _contactsArray = contactsArray;
     [self.contactListView reloadData];
     [self.contactListView selectRowIndexes:[NSIndexSet indexSetWithIndex:0] byExtendingSelection:YES];
 }
@@ -124,8 +138,18 @@
     row.backgroundColor = cellColor;
     
     self.lastSelectedRow = row;
+    
+    
+}
+
+- (void)removeFromSuperview {
+    [super removeFromSuperview];
 }
 
 
+
+- (void)dealloc {
+    [NSEvent removeMonitor:self.eventMonitor];
+}
 
 @end

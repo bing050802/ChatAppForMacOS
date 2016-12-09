@@ -38,8 +38,6 @@
 
 // https://github.com/raffael/NSAlert-Popover
 
-// https://github.com/github/Rebel 输入框下面出现 popver
-
 // https://github.com/naftaly/NFSplitViewController
 
 // https://github.com/malcommac/DMSplitView
@@ -67,6 +65,8 @@
 
 //https://github.com/BokkkRottt/BRDrawer  模仿qq登录界面
 
+//https://github.com/danjonweb/NCRAutocompleteTextView textview自动弹出文字提示框
+
 
 #define selfWidth   self.frame.size.width
 #define selfHeight  self.frame.size.height
@@ -91,5 +91,12 @@
 #define NSLog(...) printf("%f %s\n",[[NSDate date]timeIntervalSince1970],[[NSString stringWithFormat:__VA_ARGS__]UTF8String]);
 #endif
 
-
+/*
+ 
+ 遇到难题
+ 1.表情attchment计算文字高度问题
+ 2.@功能 复杂逻辑处理 提示列表的创建问题，创在textView外面，键盘事件传递问题导致无法聚焦文字 创建在内部，重写keyDown
+ 
+ 
+ */
 

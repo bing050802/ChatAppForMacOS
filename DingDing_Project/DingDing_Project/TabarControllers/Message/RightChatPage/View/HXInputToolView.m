@@ -137,8 +137,10 @@
     self.sendButton.target = self;
     self.sendButton.action = @selector(send);
     
-
+    
 }
+
+
 
 
 
@@ -167,7 +169,7 @@
     }
     if (commandSelector == @selector(moveUp:) || commandSelector == @selector(moveDown:)) {
         
-        [self.window makeFirstResponder:self.listView.subviews[0]];
+//        [self.window makeFirstResponder:self.listView.subviews[0]];
         
         return NO;
     }
