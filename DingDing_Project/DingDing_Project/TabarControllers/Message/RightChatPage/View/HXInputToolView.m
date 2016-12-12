@@ -137,7 +137,6 @@
     self.sendButton.target = self;
     self.sendButton.action = @selector(send);
     
-    
 }
 
 
@@ -148,82 +147,74 @@
 {
     if (commandSelector == @selector(insertNewline:)) {
         if (!textView.string.length) return YES;
-        [self.delegate inputCompleteToSend:textView];
-        self.sendButton.selected = NO;
+        
+        if(self.listView.superview == nil) {
+            [self.delegate inputCompleteToSend:textView];
+            self.sendButton.selected = NO;
+        }
+        else {
+           // 记录一下所有的@人选
+            [textView insertText:self.listView.selectName];
+            [self.listView removeFromSuperview];
+        }
+        
+        
         return YES;
     }
-    if (commandSelector == @selector(moveLeft:) || commandSelector == @selector(moveRight:)) {
-
-        if (textView.selectedRange.location <= textView.string.length) {
-        // [view removeFromSuperview];
-        }
-        // 得到光标前一个字符
-        
-        // 如果光标移动中碰到@ 就显示popver菜单
-        
+    if (commandSelector == @selector(moveLeft:) || commandSelector == @selector(moveRight:))
+    {
+        // 看一下是否有@选中的人员 把所有@+人名 当成一个字符处理
         return NO;
     }
-    if (commandSelector == @selector(deleteBackward:)) {
-        
+    if (commandSelector == @selector(deleteBackward:))
+    {
+        // 看一下是否有@选中的人员 把所有@+人名 删除的时候当成一个字符处理
         return NO;
     }
+    
     if (commandSelector == @selector(moveUp:) || commandSelector == @selector(moveDown:)) {
         
-//        [self.window makeFirstResponder:self.listView.subviews[0]];
-        
         return NO;
     }
-
+    
     return NO;
 }
 
 
-- (BOOL)textView:(NSTextView *)textView shouldChangeTextInRange:(NSRange)affectedCharRange replacementString:(nullable NSString *)replacementString {
-    
-    if ([replacementString isEqualToString:@"@"]) {
-
-    }
-    if (replacementString.length == 0) {
-        
-    }
-    
-    
-    
-    return YES;
-}
-
-
-- (void)textDidChange:(NSNotification *)notification
+/**
+ 鼠标光标位置改变时候就会调用（包括左移右移，文字增删改都会调用）
+ */
+- (void)textViewDidChangeSelection:(NSNotification *)notification
 {
-    
     NSTextView *textView = notification.object;
     
+    // 取出鼠标光标前所有的文字
+    NSString *stringBeforeCursor = [textView.string substringToIndex:textView.selectedRange.location];
+    
+    // 遍历文字中所有包含”@“字符的range
     NSMutableArray *elterRanges = [NSMutableArray array];
-    [textView.string enumerateStringsMatchedByRegex:@"@" usingBlock:^(NSInteger captureCount, NSString *const __unsafe_unretained *capturedStrings, const NSRange *capturedRanges, volatile BOOL *const stop) {
-        NSLog(@"--%@--%@",*capturedStrings,NSStringFromRange(*capturedRanges));
+    [stringBeforeCursor enumerateStringsMatchedByRegex:@"@" usingBlock:^(NSInteger captureCount, NSString *const __unsafe_unretained *capturedStrings, const NSRange *capturedRanges, volatile BOOL *const stop) {
         [elterRanges addObject:[NSValue valueWithRange:*capturedRanges]];
     }];
     
     if (elterRanges.count) {
+        // 取出最后一个@（就是离光标最近的）的范围
         NSRange lastElterRange = [[elterRanges lastObject] rangeValue];
+        
+        // 在@位置展示一个过滤联系人列表
         [self contactListWithElterRange:lastElterRange];
-    
-        NSString *filterString = [textView.string substringFromIndex:lastElterRange.location + 1];
+        
+        // @后面的过滤性关键字符
+        NSString *filterString = [stringBeforeCursor substringFromIndex:lastElterRange.location + 1];
         [self startfilterWithPattern:filterString];
     }
     else {
         [self.listView removeFromSuperview];
     }
-
-    
-    if (textView.string.length == 0) {
-        self.sendButton.selected = NO;
-    }
-    else {
-        self.sendButton.selected = YES;
-    }
     
 }
+
+
 
 
 
@@ -238,20 +229,25 @@
 
 - (void)startfilterWithPattern:(NSString *)string
 {
-
     if (string.length == 0) {
-        NSLog(@"展示所有");
         self.listView.contactsArray = [HXSaveContact selectAll];
         return;
     }
-    
     self.listView.contactsArray = [HXSaveContact selectNameWithFilteString:string];
-    
-    // 比钉钉做的好的一点 dfdasfad@faf （先输入dfdasfadfaf，然后光标后移3位，输入@，能识别@后面的faf，做过滤）
-//    NSLog(@"filter------%@",string);
 }
 
 
+- (void)textDidChange:(NSNotification *)notification
+{
+    NSTextView *textView = notification.object;
+    if (textView.string.length == 0) {
+        self.sendButton.selected = NO;
+    }
+    else {
+        self.sendButton.selected = YES;
+    }
+    
+}
 
 - (void)send
 {

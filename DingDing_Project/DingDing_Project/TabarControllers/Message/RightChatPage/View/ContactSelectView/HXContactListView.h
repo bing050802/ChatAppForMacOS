@@ -14,6 +14,6 @@
 
 @property (nonatomic,strong) NSArray *contactsArray;
 
-
+@property (nonatomic,copy) NSString *selectName;
 
 @end

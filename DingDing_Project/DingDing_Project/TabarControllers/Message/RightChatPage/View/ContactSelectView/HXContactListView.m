@@ -139,7 +139,7 @@
     
     self.lastSelectedRow = row;
     
-    
+    self.selectName = _contactsArray[self.contactListView.selectedRow];
 }
 
 - (void)removeFromSuperview {
