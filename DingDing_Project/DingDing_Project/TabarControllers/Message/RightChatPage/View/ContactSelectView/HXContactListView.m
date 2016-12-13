@@ -88,15 +88,15 @@
     self.contactListView.headerView = nil;
     self.contactListView.selectionHighlightStyle = NSTableViewSelectionHighlightStyleNone;
     
-    static NSEvent *currentEvent;
-    self.eventMonitor = [NSEvent addLocalMonitorForEventsMatchingMask:NSEventMaskKeyDown handler:^(NSEvent *_Nonnull theEvent) {
-        if (currentEvent != theEvent) {
-            NSLog(@"--currentEvent--%p---%p",currentEvent,theEvent);
-            [self.contactListView performSelector:@selector(keyDown:) withObject:theEvent afterDelay:0.0];
-            currentEvent = theEvent;
-        }
-        return theEvent;
-    }];
+//    static NSEvent *currentEvent;
+//    self.eventMonitor = [NSEvent addLocalMonitorForEventsMatchingMask:NSEventMaskKeyDown handler:^(NSEvent *_Nonnull theEvent) {
+//        if (currentEvent != theEvent) {
+//            NSLog(@"--currentEvent--%p---%p",currentEvent,theEvent);
+//            [self.contactListView performSelector:@selector(keyDown:) withObject:theEvent afterDelay:0.0];
+//            currentEvent = theEvent;
+//        }
+//        return theEvent;
+//    }];
 }
 
 

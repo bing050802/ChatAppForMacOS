@@ -125,4 +125,16 @@
 
 }
 
+
+-(BOOL)makeFirstResponder:(NSResponder *)responder {
+    return [super makeFirstResponder:responder];
+}
+
+- (void)keyDown:(NSEvent *)event {
+    
+    [super keyDown:event];
+    
+}
+
+
 @end

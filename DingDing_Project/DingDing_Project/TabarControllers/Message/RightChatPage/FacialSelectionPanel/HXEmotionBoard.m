@@ -119,15 +119,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
 @implementation HXDocomentView
 
 - (BOOL)isFlipped {

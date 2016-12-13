@@ -30,7 +30,6 @@
 
 @property (weak) IBOutlet HXButton *sendButton;
 
-
 @property (nonatomic,strong) NSMutableArray *peopleList;
 @property (nonatomic,strong) HXContactListView *listView;
 
@@ -140,9 +139,6 @@
 }
 
 
-
-
-
 - (BOOL)textView:(NSTextView *)textView doCommandBySelector:(SEL)commandSelector
 {
     if (commandSelector == @selector(insertNewline:)) {
@@ -153,7 +149,7 @@
             self.sendButton.selected = NO;
         }
         else {
-           // 记录一下所有的@人选
+            // 记录一下所有的@人选
             [textView insertText:self.listView.selectName];
             [self.listView removeFromSuperview];
         }
