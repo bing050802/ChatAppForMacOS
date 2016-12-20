@@ -67,6 +67,8 @@
 
 //https://github.com/danjonweb/NCRAutocompleteTextView textview自动弹出文字提示框
 
+// Event Handling Basics 
+
 
 #define selfWidth   self.frame.size.width
 #define selfHeight  self.frame.size.height
