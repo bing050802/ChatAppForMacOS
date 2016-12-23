@@ -710,9 +710,25 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dUY-P2-Fvq">
+                                <rect key="frame" x="200" y="-2" width="81" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="v8A-4s-von"/>
+                                    <constraint firstAttribute="width" constant="69" id="ysj-VB-naq"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zgq-zh-QIP">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="openInSafari:" target="XfG-lQ-9wD" id="wiX-A6-y6J"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Mic-Ge-5OH" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="71" id="GJH-ah-fnW"/>
+                            <constraint firstAttribute="bottom" secondItem="dUY-P2-Fvq" secondAttribute="bottom" constant="5" id="MXJ-Pm-J5X"/>
+                            <constraint firstItem="dUY-P2-Fvq" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Rei-Md-H5s"/>
                             <constraint firstAttribute="bottom" secondItem="Mic-Ge-5OH" secondAttribute="bottom" constant="30" id="rel-F7-nPf"/>
                             <constraint firstItem="Mic-Ge-5OH" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="31" id="zLA-2m-fPv"/>
                         </constraints>

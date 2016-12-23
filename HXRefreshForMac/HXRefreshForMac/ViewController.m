@@ -81,13 +81,27 @@
     
 
 }
+- (IBAction)openInSafari:(id)sender {
+    
+    NSWorkspace *ws = [NSWorkspace sharedWorkspace];
 
+   NSRunningApplication *rapp = [ws openURL:[NSURL URLWithString:@"http://www.baidu.com"] options:NSWorkspaceLaunchWithoutActivation configuration:nil error:NULL];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(allNoti:) name:nil object:nil];
+}
+
+- (void)allNoti:(NSNotification *)noti {
+    NSLog(@"--%@",noti);
+}
 
 - (void)viewDidAppear {
     [super viewDidAppear];
 //   [self stringFromInsets:self.scrollView.contentView.contentInsets] 
     NSLog(@"--%@",NSStringFromRect(self.scrollView.documentView.frame));
-   
+    
+    
+    
+    
+//    - (nullable NSRunningApplication *)launchApplicationAtURL:(NSURL *)url options:(NSWorkspaceLaunchOptions)options configuration:(NSDictionary<NSString *, id> *)configuration error:(NSError **)error
 }
 
 
