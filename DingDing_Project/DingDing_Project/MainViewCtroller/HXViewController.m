@@ -166,6 +166,7 @@
 
 
 
+
 - (void)dealloc {
     [NotificationCenter removeObserver:self];
     NSLog(@"HXViewController--------dealloc");

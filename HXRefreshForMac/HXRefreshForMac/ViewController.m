@@ -83,11 +83,7 @@
 }
 - (IBAction)openInSafari:(id)sender {
     
-    NSWorkspace *ws = [NSWorkspace sharedWorkspace];
-
-   NSRunningApplication *rapp = [ws openURL:[NSURL URLWithString:@"http://www.baidu.com"] options:NSWorkspaceLaunchWithoutActivation configuration:nil error:NULL];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(allNoti:) name:nil object:nil];
-}
+  }
 
 - (void)allNoti:(NSNotification *)noti {
     NSLog(@"--%@",noti);
