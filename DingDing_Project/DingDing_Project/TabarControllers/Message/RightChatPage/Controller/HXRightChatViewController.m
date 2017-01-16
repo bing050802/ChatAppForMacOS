@@ -189,7 +189,7 @@ static NSString *mineCellID = @"mineCellID";
 
 
 - (nullable NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row {
-    //      NSLog(@"viewForTableColumn-- %zd",row);
+          NSLog(@"viewForTableColumn-- %zd",row);
     HXMessage *msg = self.msgDatialArray[row];
     if (msg.isMine) {
         HXMineMessageCell *cell = [tableView makeViewWithIdentifier:mineCellID owner:self];
@@ -203,7 +203,7 @@ static NSString *mineCellID = @"mineCellID";
 }
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
-//    NSLog(@"heightOfRow-- %zd",row);
+    NSLog(@"heightOfRow-- %zd",row);
     HXMessage *message = self.msgDatialArray[row];
     NSMutableAttributedString *mattString = [NSMutableAttributedString parseFaceWordFromString:message.text];
     [mattString setLineSpacing:5];

@@ -73,9 +73,13 @@
     
     // 表情的规则
     NSString *emotionPattern = @"\\[[0-9a-zA-Z\\u4e00-\\u9fa5]+\\]";
+    // @的规则
+    NSString *atPattern = @"@[0-9a-zA-Z\\u4e00-\\u9fa5-_]+";
+    // #话题#的规则
+    NSString *topicPattern = @"#[0-9a-zA-Z\\u4e00-\\u9fa5]+#";
     // url链接的规则
     NSString *urlPattern =@"http(s)?://([a-zA-Z|\\d]+\\.)+[a-zA-Z|\\d]+(/[a-zA-Z|\\d|\\-|\\+|_./?%&=]*)?";
-    NSString *pattern = [NSString stringWithFormat:@"%@|%@", emotionPattern,urlPattern];
+    NSString *pattern = [NSString stringWithFormat:@"%@|%@|%@|%@", emotionPattern, atPattern, topicPattern, urlPattern];
     
     // 按顺序拼接每一段文字
     NSMutableAttributedString *resultAttString = [[NSMutableAttributedString alloc] init];
