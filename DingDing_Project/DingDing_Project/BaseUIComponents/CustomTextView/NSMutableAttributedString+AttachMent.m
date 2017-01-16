@@ -13,24 +13,27 @@
 #import "HXEmotionTool.h"
 #import "HXSpecial.h"
 
+#import "NSMutableAttributedString+HXPromote.h"
+
+
 @implementation NSMutableAttributedString (AttachMent)
 
 
-+ (NSMutableAttributedString *)attributedStringWithAttachmentCell:(NSTextAttachmentCell *)attachmentCell {
-    NSTextAttachment *att = [[NSTextAttachment alloc] init];
-    att.attachmentCell = attachmentCell;
-    NSAttributedString *attString = [NSAttributedString attributedStringWithAttachment:att];
-    NSMutableAttributedString *attStr = [[NSMutableAttributedString alloc] initWithAttributedString:attString];
-    return attStr;
-}
-
-+ (NSMutableAttributedString *)attributedStringWithImage:(NSImage *)image attachSize:(CGSize)size {
-    CustomAttachMentCell *attCell = [[CustomAttachMentCell alloc] init];
-    attCell.attachImage = image;
-    attCell.attachSize = size;
-    attCell.baselineOffset = CGPointMake(0, BaselineOffsetY);
-    return [self attributedStringWithAttachmentCell:attCell];
-}
+//+ (NSMutableAttributedString *)attributedStringWithAttachmentCell:(NSTextAttachmentCell *)attachmentCell {
+//    NSTextAttachment *att = [[NSTextAttachment alloc] init];
+//    att.attachmentCell = attachmentCell;
+//    NSAttributedString *attString = [NSAttributedString attributedStringWithAttachment:att];
+//    NSMutableAttributedString *attStr = [[NSMutableAttributedString alloc] initWithAttributedString:attString];
+//    return attStr;
+//}
+//
+//+ (NSMutableAttributedString *)attributedStringWithImage:(NSImage *)image attachSize:(CGSize)size {
+//    CustomAttachMentCell *attCell = [[CustomAttachMentCell alloc] init];
+//    attCell.attachImage = image;
+//    attCell.attachSize = size;
+//    attCell.baselineOffset = CGPointMake(0, BaselineOffsetY);
+//    return [self attributedStringWithAttachmentCell:attCell];
+//}
 
 
 + (NSArray *)patternPartsWithRegex:(NSString *)regex originString:(NSString *)Ostr {
@@ -95,9 +98,16 @@
         if (part.isEmotion) { // 表情
             CGSize attSize = CGSizeMake(EmotionWH, EmotionWH);
             HXEmotion *em = [HXEmotionTool emotionWithChs:part.text];
-            //            NSLog(@"isEmotion---substr--%@---%@",part.text,em);
-            substr = [self attributedStringWithImage:em.emotionimage attachSize:attSize];
-            subCalculateString = [self createReplacementAttString];
+            //NSLog(@"isEmotion---substr--%@---%@",part.text,em);
+            
+            CustomAttachMentCell *attCell = [[CustomAttachMentCell alloc] init];
+            attCell.attachImage = em.emotionimage;
+            attCell.attachSize = attSize;
+            attCell.baselineOffset = CGPointMake(0, BaselineOffsetY);
+            
+            substr = [self mAttsWithAttachCell:attCell];
+            
+            subCalculateString = [self blankMAttStringWithCharSize:attSize baselineOffset:CGPointMake(0, -8.0)];
             
         }
         else if (part.special) { // 非表情的特殊文字
@@ -121,24 +131,14 @@
     }
     
     // 计算 单行文字宽高
-    CGSize singelineSize = [calculateString calculateSingelineSize];
+    CGSize singelineSize = [calculateString sizeForSingleLine];
     [resultAttString addAttribute:@"singelineSize" value:[NSValue valueWithSize:singelineSize] range:NSMakeRange(0, 1)];
     
     [calculateString setLineSpacing:5];
-    CGSize mlineSize = [calculateString realitySizeForWidth:300];
+    CGSize mlineSize = [calculateString sizeForMaxLayoutWidth:300];
     [resultAttString addAttribute:@"mlineSize" value:[NSValue valueWithSize:mlineSize] range:NSMakeRange(0, 1)];
     
     return resultAttString;
-}
-
-
-- (CGSize)realitySizeForWidth:(CGFloat)width {
-    
-    CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)self);
-    // 获得要缓制的区域的高度
-    CGSize restrictSize = CGSizeMake(width, CGFLOAT_MAX);
-    CGSize coreTextSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRangeMake(0,0), nil, restrictSize, nil);
-    return CGSizeMake(ceil(coreTextSize.width), coreTextSize.height);
 }
 
 
@@ -160,55 +160,5 @@
 }
 
 
-- (CGSize)calculateSingelineSize {
-    CGFloat  ascent;
-    CGFloat  descent;
-    CGFloat  leading;
-    CTLineRef lineRef = CTLineCreateWithAttributedString((CFAttributedStringRef)self);
-    CGFloat width = CTLineGetTypographicBounds(lineRef, &ascent, &descent, &leading);
-    width = ceil(width);
-    CGFloat height = (ascent + leading + descent);
-    //    NSLog(@"--%@--%f",self.string,height);
-    return CGSizeMake(width, height);
-}
-
-
-+ (NSMutableAttributedString *)createReplacementAttString {
-    CTRunDelegateCallbacks callbacks;
-    memset(&callbacks, 0, sizeof(CTRunDelegateCallbacks));
-    callbacks.version = kCTRunDelegateVersion1;
-    callbacks.getAscent = ascentCallback;
-    callbacks.getDescent = descentCallback;
-    callbacks.getWidth = widthCallback;
-    
-    // 创建CTRun回调
-    CTRunDelegateRef runDelegate = CTRunDelegateCreate(&callbacks, NULL);
-    
-    // 使用 0xFFFC 作为空白的占位符
-    unichar objectReplacementChar = 0xFFFC;
-    NSString *string = [NSString stringWithCharacters:&objectReplacementChar length:1];
-    
-    NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:string];
-    [attString addAttribute:(NSString *)kCTRunDelegateAttributeName value:(__bridge id)runDelegate range:NSMakeRange(0, 1)];
-    
-    CFRelease(runDelegate);
-    
-    return attString;
-}
-
-//
-static CGFloat ascentCallback(void *ref) {
-    return EmotionWH + BaselineOffsetY;
-}
-
-//
-static CGFloat descentCallback(void *ref) {
-    return - BaselineOffsetY;
-}
-
-//
-static CGFloat widthCallback(void *ref) {
-    return EmotionWH;
-}
 
 @end

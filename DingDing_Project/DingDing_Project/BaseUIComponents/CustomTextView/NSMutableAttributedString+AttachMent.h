@@ -15,8 +15,8 @@ static const CGFloat BaselineOffsetY = -8.0;
 
 @interface NSMutableAttributedString (AttachMent)
 
-+ (NSMutableAttributedString *)attributedStringWithImage:(NSImage *)image attachSize:(CGSize)size;
-+ (NSMutableAttributedString *)attributedStringWithAttachmentCell:(NSTextAttachmentCell *)attachmentCell;
+//+ (NSMutableAttributedString *)attributedStringWithImage:(NSImage *)image attachSize:(CGSize)size;
+//+ (NSMutableAttributedString *)attributedStringWithAttachmentCell:(NSTextAttachmentCell *)attachmentCell;
 
 + (NSMutableAttributedString *)parseFaceWordFromString:(NSString *)string;
 

@@ -22,19 +22,5 @@
 
 - (void)setLineSpacing:(CGFloat)lineSpacing;
 
-
-// 设置下划线
-- (void)setUnderlineStyle:(CTUnderlineStyle)style
-                 modifier:(CTUnderlineStyleModifiers)modifier;
-- (void)setUnderlineStyle:(CTUnderlineStyle)style
-                 modifier:(CTUnderlineStyleModifiers)modifier
-                    range:(NSRange)range;
-
-// 设置属性
-- (void)setLineSpacing:(CGFloat)lineSpacing
-      paragraphSpacing:(CGFloat)paragraphSpacing
-         textAlignment:(CTTextAlignment)textAlignment
-         lineBreakMode:(CTLineBreakMode)lineBreakMode;
-
 @end
 

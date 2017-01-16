@@ -399,6 +399,7 @@
 		8AF2075E1DBDF0F400710DBC /* haha@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF2075D1DBDF0F400710DBC /* haha@2x.png */; };
 		8AF5CAD11D74208F003E7DA2 /* HXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF5CACF1D74208F003E7DA2 /* HXViewController.m */; };
 		8AF5CAD21D74208F003E7DA2 /* HXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AF5CAD01D74208F003E7DA2 /* HXViewController.xib */; };
+		8AFBC0921E2CCE2900B65AED /* NSMutableAttributedString+HXPromote.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFBC0911E2CCE2900B65AED /* NSMutableAttributedString+HXPromote.m */; };
 		8AFF852A1D9BBFE600BB9B67 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AFF85141D9BBFE600BB9B67 /* Info.plist */; };
 		8AFF852B1D9BBFE600BB9B67 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF85171D9BBFE600BB9B67 /* MJExtensionConst.m */; };
 		8AFF852C1D9BBFE600BB9B67 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF85191D9BBFE600BB9B67 /* MJFoundation.m */; };
@@ -892,6 +893,8 @@
 		8AF5CACE1D74208F003E7DA2 /* HXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXViewController.h; sourceTree = "<group>"; };
 		8AF5CACF1D74208F003E7DA2 /* HXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXViewController.m; sourceTree = "<group>"; };
 		8AF5CAD01D74208F003E7DA2 /* HXViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXViewController.xib; sourceTree = "<group>"; };
+		8AFBC0901E2CCE2900B65AED /* NSMutableAttributedString+HXPromote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+HXPromote.h"; sourceTree = "<group>"; };
+		8AFBC0911E2CCE2900B65AED /* NSMutableAttributedString+HXPromote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+HXPromote.m"; sourceTree = "<group>"; };
 		8AFF85141D9BBFE600BB9B67 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AFF85151D9BBFE600BB9B67 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
 		8AFF85161D9BBFE600BB9B67 /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
@@ -959,6 +962,8 @@
 		33C74A021DBCF6340017BBD9 /* CustomTextView */ = {
 			isa = PBXGroup;
 			children = (
+				8AFBC0901E2CCE2900B65AED /* NSMutableAttributedString+HXPromote.h */,
+				8AFBC0911E2CCE2900B65AED /* NSMutableAttributedString+HXPromote.m */,
 				8AF2075D1DBDF0F400710DBC /* haha@2x.png */,
 				8AC9D2821DEE721A00DA1210 /* HXSpecial.h */,
 				8AC9D2831DEE721A00DA1210 /* HXSpecial.m */,
@@ -2323,6 +2328,7 @@
 				8AEBDD221DF7F6C600C0E9DD /* FMResultSet.m in Sources */,
 				8AB431011D9B70440063CF7A /* SDWebImageDecoder.m in Sources */,
 				8AE26D521D59B4F000855257 /* ALView+PureLayout.m in Sources */,
+				8AFBC0921E2CCE2900B65AED /* NSMutableAttributedString+HXPromote.m in Sources */,
 				8AEE584B1DDEEAD4009CE582 /* HXBageView.m in Sources */,
 				8AFF85311D9BBFE600BB9B67 /* NSObject+MJCoding.m in Sources */,
 				8AEE59321DDEEAD4009CE582 /* HXEmotionToolBar.m in Sources */,
