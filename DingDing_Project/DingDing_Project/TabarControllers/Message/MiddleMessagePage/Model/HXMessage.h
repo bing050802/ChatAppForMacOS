@@ -22,6 +22,16 @@
 // 消息内容
 @property (nonatomic, strong) NSString *text;
 
+
+
+// ji
+@property (nonatomic, strong) NSMutableAttributedString *parsedAtts;
+
+
+@property (nonatomic,assign) CGFloat singleLineWidth;
+@property (nonatomic,assign) CGFloat multiLineHeight;
+
+
 // gif图片第一帧 图片
 @property (nonatomic, strong) NSString *gifFistFrame;
 

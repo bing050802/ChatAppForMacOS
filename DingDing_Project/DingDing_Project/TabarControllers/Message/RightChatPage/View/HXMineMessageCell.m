@@ -8,7 +8,8 @@
 
 #import "HXMineMessageCell.h"
 #import "HXButton.h"
-#import "NSMutableAttributedString+AttachMent.h"
+
+
 
 @interface HXMineMessageCell ()
 
@@ -63,18 +64,14 @@
     // 2014-10-30 18:07:47
     self.timeLabel.stringValue = message.create_time;
     
-    NSMutableAttributedString *attString = [NSMutableAttributedString parseFaceWordFromString:message.text];
-    [attString setLineSpacing:5];
-    
+    NSMutableAttributedString *attString = message.parsedAtts;
     [self.msgTextView insertText:attString replacementRange:NSMakeRange(0, 0)];
     self.msgTextView.editable = NO;
-
-    CGSize textRealSize = [attString mlineSize];
-    CGSize onelineSize = [attString singelineSize];
-    if (onelineSize.width < 300) {
-        self.textWidthCons.constant = onelineSize.width + 20;
+    
+    if (message.singleLineWidth < 300) {
+        self.textWidthCons.constant = message.singleLineWidth + 20;
     }
-    self.textHeightCons.constant = textRealSize.height + 16;
+    self.textHeightCons.constant = message.multiLineHeight + 16;
     
 }
 

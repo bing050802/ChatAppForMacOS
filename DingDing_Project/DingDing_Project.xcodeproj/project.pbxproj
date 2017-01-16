@@ -24,8 +24,6 @@
 		33CB20161DE0D0ED0004F5AD /* shouDing_s.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CB20121DE0D0ED0004F5AD /* shouDing_s.png */; };
 		8A0D40B71DEEACB100FABB6A /* HXPersonalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0D40B51DEEACB100FABB6A /* HXPersonalController.m */; };
 		8A0D40B81DEEACB100FABB6A /* HXPersonalController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A0D40B61DEEACB100FABB6A /* HXPersonalController.xib */; };
-		8A1F454C1DC74FE400546BE3 /* NSMutableAttributedString+AttachMent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1F454B1DC74FE400546BE3 /* NSMutableAttributedString+AttachMent.m */; };
-		8A1F455E1DC751BC00546BE3 /* NSMutableAttributedString+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1F455D1DC751BC00546BE3 /* NSMutableAttributedString+Config.m */; };
 		8A2A7EE41DD091A000BC1DA4 /* cell_popbtn_entered.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A7EE21DD091A000BC1DA4 /* cell_popbtn_entered.png */; };
 		8A2A7EE51DD091A000BC1DA4 /* cell_popbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A7EE31DD091A000BC1DA4 /* cell_popbtn.png */; };
 		8A4C6A111D7EB06E005BC413 /* clear_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4C6A0D1D7EB06E005BC413 /* clear_btn.png */; };
@@ -400,6 +398,8 @@
 		8AF5CAD11D74208F003E7DA2 /* HXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF5CACF1D74208F003E7DA2 /* HXViewController.m */; };
 		8AF5CAD21D74208F003E7DA2 /* HXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AF5CAD01D74208F003E7DA2 /* HXViewController.xib */; };
 		8AFBC0921E2CCE2900B65AED /* NSMutableAttributedString+HXPromote.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFBC0911E2CCE2900B65AED /* NSMutableAttributedString+HXPromote.m */; };
+		8AFBC0951E2CEA2D00B65AED /* HXTextGraphicsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFBC0941E2CEA2D00B65AED /* HXTextGraphicsParser.m */; };
+		8AFBC0981E2CF56B00B65AED /* NSMutableAttributedString+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFBC0971E2CF56B00B65AED /* NSMutableAttributedString+Config.m */; };
 		8AFF852A1D9BBFE600BB9B67 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AFF85141D9BBFE600BB9B67 /* Info.plist */; };
 		8AFF852B1D9BBFE600BB9B67 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF85171D9BBFE600BB9B67 /* MJExtensionConst.m */; };
 		8AFF852C1D9BBFE600BB9B67 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF85191D9BBFE600BB9B67 /* MJFoundation.m */; };
@@ -428,7 +428,6 @@
 		33C74A041DBCF6340017BBD9 /* CustomAttachMentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAttachMentCell.m; sourceTree = "<group>"; };
 		33C74A051DBCF6340017BBD9 /* HXTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTextView.h; sourceTree = "<group>"; };
 		33C74A061DBCF6340017BBD9 /* HXTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTextView.m; sourceTree = "<group>"; };
-		33C74A071DBCF6340017BBD9 /* NSMutableAttributedString+AttachMent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+AttachMent.h"; sourceTree = "<group>"; };
 		33CB20061DE0A4420004F5AD /* dingBtn_in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dingBtn_in.png; sourceTree = "<group>"; };
 		33CB20071DE0A4420004F5AD /* dingBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dingBtn.png; sourceTree = "<group>"; };
 		33CB200A1DE0B5530004F5AD /* HXDingMessageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXDingMessageItem.h; sourceTree = "<group>"; };
@@ -441,9 +440,6 @@
 		8A0D40B41DEEACB100FABB6A /* HXPersonalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXPersonalController.h; sourceTree = "<group>"; };
 		8A0D40B51DEEACB100FABB6A /* HXPersonalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXPersonalController.m; sourceTree = "<group>"; };
 		8A0D40B61DEEACB100FABB6A /* HXPersonalController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXPersonalController.xib; sourceTree = "<group>"; };
-		8A1F454B1DC74FE400546BE3 /* NSMutableAttributedString+AttachMent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+AttachMent.m"; sourceTree = "<group>"; };
-		8A1F455C1DC751BC00546BE3 /* NSMutableAttributedString+Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Config.h"; sourceTree = "<group>"; };
-		8A1F455D1DC751BC00546BE3 /* NSMutableAttributedString+Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Config.m"; sourceTree = "<group>"; };
 		8A2A7EE21DD091A000BC1DA4 /* cell_popbtn_entered.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_popbtn_entered.png; sourceTree = "<group>"; };
 		8A2A7EE31DD091A000BC1DA4 /* cell_popbtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_popbtn.png; sourceTree = "<group>"; };
 		8A4C6A0D1D7EB06E005BC413 /* clear_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear_btn.png; sourceTree = "<group>"; };
@@ -895,6 +891,10 @@
 		8AF5CAD01D74208F003E7DA2 /* HXViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXViewController.xib; sourceTree = "<group>"; };
 		8AFBC0901E2CCE2900B65AED /* NSMutableAttributedString+HXPromote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+HXPromote.h"; sourceTree = "<group>"; };
 		8AFBC0911E2CCE2900B65AED /* NSMutableAttributedString+HXPromote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+HXPromote.m"; sourceTree = "<group>"; };
+		8AFBC0931E2CEA2D00B65AED /* HXTextGraphicsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTextGraphicsParser.h; sourceTree = "<group>"; };
+		8AFBC0941E2CEA2D00B65AED /* HXTextGraphicsParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTextGraphicsParser.m; sourceTree = "<group>"; };
+		8AFBC0961E2CF56B00B65AED /* NSMutableAttributedString+Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Config.h"; sourceTree = "<group>"; };
+		8AFBC0971E2CF56B00B65AED /* NSMutableAttributedString+Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Config.m"; sourceTree = "<group>"; };
 		8AFF85141D9BBFE600BB9B67 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AFF85151D9BBFE600BB9B67 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
 		8AFF85161D9BBFE600BB9B67 /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
@@ -962,6 +962,8 @@
 		33C74A021DBCF6340017BBD9 /* CustomTextView */ = {
 			isa = PBXGroup;
 			children = (
+				8AFBC0931E2CEA2D00B65AED /* HXTextGraphicsParser.h */,
+				8AFBC0941E2CEA2D00B65AED /* HXTextGraphicsParser.m */,
 				8AFBC0901E2CCE2900B65AED /* NSMutableAttributedString+HXPromote.h */,
 				8AFBC0911E2CCE2900B65AED /* NSMutableAttributedString+HXPromote.m */,
 				8AF2075D1DBDF0F400710DBC /* haha@2x.png */,
@@ -969,16 +971,14 @@
 				8AC9D2831DEE721A00DA1210 /* HXSpecial.m */,
 				331F5F871DC4E8D9003922EF /* HXTextPart.h */,
 				331F5F881DC4E8D9003922EF /* HXTextPart.m */,
+				8AFBC0961E2CF56B00B65AED /* NSMutableAttributedString+Config.h */,
+				8AFBC0971E2CF56B00B65AED /* NSMutableAttributedString+Config.m */,
 				8AF2075A1DBDE1C200710DBC /* NSScrollView+Enabled.h */,
 				8AF2075B1DBDE1C200710DBC /* NSScrollView+Enabled.m */,
 				33C74A031DBCF6340017BBD9 /* CustomAttachMentCell.h */,
 				33C74A041DBCF6340017BBD9 /* CustomAttachMentCell.m */,
 				33C74A051DBCF6340017BBD9 /* HXTextView.h */,
 				33C74A061DBCF6340017BBD9 /* HXTextView.m */,
-				8A1F455C1DC751BC00546BE3 /* NSMutableAttributedString+Config.h */,
-				8A1F455D1DC751BC00546BE3 /* NSMutableAttributedString+Config.m */,
-				33C74A071DBCF6340017BBD9 /* NSMutableAttributedString+AttachMent.h */,
-				8A1F454B1DC74FE400546BE3 /* NSMutableAttributedString+AttachMent.m */,
 			);
 			path = CustomTextView;
 			sourceTree = "<group>";
@@ -2356,9 +2356,9 @@
 				8A4C6A4D1D7ED62A005BC413 /* NFSplitViewController.m in Sources */,
 				8AAD92821D632D1D007E4A8F /* MVGraphicsFunctions.m in Sources */,
 				3349A9DB1D852FF60095C667 /* MLPopupWindow.m in Sources */,
+				8AFBC0981E2CF56B00B65AED /* NSMutableAttributedString+Config.m in Sources */,
 				8AF2075C1DBDE1C200710DBC /* NSScrollView+Enabled.m in Sources */,
 				8AB431001D9B70440063CF7A /* SDWebImageCompat.m in Sources */,
-				8A1F455E1DC751BC00546BE3 /* NSMutableAttributedString+Config.m in Sources */,
 				8AB430FB1D9B70440063CF7A /* SDWebImageDownloader.m in Sources */,
 				8AE26D341D598A4800855257 /* AppDelegate.m in Sources */,
 				8A72A2EF1DEC1B2B00BCC218 /* HXBaseTableViewModel.m in Sources */,
@@ -2367,7 +2367,6 @@
 				8AEE59991DDEED1C009CE582 /* HXDingPanController.m in Sources */,
 				331F5F891DC4E8D9003922EF /* HXTextPart.m in Sources */,
 				8AEE59361DDEEAD4009CE582 /* HXEmotion.m in Sources */,
-				8A1F454C1DC74FE400546BE3 /* NSMutableAttributedString+AttachMent.m in Sources */,
 				8A72A2F01DEC1B2B00BCC218 /* HXDepartmentCell.m in Sources */,
 				8AFF852D1D9BBFE600BB9B67 /* MJProperty.m in Sources */,
 				3349A9D81D852FF60095C667 /* HXSearchField.m in Sources */,
@@ -2381,6 +2380,7 @@
 				33CB200D1DE0B5530004F5AD /* HXDingMessageItem.m in Sources */,
 				8AB430F61D9B70440063CF7A /* SDImageCache.m in Sources */,
 				8A0D40B71DEEACB100FABB6A /* HXPersonalController.m in Sources */,
+				8AFBC0951E2CEA2D00B65AED /* HXTextGraphicsParser.m in Sources */,
 				8AEE59331DDEEAD4009CE582 /* HXFacialSelectionPanel.m in Sources */,
 				8AFF85321D9BBFE600BB9B67 /* NSObject+MJKeyValue.m in Sources */,
 				8AEBDD211DF7F6C600C0E9DD /* FMDatabaseQueue.m in Sources */,

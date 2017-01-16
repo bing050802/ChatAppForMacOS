@@ -17,12 +17,14 @@
 
 #import "JMModalOverlay.h"
 #import "HXPersonalController.h"
-#import "NSMutableAttributedString+AttachMent.h"
 
 #import "MLPopupWindowManager.h"
 #import "HXFacialSelectionPanel.h"
 
 #import "HXInputToolView.h"
+
+
+#import "HXTextGraphicsParser.h"
 
 
 @interface HXRightChatViewController () <NSTableViewDelegate,NSTableViewDataSource,InputToolViewDelegate>
@@ -205,10 +207,12 @@ static NSString *mineCellID = @"mineCellID";
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
     NSLog(@"heightOfRow-- %zd",row);
     HXMessage *message = self.msgDatialArray[row];
-    NSMutableAttributedString *mattString = [NSMutableAttributedString parseFaceWordFromString:message.text];
-    [mattString setLineSpacing:5];
-    CGFloat realheight = [mattString mlineSize].height;
-    return realheight + 75;
+
+    HXTextGraphicsParser *parser = [HXTextGraphicsParser shareParser];
+    message.parsedAtts = [parser resultAttributedStringFromText:message.text];
+    message.singleLineWidth = [parser resultAttributeTextHeightForSingleLine].width;
+    message.multiLineHeight = [parser resultAttributeTextHeightForLayoutWidth:300];
+    return message.multiLineHeight + 75;
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {

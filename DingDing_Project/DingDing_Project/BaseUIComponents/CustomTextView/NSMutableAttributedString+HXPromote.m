@@ -71,14 +71,6 @@ static CGFloat widthCallback(void *ref) {
 
 
 
-
-
-
-
-
-
-
-
 @implementation NSMutableAttributedString (Config_)
 
 // 设置颜色
