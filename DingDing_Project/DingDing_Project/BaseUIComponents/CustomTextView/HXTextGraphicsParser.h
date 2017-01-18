@@ -17,12 +17,18 @@
 
 + (instancetype)shareParser;
 
+
+/** 解析特殊字符串的正则表达式*/
 @property (copy, nonatomic) NSString *pattarnRegex;
 
-@property (nonatomic,assign)  CGSize  attachGraphicsSize;
-@property (nonatomic,assign)  CGPoint attachGraphicsCharBaselineOffset;
+/** 图片文字附件的一些属性 Size（大小） BaselineOffset（基准线的偏移量） */
+@property (nonatomic,assign) CGSize  attachGraphicsSize;
+@property (nonatomic,assign) CGPoint attachGraphicsCharBaselineOffset;
 
 
+/**
+ 生成的attributedString的一些属性
+ */
 @property (assign, nonatomic) CGFloat attributedStringLineSpace;
 
 - (NSMutableAttributedString *)resultAttributedStringFromText:(NSString *)text;
