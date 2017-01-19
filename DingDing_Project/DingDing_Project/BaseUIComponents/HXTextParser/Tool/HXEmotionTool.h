@@ -10,7 +10,6 @@
 @interface HXEmotionTool : NSObject
 
 
-
 + (NSArray *)defaultEmotions;
 + (NSArray *)lxhEmotions;
 

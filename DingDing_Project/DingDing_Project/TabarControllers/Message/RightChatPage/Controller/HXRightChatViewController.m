@@ -210,7 +210,7 @@ static NSString *mineCellID = @"mineCellID";
 
     HXTextGraphicsParser *parser = [HXTextGraphicsParser shareParser];
     message.parsedAtts = [parser resultAttributedStringFromText:message.text];
-    message.singleLineWidth = [parser resultAttributeTextHeightForSingleLine].width;
+    message.singleLineWidth = [parser resultAttributeTextSizeForSingleLine].width;
     message.multiLineHeight = [parser resultAttributeTextHeightForLayoutWidth:300];
     return message.multiLineHeight + 75;
 }

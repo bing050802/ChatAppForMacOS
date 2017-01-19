@@ -8,39 +8,36 @@
 
 #import "HXTextGraphicsParser.h"
 
+@interface HXTextPart : NSObject
+/** 这段文字的内容 */
+@property (nonatomic, copy) NSString *text;
+/** 这段文字的范围 */
+@property (nonatomic, assign) NSRange range;
+/** 是否为特殊文字 */
+@property (nonatomic, assign, getter = isSpecical) BOOL special;
+/** 是否为表情 */
+@property (nonatomic, assign, getter = isEmotion) BOOL emotion;
 
-#import "RegexKitLite.h"
-#import "HXTextPart.h"
-#import "HXEmotionTool.h"
-#import "HXSpecial.h"
-
-
-
-//@interface HXTextPart : NSObject
-///** 这段文字的内容 */
-//@property (nonatomic, copy) NSString *text;
-///** 这段文字的范围 */
-//@property (nonatomic, assign) NSRange range;
-///** 是否为特殊文字 */
-//@property (nonatomic, assign, getter = isSpecical) BOOL special;
-///** 是否为表情 */
-//@property (nonatomic, assign, getter = isEmotion) BOOL emotion;
-//
-//@end
-//
-//@implementation HXTextPart
-//
-//- (NSString *)description
-//{
-//    return [NSString stringWithFormat:@"%@ - %@", self.text, NSStringFromRange(self.range)];
-//}
-//
-//@end
+@end
 
 
-@interface HXTextGraphicsParser ()
+
+@interface HXAttachCell : NSTextAttachmentCell
+/** 字符附件image */
+@property (nonatomic,strong) NSImage *attachImage;
+/** 字符附件size */
+@property (nonatomic,assign) CGSize attachSize;
+/** 字符站位baselineOffset */
+@property (nonatomic,assign) CGPoint baselineOffset;
+
+@end
+
+
+
+@interface HXTextGraphicsParser () 
 
 @property (nonatomic,strong) NSMutableAttributedString *calculateString;
+
 @end
 
 
@@ -111,11 +108,12 @@
 }
 
 
+
+
 - (NSMutableAttributedString *)emotionAttsWithText:(NSString *)text
 {
     HXEmotion *em = [HXEmotionTool emotionWithChs:text];
-#warning 封装attCell！！！！！！！！！！！
-    CustomAttachMentCell *attCell = [[CustomAttachMentCell alloc] init];
+    HXAttachCell *attCell = [[HXAttachCell alloc] init];
     attCell.attachImage = em.emotionimage;
     attCell.attachSize = self.attachGraphicsSize;
     attCell.baselineOffset = self.attachGraphicsCharBaselineOffset;
@@ -177,7 +175,7 @@
     return [self.calculateString sizeForMaxLayoutWidth:width].height;
 }
 
-- (CGSize)resultAttributeTextHeightForSingleLine
+- (CGSize)resultAttributeTextSizeForSingleLine
 {
     if (self.calculateString == nil) return CGSizeZero;
     return [self.calculateString sizeForSingleLine];
@@ -185,3 +183,27 @@
 
 
 @end
+
+
+
+@implementation HXTextPart
+
+@end
+
+
+@implementation HXAttachCell
+
+- (void)drawWithFrame:(NSRect)cellFrame inView:(nullable NSView *)controlView {
+    [self.attachImage drawInRect:cellFrame];
+}
+
+- (NSSize)cellSize {
+    return self.attachSize;
+}
+- (NSPoint)cellBaselineOffset {
+    return self.baselineOffset;
+}
+
+@end
+
+
