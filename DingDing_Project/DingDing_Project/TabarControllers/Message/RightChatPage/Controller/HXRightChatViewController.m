@@ -191,7 +191,7 @@ static NSString *mineCellID = @"mineCellID";
 
 
 - (nullable NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row {
-          NSLog(@"viewForTableColumn-- %zd",row);
+    NSLog(@"viewForTableColumn-- %zd",row);
     HXMessage *msg = self.msgDatialArray[row];
     if (msg.isMine) {
         HXMineMessageCell *cell = [tableView makeViewWithIdentifier:mineCellID owner:self];
