@@ -67,7 +67,9 @@
 
 //https://github.com/danjonweb/NCRAutocompleteTextView textview自动弹出文字提示框
 
-// Event Handling Basics 
+// Event Handling Basics
+
+// https://github.com/uliwitness/UliKit 非常好的mac appkit扩展类集合
 
 
 #define selfWidth   self.frame.size.width
