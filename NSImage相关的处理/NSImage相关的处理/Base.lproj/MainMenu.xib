@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -14,8 +15,7 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
-                <outlet property="bView" destination="Cvb-6q-EzA" id="80Z-gG-j6X"/>
-                <outlet property="tView" destination="FoI-cX-82c" id="aJE-ah-pMm"/>
+                <outlet property="ImageView" destination="dVp-Uf-S5E" id="2fO-Ck-lKf"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -668,6 +668,7 @@
                     </menu>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="214" y="-128"/>
         </menu>
         <window title="NSImage相关的处理" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
@@ -678,29 +679,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="Cvb-6q-EzA" customClass="BottomView">
-                        <rect key="frame" x="10" y="10" width="460" height="340"/>
-                        <subviews>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="FoI-cX-82c" customClass="TopView">
-                                <rect key="frame" x="149" y="122" width="163" height="96"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="96" id="Gek-Vc-bUq"/>
-                                    <constraint firstAttribute="width" constant="163" id="zih-pw-2M7"/>
-                                </constraints>
-                            </customView>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="FoI-cX-82c" firstAttribute="centerX" secondItem="Cvb-6q-EzA" secondAttribute="centerX" id="bb9-mA-B7K"/>
-                            <constraint firstItem="FoI-cX-82c" firstAttribute="centerY" secondItem="Cvb-6q-EzA" secondAttribute="centerY" id="mIT-bY-f8h"/>
-                        </constraints>
-                    </customView>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dVp-Uf-S5E">
+                        <rect key="frame" x="134" y="119" width="178" height="151"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="CFQ-MB-i4I"/>
+                    </imageView>
                 </subviews>
-                <constraints>
-                    <constraint firstAttribute="trailing" secondItem="Cvb-6q-EzA" secondAttribute="trailing" constant="10" id="Mwk-IJ-1wO"/>
-                    <constraint firstItem="Cvb-6q-EzA" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="10" id="PiR-gE-3Bt"/>
-                    <constraint firstItem="Cvb-6q-EzA" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="10" id="XvM-yK-Vnq"/>
-                    <constraint firstAttribute="bottom" secondItem="Cvb-6q-EzA" secondAttribute="bottom" constant="10" id="ziZ-l5-zFU"/>
-                </constraints>
             </view>
             <point key="canvasLocation" x="429" y="172"/>
         </window>
