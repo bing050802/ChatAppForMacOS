@@ -62,7 +62,7 @@ NSString * const JMModalOverlayDidCloseNotification = @"JMModalOverlayDidCloseNo
         self.backgroundColor = [NSColor colorWithCalibratedWhite:0 alpha:0.4];
         self.animates = YES;
         if (JMMaverickOrSuperior) {
-            self.appearance = [NSAppearance appearanceNamed:NSAppearanceNameAqua];
+//            self.appearance = [NSAppearance appearanceNamed:NSAppearanceNameAqua];
         }
 
         // Notfication
@@ -124,7 +124,7 @@ NSString * const JMModalOverlayDidCloseNotification = @"JMModalOverlayDidCloseNo
 #pragma mark -
 #pragma mark window
 - (NSWindow *) _modalWindowForFrame:(NSRect)frame{
-    NSWindow *modalWindow = [[NSWindow alloc] initWithContentRect:frame
+    NSWindow *modalWindow = [[NSWindow alloc] initWithContentRect:CGRectMake(10, 200, 400, 400)
                                                         styleMask:NSBorderlessWindowMask backing:NSBackingStoreBuffered defer:YES];
     [modalWindow setBackgroundColor:[NSColor clearColor]];
 //    [modalWindow setOpaque:NO];

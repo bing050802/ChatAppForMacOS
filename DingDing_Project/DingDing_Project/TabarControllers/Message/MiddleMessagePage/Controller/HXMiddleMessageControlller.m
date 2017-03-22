@@ -27,7 +27,7 @@
 
 - (void)loadView {
     [super loadView];
-    
+    //self.msgTableView.usesStaticContents = YES;
     self.msgTableView.headerView = nil;
     self.msgTableView.tag = 10;
     [self.msgTableView registerNib:[[NSNib alloc] initWithNibNamed:NSStringFromClass([HXMessageCell class]) bundle:nil]  forIdentifier:@"msgCell"];
@@ -49,13 +49,15 @@
 }
 
 - (nullable NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row {
-//    NSLog(@"viewForTableColumn---%zd",row);
+    
     HXMessageCell *cell = [tableView makeViewWithIdentifier:@"msgCell" owner:self];
+    NSLog(@"viewForTableColumn-%@--%zd",cell,row);
     cell.message = self.msgArray[row];
     return cell;
 }
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
+    NSLog(@"heightOfRow----%zd",row);
     return 55;
 }
 

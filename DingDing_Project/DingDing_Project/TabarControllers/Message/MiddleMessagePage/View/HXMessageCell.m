@@ -101,6 +101,10 @@
     
 }
 
+- (void)prepareForReuse
+{
+    [super prepareForReuse];
+}
 
 - (void)setBackgroundStyle:(NSBackgroundStyle)backgroundStyle {
     if (self.rowView.selected) {
