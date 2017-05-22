@@ -126,6 +126,8 @@
     self.inputTextView.font = [NSFont systemFontOfSize:14.0];
     self.inputTextView.textColor = HXColor(70, 70, 70);
     self.inputTextView.delegate = self;
+    self.inputTextView.enclosingScrollView.hasVerticalScroller = YES;
+    self.inputTextView.enclosingScrollView.disableScroller = NO;
 
     self.sendButton.titleEdgeInsets = NSEdgeInsetsMake(0, 25, 0, 0);
     self.sendButton.titleFont = [NSFont systemFontOfSize:13];
