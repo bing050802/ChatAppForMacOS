@@ -70,7 +70,7 @@ static BOOL stateSelect = NO;
 - (void)loadView
 {
     [super loadView];
-    
+
     NSClickGestureRecognizer *ges = [[NSClickGestureRecognizer alloc] initWithTarget:self action:@selector(downList:)];
     [self.HeadView addGestureRecognizer:ges];
     [self downList:nil];

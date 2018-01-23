@@ -1,0 +1,404 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A19BFB4201741A8007A2B92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A19BFB3201741A8007A2B92 /* AppDelegate.swift */; };
+		8A19BFB6201741A8007A2B92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A19BFB5201741A8007A2B92 /* ViewController.swift */; };
+		8A19BFB8201741A8007A2B92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A19BFB7201741A8007A2B92 /* Assets.xcassets */; };
+		8A19BFBB201741A8007A2B92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A19BFB9201741A8007A2B92 /* Main.storyboard */; };
+		BAC5FF54609D3F6CDA91D5E1 /* Pods_HChatForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E986928099816C78F33B09FC /* Pods_HChatForMac.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8A19BFB0201741A8007A2B92 /* HChatForMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HChatForMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A19BFB3201741A8007A2B92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8A19BFB5201741A8007A2B92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8A19BFB7201741A8007A2B92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A19BFBA201741A8007A2B92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8A19BFBC201741A8007A2B92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A19BFBD201741A8007A2B92 /* HChatForMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HChatForMac.entitlements; sourceTree = "<group>"; };
+		8CFB1A9CD9733BB4C787A8A7 /* Pods-HChatForMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HChatForMac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HChatForMac/Pods-HChatForMac.debug.xcconfig"; sourceTree = "<group>"; };
+		E6E7CC00C24B2BA704BC9D7B /* Pods-HChatForMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HChatForMac.release.xcconfig"; path = "Pods/Target Support Files/Pods-HChatForMac/Pods-HChatForMac.release.xcconfig"; sourceTree = "<group>"; };
+		E986928099816C78F33B09FC /* Pods_HChatForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HChatForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A19BFAD201741A8007A2B92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAC5FF54609D3F6CDA91D5E1 /* Pods_HChatForMac.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52A0C9A3474F097817EA5511 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E986928099816C78F33B09FC /* Pods_HChatForMac.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A19BFA7201741A8007A2B92 = {
+			isa = PBXGroup;
+			children = (
+				8A19BFB2201741A8007A2B92 /* HChatForMac */,
+				8A19BFB1201741A8007A2B92 /* Products */,
+				D68C5B1EF795CDEA85C7847F /* Pods */,
+				52A0C9A3474F097817EA5511 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8A19BFB1201741A8007A2B92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A19BFB0201741A8007A2B92 /* HChatForMac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A19BFB2201741A8007A2B92 /* HChatForMac */ = {
+			isa = PBXGroup;
+			children = (
+				8A19BFB3201741A8007A2B92 /* AppDelegate.swift */,
+				8A19BFB5201741A8007A2B92 /* ViewController.swift */,
+				8A19BFB7201741A8007A2B92 /* Assets.xcassets */,
+				8A19BFB9201741A8007A2B92 /* Main.storyboard */,
+				8A19BFBC201741A8007A2B92 /* Info.plist */,
+				8A19BFBD201741A8007A2B92 /* HChatForMac.entitlements */,
+			);
+			path = HChatForMac;
+			sourceTree = "<group>";
+		};
+		D68C5B1EF795CDEA85C7847F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8CFB1A9CD9733BB4C787A8A7 /* Pods-HChatForMac.debug.xcconfig */,
+				E6E7CC00C24B2BA704BC9D7B /* Pods-HChatForMac.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A19BFAF201741A8007A2B92 /* HChatForMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A19BFC0201741A8007A2B92 /* Build configuration list for PBXNativeTarget "HChatForMac" */;
+			buildPhases = (
+				6D52C76CDCCBA3215BE73998 /* [CP] Check Pods Manifest.lock */,
+				8A19BFAC201741A8007A2B92 /* Sources */,
+				8A19BFAD201741A8007A2B92 /* Frameworks */,
+				8A19BFAE201741A8007A2B92 /* Resources */,
+				F46A76F9C424CB67048389AE /* [CP] Embed Pods Frameworks */,
+				338CE445C2902CFB0DD3E122 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HChatForMac;
+			productName = HChatForMac;
+			productReference = 8A19BFB0201741A8007A2B92 /* HChatForMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A19BFA8201741A8007A2B92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = cheng;
+				TargetAttributes = {
+					8A19BFAF201741A8007A2B92 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 8A19BFAB201741A8007A2B92 /* Build configuration list for PBXProject "HChatForMac" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8A19BFA7201741A8007A2B92;
+			productRefGroup = 8A19BFB1201741A8007A2B92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A19BFAF201741A8007A2B92 /* HChatForMac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A19BFAE201741A8007A2B92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A19BFB8201741A8007A2B92 /* Assets.xcassets in Resources */,
+				8A19BFBB201741A8007A2B92 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		338CE445C2902CFB0DD3E122 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HChatForMac/Pods-HChatForMac-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D52C76CDCCBA3215BE73998 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HChatForMac-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F46A76F9C424CB67048389AE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HChatForMac/Pods-HChatForMac-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HChatForMac/Pods-HChatForMac-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A19BFAC201741A8007A2B92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A19BFB6201741A8007A2B92 /* ViewController.swift in Sources */,
+				8A19BFB4201741A8007A2B92 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8A19BFB9201741A8007A2B92 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A19BFBA201741A8007A2B92 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8A19BFBE201741A8007A2B92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8A19BFBF201741A8007A2B92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		8A19BFC1201741A8007A2B92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CFB1A9CD9733BB4C787A8A7 /* Pods-HChatForMac.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = HChatForMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chengcheng.HChatForMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		8A19BFC2201741A8007A2B92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6E7CC00C24B2BA704BC9D7B /* Pods-HChatForMac.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = HChatForMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chengcheng.HChatForMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A19BFAB201741A8007A2B92 /* Build configuration list for PBXProject "HChatForMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A19BFBE201741A8007A2B92 /* Debug */,
+				8A19BFBF201741A8007A2B92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A19BFC0201741A8007A2B92 /* Build configuration list for PBXNativeTarget "HChatForMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A19BFC1201741A8007A2B92 /* Debug */,
+				8A19BFC2201741A8007A2B92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8A19BFA8201741A8007A2B92 /* Project object */;
+}
