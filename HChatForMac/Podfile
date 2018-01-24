@@ -1,12 +1,12 @@
 platform :osx,‘10.11’
-# source 'https://github.com/hanxiaoqing19910916/HanPodSpecs.git'
-# source 'https://github.com/CocoaPods/Specs.git'
+#source 'https://github.com/hanxiaoqing19910916/HanPodSpecs.git'
+source 'https://github.com/CocoaPods/Specs.git'
 
 
 target 'HChatForMac' do
     use_frameworks!
-  # pod 'HUIKit/SwiftExtention'
     pod 'Kingfisher'
     pod 'Alamofire'
-
+    pod 'SnapKit'
+    
 end
