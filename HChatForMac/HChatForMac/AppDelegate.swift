@@ -14,7 +14,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        let appWindow = NSApp.windows.first as! NSWindow
+        appWindow.titleVisibility = .hidden
+         appWindow.titlebarAppearsTransparent = true
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

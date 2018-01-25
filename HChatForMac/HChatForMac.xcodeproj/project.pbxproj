@@ -25,6 +25,7 @@
 		8A405E87201873A6005B85DD /* HUIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A405E79201873A6005B85DD /* HUIControl.swift */; };
 		8A405E88201873A6005B85DD /* HUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A405E7A201873A6005B85DD /* HUIView.swift */; };
 		8A405E89201873A6005B85DD /* HUIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A405E7B201873A6005B85DD /* HUIWindow.swift */; };
+		8A4822472019ACD20007AA5B /* HUISelectionBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4822462019ACD20007AA5B /* HUISelectionBar.swift */; };
 		8AC0A913201884F2003AADF8 /* HUITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC0A912201884F2003AADF8 /* HUITabBarController.swift */; };
 		8AC0A91620188F11003AADF8 /* testVc1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC0A91420188F11003AADF8 /* testVc1.swift */; };
 		8AC0A91720188F11003AADF8 /* testVc1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AC0A91520188F11003AADF8 /* testVc1.xib */; };
@@ -53,6 +54,7 @@
 		8A405E79201873A6005B85DD /* HUIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUIControl.swift; sourceTree = "<group>"; };
 		8A405E7A201873A6005B85DD /* HUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUIView.swift; sourceTree = "<group>"; };
 		8A405E7B201873A6005B85DD /* HUIWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUIWindow.swift; sourceTree = "<group>"; };
+		8A4822462019ACD20007AA5B /* HUISelectionBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUISelectionBar.swift; sourceTree = "<group>"; };
 		8AC0A912201884F2003AADF8 /* HUITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUITabBarController.swift; sourceTree = "<group>"; };
 		8AC0A91420188F11003AADF8 /* testVc1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testVc1.swift; sourceTree = "<group>"; };
 		8AC0A91520188F11003AADF8 /* testVc1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = testVc1.xib; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				8A19BFB3201741A8007A2B92 /* AppDelegate.swift */,
 				8A19BFB5201741A8007A2B92 /* ViewController.swift */,
 				8AC0A912201884F2003AADF8 /* HUITabBarController.swift */,
+				8A4822462019ACD20007AA5B /* HUISelectionBar.swift */,
 				8AC0A91420188F11003AADF8 /* testVc1.swift */,
 				8AC0A91520188F11003AADF8 /* testVc1.xib */,
 				8A19BFB7201741A8007A2B92 /* Assets.xcassets */,
@@ -311,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A405E83201873A6005B85DD /* ViewExtention.swift in Sources */,
+				8A4822472019ACD20007AA5B /* HUISelectionBar.swift in Sources */,
 				8A405E80201873A6005B85DD /* ImageExtention.swift in Sources */,
 				8A405E7F201873A6005B85DD /* FontExtention.swift in Sources */,
 				8A405E7D201873A6005B85DD /* ColorExtention.swift in Sources */,

@@ -14,87 +14,92 @@ import SnapKit
 
 class ViewController: NSViewController {
     
-    @IBOutlet weak var imageView: NSImageView!
+    @IBOutlet weak var leftSideView: NSView!
+    @IBOutlet weak var fillBtnsView: NSStackView!
+    var lastSelectBtn: HUIButton? = nil
+    
+    let gradientLayer = CAGradientLayer()
+    
     let tabbarController = HUITabBarController()
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let loginBtn = HUIButton(frame: CGRect(x: 30, y: 100, width: 40, height: 50))
-        loginBtn.backgroundColor = .purple
-        loginBtn.isTrackingEnabled = true
-        loginBtn.setTitle("登录", for: .normal)
-        loginBtn.setTitleColor(.white, for: .normal)
-        loginBtn.setTitleColor(.yellow, for: .mouseIn)
-        loginBtn.addTarget(self, action: #selector(btnTapped(_:)), for: .leftMouseUp)
-        
-        let chatBtn = HUIButton(frame: CGRect(x: 30, y: 100, width: 40, height: 50))
-        chatBtn.backgroundColor = .purple
-        chatBtn.isTrackingEnabled = true
-        chatBtn.setTitle("聊天", for: .normal)
-        chatBtn.setTitleColor(.white, for: .normal)
-        chatBtn.setTitleColor(.yellow, for: .mouseIn)
-        chatBtn.addTarget(self, action: #selector(btnTapped(_:)), for: .leftMouseUp)
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        leftSideView.backgroundColor = NSColor(r: 219, g: 220, b: 227)
 
-        let stackView = NSStackView()
-        stackView.wantsLayer = true
-        stackView.orientation = .vertical
-        stackView.layer?.backgroundColor = NSColor.white.cgColor
-        stackView.distribution = .fillEqually
+
+    }
+    
+    override func viewWillAppear() {
+        super.viewWillAppear()
         
-        stackView.addArrangedSubview(loginBtn)
-        stackView.addArrangedSubview(chatBtn)
+
+        gradientLayer.colors = [NSColor(r: 255, g: 99, b: 151).cgColor, NSColor(r: 255, g: 166, b: 108).cgColor]
+        gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
+        gradientLayer.endPoint = CGPoint(x:0.5, y:1);
+        gradientLayer.locations = [0.65, 1]
+        leftSideView.layer?.insertSublayer(gradientLayer, at: 0)
         
         
-        view.addSubview(stackView)
-        stackView.snp.makeConstraints { (make) in
-            make.left.equalToSuperview()
-            make.top.equalToSuperview()
-            make.bottom.equalToSuperview()
-            make.width.equalTo(80)
+        let images = ["message", "contact", "group"]
+        let selectImages = ["message_select", "contact_select", "group_select"]
+        for index in 0..<3 {
+            let btn = HUIButton()
+            btn.isHighlightedEnabled = false
+            let normalImg = NSImage(named: NSImage.Name(images[index]))
+            let selectImg = NSImage(named: NSImage.Name(selectImages[index]))
+            btn.setImage(normalImg, for: .normal)
+            btn.setImage(selectImg, for: .selected)
+            btn.addTarget(self, action: #selector(btnTapped(_:)), for: .leftMouseUp)
+            fillBtnsView.addArrangedSubview(btn)
+            if index == 0 { btnTapped(btn) }
         }
         
         
-        
+    }
+    
+    
+    override func viewDidLayout() {
+        super.viewDidLayout()
+        gradientLayer.frame = leftSideView.bounds
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
         let vc1 = testVc1()
-        vc1.view.backgroundColor = .red
-        
         let vc2 = testVc1()
-        vc2.view.backgroundColor = .blue
-        
         tabbarController.addChildViewController(vc1)
         tabbarController.addChildViewController(vc2)
         view.addSubview(tabbarController.view)
         addChildViewController(tabbarController)
-        
         tabbarController.view.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(80)
             make.right.equalToSuperview()
             make.top.equalToSuperview()
             make.bottom.equalToSuperview()
         }
-        btnTapped(chatBtn)
 
-    }
-
-    @objc func btnTapped(_ btn: HUIButton) {
-        var index = 0
-        //print(btn.currentTitle)
-        if btn.currentTitle == "登录" {
-            index = 0
-        } else {
-            index = 1
-        }
-        tabbarController.selectViewController(at: index)
     }
     
+    @objc func btnTapped(_ btn: HUIButton) {
+        lastSelectBtn?.isSelected = false
+        btn.isSelected = true
+        // undo: select controller
+        lastSelectBtn = btn
+    }
+    
+    
+    
+    
     func testNetWorking()  {
+        let imageView: NSImageView =  NSImageView()
         KingfisherManager.shared.cache.clearMemoryCache()
         KingfisherManager.shared.cache.clearDiskCache()
         let url = URL(string: "https://raw.githubusercontent.com/onevcat/Kingfisher/master/images/kingfisher-2.jpg")!
-        imageView?.kf.indicatorType = .activity
+        imageView.kf.indicatorType = .activity
         imageView.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { (image, err, caceType, imageUrl) in
-            
-            
         }
         Alamofire.request(url).response { response in // method defaults to `.get`
             //debugPrint(response)

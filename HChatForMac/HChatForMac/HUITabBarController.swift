@@ -9,7 +9,7 @@
 import Cocoa
 
 open class HUITabBarController: NSViewController {
-
+    
     open var viewControllers: [NSViewController] {
         return self.childViewControllers
     }

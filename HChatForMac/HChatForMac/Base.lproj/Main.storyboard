@@ -4,6 +4,7 @@
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -685,8 +686,8 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
@@ -707,13 +708,41 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="HChatForMac" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="318"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="obw-UJ-j7T">
+                                <rect key="frame" x="0.0" y="0.0" width="68" height="318"/>
+                                <subviews>
+                                    <stackView distribution="fillEqually" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" translatesAutoresizingMaskIntoConstraints="NO" id="Us2-2P-tr7">
+                                        <rect key="frame" x="14" y="91" width="40" height="136"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="3ar-4P-JVs"/>
+                                            <constraint firstAttribute="height" constant="136" id="azA-rw-Nm3"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Us2-2P-tr7" firstAttribute="centerX" secondItem="obw-UJ-j7T" secondAttribute="centerX" id="bcq-Gb-aa8"/>
+                                    <constraint firstAttribute="width" constant="68" id="dK7-wP-5Gi"/>
+                                    <constraint firstItem="Us2-2P-tr7" firstAttribute="centerY" secondItem="obw-UJ-j7T" secondAttribute="centerY" id="m9e-RN-G9f"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="obw-UJ-j7T" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="CY0-vh-NTW"/>
+                            <constraint firstItem="obw-UJ-j7T" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="PM4-ET-asG"/>
+                            <constraint firstAttribute="bottom" secondItem="obw-UJ-j7T" secondAttribute="bottom" id="u4U-5s-yqG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fillBtnsView" destination="Us2-2P-tr7" id="bwJ-YL-yvJ"/>
+                        <outlet property="leftSideView" destination="obw-UJ-j7T" id="Qhy-9B-98n"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="164" y="673"/>
         </scene>
     </scenes>
 </document>
