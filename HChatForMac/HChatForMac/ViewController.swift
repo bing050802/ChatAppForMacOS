@@ -58,8 +58,8 @@ class ViewController: NSViewController {
         gradientLayer.frame = leftSideView.bounds
         
         
-//        NSSplitViewController
-//         NSSplitView
+        //        NSSplitViewController
+        //        NSSplitView
         
     }
     
@@ -81,7 +81,6 @@ class ViewController: NSViewController {
             make.top.equalToSuperview()
             make.bottom.equalToSuperview()
         }
-        
     }
     
     @objc func btnTapped(_ btn: HUIButton) {
@@ -91,9 +90,6 @@ class ViewController: NSViewController {
         tabbarController.selectViewController(at: btn.viewTag)
         lastSelectBtn = btn
     }
-    
-    
-    
     
     func testNetWorking()  {
         let imageView: NSImageView =  NSImageView()
