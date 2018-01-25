@@ -26,9 +26,12 @@
 		8A405E88201873A6005B85DD /* HUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A405E7A201873A6005B85DD /* HUIView.swift */; };
 		8A405E89201873A6005B85DD /* HUIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A405E7B201873A6005B85DD /* HUIWindow.swift */; };
 		8A4822472019ACD20007AA5B /* HUISelectionBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4822462019ACD20007AA5B /* HUISelectionBar.swift */; };
+		8A48224A2019E7C00007AA5B /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4822482019E7C00007AA5B /* MessageViewController.swift */; };
+		8A48224E2019E8A70007AA5B /* RecentlyChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A48224C2019E8A70007AA5B /* RecentlyChatViewController.swift */; };
+		8A48224F2019E8A70007AA5B /* RecentlyChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A48224D2019E8A70007AA5B /* RecentlyChatViewController.xib */; };
+		8A4822522019E9860007AA5B /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4822502019E9860007AA5B /* ConversationViewController.swift */; };
+		8A4822532019E9860007AA5B /* ConversationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A4822512019E9860007AA5B /* ConversationViewController.xib */; };
 		8AC0A913201884F2003AADF8 /* HUITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC0A912201884F2003AADF8 /* HUITabBarController.swift */; };
-		8AC0A91620188F11003AADF8 /* testVc1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC0A91420188F11003AADF8 /* testVc1.swift */; };
-		8AC0A91720188F11003AADF8 /* testVc1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AC0A91520188F11003AADF8 /* testVc1.xib */; };
 		BAC5FF54609D3F6CDA91D5E1 /* Pods_HChatForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E986928099816C78F33B09FC /* Pods_HChatForMac.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,9 +58,12 @@
 		8A405E7A201873A6005B85DD /* HUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUIView.swift; sourceTree = "<group>"; };
 		8A405E7B201873A6005B85DD /* HUIWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUIWindow.swift; sourceTree = "<group>"; };
 		8A4822462019ACD20007AA5B /* HUISelectionBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUISelectionBar.swift; sourceTree = "<group>"; };
+		8A4822482019E7C00007AA5B /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		8A48224C2019E8A70007AA5B /* RecentlyChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyChatViewController.swift; sourceTree = "<group>"; };
+		8A48224D2019E8A70007AA5B /* RecentlyChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentlyChatViewController.xib; sourceTree = "<group>"; };
+		8A4822502019E9860007AA5B /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
+		8A4822512019E9860007AA5B /* ConversationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConversationViewController.xib; sourceTree = "<group>"; };
 		8AC0A912201884F2003AADF8 /* HUITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUITabBarController.swift; sourceTree = "<group>"; };
-		8AC0A91420188F11003AADF8 /* testVc1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testVc1.swift; sourceTree = "<group>"; };
-		8AC0A91520188F11003AADF8 /* testVc1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = testVc1.xib; sourceTree = "<group>"; };
 		8CFB1A9CD9733BB4C787A8A7 /* Pods-HChatForMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HChatForMac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HChatForMac/Pods-HChatForMac.debug.xcconfig"; sourceTree = "<group>"; };
 		E6E7CC00C24B2BA704BC9D7B /* Pods-HChatForMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HChatForMac.release.xcconfig"; path = "Pods/Target Support Files/Pods-HChatForMac/Pods-HChatForMac.release.xcconfig"; sourceTree = "<group>"; };
 		E986928099816C78F33B09FC /* Pods_HChatForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HChatForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,8 +115,11 @@
 				8A19BFB5201741A8007A2B92 /* ViewController.swift */,
 				8AC0A912201884F2003AADF8 /* HUITabBarController.swift */,
 				8A4822462019ACD20007AA5B /* HUISelectionBar.swift */,
-				8AC0A91420188F11003AADF8 /* testVc1.swift */,
-				8AC0A91520188F11003AADF8 /* testVc1.xib */,
+				8A4822482019E7C00007AA5B /* MessageViewController.swift */,
+				8A48224C2019E8A70007AA5B /* RecentlyChatViewController.swift */,
+				8A48224D2019E8A70007AA5B /* RecentlyChatViewController.xib */,
+				8A4822502019E9860007AA5B /* ConversationViewController.swift */,
+				8A4822512019E9860007AA5B /* ConversationViewController.xib */,
 				8A19BFB7201741A8007A2B92 /* Assets.xcassets */,
 				8A19BFB9201741A8007A2B92 /* Main.storyboard */,
 				8A19BFBC201741A8007A2B92 /* Info.plist */,
@@ -241,9 +250,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A48224F2019E8A70007AA5B /* RecentlyChatViewController.xib in Resources */,
 				8A405E7C201873A6005B85DD /* .gitkeep in Resources */,
+				8A4822532019E9860007AA5B /* ConversationViewController.xib in Resources */,
 				8A19BFB8201741A8007A2B92 /* Assets.xcassets in Resources */,
-				8AC0A91720188F11003AADF8 /* testVc1.xib in Resources */,
 				8A19BFBB201741A8007A2B92 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +325,7 @@
 			files = (
 				8A405E83201873A6005B85DD /* ViewExtention.swift in Sources */,
 				8A4822472019ACD20007AA5B /* HUISelectionBar.swift in Sources */,
+				8A4822522019E9860007AA5B /* ConversationViewController.swift in Sources */,
 				8A405E80201873A6005B85DD /* ImageExtention.swift in Sources */,
 				8A405E7F201873A6005B85DD /* FontExtention.swift in Sources */,
 				8A405E7D201873A6005B85DD /* ColorExtention.swift in Sources */,
@@ -322,11 +333,12 @@
 				8A405E88201873A6005B85DD /* HUIView.swift in Sources */,
 				8A405E81201873A6005B85DD /* LayerExtention.swift in Sources */,
 				8A405E84201873A6005B85DD /* UIUtils.swift in Sources */,
+				8A48224E2019E8A70007AA5B /* RecentlyChatViewController.swift in Sources */,
 				8A19BFB6201741A8007A2B92 /* ViewController.swift in Sources */,
-				8AC0A91620188F11003AADF8 /* testVc1.swift in Sources */,
 				8A405E87201873A6005B85DD /* HUIControl.swift in Sources */,
 				8AC0A913201884F2003AADF8 /* HUITabBarController.swift in Sources */,
 				8A405E86201873A6005B85DD /* HUIButton.swift in Sources */,
+				8A48224A2019E7C00007AA5B /* MessageViewController.swift in Sources */,
 				8A405E82201873A6005B85DD /* StringExtention.swift in Sources */,
 				8A405E89201873A6005B85DD /* HUIWindow.swift in Sources */,
 				8A405E7E201873A6005B85DD /* DateExtention.swift in Sources */,

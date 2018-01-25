@@ -16,35 +16,30 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var leftSideView: NSView!
     @IBOutlet weak var fillBtnsView: NSStackView!
-    var lastSelectBtn: HUIButton? = nil
     
-    let gradientLayer = CAGradientLayer()
-    
-    let tabbarController = HUITabBarController()
-    
+    fileprivate let gradientLayer = CAGradientLayer()
+    fileprivate let tabbarController = HUITabBarController()
+    fileprivate var lastSelectBtn: HUIButton? = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()
         leftSideView.backgroundColor = NSColor(r: 219, g: 220, b: 227)
-
-
     }
     
     override func viewWillAppear() {
         super.viewWillAppear()
         
-
         gradientLayer.colors = [NSColor(r: 255, g: 99, b: 151).cgColor, NSColor(r: 255, g: 166, b: 108).cgColor]
         gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
         gradientLayer.endPoint = CGPoint(x:0.5, y:1);
         gradientLayer.locations = [0.65, 1]
         leftSideView.layer?.insertSublayer(gradientLayer, at: 0)
         
-        
         let images = ["message", "contact", "group"]
         let selectImages = ["message_select", "contact_select", "group_select"]
         for index in 0..<3 {
             let btn = HUIButton()
+            btn.viewTag = index
             btn.isHighlightedEnabled = false
             let normalImg = NSImage(named: NSImage.Name(images[index]))
             let selectImg = NSImage(named: NSImage.Name(selectImages[index]))
@@ -55,23 +50,29 @@ class ViewController: NSViewController {
             if index == 0 { btnTapped(btn) }
         }
         
-        
     }
     
     
     override func viewDidLayout() {
         super.viewDidLayout()
         gradientLayer.frame = leftSideView.bounds
+        
+        
+//        NSSplitViewController
+//         NSSplitView
+        
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let vc1 = testVc1()
-        let vc2 = testVc1()
+        
+        let vc1 = MessageViewController()
+        let vc2 = MessageViewController()
+        let vc3 = MessageViewController()
         tabbarController.addChildViewController(vc1)
         tabbarController.addChildViewController(vc2)
+        tabbarController.addChildViewController(vc3)
         view.addSubview(tabbarController.view)
         addChildViewController(tabbarController)
         tabbarController.view.snp.makeConstraints { (make) in
@@ -80,13 +81,14 @@ class ViewController: NSViewController {
             make.top.equalToSuperview()
             make.bottom.equalToSuperview()
         }
-
+        
     }
     
     @objc func btnTapped(_ btn: HUIButton) {
         lastSelectBtn?.isSelected = false
         btn.isSelected = true
         // undo: select controller
+        tabbarController.selectViewController(at: btn.viewTag)
         lastSelectBtn = btn
     }
     
