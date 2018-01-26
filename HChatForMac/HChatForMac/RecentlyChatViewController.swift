@@ -14,7 +14,7 @@ class ChatInfoCell: NSCollectionViewItem {
     override func loadView() {
         view = NSView()
         view.autoresizingMask = [.maxXMargin, .minXMargin]
-        view.backgroundColor = NSColor.red
+        view.backgroundColor = NSColor.white
     }
     override func apply(_ layoutAttributes: NSCollectionViewLayoutAttributes) {
         super.apply(layoutAttributes)
@@ -45,7 +45,8 @@ class RecentlyChatViewController: NSViewController {
         flowLayout.minimumLineSpacing = 5
         recentChatList.collectionViewLayout = flowLayout
         recentChatList.register(ChatInfoCell.self, forItemWithIdentifier: NSUserInterfaceItemIdentifier(rawValue: "das"))
-
+       
+        
         
     }
     override func viewDidLayout() {
@@ -57,7 +58,7 @@ class RecentlyChatViewController: NSViewController {
 
 extension RecentlyChatViewController: NSCollectionViewDataSource {
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 40
+        return 50
     }
     
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
