@@ -13,6 +13,15 @@ class ChatInfoCell: NSCollectionViewItem {
     
     override func loadView() {
         view = NSView()
+        view.autoresizingMask = [.maxXMargin, .minXMargin]
+        view.backgroundColor = NSColor.red
+    }
+    override func apply(_ layoutAttributes: NSCollectionViewLayoutAttributes) {
+        super.apply(layoutAttributes)
+    }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+       
     }
 }
 
@@ -21,23 +30,34 @@ class ChatInfoCell: NSCollectionViewItem {
 class RecentlyChatViewController: NSViewController {
 
     @IBOutlet weak var recentChatList: NSCollectionView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+      
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+     
+        let flowLayout = NSCollectionViewFlowLayout()
+        flowLayout.scrollDirection = .vertical
+        flowLayout.minimumLineSpacing = 5
+        recentChatList.collectionViewLayout = flowLayout
         recentChatList.register(ChatInfoCell.self, forItemWithIdentifier: NSUserInterfaceItemIdentifier(rawValue: "das"))
+
         
     }
     override func viewDidLayout() {
         super.viewDidLayout()
-        
-        
+        //recentChatList.collectionViewLayout?.inva
     }
 }
 
 
 extension RecentlyChatViewController: NSCollectionViewDataSource {
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 40
     }
     
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
@@ -49,6 +69,13 @@ extension RecentlyChatViewController: NSCollectionViewDataSource {
     
     
 }
+
+extension RecentlyChatViewController: NSCollectionViewDelegateFlowLayout {
+    public func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> NSSize {
+       return CGSize(width: 400, height: 40)
+    }
+}
+
 
 extension RecentlyChatViewController: NSCollectionViewDelegate {
     

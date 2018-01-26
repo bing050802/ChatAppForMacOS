@@ -14,6 +14,7 @@ class MessageViewController: NSSplitViewController {
         super.viewDidLoad()
         
         let recentChatVcItem = NSSplitViewItem(viewController: RecentlyChatViewController())
+        //recentChatVcItem.isCollapsed = true
         recentChatVcItem.minimumThickness = 215
         recentChatVcItem.maximumThickness = 300
         addSplitViewItem(recentChatVcItem)

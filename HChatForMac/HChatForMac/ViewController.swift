@@ -14,26 +14,28 @@ import SnapKit
 
 class ViewController: NSViewController {
     
+    @IBOutlet weak var topView: NSView!
     @IBOutlet weak var leftSideView: NSView!
     @IBOutlet weak var fillBtnsView: NSStackView!
     
-    fileprivate let gradientLayer = CAGradientLayer()
+    fileprivate let leftGradientLayer = CAGradientLayer()
+    fileprivate let topGradientLayer = CAGradientLayer()
     fileprivate let tabbarController = HUITabBarController()
     fileprivate var lastSelectBtn: HUIButton? = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        leftSideView.backgroundColor = NSColor(r: 219, g: 220, b: 227)
     }
     
     override func viewWillAppear() {
         super.viewWillAppear()
         
-        gradientLayer.colors = [NSColor(r: 255, g: 99, b: 151).cgColor, NSColor(r: 255, g: 166, b: 108).cgColor]
-        gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
-        gradientLayer.endPoint = CGPoint(x:0.5, y:1);
-        gradientLayer.locations = [0.65, 1]
-        leftSideView.layer?.insertSublayer(gradientLayer, at: 0)
+        topGradientLayer.colors = [NSColor(r: 255, g: 99, b: 151).cgColor, NSColor(r: 255, g: 166, b: 108).cgColor]
+        topGradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
+        topGradientLayer.endPoint = CGPoint(x:0.5, y:1);
+        topGradientLayer.locations = [0.35, 1]
+        view.layer?.insertSublayer(topGradientLayer, at: 0)
+        
         
         let images = ["message", "contact", "group"]
         let selectImages = ["message_select", "contact_select", "group_select"]
@@ -55,12 +57,7 @@ class ViewController: NSViewController {
     
     override func viewDidLayout() {
         super.viewDidLayout()
-        gradientLayer.frame = leftSideView.bounds
-        
-        
-        //        NSSplitViewController
-        //        NSSplitView
-        
+        topGradientLayer.frame = view.bounds
     }
     
     
@@ -76,9 +73,9 @@ class ViewController: NSViewController {
         view.addSubview(tabbarController.view)
         addChildViewController(tabbarController)
         tabbarController.view.snp.makeConstraints { (make) in
-            make.left.equalToSuperview().offset(80)
+            make.left.equalToSuperview().offset(68)
             make.right.equalToSuperview()
-            make.top.equalToSuperview()
+            make.top.equalToSuperview().offset(50)
             make.bottom.equalToSuperview()
         }
     }

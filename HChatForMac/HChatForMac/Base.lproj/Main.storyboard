@@ -728,16 +728,26 @@
                                     <constraint firstItem="Us2-2P-tr7" firstAttribute="centerY" secondItem="obw-UJ-j7T" secondAttribute="centerY" id="m9e-RN-G9f"/>
                                 </constraints>
                             </customView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="lok-cm-mHv">
+                                <rect key="frame" x="0.0" y="268" width="480" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vnF-Ul-f7g"/>
+                                </constraints>
+                            </customView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="obw-UJ-j7T" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="CY0-vh-NTW"/>
+                            <constraint firstAttribute="trailing" secondItem="lok-cm-mHv" secondAttribute="trailing" id="Iu4-zB-0I8"/>
                             <constraint firstItem="obw-UJ-j7T" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="PM4-ET-asG"/>
+                            <constraint firstItem="lok-cm-mHv" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="phj-kO-aeT"/>
+                            <constraint firstItem="lok-cm-mHv" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="soN-Qa-Bqk"/>
                             <constraint firstAttribute="bottom" secondItem="obw-UJ-j7T" secondAttribute="bottom" id="u4U-5s-yqG"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="fillBtnsView" destination="Us2-2P-tr7" id="bwJ-YL-yvJ"/>
                         <outlet property="leftSideView" destination="obw-UJ-j7T" id="Qhy-9B-98n"/>
+                        <outlet property="topView" destination="lok-cm-mHv" id="2gS-cz-I4P"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
