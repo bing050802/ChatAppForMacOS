@@ -12,20 +12,24 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     var loginWindow: NSWindow?
-    
+    var mainAppWindow: NSWindow?
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-       
-        loginWindow = NSWindow(contentRect:  CGRect(x: 0, y: 0, width: 200, height: 300), styleMask: [.titled, .closable], backing: .buffered, defer: false)
+        
+        let screenSize = NSScreen.main?.frame.size
+        let windowX = (screenSize?.width)! * 0.5 - 150
+        let windowY = (screenSize?.height)! * 0.5 - 200
+        loginWindow = NSWindow(contentRect: CGRect(x: windowX, y: windowY, width: 300, height: 400), styleMask: [.titled, .closable], backing: .buffered, defer: false)
+        loginWindow?.isReleasedWhenClosed = false
         loginWindow?.contentView = NSView()
-        loginWindow?.minSize = CGSize(width: 200, height: 300)
-        loginWindow?.maxSize = CGSize(width: 200, height: 300)
         loginWindow?.makeKeyAndOrderFront(NSApp)
         
+//        let storyBoard =  NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
+//        let windowContoller = storyBoard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("appWindowController")) as! NSWindowController
+//        mainAppWindow = windowContoller.window
+//        mainAppWindow?.titleVisibility = .hidden
+//        mainAppWindow?.titlebarAppearsTransparent = true
+//        windowContoller.showWindow(nil)
         
-        
-//        let appWindow = NSApp.windows.first as! NSWindow
-//        appWindow.titleVisibility = .hidden
-//        appWindow.titlebarAppearsTransparent = true
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
