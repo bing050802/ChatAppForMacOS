@@ -12,9 +12,8 @@ class MessageViewController: NSSplitViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = .white
         let recentChatVcItem = NSSplitViewItem(viewController: RecentlyChatViewController())
-        //recentChatVcItem.isCollapsed = true
         recentChatVcItem.minimumThickness = 215
         recentChatVcItem.maximumThickness = 300
         addSplitViewItem(recentChatVcItem)

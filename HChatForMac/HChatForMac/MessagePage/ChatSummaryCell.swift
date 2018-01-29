@@ -30,6 +30,10 @@ class ChatSummaryCell: NSCollectionViewItem {
         timeLabel.font = NSFont.compactRoundFont(11)
         
         messageLabel.stringValue = "好的哈烦得很发到空间阿富汗大家哈哈"
+        
+        let options: NSTrackingArea.Options = [.cursorUpdate, .mouseEnteredAndExited, .mouseMoved, .activeInKeyWindow,.inVisibleRect]
+        let trackingArea = NSTrackingArea(rect: view.bounds, options: options, owner: self, userInfo: nil)
+        view.addTrackingArea(trackingArea)
     }
     
     override func viewDidLayout() {
@@ -46,5 +50,15 @@ class ChatSummaryCell: NSCollectionViewItem {
             }
         }
     }
+    
+    override open func mouseEntered(with event: NSEvent) {
+        view.backgroundColor = NSColor(r: 255, g: 240, b: 240)
+    }
+    
+    override open func mouseExited(with event: NSEvent) {
+        if isSelected == true { return }
+        view.backgroundColor = .white
+    }
+    
     
 }

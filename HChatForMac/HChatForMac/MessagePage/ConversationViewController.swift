@@ -12,7 +12,8 @@ class ConversationViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+       
+        view.backgroundColor = .white
     }
     
 }

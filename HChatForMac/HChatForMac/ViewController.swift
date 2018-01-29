@@ -36,7 +36,6 @@ class ViewController: NSViewController {
         topGradientLayer.locations = [0.35, 1]
         view.layer?.insertSublayer(topGradientLayer, at: 0)
         
-        
         let images = ["message", "contact", "group"]
         let selectImages = ["message_select", "contact_select", "group_select"]
         for index in 0..<3 {
