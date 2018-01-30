@@ -15,20 +15,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var mainAppWindow: NSWindow?
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
-        let screenSize = NSScreen.main?.frame.size
-        let windowX = (screenSize?.width)! * 0.5 - 150
-        let windowY = (screenSize?.height)! * 0.5 - 200
-        loginWindow = NSWindow(contentRect: CGRect(x: windowX, y: windowY, width: 300, height: 400), styleMask: [.titled, .closable], backing: .buffered, defer: false)
-        loginWindow?.isReleasedWhenClosed = false
-        loginWindow?.contentView = NSView()
-        loginWindow?.makeKeyAndOrderFront(NSApp)
+        let loginBoard =  NSStoryboard(name: NSStoryboard.Name("LoginView"), bundle: nil)
+        let loginWindowContoller = loginBoard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("loginWindowContoller")) as! NSWindowController
+        loginWindow = loginWindowContoller.window
+        loginWindow?.titleVisibility = .hidden
+        loginWindow?.titlebarAppearsTransparent = true
+        loginWindowContoller.showWindow(nil)
         
-//        let storyBoard =  NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
-//        let windowContoller = storyBoard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("appWindowController")) as! NSWindowController
-//        mainAppWindow = windowContoller.window
-//        mainAppWindow?.titleVisibility = .hidden
-//        mainAppWindow?.titlebarAppearsTransparent = true
-//        windowContoller.showWindow(nil)
+        //        let storyBoard =  NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
+        //        let windowContoller = storyBoard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("appWindowController")) as! NSWindowController
+        //        mainAppWindow = windowContoller.window
+        //        mainAppWindow?.titleVisibility = .hidden
+        //        mainAppWindow?.titlebarAppearsTransparent = true
+        //        windowContoller.showWindow(nil)
         
     }
     

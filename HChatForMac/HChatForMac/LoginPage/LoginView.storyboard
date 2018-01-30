@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="MNH-uN-5ch">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="uvs-WZ-rPy">
+            <objects>
+                <windowController storyboardIdentifier="loginWindowContoller" id="yfw-13-sfa" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="5gx-LK-7Gl">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="294" y="313" width="340" height="480"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+                        <value key="minSize" type="size" width="340" height="480"/>
+                        <value key="maxSize" type="size" width="340" height="480"/>
+                        <connections>
+                            <outlet property="delegate" destination="yfw-13-sfa" id="reL-zl-q2U"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="MNH-uN-5ch" kind="relationship" relationship="window.shadowedContentViewController" id="ZqX-YG-u4U"/>
+                    </connections>
+                </windowController>
+                <customObject id="44O-jv-lEM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="155" y="-413"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="qJg-1W-elZ">
+            <objects>
+                <viewController id="MNH-uN-5ch" customClass="LoginViewController" customModule="HChatForMac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="GD8-FK-Lj4">
+                        <rect key="frame" x="0.0" y="0.0" width="340" height="480"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fDG-5R-Dei">
+                                <rect key="frame" x="0.0" y="-7" width="340" height="498"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="loginBg" id="LYL-eo-Ww1"/>
+                            </imageView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jph-Ot-doL">
+                                <rect key="frame" x="37" y="374" width="266" height="71"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="login_welcome" id="NiJ-8Z-17L"/>
+                            </imageView>
+                            <stackView wantsLayer="YES" distribution="fillEqually" orientation="vertical" alignment="centerX" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NxA-f8-92n">
+                                <rect key="frame" x="70" y="244" width="200" height="80"/>
+                                <subviews>
+                                    <textField wantsLayer="YES" focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="i4H-Vf-4Lw">
+                                        <rect key="frame" x="0.0" y="45" width="200" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="Qvx-u3-7Gi"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" placeholderString="请输入用户名" drawsBackground="YES" id="xok-Cg-8sI">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <secureTextField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dpP-Kn-R9J">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="inN-5a-Vdi"/>
+                                        </constraints>
+                                        <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" placeholderString="请输入密码" drawsBackground="YES" usesSingleLineMode="YES" id="Iun-bb-60d">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <allowedInputSourceLocales>
+                                                <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                                            </allowedInputSourceLocales>
+                                        </secureTextFieldCell>
+                                    </secureTextField>
+                                </subviews>
+                                <shadow key="shadow">
+                                    <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </shadow>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="8N2-14-nrR"/>
+                                    <constraint firstAttribute="height" constant="80" id="Pg1-lA-eKq"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <real value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="Yq7-oT-tUT" customClass="HUIButton" customModule="HChatForMac" customModuleProvider="target">
+                                <rect key="frame" x="70" y="192" width="200" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="8A2-bh-n18"/>
+                                    <constraint firstAttribute="height" constant="36" id="TiL-cw-q3o"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="fDG-5R-Dei" firstAttribute="leading" secondItem="GD8-FK-Lj4" secondAttribute="leading" id="2J8-SU-UbA"/>
+                            <constraint firstItem="NxA-f8-92n" firstAttribute="centerX" secondItem="GD8-FK-Lj4" secondAttribute="centerX" id="7iO-62-x47"/>
+                            <constraint firstItem="NxA-f8-92n" firstAttribute="top" secondItem="Jph-Ot-doL" secondAttribute="bottom" constant="50" id="FKF-rs-P3s"/>
+                            <constraint firstItem="Jph-Ot-doL" firstAttribute="top" secondItem="GD8-FK-Lj4" secondAttribute="top" constant="35" id="FY4-kz-JXg"/>
+                            <constraint firstItem="Yq7-oT-tUT" firstAttribute="top" secondItem="NxA-f8-92n" secondAttribute="bottom" constant="16" id="Upd-tp-NDb"/>
+                            <constraint firstItem="Jph-Ot-doL" firstAttribute="centerX" secondItem="GD8-FK-Lj4" secondAttribute="centerX" id="gvG-pm-G3D"/>
+                            <constraint firstAttribute="bottom" secondItem="fDG-5R-Dei" secondAttribute="bottom" constant="-7" id="kPN-Dp-PFj"/>
+                            <constraint firstAttribute="trailing" secondItem="fDG-5R-Dei" secondAttribute="trailing" id="udL-HJ-6R6"/>
+                            <constraint firstItem="fDG-5R-Dei" firstAttribute="top" secondItem="GD8-FK-Lj4" secondAttribute="top" constant="-11" id="vQY-Gc-yzE"/>
+                            <constraint firstItem="Yq7-oT-tUT" firstAttribute="centerX" secondItem="GD8-FK-Lj4" secondAttribute="centerX" id="yLc-7U-RcJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginBtn" destination="Yq7-oT-tUT" id="1fI-de-tEH"/>
+                        <outlet property="nameField" destination="i4H-Vf-4Lw" id="jXa-U4-yxU"/>
+                        <outlet property="passwordField" destination="dpP-Kn-R9J" id="ccA-LW-Ail"/>
+                        <outlet property="stackView" destination="NxA-f8-92n" id="uY2-Hj-e3b"/>
+                    </connections>
+                </viewController>
+                <customObject id="3lK-Wy-wZg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="282"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="loginBg" width="340" height="480"/>
+        <image name="login_welcome" width="266" height="71"/>
+    </resources>
+</document>
