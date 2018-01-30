@@ -12,7 +12,7 @@
             <objects>
                 <windowController storyboardIdentifier="loginWindowContoller" id="yfw-13-sfa" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="5gx-LK-7Gl">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" fullSizeContentView="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="294" y="313" width="340" height="480"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
@@ -43,11 +43,11 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="loginBg" id="LYL-eo-Ww1"/>
                             </imageView>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jph-Ot-doL">
-                                <rect key="frame" x="37" y="374" width="266" height="71"/>
+                                <rect key="frame" x="37" y="354" width="266" height="71"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="login_welcome" id="NiJ-8Z-17L"/>
                             </imageView>
                             <stackView wantsLayer="YES" distribution="fillEqually" orientation="vertical" alignment="centerX" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NxA-f8-92n">
-                                <rect key="frame" x="70" y="244" width="200" height="80"/>
+                                <rect key="frame" x="70" y="224" width="200" height="80"/>
                                 <subviews>
                                     <textField wantsLayer="YES" focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="i4H-Vf-4Lw">
                                         <rect key="frame" x="0.0" y="45" width="200" height="35"/>
@@ -92,7 +92,7 @@
                                 </customSpacing>
                             </stackView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="Yq7-oT-tUT" customClass="HUIButton" customModule="HChatForMac" customModuleProvider="target">
-                                <rect key="frame" x="70" y="192" width="200" height="36"/>
+                                <rect key="frame" x="70" y="172" width="200" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="8A2-bh-n18"/>
                                     <constraint firstAttribute="height" constant="36" id="TiL-cw-q3o"/>
@@ -103,7 +103,7 @@
                             <constraint firstItem="fDG-5R-Dei" firstAttribute="leading" secondItem="GD8-FK-Lj4" secondAttribute="leading" id="2J8-SU-UbA"/>
                             <constraint firstItem="NxA-f8-92n" firstAttribute="centerX" secondItem="GD8-FK-Lj4" secondAttribute="centerX" id="7iO-62-x47"/>
                             <constraint firstItem="NxA-f8-92n" firstAttribute="top" secondItem="Jph-Ot-doL" secondAttribute="bottom" constant="50" id="FKF-rs-P3s"/>
-                            <constraint firstItem="Jph-Ot-doL" firstAttribute="top" secondItem="GD8-FK-Lj4" secondAttribute="top" constant="35" id="FY4-kz-JXg"/>
+                            <constraint firstItem="Jph-Ot-doL" firstAttribute="top" secondItem="GD8-FK-Lj4" secondAttribute="top" constant="55" id="FY4-kz-JXg"/>
                             <constraint firstItem="Yq7-oT-tUT" firstAttribute="top" secondItem="NxA-f8-92n" secondAttribute="bottom" constant="16" id="Upd-tp-NDb"/>
                             <constraint firstItem="Jph-Ot-doL" firstAttribute="centerX" secondItem="GD8-FK-Lj4" secondAttribute="centerX" id="gvG-pm-G3D"/>
                             <constraint firstAttribute="bottom" secondItem="fDG-5R-Dei" secondAttribute="bottom" constant="-7" id="kPN-Dp-PFj"/>

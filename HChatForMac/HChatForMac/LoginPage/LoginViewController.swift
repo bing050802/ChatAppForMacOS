@@ -17,6 +17,7 @@ class LoginViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         nameField.font = .compactRoundFont(15)
         passwordField.font = .compactRoundFont(15)
         
