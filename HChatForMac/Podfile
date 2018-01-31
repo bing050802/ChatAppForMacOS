@@ -8,5 +8,4 @@ target 'HChatForMac' do
     pod 'Kingfisher'
     pod 'Alamofire'
     pod 'SnapKit'
-    
 end

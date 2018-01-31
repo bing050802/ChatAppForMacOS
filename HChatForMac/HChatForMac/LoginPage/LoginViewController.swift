@@ -7,6 +7,19 @@
 //
 
 import Cocoa
+import Alamofire
+
+
+//class UserModel: NSObject {
+//    let message: String?
+//    let userID: String?
+//    let roomID: String?
+//    let avatarURL: String?
+//    let name: String?
+//    let pushToken: String?
+//}
+
+let baseHost: String = "http://192.168.88.57:3000/spika/v1"
 
 class LoginViewController: NSViewController {
     
@@ -32,5 +45,10 @@ class LoginViewController: NSViewController {
     
     @objc func loginAction(_ btn: HUIButton) {
         
+        let loginParams: Parameters = ["userID": "3333", "roomID": "daye3", "name": "handaye"]
+        Alamofire.request(baseHost + "/user/login", method: .post, parameters: loginParams, encoding:JSONEncoding.default).responseJSON { response in
+            let resDic = response.result.value
+            print(resDic)
+        }
     }
 }
