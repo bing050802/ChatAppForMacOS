@@ -10,14 +10,15 @@ import Cocoa
 import Alamofire
 
 
-//class UserModel: NSObject {
-//    let message: String?
-//    let userID: String?
-//    let roomID: String?
-//    let avatarURL: String?
-//    let name: String?
-//    let pushToken: String?
-//}
+class UserModel: HandyJSON {
+    let message: String? = nil
+    let userID: String? = nil
+    let roomID: String? = nil
+    let avatarURL: String? = nil
+    let name: String? = nil
+    let pushToken: String? = nil
+    required init() {}
+}
 
 let baseHost: String = "http://192.168.88.57:3000/spika/v1"
 
