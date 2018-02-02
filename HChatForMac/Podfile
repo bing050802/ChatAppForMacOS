@@ -8,4 +8,5 @@ target 'HChatForMac' do
     pod 'Kingfisher'
     pod 'Alamofire'
     pod 'SnapKit'
+    pod 'Socket.IO-Client-Swift', '~> 13.1.0'
 end
